@@ -1,0 +1,32 @@
+match_type	banned	preferred	reason
+phrase	kai ji indikuotina	kai jos reikia	Awkward clinical calque; Lithuanian prose should name the need directly.
+phrase	suteikta galimybė aptarimui	suteikta galimybė aptarti	Unnatural nominalized phrasing.
+phrase	suteikia sistemą bendrai priimti sprendimus	suteikia struktūrą bendram sprendimų priėmimui	Literal English sentence frame; sounds translated rather than written in Lithuanian.
+phrase	grįžtamojo ryšio įrenginys	grįžtamojo ryšio priemonė	Prefer more natural Lithuanian device wording in prose.
+phrase	gali būti naudojami automatizuoto išorinio defibriliatoriaus (AED) režimu	gali veikti automatinio išorinio defibriliatoriaus (AID) režimu	Prefer Lithuanian device naming and more natural wording.
+phrase	jį paspaudęs operatorius iki paspaudimų sustabdymo ir atsitraukimo neturi liesti	defibriliatoriaus operatorius nuo to momento nebeturi liesti	Over-literal action chain from English makes the instruction hard to read.
+phrase	To išvengsi	To galima išvengti	Avoid conversational second-person phrasing in formal medical prose.
+phrase	pasireiškiantis kelių sistemų deriniu	apimantis kelias sistemas	Literal structure from English; clearer Lithuanian phrasing exists.
+phrase	Prijunk monitoravimą	Prijunk monitoravimo priemones	Direct object is awkward in Lithuanian clinical prose.
+phrase	greitai transfuzuok kristaloidų	greitai skirk kristaloidų	Crystalloids are given or infused, not transfused.
+phrase	tampa prieinamas kraujas	paruošiamas kraujas	Literal phrase from English workflow wording.
+phrase	numeriu 2222	pagal vietinę ligoninės tvarką	UK in-hospital emergency number should not be left as a universal local instruction.
+regex	\b\d+\.\d+\s*(mmol/L|°C|kPa|mmHg|mg/val\.|mL/kg/val\.|mikrogramai/kg/min\.)\b	naudok kablelį dešimtainiams skaičiams, pvz. 4,0 mmol/L	Lithuanian medical writing uses a decimal comma.
+phrase	1 : 10000	1 : 10 000	Thousands separator should follow Lithuanian / EU numeric formatting.
+phrase	1 : 1000	1 : 1 000	Thousands separator should follow Lithuanian / EU numeric formatting.
+phrase	IV / IM / SC	į veną, į raumenis ar po oda	Lithuanian text should not leave English route abbreviations as the default form.
+phrase	IV/IO	į veną arba į kaulą	Lithuanian text should not leave English route abbreviations as the default form.
+regex	\bIV\b	į/v.	Lithuanian medical text should use Lithuanian route abbreviation.
+regex	\bIM\b	į/r.	Lithuanian medical text should use Lithuanian route abbreviation.
+regex	\bSC\b	po oda	Lithuanian main text should prefer a Lithuanian wording for subcutaneous administration.
+regex	\bIO\b	į kaulą	Lithuanian main text should prefer a Lithuanian wording for intraosseous administration.
+phrase	skilvelių virpėjimu (VF)	skilvelių virpėjimu (SV)	Lithuanian sources commonly use SV for skilvelių virpėjimas.
+phrase	skilvelių virpėjimas (VF)	skilvelių virpėjimas (SV)	Lithuanian sources commonly use SV for skilvelių virpėjimas.
+phrase	bepulsine skilveline tachikardija (pVT)	skilveline tachikardija be pulso	Lithuanian text should prefer the full Lithuanian term instead of pVT.
+phrase	bepulsinė skilvelinė tachikardija (pVT)	skilvelinė tachikardija be pulso	Lithuanian text should prefer the full Lithuanian term instead of pVT.
+phrase	automatizuoto išorinio defibriliatoriaus (AED)	automatinio išorinio defibriliatoriaus (AID)	Lithuanian sources commonly use AID.
+phrase	endotrachėjinio vamzdelio (ETT)	endotrachėjinio vamzdelio	Lithuanian main text should not keep ETT by default.
+phrase	perkutaninę koronarinę intervenciją (`PCI`)	perkutaninę koronarinę intervenciją (`PKI`)	Lithuanian sources commonly use PKI.
+phrase	ekstrakorporinės membraninės oksigenacijos (`ECMO`)	ekstrakorporinės membraninės oksigenacijos (`EKMO`)	Lithuanian sources commonly use EKMO.
+phrase	jungo venų spaudimą (JVP)	jungo venų spaudimą	Prefer full Lithuanian term instead of an English initialism.
+phrase	centrinio veninio spaudimo (`CVP`)	centrinio veninio spaudimo (`CVS`)	Lithuanian sources commonly use CVS.

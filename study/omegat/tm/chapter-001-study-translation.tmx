@@ -1,0 +1,719 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tmx version="1.4">
+  <header creationtool="Codex" creationtoolversion="1.0" segtype="sentence" o-tmf="OmegaT TMX" adminlang="en-US" srclang="en" datatype="plaintext" />
+  <body>
+    <tu tuid="1">
+      <tuv xml:lang="en">
+        <seg># CHAPTER 1 Cardiorespiratory arrest in hospital</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg># 1 skyrius. Kardiorespiracinis sustojimas ligoninėje</seg>
+      </tuv>
+    </tu>
+    <tu tuid="2">
+      <tuv xml:lang="en">
+        <seg>This chapter summarises the management of cardiac arrest in hospitals following the 2021 Resuscitation Council UK (RCUK) guidelines. All hospital medical staff should know how to respond to cardiac arrest and should receive regular training in the management of emergency events.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Šiame skyriuje apibendrinamas širdies sustojimo valdymas ligoninėje pagal 2021 m. Jungtinės Karalystės Resuscitation Council UK (RCUK) gaires. Visi ligoninių medicinos darbuotojai turi žinoti, kaip reaguoti į širdies sustojimą, ir reguliariai dalyvauti skubios pagalbos situacijų valdymo mokymuose.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="3">
+      <tuv xml:lang="en">
+        <seg>The appropriateness of a resuscitation attempt should be considered and discussed with patients in order that resuscitation is NOT attempted where this would be inappropriate and futile.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Gaivinimo tikslingumas turi būti įvertintas ir aptartas su pacientu, kad gaivinimas nebūtų atliekamas tais atvejais, kai jis būtų netinkamas ir beprasmis.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4">
+      <tuv xml:lang="en">
+        <seg>Background</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Pagrindinė informacija</seg>
+      </tuv>
+    </tu>
+    <tu tuid="5">
+      <tuv xml:lang="en">
+        <seg>The incidence of in-hospital cardiac arrest (IHCA) is 1–1.5 per 1000 hospital admissions annually.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Kardiorespiracinio sustojimo ligoninėje dažnis yra apie 1-1,5 atvejo 1000 hospitalizacijų per metus.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6">
+      <tuv xml:lang="en">
+        <seg>The majority of in-hospital cardiopulmonary arrests present with a non-shockable rhythm: pulseless electrical activity (PEA) – 52% and asystole – 21%. Only 17% of cardiopulmonary arrests present with a shockable rhythm (ventricular fibrillation (VF) or pulseless ventricular tachycardia (pVT)). Not surprisingly the majority of these in-hospital events occur in ward areas (85%) in patients admitted with a medical complaint. It is important to recognise that signs of deterioration prior to cardiac arrest are seen in 50–80% of patients; thus, the recognition of deterioration and prevention of cardiopulmonary arrest is important.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Dauguma kardiorespiracinio sustojimo atvejų ligoninėje prasideda nedefibriliuotinu ritmu: elektrine veikla be pulso (PEA) – 52 % ir asistolija – 21 %. Tik 17 % atvejų prasideda defibriliuotinu ritmu, t. y. skilvelių virpėjimu (VF) arba bepulsine skilveline tachikardija (pVT). Dauguma tokių įvykių ligoninėje įvyksta skyriuose (85 %) pacientams, hospitalizuotiems dėl vidaus ligų. Svarbu atsiminti, kad 50-80 % pacientų iki širdies sustojimo pastebimi būklės blogėjimo požymiai, todėl labai svarbu laiku atpažinti blogėjimą ir užkirsti kelią kardiorespiraciniam sustojimui.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="7">
+      <tuv xml:lang="en">
+        <seg>Many NHS Trusts submit data regarding cardiopulmonary arrest to the National Cardiac Arrest Audit (NCAA) that provides quarterly reports on the incidence of confirmed cardiac arrest in patients over the age of 28 days, who were subject to a cardiac arrest call and received chest compressions and/or defibrillation. This audit compares the hospitals’ observed cardiac arrest rates with all other hospitals participating in NCAA.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Daugelis NHS ligoninių teikia duomenis Nacionaliniam širdies sustojimo auditui (National Cardiac Arrest Audit, NCAA), kuris kas ketvirtį pateikia ataskaitas apie patvirtinto širdies sustojimo atvejų dažnį vyresniems nei 28 parų pacientams, kuriems buvo iškviesta gaivinimo komanda ir taikyti krūtinės ląstos paspaudimai ir (arba) defibriliacija. Šis auditas leidžia palyginti konkrečios ligoninės stebimą širdies sustojimo dažnį su kitomis NCAA dalyvaujančiomis ligoninėmis.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="8">
+      <tuv xml:lang="en">
+        <seg>Initial management</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Pradinis valdymas</seg>
+      </tuv>
+    </tu>
+    <tu tuid="9">
+      <tuv xml:lang="en">
+        <seg>Figure 1.1 shows the algorithm for advanced life support in adults. The initial response ensuring early chest compressions and early defibrillation if appropriate is key to patient survival.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>1.1 paveiksle pateiktas suaugusiųjų išplėstinio gyvybės palaikymo algoritmas. Ankstyvi krūtinės ląstos paspaudimai ir ankstyva defibriliacija, kai ji indikuotina, yra esminiai paciento išgyvenimui.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="10">
+      <tuv xml:lang="en">
+        <seg>Use the DRS ABC approach (Danger, Response, Shout for help).</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Naudok DRS ABC principą: Danger, Response, Shout for help, Airway, Breathing, Circulation.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="11">
+      <tuv xml:lang="en">
+        <seg>The airway should be opened using Head Tilt, Chin Lift manoeuvre. No more than 10 s should be taken to confirm cardiopulmonary arrest by a look, listen and feel for signs of normal breathing and any other signs of life. A central pulse may be palpated but must be done in conjunction with breathing checks.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Kvėpavimo takus atverk galvos atlošimo ir smakro pakėlimo manevru. Kardiorespiraciniam sustojimui patvirtinti turi būti skiriama ne daugiau kaip 10 s: žiūrėk, klausyk ir jausk, ar yra normalus kvėpavimas ir kiti gyvybės požymiai. Centrinis pulsas gali būti tikrinamas, bet tik kartu vertinant kvėpavimą.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="12">
+      <tuv xml:lang="en">
+        <seg>Please note that agonal breathing should be considered a sign of cardiopulmonary arrest.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Atmink, kad agoninis kvėpavimas turi būti laikomas kardiorespiracinio sustojimo požymiu.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="13">
+      <tuv xml:lang="en">
+        <seg>Once cardiopulmonary arrest is confirmed, an emergency call via 2222 should be made and resuscitation equipment accessed. If alone, leave the patient to get help and equipment.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Patvirtinus kardiorespiracinį sustojimą, būtina skubiai kviesti pagalbą numeriu 2222 ir pasiekti gaivinimo įrangą. Jei esi vienas, palik pacientą tam, kad galėtum iškviesti pagalbą ir atsinešti įrangą.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="14">
+      <tuv xml:lang="en">
+        <seg>Figure 1.1  Algorithm for adult advanced life support. Source: Resuscitation Council. Reproduced with permission of the Resuscitation Council (UK).</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Suaugusiųjų išplėstinio gyvybės palaikymo algoritmas. Šaltinis: Resuscitation Council (UK). Pateikta su leidimu.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="15">
+      <tuv xml:lang="en">
+        <seg>Chest compressions</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Krūtinės ląstos paspaudimai</seg>
+      </tuv>
+    </tu>
+    <tu tuid="16">
+      <tuv xml:lang="en">
+        <seg>Chest compressions should commence as soon as cardiopulmonary arrest is confirmed.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Krūtinės ląstos paspaudimai turi būti pradėti vos patvirtinus kardiorespiracinį sustojimą.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="17">
+      <tuv xml:lang="en">
+        <seg>Hands should be placed in the middle of the lower half of the sternum (‘centre of the chest’).</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Rankos dedamos į apatinės krūtinkaulio pusės vidurį, t. y. į krūtinės ląstos centrą.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="18">
+      <tuv xml:lang="en">
+        <seg>Chest compressions should be delivered at a rate of 100–120/min at a depth of 5–6 cm. The chest should be allowed to recoil to its normal resting position between each compression.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Paspaudimai turi būti atliekami 100-120 kartų per minutę dažniu, 5-6 cm gyliu. Po kiekvieno paspaudimo krūtinės ląstai turi būti leidžiama visiškai sugrįžti į pradinę padėtį.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="19">
+      <tuv xml:lang="en">
+        <seg>Once 30 compressions have been delivered, a pause should be made to allow for 2 breaths to be given if colleagues are ready with a bag-valve-mask device.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Atlikus 30 paspaudimų, padaroma pauzė 2 įpūtimams, jei kolegos jau pasirengę naudoti maišą-kaukę.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="20">
+      <tuv xml:lang="en">
+        <seg>Any pause in chest compressions should be limited to less than 5 s.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Bet kokia paspaudimų pauzė turi trukti trumpiau nei 5 s.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="21">
+      <tuv xml:lang="en">
+        <seg>Personnel delivering chest compressions must swap at least every 2 min to maintain high-quality chest compressions. If available, a cardiopulmonary resuscitation (CPR) feedback device should be used so the quality of the chest compressions can be monitored. Any pauses should be planned and limited to 5 s or less.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Asmenys, atliekantys paspaudimus, turi keistis bent kas 2 min., kad būtų išlaikyta aukšta paspaudimų kokybė. Jei yra galimybė, turėtų būti naudojamas CPR grįžtamojo ryšio įrenginys, leidžiantis stebėti paspaudimų kokybę. Visos pauzės turi būti suplanuotos ir ne ilgesnės kaip 5 s.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="22">
+      <tuv xml:lang="en">
+        <seg>A mechanical chest compression device should be accessed if available.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Jei yra galimybė, reikia pasitelkti mechaninį krūtinės ląstos paspaudimų įrenginį.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="23">
+      <tuv xml:lang="en">
+        <seg>Airway and ventilation</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Kvėpavimo takai ir ventiliacija</seg>
+      </tuv>
+    </tu>
+    <tu tuid="24">
+      <tuv xml:lang="en">
+        <seg>See Chapter 105 for further information.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Daugiau informacijos pateikta 105 skyriuje.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="25">
+      <tuv xml:lang="en">
+        <seg>Use head tilt and chin lift or jaw thrust to open the airway. Use suction to clear the mouth of secretions if required.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Kvėpavimo takus atverk galvos atlošimo ir smakro pakėlimo arba apatinio žandikaulio išstūmimo manevru. Jei reikia, siurbliu pašalink sekretą iš burnos.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="26">
+      <tuv xml:lang="en">
+        <seg>A bag-valve-mask should be accessed, and the tubing attached to 15 L of oxygen. This is a two-person technique. One operator should secure the mask to the patient’s face, pushing down to establish a seal between the mask and the face, and then with fingers along the jawline lift the face into the mask while opening the airway.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Turi būti paruoštas maišas su vožtuvu ir kauke, o vamzdelis prijungtas prie 15 l/min deguonies srauto. Tai dviejų žmonių technika. Vienas asmuo prispaudžia kaukę prie paciento veido, suformuoja sandarų kontaktą tarp kaukės ir veido, o pirštais palei apatinį žandikaulį kelia veidą į kaukę, kartu atverdamas kvėpavimo takus.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="27">
+      <tuv xml:lang="en">
+        <seg>The second airway assistant should squeeze the bag to deliver breaths following every 30 compressions. The breaths should be delivered over approx. 1 s and the bag only squeezed enough to provide chest rise. Over-inflation should be avoided to prevent gastric insufflation or barotrauma.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Antrasis pagalbininkas po kiekvienų 30 paspaudimų suspaudžia maišą ir atlieka įpūtimus. Kiekvienas įpūtimas turi trukti apie 1 s, o maišas spaudžiamas tiek, kad būtų matomas krūtinės ląstos pakilimas. Reikia vengti per didelės ventiliacijos, kad nesukeltum skrandžio prisipūtimo ar barotraumos.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="28">
+      <tuv xml:lang="en">
+        <seg>An oropharyngeal airway should be inserted if required to support airway opening.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Jei reikia, įstatomas orofaringinis vamzdelis kvėpavimo takams palaikyti.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="29">
+      <tuv xml:lang="en">
+        <seg>Once resuscitation is underway, the team should consider the insertion of a supraglottic airway device (e.g. Igel) if the team is skilled in its insertion.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Prasidėjus gaivinimui, komanda turi apsvarstyti supraglotinio kvėpavimo takų prietaiso, pvz., i-gel, įvedimą, jei turi atitinkamų įgūdžių.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="30">
+      <tuv xml:lang="en">
+        <seg>Endotracheal intubation should only be attempted by those with airway expertise. The decision to intubate should be made by the airway expert in conjunction with the team leader.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Endotrachėjinę intubaciją turi atlikti tik kvėpavimo takų valdymo patirties turintys specialistai. Sprendimą intubuoti kvėpavimo takų specialistas priima kartu su komandos vadovu.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="31">
+      <tuv xml:lang="en">
+        <seg>Once the airway has been secured with a supraglottic airway or an endotracheal tube, compressions and ventilation can be asynchronous, with compressions continuing at a rate of 100–120 min and ventilation at 10–12 breaths per minute.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Užtikrinus kvėpavimo takus supraglotiniu prietaisu arba endotrachėjiniu vamzdeliu, paspaudimai ir ventiliacija gali būti atliekami asinchroniškai: paspaudimai tęsiami 100-120 kartų per minutę dažniu, o ventiliacija atliekama 10-12 kartų per minutę.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="32">
+      <tuv xml:lang="en">
+        <seg>Waveform capnography should be attached to the tube (Igel or endotracheal tube [ETT]), so this can be monitored during the resuscitation attempt.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Prie vamzdelio, t. y. prie i-gel arba endotrachėjinio vamzdelio (ETT), turi būti prijungta bangos formos kapnografija, kad gaivinimo metu būtų galima ją stebėti.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="33">
+      <tuv xml:lang="en">
+        <seg>Management of cardiac arrest rhythms</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Širdies sustojimo ritmų valdymas</seg>
+      </tuv>
+    </tu>
+    <tu tuid="34">
+      <tuv xml:lang="en">
+        <seg>Once chest compressions are established, the priority is the application of a defibrillator to analyse and treat the cardiac arrest rhythm.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Pradėjus krūtinės ląstos paspaudimus, prioritetas yra kuo greičiau prijungti defibriliatorių, kad būtų galima išanalizuoti ir gydyti širdies sustojimo ritmą.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="35">
+      <tuv xml:lang="en">
+        <seg>Defibrillator pads should be placed on dry skin; along with correct placement, it is important to ensure good skin contact taking a moment to ensure the pad is smooth and well adhered to the skin. Place one defibrillator electrode to the right of the sternum, below the clavicle. Place the second electrode in the mid-axillary line, clear of any breast tissue. Follow the pictures provided on the defibrillator pad packaging.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Defibriliatoriaus elektrodai turi būti klijuojami ant sausos odos. Be tinkamos padėties, svarbu užtikrinti gerą kontaktą su oda: trumpam sustok, kad elektrodai būtų lygiai priklijuoti ir gerai priglustų. Vieną elektrodą dėk dešinėje krūtinkaulio pusėje po raktikauliu. Antrą elektrodą dėk vidurinėje pažasties linijoje, vengiant krūties audinio. Vadovaukis paveikslėliais, esančiais ant elektrodų pakuotės.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="36">
+      <tuv xml:lang="en">
+        <seg>The defibrillator should be turned on, and as soon as a rhythm is established, chest compressions should be paused to allow for rhythm analysis.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Defibriliatorių reikia įjungti, o nustačius ritmą krūtinės ląstos paspaudimai trumpam sustabdomi ritmo analizei.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="37">
+      <tuv xml:lang="en">
+        <seg>The rhythm should be analysed as either shockable – VF, pVT or non-shockable – PEA, asystole. PEA is the most common presenting cardiac arrest rhythm in hospital.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Ritmas vertinamas kaip defibriliuotinas – VF arba pVT – arba nedefibriliuotinas – PEA arba asistolija. PEA yra dažniausias pradinis širdies sustojimo ritmas ligoninėje.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="38">
+      <tuv xml:lang="en">
+        <seg>Ventricular fibrillation/pulseless ventricular tachycardia</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Skilvelių virpėjimas / bepulsinė skilvelinė tachikardija</seg>
+      </tuv>
+    </tu>
+    <tu tuid="39">
+      <tuv xml:lang="en">
+        <seg>Once the defibrillator is attached, chest compressions should be paused to confirm the cardiac arrest rhythm, and the team leader should confirm the rhythm and verbalise this to the team.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Prijungus defibriliatorių, trumpam stabdomi krūtinės ląstos paspaudimai, kad būtų patvirtintas ritmas, o komandos vadovas turi aiškiai įvardyti ritmą komandai.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="40">
+      <tuv xml:lang="en">
+        <seg>If the rhythm is shockable and a manual defibrillator is being used, the following sequence should be followed: Chest compressions are restarted immediately.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Jei ritmas yra defibriliuotinas ir naudojamas rankinis defibriliatorius, laikykis tokios sekos:
+- Krūtinės ląstos paspaudimai nedelsiant atnaujinami.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="41">
+      <tuv xml:lang="en">
+        <seg>The team leader will hand control to the defibrillator operator to deliver a safe shock.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Komandos vadovas perduoda defibriliatoriaus operatoriui kontrolę dėl saugaus šoko atlikimo.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="42">
+      <tuv xml:lang="en">
+        <seg>The defibrillator operator and the person performing chest compressions should be able to see each other.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Defibriliatoriaus operatorius ir paspaudimus atliekantis žmogus turi matyti vienas kitą.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="43">
+      <tuv xml:lang="en">
+        <seg>The defibrillator operator will instruct chest compressions to continue and everyone else to stand clear, ensuring that oxygen is removed (if free flowing via bag-valve-mask).</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Defibriliatoriaus operatorius nurodo tęsti paspaudimus ir visiems kitiems atsitraukti, užtikrindamas, kad deguonis būtų pašalintas, jei jis laisvai teka per maišą-kaukę.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="44">
+      <tuv xml:lang="en">
+        <seg>The charge button is pressed, and once pressed the defibrillator operator should keep their hands away from the defibrillator until chest compressions are stopped and that person has stood clear.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Paspaudžiamas krovimo mygtukas, o jį paspaudęs operatorius iki paspaudimų sustabdymo ir atsitraukimo neturi liesti defibriliatoriaus.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="45">
+      <tuv xml:lang="en">
+        <seg>Once the defibrillator is charged, the instruction is given for chest compressions to stop and that person to stand clear.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Įkrovus defibriliatorių, duodama komanda sustabdyti paspaudimus ir atsitraukti.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="46">
+      <tuv xml:lang="en">
+        <seg>A final check that all personnel are away from the patient should be made before the shock is delivered.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Prieš atliekant šoką dar kartą patikrinama, ar niekas neliečia paciento.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="47">
+      <tuv xml:lang="en">
+        <seg>Once the shock is delivered, chest compressions should immediately restart.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Atlikus šoką, paspaudimai nedelsiant atnaujinami.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="48">
+      <tuv xml:lang="en">
+        <seg>CPR should continue for 2 min; the team leader should prepare the team for the next pause in chest compressions.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>CPR tęsiamas 2 min., o komandos vadovas turi paruošti komandą kitai suplanuotai pauzei paspaudimuose.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="49">
+      <tuv xml:lang="en">
+        <seg>At 2 min the rhythm should be analysed again, and if the rhythm remains shockable, a further shock is delivered using the sequence mentioned earlier.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Po 2 min. ritmas analizuojamas pakartotinai. Jei jis vis dar defibriliuotinas, taikomas kitas šokas pagal tą pačią seką. Atlikus šoką, CPR tęsiamas dar 2 min.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="50">
+      <tuv xml:lang="en">
+        <seg>Once the shock has been delivered, CPR continues for a further 2 min. At the end of 2 min, the rhythm is analysed, and if this remains shockable, a further shock should be given repeating the sequence above. Once the third shock has been delivered and CPR recommenced, 1 mg of adrenaline 1 : 10000 IV/IO and 300 mg of amiodarone IV/IO should be delivered.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Pasibaigus kitoms 2 min., ritmas vėl analizuojamas. Jei jis ir toliau defibriliuotinas, atliekamas dar vienas šokas. Atlikus trečią šoką ir atnaujinus CPR, turi būti skiriama 1 mg adrenalino 1 : 10000 IV/IO ir 300 mg amjodarono IV/IO.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="51">
+      <tuv xml:lang="en">
+        <seg>Adrenaline should be repeated every 3–5 min (alternate cycles of CPR) and a further 150 mg of amiodarone can be considered following the fifth shock.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Adrenalinas kartojamas kas 3-5 min., t. y. kas antrą CPR ciklą, o po penkto šoko galima svarstyti papildomą 150 mg amjodarono dozę.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="52">
+      <tuv xml:lang="en">
+        <seg>Defibrillators and pulse checks</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Defibriliatoriai ir pulso tikrinimas</seg>
+      </tuv>
+    </tu>
+    <tu tuid="53">
+      <tuv xml:lang="en">
+        <seg>Staff should familiarise themselves with the type of defibrillators in use in order that these can be used safely and efficiently in cardiac arrest. Defibrillators can be used in automated external defibrillator (AED) mode or in some instances a standalone AED may be used. The emergency team and team leader should listen to the instructions provided by the AED; the delivery of the shock will depend on the shock button being pressed, so safety checks are essential prior to this action. Please note that the confirmation of cardiopulmonary arrest as described earlier is essential, once confirmed.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Darbuotojai turi būti susipažinę su ligoninėje naudojamais defibriliatoriais, kad galėtų juos naudoti saugiai ir veiksmingai. Defibriliatoriai gali būti naudojami automatizuoto išorinio defibriliatoriaus (AED) režimu, o kai kuriais atvejais gali būti naudojamas atskiras AED. Skubios pagalbos komanda ir jos vadovas turi klausyti AED nurodymų. Šokas bus atliktas tik paspaudus šoko mygtuką, todėl prieš tai būtina atlikti saugos patikrą. Būtina iš anksto patvirtinti kardiorespiracinį sustojimą, kaip aprašyta anksčiau.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="54">
+      <tuv xml:lang="en">
+        <seg>VF is not compatible with a pulse, so there should be no delay for a pulse check before a shock is delivered. A pulse check should only be undertaken if the rhythm is compatible with life. There should be no pause to check a rhythm or pulse following the delivery of a shock.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>VF yra nesuderinamas su pulsu, todėl prieš atliekant šoką pulso tikrinti nereikia. Pulsas tikrinamas tik tada, kai ritmas yra suderinamas su gyvybe. Po šoko atlikimo negalima daryti pauzės pulso ar ritmo tikrinimui.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="55">
+      <tuv xml:lang="en">
+        <seg>Pulseless electrical activity (PEA)/asystole</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Elektrinė veikla be pulso (PEA) / asistolija</seg>
+      </tuv>
+    </tu>
+    <tu tuid="56">
+      <tuv xml:lang="en">
+        <seg>Once defibrillator pads are attached and the device is turned on, pause chest compressions. If the rhythm is confirmed as PEA or asystole chest compressions should immediately restart and continue for 2 min.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Prijungus defibriliatoriaus elektrodus ir įjungus prietaisą, trumpam stabdomi krūtinės ląstos paspaudimai. Jei patvirtinama PEA arba asistolija, paspaudimai nedelsiant atnaujinami ir tęsiami 2 min.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="57">
+      <tuv xml:lang="en">
+        <seg>Adrenaline 1 mg 1 : 10000 IV/IO should be administered as soon as possible or as soon as vascular access is established. Adrenaline should be repeated every 3–5 min or every other cycle of CPR. A rhythm check must always precede the administration of adrenaline.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>1 mg adrenalino 1 : 10000 IV/IO turi būti skiriama kuo greičiau arba vos tik užtikrinama kraujagyslinė prieiga. Adrenalinas kartojamas kas 3-5 min., t. y. kas antrą CPR ciklą. Prieš kiekvieną adrenalino skyrimą visada turi būti atliekamas ritmo patikrinimas.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="58">
+      <tuv xml:lang="en">
+        <seg>Pulse checks should only be undertaken if the rhythm is compatible with life.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Pulsas tikrinamas tik tada, kai ritmas yra suderinamas su gyvybe.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="59">
+      <tuv xml:lang="en">
+        <seg>Once the first dose of adrenaline is given in a cardiac arrest, it should be repeated every 3–5 min (every other cycle of CPR) regardless of the rhythm. Amiodarone is given after 3 shocks whether these occur sequentially or are staggered.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Paskyrus pirmąją adrenalino dozę širdies sustojimo metu, ji kartojama kas 3-5 min. nepriklausomai nuo ritmo. Amjodaronas skiriamas po 3 šokų, nesvarbu, ar jie buvo iš eilės, ar atskirti kitais ciklais.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="60">
+      <tuv xml:lang="en">
+        <seg>Reversible causes of cardiac arrest</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Grįžtamos širdies sustojimo priežastys</seg>
+      </tuv>
+    </tu>
+    <tu tuid="61">
+      <tuv xml:lang="en">
+        <seg>Once cardiopulmonary resuscitation is underway, the patients’ medical notes and information regarding events prior to the cardiac arrest should be ascertained by the team leader to determine the possible cause of cardiopulmonary arrest. The reversible causes are commonly referred to as the 4H’s and 4T’s:</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Kol vyksta gaivinimas, komandos vadovas turi surinkti informaciją iš paciento ligos istorijos ir apie įvykius prieš sustojimą, kad nustatytų galimą priežastį. Grįžtamos priežastys dažnai įsimenamos kaip 4 H ir 4 T:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="62">
+      <tuv xml:lang="en">
+        <seg>Hypoxia</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Hipoksija</seg>
+      </tuv>
+    </tu>
+    <tu tuid="63">
+      <tuv xml:lang="en">
+        <seg>Hypovolaemia</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Hipovolemija</seg>
+      </tuv>
+    </tu>
+    <tu tuid="64">
+      <tuv xml:lang="en">
+        <seg>Hyperkalaemia, hypokalaemia and other metabolic disorders</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Hiperkalemija, hipokalemija ir kiti metaboliniai sutrikimai</seg>
+      </tuv>
+    </tu>
+    <tu tuid="65">
+      <tuv xml:lang="en">
+        <seg>Hypothermia</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Hipotermija</seg>
+      </tuv>
+    </tu>
+    <tu tuid="66">
+      <tuv xml:lang="en">
+        <seg>Thrombosis (coronary or pulmonary)</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Trombozė (vainikinių arterijų arba plaučių)</seg>
+      </tuv>
+    </tu>
+    <tu tuid="67">
+      <tuv xml:lang="en">
+        <seg>Tension pneumothorax</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Įtampos pneumotoraksas</seg>
+      </tuv>
+    </tu>
+    <tu tuid="68">
+      <tuv xml:lang="en">
+        <seg>Tamponade – cardiac</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Širdies tamponada</seg>
+      </tuv>
+    </tu>
+    <tu tuid="69">
+      <tuv xml:lang="en">
+        <seg>Toxins</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Toksinai</seg>
+      </tuv>
+    </tu>
+    <tu tuid="70">
+      <tuv xml:lang="en">
+        <seg>If a potential reversible cause of the cardiopulmonary arrest is identified, appropriate treatment for this should commence promptly while advance life support continues. In the event of a prolonged resuscitation attempt (e.g. administration of thrombolysis for a Pulmonary Embolus [P.E.]) then a mechanical chest compression device should be sought to ensure effective chest compressions are maintained over a long period of time. It is important to ensure that staff are trained in the application of the device to ensure minimal interruption to chest compressions.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Jei nustatoma tikėtina grįžtama priežastis, jos gydymas turi būti pradėtas nedelsiant, tęsiant išplėstinį gyvybės palaikymą. Jei gaivinimas užsitęsia, pavyzdžiui, kai dėl plaučių embolijos skiriama trombolizė, reikia ieškoti mechaninio krūtinės ląstos paspaudimų įrenginio, kad ilgą laiką būtų išlaikyti veiksmingi paspaudimai. Labai svarbu, kad personalas būtų apmokytas šį įrenginį taikyti kuo mažiau trikdant paspaudimus.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="71">
+      <tuv xml:lang="en">
+        <seg>Ultrasound may be useful in the identification of some reversible causes (e.g. cardiac tamponade, P.E.). The use of this investigative technique requires training and skills in order that the operator can obtain views during a rhythm check and within 10 s.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Ultragarsas gali padėti nustatyti kai kurias grįžtamas priežastis, pavyzdžiui, širdies tamponadą ar plaučių emboliją. Tačiau šiam tyrimui reikia įgūdžių ir mokymo, kad operatorius gebėtų gauti reikalingus vaizdus ritmo patikrinimo metu ir per 10 s.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="72">
+      <tuv xml:lang="en">
+        <seg>Following return of spontaneous circulation (ROSC)</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Veiksmai atsistačius spontaninei kraujotakai (ROSC)</seg>
+      </tuv>
+    </tu>
+    <tu tuid="73">
+      <tuv xml:lang="en">
+        <seg>A full ABCDE assessment should be carried out.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Turi būti atliktas pilnas ABCDE įvertinimas.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="74">
+      <tuv xml:lang="en">
+        <seg>Saturations should be maintained at 94–98%; if the patient requires ongoing airway management, endotracheal intubation should be considered if not already present. Waveform capnography should continue with ventilation to achieve normocapnia.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Deguonies saturacija turi būti palaikoma 94-98 % ribose. Jei pacientui reikia tolesnio kvėpavimo takų užtikrinimo, reikia svarstyti endotrachėjinę intubaciją, jei ji dar neatlikta. Turi būti tęsiama bangos formos kapnografija, o ventiliacija koreguojama taip, kad būtų palaikoma normokapnija.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="75">
+      <tuv xml:lang="en">
+        <seg>Ensure the patient has reliable vascular access, and further lines may be needed prior to transfer. Continuous monitoring should be in place and a 12-lead ECG carried out. Fluid replacement should continue to achieve normovolaemia and achieve an systolic blood pressure (SBP) &gt;100 mmHg.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Reikia užtikrinti patikimą kraujagyslinę prieigą; prieš perkėlimą gali prireikti papildomų kateterių. Turi būti taikomas nuolatinis monitoravimas ir atlikta 12 derivacijų EKG. Skysčių terapija tęsiama siekiant normovolemijos ir sistolinio arterinio kraujospūdžio &gt;100 mmHg.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="76">
+      <tuv xml:lang="en">
+        <seg>The patient’s temperature should be maintained at 32–36°. It should be noted that patients are often cool following ROSC, so take time to cover the patient and warm them if needed. Shivering should be avoided.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Paciento temperatūra turi būti palaikoma 32-36 °C ribose. Reikia atsiminti, kad po ROSC pacientai dažnai būna atvėsę, todėl juos reikia užkloti ir prireikus šildyti. Reikia vengti drebulio.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="77">
+      <tuv xml:lang="en">
+        <seg>Any identified reversible cause should continue to be treated. The team should refer to the appropriate specialist teams (e.g. cardiology or surgeons) in order that definitive management can be provided. A discussion about the most appropriate place for ongoing management of the patient should be decided, and if transferring, this should be done by a skilled team ensuring all appropriate equipment is in place.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Bet kuri nustatyta grįžtama priežastis turi būti toliau gydoma. Komanda turi kreiptis į atitinkamus specialistus, pavyzdžiui, kardiologus ar chirurgus, kad būtų suteiktas galutinis gydymas. Taip pat turi būti nuspręsta, kur pacientą geriausia toliau gydyti. Jei pacientas perkeliamas, tai turi atlikti kvalifikuota komanda, užtikrinant, kad visa reikalinga įranga būtų paruošta.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="78">
+      <tuv xml:lang="en">
+        <seg>The team should be supported in a debrief, and the event should be documented in the patients’ notes by a member of the attending resuscitation team.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Komandai turi būti suteikta galimybė aptarimui po įvykio, o pats įvykis turi būti užfiksuotas paciento dokumentacijoje vieno iš gaivinime dalyvavusių komandos narių.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="79">
+      <tuv xml:lang="en">
+        <seg>Duration of a resuscitation attempt</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Gaivinimo trukmė</seg>
+      </tuv>
+    </tu>
+    <tu tuid="80">
+      <tuv xml:lang="en">
+        <seg>The duration of any resuscitation attempt should be based on each individual patient case. It is important that the team leader gathers appropriate information while resuscitation attempts are ongoing to ensure that a decision is made based on the circumstances of the cardiopulmonary arrest, the patients’ best interests and the likelihood of a successful outcome, achieving not only a return of spontaneous circulation but longer-term survival and quality of life.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Kiekvieno gaivinimo trukmė turi būti sprendžiama individualiai, atsižvelgiant į konkretų pacientą. Labai svarbu, kad komandos vadovas gaivinimo metu surinktų pakankamai informacijos, jog sprendimas būtų pagrįstas kardiorespiracinio sustojimo aplinkybėmis, paciento interesais ir tikimybe pasiekti ne tik spontaninės kraujotakos atsikūrimą, bet ir ilgalaikį išgyvenamumą bei gyvenimo kokybę.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="81">
+      <tuv xml:lang="en">
+        <seg>The team leader should share their thoughts with the team, seeking agreement from all those in the resuscitation team. It is important that all members of the team are warned of the plan to stop resuscitation attempts and are given the opportunity to ask questions if needed.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Komandos vadovas turi pasidalyti savo vertinimu su komanda ir siekti bendro sutarimo su visais gaivinime dalyvaujančiais nariais. Svarbu, kad visi komandos nariai būtų iš anksto informuoti apie planą nutraukti gaivinimą ir turėtų galimybę, jei reikia, užduoti klausimus.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="82">
+      <tuv xml:lang="en">
+        <seg>In all circumstances, those people most important to the patient should be informed of the events and given the opportunity to have time with the patient. There should be a clear plan for speaking to the patients’ significant others and meeting them if they are travelling to the hospital.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>Visais atvejais asmenys, kurie pacientui yra svarbiausi, turi būti informuoti apie įvykį ir jiems turi būti suteikta galimybė pabūti su pacientu. Turi būti aiškus planas, kas ir kaip kalbės su paciento artimaisiais bei pasitiks juos, jei jie vyksta į ligoninę.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="83">
+      <tuv xml:lang="en">
+        <seg>Decisions regarding cardiopulmonary resuscitation</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Sprendimai dėl kardiopulmoninio gaivinimo</seg>
+      </tuv>
+    </tu>
+    <tu tuid="84">
+      <tuv xml:lang="en">
+        <seg>The NCAA reports a survival to hospital discharge rate of 23.9% based on information collected from 175 hospitals in the United Kingdom. Patients who experience a cardiac arrest in hospital often have significant comorbidities or a disease process that will be life-limiting. CPR is not without harm; its delivery in certain patients can result in an undignified death and the delivery of a treatment that will not work.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>NCAA duomenimis, išgyvenamumas iki išrašymo iš ligoninės yra 23,9 %, remiantis duomenimis iš 175 ligoninių Jungtinėje Karalystėje. Pacientai, kuriems ligoninėje įvyksta širdies sustojimas, dažnai turi reikšmingų gretutinių ligų arba gyvybę ribojančią patologiją. CPR nėra nepavojingas: kai kuriems pacientams jis gali reikšti orumo neatitinkančią mirtį ir gydymą, kuris neveiks.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="85">
+      <tuv xml:lang="en">
+        <seg>The Recommended Summary Plan for Emergency Care and Treatment (ReSPECT) is an initiative from the RCUK. ReSPECT provides a framework that enables shared decision-making in relation to emergency treatments including CPR. This plan can evolve and change over time but provides information on the patient’s wishes when the person is unable to participate in decision-making. This is replacing the previous Do Not Attempt Cardiopulmonary Resuscitation (DNACPR) process in many hospitals across the United Kingdom.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>ReSPECT (Recommended Summary Plan for Emergency Care and Treatment) yra RCUK iniciatyva. ReSPECT suteikia sistemą bendrai priimti sprendimus dėl skubios pagalbos priemonių, įskaitant CPR. Šis planas laikui bėgant gali būti keičiamas, bet jis padeda suprasti paciento pageidavimus tais atvejais, kai pats pacientas nebegali dalyvauti priimant sprendimus. Daugelyje Jungtinės Karalystės ligoninių šis modelis keičia anksčiau naudotą DNACPR (Do Not Attempt Cardiopulmonary Resuscitation) procesą.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="86">
+      <tuv xml:lang="en">
+        <seg>Further reading</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>## Tolimesnis skaitymas</seg>
+      </tuv>
+    </tu>
+    <tu tuid="87">
+      <tuv xml:lang="en">
+        <seg>National Cardiac Arrest Audit (NCAA) Welcome to the National Cardiac Arrest Audit. https://ncaa.icnarc.org/ Home.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- National Cardiac Arrest Audit (NCAA). Welcome to the National Cardiac Arrest Audit. https://ncaa.icnarc.org/Home</seg>
+      </tuv>
+    </tu>
+    <tu tuid="88">
+      <tuv xml:lang="en">
+        <seg>Resuscitation Council UK ReSPECT – ReSPECT for healthcare professionals|resuscitation Council UK. https://www.resus.org.uk/respect/respect-healthcare-professionals.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Resuscitation Council UK. ReSPECT for healthcare professionals. https://www.resus.org.uk/respect/respect-healthcare-professionals</seg>
+      </tuv>
+    </tu>
+    <tu tuid="89">
+      <tuv xml:lang="en">
+        <seg>Resuscitation Council UK Resuscitation guidelines 2021. Adult advanced life support guidelines|resuscitation Council UK. https://www.resus.org.uk/library/2021-resuscitation-guidelines/adult-advanced-life- support-guidelines.</seg>
+      </tuv>
+      <tuv xml:lang="lt">
+        <seg>- Resuscitation Council UK. Resuscitation guidelines 2021. Adult advanced life support guidelines. https://www.resus.org.uk/library/2021-resuscitation-guidelines/adult-advanced-life-support-guidelines</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

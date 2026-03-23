@@ -1,0 +1,922 @@
+[
+  {
+    "number": 1,
+    "title": "Cardiorespiratory arrest in hospital",
+    "full_title": "CHAPTER 1 Cardiorespiratory arrest in hospital",
+    "start_page": 22,
+    "end_page": 27,
+    "slug": "001-cardiorespiratory-arrest-in-hospital"
+  },
+  {
+    "number": 2,
+    "title": "The critically ill patient",
+    "full_title": "CHAPTER 2 The critically ill patient",
+    "start_page": 28,
+    "end_page": 39,
+    "slug": "002-the-critically-ill-patient"
+  },
+  {
+    "number": 3,
+    "title": "The unconscious patient",
+    "full_title": "CHAPTER 3 The unconscious patient",
+    "start_page": 40,
+    "end_page": 45,
+    "slug": "003-the-unconscious-patient"
+  },
+  {
+    "number": 4,
+    "title": "Anaphylaxis",
+    "full_title": "CHAPTER 4 Anaphylaxis",
+    "start_page": 46,
+    "end_page": 51,
+    "slug": "004-anaphylaxis"
+  },
+  {
+    "number": 5,
+    "title": "Sepsis",
+    "full_title": "CHAPTER 5 Sepsis",
+    "start_page": 52,
+    "end_page": 61,
+    "slug": "005-sepsis"
+  },
+  {
+    "number": 6,
+    "title": "Cardiac tamponade",
+    "full_title": "CHAPTER 6 Cardiac tamponade",
+    "start_page": 62,
+    "end_page": 64,
+    "slug": "006-cardiac-tamponade"
+  },
+  {
+    "number": 7,
+    "title": "Acid\u2013base disorders",
+    "full_title": "CHAPTER 7 Acid\u2013base disorders",
+    "start_page": 65,
+    "end_page": 70,
+    "slug": "007-acid-base-disorders"
+  },
+  {
+    "number": 8,
+    "title": "Poisoning",
+    "full_title": "CHAPTER 8 Poisoning",
+    "start_page": 71,
+    "end_page": 80,
+    "slug": "008-poisoning"
+  },
+  {
+    "number": 9,
+    "title": "Hypothermia",
+    "full_title": "CHAPTER 9 Hypothermia",
+    "start_page": 81,
+    "end_page": 84,
+    "slug": "009-hypothermia"
+  },
+  {
+    "number": 10,
+    "title": "Drowning",
+    "full_title": "CHAPTER 10 Drowning",
+    "start_page": 85,
+    "end_page": 89,
+    "slug": "010-drowning"
+  },
+  {
+    "number": 11,
+    "title": "Syncope and presyncope",
+    "full_title": "CHAPTER 11 Syncope and presyncope",
+    "start_page": 90,
+    "end_page": 96,
+    "slug": "011-syncope-and-presyncope"
+  },
+  {
+    "number": 12,
+    "title": "Acute coronary syndromes (ACS)",
+    "full_title": "CHAPTER 12 Acute coronary syndromes (ACS)",
+    "start_page": 97,
+    "end_page": 107,
+    "slug": "012-acute-coronary-syndromes-acs"
+  },
+  {
+    "number": 13,
+    "title": "Cardiac arrhythmia",
+    "full_title": "CHAPTER 13 Cardiac arrhythmia",
+    "start_page": 108,
+    "end_page": 125,
+    "slug": "013-cardiac-arrhythmia"
+  },
+  {
+    "number": 14,
+    "title": "Heart failure",
+    "full_title": "CHAPTER 14 Heart failure",
+    "start_page": 126,
+    "end_page": 136,
+    "slug": "014-heart-failure"
+  },
+  {
+    "number": 15,
+    "title": "Infective endocarditis",
+    "full_title": "CHAPTER 15 Infective endocarditis",
+    "start_page": 137,
+    "end_page": 143,
+    "slug": "015-infective-endocarditis"
+  },
+  {
+    "number": 16,
+    "title": "Acute pericarditis",
+    "full_title": "CHAPTER 16 Acute pericarditis",
+    "start_page": 144,
+    "end_page": 147,
+    "slug": "016-acute-pericarditis"
+  },
+  {
+    "number": 17,
+    "title": "Cardiomyopathies and congenital heart disease in adults",
+    "full_title": "CHAPTER 17 Cardiomyopathies and congenital heart disease in adults",
+    "start_page": 148,
+    "end_page": 158,
+    "slug": "017-cardiomyopathies-and-congenital-heart-disease-in-adults"
+  },
+  {
+    "number": 18,
+    "title": "Aortic dissection and other acute aortic syndromes",
+    "full_title": "CHAPTER 18 Aortic dissection and other acute aortic syndromes",
+    "start_page": 159,
+    "end_page": 165,
+    "slug": "018-aortic-dissection-and-other-acute-aortic-syndromes"
+  },
+  {
+    "number": 19,
+    "title": "Pulmonary hypertension",
+    "full_title": "CHAPTER 19 Pulmonary hypertension",
+    "start_page": 166,
+    "end_page": 173,
+    "slug": "019-pulmonary-hypertension"
+  },
+  {
+    "number": 20,
+    "title": "Heart valve disease: native, prosthetic and repaired valves",
+    "full_title": "CHAPTER 20 Heart valve disease: native, prosthetic and repaired valves",
+    "start_page": 174,
+    "end_page": 178,
+    "slug": "020-heart-valve-disease-native-prosthetic-and-repaired-valves"
+  },
+  {
+    "number": 21,
+    "title": "Hypertensive emergencies",
+    "full_title": "CHAPTER 21 Hypertensive emergencies",
+    "start_page": 179,
+    "end_page": 187,
+    "slug": "021-hypertensive-emergencies"
+  },
+  {
+    "number": 22,
+    "title": "Acute asthma",
+    "full_title": "CHAPTER 22 Acute asthma",
+    "start_page": 188,
+    "end_page": 192,
+    "slug": "022-acute-asthma"
+  },
+  {
+    "number": 23,
+    "title": "Exacerbation of chronic obstructive pulmonary disease (COPD)",
+    "full_title": "CHAPTER 23 Exacerbation of chronic obstructive pulmonary disease (COPD)",
+    "start_page": 193,
+    "end_page": 199,
+    "slug": "023-exacerbation-of-chronic-obstructive-pulmonary-disease-copd"
+  },
+  {
+    "number": 24,
+    "title": "Haemoptysis",
+    "full_title": "CHAPTER 24 Haemoptysis",
+    "start_page": 200,
+    "end_page": 203,
+    "slug": "024-haemoptysis"
+  },
+  {
+    "number": 25,
+    "title": "Respiratory infection: CAP, HAP and TB",
+    "full_title": "CHAPTER 25 Respiratory infection: CAP, HAP and TB",
+    "start_page": 204,
+    "end_page": 215,
+    "slug": "025-respiratory-infection-cap-hap-and-tb"
+  },
+  {
+    "number": 26,
+    "title": "Bronchiectasis",
+    "full_title": "CHAPTER 26 Bronchiectasis",
+    "start_page": 216,
+    "end_page": 222,
+    "slug": "026-bronchiectasis"
+  },
+  {
+    "number": 27,
+    "title": "Interstitial lung disease",
+    "full_title": "CHAPTER 27 Interstitial lung disease",
+    "start_page": 223,
+    "end_page": 232,
+    "slug": "027-interstitial-lung-disease"
+  },
+  {
+    "number": 28,
+    "title": "Pleural disease",
+    "full_title": "CHAPTER 28 Pleural disease",
+    "start_page": 233,
+    "end_page": 241,
+    "slug": "028-pleural-disease"
+  },
+  {
+    "number": 29,
+    "title": "Sleep-disordered breathing",
+    "full_title": "CHAPTER 29 Sleep-disordered breathing",
+    "start_page": 242,
+    "end_page": 247,
+    "slug": "029-sleep-disordered-breathing"
+  },
+  {
+    "number": 30,
+    "title": "Respiratory failure: oxygenation and ventilatory support",
+    "full_title": "CHAPTER 30 Respiratory failure: oxygenation and ventilatory support",
+    "start_page": 248,
+    "end_page": 254,
+    "slug": "030-respiratory-failure-oxygenation-and-ventilatory-support"
+  },
+  {
+    "number": 31,
+    "title": "Venous thromboembolism",
+    "full_title": "CHAPTER 31 Venous thromboembolism",
+    "start_page": 255,
+    "end_page": 267,
+    "slug": "031-venous-thromboembolism"
+  },
+  {
+    "number": 32,
+    "title": "Abdominal pain",
+    "full_title": "CHAPTER 32 Abdominal pain",
+    "start_page": 268,
+    "end_page": 273,
+    "slug": "032-abdominal-pain"
+  },
+  {
+    "number": 33,
+    "title": "Nausea and vomiting",
+    "full_title": "CHAPTER 33 Nausea and vomiting",
+    "start_page": 274,
+    "end_page": 277,
+    "slug": "033-nausea-and-vomiting"
+  },
+  {
+    "number": 34,
+    "title": "Diarrhoea",
+    "full_title": "CHAPTER 34 Diarrhoea",
+    "start_page": 278,
+    "end_page": 283,
+    "slug": "034-diarrhoea"
+  },
+  {
+    "number": 35,
+    "title": "Jaundice",
+    "full_title": "CHAPTER 35 Jaundice",
+    "start_page": 284,
+    "end_page": 286,
+    "slug": "035-jaundice"
+  },
+  {
+    "number": 36,
+    "title": "Abdominal swelling, mass and hepato-splenomegaly",
+    "full_title": "CHAPTER 36 Abdominal swelling, mass and hepato-splenomegaly",
+    "start_page": 287,
+    "end_page": 292,
+    "slug": "036-abdominal-swelling-mass-and-hepato-splenomegaly"
+  },
+  {
+    "number": 37,
+    "title": "Acute oesophageal disorders",
+    "full_title": "CHAPTER 37 Acute oesophageal disorders",
+    "start_page": 293,
+    "end_page": 297,
+    "slug": "037-acute-oesophageal-disorders"
+  },
+  {
+    "number": 38,
+    "title": "Haematemesis and melaena",
+    "full_title": "CHAPTER 38 Haematemesis and melaena",
+    "start_page": 298,
+    "end_page": 305,
+    "slug": "038-haematemesis-and-melaena"
+  },
+  {
+    "number": 39,
+    "title": "Lower gastrointestinal bleeding",
+    "full_title": "CHAPTER 39 Lower gastrointestinal bleeding",
+    "start_page": 306,
+    "end_page": 310,
+    "slug": "039-lower-gastrointestinal-bleeding"
+  },
+  {
+    "number": 40,
+    "title": "Inflammatory bowel disease",
+    "full_title": "CHAPTER 40 Inflammatory bowel disease",
+    "start_page": 311,
+    "end_page": 318,
+    "slug": "040-inflammatory-bowel-disease"
+  },
+  {
+    "number": 41,
+    "title": "Alcohol-related liver disease and acute medical complications",
+    "full_title": "CHAPTER 41 Alcohol-related liver disease and acute medical complications",
+    "start_page": 319,
+    "end_page": 322,
+    "slug": "041-alcohol-related-liver-disease-and-acute-medical-complications"
+  },
+  {
+    "number": 42,
+    "title": "Acute liver failure and decompensated chronic liver disease",
+    "full_title": "CHAPTER 42 Acute liver failure and decompensated chronic liver disease",
+    "start_page": 323,
+    "end_page": 331,
+    "slug": "042-acute-liver-failure-and-decompensated-chronic-liver-disease"
+  },
+  {
+    "number": 43,
+    "title": "Biliary tract disorders and acute pancreatitis",
+    "full_title": "CHAPTER 43 Biliary tract disorders and acute pancreatitis",
+    "start_page": 332,
+    "end_page": 337,
+    "slug": "043-biliary-tract-disorders-and-acute-pancreatitis"
+  },
+  {
+    "number": 44,
+    "title": "Diabetic emergencies: DKA and HHS",
+    "full_title": "CHAPTER 44 Diabetic emergencies: DKA and HHS",
+    "start_page": 338,
+    "end_page": 343,
+    "slug": "044-diabetic-emergencies-dka-and-hhs"
+  },
+  {
+    "number": 45,
+    "title": "Hyperglycaemic states",
+    "full_title": "CHAPTER 45 Hyperglycaemic states",
+    "start_page": 344,
+    "end_page": 346,
+    "slug": "045-hyperglycaemic-states"
+  },
+  {
+    "number": 46,
+    "title": "Hypoglycaemia",
+    "full_title": "CHAPTER 46 Hypoglycaemia",
+    "start_page": 347,
+    "end_page": 349,
+    "slug": "046-hypoglycaemia"
+  },
+  {
+    "number": 47,
+    "title": "Adrenal disorders",
+    "full_title": "CHAPTER 47 Adrenal disorders",
+    "start_page": 350,
+    "end_page": 356,
+    "slug": "047-adrenal-disorders"
+  },
+  {
+    "number": 48,
+    "title": "Disorders of anterior and posterior pituitary",
+    "full_title": "CHAPTER 48 Disorders of anterior and posterior pituitary",
+    "start_page": 357,
+    "end_page": 361,
+    "slug": "048-disorders-of-anterior-and-posterior-pituitary"
+  },
+  {
+    "number": 49,
+    "title": "Thyroid emergencies",
+    "full_title": "CHAPTER 49 Thyroid emergencies",
+    "start_page": 362,
+    "end_page": 369,
+    "slug": "049-thyroid-emergencies"
+  },
+  {
+    "number": 50,
+    "title": "Parathyroid disorders",
+    "full_title": "CHAPTER 50 Parathyroid disorders",
+    "start_page": 370,
+    "end_page": 376,
+    "slug": "050-parathyroid-disorders"
+  },
+  {
+    "number": 51,
+    "title": "Pancreatic endocrine disorders (non-diabetic)",
+    "full_title": "CHAPTER 51 Pancreatic endocrine disorders (non-diabetic)",
+    "start_page": 377,
+    "end_page": 386,
+    "slug": "051-pancreatic-endocrine-disorders-non-diabetic"
+  },
+  {
+    "number": 52,
+    "title": "Electrolyte disorders",
+    "full_title": "CHAPTER 52 Electrolyte disorders",
+    "start_page": 387,
+    "end_page": 403,
+    "slug": "052-electrolyte-disorders"
+  },
+  {
+    "number": 53,
+    "title": "Headache syndromes: including subarachnoid haemorrhage and cerebral venous sinus thrombosis",
+    "full_title": "CHAPTER 53 Headache syndromes: including subarachnoid haemorrhage and cerebral venous sinus thrombosis",
+    "start_page": 404,
+    "end_page": 409,
+    "slug": "053-headache-syndromes-including-subarachnoid-haemorrhage-and-cerebral-venous-sinus-thrombosis"
+  },
+  {
+    "number": 54,
+    "title": "Weakness and paralysis",
+    "full_title": "CHAPTER 54 Weakness and paralysis",
+    "start_page": 410,
+    "end_page": 414,
+    "slug": "054-weakness-and-paralysis"
+  },
+  {
+    "number": 55,
+    "title": "Visual disturbance",
+    "full_title": "CHAPTER 55 Visual disturbance",
+    "start_page": 415,
+    "end_page": 423,
+    "slug": "055-visual-disturbance"
+  },
+  {
+    "number": 56,
+    "title": "Transient ischaemic attack and stroke",
+    "full_title": "CHAPTER 56 Transient ischaemic attack and stroke",
+    "start_page": 424,
+    "end_page": 437,
+    "slug": "056-transient-ischaemic-attack-and-stroke"
+  },
+  {
+    "number": 57,
+    "title": "Seizures and epilepsy",
+    "full_title": "CHAPTER 57 Seizures and epilepsy",
+    "start_page": 438,
+    "end_page": 444,
+    "slug": "057-seizures-and-epilepsy"
+  },
+  {
+    "number": 58,
+    "title": "Peripheral neuropathy (acute and chronic)",
+    "full_title": "CHAPTER 58 Peripheral neuropathy (acute and chronic)",
+    "start_page": 445,
+    "end_page": 447,
+    "slug": "058-peripheral-neuropathy-acute-and-chronic"
+  },
+  {
+    "number": 59,
+    "title": "Guillain\u2013Barr\u00e9 syndrome",
+    "full_title": "CHAPTER 59 Guillain\u2013Barr\u00e9 syndrome",
+    "start_page": 448,
+    "end_page": 452,
+    "slug": "059-guillain-barr-syndrome"
+  },
+  {
+    "number": 60,
+    "title": "Multiple sclerosis",
+    "full_title": "CHAPTER 60 Multiple sclerosis",
+    "start_page": 453,
+    "end_page": 460,
+    "slug": "060-multiple-sclerosis"
+  },
+  {
+    "number": 61,
+    "title": "Myasthenia gravis",
+    "full_title": "CHAPTER 61 Myasthenia gravis",
+    "start_page": 461,
+    "end_page": 464,
+    "slug": "061-myasthenia-gravis"
+  },
+  {
+    "number": 62,
+    "title": "Parkinson\u2019s disease and other movement disorders",
+    "full_title": "CHAPTER 62 Parkinson\u2019s disease and other movement disorders",
+    "start_page": 465,
+    "end_page": 470,
+    "slug": "062-parkinson-s-disease-and-other-movement-disorders"
+  },
+  {
+    "number": 63,
+    "title": "Motor neurone disease",
+    "full_title": "CHAPTER 63 Motor neurone disease",
+    "start_page": 471,
+    "end_page": 474,
+    "slug": "063-motor-neurone-disease"
+  },
+  {
+    "number": 64,
+    "title": "Raised intracranial pressure",
+    "full_title": "CHAPTER 64 Raised intracranial pressure",
+    "start_page": 475,
+    "end_page": 478,
+    "slug": "064-raised-intracranial-pressure"
+  },
+  {
+    "number": 65,
+    "title": "Acute spinal pain",
+    "full_title": "CHAPTER 65 Acute spinal pain",
+    "start_page": 479,
+    "end_page": 481,
+    "slug": "065-acute-spinal-pain"
+  },
+  {
+    "number": 66,
+    "title": "Spinal cord compression",
+    "full_title": "CHAPTER 66 Spinal cord compression",
+    "start_page": 482,
+    "end_page": 485,
+    "slug": "066-spinal-cord-compression"
+  },
+  {
+    "number": 67,
+    "title": "Functional neurological disorder in the acute setting",
+    "full_title": "CHAPTER 67 Functional neurological disorder in the acute setting",
+    "start_page": 486,
+    "end_page": 499,
+    "slug": "067-functional-neurological-disorder-in-the-acute-setting"
+  },
+  {
+    "number": 68,
+    "title": "Comprehensive geriatric assessment",
+    "full_title": "CHAPTER 68 Comprehensive geriatric assessment",
+    "start_page": 500,
+    "end_page": 506,
+    "slug": "068-comprehensive-geriatric-assessment"
+  },
+  {
+    "number": 69,
+    "title": "Delirium, dementia and cognitive disorders",
+    "full_title": "CHAPTER 69 Delirium, dementia and cognitive disorders",
+    "start_page": 507,
+    "end_page": 512,
+    "slug": "069-delirium-dementia-and-cognitive-disorders"
+  },
+  {
+    "number": 70,
+    "title": "Perioperative medicine",
+    "full_title": "CHAPTER 70 Perioperative medicine",
+    "start_page": 513,
+    "end_page": 521,
+    "slug": "070-perioperative-medicine"
+  },
+  {
+    "number": 71,
+    "title": "Cellulitis and necrotising fasciitis",
+    "full_title": "CHAPTER 71 Cellulitis and necrotising fasciitis",
+    "start_page": 522,
+    "end_page": 525,
+    "slug": "071-cellulitis-and-necrotising-fasciitis"
+  },
+  {
+    "number": 72,
+    "title": "Urinary tract infection",
+    "full_title": "CHAPTER 72 Urinary tract infection",
+    "start_page": 526,
+    "end_page": 532,
+    "slug": "072-urinary-tract-infection"
+  },
+  {
+    "number": 73,
+    "title": "Central nervous system infection",
+    "full_title": "CHAPTER 73 Central nervous system infection",
+    "start_page": 533,
+    "end_page": 542,
+    "slug": "073-central-nervous-system-infection"
+  },
+  {
+    "number": 74,
+    "title": "Pancytopenia and febrile neutropenia",
+    "full_title": "CHAPTER 74 Pancytopenia and febrile neutropenia",
+    "start_page": 543,
+    "end_page": 548,
+    "slug": "074-pancytopenia-and-febrile-neutropenia"
+  },
+  {
+    "number": 75,
+    "title": "Fever on return from abroad",
+    "full_title": "CHAPTER 75 Fever on return from abroad",
+    "start_page": 549,
+    "end_page": 556,
+    "slug": "075-fever-on-return-from-abroad"
+  },
+  {
+    "number": 76,
+    "title": "Pyrexia of unknown origin",
+    "full_title": "CHAPTER 76 Pyrexia of unknown origin",
+    "start_page": 557,
+    "end_page": 560,
+    "slug": "076-pyrexia-of-unknown-origin"
+  },
+  {
+    "number": 77,
+    "title": "HIV infection",
+    "full_title": "CHAPTER 77 HIV infection",
+    "start_page": 561,
+    "end_page": 567,
+    "slug": "077-hiv-infection"
+  },
+  {
+    "number": 78,
+    "title": "COVID-19 and future pandemics",
+    "full_title": "CHAPTER 78 COVID-19 and future pandemics",
+    "start_page": 568,
+    "end_page": 574,
+    "slug": "078-covid-19-and-future-pandemics"
+  },
+  {
+    "number": 79,
+    "title": "Septic arthritis",
+    "full_title": "CHAPTER 79 Septic arthritis",
+    "start_page": 575,
+    "end_page": 579,
+    "slug": "079-septic-arthritis"
+  },
+  {
+    "number": 80,
+    "title": "Anaemia: blood transfusion and alternatives",
+    "full_title": "CHAPTER 80 Anaemia: blood transfusion and alternatives",
+    "start_page": 580,
+    "end_page": 586,
+    "slug": "080-anaemia-blood-transfusion-and-alternatives"
+  },
+  {
+    "number": 81,
+    "title": "Bleeding disorders",
+    "full_title": "CHAPTER 81 Bleeding disorders",
+    "start_page": 587,
+    "end_page": 589,
+    "slug": "081-bleeding-disorders"
+  },
+  {
+    "number": 82,
+    "title": "Thrombocytopenia and thrombosis",
+    "full_title": "CHAPTER 82 Thrombocytopenia and thrombosis",
+    "start_page": 590,
+    "end_page": 592,
+    "slug": "082-thrombocytopenia-and-thrombosis"
+  },
+  {
+    "number": 83,
+    "title": "Acute painful sickle cell crisis",
+    "full_title": "CHAPTER 83 Acute painful sickle cell crisis",
+    "start_page": 593,
+    "end_page": 595,
+    "slug": "083-acute-painful-sickle-cell-crisis"
+  },
+  {
+    "number": 84,
+    "title": "Common haematological malignancies",
+    "full_title": "CHAPTER 84 Common haematological malignancies",
+    "start_page": 596,
+    "end_page": 608,
+    "slug": "084-common-haematological-malignancies"
+  },
+  {
+    "number": 85,
+    "title": "Management of anticoagulation",
+    "full_title": "CHAPTER 85 Management of anticoagulation",
+    "start_page": 609,
+    "end_page": 621,
+    "slug": "085-management-of-anticoagulation"
+  },
+  {
+    "number": 86,
+    "title": "Acute kidney injury",
+    "full_title": "CHAPTER 86 Acute kidney injury",
+    "start_page": 622,
+    "end_page": 628,
+    "slug": "086-acute-kidney-injury"
+  },
+  {
+    "number": 87,
+    "title": "Chronic kidney disease, including end-stage kidney disease",
+    "full_title": "CHAPTER 87 Chronic kidney disease, including end-stage kidney disease",
+    "start_page": 629,
+    "end_page": 636,
+    "slug": "087-chronic-kidney-disease-including-end-stage-kidney-disease"
+  },
+  {
+    "number": 88,
+    "title": "Renal tubular disorders",
+    "full_title": "CHAPTER 88 Renal tubular disorders",
+    "start_page": 637,
+    "end_page": 643,
+    "slug": "088-renal-tubular-disorders"
+  },
+  {
+    "number": 89,
+    "title": "Nephrotic syndrome",
+    "full_title": "CHAPTER 89 Nephrotic syndrome",
+    "start_page": 644,
+    "end_page": 652,
+    "slug": "089-nephrotic-syndrome"
+  },
+  {
+    "number": 90,
+    "title": "Glomerular diseases",
+    "full_title": "CHAPTER 90 Glomerular diseases",
+    "start_page": 653,
+    "end_page": 661,
+    "slug": "090-glomerular-diseases"
+  },
+  {
+    "number": 91,
+    "title": "Acute arthritis",
+    "full_title": "CHAPTER 91 Acute arthritis",
+    "start_page": 662,
+    "end_page": 664,
+    "slug": "091-acute-arthritis"
+  },
+  {
+    "number": 92,
+    "title": "Crystal arthropathies",
+    "full_title": "CHAPTER 92 Crystal arthropathies",
+    "start_page": 665,
+    "end_page": 668,
+    "slug": "092-crystal-arthropathies"
+  },
+  {
+    "number": 93,
+    "title": "Rheumatoid arthritis",
+    "full_title": "CHAPTER 93 Rheumatoid arthritis",
+    "start_page": 669,
+    "end_page": 674,
+    "slug": "093-rheumatoid-arthritis"
+  },
+  {
+    "number": 94,
+    "title": "Acute vasculitis",
+    "full_title": "CHAPTER 94 Acute vasculitis",
+    "start_page": 675,
+    "end_page": 681,
+    "slug": "094-acute-vasculitis"
+  },
+  {
+    "number": 95,
+    "title": "Multisystem rheumatic disorders",
+    "full_title": "CHAPTER 95 Multisystem rheumatic disorders",
+    "start_page": 682,
+    "end_page": 689,
+    "slug": "095-multisystem-rheumatic-disorders"
+  },
+  {
+    "number": 96,
+    "title": "Complications of cancer",
+    "full_title": "CHAPTER 96 Complications of cancer",
+    "start_page": 690,
+    "end_page": 705,
+    "slug": "096-complications-of-cancer"
+  },
+  {
+    "number": 97,
+    "title": "Palliative and end-of-life care",
+    "full_title": "CHAPTER 97 Palliative and end-of-life care",
+    "start_page": 706,
+    "end_page": 715,
+    "slug": "097-palliative-and-end-of-life-care"
+  },
+  {
+    "number": 98,
+    "title": "Acute rash",
+    "full_title": "CHAPTER 98 Acute rash",
+    "start_page": 716,
+    "end_page": 721,
+    "slug": "098-acute-rash"
+  },
+  {
+    "number": 99,
+    "title": "Erythroderma and toxic epidermal necrolysis",
+    "full_title": "CHAPTER 99 Erythroderma and toxic epidermal necrolysis",
+    "start_page": 722,
+    "end_page": 728,
+    "slug": "099-erythroderma-and-toxic-epidermal-necrolysis"
+  },
+  {
+    "number": 100,
+    "title": "Urticaria and angioedema",
+    "full_title": "CHAPTER 100 Urticaria and angioedema",
+    "start_page": 729,
+    "end_page": 737,
+    "slug": "100-urticaria-and-angioedema"
+  },
+  {
+    "number": 101,
+    "title": "Same-day emergency care",
+    "full_title": "CHAPTER 101 Same-day emergency care",
+    "start_page": 738,
+    "end_page": 743,
+    "slug": "101-same-day-emergency-care"
+  },
+  {
+    "number": 102,
+    "title": "Hospital at home",
+    "full_title": "CHAPTER 102 Hospital at home",
+    "start_page": 744,
+    "end_page": 751,
+    "slug": "102-hospital-at-home"
+  },
+  {
+    "number": 103,
+    "title": "Pregnancy-related medical conditions",
+    "full_title": "CHAPTER 103 Pregnancy-related medical conditions",
+    "start_page": 752,
+    "end_page": 760,
+    "slug": "103-pregnancy-related-medical-conditions"
+  },
+  {
+    "number": 104,
+    "title": "Capacity and consent",
+    "full_title": "CHAPTER 104 Capacity and consent",
+    "start_page": 761,
+    "end_page": 767,
+    "slug": "104-capacity-and-consent"
+  },
+  {
+    "number": 105,
+    "title": "Airway management and upper airway obstruction",
+    "full_title": "CHAPTER 105 Airway management and upper airway obstruction",
+    "start_page": 768,
+    "end_page": 777,
+    "slug": "105-airway-management-and-upper-airway-obstruction"
+  },
+  {
+    "number": 106,
+    "title": "DC cardioversion",
+    "full_title": "CHAPTER 106 DC cardioversion",
+    "start_page": 778,
+    "end_page": 781,
+    "slug": "106-dc-cardioversion"
+  },
+  {
+    "number": 107,
+    "title": "Temporary cardiac pacing",
+    "full_title": "CHAPTER 107 Temporary cardiac pacing",
+    "start_page": 782,
+    "end_page": 787,
+    "slug": "107-temporary-cardiac-pacing"
+  },
+  {
+    "number": 108,
+    "title": "Central vein cannulation",
+    "full_title": "CHAPTER 108 Central vein cannulation",
+    "start_page": 788,
+    "end_page": 793,
+    "slug": "108-central-vein-cannulation"
+  },
+  {
+    "number": 109,
+    "title": "Intraosseous access",
+    "full_title": "CHAPTER 109 Intraosseous access",
+    "start_page": 794,
+    "end_page": 796,
+    "slug": "109-intraosseous-access"
+  },
+  {
+    "number": 110,
+    "title": "Insertion of an intercostal chest drain",
+    "full_title": "CHAPTER 110 Insertion of an intercostal chest drain",
+    "start_page": 797,
+    "end_page": 804,
+    "slug": "110-insertion-of-an-intercostal-chest-drain"
+  },
+  {
+    "number": 111,
+    "title": "Aspiration of the knee joint",
+    "full_title": "CHAPTER 111 Aspiration of the knee joint",
+    "start_page": 805,
+    "end_page": 807,
+    "slug": "111-aspiration-of-the-knee-joint"
+  },
+  {
+    "number": 112,
+    "title": "Abdominal paracentesis",
+    "full_title": "CHAPTER 112 Abdominal paracentesis",
+    "start_page": 808,
+    "end_page": 811,
+    "slug": "112-abdominal-paracentesis"
+  },
+  {
+    "number": 113,
+    "title": "Non-invasive ventilation",
+    "full_title": "CHAPTER 113 Non-invasive ventilation",
+    "start_page": 812,
+    "end_page": 816,
+    "slug": "113-non-invasive-ventilation"
+  },
+  {
+    "number": 114,
+    "title": "Arterial line insertion",
+    "full_title": "CHAPTER 114 Arterial line insertion",
+    "start_page": 817,
+    "end_page": 820,
+    "slug": "114-arterial-line-insertion"
+  },
+  {
+    "number": 115,
+    "title": "Point-of-care ultrasound",
+    "full_title": "CHAPTER 115 Point-of-care ultrasound",
+    "start_page": 821,
+    "end_page": 847,
+    "slug": "115-point-of-care-ultrasound"
+  }
+]

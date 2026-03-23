@@ -1,0 +1,61 @@
+en	lt	note
+cardiac arrest	širdies sustojimas	Prefer over literal "kardialinis areštas".
+cardiorespiratory arrest	kardiorespiracinis sustojimas	Use when breathing and circulation are both absent.
+cardiopulmonary resuscitation (CPR)	kardiopulmoninis gaivinimas (CPR)	Keep CPR abbreviation.
+chest compressions	krūtinės ląstos paspaudimai	Do not shorten to "masažas".
+airway	kvėpavimo takai	Context-dependent; singular in EN often maps to plural in LT.
+airway management	kvėpavimo takų valdymas	
+bag-valve-mask	maišas su vožtuvu ir kauke	Avoid vague "maišas-kaukė" in formal translation.
+oropharyngeal airway	orofaringinis vamzdelis	
+supraglottic airway device	supraglotinis kvėpavimo takų prietaisas	
+endotracheal tube	endotrachėjinis vamzdelis	Abbrev. ETT may be kept in brackets.
+waveform capnography	bangos formos kapnografija	
+shockable rhythm	defibriliuotinas ritmas	Prefer clinically precise wording over literal "šokuojamas ritmas".
+non-shockable rhythm	nedefibriliuotinas ritmas	Prefer pairing with "defibriliuotinas ritmas".
+pulseless electrical activity (PEA)	elektrinė veikla be pulso (PEA)	Keep abbreviation.
+ventricular fibrillation (VF)	skilvelių virpėjimas (VF)	Keep abbreviation.
+pulseless ventricular tachycardia (pVT)	bepulsinė skilvelinė tachikardija (pVT)	Keep abbreviation.
+asystole	asistolija	
+defibrillation	defibriliacija	
+return of spontaneous circulation (ROSC)	spontaninės kraujotakos atsikūrimas (ROSC)	Keep abbreviation.
+reversible causes	grįžtamos priežastys	In cardiac arrest context.
+tension pneumothorax	įtampos pneumotoraksas	"Įtemptasis pneumotoraksas" sounds calqued; "įtampos" is more natural.
+cardiac tamponade	širdies tamponada	
+pulmonary embolism	plaučių embolija	
+thrombolysis	trombolizė	
+hypoxia	hipoksija	
+hypovolaemia	hipovolemija	British spelling in source.
+hypothermia	hipotermija	
+toxins	toksinai	Context-specific.
+systolic blood pressure (SBP)	sistolinis arterinis kraujospūdis (SAKS)	Use Lithuanian abbreviation only if used consistently in chapter.
+oxygen saturation	deguonies saturacija	If needed, "deguonies įsotinimas" is possible, but keep one choice consistently.
+12-lead ECG	12 derivacijų EKG	
+intensive care	 intensyvioji terapija	Trim leading space if imported elsewhere.
+guideline	gairės	Not "rekomendacijos" unless context demands.
+futile	beprasmis	Clinical decision-making context.
+debrief	aptarimas po įvykio	Avoid slang.
+critically ill patient	kritinės būklės pacientas	Preferred for acute medicine context.
+mean arterial pressure (MAP)	vidutinis arterinis spaudimas (VAS)	Prefer the smoother Lithuanian clinical form without redundant "kraujo"; keep MAP/VAS in brackets when useful.
+jugular venous pressure (JVP)	jungo venų spaudimas (JVP)	Use descriptive Lithuanian form and keep JVP abbreviation.
+pulmonary oedema	plaučių edema	Standard cardiology/acute medicine term.
+crystalloid	kristaloidų tirpalas	Prefer full phrase in treatment instructions.
+capillary refill time	kapiliarų prisipildymo laikas	Established emergency medicine phrasing.
+mottled skin	marmurinė oda	Prefer clinical Lithuanian wording; "odos margumas" can be used descriptively in explanatory context.
+respiratory distress	kvėpavimo sutrikimas (distresas)	Prefer this in prose; it sounds more naturally Lithuanian while preserving the clinical term.
+upper airway obstruction	viršutinių kvėpavimo takų obstrukcija	Prefer over literal wording.
+stridor	stridoras	Standard clinical usage.
+airway adjuncts	pagalbinės kvėpavimo takų priemonės	Context: devices used to maintain airway patency.
+organ perfusion	organų perfuzija	Standard critical care usage.
+low cardiac output	mažas širdies minutinis tūris	Avoid confusion with stroke volume.
+vasodilatation	vazodilatacija	Use this form consistently.
+pulse oximeter	pulsoksimetras	Standard device name.
+arterial blood gases	arterinio kraujo dujų tyrimas	Prefer full test name in prose.
+hypoxaemia	hipoksemija	Standard respiratory term.
+shock	šokas	Use in circulatory failure context.
+cardiogenic shock	kardiogeninis šokas	Standard cardiology term.
+pericardiocentesis	perikardiocentezė	Procedural term.
+continuous positive airway pressure (CPAP)	pastovaus teigiamo slėgio kvėpavimo takuose sistema (CPAP)	Prefer wording aligned with Lithuanian institutional usage.
+central venous pressure (CVP)	centrinis veninis spaudimas (CVP)	Keep abbreviation.
+inferior vena cava (IVC)	apatinė tuščioji vena (IVC)	Keep abbreviation when used in tables.
+lateralized weakness	vienos pusės silpnumas	Avoid awkward literal borrowing in neurological examination prose.
+flat neck veins	neišryškėjusios kaklo venos	Prefer descriptive Lithuanian wording over literal "subliuškusios".
