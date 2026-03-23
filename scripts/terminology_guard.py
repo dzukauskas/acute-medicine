@@ -8,6 +8,8 @@ from pathlib import Path
 
 
 Rule = dict[str, str]
+INLINE_CODE_RE = re.compile(r"`[^`]*`")
+MARKDOWN_LINK_RE = re.compile(r"\[[^\]]*\]\([^)]+\)")
 
 
 def load_rules(paths: list[Path]) -> list[Rule]:
@@ -40,11 +42,18 @@ def build_pattern(rule: Rule) -> re.Pattern[str]:
     raise ValueError(f"Unsupported match_type={match_type!r} in {rule['rule_file']}")
 
 
+def normalize_line_for_scan(line: str) -> str:
+    # Ignore Markdown literals so filenames and tool names do not trigger prose QA rules.
+    normalized = INLINE_CODE_RE.sub("", line)
+    normalized = MARKDOWN_LINK_RE.sub("", normalized)
+    return normalized
+
+
 def find_matches(text: str, rule: Rule) -> list[tuple[int, str]]:
     pattern = build_pattern(rule)
     matches: list[tuple[int, str]] = []
     for lineno, line in enumerate(text.splitlines(), start=1):
-        if pattern.search(line):
+        if pattern.search(normalize_line_for_scan(line)):
             matches.append((lineno, line.strip()))
     return matches
 
