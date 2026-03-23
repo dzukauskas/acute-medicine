@@ -13,6 +13,7 @@ PDF_NAME = (
     "Acute Medicine A Practical Guide to the Management of Medical Emergencies "
     "(Mridula Rajwani (Editor) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf"
 )
+DEFAULT_PDF_PATH = f"books/acute-medicine/source/pdf/{PDF_NAME}"
 
 
 def normalize_text(text: str) -> str:
@@ -80,8 +81,8 @@ def write_index(chapters: list[dict], out_dir: Path) -> None:
         "| --- | ----- | ----- | ------ | ----------- |",
     ]
     for chapter in chapters:
-        source = f"../en/{chapter['slug']}.md"
-        translation = f"../lt/{chapter['slug']}.md"
+        source = f"../chapters-en/{chapter['slug']}.md"
+        translation = f"../../lt/chapters/{chapter['slug']}.md"
         lines.append(
             f"| {chapter['number']} | {chapter['title']} | {chapter['start_page']}-{chapter['end_page']} "
             f"| {source} | {translation} |"
@@ -105,16 +106,16 @@ def write_chapter_source(pdf: fitz.Document, chapter: dict, out_dir: Path) -> Pa
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Extract chapter text from the PDF into Markdown.")
-    parser.add_argument("--pdf", default=PDF_NAME, help="Path to the source PDF.")
+    parser.add_argument("--pdf", default=DEFAULT_PDF_PATH, help="Path to the source PDF.")
     parser.add_argument("--chapter", type=int, help="Extract only one chapter number.")
     parser.add_argument("--all", action="store_true", help="Extract every chapter.")
-    parser.add_argument("--out", default="study", help="Output directory root.")
+    parser.add_argument("--out", default="books/acute-medicine", help="Book directory root.")
     args = parser.parse_args()
 
     pdf_path = Path(args.pdf)
     out_root = Path(args.out)
-    en_dir = out_root / "en"
-    index_dir = out_root / "index"
+    en_dir = out_root / "source" / "chapters-en"
+    index_dir = out_root / "source" / "index"
     en_dir.mkdir(parents=True, exist_ok=True)
     index_dir.mkdir(parents=True, exist_ok=True)
 

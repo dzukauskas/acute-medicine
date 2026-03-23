@@ -1,0 +1,24 @@
+match_type	banned	preferred	reason
+phrase	eskaluoti pagalbą	kviesti papildomą pagalbą	Angliškos klinikinės vadybos kalkė; lietuviškai aiškiau įvardyti konkretų veiksmą.
+phrase	naudingas kaip bendras kontekstas	tinka tik bendrai orientacijai	Vertimo konstrukcija iš "useful as general context".
+phrase	atramos taškai	pagrindiniai kriterijai arba pagrindiniai pagrindai	Miglotas ir verstinis junginys.
+phrase	kompresijų kokybę	kokybiškus krūtinės ląstos paspaudimus	Taisoma ir kalkė, ir netiksli abstrakcija.
+phrase	įgūdžių turintis specialistas	įgudęs arba patyręs specialistas	Angliškas konstrukto perkėlimas.
+phrase	pilna ABCDE peržiūra	pilnas ABCDE įvertinimas	Medicininėje lietuvių kalboje natūraliau „įvertinimas“.
+phrase	pradinis valdymas	pradiniai veiksmai	Skyriaus antraštėse ir klinikiniame tekste skamba kaip tiesioginis „initial management“ vertinys.
+phrase	gyvybei suderinamas ritmas	organizuotas ritmas, galintis užtikrinti kraujotaką	Tiesioginis „compatible with life“ vertinys medicininiame kontekste skamba nenatūraliai.
+phrase	pakankamą patirtį turintis specialistas	patyręs specialistas	Tiesioginis atributinės angliškos konstrukcijos perkėlimas.
+phrase	prioritetas yra	pirmiausia / svarbiausia	Tiesioginis angliško sakinio karkaso vertimas.
+phrase	sprendimas dėl	spręskite / aptarkite / nuspręskite	Dažnai žymi daiktavardinę biurokratinę kalkę; perrašyti aktyvia konstrukcija.
+phrase	turi būti priimamas	nuspręskite / reikia nuspręsti	Pasyvi biurokratinė konstrukcija.
+phrase	turi būti aptariamas	reikėtų aptarti	Pasyvi biurokratinė konstrukcija.
+phrase	turi būti grindžiami	reikia vadovautis / turi remtis	Sausa administracinė kalkė.
+phrase	yra viena svarbiausių	viena svarbiausių	Dažnai perteklinis angliškas karkasas su „yra“.
+phrase	gali būti naudingas	padeda / gali padėti	Dažnai verčiama pažodžiui ir apsunkina sakinį.
+phrase	orientuojantis į	siekiant / pagal	Dažnas verstinis junginys iš „guided by / targeting“.
+phrase	komanda gali svarstyti	galima / verta svarstyti	Verstinė konstrukcija iš „the team should consider“.
+phrase	turi gerai išmanyti	turi mokėti naudotis / turi gerai žinoti	Dažnai per daug tiesioginis vertimas iš „should be familiar with“.
+regex	\bSprendimas dėl [^.]+ turi būti\b	perrašyk aktyvia konstrukcija	Biurokratinė pasyvi konstrukcija, dažnai skambanti kaip vertimas.
+regex	\b[Aa]rtimiesiems turi būti suteikta\b	artimuosius reikia informuoti / sudaryti galimybę	Pasyvus verstinis sakinys.
+regex	\bPrieš kiekvieną [^.]+ turi būti atlikta\b	perrašyk aktyviu veiksmažodžiu	Pasyvi procedūrinė konstrukcija, kurią lietuviškai geriau keisti tiesioginiu nurodymu.
+regex	\b[Pp]askyrus pirm[ąa] [^.]+ nepriklausomai nuo to, ar\b	jei sakinys per sunkus, skaidyk į du sakinius	Perkrautas loginiu požiūriu sakinys.

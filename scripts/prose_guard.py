@@ -21,7 +21,7 @@ def load_rules(paths: list[Path]) -> list[Rule]:
                 rows.append(
                     {
                         "rule_file": path.name,
-                        "match_type": row.get("match_type", "word").strip() or "word",
+                        "match_type": row.get("match_type", "phrase").strip() or "phrase",
                         "banned": row["banned"].strip(),
                         "preferred": row["preferred"].strip(),
                         "reason": row["reason"].strip(),
@@ -33,8 +33,6 @@ def load_rules(paths: list[Path]) -> list[Rule]:
 def build_pattern(rule: Rule) -> re.Pattern[str]:
     banned = rule["banned"]
     match_type = rule["match_type"]
-    if match_type == "word":
-        return re.compile(rf"(?i)\b{re.escape(banned)}\b")
     if match_type == "phrase":
         return re.compile(re.escape(banned), re.IGNORECASE)
     if match_type == "regex":
@@ -43,7 +41,6 @@ def build_pattern(rule: Rule) -> re.Pattern[str]:
 
 
 def normalize_line_for_scan(line: str) -> str:
-    # Ignore Markdown literals so filenames and tool names do not trigger prose QA rules.
     normalized = INLINE_CODE_RE.sub("", line)
     normalized = MARKDOWN_LINK_RE.sub("", normalized)
     return normalized
@@ -53,7 +50,8 @@ def find_matches(text: str, rule: Rule) -> list[tuple[int, str]]:
     pattern = build_pattern(rule)
     matches: list[tuple[int, str]] = []
     for lineno, line in enumerate(text.splitlines(), start=1):
-        if pattern.search(normalize_line_for_scan(line)):
+        normalized = normalize_line_for_scan(line)
+        if pattern.search(normalized):
             matches.append((lineno, line.strip()))
     return matches
 
@@ -62,15 +60,11 @@ def scan_file(file_path: Path, rules: list[Rule]) -> list[str]:
     text = file_path.read_text(encoding="utf-8")
     findings: list[str] = []
     for rule in rules:
-        banned = rule["banned"].strip()
-        preferred = rule["preferred"].strip()
-        reason = rule["reason"].strip()
-        match_type = rule["match_type"].strip()
-        rule_file = rule["rule_file"].strip()
         for lineno, line in find_matches(text, rule):
             findings.append(
-                f"{file_path}:{lineno}: rule_file='{rule_file}' match_type='{match_type}' "
-                f"banned='{banned}' preferred='{preferred}' reason='{reason}'\n"
+                f"{file_path}:{lineno}: rule_file='{rule['rule_file']}' "
+                f"match_type='{rule['match_type']}' banned='{rule['banned']}' "
+                f"preferred='{rule['preferred']}' reason='{rule['reason']}'\n"
                 f"  {line}"
             )
     return findings
@@ -78,7 +72,7 @@ def scan_file(file_path: Path, rules: list[Rule]) -> list[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Flag banned Lithuanian calques and awkward literalisms in translation files."
+        description="Flag Lithuanian prose calques and translation-shaped sentence patterns."
     )
     parser.add_argument(
         "paths",
@@ -89,11 +83,8 @@ def main() -> int:
     parser.add_argument(
         "--rules",
         nargs="*",
-        default=[
-            "books/acute-medicine/disallowed_terms.tsv",
-            "books/acute-medicine/disallowed_phrases.tsv",
-        ],
-        help="One or more TSV rule files. Defaults to the active book rule sets.",
+        default=["books/acute-medicine/calque_patterns.tsv"],
+        help="One or more TSV rule files. Defaults to the active book calque rule set.",
     )
     args = parser.parse_args()
 
@@ -114,7 +105,7 @@ def main() -> int:
         print("\n\n".join(findings))
         return 1
 
-    print("No banned terms or phrases found.")
+    print("No translation-shaped prose patterns found.")
     return 0
 
 

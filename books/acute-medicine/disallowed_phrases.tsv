@@ -1,0 +1,3 @@
+match_type	banned	preferred	reason
+phrase	numeriu 2222	pagal vietinę ligoninės tvarką	JK vidaus telefono numeris negali būti pateiktas kaip universalus Lietuvos standartas.
+regex	\b\d+\.\d+\s*(mmol/L|°C|kPa|mmHg|mg/val\.|mL/kg/val\.|mikrogramai/kg/min\.)\b	naudok kablelį dešimtainiams skaičiams, pvz. 4,0 mmol/L	Lietuviškoje medicininėje rašysenoje dešimtainiams skaičiams vartojamas kablelis.

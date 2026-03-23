@@ -1,0 +1,13 @@
+en	lt	note	status
+cardiorespiratory arrest	kardiorespiracinis sustojimas	Naudoti, kai kartu nėra kvėpavimo ir kraujotakos.	preferred
+in-hospital cardiac arrest	širdies sustojimas ligoninėje	Pagrindinis 1 skyriaus terminas.	preferred
+cardiopulmonary resuscitation (CPR)	kardiopulmoninis gaivinimas (CPR)	Tekste galima trumpinti iki CPR, pirmą kartą išrašius pilną formą.	preferred
+chest compressions	krūtinės ląstos paspaudimai	Nevartoti „širdies masažas“.	approved
+pulseless electrical activity (PEA)	elektrinė veikla be pulso (PEA)	Pagrindiniame tekste palikta pilna lietuviška forma su tarptautiniu trumpiniu.	preferred
+ventricular fibrillation	skilvelių virpėjimas	Lietuviškame tekste galima nevartoti VF, jei tai nebūtina.	preferred
+pulseless ventricular tachycardia	skilvelinė tachikardija be pulso	1 skyriui pasirinkta pilna lietuviška forma.	preferred
+shockable rhythm	defibriliuotinas ritmas	Vengti pažodinio „šokuojamas ritmas“.	approved
+non-shockable rhythm	nedefibriliuotinas ritmas	Vengti pažodinio „nešokuojamas ritmas“.	approved
+return of spontaneous circulation (ROSC)	spontaninės kraujotakos atsikūrimas (ROSC)	Pagrindinis po-gaiviniminės priežiūros terminas.	preferred
+futile resuscitation	beviltiškas gaivinimas	Vartoti Lietuvos teisinio reglamentavimo kontekste.	approved
+advanced life support	specialusis gaivinimas	1 skyriuje pasirinkta natūralesnė Lietuvos gaivinimo vartosena.	preferred
