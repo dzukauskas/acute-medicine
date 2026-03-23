@@ -81,8 +81,8 @@ flowchart TB
 
 Paveikslo failai:
 
-- kanoninis redaguojamas šaltinis: [001-figure-1-1-advanced-life-support.drawio.svg](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support.drawio.svg)
-- eksportuota peržiūra: [001-figure-1-1-advanced-life-support.png](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support.png)
+- pagrindinis `Obsidian` paveikslėlis: [001-figure-1-1-advanced-life-support.png](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support.png)
+- redaguojamas šaltinis: [001-figure-1-1-advanced-life-support.drawio.svg](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support.drawio.svg)
 - ankstesnis loginis šaltinis: [001-figure-1-1-advanced-life-support.d2](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support.d2)
 - ankstesnis `D2` renderis: [001-figure-1-1-advanced-life-support-d2.svg](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support-d2.svg)
 

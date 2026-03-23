@@ -74,10 +74,11 @@ Jei skyriuje yra svarbus paveikslas ar algoritmas, bet OCR jo neištraukė:
 
 1. Nepalik vien tuščios antraštės ar vienos eilutės su šaltiniu.
 2. Jei tikslas yra atkartoti knygos paveikslo struktūrą ir išvaizdą, autorinį failą kurk `study/figures/*.drawio.svg` formatu.
-3. `Mermaid` bloką pačiame `.md` faile naudok tik kaip supaprastintą studijų arba atsarginį variantą, o ne kaip kanoninę figūrą.
-4. Po ta pačia antrašte papildomai palik lietuvišką tekstinę schemą arba aiškų algoritminį santraukos bloką kaip atsarginį variantą.
-5. Schema turi būti pakankama mokymuisi net ir nežiūrint į originalų paveikslą.
-6. Aiškiai pažymėk, kas yra kanoninis perpieštas paveikslas, o kas tik kompaktiška mokymosi versija.
+3. Galutiniam naudojimui tarp `Obsidian` užrašų eksportuok ir naudok `study/figures/*.png`.
+4. `Mermaid` bloką pačiame `.md` faile naudok tik kaip supaprastintą studijų arba atsarginį variantą, o ne kaip kanoninę figūrą.
+5. Po ta pačia antrašte papildomai palik lietuvišką tekstinę schemą arba aiškų algoritminį santraukos bloką kaip atsarginį variantą.
+6. Schema turi būti pakankama mokymuisi net ir nežiūrint į originalų paveikslą.
+7. Aiškiai pažymėk, kas yra redaguojamas šaltinis, o kas yra pagrindinis `PNG` paveikslėlis naudojimui užrašuose.
 
 ## Jei randama nauja kalkė
 
