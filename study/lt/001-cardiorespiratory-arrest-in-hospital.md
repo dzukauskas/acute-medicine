@@ -40,7 +40,7 @@ Patvirtinus kardiorespiracinį sustojimą, būtina skubiai kviesti ligoninės ga
 
 ## 1.1 paveikslas
 
-Suaugusiųjų išplėstinio gyvybės palaikymo algoritmo lietuviška schema mokymuisi:
+Suaugusiųjų išplėstinio gyvybės palaikymo algoritmo kompaktiška lietuviška schema mokymuisi:
 
 ```mermaid
 flowchart TB
@@ -79,11 +79,12 @@ flowchart TB
 
 > Studijų pastaba: mazgai `Po 2 min. vėl įvertink ritmą` reiškia grįžimą prie ritmo vertinimo sprendimo taško. Diagramoje sąmoningai nepaliktos ilgos grįžtamosios rodyklės, kad schema būtų kompaktiškesnė Obsidian aplinkoje.
 
-Papildomi palyginimo variantai:
+Paveikslo failai:
 
-- `D2` šaltinis: [001-figure-1-1-advanced-life-support.d2](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support.d2)
-- `D2` renderis: [001-figure-1-1-advanced-life-support-d2.svg](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support-d2.svg)
-- `draw.io` variantas: [001-figure-1-1-advanced-life-support.drawio.svg](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support.drawio.svg)
+- kanoninis redaguojamas šaltinis: [001-figure-1-1-advanced-life-support.drawio.svg](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support.drawio.svg)
+- eksportuota peržiūra: [001-figure-1-1-advanced-life-support.png](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support.png)
+- ankstesnis loginis šaltinis: [001-figure-1-1-advanced-life-support.d2](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support.d2)
+- ankstesnis `D2` renderis: [001-figure-1-1-advanced-life-support-d2.svg](/Users/dzukauskas/Projects/Acute%20Medicine/study/figures/001-figure-1-1-advanced-life-support-d2.svg)
 
 Jei tavo skaityklė dėl kokios nors priežasties nerodo `Mermaid`, žemiau palikta ir tekstinė schemos versija:
 

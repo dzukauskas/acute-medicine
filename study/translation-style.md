@@ -73,10 +73,11 @@ Prieš laikydamas skyrių baigtu:
 Jei skyriuje yra svarbus paveikslas ar algoritmas, bet OCR jo neištraukė:
 
 1. Nepalik vien tuščios antraštės ar vienos eilutės su šaltiniu.
-2. Jei mokymosi medžiaga skirta `Obsidian` ar kitai `Markdown` skaityklei su `Mermaid` palaikymu, pirmenybę teik `mermaid` blokui pačiame `.md` faile.
-3. Po ta pačia antrašte papildomai palik lietuvišką tekstinę schemą arba aiškų algoritminį santraukos bloką kaip atsarginį variantą.
-4. Schema turi būti pakankama mokymuisi net ir nežiūrint į originalų paveikslą.
-5. Aiškiai pažymėk, kad tai yra lietuviškai perkurta mokymosi versija pagal originalų šaltinį.
+2. Jei tikslas yra atkartoti knygos paveikslo struktūrą ir išvaizdą, autorinį failą kurk `study/figures/*.drawio.svg` formatu.
+3. `Mermaid` bloką pačiame `.md` faile naudok tik kaip supaprastintą studijų arba atsarginį variantą, o ne kaip kanoninę figūrą.
+4. Po ta pačia antrašte papildomai palik lietuvišką tekstinę schemą arba aiškų algoritminį santraukos bloką kaip atsarginį variantą.
+5. Schema turi būti pakankama mokymuisi net ir nežiūrint į originalų paveikslą.
+6. Aiškiai pažymėk, kas yra kanoninis perpieštas paveikslas, o kas tik kompaktiška mokymosi versija.
 
 ## Jei randama nauja kalkė
 
