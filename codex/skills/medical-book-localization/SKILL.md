@@ -14,6 +14,9 @@ Use this skill for chapter-by-chapter Lithuanian localization of medical books a
 - Prefer current Lithuanian medical usage and Lithuanian GMP practice when local practice differs from the book.
 - Keep chapter, table, and figure numbering aligned with the book.
 - Use SI / EU units as the main form. Convert imperial or UK units instead of carrying them over verbatim.
+- Prefer natural Lithuanian medical prose over translation-shaped wording: native collocations, fewer nominalizations, clearer valency, split genitive chains, and active syntax where possible.
+- Show English terms sparingly: usually only at the first useful mention of a harder term, not in headings and not as a constant bilingual mirror.
+- Add student-facing term blocks only when a section is genuinely dense or conceptually new.
 
 ## Source priority
 
@@ -48,8 +51,9 @@ Watch for translation-shaped patterns such as:
 - English priority framing like `prioritetas yra ...`;
 - literal action phrases like `eskaluoti pagalbą`;
 - overlong conditional sentences that should be split in Lithuanian.
+- Lithuanian typography drift such as decimal points, plain hyphens in ranges, missing non-breaking spaces before units, and `x` instead of `×`.
 
-If the repository contains `scripts/terminology_guard.py` or `scripts/prose_guard.py`, run them. If not, perform an equivalent manual review.
+If the repository contains `scripts/terminology_guard.py`, `scripts/prose_guard.py`, or `scripts/lt_style_guard.py`, run them. If not, perform an equivalent manual review.
 
 ## Tools
 
@@ -57,7 +61,7 @@ If the repository contains `scripts/terminology_guard.py` or `scripts/prose_guar
 - Use web research for current Lithuanian and European medical sources when the information is time-sensitive.
 - Use `whimsical-desktop` MCP as the primary diagram tool when it is available.
 - Use `Excalidraw` when a file-based editable source is needed or when `Whimsical` is not the right fit.
-- If the repository already has workflow, terminology, or research templates, follow them before inventing new structure.
+- If the repository already has workflow, terminology, acronym, or research templates, follow them before inventing new structure.
 
 ## Output expectations
 

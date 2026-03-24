@@ -49,15 +49,56 @@ Kiekvienas skyrius turi praeiti du atskirus kokybės vartus:
 `Language QA` privalomai apima:
 
 - atskirą anti-calque perrašymą;
+- sutikrinimą su `language-style.md`;
 - `scripts/prose_guard.py`;
+- `scripts/lt_style_guard.py`;
 - trumpą rankinį kalbinį auditą.
+
+## LT medicininės kalbos modulis
+
+Branduolinės LT kalbos taisyklės laikomos `language-style.md`.
+
+Privalomi principai:
+
+- kolokacijų pirmumas;
+- nominalizacijų mažinimas;
+- valentingumo ir linksnių tikrinimas;
+- genityvų grandinių skaidymas;
+- temos–remos tvarka;
+- aktyvesnė, mažiau biurokratinė sintaksė;
+- per ilgų sakinių skaidymas.
 
 ## Vienetų taisyklė
 
 Pagrindinė forma visada yra Lietuvos / ES / SI vienetai:
 
 - `kg`, `g`, `cm`, `m`, `mL`, `mmHg`, `kPa`, `mmol/L`, `g/L`, `°C`;
+- tarp skaičiaus ir vieneto rašomas nepertraukiamas tarpas;
+- intervalams naudojamas `–`, ne `-`;
+- neigiamoms reikšmėms naudojamas `−`;
+- formulėse ir matmenyse naudojamas `×`;
 - JK / US / imperial vienetai gali likti tik kaip antrinė forma skliaustuose, jei tai padeda orientuotis.
+
+## Anglų terminų ir studentinių paaiškinimų politika
+
+Projekte anglų terminai rodomi ribotai:
+
+- tik tada, kai jie realiai padeda orientuotis;
+- dažniausiai pirmą kartą prie sudėtingesnio termino;
+- ne antraštėse;
+- ne beveik prie kiekvieno termino.
+
+Terminų blokai ar trumpi paaiškinimai pridedami tik tada, kai tema yra tanki, nauja ar kitaip sunkiai suprantama be trumpo paaiškinimo.
+
+## Akronimų politika
+
+Dažniausi projekto trumpiniai fiksuojami `acronyms.tsv`.
+
+Taisyklės:
+
+- svarbūs ar potencialiai dviprasmiai trumpiniai pirmą kartą turi būti išskleisti;
+- po pirmos pilnos formos galima vartoti nusistovėjusį trumpinį;
+- jei trumpinys gali reikšti kelis dalykus, sprendžiama pagal klinikinį kontekstą.
 
 ## Paveikslų taisyklė
 
@@ -123,4 +164,5 @@ Kai tai duoda realią naudą, naudok:
 - interneto paiešką naujausių šaltinių patikrai;
 - `scripts/terminology_guard.py` terminų ir draudžiamų frazių kontrolei;
 - `scripts/prose_guard.py` sakinio lygio kalkių ir vertimo karkaso kontrolei;
+- `scripts/lt_style_guard.py` LT tipografijai, intervalams, nepertraukiamiems tarpams ir anglų terminų rodymo higienai;
 - atitinkamus skills, kai užduotis sutampa su jų paskirtimi.

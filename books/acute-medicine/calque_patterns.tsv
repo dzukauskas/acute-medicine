@@ -18,6 +18,10 @@ phrase	gali būti naudingas	padeda / gali padėti	Dažnai verčiama pažodžiui 
 phrase	orientuojantis į	siekiant / pagal	Dažnas verstinis junginys iš „guided by / targeting“.
 phrase	komanda gali svarstyti	galima / verta svarstyti	Verstinė konstrukcija iš „the team should consider“.
 phrase	turi gerai išmanyti	turi mokėti naudotis / turi gerai žinoti	Dažnai per daug tiesioginis vertimas iš „should be familiar with“.
+phrase	atlikti įvertinimą	įvertinti	Perteklinė nominalizacija; lietuviškai dažniausiai sklandžiau vartoti veiksmažodį.
+phrase	vykdyti stebėjimą	stebėti	Perteklinė administracinė konstrukcija.
+phrase	atlikti korekciją	koreguoti	Perteklinė nominalizacija; medicininiame tekste paprastai pakanka veiksmažodžio.
+phrase	yra svarbus veiksnys	yra svarbu / lemia	Dažnas pažodinis vertimo karkasas iš „is an important factor“.
 regex	\bSprendimas dėl [^.]+ turi būti\b	perrašyk aktyvia konstrukcija	Biurokratinė pasyvi konstrukcija, dažnai skambanti kaip vertimas.
 regex	\b[Aa]rtimiesiems turi būti suteikta\b	artimuosius reikia informuoti / sudaryti galimybę	Pasyvus verstinis sakinys.
 regex	\bPrieš kiekvieną [^.]+ turi būti atlikta\b	perrašyk aktyviu veiksmažodžiu	Pasyvi procedūrinė konstrukcija, kurią lietuviškai geriau keisti tiesioginiu nurodymu.

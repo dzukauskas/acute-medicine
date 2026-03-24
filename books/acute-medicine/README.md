@@ -13,6 +13,8 @@
 - `research/`: skyriaus šaltinių ir sprendimų failai.
 - `archive/`: knygos vidinis archyvas, jei prireiktų tarpinių ar atmestų variantų.
 - `workflow.md`: kanoninis šios knygos darbo workflow.
+- `language-style.md`: kanoninės LT medicininės prozos, tipografijos ir anglų terminų rodymo taisyklės.
+- `acronyms.tsv`: dažniausių projekto trumpinių registras.
 
 ## Taisyklė
 
@@ -21,3 +23,8 @@ Skyrių tekstas, lentelės, schemos ir paveikslai kuriami nuo naujo tik iš PDF 
 Ankstesnio workflow artefaktai pašalinti; aktyvus pagrindas yra tik šis katalogas.
 
 Diagramoms ir algoritmams naudojamas `Whimsical-first` workflow. Jei reikia failinio atsarginio ar alternatyvaus redaguojamo šaltinio, naudojamas `Excalidraw`.
+
+Kalbinei kokybei naudojamas dviejų sluoksnių `Language QA`:
+
+- `scripts/prose_guard.py` gaudo dažnas kalkes ir vertimo karkasus;
+- `scripts/lt_style_guard.py` tikrina LT tipografiją, intervalų rašybą, tarpus tarp skaičių ir vienetų bei akivaizdžiai perteklinį anglų terminų rodymą.
