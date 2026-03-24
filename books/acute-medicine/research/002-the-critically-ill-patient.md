@@ -113,7 +113,9 @@
 
 - Sugeneruotas `chapter_packs/002-the-critically-ill-patient.yaml`.
 - Seed ir skyriaus-specific formuluotės perkeltos į `gold_phrases.tsv`.
+- Atrinkti blokiniai etalonai `gold_sections/`.
 - Lokalizacijos override'ai suvesti į `localization_overrides.tsv`.
+- Sugeneruotas `adjudication_packs/002-the-critically-ill-patient.yaml`.
 - Rankinio review pėdsakai suvesti į `review_deltas/002-the-critically-ill-patient.tsv`.
 - Regresijos pavyzdžiai palikti `regression_examples/002-the-critically-ill-patient.jsonl`.
 
@@ -131,8 +133,10 @@
 - [ ] Paveikslai / schemos atkurti lietuviškai
 - [x] Numeracija atitinka knygą
 - [x] Sugeneruotas `chapter_pack`
+- [x] Jei reikia, sugeneruotas `adjudication_pack`
 - [x] Paleistas `terminology_guard`
 - [x] Paleistas `prose_guard`
 - [x] Paleistas `lt_style_guard`
 - [x] Paleistas `completeness_guard`
+- [ ] Jei yra `before/after` pora, `review_delta` skeletas sugeneruotas per `mine_review_deltas.py`
 - [x] Jei buvo rankinių pataisų, užpildytas `review_delta`

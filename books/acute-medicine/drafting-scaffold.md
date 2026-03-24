@@ -11,6 +11,8 @@
 
 Be `chapter_pack` drafting nelaikomas galiojančiu.
 
+Jei `chapter_pack` turi `adjudication_candidate: true`, prieš galutinį polishą sugeneruokite ir `adjudication_pack`.
+
 ## Režimai
 
 ### `narrative-prose`
@@ -68,3 +70,8 @@ Tikslas:
 - trumpas, aiškus paaiškinimas;
 - jokio perkrauto dvikalbio teksto;
 - aiškiai atskirta, kas yra originalo kontekstas, o kas LT praktika.
+
+## Papildomos taisyklės
+
+- `chart` tipo blokai turi būti inventorizuojami atskirai, net jei LT variante jie sutraukiami į vieną aiškų paaiškinimą.
+- Jei yra `before/after` pora, `review_delta` pirmiausia generuokite per `scripts/mine_review_deltas.py`, o ne pildykite nuo tuščio failo.

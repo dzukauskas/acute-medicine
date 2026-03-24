@@ -38,14 +38,16 @@ When a source could be outdated, verify the latest version and record exact date
    - `table-compression`
    - `algorithm-stepwise`
    - `local-context-callout`
-5. Write the Lithuanian chapter concept-first, not sentence-by-sentence from English.
-6. Translate tables fully into markdown when they remain readable.
-7. Recreate figure text, labels, legends, and algorithm steps in Lithuanian.
-8. For each figure, keep exactly one canonical editable source of truth. Prefer a `Whimsical` board by default. If a file-based editable source is required, use `Excalidraw`. Do not keep parallel active sources for the same figure.
-9. Keep the repository `png` in sync with the active editable source after each diagram revision.
-10. Use brief callouts only where local practice, safety, or interpretation needs emphasis.
-11. Compare the finished chapter back to the PDF so no content block is missed.
-12. Run both clinical QA and language QA before treating the chapter as complete.
+   Treat `chart` content as a distinct source block type even when the LT output becomes one summarized local-context block.
+5. If the chapter pack marks `adjudication_candidate` blocks, build or load the chapter-specific `adjudication_pack` before final polishing.
+6. Write the Lithuanian chapter concept-first, not sentence-by-sentence from English.
+7. Translate tables fully into markdown when they remain readable.
+8. Recreate figure text, labels, legends, algorithm steps, and `chart` content in Lithuanian.
+9. For each figure, keep exactly one canonical editable source of truth. Prefer a `Whimsical` board by default. If a file-based editable source is required, use `Excalidraw`. Do not keep parallel active sources for the same figure.
+10. Keep the repository `png` in sync with the active editable source after each diagram revision.
+11. Use brief callouts only where local practice, safety, or interpretation needs emphasis.
+12. Compare the finished chapter back to the PDF so no content block is missed.
+13. Run both clinical QA and language QA before treating the chapter as complete.
 
 ## Language QA
 
@@ -59,12 +61,12 @@ Watch for translation-shaped patterns such as:
 - overlong conditional sentences that should be split in Lithuanian.
 - Lithuanian typography drift such as decimal points, plain hyphens in ranges, missing non-breaking spaces before units, and `x` instead of `×`.
 
-Use positive Lithuanian exemplars when available. If the repository contains `gold_phrases.tsv` or chapter-specific `gold_examples` inside the `chapter_pack`, treat them as stronger drafting guidance than generic style advice.
+Use positive Lithuanian exemplars when available. If the repository contains `gold_phrases.tsv`, `gold_sections/`, or chapter-specific `gold_examples` inside the `chapter_pack`, treat them as stronger drafting guidance than generic style advice.
 
 If the repository contains `scripts/terminology_guard.py`, `scripts/prose_guard.py`, or `scripts/lt_style_guard.py`, run them. If not, perform an equivalent manual review.
 If the repository contains `scripts/completeness_guard.py`, run it as well to verify that structured blocks from the `chapter_pack` were not dropped.
 
-If a chapter is manually corrected after drafting, leave a structured `review_delta` so recurring fixes can be promoted into reusable rules instead of being lost in a plain markdown diff.
+If a chapter is manually corrected after drafting, leave a structured `review_delta` so recurring fixes can be promoted into reusable rules instead of being lost in a plain markdown diff. If you have a `before/after` pair, prefer generating the first review skeleton via `scripts/mine_review_deltas.py`.
 
 ## Tools
 

@@ -108,6 +108,8 @@
 
 - Sugeneruotas `chapter_packs/001-cardiorespiratory-arrest-in-hospital.yaml`.
 - Seed formuluotės perkeltos į `gold_phrases.tsv` ir `localization_overrides.tsv`.
+- Atrinkti blokiniai etalonai `gold_sections/`.
+- Sugeneruotas `adjudication_packs/001-cardiorespiratory-arrest-in-hospital.yaml`.
 - Rankinio review pėdsakai suvesti į `review_deltas/001-cardiorespiratory-arrest-in-hospital.tsv`.
 - Du trumpi regresijos pavyzdžiai palikti `regression_examples/001-cardiorespiratory-arrest-in-hospital.jsonl`.
 
@@ -125,8 +127,10 @@
 - [x] Paveikslai / schemos atkurti lietuviškai
 - [x] Numeracija atitinka knygą
 - [x] Sugeneruotas `chapter_pack`
+- [x] Jei reikia, sugeneruotas `adjudication_pack`
 - [x] Paleistas `terminology_guard`
 - [x] Paleistas `prose_guard`
 - [x] Paleistas `lt_style_guard`
 - [x] Paleistas `completeness_guard`
+- [ ] Jei yra `before/after` pora, `review_delta` skeletas sugeneruotas per `mine_review_deltas.py`
 - [x] Jei buvo rankinių pataisų, užpildytas `review_delta`

@@ -1,5 +1,5 @@
 chapter_slug: 001-cardiorespiratory-arrest-in-hospital
-chapter_title: Cardiorespiratory Arrest In Hospital
+chapter_title: 1 skyrius. Kardiorespiracinis sustojimas ligoninėje
 page_range: 22-27
 source_md: books/acute-medicine/source/chapters-en/001-cardiorespiratory-arrest-in-hospital.md
 lt_target_md: books/acute-medicine/lt/chapters/001-cardiorespiratory-arrest-in-hospital.md
@@ -9,92 +9,114 @@ blocks:
   heading: Background
   source_anchor: Background
   risk_flags: []
+  tags: []
   draft_mode: narrative-prose
+  adjudication_candidate: false
 - block_id: narrative-02-initial-management
   block_type: narrative
   heading: Initial management
   source_anchor: Initial management
   risk_flags:
   - algorithmic_narrative
+  tags: []
   draft_mode: narrative-prose
+  adjudication_candidate: false
 - block_id: narrative-03-chest-compressions
   block_type: narrative
   heading: Chest compressions
   source_anchor: Chest compressions
   risk_flags: []
+  tags: []
   draft_mode: narrative-prose
+  adjudication_candidate: false
 - block_id: narrative-04-airway-and-ventilation
   block_type: narrative
   heading: Airway and ventilation
   source_anchor: Airway and ventilation
   risk_flags: []
+  tags:
+  - airway
   draft_mode: narrative-prose
+  adjudication_candidate: false
 - block_id: narrative-05-management-of-cardiac-arrest-rhythms
   block_type: narrative
   heading: Management of cardiac arrest rhythms
   source_anchor: Management of cardiac arrest rhythms
   risk_flags:
   - algorithmic_narrative
+  tags:
+  - resuscitation
   draft_mode: narrative-prose
+  adjudication_candidate: false
 - block_id: narrative-06-ventricular-fibrillation-pulseless-ventricular-tachycardia
   block_type: narrative
   heading: Ventricular fibrillation / pulseless ventricular tachycardia
   source_anchor: Ventricular fibrillation / pulseless ventricular tachycardia
   risk_flags: []
+  tags: []
   draft_mode: narrative-prose
+  adjudication_candidate: false
 - block_id: narrative-07-defibrillators-and-pulse-checks
   block_type: narrative
   heading: Defibrillators and pulse checks
   source_anchor: Defibrillators and pulse checks
   risk_flags: []
+  tags:
+  - resuscitation
   draft_mode: narrative-prose
+  adjudication_candidate: false
 - block_id: narrative-08-pulseless-electrical-activity-asystole
   block_type: narrative
   heading: Pulseless electrical activity / asystole
   source_anchor: Pulseless electrical activity / asystole
   risk_flags: []
+  tags: []
   draft_mode: narrative-prose
+  adjudication_candidate: false
 - block_id: narrative-09-reversible-causes-of-cardiac-arrest
   block_type: narrative
   heading: Reversible causes of cardiac arrest
   source_anchor: Reversible causes of cardiac arrest
   risk_flags: []
+  tags:
+  - resuscitation
   draft_mode: narrative-prose
+  adjudication_candidate: false
 - block_id: narrative-10-following-return-of-spontaneous-circulation
   block_type: narrative
   heading: Following return of spontaneous circulation
   source_anchor: Following return of spontaneous circulation
   risk_flags: []
+  tags: []
   draft_mode: narrative-prose
+  adjudication_candidate: false
 - block_id: narrative-11-when-to-stop-resuscitation
   block_type: narrative
   heading: When to stop resuscitation
   source_anchor: When to stop resuscitation
-  risk_flags:
-  - complex_prose
+  risk_flags: []
+  tags:
+  - resuscitation
   draft_mode: narrative-prose
+  adjudication_candidate: false
 - block_id: narrative-12-decisions-surrounding-cpr
   block_type: narrative
   heading: Decisions surrounding CPR
   source_anchor: Decisions surrounding CPR
   risk_flags: []
+  tags:
+  - legal-localization
+  - resuscitation
   draft_mode: narrative-prose
+  adjudication_candidate: true
 - block_id: narrative-13-further-reading
   block_type: narrative
   heading: Further reading
   source_anchor: Further reading
   risk_flags: []
+  tags: []
   draft_mode: narrative-prose
-- block_id: figure_caption-kol-kas-neu-fiksuota
-  block_type: figure_caption
-  heading: Kol kas neužfiksuota
-  source_anchor: Kol kas neužfiksuota
-  source_label: ''
-  risk_flags:
-  - structured_content
-  draft_mode: local-context-callout
-  completion_hint: ' paveikslas'
-  summary_allowed: false
+  adjudication_candidate: false
 - block_id: algorithm-1.1-algorithm-for-adult-advanced-life-support
   block_type: algorithm
   heading: Algorithm for adult advanced life support
@@ -102,58 +124,11 @@ blocks:
   source_label: '1.1'
   risk_flags:
   - structured_content
+  tags:
+  - algorithmic
   draft_mode: algorithm-stepwise
+  adjudication_candidate: true
   completion_hint: 1.1 paveikslas
-  summary_allowed: false
-- block_id: figure_caption-sukurtas-lietuvi-kas-png-books-acute-medicine-lt-figures-001-figure-1-1-advanced-life-support-png
-  block_type: figure_caption
-  heading: 'Sukurtas lietuviškas PNG: books/acute-medicine/lt/figures/001-figure-1-1-advanced-life-support.png'
-  source_anchor: 'Sukurtas lietuviškas PNG: books/acute-medicine/lt/figures/001-figure-1-1-advanced-life-support.png'
-  source_label: ''
-  risk_flags:
-  - structured_content
-  draft_mode: local-context-callout
-  completion_hint: ' paveikslas'
-  summary_allowed: false
-- block_id: figure_caption-kanoninis-altinis-whimsical-lenta-als-1-1-test
-  block_type: figure_caption
-  heading: 'Kanoninis šaltinis: Whimsical lenta ALS 1.1 test'
-  source_anchor: 'Kanoninis šaltinis: Whimsical lenta ALS 1.1 test'
-  source_label: ''
-  risk_flags:
-  - structured_content
-  draft_mode: local-context-callout
-  completion_hint: ' paveikslas'
-  summary_allowed: false
-- block_id: figure_caption-whimsical-url-https-whimsical-com-dzukauskas-als-1-1-test-2c5uagswyfkoqxk1wyng8n
-  block_type: figure_caption
-  heading: 'Whimsical URL: https://whimsical.com/dzukauskas/als-1-1-test-2C5uaGSWyfkoQxK1Wyng8N'
-  source_anchor: 'Whimsical URL: https://whimsical.com/dzukauskas/als-1-1-test-2C5uaGSWyfkoQxK1Wyng8N'
-  source_label: ''
-  risk_flags:
-  - structured_content
-  draft_mode: local-context-callout
-  completion_hint: ' paveikslas'
-  summary_allowed: false
-- block_id: figure_caption-ra-yta-books-acute-medicine-lt-figures-manifest-tsv
-  block_type: figure_caption
-  heading: Įrašyta į books/acute-medicine/lt/figures/manifest.tsv
-  source_anchor: Įrašyta į books/acute-medicine/lt/figures/manifest.tsv
-  source_label: ''
-  risk_flags:
-  - structured_content
-  draft_mode: local-context-callout
-  completion_hint: ' paveikslas'
-  summary_allowed: false
-- block_id: figure_caption-kol-kas-neu-fiksuota
-  block_type: figure_caption
-  heading: Kol kas neužfiksuota
-  source_anchor: Kol kas neužfiksuota
-  source_label: ''
-  risk_flags:
-  - structured_content
-  draft_mode: local-context-callout
-  completion_hint: ' paveikslas'
   summary_allowed: false
 active_terms:
 - en: cardiorespiratory arrest
@@ -426,63 +401,188 @@ style_hotspots:
   text: Automatinio išorinio defibriliatoriaus trumpinio nevienodumo Lietuvoje problema sprendžiama pagrindiniame
     tekste vartojant pilną termino formą, o ne vieną ginčytiną trumpinį.
 gold_examples:
-- category: calque
-  bad_en_shaped_lt: pradinis valdymas
-  preferred_lt: pradiniai veiksmai
+- kind: phrase
+  source_chapter: '001'
+  block_type: any
+  tags: []
+  text: pradiniai veiksmai
   notes: Antraštėse ir santraukose rinktis konkretesnę LT formą.
+  category: calque
+  bad_en_shaped_lt: pradinis valdymas
+- kind: phrase
   source_chapter: '001'
-- category: calque
-  bad_en_shaped_lt: sprendimas dėl gaivinimo turi būti priimamas
-  preferred_lt: šį klausimą reikia aptarti iš anksto
+  block_type: any
+  tags: []
+  text: šį klausimą reikia aptarti iš anksto
   notes: Teisiniuose ir klinikiniuose sakiniuose vengti pasyvaus administracinio karkaso.
+  category: calque
+  bad_en_shaped_lt: sprendimas dėl gaivinimo turi būti priimamas
+- kind: phrase
   source_chapter: '001'
-- category: calque
-  bad_en_shaped_lt: eskaluoti pagalbą
-  preferred_lt: kviesti papildomą pagalbą
+  block_type: any
+  tags: []
+  text: kviesti papildomą pagalbą
   notes: Konkretus veiksmas aiškesnis už vadybinę kalkę.
+  category: calque
+  bad_en_shaped_lt: eskaluoti pagalbą
+- kind: phrase
   source_chapter: '001'
-- category: collocation
-  bad_en_shaped_lt: kompresijų kokybė
-  preferred_lt: kokybiški krūtinės ląstos paspaudimai
+  block_type: any
+  tags: []
+  text: kokybiški krūtinės ląstos paspaudimai
   notes: Jei įmanoma, konkretinti abstraktų terminą.
+  category: collocation
+  bad_en_shaped_lt: kompresijų kokybė
+- kind: phrase
   source_chapter: '001'
-- category: collocation
-  bad_en_shaped_lt: pažangūs kvėpavimo takai
-  preferred_lt: supraglotinis prietaisas arba endotrachėjinis vamzdelis
+  block_type: any
+  tags: []
+  text: supraglotinis prietaisas arba endotrachėjinis vamzdelis
   notes: Jei reikia, įvardyti realią priemonę, ne abstrakciją.
+  category: collocation
+  bad_en_shaped_lt: pažangūs kvėpavimo takai
+- kind: phrase
   source_chapter: '001'
-- category: syntax
-  bad_en_shaped_lt: prioritetas yra kuo greitesnis defibriliatoriaus prijungimas
-  preferred_lt: kuo greičiau prijunkite defibriliatorių
+  block_type: any
+  tags: []
+  text: kuo greičiau prijunkite defibriliatorių
   notes: Verstinį prioritetų karkasą keisti tiesioginiu nurodymu.
-  source_chapter: '001'
-- category: calque
-  bad_en_shaped_lt: galvokite apie sepsį
-  preferred_lt: įtarkite sepsį
+  category: syntax
+  bad_en_shaped_lt: prioritetas yra kuo greitesnis defibriliatoriaus prijungimas
+- kind: phrase
+  source_chapter: '002'
+  block_type: any
+  tags: []
+  text: įtarkite sepsį
   notes: Klinikinėje lietuvių kalboje „įtarkite“ skamba natūraliau.
+  category: calque
+  bad_en_shaped_lt: galvokite apie sepsį
+- kind: phrase
   source_chapter: '002'
-- category: calque
-  bad_en_shaped_lt: tolesni veiksmai priklauso nuo vyraujančios problemos
-  preferred_lt: toliau veikite pagal vyraujančią problemą
+  block_type: any
+  tags: []
+  text: toliau veikite pagal vyraujančią problemą
   notes: Trumpesnė ir aktyvesnė formuluotė.
+  category: calque
+  bad_en_shaped_lt: tolesni veiksmai priklauso nuo vyraujančios problemos
+- kind: phrase
   source_chapter: '002'
-- category: nominalization
-  bad_en_shaped_lt: pirminio gydymo tikslas yra
-  preferred_lt: pirminio gydymo tikslas –
+  block_type: any
+  tags: []
+  text: pirminio gydymo tikslas –
   notes: Apibrėžimuose ir principų blokuose vengti perteklinio „yra“.
+  category: nominalization
+  bad_en_shaped_lt: pirminio gydymo tikslas yra
+- kind: phrase
   source_chapter: '002'
-- category: calque
-  bad_en_shaped_lt: reikia svarstyti endotrachėjinę intubaciją
-  preferred_lt: apsvarstykite endotrachėjinę intubaciją
+  block_type: any
+  tags: []
+  text: apsvarstykite endotrachėjinę intubaciją
   notes: Veiksmų sekoje rinktis tiesioginę aktyvią formą.
+  category: calque
+  bad_en_shaped_lt: reikia svarstyti endotrachėjinę intubaciją
+- kind: phrase
   source_chapter: '002'
-- category: collocation
-  bad_en_shaped_lt: normalus spaudimas nereiškia pakankamo organų aprūpinimo krauju
-  preferred_lt: normalus spaudimas dar negarantuoja pakankamos organų perfuzijos
+  block_type: any
+  tags: []
+  text: normalus spaudimas dar negarantuoja pakankamos organų perfuzijos
   notes: Hemodinaminėje prozoje išlaikyti LT medicininę kolokaciją.
+  category: collocation
+  bad_en_shaped_lt: normalus spaudimas nereiškia pakankamo organų aprūpinimo krauju
+- kind: phrase
   source_chapter: '002'
-- category: syntax
-  bad_en_shaped_lt: kardiogeninis šokas yra viena dažniausių ... ir pasižymi
-  preferred_lt: kardiogeninis šokas dažnai ... ir jį lydi
+  block_type: any
+  tags: []
+  text: kardiogeninis šokas dažnai ... ir jį lydi
   notes: Apibrėžimus trumpinti iki natūralaus LT ritmo.
+  category: syntax
+  bad_en_shaped_lt: kardiogeninis šokas yra viena dažniausių ... ir pasižymi
+- kind: section
+  example_id: gs-001-als-algorithm
+  source_chapter: '001'
+  block_id: algorithm-1.1-algorithm-for-adult-advanced-life-support
+  block_type: algorithm
+  tags:
+  - algorithmic
+  - resuscitation
+  - stepwise
+  text: '1. Jei pacientas nereaguoja ir nekvėpuoja normaliai, kvieskite pagalbą ir pradėkite gaivinimą.
+
+    2. Atlikite gaivinimą santykiu `30 : 2` ir prijunkite defibriliatorių ar monitorių.
+
+    3. Įvertinkite ritmą.
+
+    4. Jei ritmas defibriliuotinas, atlikite vieną iškrovą ir iš karto tęskite gaivinimą 2 min.
+
+    5. Jei ritmas nedefibriliuotinas, iš karto tęskite gaivinimą 2 min. ir kuo anksčiau skirkite adrenalino.'
+  notes: Trumpa komandinio algoritmo santrauka su aktyviais veiksmažodžiais.
+  path: gold_sections/001-als-algorithm.md
+- kind: section
+  example_id: gs-001-2222-callout
+  source_chapter: '001'
+  block_id: narrative-02-initial-management
+  block_type: legal_localization
+  tags:
+  - uk-localization
+  - legal-localization
+  - contextual
+  text: '> [!WARNING]
+
+    > Lietuvos kontekstas: originale nurodytas vidinis numeris `2222` atspindi JK ligoninių praktiką.
+    Lietuvoje naudokite savo įstaigos vidaus kritinės pagalbos arba gaivinimo komandos iškvietimo tvarką.'
+  notes: Trumpas LT lokalizacinis callout apie vidinį numerį ir vietinę tvarką.
+  path: gold_sections/001-2222-callout.md
+- kind: section
+  example_id: gs-001-cpr-legal
+  source_chapter: '001'
+  block_id: narrative-12-decisions-surrounding-cpr
+  block_type: legal_localization
+  tags:
+  - legal-localization
+  - uk-localization
+  - contextual
+  text: '> [!WARNING]
+
+    > `ReSPECT` ir `DNACPR` yra JK sistemos dokumentai. Lietuvoje jų negalima perkelti kaip tiesioginio
+    atitikmens. Reikia vadovautis Lietuvos teisės aktais, įstaigos vidaus tvarka ir dokumentuotais konsiliumo
+    sprendimais.'
+  notes: JK dokumentų neprilyginimo LT tvarkai pavyzdys.
+  path: gold_sections/001-cpr-legal.md
+- kind: section
+  example_id: gs-002-shock-algorithm
   source_chapter: '002'
+  block_id: algorithm-2.2-management-of-hypotension-and-shock
+  block_type: algorithm
+  tags:
+  - algorithmic
+  - hemodynamic
+  - stepwise
+  text: '1. Jei sistolinis spaudimas `<90 mmHg`, `MAP <65 mmHg` arba sistolinis spaudimas krito `>40 mmHg`
+    ir yra organų disfunkcijos požymių, vertinkite pacientą kaip ištiktą šoko.
+
+    2. Vertinkite pagal `ABCDE`.
+
+    3. Prijunkite deguonį, `EKG`, veninę prieigą.
+
+    4. Stabilizuokite kvėpavimo takus ir kvėpavimą.
+
+    5. Nustačius priežastį, gydykite ją tikslingai ir, jei reikia, pradėkite inotropų ar vazopresorių
+    terapiją.'
+  notes: Glausta hipotenzijos ir šoko veiksmų seka.
+  path: gold_sections/002-shock-algorithm.md
+- kind: section
+  example_id: gs-002-shock-prose
+  source_chapter: '002'
+  block_id: narrative-08-shock
+  block_type: narrative
+  tags:
+  - hemodynamic
+  - complex-prose
+  text: 'Šokas reiškia ūminį kraujotakos nepakankamumą, kai ląstelės negali tinkamai panaudoti deguonies,
+    todėl vystosi organų funkcijos sutrikimas ir laktatinė acidozė.
+
+
+    Kompensaciniai mechanizmai pradžioje gali išlaikyti kraujospūdį, todėl „normalus“ arterinis spaudimas
+    dar nereiškia, kad organų perfuzija pakankama.'
+  notes: Trumpas hemodinaminės prozos pavyzdys su natūraliu LT ritmu.
+  path: gold_sections/002-shock-prose.md

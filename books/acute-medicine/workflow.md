@@ -26,10 +26,11 @@ Skyrius laikomas baigtu tik kai:
 6. lietuviškas skyrius parašytas nuo švaraus lapo pagal `chapter_pack`;
 7. padarytas atskiras anti-calque perrašymas, kai tekstas peržiūrimas jau nebe pagal anglų sakinį, o kaip lietuviška proza;
 8. lentelės pilnai išverstos;
-9. schemos ir paveikslai atkurti lietuviškai;
-10. viskas sutikrinta su PDF;
-11. paleistas terminų, prozos, tipografijos ir komplektiškumo QA;
-12. jei skyrius buvo taisytas ranka, užfiksuotas `review_delta` ir parengti rule-promotion kandidatai.
+9. schemos, paveikslai ir `chart` tipo originalo grafikai atkurti lietuviškai arba aiškiai sutraukti į LT bloką;
+10. jei skyriuje yra `high-risk` blokų, jiems sugeneruotas `adjudication_pack`;
+11. viskas sutikrinta su PDF;
+12. paleistas terminų, prozos, tipografijos ir komplektiškumo QA;
+13. jei skyrius buvo taisytas ranka, užfiksuotas `review_delta` ir parengti rule-promotion kandidatai.
 
 ## `Chapter pack` taisyklė
 
@@ -38,10 +39,11 @@ Prieš bet kokį drafting skyriui privaloma sugeneruoti `chapter_packs/<slug>.ya
 `chapter_pack` yra vykdomas preflight artefaktas, o ne papildoma dokumentacija. Jis turi apjungti:
 
 - skyriaus blokų inventorių;
+- blokų `tags[]` ir `adjudication_candidate`;
 - aktyvius terminus ir akronimus;
 - lokalizacijos override'us;
 - stiliaus hotspot'us;
-- pozityvius LT pavyzdžius.
+- pozityvius LT pavyzdžius iš `gold_phrases.tsv` ir `gold_sections/`.
 
 Be `chapter_pack` drafteris negali pradėti generavimo.
 
@@ -54,7 +56,22 @@ Skyriaus blokai generuojami ne vienu universaliu režimu, o pagal `draft_mode` i
 - `algorithm-stepwise`
 - `local-context-callout`
 
-Tai leidžia neapdoroti lentelių, algoritmų ir lokalizacinių paaiškinimų tuo pačiu prose režimu.
+`chart` tipo blokai turi būti inventorizuojami atskirai nuo `table`, `figure_caption` ir `callout`, net jei LT variante jie sutraukiami į vieną aiškų paaiškinamąjį bloką.
+
+Tai leidžia neapdoroti lentelių, algoritmų, grafikų ir lokalizacinių paaiškinimų tuo pačiu prose režimu.
+
+## Targeted adjudication
+
+Jei `chapter_pack` pažymi `adjudication_candidate: true`, prieš galutinį polishą reikia sugeneruoti `adjudication_packs/<slug>.yaml`.
+
+`adjudication_pack` yra tik high-risk blokams skirtas pre-second-pass artefaktas. Jis naudojamas:
+
+- algoritmams;
+- lokalizaciniams callout'ams;
+- hemodinaminiams ar kitokiems `complex_prose` blokams;
+- vietoms, kur originalo ir LT praktikos įtampa didžiausia.
+
+Šiame etape adjudication dar nėra pilnai automatinis generatorius: repo tik paruošia darbo paketą ir sprendimo kriterijus.
 
 ## Lokalizacijos taisyklė
 
@@ -88,6 +105,7 @@ Kiekvienas skyrius turi praeiti du atskirus kokybės vartus:
 Branduolinės LT kalbos taisyklės laikomos `language-style.md`.
 
 Pozityvūs LT formuluočių pavyzdžiai laikomi `gold_phrases.tsv`.
+Pozityvūs blokinio lygmens etalonai laikomi `gold_sections/`.
 
 Privalomi principai:
 
@@ -139,6 +157,8 @@ Taisyklės:
 ## Struktūrinė review kilpa
 
 Jei skyrius po drafto buvo taisytas ranka, turi būti paliekamas `review_deltas/<slug>.tsv`.
+
+Jei yra `before/after` pora, pirmas kelias turi būti `scripts/mine_review_deltas.py`, kuris sugeneruoja review skeletoną. Žmogus tada tik užpildo klasifikaciją, svarbą ir promavimo kryptį.
 
 `review_delta` paskirtis:
 

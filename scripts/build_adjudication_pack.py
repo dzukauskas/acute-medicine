@@ -1,0 +1,154 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+
+from book_workflow_support import ADJUDICATION_PACKS_DIR, BOOK_ROOT, dump_yaml, load_yaml, read_tsv, resolve_chapter_slug, split_multi
+
+
+PROFILES_PATH = BOOK_ROOT / "adjudication_profiles.tsv"
+SCAFFOLD_PATH = BOOK_ROOT / "adjudication_scaffold.md"
+CHAPTER_PACKS_DIR = BOOK_ROOT / "chapter_packs"
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Build a targeted adjudication pack for high-risk blocks.")
+    parser.add_argument("chapter", help="Chapter slug or number.")
+    parser.add_argument(
+        "--out",
+        help="Optional output path. Defaults to books/acute-medicine/adjudication_packs/<slug>.yaml.",
+    )
+    return parser.parse_args()
+
+
+def load_profiles() -> dict[str, dict[str, object]]:
+    profiles: dict[str, dict[str, object]] = {}
+    for row in read_tsv(PROFILES_PATH):
+        profiles[row["profile_id"]] = {
+            "profile_id": row["profile_id"],
+            "applies_to_block_types": split_multi(row.get("applies_to_block_types", "")),
+            "requires_tags": split_multi(row.get("requires_tags", "")),
+            "variant_a_goal": row.get("variant_a_goal", ""),
+            "variant_b_goal": row.get("variant_b_goal", ""),
+            "decision_criteria": row.get("decision_criteria", ""),
+        }
+    return profiles
+
+
+def block_matches_override(block: dict, override: dict) -> bool:
+    haystack = " ".join(
+        [
+            block.get("heading", ""),
+            block.get("source_anchor", ""),
+            " ".join(block.get("tags", [])),
+        ]
+    ).lower()
+    return override.get("source_term", "").lower() in haystack
+
+
+def relevant_hotspots(block: dict, pack: dict) -> list[dict]:
+    block_blob = " ".join(
+        [
+            block.get("heading", ""),
+            block.get("source_anchor", ""),
+            " ".join(block.get("tags", [])),
+            " ".join(block.get("risk_flags", [])),
+        ]
+    ).lower()
+    selected: list[dict] = []
+    for hotspot in pack.get("style_hotspots", []):
+        hotspot_blob = hotspot.get("text", "").lower()
+        if any(token in hotspot_blob for token in block.get("tags", [])) or any(
+            token in hotspot_blob for token in block.get("risk_flags", [])
+        ):
+            selected.append(hotspot)
+            continue
+        if any(term in block_blob for term in hotspot_blob.split()[:3]):
+            selected.append(hotspot)
+    return selected[:6]
+
+
+def choose_profile(block: dict, profiles: dict[str, dict[str, object]]) -> dict[str, object] | None:
+    block_type = block.get("block_type", "")
+    tags = set(block.get("tags", []))
+
+    if block_type == "algorithm":
+        return profiles.get("algorithm-stepwise")
+    if block_type in {"legal_localization", "chart"}:
+        return profiles.get("local-context-callout")
+    if tags & {"uk-localization", "legal-localization"}:
+        return profiles.get("local-context-callout")
+    if tags & {"hemodynamic", "complex-prose"} or "complex_prose" in block.get("risk_flags", []):
+        return profiles.get("hemodynamic-prose")
+    if block_type == "callout":
+        return profiles.get("local-context-callout")
+    return None
+
+
+def is_high_risk(block: dict, pack: dict) -> bool:
+    if block.get("adjudication_candidate"):
+        return True
+    if block.get("block_type") in {"algorithm", "legal_localization", "chart"}:
+        return True
+    if any(block_matches_override(block, override) for override in pack.get("localization_overrides", [])):
+        return True
+    return False
+
+
+def build_pack(slug: str) -> dict[str, object]:
+    pack_path = CHAPTER_PACKS_DIR / f"{slug}.yaml"
+    pack = load_yaml(pack_path)
+    profiles = load_profiles()
+
+    candidates: list[dict[str, object]] = []
+    for block in pack.get("blocks", []):
+        if not is_high_risk(block, pack):
+            continue
+        profile = choose_profile(block, profiles)
+        if profile is None:
+            continue
+        matched_overrides = [
+            override for override in pack.get("localization_overrides", []) if block_matches_override(block, override)
+        ]
+        candidates.append(
+            {
+                "block_id": block.get("block_id"),
+                "block_type": block.get("block_type"),
+                "heading": block.get("heading"),
+                "source_anchor": block.get("source_anchor"),
+                "draft_mode": block.get("draft_mode"),
+                "tags": block.get("tags", []),
+                "risk_flags": block.get("risk_flags", []),
+                "profile_id": profile["profile_id"],
+                "variant_a_goal": profile["variant_a_goal"],
+                "variant_b_goal": profile["variant_b_goal"],
+                "decision_criteria": profile["decision_criteria"],
+                "relevant_style_hotspots": relevant_hotspots(block, pack),
+                "matched_localization_overrides": matched_overrides,
+            }
+        )
+
+    return {
+        "chapter_slug": slug,
+        "chapter_pack": str(pack_path),
+        "source_md": pack.get("source_md", ""),
+        "lt_target_md": pack.get("lt_target_md", ""),
+        "scaffold": str(SCAFFOLD_PATH),
+        "candidates": candidates,
+    }
+
+
+def main() -> int:
+    args = parse_args()
+    slug = resolve_chapter_slug(args.chapter)
+    data = build_pack(slug)
+    output_path = Path(args.out) if args.out else ADJUDICATION_PACKS_DIR / f"{slug}.yaml"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    dump_yaml(output_path, data)
+    print(output_path)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

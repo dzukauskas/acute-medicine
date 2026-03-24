@@ -14,6 +14,8 @@ SOURCE_CHAPTERS_DIR = BOOK_ROOT / "source" / "chapters-en"
 LT_CHAPTERS_DIR = BOOK_ROOT / "lt" / "chapters"
 RESEARCH_DIR = BOOK_ROOT / "research"
 CHAPTER_PACKS_DIR = BOOK_ROOT / "chapter_packs"
+ADJUDICATION_PACKS_DIR = BOOK_ROOT / "adjudication_packs"
+GOLD_SECTIONS_DIR = BOOK_ROOT / "gold_sections"
 
 MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 INLINE_CODE_RE = re.compile(r"`([^`]*)`")
@@ -39,6 +41,10 @@ def split_multi(value: str) -> list[str]:
     if not value.strip():
         return []
     return [item.strip() for item in re.split(r"[|,;]", value) if item.strip()]
+
+
+def join_multi(values: Iterable[str]) -> str:
+    return " | ".join(value.strip() for value in values if value and value.strip())
 
 
 def parse_bool(value: str, default: bool = False) -> bool:

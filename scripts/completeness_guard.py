@@ -43,11 +43,20 @@ def block_present(block: dict, lt_text: str) -> bool:
         return bool(re.search(rf"##\s*{re.escape(source_label)}\s*paveiksl", lt_text, re.IGNORECASE))
     if source_label and block_type in {"callout", "legal_localization"}:
         return bool(re.search(rf"##\s*{re.escape(source_label)}\s*rėmel", lt_text, re.IGNORECASE))
+    if source_label and block_type == "chart":
+        return bool(re.search(r"##\s*`?NEWS2`?\s+originalo\s+kontekste", lt_text, re.IGNORECASE))
     return False
 
 
 def should_check(block: dict) -> bool:
-    return block.get("block_type") in {"table", "algorithm", "figure_caption", "callout", "legal_localization"}
+    return block.get("block_type") in {
+        "table",
+        "algorithm",
+        "figure_caption",
+        "callout",
+        "chart",
+        "legal_localization",
+    }
 
 
 def main() -> int:

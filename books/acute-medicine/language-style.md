@@ -49,6 +49,8 @@ Prioritetas visada teikiamas lietuviškam medicininiam tekstui, o ne dvikalbei i
 
 Pozityvūs gero LT sprendimo pavyzdžiai laikomi `gold_phrases.tsv`. Jei ta pati formuluotė po review kartojasi kaip gera alternatyva, ji turi keliauti ten, o ne likti tik viename skyriuje.
 
+Jei po review išryškėja geras viso bloko sprendimas, jis turi keliauti į `gold_sections/`, o ne likti tik konkretaus skyriaus pastraipoje.
+
 ## Terminų paaiškinimai studentui
 
 Terminų blokai ir trumpi paaiškinimai naudojami tik tada, kai tai padeda mokymuisi:
@@ -87,6 +89,9 @@ Rankiniam auditui palikti:
 Jei tokia rankinė pataisa kartojasi, ji turi būti perkelta bent į vieną iš sluoksnių:
 
 - `gold_phrases.tsv`
+- `gold_sections/`
 - `calque_patterns.tsv`
 - `regression_examples/`
 - `localization_overrides.tsv`
+
+High-risk blokams, ypač hemodinaminėms pastraipoms, algoritmams ir UK→LT lokalizacijos callout'ams, galima naudoti `adjudication_pack`, bet žmogaus review vis tiek lieka patvirtinimo vartais.

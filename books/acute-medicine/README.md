@@ -11,6 +11,7 @@
 - `lt/figures/`: lietuviškos schemos ir paveikslai.
 - `lt/figures/manifest.tsv`: aktyvių paveikslų kanoninių `Whimsical` ar `Excalidraw` šaltinių registras.
 - `chapter_packs/`: chapter-specific preflight paketai, kurie privalomai įkeliami prieš drafting.
+- `adjudication_packs/`: high-risk blokų pre-second-pass paketai.
 - `research/`: skyriaus šaltinių ir sprendimų failai.
 - `review_deltas/`: struktūriniai rankinio review skirtumai, naudojami taisyklių promavimui.
 - `regression_examples/`: trumpi „blogai → gerai“ pavyzdžiai būsimiems promptams ir regresijų kontrolei.
@@ -19,7 +20,10 @@
 - `language-style.md`: kanoninės LT medicininės prozos, tipografijos ir anglų terminų rodymo taisyklės.
 - `acronyms.tsv`: dažniausių projekto trumpinių registras.
 - `gold_phrases.tsv`: pozityvių LT medicininės prozos pavyzdžių sluoksnis.
+- `gold_sections/`: pozityvių LT blokinio lygmens etalonų sluoksnis.
 - `localization_overrides.tsv`: UK ar kito originalo konteksto perrašymo į LT praktiką registras.
+- `adjudication_profiles.tsv`: high-risk blokų adjudication profiliai.
+- `adjudication_scaffold.md`: targeted adjudication sprendimo disciplina.
 
 ## Taisyklė
 
@@ -39,5 +43,6 @@ Draftinimas nuo šiol nelaikomas pilnu be šių artefaktų:
 
 1. `research/<slug>.md`
 2. `chapter_packs/<slug>.yaml`
-3. LT skyriaus drafto
-4. `review_deltas/<slug>.tsv`, jei skyrius jau buvo per rankinį auditą
+3. `adjudication_packs/<slug>.yaml`, jei `chapter_pack` turi `adjudication_candidate`
+4. LT skyriaus drafto
+5. `review_deltas/<slug>.tsv`, jei skyrius jau buvo per rankinį auditą
