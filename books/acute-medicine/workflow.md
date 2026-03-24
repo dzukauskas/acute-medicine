@@ -64,11 +64,13 @@ Pagrindinė forma visada yra Lietuvos / ES / SI vienetai:
 Kiekvienam paveikslui ar algoritmui:
 
 1. parenkamas vienas kanoninis šaltinis ir jis įrašomas į `lt/figures/manifest.tsv`;
-2. numatytoji forma yra redaguojamas `drawio.svg`;
-3. jei paveikslas generuojamas skriptu, tas skriptas tampa vieninteliu kanoniniu šaltiniu;
-4. greta negali likti antras pasenęs ar nesinchronizuotas `drawio.svg` / skriptas;
-5. kuriamas galutinis `png` naudojimui tarp `Obsidian`;
-6. po paveikslu paliekama trumpa lietuviška santrauka.
+2. numatytoji redaguojama forma yra `Whimsical` lenta;
+3. `manifest.tsv` turi saugoti redaguojamo šaltinio tipą ir jo nuorodą ar failo kelią;
+4. jei reikia failinio atsarginio varianto arba `Whimsical` netinka konkrečiam atvejui, leidžiamas `Excalidraw`;
+5. vienam paveikslui gali būti tik vienas aktyvus redaguojamas kanoninis šaltinis;
+6. į repo saugomas galutinis `png`, skirtas `Obsidian` ir skyriaus `md` failams;
+7. po bet kokio redagavimo `Whimsical` ar `Excalidraw` šaltinyje `png` turi būti atnaujintas;
+8. po paveikslu paliekama trumpa lietuviška santrauka.
 
 Paveikslai turi būti kuo arčiau knygos 1:1, išskyrus vietas, kur reikia koreguoti pagal naujesnę Lietuvos medicinos informaciją.
 
@@ -81,14 +83,15 @@ Paveikslai turi būti kuo arčiau knygos 1:1, išskyrus vietas, kur reikia koreg
 - `research/001-cardiorespiratory-arrest-in-hospital.md`
 - `lt/figures/001-figure-1-1-advanced-life-support.png`
 - `lt/figures/manifest.tsv`
-- `scripts/render_acute_medicine_figure_001.py`
+- `Whimsical` lenta `ALS 1.1 test`
 
 ## Įrankiai
 
 Kai tai duoda realią naudą, naudok:
 
 - `pdf_reader` PDF puslapių, lentelių ir vaizdų tikrinimui;
-- `drawio` schemų atkūrimui;
+- `whimsical-desktop` MCP schemų, algoritmų ir išdėstymo kūrimui;
+- [$excalidraw-diagram](/Users/dzukauskas/.codex/skills/excalidraw-diagram-skill/SKILL.md) kai reikia failinio šaltinio ar `Whimsical` nėra tinkamas;
 - interneto paiešką naujausių šaltinių patikrai;
 - `scripts/terminology_guard.py` terminų ir draudžiamų frazių kontrolei;
 - `scripts/prose_guard.py` sakinio lygio kalkių ir vertimo karkaso kontrolei;

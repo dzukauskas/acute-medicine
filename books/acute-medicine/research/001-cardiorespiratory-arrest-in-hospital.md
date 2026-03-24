@@ -31,7 +31,8 @@
 
 - Figure 1.1 Algorithm for adult advanced life support
 - Sukurtas lietuviškas `PNG`: `books/acute-medicine/lt/figures/001-figure-1-1-advanced-life-support.png`
-- Kanoninis šaltinis: `scripts/render_acute_medicine_figure_001.py`
+- Kanoninis šaltinis: `Whimsical` lenta `ALS 1.1 test`
+- `Whimsical` URL: `https://whimsical.com/dzukauskas/als-1-1-test-2C5uaGSWyfkoQxK1Wyng8N`
 - Įrašyta į `books/acute-medicine/lt/figures/manifest.tsv`
 
 ### Rėmeliai / papildomi blokai
@@ -101,8 +102,7 @@
 ## Atviros abejonės
 
 - Lietuvoje trumpinių `AED` ir `AID` vartojimas šaltiniuose nėra visiškai vienodas; tekste saugiau teikti pirmenybę pilnam termino pavadinimui.
-- `draw.io` šaltinis kol kas yra pirmoji redaguojama versija; jei reikės, jį dar bus galima detaliau suvienodinti su galutiniu `PNG`.
-- 1.1 paveikslui aktyvus kanoninis šaltinis yra skriptas; pasenęs `drawio.svg` pašalintas, kad neliktų dviejų nesinchronizuotų šaltinių.
+- 1.1 paveikslui aktyvus kanoninis šaltinis dabar yra `Whimsical` lenta; jei reikės failinio atsarginio šaltinio, bus naudojamas `Excalidraw`, bet ne abu vienu metu.
 
 ## Baigiamoji kontrolė
 

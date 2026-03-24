@@ -1,2 +1,2 @@
 figure_id	figure_number	png_path	canonical_source_type	canonical_source_path	notes
-001-figure-1-1-advanced-life-support	1.1	books/acute-medicine/lt/figures/001-figure-1-1-advanced-life-support.png	script	scripts/render_acute_medicine_figure_001.py	Single source of truth; stale drawio source removed to avoid divergence.
+001-figure-1-1-advanced-life-support	1.1	books/acute-medicine/lt/figures/001-figure-1-1-advanced-life-support.png	whimsical_board	https://whimsical.com/dzukauskas/als-1-1-test-2C5uaGSWyfkoQxK1Wyng8N	Board ID: 2C5uaG. Whimsical is the canonical editable source; refresh the PNG after board edits.

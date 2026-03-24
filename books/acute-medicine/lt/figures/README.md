@@ -6,13 +6,13 @@ Kiekvienam paveikslui turi būti tik vienas kanoninis šaltinis.
 
 Numatytoji taisyklė:
 
-- redaguojamas failas: `*.drawio.svg`
+- redaguojamas šaltinis: `Whimsical` lenta
 - naudojamas paveikslas: `*.png`
 
 Išimtis:
 
-- jei paveikslas generuojamas skriptu, kanoninis šaltinis yra tas skriptas;
-- tokiu atveju greta negali likti pasenęs ar nesinchronizuotas `drawio.svg`.
+- jei `Whimsical` šiam atvejui netinka arba reikia failinio redaguojamo šaltinio, naudojamas `*.excalidraw`;
+- vienam paveikslui negali likti du aktyvūs redaguojami šaltiniai.
 
 Visi aktyvūs paveikslai ir jų kanoniniai šaltiniai turi būti surašyti:
 
@@ -21,6 +21,8 @@ Visi aktyvūs paveikslai ir jų kanoniniai šaltiniai turi būti surašyti:
 Dabartinė aktyvi 1.1 paveikslo būsena:
 
 - `001-figure-1-1-advanced-life-support.png`
-- kanoninis šaltinis: `scripts/render_acute_medicine_figure_001.py`
+- kanoninis šaltinis: `Whimsical` lenta `ALS 1.1 test`
+
+Po kiekvieno redagavimo `Whimsical` ar `Excalidraw` šaltinyje `png` turi būti atnaujinamas.
 
 Ankstesnio workflow figūrų failai pašalinti ir nebėra aktyvus šaltinis.
