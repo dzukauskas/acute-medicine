@@ -5,7 +5,13 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 SRC_DIR="$REPO_ROOT/books/acute-medicine/lt"
-DEST_DIR="${1:-/Users/dzukauskas/Library/Mobile Documents/iCloud~md~obsidian/Documents/PARAMEDIKAS/Acute Medicine}"
+DEFAULT_DEST="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/PARAMEDIKAS/Acute Medicine"
+DEST_DIR="${OBSIDIAN_ACUTE_MEDICINE_DEST:-${1:-$DEFAULT_DEST}}"
+
+if [[ ! -d "$SRC_DIR" ]]; then
+  echo "Source directory not found: $SRC_DIR" >&2
+  exit 1
+fi
 
 mkdir -p "$DEST_DIR"
 
