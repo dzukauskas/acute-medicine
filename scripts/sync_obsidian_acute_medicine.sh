@@ -18,9 +18,10 @@ mkdir -p "$DEST_DIR"
 # Mirror only the user-facing study assets needed by Obsidian while preserving
 # the chapters/figures directory structure and relative image links.
 /usr/bin/rsync \
-  -a \
+  -rlpgoD \
   --delete \
   --prune-empty-dirs \
+  --omit-dir-times \
   --exclude '.DS_Store' \
   --include '*/' \
   --include '*.md' \
