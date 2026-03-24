@@ -22,12 +22,39 @@ Skyrius laikomas baigtu tik kai:
 2. sudarytas pilnas skyriaus inventorius;
 3. patikrinti naujausi prieinami Lietuvos šaltiniai;
 4. jei jų nepakanka, patikrintos naujausios Europos ar tarptautinės gairės;
-5. lietuviškas skyrius parašytas nuo švaraus lapo;
-6. padarytas atskiras anti-calque perrašymas, kai tekstas peržiūrimas jau nebe pagal anglų sakinį, o kaip lietuviška proza;
-7. lentelės pilnai išverstos;
-8. schemos ir paveikslai atkurti lietuviškai;
-9. viskas sutikrinta su PDF;
-10. paleistas terminų ir prozos QA.
+5. sugeneruotas `chapter_pack`;
+6. lietuviškas skyrius parašytas nuo švaraus lapo pagal `chapter_pack`;
+7. padarytas atskiras anti-calque perrašymas, kai tekstas peržiūrimas jau nebe pagal anglų sakinį, o kaip lietuviška proza;
+8. lentelės pilnai išverstos;
+9. schemos ir paveikslai atkurti lietuviškai;
+10. viskas sutikrinta su PDF;
+11. paleistas terminų, prozos, tipografijos ir komplektiškumo QA;
+12. jei skyrius buvo taisytas ranka, užfiksuotas `review_delta` ir parengti rule-promotion kandidatai.
+
+## `Chapter pack` taisyklė
+
+Prieš bet kokį drafting skyriui privaloma sugeneruoti `chapter_packs/<slug>.yaml`.
+
+`chapter_pack` yra vykdomas preflight artefaktas, o ne papildoma dokumentacija. Jis turi apjungti:
+
+- skyriaus blokų inventorių;
+- aktyvius terminus ir akronimus;
+- lokalizacijos override'us;
+- stiliaus hotspot'us;
+- pozityvius LT pavyzdžius.
+
+Be `chapter_pack` drafteris negali pradėti generavimo.
+
+## Section-type drafting
+
+Skyriaus blokai generuojami ne vienu universaliu režimu, o pagal `draft_mode` iš `chapter_pack`:
+
+- `narrative-prose`
+- `table-compression`
+- `algorithm-stepwise`
+- `local-context-callout`
+
+Tai leidžia neapdoroti lentelių, algoritmų ir lokalizacinių paaiškinimų tuo pačiu prose režimu.
 
 ## Lokalizacijos taisyklė
 
@@ -52,11 +79,15 @@ Kiekvienas skyrius turi praeiti du atskirus kokybės vartus:
 - sutikrinimą su `language-style.md`;
 - `scripts/prose_guard.py`;
 - `scripts/lt_style_guard.py`;
+- `scripts/terminology_guard.py` su `chapter_pack`, jei jis yra;
+- `scripts/completeness_guard.py`;
 - trumpą rankinį kalbinį auditą.
 
 ## LT medicininės kalbos modulis
 
 Branduolinės LT kalbos taisyklės laikomos `language-style.md`.
+
+Pozityvūs LT formuluočių pavyzdžiai laikomi `gold_phrases.tsv`.
 
 Privalomi principai:
 
@@ -90,6 +121,11 @@ Projekte anglų terminai rodomi ribotai:
 
 Terminų blokai ar trumpi paaiškinimai pridedami tik tada, kai tema yra tanki, nauja ar kitaip sunkiai suprantama be trumpo paaiškinimo.
 
+Jei skyriuje pataisoma pasikartojanti LT formuluotė, pirmas klausimas po review yra:
+
+- ar tai tik vietinė pataisa;
+- ar verta ją promuoti į `gold_phrases.tsv`, `calque_patterns.tsv`, `termbase.tsv`, `acronyms.tsv` ar `localization_overrides.tsv`.
+
 ## Akronimų politika
 
 Dažniausi projekto trumpiniai fiksuojami `acronyms.tsv`.
@@ -99,6 +135,19 @@ Taisyklės:
 - svarbūs ar potencialiai dviprasmiai trumpiniai pirmą kartą turi būti išskleisti;
 - po pirmos pilnos formos galima vartoti nusistovėjusį trumpinį;
 - jei trumpinys gali reikšti kelis dalykus, sprendžiama pagal klinikinį kontekstą.
+
+## Struktūrinė review kilpa
+
+Jei skyrius po drafto buvo taisytas ranka, turi būti paliekamas `review_deltas/<slug>.tsv`.
+
+`review_delta` paskirtis:
+
+- atskirti vienkartines pataisas nuo sisteminių defektų;
+- suteikti medžiagą `promote_rules.py`;
+- pildyti `regression_examples/`;
+- mažinti ateities rankinio taisymo kiekį.
+
+Pirmoje iteracijoje rule promotion visada yra žmogaus patvirtinama. Skriptai gali tik parengti kandidatus.
 
 ## Paveikslų taisyklė
 

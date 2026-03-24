@@ -167,11 +167,11 @@ Nustačius tikėtiną grįžtamą priežastį, ją pradėkite šalinti nedelsdam
 
 Ultragarsas gali padėti nustatyti kai kurias grįžtamas priežastis, tačiau jį turi atlikti įgudęs specialistas ir taip, kad ritmo patikros pauzė neviršytų 10 s.
 
-## Po spontaninės kraujotakos atsikūrimo
+## Po spontaninės kraujotakos atsikūrimo (ROSC)
 
 Po spontaninės kraujotakos atsikūrimo reikia pilno `ABCDE` įvertinimo.
 
-- Palaikykite `SpO2 94–98 %`.
+- Palaikykite deguonies įsotinimą (`SpO2`) `94–98 %`.
 - Užtikrinkite kvėpavimo takus; jei reikia ilgalaikio kvėpavimo takų valdymo, svarstykite endotrachėjinę intubaciją.
 - Ventiliaciją koreguokite taip, kad `PaCO2` išliktų normokapnijos ribose: `4,7–6,0 kPa` (`35–45 mmHg`).
 - Užtikrinkite patikimą kraujagyslinę prieigą, tęstinį monitoravimą ir atlikite 12 derivacijų EKG.

@@ -1,0 +1,9 @@
+block_id	defect_class	bad_form	fixed_form	severity	promote_target	notes
+narrative-01-general	calque	juos išduoda smarkiai pakitę fiziologiniai rodikliai	tai matyti iš smarkiai pakitusių fiziologinių rodiklių	p2	gold_phrases.tsv	„Išduoda“ šiame kontekste skambėjo verstinai.
+table-2.1-temperature	calque	galvokite apie sepsį	įtarkite sepsį	p2	calque_patterns.tsv	Stabilus klinikinio mąstymo kalkės pavyzdys.
+algorithm-2.1	syntax	tolesni veiksmai priklauso nuo vyraujančios klinikinės problemos arba darbinės diagnozės	toliau gydykite pagal vyraujančią klinikinę problemą arba darbinę diagnozę	p2	gold_phrases.tsv	Veiksmų sekai tinka aktyvi formuluotė.
+narrative-05-neurological	nominalization	reikia svarstyti endotrachėjinę intubaciją	apsvarstykite endotrachėjinę intubaciją	p2	gold_phrases.tsv	Algoritminiuose veiksmuose vengti vardinės konstrukcijos.
+narrative-08-shock	calque	šoką išduoda ne tik spaudimo pokyčiai	šoką rodo ne tik spaudimo pokyčiai	p2	regression_examples	Naudinga kaip sakinį glodinantis pavyzdys.
+narrative-10-cardiogenic-shock	syntax	kardiogeninis šokas yra viena dažniausių ūminio kraujotakos nepakankamumo formų	kardiogeninis šokas dažnai lemia ūminį kraujotakos nepakankamumą	p3	regression_examples	Ne kiekviena tokia vieta verta formalios draudžiamos taisyklės.
+narrative-10-cardiogenic-shock	calque	svarstykite skubią perkutaninę koronarinę intervenciją	kuo greičiau organizuokite perkutaninę koronarinę intervenciją	p2	gold_phrases.tsv	Veiksmui čia tinka konkretesnis LT klinikinis nurodymas.
+callout-01-news2	clinical_localization	NEWS2 pateikiama kaip ankstyvojo perspėjimo standartas Lietuvoje	NEWS2 paliekama kaip JK mokomasis kontekstas, o LT praktikai pirmenybė teikiama ABCDE + AVPU/GKS	p1	localization_overrides.tsv	Svarbus lokalizacijos taisyklės atvejis.

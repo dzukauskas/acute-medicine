@@ -6,6 +6,8 @@ Rašyk natūralia lietuviška medicinine kalba.
 
 Versk sąvoką, o ne angliško sakinio formą.
 
+Prieš drafting turi būti sugeneruotas `chapter_pack`, o po review pasikartojančios pataisos turi būti promuojamos į taisyklių sluoksnį.
+
 ## Anti-Calque taisyklė
 
 Po pirmo vertimo skyrius turi būti perrašomas dar kartą, jau nebežiūrint į angliško sakinio formą.
@@ -45,6 +47,7 @@ Tokie sakiniai turi būti keičiami į aktyvesnę, trumpesnę ir natūralesnę l
 - lentelės verčiamos pilnai į `Markdown`, jei jos išlieka įskaitomos;
 - schemos ir algoritmai atkuriami lietuviškai;
 - figūros numeracija turi sutapti su knyga.
+- algoritmai, lentelės ir lokalizaciniai paaiškinimai neturi būti draftinami tuo pačiu prose režimu; naudok `chapter_pack` nurodytą `draft_mode`.
 
 ## Callout
 
@@ -64,4 +67,7 @@ Skyrius nelaikomas baigtu, kol:
 3. schemos ir lentelės užbaigtos;
 4. padarytas atskiras anti-calque perrašymas;
 5. `scripts/terminology_guard.py` grąžina švarų rezultatą;
-6. `scripts/prose_guard.py` grąžina švarų rezultatą.
+6. `scripts/prose_guard.py` grąžina švarų rezultatą;
+7. `scripts/lt_style_guard.py` grąžina švarų rezultatą;
+8. `scripts/completeness_guard.py` neberanda prapuolusių struktūrinių blokų;
+9. jei buvo rankinių pataisų, užpildytas `review_deltas/<slug>.tsv`.

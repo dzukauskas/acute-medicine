@@ -7,7 +7,16 @@ from pathlib import Path
 
 
 MARKDOWN_LINK_RE = re.compile(r"\[([^\]]*)\]\([^)]+\)")
+INLINE_CODE_RE = re.compile(r"`[^`]*`")
+URL_RE = re.compile(r"https?://\S+")
+ABS_PATH_RE = re.compile(r"/Users/\S+")
+REPO_PATH_RE = re.compile(r"\b(?:books|scripts|codex)/[A-Za-z0-9._/\- ]+")
 FENCE_RE = re.compile(r"^\s*```")
+TABLE_SEPARATOR_RE = re.compile(r"^\s*\|?(?:\s*:?-+:?\s*\|)+\s*$")
+METADATA_RE = re.compile(
+    r"^\s*-\s*(Autoriai originale|Autorė originale|Puslapiai|PDF|Angliškas pagalbinis failas|Lietuviškas failas|Tipas):"
+)
+HTML_COMMENT_RE = re.compile(r"^\s*<!--.*-->\s*$")
 ASCII_RANGE_RE = re.compile(r"\b\d+(?:,\d+)?\s*-\s*\d+(?:,\d+)?\b")
 ASCII_X_RE = re.compile(r"\b\d+(?:,\d+)?\s*x\s*\d+(?:,\d+)?\b")
 NBSP = "\u00A0"
@@ -58,8 +67,11 @@ def parse_args() -> argparse.Namespace:
 
 
 def normalize_line_for_scan(line: str) -> str:
-    normalized = line.replace("`", "")
+    normalized = INLINE_CODE_RE.sub("", line)
     normalized = MARKDOWN_LINK_RE.sub(r"\1", normalized)
+    normalized = URL_RE.sub("", normalized)
+    normalized = ABS_PATH_RE.sub("", normalized)
+    normalized = REPO_PATH_RE.sub("", normalized)
     return normalized
 
 
@@ -95,6 +107,13 @@ def scan_file(file_path: Path) -> list[str]:
             in_fence = not in_fence
             continue
         if in_fence:
+            continue
+
+        if HTML_COMMENT_RE.match(raw_line):
+            continue
+        if METADATA_RE.match(raw_line):
+            continue
+        if TABLE_SEPARATOR_RE.match(raw_line):
             continue
 
         normalized = normalize_line_for_scan(raw_line)

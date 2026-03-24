@@ -47,6 +47,8 @@ Anglų terminas rodomas ribotai:
 
 Prioritetas visada teikiamas lietuviškam medicininiam tekstui, o ne dvikalbei išklotinei.
 
+Pozityvūs gero LT sprendimo pavyzdžiai laikomi `gold_phrases.tsv`. Jei ta pati formuluotė po review kartojasi kaip gera alternatyva, ji turi keliauti ten, o ne likti tik viename skyriuje.
+
 ## Terminų paaiškinimai studentui
 
 Terminų blokai ir trumpi paaiškinimai naudojami tik tada, kai tai padeda mokymuisi:
@@ -81,3 +83,10 @@ Rankiniam auditui palikti:
 - genityvų grandinių aiškumą sudėtingesniais atvejais;
 - temos–remos tvarką;
 - semantiškai subtilias formuluotes.
+
+Jei tokia rankinė pataisa kartojasi, ji turi būti perkelta bent į vieną iš sluoksnių:
+
+- `gold_phrases.tsv`
+- `calque_patterns.tsv`
+- `regression_examples/`
+- `localization_overrides.tsv`

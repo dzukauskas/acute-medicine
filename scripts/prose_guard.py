@@ -25,6 +25,10 @@ def load_rules(paths: list[Path]) -> list[Rule]:
                         "banned": row["banned"].strip(),
                         "preferred": row["preferred"].strip(),
                         "reason": row["reason"].strip(),
+                        "category": row.get("category", "").strip(),
+                        "severity": row.get("severity", "").strip(),
+                        "promoted_from": row.get("promoted_from", "").strip(),
+                        "notes": row.get("notes", "").strip(),
                     }
                 )
     return rows
@@ -64,7 +68,9 @@ def scan_file(file_path: Path, rules: list[Rule]) -> list[str]:
             findings.append(
                 f"{file_path}:{lineno}: rule_file='{rule['rule_file']}' "
                 f"match_type='{rule['match_type']}' banned='{rule['banned']}' "
-                f"preferred='{rule['preferred']}' reason='{rule['reason']}'\n"
+                f"preferred='{rule['preferred']}' reason='{rule['reason']}' "
+                f"category='{rule['category']}' severity='{rule['severity']}' "
+                f"promoted_from='{rule['promoted_from']}' notes='{rule['notes']}'\n"
                 f"  {line}"
             )
     return findings

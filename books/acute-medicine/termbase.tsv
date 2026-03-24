@@ -1,13 +1,22 @@
-en	lt	note	status
-cardiorespiratory arrest	kardiorespiracinis sustojimas	Naudoti, kai kartu nėra kvėpavimo ir kraujotakos.	preferred
-in-hospital cardiac arrest	širdies sustojimas ligoninėje	Pagrindinis 1 skyriaus terminas.	preferred
-cardiopulmonary resuscitation (CPR)	kardiopulmoninis gaivinimas (CPR)	Tekste galima trumpinti iki CPR, pirmą kartą išrašius pilną formą.	preferred
-chest compressions	krūtinės ląstos paspaudimai	Nevartoti „širdies masažas“.	approved
-pulseless electrical activity (PEA)	elektrinė veikla be pulso (PEA)	Pagrindiniame tekste palikta pilna lietuviška forma su tarptautiniu trumpiniu.	preferred
-ventricular fibrillation	skilvelių virpėjimas	Lietuviškame tekste galima nevartoti VF, jei tai nebūtina.	preferred
-pulseless ventricular tachycardia	skilvelinė tachikardija be pulso	1 skyriui pasirinkta pilna lietuviška forma.	preferred
-shockable rhythm	defibriliuotinas ritmas	Vengti pažodinio „šokuojamas ritmas“.	approved
-non-shockable rhythm	nedefibriliuotinas ritmas	Vengti pažodinio „nešokuojamas ritmas“.	approved
-return of spontaneous circulation (ROSC)	spontaninės kraujotakos atsikūrimas (ROSC)	Pagrindinis po-gaiviniminės priežiūros terminas.	preferred
-futile resuscitation	beviltiškas gaivinimas	Vartoti Lietuvos teisinio reglamentavimo kontekste.	approved
-advanced life support	specialusis gaivinimas	1 skyriuje pasirinkta natūralesnė Lietuvos gaivinimo vartosena.	preferred
+en	lt	note	status	banned_lt	first_use_policy	section_scope	example_lt	local_override_tag
+cardiorespiratory arrest	kardiorespiracinis sustojimas	Naudoti, kai kartu nėra kvėpavimo ir kraujotakos.	preferred	kardialinis areštas,cardiorespiratory arrest	pirmą kartą galima paaiškinti	001	Kardiorespiracinis sustojimas ligoninėje dažniausiai būna ankstesnio fiziologinio blogėjimo pasekmė.	
+in-hospital cardiac arrest	širdies sustojimas ligoninėje	Pagrindinis 1 skyriaus terminas.	preferred	in-hospital cardiac arrest	pirmą kartą galima paaiškinti	001	Širdies sustojimą ligoninėje reikia atpažinti ir gydyti nedelsiant.	
+cardiopulmonary resuscitation (CPR)	kardiopulmoninis gaivinimas (CPR)	Tekste galima trumpinti iki CPR, pirmą kartą išrašius pilną formą.	preferred	cardio-pulmoninis gaivinimas	pirmą kartą išskleisti	all	Pradėkite kardiopulmoninį gaivinimą (CPR) nedelsdami.	
+chest compressions	krūtinės ląstos paspaudimai	Nevartoti „širdies masažas“.	approved	širdies masažas	nebūtina išskleisti	all	Krūtinės ląstos paspaudimus pradėkite iš karto.	
+pulseless electrical activity (PEA)	elektrinė veikla be pulso (PEA)	Pagrindiniame tekste palikta pilna lietuviška forma su tarptautiniu trumpiniu.	preferred	elektromechaninė disociacija,PEA be LT formos	pirmą kartą išskleisti	all	Elektrinė veikla be pulso (PEA) yra nedefibriliuotinas ritmas.	
+ventricular fibrillation	skilvelių virpėjimas	Lietuviškame tekste galima nevartoti VF, jei tai nebūtina.	preferred	ventrikulinė fibriliacija	pirmą kartą galima paaiškinti	001	Skilvelių virpėjimas yra defibriliuotinas ritmas.	
+pulseless ventricular tachycardia	skilvelinė tachikardija be pulso	1 skyriui pasirinkta pilna lietuviška forma.	preferred	ventrikulinė tachikardija be pulso	pirmą kartą galima paaiškinti	001	Skilvelinė tachikardija be pulso taip pat priskiriama defibriliuotiniems ritmams.	
+shockable rhythm	defibriliuotinas ritmas	Vengti pažodinio „šokuojamas ritmas“.	approved	šokuojamas ritmas	nebūtina išskleisti	001	Jei ritmas defibriliuotinas, atlikite vieną iškrovą.	
+non-shockable rhythm	nedefibriliuotinas ritmas	Vengti pažodinio „nešokuojamas ritmas“.	approved	nešokuojamas ritmas	nebūtina išskleisti	001	Jei ritmas nedefibriliuotinas, nedelsdami tęskite gaivinimą.	
+return of spontaneous circulation (ROSC)	spontaninės kraujotakos atsikūrimas (ROSC)	Pagrindinis po-gaiviniminės priežiūros terminas.	preferred	return of spontaneous circulation	pirmą kartą išskleisti	001	Po spontaninės kraujotakos atsikūrimo (ROSC) atlikite pilną ABCDE įvertinimą.	
+futile resuscitation	beviltiškas gaivinimas	Vartoti Lietuvos teisinio reglamentavimo kontekste.	approved	futile resuscitation	pirmą kartą galima paaiškinti	001	Beviltiškas gaivinimas turi būti vertinamas pagal Lietuvos teisinę ir klinikinę tvarką.	lt_legal_rewrite
+advanced life support	specialusis gaivinimas	1 skyriuje pasirinkta natūralesnė Lietuvos gaivinimo vartosena.	preferred	pažangusis gyvybės palaikymas,advanced life support	nebūtina išskleisti	001	Suaugusiojo specialusis gaivinimas turi būti atliekamas pagal aiškų algoritmą.	lt_als
+critical illness	kritinė būklė	Naudoti kalbant apie ryškų fiziologinį išsiderinimą ir gyvybės grėsmę.	preferred	kritinis susirgimas,critical illness	nebūtina išskleisti	002	Staiga blogėjant fiziologiniams rodikliams įtarkite kritinę būklę.	
+critically ill patient	kritiškai sunkus pacientas	Vengti pažodinio „kritiškai sergantis pacientas“, jei kalbama apie ūmią būklę.	preferred	kritiškai sergantis pacientas,critically ill patient	nebūtina išskleisti	002	Kritiškai sunkų pacientą vertinkite sistemingai pagal ABCDE.	
+shock	šokas	Paliekamas nusistovėjęs lietuviškas medicinos terminas.	preferred	shock	nebūtina išskleisti	002	Šokas reiškia ūminį kraujotakos nepakankamumą su organų hipoperfuzija.	
+cardiogenic shock	kardiogeninis šokas	Naudoti širdinės kilmės šokui apibūdinti.	preferred	cardiogenic shock	nebūtina išskleisti	002	Kardiogeninį šoką dažnai lydi plaučių edema ir didelis užpildymo spaudimas.	
+organ perfusion	organų perfuzija	Nevartoti pažodinių konstrukcijų su „aprūpinimu krauju“, jei kalbama hemodinamiškai.	approved	organų aprūpinimas krauju	perfrazuoti natūraliai	002	Normalus spaudimas dar negarantuoja pakankamos organų perfuzijos.	
+jugular venous pressure (JVP)	jungo veninis spaudimas (JVP)	Tekste galima vartoti JVP, jei pirmą kartą paaiškinta.	approved	jugular venous pressure,venų prisipildymo spaudimas	pirmą kartą išskleisti	002	Jungo veninį spaudimą (JVP) vertinkite kartu su odos temperatūra ir perfuzija.	
+fluid challenge	diagnostinis skysčių boliusas	Vengti pažodinio „skysčių iššūkio“.	approved	skysčių iššūkis,fluid challenge	nebūtina išskleisti	002	Jei nėra plaučių edemos, skirkite diagnostinį skysčių boliusą.	
+vasopressor	vazopresorius	Naudoti hemodinaminio palaikymo kontekste.	preferred	vasopresorius support	pirmą kartą galima paaiškinti	002	Jei hipotenzija išlieka, gali prireikti vazopresoriaus.	
+inotrope	inotropas	Naudoti širdies susitraukimo jėgą didinančios terapijos kontekste.	preferred	inotropinė medžiaga	pirmą kartą galima paaiškinti	002	Kai sumažėjęs širdies išmetimas, pradėkite inotropą pagal klinikinę situaciją.	

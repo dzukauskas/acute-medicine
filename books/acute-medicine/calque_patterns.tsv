@@ -1,28 +1,32 @@
-match_type	banned	preferred	reason
-phrase	eskaluoti pagalbą	kviesti papildomą pagalbą	Angliškos klinikinės vadybos kalkė; lietuviškai aiškiau įvardyti konkretų veiksmą.
-phrase	naudingas kaip bendras kontekstas	tinka tik bendrai orientacijai	Vertimo konstrukcija iš "useful as general context".
-phrase	atramos taškai	pagrindiniai kriterijai arba pagrindiniai pagrindai	Miglotas ir verstinis junginys.
-phrase	kompresijų kokybę	kokybiškus krūtinės ląstos paspaudimus	Taisoma ir kalkė, ir netiksli abstrakcija.
-phrase	įgūdžių turintis specialistas	įgudęs arba patyręs specialistas	Angliškas konstrukto perkėlimas.
-phrase	pilna ABCDE peržiūra	pilnas ABCDE įvertinimas	Medicininėje lietuvių kalboje natūraliau „įvertinimas“.
-phrase	pradinis valdymas	pradiniai veiksmai	Skyriaus antraštėse ir klinikiniame tekste skamba kaip tiesioginis „initial management“ vertinys.
-phrase	gyvybei suderinamas ritmas	organizuotas ritmas, galintis užtikrinti kraujotaką	Tiesioginis „compatible with life“ vertinys medicininiame kontekste skamba nenatūraliai.
-phrase	pakankamą patirtį turintis specialistas	patyręs specialistas	Tiesioginis atributinės angliškos konstrukcijos perkėlimas.
-phrase	prioritetas yra	pirmiausia / svarbiausia	Tiesioginis angliško sakinio karkaso vertimas.
-phrase	sprendimas dėl	spręskite / aptarkite / nuspręskite	Dažnai žymi daiktavardinę biurokratinę kalkę; perrašyti aktyvia konstrukcija.
-phrase	turi būti priimamas	nuspręskite / reikia nuspręsti	Pasyvi biurokratinė konstrukcija.
-phrase	turi būti aptariamas	reikėtų aptarti	Pasyvi biurokratinė konstrukcija.
-phrase	turi būti grindžiami	reikia vadovautis / turi remtis	Sausa administracinė kalkė.
-phrase	yra viena svarbiausių	viena svarbiausių	Dažnai perteklinis angliškas karkasas su „yra“.
-phrase	gali būti naudingas	padeda / gali padėti	Dažnai verčiama pažodžiui ir apsunkina sakinį.
-phrase	orientuojantis į	siekiant / pagal	Dažnas verstinis junginys iš „guided by / targeting“.
-phrase	komanda gali svarstyti	galima / verta svarstyti	Verstinė konstrukcija iš „the team should consider“.
-phrase	turi gerai išmanyti	turi mokėti naudotis / turi gerai žinoti	Dažnai per daug tiesioginis vertimas iš „should be familiar with“.
-phrase	atlikti įvertinimą	įvertinti	Perteklinė nominalizacija; lietuviškai dažniausiai sklandžiau vartoti veiksmažodį.
-phrase	vykdyti stebėjimą	stebėti	Perteklinė administracinė konstrukcija.
-phrase	atlikti korekciją	koreguoti	Perteklinė nominalizacija; medicininiame tekste paprastai pakanka veiksmažodžio.
-phrase	yra svarbus veiksnys	yra svarbu / lemia	Dažnas pažodinis vertimo karkasas iš „is an important factor“.
-regex	\bSprendimas dėl [^.]+ turi būti\b	perrašyk aktyvia konstrukcija	Biurokratinė pasyvi konstrukcija, dažnai skambanti kaip vertimas.
-regex	\b[Aa]rtimiesiems turi būti suteikta\b	artimuosius reikia informuoti / sudaryti galimybę	Pasyvus verstinis sakinys.
-regex	\bPrieš kiekvieną [^.]+ turi būti atlikta\b	perrašyk aktyviu veiksmažodžiu	Pasyvi procedūrinė konstrukcija, kurią lietuviškai geriau keisti tiesioginiu nurodymu.
-regex	\b[Pp]askyrus pirm[ąa] [^.]+ nepriklausomai nuo to, ar\b	jei sakinys per sunkus, skaidyk į du sakinius	Perkrautas loginiu požiūriu sakinys.
+match_type	banned	preferred	reason	category	severity	promoted_from	notes
+phrase	eskaluoti pagalbą	kviesti papildomą pagalbą	Angliškos klinikinės vadybos kalkė; lietuviškai aiškiau įvardyti konkretų veiksmą.	calque	p2	001	Vengti management kalbos, kai turima omenyje realų klinikinį veiksmą.
+phrase	naudingas kaip bendras kontekstas	tinka tik bendrai orientacijai	Vertimo konstrukcija iš "useful as general context".	calque	p3	001	Dažniau pasitaiko pastabose ir interpretacinėse pastraipose.
+phrase	atramos taškai	pagrindiniai kriterijai arba pagrindiniai pagrindai	Miglotas ir verstinis junginys.	collocation	p3	001	Keisti į aiškesnį kriterijų ar pagrindo įvardijimą.
+phrase	kompresijų kokybę	kokybiškus krūtinės ląstos paspaudimus	Taisoma ir kalkė, ir netiksli abstrakcija.	collocation	p2	001	Dažnai reikia konkretinti, ką reiškia abstraktus terminas.
+phrase	įgūdžių turintis specialistas	įgudęs arba patyręs specialistas	Angliškas konstrukto perkėlimas.	calque	p3	001	Pirmenybė teikiama trumpesniam LT atributui.
+phrase	pilna ABCDE peržiūra	pilnas ABCDE įvertinimas	Medicininėje lietuvių kalboje natūraliau „įvertinimas“.	collocation	p2	001	„Peržiūra“ šiame kontekste skamba verstinai.
+phrase	pradinis valdymas	pradiniai veiksmai	Skyriaus antraštėse ir klinikiniame tekste skamba kaip tiesioginis „initial management“ vertinys.	calque	p2	001	Ypač būdinga antraštėms ir įvadinėms pastraipoms.
+phrase	gyvybei suderinamas ritmas	organizuotas ritmas, galintis užtikrinti kraujotaką	Tiesioginis „compatible with life“ vertinys medicininiame kontekste skamba nenatūraliai.	calque	p2	001	Reikia konkretinti fiziologinę prasmę.
+phrase	pakankamą patirtį turintis specialistas	patyręs specialistas	Tiesioginis atributinės angliškos konstrukcijos perkėlimas.	calque	p3	001	Trumpinti iki LT natūralios formos.
+phrase	prioritetas yra	pirmiausia / svarbiausia	Tiesioginis angliško sakinio karkaso vertimas.	calque	p2	001	Dažniausiai galima perrašyti į tiesioginį veiksmą ar akcentą.
+phrase	sprendimas dėl	spręskite / aptarkite / nuspręskite	Dažnai žymi daiktavardinę biurokratinę kalkę; perrašyti aktyvia konstrukcija.	bureaucratic_passive	p2	001	Jei sakinys prasideda nuo „sprendimas dėl“, jis dažnai bus sunkus.
+phrase	turi būti priimamas	nuspręskite / reikia nuspręsti	Pasyvi biurokratinė konstrukcija.	bureaucratic_passive	p2	001	Keisti į aktyvų klinikinį nurodymą.
+phrase	turi būti aptariamas	reikėtų aptarti	Pasyvi biurokratinė konstrukcija.	bureaucratic_passive	p2	001	Dažniausiai pakanka aktyvios formos.
+phrase	turi būti grindžiami	reikia vadovautis / turi remtis	Sausa administracinė kalkė.	bureaucratic_passive	p2	001	Dažniau randama teisiniuose ir policy blokuose.
+phrase	yra viena svarbiausių	viena svarbiausių	Dažnai perteklinis angliškas karkasas su „yra“.	syntax	p3	001	Šalinti perteklinį „yra“, jei prasmė nesikeičia.
+phrase	gali būti naudingas	padeda / gali padėti	Dažnai verčiama pažodžiui ir apsunkina sakinį.	calque	p3	001	Trumpinti iki tiesioginio naudingo veiksmo.
+phrase	orientuojantis į	siekiant / pagal	Dažnas verstinis junginys iš „guided by / targeting“.	calque	p3	001	Rinktis konkretesnį santykį.
+phrase	komanda gali svarstyti	galima / verta svarstyti	Verstinė konstrukcija iš „the team should consider“.	calque	p3	001	Dažnai pakanka be žodžio „komanda“.
+phrase	turi gerai išmanyti	turi mokėti naudotis / turi gerai žinoti	Dažnai per daug tiesioginis vertimas iš „should be familiar with“.	calque	p3	001	Tikslinti pagal objektą.
+phrase	atlikti įvertinimą	įvertinti	Perteklinė nominalizacija; lietuviškai dažniausiai sklandžiau vartoti veiksmažodį.	nominalization	p2	001	Aukšto ROI taisyklė.
+phrase	vykdyti stebėjimą	stebėti	Perteklinė administracinė konstrukcija.	nominalization	p2	001	Aukšto ROI taisyklė.
+phrase	atlikti korekciją	koreguoti	Perteklinė nominalizacija; medicininiame tekste paprastai pakanka veiksmažodžio.	nominalization	p2	001	Aukšto ROI taisyklė.
+phrase	yra svarbus veiksnys	yra svarbu / lemia	Dažnas pažodinis vertimo karkasas iš „is an important factor“.	calque	p3	001	Reikia trumpinti iki realaus ryšio.
+phrase	galvokite apie	įtarkite / apsvarstykite	Pažodinis „think about“ vertinys klinikiniuose sprendimuose skamba per silpnai.	calque	p2	002	Jei kalbama apie diagnostinę tikimybę, dažniausiai reikia „įtarkite“.
+phrase	orientuokite pagal	gydykite pagal / veikite pagal	Vertimo karkasas iš „manage according to / orient by“.	calque	p2	002	Naudoti tiesioginį veiksmą.
+phrase	tolesni veiksmai priklauso nuo vyraujančios	toliau veikite pagal vyraujančią	Per ilga ir verstinė vardinė konstrukcija.	syntax	p2	002	Trumpinti iki aiškios veiksmų krypties.
+phrase	yra ūminis kraujotakos nepakankamumas	reiškia ūminį kraujotakos nepakankamumą	„Yra“ konstrukcija šiame apibrėžime skamba standžiai.	syntax	p3	002	Tinka apibrėžimų glodinimui.
+regex	\bSprendimas dėl [^.]+ turi būti\b	perrašyk aktyvia konstrukcija	Biurokratinė pasyvi konstrukcija, dažnai skambanti kaip vertimas.	bureaucratic_passive	p2	001	Ypač svarbu teisiniuose ir klinikiniuose sprendimų blokuose.
+regex	\b[Aa]rtimiesiems turi būti suteikta\b	artimuosius reikia informuoti / sudaryti galimybę	Pasyvus verstinis sakinys.	bureaucratic_passive	p2	001	Dažniausiai tinka aiškus aktyvus veiksmažodis.
+regex	\bPrieš kiekvieną [^.]+ turi būti atlikta\b	perrašyk aktyviu veiksmažodžiu	Pasyvi procedūrinė konstrukcija, kurią lietuviškai geriau keisti tiesioginiu nurodymu.	bureaucratic_passive	p2	001	Naudinga algoritmų ir gydymo veiksmų tekstui.
+regex	\b[Pp]askyrus pirm[ąa] [^.]+ nepriklausomai nuo to, ar\b	jei sakinys per sunkus, skaidyk į du sakinius	Perkrautas loginiu požiūriu sakinys.	syntax	p3	001	Taisyklė skirta ilgiems gydymo algoritmų sakiniams.

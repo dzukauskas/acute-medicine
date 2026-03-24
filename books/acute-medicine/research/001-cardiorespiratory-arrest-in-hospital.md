@@ -104,6 +104,13 @@
 - Lietuvoje trumpinių `AED` ir `AID` vartojimas šaltiniuose nėra visiškai vienodas; tekste saugiau teikti pirmenybę pilnam termino pavadinimui.
 - 1.1 paveikslui aktyvus kanoninis šaltinis dabar yra `Whimsical` lenta; jei reikės failinio atsarginio šaltinio, bus naudojamas `Excalidraw`, bet ne abu vienu metu.
 
+## Chapter pack ir review kilpa
+
+- Sugeneruotas `chapter_packs/001-cardiorespiratory-arrest-in-hospital.yaml`.
+- Seed formuluotės perkeltos į `gold_phrases.tsv` ir `localization_overrides.tsv`.
+- Rankinio review pėdsakai suvesti į `review_deltas/001-cardiorespiratory-arrest-in-hospital.tsv`.
+- Du trumpi regresijos pavyzdžiai palikti `regression_examples/001-cardiorespiratory-arrest-in-hospital.jsonl`.
+
 ## Baigiamoji kontrolė
 
 - [x] Perskaitytas visas PDF puslapių intervalas
@@ -117,5 +124,9 @@
 - [x] Lentelės išverstos
 - [x] Paveikslai / schemos atkurti lietuviškai
 - [x] Numeracija atitinka knygą
+- [x] Sugeneruotas `chapter_pack`
 - [x] Paleistas `terminology_guard`
 - [x] Paleistas `prose_guard`
+- [x] Paleistas `lt_style_guard`
+- [x] Paleistas `completeness_guard`
+- [x] Jei buvo rankinių pataisų, užpildytas `review_delta`

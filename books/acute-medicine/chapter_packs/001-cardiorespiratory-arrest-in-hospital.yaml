@@ -1,0 +1,488 @@
+chapter_slug: 001-cardiorespiratory-arrest-in-hospital
+chapter_title: Cardiorespiratory Arrest In Hospital
+page_range: 22-27
+source_md: books/acute-medicine/source/chapters-en/001-cardiorespiratory-arrest-in-hospital.md
+lt_target_md: books/acute-medicine/lt/chapters/001-cardiorespiratory-arrest-in-hospital.md
+blocks:
+- block_id: narrative-01-background
+  block_type: narrative
+  heading: Background
+  source_anchor: Background
+  risk_flags: []
+  draft_mode: narrative-prose
+- block_id: narrative-02-initial-management
+  block_type: narrative
+  heading: Initial management
+  source_anchor: Initial management
+  risk_flags:
+  - algorithmic_narrative
+  draft_mode: narrative-prose
+- block_id: narrative-03-chest-compressions
+  block_type: narrative
+  heading: Chest compressions
+  source_anchor: Chest compressions
+  risk_flags: []
+  draft_mode: narrative-prose
+- block_id: narrative-04-airway-and-ventilation
+  block_type: narrative
+  heading: Airway and ventilation
+  source_anchor: Airway and ventilation
+  risk_flags: []
+  draft_mode: narrative-prose
+- block_id: narrative-05-management-of-cardiac-arrest-rhythms
+  block_type: narrative
+  heading: Management of cardiac arrest rhythms
+  source_anchor: Management of cardiac arrest rhythms
+  risk_flags:
+  - algorithmic_narrative
+  draft_mode: narrative-prose
+- block_id: narrative-06-ventricular-fibrillation-pulseless-ventricular-tachycardia
+  block_type: narrative
+  heading: Ventricular fibrillation / pulseless ventricular tachycardia
+  source_anchor: Ventricular fibrillation / pulseless ventricular tachycardia
+  risk_flags: []
+  draft_mode: narrative-prose
+- block_id: narrative-07-defibrillators-and-pulse-checks
+  block_type: narrative
+  heading: Defibrillators and pulse checks
+  source_anchor: Defibrillators and pulse checks
+  risk_flags: []
+  draft_mode: narrative-prose
+- block_id: narrative-08-pulseless-electrical-activity-asystole
+  block_type: narrative
+  heading: Pulseless electrical activity / asystole
+  source_anchor: Pulseless electrical activity / asystole
+  risk_flags: []
+  draft_mode: narrative-prose
+- block_id: narrative-09-reversible-causes-of-cardiac-arrest
+  block_type: narrative
+  heading: Reversible causes of cardiac arrest
+  source_anchor: Reversible causes of cardiac arrest
+  risk_flags: []
+  draft_mode: narrative-prose
+- block_id: narrative-10-following-return-of-spontaneous-circulation
+  block_type: narrative
+  heading: Following return of spontaneous circulation
+  source_anchor: Following return of spontaneous circulation
+  risk_flags: []
+  draft_mode: narrative-prose
+- block_id: narrative-11-when-to-stop-resuscitation
+  block_type: narrative
+  heading: When to stop resuscitation
+  source_anchor: When to stop resuscitation
+  risk_flags:
+  - complex_prose
+  draft_mode: narrative-prose
+- block_id: narrative-12-decisions-surrounding-cpr
+  block_type: narrative
+  heading: Decisions surrounding CPR
+  source_anchor: Decisions surrounding CPR
+  risk_flags: []
+  draft_mode: narrative-prose
+- block_id: narrative-13-further-reading
+  block_type: narrative
+  heading: Further reading
+  source_anchor: Further reading
+  risk_flags: []
+  draft_mode: narrative-prose
+- block_id: figure_caption-kol-kas-neu-fiksuota
+  block_type: figure_caption
+  heading: Kol kas neužfiksuota
+  source_anchor: Kol kas neužfiksuota
+  source_label: ''
+  risk_flags:
+  - structured_content
+  draft_mode: local-context-callout
+  completion_hint: ' paveikslas'
+  summary_allowed: false
+- block_id: algorithm-1.1-algorithm-for-adult-advanced-life-support
+  block_type: algorithm
+  heading: Algorithm for adult advanced life support
+  source_anchor: Figure 1.1 Algorithm for adult advanced life support
+  source_label: '1.1'
+  risk_flags:
+  - structured_content
+  draft_mode: algorithm-stepwise
+  completion_hint: 1.1 paveikslas
+  summary_allowed: false
+- block_id: figure_caption-sukurtas-lietuvi-kas-png-books-acute-medicine-lt-figures-001-figure-1-1-advanced-life-support-png
+  block_type: figure_caption
+  heading: 'Sukurtas lietuviškas PNG: books/acute-medicine/lt/figures/001-figure-1-1-advanced-life-support.png'
+  source_anchor: 'Sukurtas lietuviškas PNG: books/acute-medicine/lt/figures/001-figure-1-1-advanced-life-support.png'
+  source_label: ''
+  risk_flags:
+  - structured_content
+  draft_mode: local-context-callout
+  completion_hint: ' paveikslas'
+  summary_allowed: false
+- block_id: figure_caption-kanoninis-altinis-whimsical-lenta-als-1-1-test
+  block_type: figure_caption
+  heading: 'Kanoninis šaltinis: Whimsical lenta ALS 1.1 test'
+  source_anchor: 'Kanoninis šaltinis: Whimsical lenta ALS 1.1 test'
+  source_label: ''
+  risk_flags:
+  - structured_content
+  draft_mode: local-context-callout
+  completion_hint: ' paveikslas'
+  summary_allowed: false
+- block_id: figure_caption-whimsical-url-https-whimsical-com-dzukauskas-als-1-1-test-2c5uagswyfkoqxk1wyng8n
+  block_type: figure_caption
+  heading: 'Whimsical URL: https://whimsical.com/dzukauskas/als-1-1-test-2C5uaGSWyfkoQxK1Wyng8N'
+  source_anchor: 'Whimsical URL: https://whimsical.com/dzukauskas/als-1-1-test-2C5uaGSWyfkoQxK1Wyng8N'
+  source_label: ''
+  risk_flags:
+  - structured_content
+  draft_mode: local-context-callout
+  completion_hint: ' paveikslas'
+  summary_allowed: false
+- block_id: figure_caption-ra-yta-books-acute-medicine-lt-figures-manifest-tsv
+  block_type: figure_caption
+  heading: Įrašyta į books/acute-medicine/lt/figures/manifest.tsv
+  source_anchor: Įrašyta į books/acute-medicine/lt/figures/manifest.tsv
+  source_label: ''
+  risk_flags:
+  - structured_content
+  draft_mode: local-context-callout
+  completion_hint: ' paveikslas'
+  summary_allowed: false
+- block_id: figure_caption-kol-kas-neu-fiksuota
+  block_type: figure_caption
+  heading: Kol kas neužfiksuota
+  source_anchor: Kol kas neužfiksuota
+  source_label: ''
+  risk_flags:
+  - structured_content
+  draft_mode: local-context-callout
+  completion_hint: ' paveikslas'
+  summary_allowed: false
+active_terms:
+- en: cardiorespiratory arrest
+  lt: kardiorespiracinis sustojimas
+  status: preferred
+  banned_lt:
+  - kardialinis areštas
+  - cardiorespiratory arrest
+  first_use_policy: pirmą kartą galima paaiškinti
+  section_scope: '001'
+  local_override_tag: ''
+  example_lt: Kardiorespiracinis sustojimas ligoninėje dažniausiai būna ankstesnio fiziologinio blogėjimo
+    pasekmė.
+- en: in-hospital cardiac arrest
+  lt: širdies sustojimas ligoninėje
+  status: preferred
+  banned_lt:
+  - in-hospital cardiac arrest
+  first_use_policy: pirmą kartą galima paaiškinti
+  section_scope: '001'
+  local_override_tag: ''
+  example_lt: Širdies sustojimą ligoninėje reikia atpažinti ir gydyti nedelsiant.
+- en: cardiopulmonary resuscitation (CPR)
+  lt: kardiopulmoninis gaivinimas (CPR)
+  status: preferred
+  banned_lt:
+  - cardio-pulmoninis gaivinimas
+  first_use_policy: pirmą kartą išskleisti
+  section_scope: all
+  local_override_tag: ''
+  example_lt: Pradėkite kardiopulmoninį gaivinimą (CPR) nedelsdami.
+- en: chest compressions
+  lt: krūtinės ląstos paspaudimai
+  status: approved
+  banned_lt:
+  - širdies masažas
+  first_use_policy: nebūtina išskleisti
+  section_scope: all
+  local_override_tag: ''
+  example_lt: Krūtinės ląstos paspaudimus pradėkite iš karto.
+- en: pulseless electrical activity (PEA)
+  lt: elektrinė veikla be pulso (PEA)
+  status: preferred
+  banned_lt:
+  - elektromechaninė disociacija
+  - PEA be LT formos
+  first_use_policy: pirmą kartą išskleisti
+  section_scope: all
+  local_override_tag: ''
+  example_lt: Elektrinė veikla be pulso (PEA) yra nedefibriliuotinas ritmas.
+- en: ventricular fibrillation
+  lt: skilvelių virpėjimas
+  status: preferred
+  banned_lt:
+  - ventrikulinė fibriliacija
+  first_use_policy: pirmą kartą galima paaiškinti
+  section_scope: '001'
+  local_override_tag: ''
+  example_lt: Skilvelių virpėjimas yra defibriliuotinas ritmas.
+- en: pulseless ventricular tachycardia
+  lt: skilvelinė tachikardija be pulso
+  status: preferred
+  banned_lt:
+  - ventrikulinė tachikardija be pulso
+  first_use_policy: pirmą kartą galima paaiškinti
+  section_scope: '001'
+  local_override_tag: ''
+  example_lt: Skilvelinė tachikardija be pulso taip pat priskiriama defibriliuotiniems ritmams.
+- en: shockable rhythm
+  lt: defibriliuotinas ritmas
+  status: approved
+  banned_lt:
+  - šokuojamas ritmas
+  first_use_policy: nebūtina išskleisti
+  section_scope: '001'
+  local_override_tag: ''
+  example_lt: Jei ritmas defibriliuotinas, atlikite vieną iškrovą.
+- en: non-shockable rhythm
+  lt: nedefibriliuotinas ritmas
+  status: approved
+  banned_lt:
+  - nešokuojamas ritmas
+  first_use_policy: nebūtina išskleisti
+  section_scope: '001'
+  local_override_tag: ''
+  example_lt: Jei ritmas nedefibriliuotinas, nedelsdami tęskite gaivinimą.
+- en: return of spontaneous circulation (ROSC)
+  lt: spontaninės kraujotakos atsikūrimas (ROSC)
+  status: preferred
+  banned_lt:
+  - return of spontaneous circulation
+  first_use_policy: pirmą kartą išskleisti
+  section_scope: '001'
+  local_override_tag: ''
+  example_lt: Po spontaninės kraujotakos atsikūrimo (ROSC) atlikite pilną ABCDE įvertinimą.
+- en: advanced life support
+  lt: specialusis gaivinimas
+  status: preferred
+  banned_lt:
+  - pažangusis gyvybės palaikymas
+  - advanced life support
+  first_use_policy: nebūtina išskleisti
+  section_scope: '001'
+  local_override_tag: lt_als
+  example_lt: Suaugusiojo specialusis gaivinimas turi būti atliekamas pagal aiškų algoritmą.
+active_acronyms:
+- acronym: CPR
+  lt: kardiopulmoninis gaivinimas
+  en: cardiopulmonary resuscitation
+  policy: pirmą kartą išskleisti
+  notes: Po pirmos pilnos formos galima vartoti CPR.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: Gaivinimo algoritmo ir klinikinio valdymo kontekstas.
+  section_scope: '001'
+- acronym: PEA
+  lt: elektrinė veikla be pulso
+  en: pulseless electrical activity
+  policy: pirmą kartą išskleisti
+  notes: Lietuviškame tekste prioritetas pilnai LT formai su PEA skliaustuose.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'yes'
+  ambiguous_context: Gali būti paliekamas be LT formos, jei mechaniškai kopijuojamas iš EN.
+  preferred_lt_context: Nedefibriliuotino ritmo kontekstas.
+  section_scope: '001'
+- acronym: ROSC
+  lt: spontaninės kraujotakos atsikūrimas
+  en: return of spontaneous circulation
+  policy: pirmą kartą išskleisti
+  notes: Po pirmos pilnos formos galima vartoti ROSC.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: Pogaiviniminės priežiūros kontekstas.
+  section_scope: '001'
+- acronym: VF
+  lt: skilvelių virpėjimas
+  en: ventricular fibrillation
+  policy: vengti be būtinybės
+  notes: Jei nėra vietos stokos, geriau pilna LT forma.
+  must_expand_first: 'no'
+  allowed_in_headings: 'yes'
+  ambiguous_context: Gali būti supainiotas su VT, jei ritmai pateikiami sutrumpintai.
+  preferred_lt_context: Defibriliuotinų ritmų kontekstas.
+  section_scope: '001'
+- acronym: VT
+  lt: skilvelinė tachikardija
+  en: ventricular tachycardia
+  policy: vengti be būtinybės
+  notes: Jei reikia tikslumo, išskleisti pilną LT formą.
+  must_expand_first: 'no'
+  allowed_in_headings: 'yes'
+  ambiguous_context: Gali būti supainiotas su VF ar pVT.
+  preferred_lt_context: Aritmijų ir defibriliuotino ritmo kontekstas.
+  section_scope: '001'
+- acronym: SpO2
+  lt: deguonies įsotinimas
+  en: pulse oximetry saturation
+  policy: pirmą kartą paaiškinti
+  notes: Trumpinys gali likti po pirmo aiškaus konteksto.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'yes'
+  ambiguous_context: Gali būti vartojamas be paaiškinimo, jei pastraipa labai tanki.
+  preferred_lt_context: Deguonies saturacijos kontekstas.
+  section_scope: '001'
+- acronym: ABCDE
+  lt: ABCDE įvertinimas
+  en: airway breathing circulation disability exposure
+  policy: galima vartoti
+  notes: Jei auditorijai gali būti neaišku, vieną kartą paaiškinti, ką reiškia santrumpa.
+  must_expand_first: 'no'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: Struktūruoto paciento vertinimo kontekstas.
+  section_scope: '001'
+- acronym: ERC
+  lt: Europos gaivinimo taryba
+  en: European Resuscitation Council
+  policy: galima vartoti
+  notes: Pirmą kartą galima išskleisti bibliografiniame ar gairių kontekste.
+  must_expand_first: 'no'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: Gairių ir bibliografijos kontekstas.
+  section_scope: '001'
+- acronym: SAM
+  lt: Sveikatos apsaugos ministerija
+  en: Ministry of Health
+  policy: galima vartoti
+  notes: Lietuvos teisės aktų ir metodikų kontekstas.
+  must_expand_first: 'no'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: Teisės aktų ir metodikų kontekstas.
+  section_scope: '001'
+localization_overrides:
+- source_term: '2222'
+  local_lt: Naudokite savo įstaigos vidaus kritinės pagalbos arba gaivinimo komandos iškvietimo tvarką.
+  scope: '001'
+  reason: JK vidaus telefono numeris negali būti pateiktas kaip universalus Lietuvos standartas.
+  source_ref: books/acute-medicine/research/001-cardiorespiratory-arrest-in-hospital.md
+  notes: Santaros klinikose 2222 taikomas, bet tai nėra nacionalinis standartas visoms įstaigoms.
+- source_term: ReSPECT
+  local_lt: vadovautis Lietuvos teisės aktais, įstaigos vidaus tvarka ir dokumentuotu konsiliumo sprendimu
+  scope: '001'
+  reason: JK `ReSPECT` forma neturi tiesioginio Lietuvos atitikmens.
+  source_ref: books/acute-medicine/research/001-cardiorespiratory-arrest-in-hospital.md
+  notes: Pagrindiniame tekste neperkelti kaip naudojamos formos.
+- source_term: DNACPR
+  local_lt: vadovautis paciento nesutikimu būti gaivinamam ir beviltiško gaivinimo reglamentavimu
+  scope: '001'
+  reason: JK `DNACPR` negali būti pateiktas kaip Lietuvos procedūra.
+  source_ref: books/acute-medicine/research/001-cardiorespiratory-arrest-in-hospital.md
+  notes: Palikti tik originalo kontekstui ar lyginamajai pastabai.
+- source_term: advanced life support
+  local_lt: specialusis gaivinimas
+  scope: '001'
+  reason: Lietuvos gaivinimo vartosenoje ši forma natūralesnė už pažodinį vertinį.
+  source_ref: books/acute-medicine/research/001-cardiorespiratory-arrest-in-hospital.md
+  notes: Naudoti ir tekstuose, ir figūrose.
+style_hotspots:
+- category: language_risk
+  text: Tiesioginiai ALS tipo terminų vertiniai, ypač advanced life support, linkę skambėti kaip kalkės,
+    jei neperrašomi pagal Lietuvos gaivinimo vartoseną.
+- category: language_risk
+  text: Pasyvios konstrukcijos su sprendimas dėl ... turi būti ... lengvai persikelia iš originalo ir
+    reikalauja atskiro perrašymo.
+- category: language_risk
+  text: Originalo ritmų, adrenalino ir po ROSC sakiniai turi daug sąlyginių išlygų, todėl lietuviškai
+    juos reikia skaidyti į trumpesnius sakinius.
+- category: language_risk
+  text: Gaivinimo algoritmo veiksmų aprašas turi būti aktyvus ir komandiškas, o ne vardinis ar biurokratinis.
+- category: anti_calque
+  text: advanced life support suvienodintas į specialusis gaivinimas, ne paliekant tiesioginį pažodinį
+    vertinį.
+- category: anti_calque
+  text: Pakeistos pasyvios biurokratinės formos, pvz. sprendimas dėl ... turi būti priimamas, į aktyvesnes
+    lietuviškas konstrukcijas.
+- category: anti_calque
+  text: Pašalintos angliško karkaso frazės, pvz. prioritetas yra, eskaluoti pagalbą, naudingas kaip bendras
+    kontekstas.
+- category: anti_calque
+  text: Ilgi, logiškai apkrauti sakiniai apie adrenaliną, po ROSC priežiūrą ir CPR ribas suskaidyti į
+    trumpesnes, natūralesnes lietuviškas formuluotes.
+- category: localization_decision
+  text: Skyrius bus rašomas nuo nulio remiantis PDF, ne ankstesniu ištrauktu markdown failu.
+- category: localization_decision
+  text: JK vidaus instrukcijos, pvz. 2222, negali likti kaip universalus Lietuvos standartas.
+- category: localization_decision
+  text: Vienetai ir klinikinė rašysena turi būti Lietuvos / ES / SI formatu.
+- category: localization_decision
+  text: Pagrindiniame tekste prioritetas teikiamas Lietuvos teisinei ir klinikinei logikai, o RCUK / NCAA
+    / ReSPECT paliekami tik kaip originalo kontekstas.
+- category: localization_decision
+  text: Ten, kur Lietuvos šaltiniuose trumpinių vartojimas nevienodas, pagrindiniame tekste bus teikiama
+    pirmenybė pilnam lietuviškam terminui, o ne trumpiniui.
+- category: localization_decision
+  text: Po ROSC dalis bus sulyginta ne tik su knygos 2021 logika, bet ir su ERC 2025 post-resuscitation
+    care nuostatomis.
+- category: local_practice_change
+  text: Vidinis kritinės pagalbos iškvietimas bus rašomas kaip vietinės ligoninės reagavimo sistemos veiksmas,
+    ne kaip universali nuoroda skambinti 2222.
+- category: local_practice_change
+  text: ReSPECT / DNACPR dalis bus perrašyta pagal Lietuvos paciento nesutikimo, kad būtų gaivinamas ir
+    beviltiško gaivinimo reglamentavimą.
+- category: local_practice_change
+  text: Po ROSC temperatūros ir hemodinamikos dalis bus tikslinama pagal ERC/ESICM 2025.
+- category: local_practice_change
+  text: Automatinio išorinio defibriliatoriaus trumpinio nevienodumo Lietuvoje problema sprendžiama pagrindiniame
+    tekste vartojant pilną termino formą, o ne vieną ginčytiną trumpinį.
+gold_examples:
+- category: calque
+  bad_en_shaped_lt: pradinis valdymas
+  preferred_lt: pradiniai veiksmai
+  notes: Antraštėse ir santraukose rinktis konkretesnę LT formą.
+  source_chapter: '001'
+- category: calque
+  bad_en_shaped_lt: sprendimas dėl gaivinimo turi būti priimamas
+  preferred_lt: šį klausimą reikia aptarti iš anksto
+  notes: Teisiniuose ir klinikiniuose sakiniuose vengti pasyvaus administracinio karkaso.
+  source_chapter: '001'
+- category: calque
+  bad_en_shaped_lt: eskaluoti pagalbą
+  preferred_lt: kviesti papildomą pagalbą
+  notes: Konkretus veiksmas aiškesnis už vadybinę kalkę.
+  source_chapter: '001'
+- category: collocation
+  bad_en_shaped_lt: kompresijų kokybė
+  preferred_lt: kokybiški krūtinės ląstos paspaudimai
+  notes: Jei įmanoma, konkretinti abstraktų terminą.
+  source_chapter: '001'
+- category: collocation
+  bad_en_shaped_lt: pažangūs kvėpavimo takai
+  preferred_lt: supraglotinis prietaisas arba endotrachėjinis vamzdelis
+  notes: Jei reikia, įvardyti realią priemonę, ne abstrakciją.
+  source_chapter: '001'
+- category: syntax
+  bad_en_shaped_lt: prioritetas yra kuo greitesnis defibriliatoriaus prijungimas
+  preferred_lt: kuo greičiau prijunkite defibriliatorių
+  notes: Verstinį prioritetų karkasą keisti tiesioginiu nurodymu.
+  source_chapter: '001'
+- category: calque
+  bad_en_shaped_lt: galvokite apie sepsį
+  preferred_lt: įtarkite sepsį
+  notes: Klinikinėje lietuvių kalboje „įtarkite“ skamba natūraliau.
+  source_chapter: '002'
+- category: calque
+  bad_en_shaped_lt: tolesni veiksmai priklauso nuo vyraujančios problemos
+  preferred_lt: toliau veikite pagal vyraujančią problemą
+  notes: Trumpesnė ir aktyvesnė formuluotė.
+  source_chapter: '002'
+- category: nominalization
+  bad_en_shaped_lt: pirminio gydymo tikslas yra
+  preferred_lt: pirminio gydymo tikslas –
+  notes: Apibrėžimuose ir principų blokuose vengti perteklinio „yra“.
+  source_chapter: '002'
+- category: calque
+  bad_en_shaped_lt: reikia svarstyti endotrachėjinę intubaciją
+  preferred_lt: apsvarstykite endotrachėjinę intubaciją
+  notes: Veiksmų sekoje rinktis tiesioginę aktyvią formą.
+  source_chapter: '002'
+- category: collocation
+  bad_en_shaped_lt: normalus spaudimas nereiškia pakankamo organų aprūpinimo krauju
+  preferred_lt: normalus spaudimas dar negarantuoja pakankamos organų perfuzijos
+  notes: Hemodinaminėje prozoje išlaikyti LT medicininę kolokaciją.
+  source_chapter: '002'
+- category: syntax
+  bad_en_shaped_lt: kardiogeninis šokas yra viena dažniausių ... ir pasižymi
+  preferred_lt: kardiogeninis šokas dažnai ... ir jį lydi
+  notes: Apibrėžimus trumpinti iki natūralaus LT ritmo.
+  source_chapter: '002'

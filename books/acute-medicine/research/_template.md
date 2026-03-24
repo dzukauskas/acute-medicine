@@ -59,6 +59,10 @@
 
 - 
 
+## Chapter pack ir review kilpa
+
+- 
+
 ## Baigiamoji kontrolė
 
 - [ ] Perskaitytas visas PDF puslapių intervalas
@@ -67,6 +71,7 @@
 - [ ] Užfiksuoti visi paveikslai ir schemos
 - [ ] Patikrinti Lietuvos šaltiniai ir jų datos
 - [ ] Jei reikėjo, patikrintos Europos / tarptautinės gairės
+- [ ] Sugeneruotas `chapter_pack`
 - [ ] Lietuviškas skyrius parašytas nuo švaraus lapo
 - [ ] Padarytas atskiras anti-calque perrašymas
 - [ ] Lentelės išverstos
@@ -74,3 +79,6 @@
 - [ ] Numeracija atitinka knygą
 - [ ] Paleistas `terminology_guard`
 - [ ] Paleistas `prose_guard`
+- [ ] Paleistas `lt_style_guard`
+- [ ] Paleistas `completeness_guard`
+- [ ] Jei buvo rankinių pataisų, užpildytas `review_delta`
