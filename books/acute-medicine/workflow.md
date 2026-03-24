@@ -72,6 +72,13 @@ Kiekvienam paveikslui ar algoritmui:
 7. po bet kokio redagavimo `Whimsical` ar `Excalidraw` šaltinyje `png` turi būti atnaujintas;
 8. po paveikslu paliekama trumpa lietuviška santrauka.
 
+Kai kanoninis šaltinis yra `Whimsical` lenta, numatytasis eksporto kelias yra:
+
+1. autentifikuotas `.../svg` eksportas;
+2. `svg -> png` rasterizavimas per `Chromium`, kad teksto plotis ir šriftai liktų kuo arčiau `Whimsical`;
+3. jei reikia, `Inkscape` naudojamas tik kaip atsarginis fallback;
+4. tik jei šie keliai neveikia, leidžiamas browser screenshot fallback.
+
 Paveikslai turi būti kuo arčiau knygos 1:1, išskyrus vietas, kur reikia koreguoti pagal naujesnę Lietuvos medicinos informaciją.
 
 ## Skyriaus failai
@@ -91,6 +98,7 @@ Kai tai duoda realią naudą, naudok:
 
 - `pdf_reader` PDF puslapių, lentelių ir vaizdų tikrinimui;
 - `whimsical-desktop` MCP schemų, algoritmų ir išdėstymo kūrimui;
+- [Whimsical official export docs](https://help.whimsical.com/imports-exports/exporting-from-whimsical) kai reikia patikslinti oficialų `svg/png/pdf` eksporto kelią;
 - [$excalidraw-diagram](/Users/dzukauskas/.codex/skills/excalidraw-diagram-skill/SKILL.md) kai reikia failinio šaltinio ar `Whimsical` nėra tinkamas;
 - interneto paiešką naujausių šaltinių patikrai;
 - `scripts/terminology_guard.py` terminų ir draudžiamų frazių kontrolei;

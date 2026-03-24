@@ -12,7 +12,8 @@ mkdir -p "$DEST_SKILLS_DIR"
 for skill_dir in "$SRC_SKILLS_DIR"/*; do
   [[ -d "$skill_dir" ]] || continue
   skill_name="$(basename "$skill_dir")"
+  rm -rf "$DEST_SKILLS_DIR/$skill_name"
   mkdir -p "$DEST_SKILLS_DIR/$skill_name"
-  cp "$skill_dir/SKILL.md" "$DEST_SKILLS_DIR/$skill_name/SKILL.md"
+  rsync -a --exclude '.DS_Store' "$skill_dir/" "$DEST_SKILLS_DIR/$skill_name/"
   echo "Installed skill: $skill_name"
 done

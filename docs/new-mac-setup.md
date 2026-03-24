@@ -90,8 +90,14 @@ Tada:
 
 1. Atidaryk `Whimsical.app`
 2. Prisijunk prie savo `Whimsical` paskyros
-3. Atidaryk `Obsidian`
-4. Patikrink, ar vault kataloge atsirado:
+3. Vieną kartą išsaugok `Whimsical` browser sesiją render skriptui:
+
+```bash
+.venv/bin/python scripts/render_whimsical_figure.py --login
+```
+
+4. Atidaryk `Obsidian`
+5. Patikrink, ar vault kataloge atsirado:
    - `Acute Medicine/chapters/`
    - `Acute Medicine/figures/`
 
@@ -100,10 +106,12 @@ Tada:
 Repo viduje laikomas projektinis skillas:
 
 - `codex/skills/medical-book-localization/SKILL.md`
+- `codex/skills/whimsical-diagram-export/SKILL.md`
 
 Jis įrašomas į:
 
 - `~/.codex/skills/medical-book-localization/SKILL.md`
+- `~/.codex/skills/whimsical-diagram-export/SKILL.md`
 
 Todėl bent šita svarbi workflow logika nebepriklauso tik nuo seno Mac.
 
@@ -134,11 +142,15 @@ Jis konfigūruoja:
 
 Šiam repo šiuo metu būtina bent:
 
+- `Pillow`
+- `playwright`
 - `PyMuPDF`
 
 Ji įrašyta į:
 
 - `requirements.txt`
+
+Po `requirements.txt` įdiegimo bootstrap skriptas papildomai įrašo ir `Chromium`, nes jis reikalingas `Whimsical` render skriptui.
 
 ## Ko nerekomenduojama kopijuoti iš seno Mac
 

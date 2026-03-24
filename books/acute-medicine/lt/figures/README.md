@@ -8,6 +8,7 @@ Numatytoji taisyklė:
 
 - redaguojamas šaltinis: `Whimsical` lenta
 - naudojamas paveikslas: `*.png`
+- atnaujinimas: oficialus `Whimsical` `.../svg` eksportas per `scripts/render_whimsical_figure.py`, kuris SVG rasterizuoja per `Chromium`, ne per rankinį screenshotą
 
 Išimtis:
 
@@ -24,5 +25,7 @@ Dabartinė aktyvi 1.1 paveikslo būsena:
 - kanoninis šaltinis: `Whimsical` lenta `ALS 1.1 test`
 
 Po kiekvieno redagavimo `Whimsical` ar `Excalidraw` šaltinyje `png` turi būti atnaujinamas.
+
+Jei `Whimsical` PNG eksportas atrodo neryškus, prioritetas teikiamas jų oficialiai rekomenduojamam `.../svg` keliui, o tada `svg` konvertuojamas į `png`.
 
 Ankstesnio workflow figūrų failai pašalinti ir nebėra aktyvus šaltinis.

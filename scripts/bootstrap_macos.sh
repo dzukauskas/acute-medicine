@@ -25,6 +25,7 @@ fi
 python3 -m venv "$REPO_ROOT/.venv"
 "$REPO_ROOT/.venv/bin/pip" install --upgrade pip
 "$REPO_ROOT/.venv/bin/pip" install -r "$REPO_ROOT/requirements.txt"
+"$REPO_ROOT/.venv/bin/python" -m playwright install chromium
 
 "$REPO_ROOT/scripts/install_repo_skills.sh"
 "$REPO_ROOT/scripts/setup_codex_mcp.sh"
@@ -43,3 +44,4 @@ echo "Next manual steps:"
 echo "  1. Run: codex login"
 echo "  2. Run: gh auth login"
 echo "  3. Open Whimsical desktop and sign in."
+echo "  4. Run: .venv/bin/python scripts/render_whimsical_figure.py --login"
