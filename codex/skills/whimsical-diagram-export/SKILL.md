@@ -41,6 +41,17 @@ Use this skill when a figure's canonical source is a `Whimsical` board and the r
 - Do not add a second editable source next to the Whimsical board.
 - Keep the board URL and the target PNG path in `books/acute-medicine/lt/figures/manifest.tsv`.
 - After rendering, sync to Obsidian if the user wants live vault updates.
+- Do not leave long Lithuanian headings sitting right on the note edge in Whimsical. If a title only barely fits, widen the block before export.
+- If the exported PNG shows text touching a block edge, clipped text, or visibly smaller padding than in Whimsical, fix the board layout first and then re-render.
+
+## Export QA
+
+Before considering a figure done, visually check the rendered PNG:
+
+1. Long titles still show visible inner padding on both sides.
+2. No text line is clipped or pushed flush against a colored block edge.
+3. The exported PNG matches the Whimsical board, especially in dense 2×2 note grids.
+4. If Lithuanian text expands more than expected, widen the block instead of relying on renderer hacks.
 
 ## Current project paths
 

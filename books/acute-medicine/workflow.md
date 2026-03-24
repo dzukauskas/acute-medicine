@@ -72,12 +72,32 @@ Kiekvienam paveikslui ar algoritmui:
 7. po bet kokio redagavimo `Whimsical` ar `Excalidraw` šaltinyje `png` turi būti atnaujintas;
 8. po paveikslu paliekama trumpa lietuviška santrauka.
 
+Projektuojant tekstinius blokus `Whimsical` lentoje galioja atsargos taisyklė:
+
+- ilgesnės lietuviškos antraštės negali būti paliekamos „ant ribos“;
+- jei antraštė ar bullet eilutė `Whimsical` lentoje vos telpa, bloką reikia platinti dar prieš eksportą;
+- ilgesniems 2×2 informaciniams blokams paliekama aiški dešinė ir kairė vidinė paraštė, ne minimalus tarpas iki krašto.
+
 Kai kanoninis šaltinis yra `Whimsical` lenta, numatytasis eksporto kelias yra:
 
 1. autentifikuotas `.../svg` eksportas;
 2. `svg -> png` rasterizavimas per `Chromium`, kad teksto plotis ir šriftai liktų kuo arčiau `Whimsical`;
 3. jei reikia, `Inkscape` naudojamas tik kaip atsarginis fallback;
 4. tik jei šie keliai neveikia, leidžiamas browser screenshot fallback.
+
+Po kiekvieno `Whimsical` eksporto privalomas vizualus `Export QA`:
+
+1. ar kuris nors tekstas nesiremia į bloko kraštą;
+2. ar po ilgos antraštės dar aiškiai matosi foninė paraštė iš abiejų pusių;
+3. ar nė viena eilutė nėra nukirsta, suspausta ar optiškai „prilipusi“ prie krašto;
+4. ar eksportuotas `png` vizualiai sutampa su `Whimsical` lenta, ypač 2×2 apatinių blokų srityje.
+
+Jei `Export QA` randa problemą, pirmiausia taisoma pati `Whimsical` lenta:
+
+- platinamas blokas;
+- trumpinama antraštė;
+- pergrupuojamas tekstas;
+- tik po to renderinama iš naujo.
 
 Paveikslai turi būti kuo arčiau knygos 1:1, išskyrus vietas, kur reikia koreguoti pagal naujesnę Lietuvos medicinos informaciją.
 

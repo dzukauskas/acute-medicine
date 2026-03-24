@@ -3,14 +3,17 @@
 from __future__ import annotations
 
 import argparse
-import base64
 import csv
 import re
 import subprocess
 import tempfile
+import threading
 import xml.etree.ElementTree as ET
+from functools import partial
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
+from PIL import Image
 from playwright.sync_api import sync_playwright
 
 
@@ -164,48 +167,44 @@ def prepare_svg(svg_text: str, target_width: int) -> tuple[str, int, int]:
 
 def render_svg_to_png_browser(svg_text: str, png_path: Path, width: int, padding: int) -> None:
     prepared_svg, render_width, render_height = prepare_svg(svg_text, width)
-    svg_data_url = "data:image/svg+xml;base64," + base64.b64encode(
-        prepared_svg.encode("utf-8")
-    ).decode("ascii")
-    html = f"""<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <style>
-      html, body {{
-        margin: 0;
-        padding: 0;
-        background: white;
-      }}
-      #frame {{
-        display: inline-block;
-        padding: {padding}px;
-        background: white;
-      }}
-      img {{
-        display: block;
-        width: {render_width}px;
-        height: {render_height}px;
-      }}
-    </style>
-  </head>
-  <body>
-    <div id="frame"><img id="diagram" src="{svg_data_url}" alt=""></div>
-  </body>
-</html>
-"""
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
-        context = browser.new_context(
-            viewport={"width": render_width + padding * 2, "height": min(1200, render_height + padding * 2)},
-            device_scale_factor=1,
-        )
-        page = context.new_page()
-        page.set_content(html, wait_until="load")
-        page.locator("#diagram").wait_for()
-        page.wait_for_timeout(1000)
-        page.locator("#frame").screenshot(path=str(png_path))
-        browser.close()
+    with tempfile.TemporaryDirectory(prefix="whimsical-browser-render-") as tmpdir:
+        root = Path(tmpdir)
+        (root / "figure.svg").write_text(prepared_svg, encoding="utf-8")
+
+        class QuietHandler(SimpleHTTPRequestHandler):
+            def log_message(self, format: str, *args) -> None:
+                return
+
+        handler = partial(QuietHandler, directory=str(root))
+        server = ThreadingHTTPServer(("127.0.0.1", 0), handler)
+        port = server.server_address[1]
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        try:
+            with sync_playwright() as pw:
+                browser = pw.chromium.launch(headless=True)
+                page = browser.new_page(
+                    viewport={
+                        "width": render_width,
+                        "height": min(1600, render_height),
+                    }
+                )
+                page.goto(f"http://127.0.0.1:{port}/figure.svg", wait_until="load", timeout=60000)
+                page.wait_for_timeout(2000)
+                page.locator("svg").screenshot(path=str(png_path))
+                browser.close()
+        finally:
+            server.shutdown()
+            thread.join(timeout=1)
+    if padding > 0:
+        add_padding_to_png(png_path, padding)
+
+
+def add_padding_to_png(png_path: Path, padding: int) -> None:
+    with Image.open(png_path) as source:
+        canvas = Image.new("RGBA", (source.width + padding * 2, source.height + padding * 2), "white")
+        canvas.paste(source, (padding, padding))
+        canvas.save(png_path)
 
 
 def convert_svg_to_png(svg_path: Path, png_path: Path, width: int) -> None:

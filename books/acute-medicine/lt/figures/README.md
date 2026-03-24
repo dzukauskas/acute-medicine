@@ -28,4 +28,12 @@ Po kiekvieno redagavimo `Whimsical` ar `Excalidraw` šaltinyje `png` turi būti 
 
 Jei `Whimsical` PNG eksportas atrodo neryškus, prioritetas teikiamas jų oficialiai rekomenduojamam `.../svg` keliui, o tada `svg` konvertuojamas į `png`.
 
+Prieš laikant paveikslą baigtu, reikia greito vizualaus QA:
+
+- ar tekstas nesiremia į spalvoto bloko kraštą;
+- ar po ilgesnės antraštės dar lieka aiški vidinė paraštė;
+- ar eksportas vizualiai sutampa su pačia `Whimsical` lenta.
+
+Jei randamas toks neatitikimas, pirmiausia plečiamas ar pergrupuojamas pats blokas `Whimsical` lentoje, o ne bandoma „gelbėti“ vien renderiu.
+
 Ankstesnio workflow figūrų failai pašalinti ir nebėra aktyvus šaltinis.
