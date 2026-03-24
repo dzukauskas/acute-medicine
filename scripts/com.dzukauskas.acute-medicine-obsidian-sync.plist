@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "https://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.dzukauskas.acute-medicine-obsidian-sync</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/dzukauskas/Projects/Acute Medicine/scripts/sync_obsidian_acute_medicine.sh</string>
+    <string>/Users/dzukauskas/Library/Mobile Documents/iCloud~md~obsidian/Documents/PARAMEDIKAS/Acute Medicine</string>
+  </array>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>WatchPaths</key>
+  <array>
+    <string>/Users/dzukauskas/Projects/Acute Medicine/books/acute-medicine/lt/chapters</string>
+    <string>/Users/dzukauskas/Projects/Acute Medicine/books/acute-medicine/lt/figures</string>
+  </array>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/acute-medicine-obsidian-sync.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/tmp/acute-medicine-obsidian-sync.log</string>
+</dict>
+</plist>
