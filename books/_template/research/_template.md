@@ -39,6 +39,12 @@
 | --- | --- | --- | --- |
 |  |  |  |  |
 
+## LT-source branduolio taikymas
+
+| Sritis | Pagrindinis LT-source kelias | Konkretus LT šaltinis | ES fallback | Pastaba |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
 ## Jurisdikcijos ir rinkos signalai
 
 | Signalas | Jurisdikcija | Tipas | Šaltinio vieta | Pastaba |
@@ -122,7 +128,8 @@ Leistini `Autoritetas` variantai:
 - [ ] Užfiksuoti visi paveikslai ir schemos
 - [ ] Patikrinti Lietuvos šaltiniai ir jų datos
 - [ ] Jei reikėjo, patikrintos Europos / tarptautinės gairės
-- [ ] Užfiksuoti visi UK / Australia / rinkos signalai
+- [ ] Užpildyta `LT-source branduolio taikymas` lentelė pagal `lt_source_map.tsv`
+- [ ] Užfiksuoti visi UK / Australia / US / rinkos signalai
 - [ ] Kiekvienam signalui paliktas LT/EU pakeitimo sprendimas
 - [ ] Vaistų ir dozių LT/EU šaltinių bazė užpildyta
 - [ ] Sugeneruotas `chapter_pack`

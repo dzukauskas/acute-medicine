@@ -13,6 +13,7 @@ from book_workflow_support import (
     extract_localization_research,
     find_section_lines,
     load_localization_overrides,
+    markdown_table_rows,
     parse_markdown_sections,
     resolve_chapter_slug,
     scope_allows,
@@ -21,6 +22,7 @@ from book_workflow_support import (
 
 
 MANDATORY_LOCALIZATION_SECTIONS = (
+    "LT-source branduolio taikymas",
     "Jurisdikcijos ir rinkos signalai",
     "LT/EU pakeitimo sprendimai",
     "Vaistų ir dozių LT/EU šaltinių bazė",
@@ -45,12 +47,21 @@ def matching_rows(rows: list[dict[str, str]], source_term: str) -> list[dict[str
     return [row for row in rows if term_matches(row.get("source_term", ""), source_term)]
 
 
+def row_value(row: dict[str, str], *keys: str) -> str:
+    for key in keys:
+        value = row.get(key, "").strip()
+        if value:
+            return value
+    return ""
+
+
 def validate_localization_readiness(slug: str) -> list[str]:
     paths = chapter_paths_for_slug(slug)
     source_text = paths["source"].read_text(encoding="utf-8")
     research_text = paths["research"].read_text(encoding="utf-8")
     sections = parse_markdown_sections(research_text)
     research = extract_localization_research(sections)
+    lt_source_rows = markdown_table_rows(find_section_lines(sections, "LT-source branduolio taikymas"))
     chapter_number = chapter_number_from_slug(slug)
     overrides = [
         row
@@ -62,6 +73,40 @@ def validate_localization_readiness(slug: str) -> list[str]:
     for title in MANDATORY_LOCALIZATION_SECTIONS:
         if not has_section(sections, title):
             errors.append(f"{paths['research']}: trūksta privalomos sekcijos `## {title}`.")
+
+    populated_lt_source_rows = [
+        row
+        for row in lt_source_rows
+        if row_value(
+            row,
+            "sritis",
+            "tema",
+            "pagrindinis_lt-source_kelias",
+            "konkretus_lt_saltinis",
+            "konkretus_lt_šaltinis",
+        )
+    ]
+    if not populated_lt_source_rows:
+        errors.append(
+            f"{paths['research']}: privaloma užpildyti bent vieną eilutę sekcijoje "
+            "`## LT-source branduolio taikymas`."
+        )
+    else:
+        for row in populated_lt_source_rows:
+            if not row_value(row, "sritis", "tema"):
+                errors.append(
+                    f"{paths['research']}: `LT-source branduolio taikymas` eilutėje trūksta `Sritis`."
+                )
+            if not row_value(row, "pagrindinis_lt-source_kelias"):
+                errors.append(
+                    f"{paths['research']}: `LT-source branduolio taikymas` eilutėje trūksta "
+                    "`Pagrindinis LT-source kelias`."
+                )
+            if not row_value(row, "konkretus_lt_saltinis", "konkretus_lt_šaltinis"):
+                errors.append(
+                    f"{paths['research']}: `LT-source branduolio taikymas` eilutėje trūksta "
+                    "`Konkretus LT šaltinis`."
+                )
 
     detected_signals = detect_source_localization_signals(source_text)
     for signal in detected_signals:

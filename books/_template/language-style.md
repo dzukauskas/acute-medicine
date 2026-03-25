@@ -28,8 +28,8 @@ Jei kyla abejonių dėl termino, kolokacijos ar klinikinės kategorijos pavadini
 
 ## LT/EU-first lokalizacija
 
-- pagrindinis LT tekstas turi skambėti kaip Lietuvos / ES medicinos mokymosi tekstas, ne kaip UK ar Australia sistemos aprašas;
-- UK / Australia terminai, institucijos, gairės ir reference įrankiai negali būti paliekami pagrindiniame tekste kaip norminis standartas;
+- pagrindinis LT tekstas turi skambėti kaip Lietuvos / ES medicinos mokymosi tekstas, ne kaip UK, Australia ar US sistemos aprašas;
+- UK / Australia / US terminai, institucijos, gairės ir reference įrankiai negali būti paliekami pagrindiniame tekste kaip norminis standartas;
 - jei originalo kontekstą verta parodyti, jis rodomas tik `Originalo kontekstas` bloke;
 - prekiniai pavadinimai yra išimtis, ne default'as; pagrindinėje prozoje ir lentelėse teikiamas bendrinis / INN pavadinimas;
 - dozės, vartojimo keliai, indikacijos ir kontraindikacijos negali būti paliekami vien todėl, kad taip parašyta originalo rinkos knygoje.

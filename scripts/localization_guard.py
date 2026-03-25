@@ -18,6 +18,14 @@ GEOGRAPHY_PATTERNS = (
     (re.compile(r"\bJungtin(?:ė|es)\s+Karalyst(?:ė|ės|ėje)\b", re.IGNORECASE), "Jungtinė Karalystė"),
     (re.compile(r"\bJK\b", re.IGNORECASE), "JK"),
     (re.compile(r"\bUK\b", re.IGNORECASE), "UK"),
+    (re.compile(r"\bJAV\b", re.IGNORECASE), "JAV"),
+    (re.compile(r"\bUSA\b", re.IGNORECASE), "USA"),
+    (re.compile(r"\bU\.?S\.?A?\.?\b", re.IGNORECASE), "US"),
+    (
+        re.compile(r"\bJungtin(?:ės|ių)\s+Amerikos\s+Valstij(?:os|ų|ose)\b", re.IGNORECASE),
+        "Jungtinės Amerikos Valstijos",
+    ),
+    (re.compile(r"\bAmerik(?:a|os|oje)\b", re.IGNORECASE), "Amerika"),
 )
 IGNORED_SECTION_TITLES = {
     "literatūra",
@@ -121,7 +129,7 @@ def localization_errors(chapter_path: Path, pack: dict) -> list[str]:
         for pattern, label in GEOGRAPHY_PATTERNS:
             if pattern.search(visible):
                 errors.append(
-                    f"{chapter_path}:{idx}: UK/Australia geografinis kontekstas `{label}` paliktas pagrindiniame LT tekste. "
+                    f"{chapter_path}:{idx}: UK/Australia/US geografinis kontekstas `{label}` paliktas pagrindiniame LT tekste. "
                     "Perkelkite į `Originalo kontekstas` bloką arba pašalinkite."
                 )
 

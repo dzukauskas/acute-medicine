@@ -10,6 +10,7 @@
     "research/README.md",
     "research/_template.md",
     "lt/figures/README.md",
+    "lt_source_map.tsv",
     "localization_signals.base.tsv",
     "clinical_policy_markers.tsv"
   ],

@@ -14,6 +14,6 @@ Galutinis pasirinkimas turi:
 - išlaikyti klinikinę prasmę;
 - remtis `chapter_pack`;
 - laikytis `localization_overrides`;
-- laikytis LT/EU-first politikos ir nepalikti UK / Australia norminio turinio pagrindiniame LT tekste;
+- laikytis LT/EU-first politikos ir nepalikti UK / Australia / US norminio turinio pagrindiniame LT tekste;
 - naudoti aktyvesnę LT sintaksę, jei tai nekeičia medicininės logikos;
 - palikti trumpą sprendimo pėdsaką `research/<slug>.md` faile.

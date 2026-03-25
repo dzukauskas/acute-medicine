@@ -26,7 +26,8 @@
 - `translation-style.md`: vertimo ir anti-calque disciplina.
 - `drafting-scaffold.md`: minimali drafting seka, kai aktyvus `chapter_pack`.
 - `termbase.tsv`, `acronyms.tsv`, `gold_phrases.tsv`, `gold_sections/`, `localization_overrides.tsv`: reusable taisyklių sluoksniai.
-- `localization_signals.base.tsv`: shared UK / Australia / rinkos signalų registry.
+- `lt_source_map.tsv`: kanoninis LT-source branduolio žemėlapis pagal temas.
+- `localization_signals.base.tsv`: shared UK / Australia / US / rinkos signalų registry.
 - `localization_signals.tsv`: knygos papildomi signalai, jei shared registry nepakanka.
 - `clinical_policy_markers.tsv`: norminio vaistų turinio detektoriaus markeriai.
 
@@ -37,12 +38,14 @@ Skyrių tekstas, lentelės, schemos ir paveikslai kuriami nuo naujo tik iš PDF 
 Pagrindinis LT tekstas yra skirtas Lietuvos medicinos studijoms ir praktikai, todėl:
 
 - pagrindiniame tekste paliekama tik LT / ES logika;
-- UK, Australijos ar kitos originalo rinkos sistemos informacija negali likti kaip tariamas vietinis standartas;
+- UK, Australijos, JAV ar kitos originalo rinkos sistemos informacija negali likti kaip tariamas vietinis standartas;
 - tokia informacija, jei ji pedagogiškai naudinga, leidžiama tik aiškiai pažymėtame `Originalo kontekstas` bloke;
 - vaistų pavadinimai pagal nutylėjimą teikiami bendriniu / INN vardu, o ne originalo rinkos prekiniais vardais;
 - dozės, vartojimo keliai, indikacijos ir kontraindikacijos negali būti perkeliami vien iš knygos be LT ar ES atramos.
 
 Jei kyla abejonių dėl LT termino, kolokacijos ar klinikinės kategorijos pavadinimo, prieš pasirenkant formuluotę privaloma patikrinti Lietuvos medicininę vartoseną internete ir tą patikrą užfiksuoti `research` faile.
+
+Prieš pildydami `research` failą, naudokite `lt_source_map.tsv` ir `source-priority.md`, kad iškart pasirinktumėte teisingą LT-source kelią pagal temą: paramediko kompetencija, GMP, farmakologija, vaistų registracija, kompensavimas, infekcijos, specialybinės rekomendacijos, terminija ar fundamentiniai mokslai.
 
 Diagramoms ir algoritmams šiame projekte naudojamas tik `Whimsical` workflow. Jei vartotojas nurodo konkretų įrankį, jo negalima savavališkai pakeisti kitu.
 

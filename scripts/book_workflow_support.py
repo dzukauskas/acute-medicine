@@ -47,6 +47,7 @@ CLINICAL_POLICY_MARKER_MATCH_MODES = {"literal", "regex"}
 SOURCE_TERM_TO_CONTEXT = {
     "uk": "uk-specific",
     "australia": "australia-specific",
+    "us": "us-specific",
     "mixed": "mixed-anglosphere",
     "mixed-anglosphere": "mixed-anglosphere",
     "market-specific": "mixed-anglosphere",

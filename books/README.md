@@ -5,9 +5,14 @@ Repo yra book-agnostic: kiekviena nauja knyga bootstrap'inama į atskirą `books
 ## Repo standartas
 
 - pagrindinis LT tekstas rašomas Lietuvos / ES logika;
-- UK, Australijos ar kitas originalo rinkos kontekstas negali likti pagrindiniame LT tekste kaip tariamas vietinis standartas;
+- UK, Australijos, JAV ar kitas originalo rinkos kontekstas negali likti pagrindiniame LT tekste kaip tariamas vietinis standartas;
 - jei originalo kontekstą verta parodyti, jis leidžiamas tik aiškiai pažymėtame `Originalo kontekstas` bloke;
 - vaistų pavadinimai pagrindiniame LT tekste pagal nutylėjimą yra bendriniai / INN, o dozės, vartojimo keliai ir indikacijos remiami LT, o jei jų nepakanka, ES šaltiniais.
+
+Shared LT-source branduolys laikomas:
+
+- `books/_template/source-priority.md`
+- `books/_template/lt_source_map.tsv`
 
 ## Ką laikome `books/`
 

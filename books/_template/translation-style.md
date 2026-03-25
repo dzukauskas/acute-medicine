@@ -22,7 +22,8 @@ Jei sakinys skamba kaip vertimas, jį reikia perrašyti net tada, kai terminai y
 
 - pirmenybė teikiama Lietuvos medicinos vartosenai;
 - vietinės klinikinės praktikos skyriuose prioritetas teikiamas Lietuvos ar ES logikai;
-- JK vidaus sistemos negali likti pateiktos kaip universalus standartas.
+- UK / Australia / US vidaus sistemos negali likti pateiktos kaip universalus standartas;
+- prieš norminį perrašymą reikia pasirinkti teisingą LT-source kelią iš `lt_source_map.tsv`.
 
 ## Vienetai
 

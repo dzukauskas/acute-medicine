@@ -21,3 +21,17 @@ ReSPECT	uk	law	regex	\bReSPECT\b	UK treatment escalation / resuscitation framewo
 DNACPR	uk	law	regex	\bDNACPR\b	UK resuscitation legal framework.
 NEWS2	uk	guideline	regex	\bNEWS2\b	UK early warning score.
 ACVPU	uk	guideline	regex	\bACVPU\b	UK consciousness assessment mnemonic.
+FDA	us	regulator	regex	\b(?:FDA|Food and Drug Administration)\b	US medicines regulator.
+CDC	us	guideline	regex	\b(?:CDC|Centers? for Disease Control(?: and Prevention)?)\b	US public health authority.
+DEA	us	regulator	regex	\b(?:DEA|Drug Enforcement Administration)\b	US controlled substances regulator.
+AHA	us	guideline	regex	\b(?:AHA|American Heart Association)\b	US guideline organization.
+ACLS	us	guideline	regex	\bACLS\b	US advanced cardiac life support acronym.
+PALS	us	guideline	regex	\bPALS\b	US paediatric advanced life support acronym.
+911	us	service model	regex	\b911\b	US emergency activation number.
+DailyMed	us	reference tool	regex	\bDailyMed\b	US medicines information resource.
+Orange Book	us	reference tool	regex	\bOrange Book\b	US FDA reference tool.
+Medication Guide	us	reference tool	literal	Medication Guide	US patient information document.
+Prescribing Information	us	reference tool	literal	Prescribing Information	US product information term.
+REMS	us	law	regex	\bREMS\b	US Risk Evaluation and Mitigation Strategy framework.
+USP	us	reference tool	regex	\bUSP\b	United States Pharmacopeia reference.
+NDC	us	market availability	regex	\bNDC\b	US National Drug Code market identifier.

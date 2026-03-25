@@ -44,6 +44,6 @@ Naudoti:
 
 Naudoti:
 
-- UK->LT adaptacijoms;
+- UK / Australia / US -> LT/EU adaptacijoms;
 - teisinių ar sistemos skirtumų paaiškinimams;
 - studentiniams trumpiems aiškinimams, kai jie tikrai reikalingi.

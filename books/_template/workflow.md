@@ -28,7 +28,8 @@ Skyrius laikomas baigtu tik kai:
 2. sudarytas pilnas skyriaus inventorius;
 3. patikrinti naujausi prieinami Lietuvos šaltiniai;
 4. jei jų nepakanka, patikrintos naujausios Europos ar tarptautinės gairės;
-4a. `research` faile užfiksuoti visi UK / Australia / kiti rinkos signalai ir jiems parinktas LT/EU pakeitimo sprendimas;
+4a. `lt_source_map.tsv` ir `source-priority.md` pagalba parinktas teisingas LT-source kelias pagal skyriaus temą;
+4b. `research` faile užfiksuoti visi UK / Australia / US / kiti rinkos signalai ir jiems parinktas LT/EU pakeitimo sprendimas;
 5. sugeneruotas `chapter_pack`;
 6. lietuviškas skyrius parašytas nuo švaraus lapo pagal `chapter_pack`;
 7. padarytas atskiras anti-calque perrašymas;
@@ -54,7 +55,19 @@ Prieš bet kokį drafting skyriui privaloma sugeneruoti `chapter_packs/<slug>.ya
 
 Be `chapter_pack` drafteris negali pradėti generavimo.
 
-`build_chapter_pack.py` taip pat yra LT/EU-first vartai: jei source skyriuje aptinkami UK / Australia signalai, bet `research` faile jiems nėra aiškaus LT/EU sprendimo, pack generavimas turi baigtis klaida.
+`build_chapter_pack.py` taip pat yra LT/EU-first vartai: jei source skyriuje aptinkami UK / Australia / US signalai, bet `research` faile jiems nėra aiškaus LT/EU sprendimo, pack generavimas turi baigtis klaida.
+
+Prieš research ir drafting visada pirmiausia nuspręskite, kuriam LT-source branduolio keliui priklauso skyrius ar konkretus blokas:
+
+- paramediko kompetencija ir GMP;
+- vaistų registracija ir produkto informacija;
+- kompensavimas ir LT rinkos prieinamumas;
+- farmakologija ir racionalus skyrimas;
+- infekcijos ir visuomenės sveikata;
+- klinikinės metodikos ir specialybinės rekomendacijos;
+- teisė ir reguliavimas;
+- terminija ir kalbos forma;
+- anatomija, fiziologija ir patofiziologija.
 
 ## Section-type drafting
 
@@ -92,8 +105,8 @@ Kai originalo logika ar sistemos kontekstas nesutampa su Lietuvos praktika:
 
 Šiai knygai privalomas LT/EU-first principas:
 
-- pagrindinis LT tekstas negali rodyti UK ar Australijos sistemos kaip norminio standarto;
-- UK / Australia institucijos, guideline vardai, teisės mechanizmai ir reference įrankiai paliekami tik tada, kai jie aiškiai pažymėti kaip originalo kontekstas;
+- pagrindinis LT tekstas negali rodyti UK, Australijos ar JAV sistemos kaip norminio standarto;
+- UK / Australia / US institucijos, guideline vardai, teisės mechanizmai ir reference įrankiai paliekami tik tada, kai jie aiškiai pažymėti kaip originalo kontekstas;
 - vaistų pavadinimai pagal nutylėjimą turi būti bendriniai / INN;
 - jei originalo rinkos prekinis vardas mokymuisi nereikalingas, jis išmetamas;
 - jei LT oficialaus šaltinio nėra, pagrindiniame tekste remiamasi ES šaltiniu, o tai užfiksuojama `research` faile.
