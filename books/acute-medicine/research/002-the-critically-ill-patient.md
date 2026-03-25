@@ -109,6 +109,17 @@
 - 2.1 ir 2.2 paveikslų grafinės LT versijos dar nesukurtos; šiame etape paliekamos tekstinės algoritmo santraukos.
 - Inotropų ir vazopresorių dozės paliekamos kaip originalo studijų lentelė; jei vėliau skyrius bus naudojamas kaip praktinė klinikinė atmintinė, verta papildomai sutikrinti su naujesniais intensyviosios terapijos šaltiniais.
 
+## Adjudication sprendimai
+
+- `narrative-08-shock`: `B` - pasirinkta skaidyta LT proza, kad perfuzijos ir hipotenzijos logika liktų aiški be EN karkaso.
+- `narrative-09-cardiogenic-shock`: `B` - palikta aiški hemodinaminė seka, bet sakinys sutrumpintas ir suaktyvintas.
+- `algorithm-2.1-approach-to-the-patient-with-suspected-critical-illness`: `B` - pasirinkta trumpa komandiška eiga, nes ji geriau tinka `ABCDE` veiksmų sekai.
+- `algorithm-2.2-management-of-hypotension-and-shock`: `B` - pasirinkta glausta veiksmų seka, išlaikant diagnostinę ir hemodinaminę logiką.
+- `callout-2.1-the-critically-ill-patient-principles-of-management`: `B` - principai perrašyti į trumpus aktyvius LT punktus vietoje procedūrinio EN karkaso.
+- `chart-1-news2-scoring-system`: `hibridinis` - trys originalo diagramos sutrauktos į vieną LT santrauką, bet išlaikytas aiškus JK konteksto atskyrimas.
+- `chart-2-news2-thresholds-and-triggers`: `hibridinis` - slenksčiai palikti kaip originalo sistemos paaiškinimas, ne kaip Lietuvos standartas.
+- `chart-3-clinical-response-to-the-news2-trigger-thresholds`: `hibridinis` - atsako logika palikta mokomajam kontekstui, bet neperkelta kaip vietinė procedūra.
+
 ## Chapter pack ir review kilpa
 
 - Sugeneruotas `chapter_packs/002-the-critically-ill-patient.yaml`.

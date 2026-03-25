@@ -63,6 +63,8 @@ Vertindami kvėpavimą atsakykite į kelis pagrindinius klausimus:
 
 ## `NEWS2` originalo kontekste
 
+<!-- chart-coverage: 1,2 -->
+
 Originale pateikiamos trys `NEWS2` diagramos. Šiame konspekte paliekama tik jų esmė:
 
 - `NEWS2` vertina kvėpavimo dažnį, deguonies saturaciją, deguonies skyrimą, sistolinį kraujospūdį, pulsą, sąmonės būklę ir temperatūrą;

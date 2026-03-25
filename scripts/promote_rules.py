@@ -66,6 +66,20 @@ def render_regression_example(row: dict[str, str], slug: str) -> str:
     return json.dumps(payload, ensure_ascii=False)
 
 
+def resolved_target(row: dict[str, str], taxonomy: dict[str, dict[str, str]]) -> str:
+    explicit_target = row.get("promote_target", "").strip()
+    if explicit_target:
+        return explicit_target
+
+    defect_class = row.get("defect_class", "").strip()
+    taxon = taxonomy.get(defect_class)
+    default_target = (taxon or {}).get("default_promote_target", "").strip()
+    if default_target:
+        return default_target
+
+    return "manual-review"
+
+
 def main() -> int:
     args = parse_args()
     slug = resolve_chapter_slug(args.chapter)
@@ -77,7 +91,7 @@ def main() -> int:
     deltas = read_tsv(delta_path)
     grouped: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in deltas:
-        grouped[row["promote_target"]].append(row)
+        grouped[resolved_target(row, taxonomy)].append(row)
 
     lines: list[str] = [
         f"# Promotion candidates for {slug}",

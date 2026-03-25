@@ -69,21 +69,60 @@ def relevant_hotspots(block: dict, pack: dict) -> list[dict]:
     return selected[:6]
 
 
-def choose_profile(block: dict, profiles: dict[str, dict[str, object]]) -> dict[str, object] | None:
+def choose_profile_from_profiles(block: dict, profiles: dict[str, dict[str, object]]) -> tuple[dict[str, object] | None, str]:
+    block_type = block.get("block_type", "")
+    tags = set(block.get("tags", []))
+
+    best_profile: dict[str, object] | None = None
+    best_score = -1
+    best_reason = ""
+
+    for profile in profiles.values():
+        allowed_block_types = set(profile.get("applies_to_block_types", []))
+        required_tags = set(profile.get("requires_tags", []))
+        if allowed_block_types and block_type not in allowed_block_types:
+            continue
+
+        matched_tags = sorted(required_tags & tags)
+        if required_tags and not matched_tags:
+            continue
+
+        score = len(matched_tags)
+        if score > best_score:
+            best_profile = profile
+            best_score = score
+            if matched_tags:
+                best_reason = (
+                    f"Matched profile `{profile['profile_id']}` via block_type `{block_type}` "
+                    f"and tags {', '.join(matched_tags)}."
+                )
+            else:
+                best_reason = f"Matched profile `{profile['profile_id']}` via block_type `{block_type}`."
+
+    return best_profile, best_reason
+
+
+def choose_profile_fallback(block: dict, profiles: dict[str, dict[str, object]]) -> tuple[dict[str, object] | None, str]:
     block_type = block.get("block_type", "")
     tags = set(block.get("tags", []))
 
     if block_type == "algorithm":
-        return profiles.get("algorithm-stepwise")
+        return profiles.get("algorithm-stepwise"), "Fallback selected algorithm profile for block_type `algorithm`."
     if block_type in {"legal_localization", "chart"}:
-        return profiles.get("local-context-callout")
+        return profiles.get("local-context-callout"), (
+            "Fallback selected local-context profile for legal_localization/chart block."
+        )
     if tags & {"uk-localization", "legal-localization"}:
-        return profiles.get("local-context-callout")
+        return profiles.get("local-context-callout"), (
+            "Fallback selected local-context profile from localization-oriented tags."
+        )
     if tags & {"hemodynamic", "complex-prose"} or "complex_prose" in block.get("risk_flags", []):
-        return profiles.get("hemodynamic-prose")
+        return profiles.get("hemodynamic-prose"), (
+            "Fallback selected hemodynamic prose profile from tags or complex_prose risk."
+        )
     if block_type == "callout":
-        return profiles.get("local-context-callout")
-    return None
+        return profiles.get("local-context-callout"), "Fallback selected local-context profile for block_type `callout`."
+    return None, ""
 
 
 def is_high_risk(block: dict, pack: dict) -> bool:
@@ -105,7 +144,11 @@ def build_pack(slug: str) -> dict[str, object]:
     for block in pack.get("blocks", []):
         if not is_high_risk(block, pack):
             continue
-        profile = choose_profile(block, profiles)
+        profile, selection_reason = choose_profile_from_profiles(block, profiles)
+        selection_mode = "profile_match"
+        if profile is None:
+            profile, selection_reason = choose_profile_fallback(block, profiles)
+            selection_mode = "fallback"
         if profile is None:
             continue
         matched_overrides = [
@@ -121,6 +164,9 @@ def build_pack(slug: str) -> dict[str, object]:
                 "tags": block.get("tags", []),
                 "risk_flags": block.get("risk_flags", []),
                 "profile_id": profile["profile_id"],
+                "selection_mode": selection_mode,
+                "selection_reason": selection_reason,
+                "decision_note_required": True,
                 "variant_a_goal": profile["variant_a_goal"],
                 "variant_b_goal": profile["variant_b_goal"],
                 "decision_criteria": profile["decision_criteria"],

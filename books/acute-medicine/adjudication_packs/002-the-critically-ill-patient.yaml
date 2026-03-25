@@ -15,6 +15,10 @@ candidates:
   risk_flags:
   - complex_prose
   profile_id: hemodynamic-prose
+  selection_mode: profile_match
+  selection_reason: Matched profile `hemodynamic-prose` via block_type `narrative` and tags complex-prose,
+    hemodynamic.
+  decision_note_required: true
   variant_a_goal: Maksimaliai tiksliai perteikti hemodinaminį ar priežastinį reasoning.
   variant_b_goal: Suskaidyti ilgą EN formos sakinį į natūralesnę LT medicininę prozą.
   decision_criteria: Palik variantą, kuris išlaiko klinikinę logiką, bet sumažina nominalizacijas, pasyvus
@@ -32,6 +36,10 @@ candidates:
   risk_flags:
   - complex_prose
   profile_id: hemodynamic-prose
+  selection_mode: profile_match
+  selection_reason: Matched profile `hemodynamic-prose` via block_type `narrative` and tags complex-prose,
+    hemodynamic.
+  decision_note_required: true
   variant_a_goal: Maksimaliai tiksliai perteikti hemodinaminį ar priežastinį reasoning.
   variant_b_goal: Suskaidyti ilgą EN formos sakinį į natūralesnę LT medicininę prozą.
   decision_criteria: Palik variantą, kuris išlaiko klinikinę logiką, bet sumažina nominalizacijas, pasyvus
@@ -54,6 +62,9 @@ candidates:
   - complex_prose
   - structured_content
   profile_id: algorithm-stepwise
+  selection_mode: profile_match
+  selection_reason: Matched profile `algorithm-stepwise` via block_type `algorithm` and tags algorithmic.
+  decision_note_required: true
   variant_a_goal: Kliniškai tikslus, pilnas ir žingsniais išdėstytas algoritmas.
   variant_b_goal: Kuo glaustesnė, aktyvesnė ir komandiškesnė LT veiksmų seka.
   decision_criteria: Palik variantą, kuris nepraranda klinikinės logikos, bet skamba kaip aiški lietuviška
@@ -81,6 +92,9 @@ candidates:
   - complex_prose
   - structured_content
   profile_id: algorithm-stepwise
+  selection_mode: profile_match
+  selection_reason: Matched profile `algorithm-stepwise` via block_type `algorithm` and tags algorithmic.
+  decision_note_required: true
   variant_a_goal: Kliniškai tikslus, pilnas ir žingsniais išdėstytas algoritmas.
   variant_b_goal: Kuo glaustesnė, aktyvesnė ir komandiškesnė LT veiksmų seka.
   decision_criteria: Palik variantą, kuris nepraranda klinikinės logikos, bet skamba kaip aiški lietuviška
@@ -99,6 +113,9 @@ candidates:
   - complex_prose
   - structured_content
   profile_id: hemodynamic-prose
+  selection_mode: profile_match
+  selection_reason: Matched profile `hemodynamic-prose` via block_type `callout` and tags complex-prose.
+  decision_note_required: true
   variant_a_goal: Maksimaliai tiksliai perteikti hemodinaminį ar priežastinį reasoning.
   variant_b_goal: Suskaidyti ilgą EN formos sakinį į natūralesnę LT medicininę prozą.
   decision_criteria: Palik variantą, kuris išlaiko klinikinę logiką, bet sumažina nominalizacijas, pasyvus
@@ -120,6 +137,9 @@ candidates:
   - localization_override
   - structured_content
   profile_id: local-context-callout
+  selection_mode: profile_match
+  selection_reason: Matched profile `local-context-callout` via block_type `chart` and tags uk-localization.
+  decision_note_required: true
   variant_a_goal: Preciziškai išlaikyti originalo kontekstą ir lokalizacijos faktus.
   variant_b_goal: Kuo trumpiau ir aiškiau paaiškinti, kas yra originalo kontekstas ir kas taikoma Lietuvoje.
   decision_criteria: Palik variantą, kuris aiškiai atskiria JK/originalo kontekstą nuo LT praktikos ir
@@ -154,6 +174,9 @@ candidates:
   - localization_override
   - structured_content
   profile_id: local-context-callout
+  selection_mode: profile_match
+  selection_reason: Matched profile `local-context-callout` via block_type `chart` and tags uk-localization.
+  decision_note_required: true
   variant_a_goal: Preciziškai išlaikyti originalo kontekstą ir lokalizacijos faktus.
   variant_b_goal: Kuo trumpiau ir aiškiau paaiškinti, kas yra originalo kontekstas ir kas taikoma Lietuvoje.
   decision_criteria: Palik variantą, kuris aiškiai atskiria JK/originalo kontekstą nuo LT praktikos ir
@@ -177,6 +200,9 @@ candidates:
   - localization_override
   - structured_content
   profile_id: local-context-callout
+  selection_mode: profile_match
+  selection_reason: Matched profile `local-context-callout` via block_type `chart` and tags uk-localization.
+  decision_note_required: true
   variant_a_goal: Preciziškai išlaikyti originalo kontekstą ir lokalizacijos faktus.
   variant_b_goal: Kuo trumpiau ir aiškiau paaiškinti, kas yra originalo kontekstas ir kas taikoma Lietuvoje.
   decision_criteria: Palik variantą, kuris aiškiai atskiria JK/originalo kontekstą nuo LT praktikos ir

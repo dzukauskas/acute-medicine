@@ -20,6 +20,17 @@ GOLD_SECTIONS_DIR = BOOK_ROOT / "gold_sections"
 MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 INLINE_CODE_RE = re.compile(r"`([^`]*)`")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*)$")
+INVENTORY_PLACEHOLDER_RE = re.compile(r"^kol kas neužfiksuota$", re.IGNORECASE)
+GENERATED_ARTIFACT_RE = re.compile(
+    r"^(Sukurtas lietuviškas|Kanoninis šaltinis|Whimsical URL|Įrašyta į)\b",
+    re.IGNORECASE,
+)
+STRUCTURED_SOURCE_HEADING_RE = re.compile(
+    r"^(?P<kind>Table|Figure|Box|Chart)\s+"
+    r"(?P<label>[0-9.]+)"
+    r"(?:\s*[\u2000-\u200B]+\s*|\s{2,})"
+    r"(?P<title>.+?)\s*$"
+)
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
@@ -170,3 +181,72 @@ def parse_structured_label(text: str) -> tuple[str, str]:
     if not match:
         return "", ""
     return match.group(1).lower(), match.group(2)
+
+
+def clean_inventory_items(items: list[str]) -> list[str]:
+    cleaned: list[str] = []
+    for item in items:
+        stripped = item.strip()
+        if not stripped:
+            continue
+        if INVENTORY_PLACEHOLDER_RE.match(stripped):
+            continue
+        if GENERATED_ARTIFACT_RE.match(stripped):
+            continue
+        cleaned.append(stripped)
+    return cleaned
+
+
+def extract_inventory(sections: dict[tuple[str, ...], list[str]]) -> dict[str, list[str]]:
+    def find_lines(*suffix: str) -> list[str]:
+        for key, lines in sections.items():
+            if len(key) >= len(suffix) and tuple(key[-len(suffix):]) == suffix:
+                return lines
+        return []
+
+    return {
+        "subsections": clean_inventory_items(bullet_items(find_lines("PDF inventorius", "Poskyriai"))),
+        "tables": clean_inventory_items(bullet_items(find_lines("PDF inventorius", "Lentelės"))),
+        "figures": clean_inventory_items(
+            bullet_items(find_lines("PDF inventorius", "Paveikslai / schemos / algoritmai"))
+        ),
+        "boxes": clean_inventory_items(bullet_items(find_lines("PDF inventorius", "Rėmeliai / papildomi blokai"))),
+        "risky_terms": bullet_items(find_lines("Rizikingi terminai")),
+        "language_risks": bullet_items(find_lines("Kalbinės rizikos vietos")),
+        "anti_calque": bullet_items(find_lines("Anti-calque perrašymo pastabos")),
+        "localization_decisions": bullet_items(find_lines("Lokalizacijos sprendimai")),
+        "local_practice_changes": bullet_items(find_lines("Vietos, kur originalas pakeistas pagal Lietuvos praktiką")),
+    }
+
+
+def extract_source_structured_items(source_text: str) -> list[dict[str, str]]:
+    items: list[dict[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    for raw_line in source_text.splitlines():
+        line = raw_line.strip()
+        match = STRUCTURED_SOURCE_HEADING_RE.match(line)
+        if not match:
+            continue
+        kind = match.group("kind").lower()
+        label = match.group("label")
+        key = (kind, label)
+        if key in seen:
+            continue
+        seen.add(key)
+        items.append(
+            {
+                "kind": kind,
+                "label": label,
+                "title": strip_markdown(match.group("title").strip()),
+                "raw": line,
+            }
+        )
+    return items
+
+
+def normalize_yaml_structure(value: object) -> object:
+    if isinstance(value, dict):
+        return {key: normalize_yaml_structure(value[key]) for key in sorted(value)}
+    if isinstance(value, list):
+        return [normalize_yaml_structure(item) for item in value]
+    return value

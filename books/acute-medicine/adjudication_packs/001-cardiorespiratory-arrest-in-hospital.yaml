@@ -14,6 +14,9 @@ candidates:
   - resuscitation
   risk_flags: []
   profile_id: local-context-callout
+  selection_mode: fallback
+  selection_reason: Fallback selected local-context profile from localization-oriented tags.
+  decision_note_required: true
   variant_a_goal: Preciziškai išlaikyti originalo kontekstą ir lokalizacijos faktus.
   variant_b_goal: Kuo trumpiau ir aiškiau paaiškinti, kas yra originalo kontekstas ir kas taikoma Lietuvoje.
   decision_criteria: Palik variantą, kuris aiškiai atskiria JK/originalo kontekstą nuo LT praktikos ir
@@ -38,6 +41,9 @@ candidates:
   risk_flags:
   - structured_content
   profile_id: algorithm-stepwise
+  selection_mode: profile_match
+  selection_reason: Matched profile `algorithm-stepwise` via block_type `algorithm` and tags algorithmic.
+  decision_note_required: true
   variant_a_goal: Kliniškai tikslus, pilnas ir žingsniais išdėstytas algoritmas.
   variant_b_goal: Kuo glaustesnė, aktyvesnė ir komandiškesnė LT veiksmų seka.
   decision_criteria: Palik variantą, kuris nepraranda klinikinės logikos, bet skamba kaip aiški lietuviška

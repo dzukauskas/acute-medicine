@@ -47,6 +47,8 @@ Prieš bet kokį drafting skyriui privaloma sugeneruoti `chapter_packs/<slug>.ya
 
 Be `chapter_pack` drafteris negali pradėti generavimo.
 
+`build_chapter_pack.py` yra ir inventoriaus vartai: jei `research` `PDF inventorius` nesutampa su `source/chapters-en` struktūriniais blokais (`Table`, `Figure`, `Box`, `Chart`), pack generavimas turi baigtis klaida.
+
 ## Section-type drafting
 
 Skyriaus blokai generuojami ne vienu universaliu režimu, o pagal `draft_mode` iš `chapter_pack`:
@@ -60,6 +62,11 @@ Skyriaus blokai generuojami ne vienu universaliu režimu, o pagal `draft_mode` i
 
 Tai leidžia neapdoroti lentelių, algoritmų, grafikų ir lokalizacinių paaiškinimų tuo pačiu prose režimu.
 
+Jei keli `chart` blokai sutraukiami į vieną LT summary sekciją, joje turi būti coverage įrodymas:
+
+- arba matomi per-chart pėdsakai, pvz. `1 diagrama`, `2 diagrama`, `3 diagrama` ar `Chart 1`, `Chart 2`, `Chart 3`;
+- arba techninis markeris `<!-- chart-coverage: 1,2,3 -->`.
+
 ## Targeted adjudication
 
 Jei `chapter_pack` pažymi `adjudication_candidate: true`, prieš galutinį polishą reikia sugeneruoti `adjudication_packs/<slug>.yaml`.
@@ -72,6 +79,8 @@ Jei `chapter_pack` pažymi `adjudication_candidate: true`, prieš galutinį poli
 - vietoms, kur originalo ir LT praktikos įtampa didžiausia.
 
 Šiame etape adjudication dar nėra pilnai automatinis generatorius: repo tik paruošia darbo paketą ir sprendimo kriterijus.
+
+Po targeted adjudication `research/<slug>.md` faile turi likti `## Adjudication sprendimai` sekcija: po vieną eilutę kiekvienam `block_id`, su pasirinkimu `A`, `B` arba `hibridinis` ir trumpa priežastimi.
 
 ## Lokalizacijos taisyklė
 
@@ -98,6 +107,7 @@ Kiekvienas skyrius turi praeiti du atskirus kokybės vartus:
 - `scripts/lt_style_guard.py`;
 - `scripts/terminology_guard.py` su `chapter_pack`, jei jis yra;
 - `scripts/completeness_guard.py`;
+- `scripts/run_chapter_qa.py`, kuris prieš guardus patikrina, ar kanoninis `chapter_pack` egzistuoja ir semantiškai sutampa su šviežiai sugeneruotu pack'u;
 - trumpą rankinį kalbinį auditą.
 
 ## LT medicininės kalbos modulis

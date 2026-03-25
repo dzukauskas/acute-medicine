@@ -8,10 +8,10 @@ from pathlib import Path
 from book_workflow_support import (
     BOOK_ROOT,
     GOLD_SECTIONS_DIR,
-    bullet_items,
     chapter_number_from_slug,
     chapter_paths_for_slug,
     dump_yaml,
+    extract_inventory,
     metadata_value,
     normalize_key,
     parse_markdown_sections,
@@ -22,6 +22,7 @@ from book_workflow_support import (
     slugify,
     split_multi,
 )
+from validate_chapter_inventory import validate_chapter_inventory_or_raise
 
 
 TERMBASE_PATH = BOOK_ROOT / "termbase.tsv"
@@ -40,12 +41,6 @@ BLOCK_TYPE_TO_MODE = {
     "figure_caption": "local-context-callout",
     "legal_localization": "local-context-callout",
 }
-
-INVENTORY_PLACEHOLDER_RE = re.compile(r"^kol kas neužfiksuota$", re.IGNORECASE)
-GENERATED_ARTIFACT_RE = re.compile(
-    r"^(Sukurtas lietuviškas|Kanoninis šaltinis|Whimsical URL|Įrašyta į)\b",
-    re.IGNORECASE,
-)
 
 LOCALIZATION_KEYWORDS = {
     "news2",
@@ -170,44 +165,6 @@ def load_chapter_context(slug: str) -> dict[str, object]:
         "source_md": metadata_value(pre_heading_lines, "Angliškas pagalbinis failas") or str(paths["source"]),
         "lt_target_md": metadata_value(pre_heading_lines, "Lietuviškas failas") or str(paths["lt"]),
     }
-
-
-def clean_inventory_items(items: list[str]) -> list[str]:
-    cleaned: list[str] = []
-    for item in items:
-        stripped = item.strip()
-        if not stripped:
-            continue
-        if INVENTORY_PLACEHOLDER_RE.match(stripped):
-            continue
-        if GENERATED_ARTIFACT_RE.match(stripped):
-            continue
-        cleaned.append(stripped)
-    return cleaned
-
-
-def extract_inventory(sections: dict[tuple[str, ...], list[str]]) -> dict[str, list[str]]:
-    def find_lines(*suffix: str) -> list[str]:
-        for key, lines in sections.items():
-            if len(key) >= len(suffix) and tuple(key[-len(suffix):]) == suffix:
-                return lines
-        return []
-
-    return {
-        "subsections": clean_inventory_items(bullet_items(find_lines("PDF inventorius", "Poskyriai"))),
-        "tables": clean_inventory_items(bullet_items(find_lines("PDF inventorius", "Lentelės"))),
-        "figures": clean_inventory_items(
-            bullet_items(find_lines("PDF inventorius", "Paveikslai / schemos / algoritmai"))
-        ),
-        "boxes": clean_inventory_items(bullet_items(find_lines("PDF inventorius", "Rėmeliai / papildomi blokai"))),
-        "risky_terms": bullet_items(find_lines("Rizikingi terminai")),
-        "language_risks": bullet_items(find_lines("Kalbinės rizikos vietos")),
-        "anti_calque": bullet_items(find_lines("Anti-calque perrašymo pastabos")),
-        "localization_decisions": bullet_items(find_lines("Lokalizacijos sprendimai")),
-        "local_practice_changes": bullet_items(find_lines("Vietos, kur originalas pakeistas pagal Lietuvos praktiką")),
-    }
-
-
 def chapter_scope_number(slug: str) -> str:
     return chapter_number_from_slug(slug)
 
@@ -500,6 +457,10 @@ def infer_chapter_title(slug: str, lt_text: str, source_text: str) -> str:
 def main() -> int:
     args = parse_args()
     slug = resolve_chapter_slug(args.chapter)
+    try:
+        validate_chapter_inventory_or_raise(slug)
+    except ValueError as exc:
+        raise SystemExit(str(exc))
     paths = chapter_paths_for_slug(slug)
     context = load_chapter_context(slug)
     inventory = extract_inventory(context["research_sections"])

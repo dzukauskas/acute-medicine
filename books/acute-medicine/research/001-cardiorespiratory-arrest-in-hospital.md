@@ -104,6 +104,11 @@
 - Lietuvoje trumpinių `AED` ir `AID` vartojimas šaltiniuose nėra visiškai vienodas; tekste saugiau teikti pirmenybę pilnam termino pavadinimui.
 - 1.1 paveikslui aktyvus kanoninis šaltinis dabar yra `Whimsical` lenta; jei reikės failinio atsarginio šaltinio, bus naudojamas `Excalidraw`, bet ne abu vienu metu.
 
+## Adjudication sprendimai
+
+- `narrative-12-decisions-surrounding-cpr`: `hibridinis` - paliktas trumpas originalo kontekstas, bet pagrindinė sprendimo logika perrašyta pagal Lietuvos teisę ir klinikinę praktiką.
+- `algorithm-1.1-algorithm-for-adult-advanced-life-support`: `B` - pasirinkta glaustesnė komandiška LT seka, išlaikant visus kliniškai būtinus algoritmo žingsnius.
+
 ## Chapter pack ir review kilpa
 
 - Sugeneruotas `chapter_packs/001-cardiorespiratory-arrest-in-hospital.yaml`.

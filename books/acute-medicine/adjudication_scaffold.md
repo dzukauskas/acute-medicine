@@ -14,7 +14,8 @@ Galutinis pasirinkimas turi:
 - išlaikyti klinikinę prasmę;
 - remtis `chapter_pack`;
 - laikytis `localization_overrides`;
-- naudoti aktyvesnę LT sintaksę, jei tai nekeičia medicininės logikos.
+- naudoti aktyvesnę LT sintaksę, jei tai nekeičia medicininės logikos;
+- palikti trumpą sprendimo pėdsaką `research/<slug>.md` faile.
 
 ## Privalomi įėjimai
 
@@ -32,6 +33,7 @@ Galutinis pasirinkimas turi:
    - turi trumpesnius, aiškesnius sakinius;
    - aiškiau atskiria LT praktiką nuo originalo konteksto.
 3. Jei nei vienas netinka, parenkite trečią hibridinį variantą tik iš šių dviejų stipriausių dalių.
+4. `research/<slug>.md` sekcijoje `## Adjudication sprendimai` užrašykite: `block_id`, pasirinktą variantą (`A`, `B` arba `hibridinis`) ir vienos eilutės priežastį.
 
 ## Kada taikyti
 
