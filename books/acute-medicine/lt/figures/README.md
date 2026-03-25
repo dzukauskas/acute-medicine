@@ -4,27 +4,28 @@
 
 Kiekvienam paveikslui turi būti tik vienas kanoninis šaltinis.
 
-Numatytoji taisyklė:
+Privaloma taisyklė:
 
 - redaguojamas šaltinis: `Whimsical` lenta
 - naudojamas paveikslas: `*.png`
 - atnaujinimas: oficialus `Whimsical` `.../svg` eksportas per `scripts/render_whimsical_figure.py`, kuris SVG rasterizuoja per `Chromium`, ne per rankinį screenshotą
 
-Išimtis:
+Jei šioje sesijoje `Whimsical` kelias neveikia, reikia sustoti ir aiškiai įvardyti blokatorių. Negalima savavališkai pereiti į `Excalidraw`, savadarbį `SVG` workflow ar kitą pakaitalą.
 
-- jei `Whimsical` šiam atvejui netinka arba reikia failinio redaguojamo šaltinio, naudojamas `*.excalidraw`;
-- vienam paveikslui negali likti du aktyvūs redaguojami šaltiniai.
+- vienam paveikslui negali likti du aktyvūs redaguojami šaltiniai;
+- `*.svg` gali būti tik laikinas techninis artefaktas ar archyvas, bet ne aktyvus kanoninis šaltinis.
 
 Visi aktyvūs paveikslai ir jų kanoniniai šaltiniai turi būti surašyti:
 
 - `manifest.tsv`
 
-Dabartinė aktyvi 1.1 paveikslo būsena:
+`manifest.tsv` aktyviam workflow leidžiamas tik vienas `canonical_source_type`:
 
-- `001-figure-1-1-advanced-life-support.png`
-- kanoninis šaltinis: `Whimsical` lenta `ALS 1.1 test`
+- `whimsical_board`
 
-Po kiekvieno redagavimo `Whimsical` ar `Excalidraw` šaltinyje `png` turi būti atnaujinamas.
+`svg_file`, `excalidraw_file` ar bet kuris kitas pakaitinis tipas kaip aktyvus kanoninis šaltinis nebeleidžiamas ir turi būti stabdomas per `scripts/validate_figures_manifest.py`.
+
+Po kiekvieno redagavimo `Whimsical` lentoje `png` turi būti atnaujinamas.
 
 Jei `Whimsical` PNG eksportas atrodo neryškus, prioritetas teikiamas jų oficialiai rekomenduojamam `.../svg` keliui, o tada `svg` konvertuojamas į `png`.
 
@@ -36,4 +37,4 @@ Prieš laikant paveikslą baigtu, reikia greito vizualaus QA:
 
 Jei randamas toks neatitikimas, pirmiausia plečiamas ar pergrupuojamas pats blokas `Whimsical` lentoje, o ne bandoma „gelbėti“ vien renderiu.
 
-Ankstesnio workflow figūrų failai pašalinti ir nebėra aktyvus šaltinis.
+Ankstesnio workflow figūrų failai gali likti tik archyve; aktyviame `lt/figures/` medyje jie negali būti laikomi kanoniniu šaltiniu.

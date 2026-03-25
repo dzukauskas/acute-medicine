@@ -9,7 +9,7 @@
 - `source/index/`: skyriaus indeksai ir puslapių intervalai.
 - `lt/chapters/`: naujai nuo nulio rašomi lietuviški skyriai.
 - `lt/figures/`: lietuviškos schemos ir paveikslai.
-- `lt/figures/manifest.tsv`: aktyvių paveikslų kanoninių `Whimsical` ar `Excalidraw` šaltinių registras.
+- `lt/figures/manifest.tsv`: aktyvių paveikslų kanoninių `Whimsical` šaltinių registras.
 - `chapter_packs/`: chapter-specific preflight paketai, kurie privalomai įkeliami prieš drafting.
 - `adjudication_packs/`: high-risk blokų pre-second-pass paketai.
 - `research/`: skyriaus šaltinių ir sprendimų failai.
@@ -31,7 +31,11 @@ Skyrių tekstas, lentelės, schemos ir paveikslai kuriami nuo naujo tik iš PDF 
 
 Ankstesnio workflow artefaktai pašalinti; aktyvus pagrindas yra tik šis katalogas.
 
-Diagramoms ir algoritmams naudojamas `Whimsical-first` workflow. Jei reikia failinio atsarginio ar alternatyvaus redaguojamo šaltinio, naudojamas `Excalidraw`.
+Diagramoms ir algoritmams šiame projekte naudojamas tik `Whimsical` workflow. Jei vartotojas nurodo konkretų įrankį, jo negalima savavališkai pakeisti kitu. Jei `Whimsical` kelias šioje sesijoje neveikia, darbas stabdomas ir aiškiai įvardijamas blokatorius, o ne tyliai pereinama į kitą įrankį.
+
+Aktyviame `lt/figures/manifest.tsv` leidžiamas tik `whimsical_board`; ad hoc `svg_file`, `excalidraw_file` ar kiti pakaitiniai kanoniniai šaltiniai nelaikomi galiojančiais.
+
+Jei kyla abejonių dėl LT termino, kolokacijos ar klinikinės kategorijos pavadinimo, prieš pasirenkant formuluotę privaloma patikrinti Lietuvos medicininę vartoseną internete ir tą patikrą užfiksuoti `research` faile.
 
 Kalbinei kokybei naudojamas dviejų sluoksnių `Language QA`:
 

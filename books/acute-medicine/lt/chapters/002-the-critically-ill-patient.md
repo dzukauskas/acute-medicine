@@ -1,349 +1,296 @@
-# 2 skyrius. Kritiškai sunkus pacientas
+# 2 skyrius. Kritinės būklės pacientas
 
-- Autoriai originale: David O'Brien ir Nathan Eager
-- Puslapiai: 28–39
-- Tipas: lokalizuotas studijų konspektas pagal originalų PDF, Lietuvos šaltinius ir JK nacionalinio ankstyvojo perspėjimo balo 2 (`NEWS2`) kontekstą
+Kritinės būklės pacientui būdingi ryškūs kvėpavimo, kraujotakos arba neurologinės būklės sutrikimai, dažnai pasireiškiantys kartu. Juos atspindi pakitę fiziologiniai rodikliai, o pirmieji veiksmai turi būti greiti, sistemingi ir orientuoti į gyvybei pavojingiausių problemų korekciją.
 
-> [!NOTE]
-> Originale skyrius remiasi `NEWS2` ir `ACVPU` sistema. Ši lietuviška versija ją pateikia kaip mokomąjį JK kontekstą, tačiau Lietuvos praktikai labiau pritaikyta `ABCDE` logika su `AVPU` (budrus / reaguoja į balsą / reaguoja į skausmą / nereaguoja) ir `GKS` (Glazgo komos skalė).
+## Prioritetai
 
-<!-- page:28 -->
+Pacientą vertinkite pagal `ABCDE` principą:
 
-Kritiškai sunkus pacientas paprastai turi ryškių kvėpavimo, kraujotakos ar neurologinės būklės sutrikimų, dažnai kelių iš karto. Tai matyti iš smarkiai pakitusių fiziologinių rodiklių. Pirmiausia reikia greitai atpažinti pavojų, stabilizuoti gyvybines funkcijas ir kartu surinkti svarbiausią informaciją apie pacientą, esamą problemą ir gretutines ligas.
+- `A` - kvėpavimo takai;
+- `B` - kvėpavimas;
+- `C` - kraujotaka;
+- `D` - neurologinė būklė;
+- `E` - viso paciento apžiūra.
 
-## Pagrindiniai prioritetai
-
-Paciento vertinimą pradėkite nuo greitos, bet nuoseklios `ABCDE` apžiūros:
-
-1. Įvertinkite kvėpavimo takus, kvėpavimą, kraujotaką, neurologinę būklę ir viso kūno apžiūrą.
-2. Tuo pat metu surinkite trumpą anamnezę: kas atsitiko, kokie pagrindiniai nusiskundimai, kokios gretutinės ligos ir koks gydymas.
-3. Prijunkite monitoravimą: `EKG`, deguonies įsotinimo (`SpO2`) ir arterinio kraujospūdžio stebėjimą.
-4. Užtikrinkite veninę prieigą.
-5. Gyvybei pavojingą problemą gydykite iš karto, dar nebaigę viso likusio vertinimo.
-
-## 2.1 lentelė. Devyni pagrindiniai rodikliai, įtariant kritinę būklę
-
-| Rodiklis | Kritinės būklės požymiai | Pagrindiniai veiksmai |
-| --- | --- | --- |
-| Kvėpavimo takai | Viršutinių kvėpavimo takų obstrukcijos požymiai | Įvertinkite ir stabilizuokite kvėpavimo takus; žr. 2.2 lentelę ir kvėpavimo takų valdymo skyrių |
-| Kvėpavimo dažnis | `<8/min.` arba `>30/min.` | Skirkite deguonį, prijunkite pulso oksimetrą, įvertinkite dujų apykaitą |
-| Arterinio kraujo prisotinimas deguonimi | `SaO2 <90 %` | Skirkite deguonį, atlikite arterinių kraujo dujų tyrimą |
-| Širdies dažnis | `<40/min.` arba `>130/min.` su organų hipoperfuzijos požymiais | Deguonis, `EKG`, veninė prieiga, skubus aritmijos įvertinimas |
-| Kraujospūdis | Sistolinis `<90 mmHg`, vidutinis arterinis spaudimas (`MAP`) `<65 mmHg` arba sistolinio spaudimo kritimas `>40 mmHg` su hipoperfuzijos požymiais | Deguonis, `EKG`, veninė prieiga, skubi priežasties paieška |
-| Perfuzija | Šalta marmurinė oda, kapiliarų prisipildymas `>2 s`, oligurija, agitacija, sąmonės slopinimas, laktatas `>4 mmol/L` | Deguonis, `EKG`, veninė prieiga, hemodinaminis vertinimas |
-| Sąmonės būklė | Blogesnė nei budri būsena pagal `AVPU`; detalesniam įvertinimui naudokite `GKS` | Stabilizuokite `ABC`, atmeskite hipoglikemiją, apsvarstykite kvėpavimo takų apsaugą |
-| Temperatūra | Kūno temperatūra `<36 °C` arba `>38 °C` su hipotenzija, hipoksemija, oligurija ar sąmonės sutrikimu | Įtarkite sepsį ar kitą kritinę sisteminę būklę |
-| Gliukozė | Gliukozė `<4 mmol/L` su hipoglikemijos požymiais | Skirkite gliukozę į veną arba gliukagoną, pakartotinai patikrinkite glikemiją |
+Vertindami pacientą kartu surinkite trumpą informaciją apie esamą problemą, aplinkybes ir gretutines ligas. Nedelsdami prijunkite stebėseną (`EKG`, deguonies saturaciją) ir užtikrinkite veninį priėjimą.
 
 ## Kvėpavimo takai ir kvėpavimas
 
-Įsitikinkite, kad kvėpavimo takai praeinami. Jei pacientas nesąmoningas, pašalinkite laisvus dantų protezus, atlikite kvėpavimo takų atvėrimo manevrus, prireikus išsiurbkite sekretą tiesiogiai matydami, naudokite pagalbines priemones.
+Įsitikinkite, kad kvėpavimo takai yra laisvi. Jei pacientas nesąmoningas, pašalinkite laisvus protezus, atlikite kvėpavimo takų atvėrimo manevrus, prireikus išsiurbkite sekretą tiesiogiai matydami kvėpavimo takus ir apsvarstykite papildomas priemones kvėpavimo takams palaikyti.
 
-Jei sąmonės lygis sumažėjęs, yra ryškus kvėpavimo nepakankamumas arba kvėpavimo dažnis `<8/min.`, apsvarstykite endotrachėjinę intubaciją. Iki tol pacientą ventiliuokite maišu su kauke arba supraglotiniu prietaisu, skirdami `100 %` deguonį.
+Jei sąmonės lygis sumažėjęs, kvėpavimo nepakankamumas ryškus arba kvėpavimo dažnis mažesnis nei `8/min.`, apsvarstykite endotrachėjinę intubaciją. Iki jos pacientą ventiliuokite maišo-kaukės sistema arba supraglotiniu prietaisu, tiekiant `100 %` deguonį.
 
-Vertindami kvėpavimą atsakykite į kelis pagrindinius klausimus:
+Kritinę būklę gali rodyti kvėpavimo dažnis mažesnis nei `8/min.` arba didesnis nei `30/min.`, dusulys, tachipnėja, gebėjimas kalbėti tik trumpais sakiniais ar pavieniais žodžiais, nerimas ir prakaitavimas. Arterinė deguonies saturacija mažesnė nei `90 %` nepaisant papildomo deguonies rodo ryškų dujų apykaitos sutrikimą.
 
-- koks kvėpavimo dažnis;
-- ar pacientas patiria kvėpavimo distresą;
-- ar gali kalbėti tik trumpais sakiniais ar pavieniais žodžiais;
-- ar yra prakaitavimas, agitacija, tachipnėja;
-- ar `SpO2 <90 %` nepaisant skiriamo deguonies.
+## Kraujotaka
 
-`<8/min.` arba `>30/min.` kvėpavimo dažnis rodo galimą kritinę būklę. Jei `SpO2` išlieka maža nepaisant papildomo deguonies, tai reiškia ryškų dujų apykaitos sutrikimą.
+Normalus arterinis kraujospūdis dar negarantuoja pakankamos organų perfuzijos, nes jį kurį laiką gali palaikyti vazokonstrikcija. Sumažėjusį širdies išmetimą dažnai rodo sumišimas, nerimas, šaltos galūnės, prakaitavimas, oligurija ir metabolinė acidozė.
 
-## 2.2 lentelė. Viršutinių kvėpavimo takų obstrukcijos įvertinimas ir stabilizavimas
+Jei širdies susitraukimų dažnis mažesnis nei `40/min.` arba didesnis nei `130/min.` ir yra gyvybei pavojingų požymių, šį sutrikimą reikia koreguoti skubiai. Jei sistolinis kraujospūdis mažesnis nei `90 mmHg`, vidutinis arterinis spaudimas (`MAP`) mažesnis nei `65 mmHg` arba sistolinis kraujospūdis nukrito daugiau nei `40 mmHg` ir yra mažo širdies išmetimo požymių, delsti negalima.
 
-| Situacija | Požymiai | Dažnos priežastys | Veiksmai |
+Atidžiai įvertinkite jungo veninį spaudimą (`JVP`), nes jis dažnai padeda suprasti hipotenzijos mechanizmą. Jei nėra plaučių edemos požymių, skirkite `500 mL` kristaloido per `15 min.`. Jei tikėtina hipovolemija arba vazodilatacija, pacientą paguldykite horizontaliai ir pakelkite lovos kojūgalį.
+
+Greitam sąmonės vertinimui naudokite `AVPU` skalę (`budrus / reaguoja į balsą / reaguoja į skausmą / nereaguoja`), o detalesniam neurologiniam įvertinimui - `Glazgo komos skalę (GKS)`.
+
+## 2.1 lentelė. Devyni svarbiausi įtariamos kritinės būklės požymiai
+
+| Rodiklis | Kritinės būklės požymiai | Veiksmai |
+| --- | --- | --- |
+| Kvėpavimo takai | Viršutinių kvėpavimo takų obstrukcijos požymiai | Žr. `2.2 lentelę` ir `105 skyrių`; nedelsdami stabilizuokite kvėpavimo takus |
+| Kvėpavimo dažnis | `<8/min.` arba `>30/min.` | Skirkite deguonį, prijunkite pulsoksimetrą, įvertinkite arterinių kraujo dujų tyrimą |
+| Arterinė deguonies saturacija | `SaO2 <90 %` | Skirkite deguonį ir atlikite arterinių kraujo dujų tyrimą |
+| Širdies susitraukimų dažnis | `<40/min.` arba `>130/min.` ir yra organų hipoperfuzijos požymių | Skirkite deguonį, prijunkite `EKG`, užtikrinkite `IV` priėjimą |
+| Kraujospūdis | `sAKS <90 mmHg`, `MAP <65 mmHg` arba `sAKS` kritimas `>40 mmHg` su organų hipoperfuzijos požymiais | Skirkite deguonį, prijunkite `EKG`, užtikrinkite `IV` priėjimą |
+| Perfuzija | Šalta marguota oda, kapiliarų prisipildymo laikas `>2 s`, sumišimas ar sumažėjęs sąmonės lygis, oligurija, laktatas `>4 mmol/L` | Skirkite deguonį, prijunkite `EKG`, užtikrinkite `IV` priėjimą |
+| Sąmonės lygis | Sumažėjęs sąmonės lygis, mažiau nei `budrus` pagal `AVPU` | Stabilizuokite kvėpavimo takus, kvėpavimą ir kraujotaką; jei pacientas nereaguoja į balsą, skubiai svarstykite intubaciją; atmesti hipoglikemiją; jei įmanoma opioidų intoksikacija, skirkite naloksono |
+| Temperatūra | Šerdinė temperatūra `<36 °C` arba `>38 °C` kartu su hipotenzija, hipoksemija, oligurija ar sąmonės sutrikimu | Įtarkite sepsį ar kitą sisteminę kritinę būklę |
+| Gliukozė kraujyje | `<4 mmol/L` ir yra hipoglikemijos požymių | Skirkite `100 mL` `20 %` gliukozės arba `200 mL` `10 %` gliukozės per `15-30 min.` `IV`, arba gliukagono `1 mg` `IV/IM/SC` |
+
+`AVPU` su apytiksle `GKS` atitiktimi: `A` - `15`, `V` - apie `12`, `P` - apie `8`, `U` - `3`.
+
+## 2.2 lentelė. Kvėpavimo takų įvertinimas ir stabilizavimas
+
+| Pacientas | Viršutinių kvėpavimo takų obstrukcijos požymiai | Galimos priežastys | Veiksmai |
 | --- | --- | --- | --- |
-| Sąmoningas pacientas | Kvėpavimo distresas, įkvėpimo stridoras, įtraukos virš krūtinkaulio, pakitęs balsas, kosulys ar springimas | Svetimkūnis, anafilaksija, angioedema | Pasodinkite, skirkite didelės tėkmės deguonį, skubiai kvieskite intubuoti galintį specialistą ir, jei reikia, LOR pagalbą; gydykite priežastį |
-| Nesąmoningas pacientas | Kvėpavimo sustojimas, stridoras, gargaliavimas, knarkimas, stenėjimas | Tie patys veiksniai, taip pat liežuvio ir minkštųjų audinių užkritimas, sekretas, kraujas, vėmalai | Atlikite galvos atlošimo ir smakro pakėlimo manevrą, pašalinkite laisvus protezus, siurbkite sekretą, skubiai kvieskite intubuoti galintį specialistą |
+| Sąmoningas | Kvėpavimo distresas, inspiracinis stridoras, jugulinė retrakcija, pakitęs balsas, kosulys ar springimas | Svetimkūnis, anafilaksija, angioedema | Pasodinkite pacientą, skirkite didelės tėkmės deguonį, skubiai kvieskite specialistą, mokantį intubuoti, ir otorinolaringologą; gydykite konkrečią priežastį, pvz., anafilaksijai skirkite adrenalino |
+| Nesąmoningas | Kvėpavimo sustojimas, inspiracinis stridoras, gargaliavimas, stenėjimas ar knarkimas | Tos pačios priežastys, taip pat liežuvio ir minkštųjų audinių subliūškimas, svetimkūnis, sekretas, kraujas ar vėmalai | Atlikite galvos atlošimo ir smakro pakėlimo manevrą, pašalinkite laisvus protezus, išsiurbkite turinį tiesiogiai matydami kvėpavimo takus, skubiai kvieskite specialistą, mokantį intubuoti, ir gydykite konkrečią priežastį |
 
-> [!IMPORTANT]
-> Kvėpavimo distresą rodo dusulys, tachipnėja, gebėjimas kalbėti tik trumpais sakiniais ar pavieniais žodžiais, agitacija ir prakaitavimas.
+Kvėpavimo distesą dažniausiai rodo dusulys, tachipnėja, gebėjimas kalbėti tik trumpais sakiniais ar pavieniais žodžiais, nerimas ir prakaitavimas.
 
-## `NEWS2` originalo kontekste
+Originale taip pat pateikiamas `nacionalinis ankstyvojo perspėjimo balas 2 (NEWS2)`. Jame vienas svarbiausių rodiklių yra `deguonies įsotinimas (SpO2)`.
 
-<!-- chart-coverage: 1,2 -->
+## NEWS2 originalo kontekste
 
-Originale pateikiamos trys `NEWS2` diagramos. Šiame konspekte paliekama tik jų esmė:
+<!-- chart-coverage: 1,2,3 -->
 
-- `NEWS2` vertina kvėpavimo dažnį, deguonies saturaciją, deguonies skyrimą, sistolinį kraujospūdį, pulsą, sąmonės būklę ir temperatūrą;
-- vienas ryškiai pakitęs rodiklis (`3` balai) jau laikomas priežastimi skubiai peržiūrėti pacientą;
-- bendras `5–6` balų rezultatas reiškia skubią peržiūrą, o `≥7` balai – skubų ar skubiosios / intensyviosios pagalbos atsaką.
+Originale pateikiami trys `NEWS2` grafikai. Tai `Royal College of Physicians` sukurta JK ankstyvojo perspėjimo balų sistema, todėl šiame skyriuje ji paliekama kaip mokomasis originalo kontekstas, o ne kaip universalus Lietuvos standartas.
 
-> [!WARNING]
-> `NEWS2` ir `ACVPU` yra JK `RCP` sistemos dalis. Lietuvos dokumentuose dažniau rasite `AVPU` ir `GKS`, o konkrečius reagavimo slenksčius lemia įstaigos vidaus tvarka ir naudojama ankstyvo blogėjimo atpažinimo sistema.
+Trumpai apie originalo grafikus:
 
-## 2.1 paveikslas. Įtariamos kritinės būklės paciento vertinimo eiga
+- `1 diagrama` rodo, kaip vertinami pagrindiniai rodikliai: kvėpavimo dažnis, `SpO2`, papildomas deguonis ar oras, sistolinis kraujospūdis, pulsas, sąmonės būklė ir temperatūra.
+- `2 diagrama` aprašo slenksčius: bendras balas `0-4` reiškia mažą riziką, `5-6` - vidutinę ir skubų įvertinimą, `7 ar daugiau` - didelę riziką ir skubią arba skubiausią reakciją; atskiras `3` viename parametre taip pat yra perspėjantis signalas.
+- `3 diagrama` sieja balą su stebėsenos dažniu ir klinikine reakcija: nuo įprastinės stebėsenos kas `12 val.` iki nuolatinės stebėsenos ir kritinių būklių komandos įsitraukimo.
 
-Grafinė schema šiame etape dar neatkurta, todėl mokymuisi naudokite tekstinę eigą:
+Jei `NEWS2` naudojamas konkrečioje įstaigoje, jį galima taikyti kaip vietinį darbo įrankį, tačiau šiame vadove jo slenksčiai nepateikiami kaip savaime galiojantis nacionalinis standartas visoms Lietuvos gydymo įstaigoms.
 
-1. Įtarkite kritinę būklę, jei yra ryškus kvėpavimo, kraujotakos ar neurologinis sutrikimas.
-2. Atlikite `ABCDE` vertinimą.
-3. Iš karto prijunkite deguonį, `EKG` monitorių ir užtikrinkite veninę prieigą.
-4. Stabilizuokite kvėpavimo takus, kvėpavimą ir kraujotaką.
-5. Pakoreguokite hipoglikemiją, jei ji nustatoma.
-6. Surinkite kryptingą anamnezę apie pagrindinę problemą, kontekstą ir gretutines ligas.
-7. Atlikite sisteminę apžiūrą ir skubius tyrimus.
-8. Toliau gydykite pagal vyraujančią klinikinę problemą arba darbinę diagnozę.
+## 2.1 rėmelis. Kritinės būklės paciento valdymo principai
 
-## 2.1 rėmelis. Kritiškai sunkaus paciento valdymo principai
-
-- Pacientą visada vertinkite ir gydykite `ABCDE` principu.
-- Pirmą įvertinimą atlikite pilnai ir vėliau reguliariai kartokite.
-- Gyvybei pavojingą problemą gydykite dar neperėję prie kitos `ABCDE` dalies.
+- Pacientą vertinkite ir gydykite pagal `ABCDE` principą.
+- Visada atlikite pilną pirminį įvertinimą ir reguliariai jį kartokite.
+- Gyvybei pavojingas problemas koreguokite prieš pereidami prie kito `ABCDE` žingsnio.
 - Po kiekvienos intervencijos įvertinkite jos poveikį.
-- Anksti atpažinkite, kada reikia papildomos pagalbos, ir jos nedelskite kviesti.
-- Išnaudokite visą komandos darbą, kad vertinimas, monitoravimas ir intervencijos vyktų lygiagrečiai.
-- Komunikuokite aiškiai ir iš anksto planuokite veiksmus.
-- Pirminio gydymo tikslas – išlaikyti pacientą gyvą ir bent kiek pagerinti jo būklę, kol nustatysite priežastį ir pradėsite tikslinį gydymą.
-
-<!-- page:32 -->
+- Greitai supraskite, kada reikės papildomos pagalbos, ir kvieskite ją anksti.
+- Išnaudokite visą komandą, kad stebėsena, veninis priėjimas ir kitos intervencijos vyktų lygiagrečiai.
+- Aiškiai komunikuokite ir iš anksto susitarkite dėl veiksmų plano.
+- Pradinio gydymo tikslas yra išlaikyti pacientą gyvą ir pasiekti bent trumpalaikį klinikinį pagerėjimą, kol bus nustatyta priežastis.
+- Atminkite, kad intervencijos ne visada suveikia iš karto, todėl po pakeitimo trumpai palaukite ir vertinkite pacientą iš naujo.
 
 ## Neurologinė būklė
 
-Sąmonę vertinkite pagal `AVPU`, o jei reikia detalesnio aprašymo – pagal `GKS`. Jei pacientas į balsą nereaguoja, anksti kvieskite specialistą, gebantį apsaugoti kvėpavimo takus, nes gali prireikti skubios intubacijos.
+Sąmonės lygį vertinkite pagal `AVPU`, o prireikus detaliau pagal `Glazgo komos skalę`. Jei pacientas nereaguoja į balsą, skubiai kvieskite specialistą, turintį pažangių kvėpavimo takų valdymo įgūdžių, nes gali prireikti neatidėliotinos endotrachėjinės intubacijos.
 
-Sumažėjus sąmonės lygiui, nedelsdami atmeskite hipoglikemiją atlikdami glikemijos tyrimą prie lovos. Jei gliukozė `<4 mmol/L`, skirkite:
+Jei sąmonės lygis sumažėjęs, pirmiausia neatmeskite hipoglikemijos - nedelsdami atlikite greitą gliukozės tyrimą. Jei gliukozė mažesnė nei `4,0 mmol/L`, skirkite `100 mL` `20 %` gliukozės arba `200 mL` `10 %` gliukozės per `15-30 min.` `IV`, arba gliukagono `1 mg` `IV/IM/SC`. Gliukozę pakartotinai patikrinkite po `10 min.`; jei ji vis dar mažesnė nei `4,0 mmol/L`, gydymą kartokite.
 
-- `100 mL` `20 %` gliukozės į veną; arba
-- `200 mL` `10 %` gliukozės į veną per `15–30 min.`; arba
-- gliukagoną `1 mg` `IV/IM/SC`, jei tai tinkama klinikinei situacijai.
+Esant nepakankamai mitybai ar alkoholio vartojimo sutrikimui, prieš gliukozę arba netrukus po jos skirkite tiamino `100 mg` `IV`, kad sumažintumėte `Wernicke` encefalopatijos riziką.
 
-Po `10 min.` glikemiją pakartotinai įvertinkite. Jei ji vis dar `<4 mmol/L`, gydymą kartokite. Jei pacientas yra išsekęs arba turi alkoholio vartojimo sutrikimą, apsvarstykite tiamino skyrimą prieš gliukozę arba netrukus po jos, kad sumažintumėte Vernikės encefalopatijos riziką.
+Jei kvėpavimo dažnis mažesnis nei `12/min.`, vyzdžiai siauri arba yra kitų duomenų apie opioidų intoksikaciją, skirkite naloksono: pirmiausia iki `400 mcg` `IV`, po to, jei reikia, `800 mcg` kas `1 min.`, o vis dar nesant atsako - vieną `2 mg` dozę. Tikslas yra atkurti kvėpavimo dažnį maždaug `12-16/min.`. Jei `IV` prieigos nėra, dozes galima leisti `IM`, tačiau tai nėra pageidaujamas kelias.
 
-Jei kvėpavimo dažnis `<12/min.`, vyzdžiai taškiniai arba yra kita priežastis įtarti opioidų perdozavimą, skirkite naloksoną. Jei yra pasikartojantys ar užsitęsę didieji traukuliai, gydykite pagal traukulių valdymo principus.
+Jei traukuliai pasikartoja arba užsitęsia, gydykite bukaliniu midazolamu, intraveniniu lorazepamu arba rektaliniu diazepamu.
 
-Greitai apžiūrėkite akis ir vyzdžius, patikrinkite sprando rigidiškumą, galūnių tonusą, jėgą ir paieškokite lateralizuoto silpnumo.
+## 2.1 paveikslas. Įtariamos kritinės būklės paciento vertinimo seka
 
-## Viso kūno apžiūra
+1. Įtarkite kritinę būklę, jei ryškiai sutrikusi kvėpavimo, kraujotakos ar neurologinė funkcija.
+2. Nedelsdami pradėkite `ABCDE` vertinimą.
+3. Tuo pat metu prijunkite deguonį, `EKG` monitorių, užtikrinkite `IV` priėjimą.
+4. Stabilizuokite kvėpavimo takus, kvėpavimą ir kraujotaką.
+5. Įvertinkite svarbiausius rodiklius pagal `2.1 lentelę` ir `NEWS2` originalo konteksto bloką.
+6. Koreguokite hipoglikemiją ir kitas tiesiogiai grėsmingas būkles.
+7. Surinkite trumpą tikslinę anamnezę apie pagrindinę problemą, aplinkybes ir gretutines ligas.
+8. Atlikite sistemingą apžiūrą.
+9. Skubiai paskirkite reikalingus tyrimus pagal `2.3 lentelę`.
+10. Toliau gydykite pagal vyraujančią klinikinę problemą arba darbinę diagnozę ir nedelskite kviesti papildomos pagalbos.
 
-Patikrinkite pilvą: ar yra skausmingumas, pilvo sienos gynyba, difuzinis pilvo skausmas. Jei pacientas šoko būklėje ir pilvas ryškiai skausmingas, įtarkite generalizuotą peritonitą, mezenterinę išemiją, sunkų pankreatitą ar plyšusią pilvo aortos aneurizmą.
+## Viso paciento apžiūra
 
-Apžiūrėkite galūnes, stuburą ir tarpvietę, ar nėra išemijos, infekcijos ar kito sepsio židinio požymių.
+Apžiūrėkite akis ir vyzdžius, patikrinkite, ar nėra sprando rigidiškumo. Greitai įvertinkite galūnių tonusą ir jėgą: ar nėra lateralizuoto silpnumo.
+
+Ieškokite pilvo skausmingumo ir pilvaplėvės dirginimo požymių. Jei pacientą vargina stiprus pilvo skausmas arba generalizuotas pilvo jautrumas ir kartu yra šokas, labiausiai tikėtinos diagnozės yra išplitęs peritonitas, mezenterinė išemija, sunkus pankreatitas arba plyšusi pilvo aortos aneurizma.
+
+Apžiūrėkite galūnes, stuburą ir tarpvietę, ieškodami išemijos arba galimo infekcijos židinio.
 
 ## Tolesnis valdymas
 
-Toliau veikite pagal vyraujančią problemą ar darbinę diagnozę. Kritiškai svarbu:
-
-- greitai atlikti reikalingus tyrimus;
-- nuolat pervertinti paciento būklę;
-- nenutraukti gyvybinių funkcijų stabilizavimo, kol ieškoma priežasties.
+Kritinės būklės paciento tyrimai pateikti `2.3 lentelėje`. Tolimesnis gydymas priklauso nuo vyraujančios klinikinės problemos arba darbinės diagnozės.
 
 ## Šokas
 
-Šokas reiškia ūminį kraujotakos nepakankamumą, kai ląstelės negali tinkamai panaudoti deguonies, todėl vystosi organų funkcijos sutrikimas ir laktatinė acidozė, dažniausiai `>2 mmol/L`.
+Šokas reiškia ūminį kraujotakos nepakankamumą, susijusį su nepakankamu deguonies panaudojimu ląstelėse, todėl vystosi organų disfunkcija ir laktatinė acidozė (`>2 mmol/L`). Kraujospūdis iš pradžių dar gali išlikti dėl kompensacinių mechanizmų, tačiau dažniausiai šoką lydi hipotenzija:
 
-Kompensaciniai mechanizmai pradžioje gali išlaikyti kraujospūdį, todėl „normalus“ arterinis spaudimas dar nereiškia, kad organų perfuzija pakankama. Hipotenzija šio skyriaus kontekste apibūdinama taip:
+- sistolinis kraujospūdis `<90 mmHg`, arba
+- `MAP <65 mmHg`, arba
+- sistolinio kraujospūdžio kritimas `>40 mmHg`.
 
-- sistolinis arterinis spaudimas `<90 mmHg`; arba
-- `MAP <65 mmHg`; arba
-- sistolinio spaudimo kritimas `>40 mmHg`.
+Iki trečdalio pacientų, hospitalizuojamų į intensyviosios terapijos skyrių, šokas daugiausia būna susijęs su sepsiu. Hipotenzijos priežastį dažnai padeda numanyti klinikiniai požymiai ir ankstyva echokardiografija.
 
-Šoką rodo ne tik spaudimo pokyčiai, bet ir sumažėjusios perfuzijos požymiai:
+## 2.3 lentelė. Kritinės būklės paciento tyrimai
 
-- sumišimas ar agitacija;
-- šaltos galūnės;
-- prakaitavimas;
-- oligurija;
-- metabolinė acidozė.
+| Skubos lygis | Tyrimai |
+| --- | --- |
+| Nedelsiant | Arterinių kraujo dujų tyrimas, `pH`, laktatas; `EKG`; gliukozė; natrio, kalio, šlapalo ir kreatinino tyrimai; bendras kraujo tyrimas |
+| Skubiai | Krūtinės ląstos rentgenograma; echokardiografija, jei yra hipotenzija ar šokas; galvos `KT`, jei sumažėjęs sąmonės lygis ar yra židininių neurologinių požymių; krešumo tyrimai, jei mažai trombocitų, įtariama koagulopatija, gelta ar purpura; biocheminis profilis; amilazė, jei yra pilvo skausmas; `CRB`; kraujo pasėliai, jei įtariamas sepsis; šlapimo testas; toksikologiniai mėginiai, jei įtariamas apsinuodijimas |
 
-Anksti apsvarstykite echokardiografiją, ypač jei šoko priežastis neaiški arba įtariate kardiogeninį mechanizmą.
+Pacientams, kuriems gresia šokas, pavyzdžiui, sergantiems ūminiu koronariniu sindromu ar pneumonija, gyvybinius rodiklius stebėkite nuolat, kad pirmuosius blogėjimo požymius atpažintumėte kuo anksčiau. Jei šokas neaiškios kilmės arba įtariate kardiogeninę priežastį, echokardiografiją verta atlikti anksti.
 
-## 2.3 lentelė. Kritiškai sunkaus paciento tyrimai
+## Prioritetai
 
-**Nedelsiant**
+Pradiniai hipotenzijos ir šoko valdymo žingsniai:
 
-- arterinės kraujo dujos, pH ir laktatas;
-- `EKG`;
-- gliukozė;
-- natris, kalis, šlapalas, kreatininas;
-- bendras kraujo tyrimas.
+1. Jei tikėtina hipovolemija arba vazodilatacija, pacientą paguldykite horizontaliai ir pakelkite lovos kojūgalį.
+2. Skirkite deguonį. Įveskite `IV` kaniulę. Prijunkite `EKG` monitorių. Patikrinkite saturaciją.
+3. Greitai įvertinkite pacientą kliniškai, ypač `JVP`, odos temperatūrą ir perfuziją.
+4. Skubius tyrimus paskirkite pagal `2.3 lentelę`.
 
-**Skubiai**
+## 2.5 lentelė. Klinikiniai požymiai, rodantys hipotenzijos priežastį
 
-- krūtinės ląstos rentgenograma;
-- echokardiografija, jei yra hipotenzija ar šokas;
-- galvos KT, jei sumažėjusi sąmonė ar yra židininė neurologinė simptomatika;
-- krešėjimo rodikliai, jei įtariama koagulopatija, gelta, purpura ar trombocitopenija;
-- biocheminis profilis;
-- amilazė, jei pilvas skausmingas ar jautrus;
-- C reaktyvusis baltymas;
-- kraujo pasėliai, jei įtariamas sepsis;
-- šlapimo juostelė;
-- toksikologiniai mėginiai, jei įtariamas apsinuodijimas.
+| Hipotenzijos priežastis | Pulso tūris | Odos temperatūra | Jungo veninis spaudimas |
+| --- | --- | --- | --- |
+| Hipovolemija | Mažas | Vėsi | Mažas |
+| Obstrukcinė arba kardiogeninė priežastis | Mažas | Vėsi | Normalus arba padidėjęs |
+| Vazodilatacija | Normalus arba padidėjęs | Šilta | Mažas |
 
 ## 2.4 lentelė. Hipotenzijos ir šoko diferencinė diagnostika
 
-**Hipovolemija**
-
-- kraujavimas;
-- skysčių netekimas su šlapimu;
-- virškinamojo trakto skysčių netekimas;
-- odos netektys, pvz. nudegimai;
-- skysčių persiskirstymas į „trečiąją erdvę“, pvz. ūminis pankreatitas.
-
-**Mechaninė širdies ar kraujotakos obstrukcija**
-
-- plaučių embolija;
-- širdies tamponada;
-- įtampos pneumotoraksas.
-
-**Širdies siurblio nepakankamumas**
-
-- ūminis miokardo infarktas;
-- ūminė miokardo išemija;
-- miokarditas, peripartinė kardiomiopatija, Takotsubo kardiomiopatija;
-- aritmija, ypač esant vožtuvų ydai ar sumažėjusiai kairiojo skilvelio funkcijai;
-- ūminė aortos ar mitralinio vožtuvo nesandarumas;
-- tarpskilvelinės pertvaros plyšimas po infarkto.
-
-**Vazodilatacija**
-
-- sepsis;
-- vaistai ir toksinai;
-- anafilaksija;
-- ūminis antinksčių nepakankamumas.
-
-## 2.5 lentelė. Klinikiniai požymiai, padedantys atskirti hipotenzijos priežastį
-
-| Priežastis | Pulso tūris | Odos temperatūra | Jungo veninis spaudimas (JVP) |
-| --- | --- | --- | --- |
-| Hipovolemija | Mažas | Vėsi | Žema |
-| Mechaninė obstrukcija ar siurblio nepakankamumas | Mažas | Vėsi | Normali arba padidėjusi |
-| Vazodilatacija | Normalus arba padidėjęs | Šilta | Žema |
-
-## Prioritetai, kai yra hipotenzija ar šokas
-
-1. Jei tikėtina hipovolemija ar vazodilatacija, paguldykite pacientą ir pakelkite lovos kojūgalį.
-2. Skirkite deguonį, įveskite veninę kaniulę, prijunkite `EKG`, įvertinkite saturaciją ir atlikite greitą klinikinį vertinimą.
-3. Atidžiai įvertinkite jungo veninį spaudimą (`JVP`), odos temperatūrą ir perfuziją.
-4. Skubiai atlikite 2.3 lentelėje nurodytus tyrimus.
-5. Jei nėra plaučių edemos požymių, skirkite `500 mL` kristaloido per `15 min.` ir po to pakartotinai įvertinkite.
-6. Jei hipotenzija išlieka, apsvarstykite šlapimo pūslės kateterizavimą diurezei sekti.
+| Kategorija | Galimos priežastys |
+| --- | --- |
+| Hipovolemija | Kraujavimas; skysčių netekimas su šlapimu; virškinamojo trakto skysčių netekimas; odos nuostoliai, pvz., nudegimai; skysčių persiskirstymas į trečiąją erdvę, pvz., ūminio pankreatito metu |
+| Obstrukcinė priežastis | Plaučių embolija; širdies tamponada; įtampos pneumotoraksas |
+| Kardiogeninė priežastis | Ūminis miokardo infarktas; ūminė miokardo išemija; miokarditas, pogimdyminė kardiomiopatija arba `Takotsubo` kardiomiopatija; aritmija, ypač esant vožtuvų patologijai ar sumažėjusiai kairiojo skilvelio funkcijai; ūminė aortos ar mitralinio vožtuvo regurgitacija; tarpskilvelinės pertvaros plyšimas po miokardo infarkto |
+| Vazodilatacija | Sepsis; vaistai ir toksinai; anafilaksija; ūminis antinksčių nepakankamumas (`Addison` krizė) |
 
 ## 2.6 lentelė. Skubios echokardiografijos indikacijos esant hipotenzijai
 
-- įtariama širdies tamponada;
-- įtariama didelė ūminė plaučių embolija;
-- hipotenzija su plaučių edema;
-- nepaaiškinama ryški hipotenzija.
+| Situacija | Įtarimą stiprinantys požymiai |
+| --- | --- |
+| Įtariama širdies tamponada | Hipotenzija ir dusulys po centrinės venos kaniuliacijos ar laikino stimuliatoriaus elektrodo įvedimo; žinomas onkologinis susirgimas; padidėjęs `JVP`; paradoksinis pulsas `>10 mmHg` |
+| Įtariama masyvi plaučių embolija | Venų tromboembolijos rizikos veiksniai; padidėjęs `JVP`; hipoksemija |
+| Hipotenzija su plaučių edema | Reikia skubiai įvertinti skilvelių funkciją ir mechanines komplikacijas |
+| Sunki neaiškios kilmės hipotenzija | Diagnozei patikslinti ir gydymui nukreipti |
 
 ## 2.2 paveikslas. Hipotenzijos ir šoko valdymas
 
-Grafinė schema šiame etape dar neatkurta, todėl mokymuisi naudokite tekstinę eigą:
+1. Patvirtinkite, kad yra hipotenzija ar šokas: `sAKS <90 mmHg`, `MAP <65 mmHg` arba `sAKS` kritimas `>40 mmHg` kartu su organų disfunkcija ir laktatine acidoze.
+2. Įvertinkite pacientą pagal `ABCDE`, prijunkite deguonį, `EKG`, užtikrinkite `IV` priėjimą.
+3. Stabilizuokite kvėpavimo takus ir kvėpavimą, koreguokite reikšmingą aritmiją.
+4. Jei tikėtina hipovolemija arba vazodilatacija, pacientą paguldykite horizontaliai ir pakelkite kojūgalį.
+5. Atlikite tikslinį klinikinį įvertinimą, apsvarstykite diferencinę diagnostiką pagal `2.4 lentelę` ir skubius tyrimus pagal `2.3 lentelę`.
+6. Jei plaučių edemos nėra, skirkite `500 mL` kristaloido per `15 min.` ir pervertinkite. Jei plaučių edema yra arba hipotenzija išlieka, skubiai atlikite echokardiografiją.
+7. Jei išlieka refrakterinė hipotenzija, pradėkite inotropų ar vazopresorių terapiją pagal klinikinę situaciją.
+8. Toliau gydykite nustatytą priežastį, svarstykite šlapimo pūslės kateterizavimą ir invazinę hemodinaminę stebėseną.
 
-1. Jei sistolinis spaudimas `<90 mmHg`, `MAP <65 mmHg` arba sistolinis spaudimas krito `>40 mmHg` ir yra organų disfunkcijos požymių, vertinkite pacientą kaip ištiktą šoko.
-2. Vertinkite pagal `ABCDE`.
-3. Prijunkite deguonį, `EKG`, veninę prieigą.
-4. Stabilizuokite kvėpavimo takus ir kvėpavimą.
-5. Ištaisykite didelę aritmiją, jei ji nustatoma.
-6. Jei tikėtina hipovolemija ar vazodilatacija, skirkite kristaloidų `500 mL` boliusą per `15 min.` ir pakartotinai įvertinkite, jei nėra plaučių edemos.
-7. Jei yra plaučių edema arba išlieka nepaaiškinama hipotenzija, atlikite skubią echokardiografiją.
-8. Nustačius priežastį, gydykite ją tikslingai ir, jei reikia, pradėkite inotropų ar vazopresorių terapiją.
+## Jei aiškiai kraujuoja
 
-## Klausimai, kuriuos reikia sau užduoti šoko metu
+Jei kraujavimo šaltinis akivaizdus, iš karto kvieskite atitinkamą specialistą, pavyzdžiui, gastroenterologą ar chirurgą. Įveskite antrą stambaus spindžio veninę kaniulę ir aktyvuokite vietinį masyvaus kraujavimo protokolą.
 
-- Ar yra akivaizdus kraujavimas iš virškinamojo trakto ar kitos vietos?
-- Ar nėra didelės aritmijos?
-- Ar `EKG` nerodo ūminio koronarinio sindromo?
-- Ar nėra plaučių edemos, rodančios kardiogeninį šoką?
-- Ar yra karščiavimas ar kiti sepsio požymiai?
-- Ar įmanoma plaučių embolija?
-- Ar gali būti įtampos pneumotoraksas?
-- Ar tai gali būti anafilaksija?
+Kol ruošiami kraujo komponentai, greitai lašinkite kristaloidus tiek, kad sistolinis kraujospūdis būtų maždaug `100 mmHg`. Kai tik įmanoma, pradėkite kraujo transfuziją pagal vietinį masyvaus kraujavimo protokolą.
 
-Jei įtariate anafilaksiją ir pacientas neseniai turėjo kontaktą su galimu alergenu, yra dilgėlinė, eritema, angioedema ar švokštimas, gydykite kaip anafilaksiją ir skirkite adrenaliną pagal galiojantį anafilaksijos algoritmą.
+Siektina hemoglobino koncentracija yra apie `80 g/L`. Kartu koreguokite krešėjimo sutrikimus:
 
-## Jei akivaizdus kraujavimas
-
-- Kvieskite atitinkamą specialistą, pvz. gastroenterologą ar chirurgą.
-- Įveskite antrą stambią veninę kaniulę.
-- Aktyvuokite vietinį masinio kraujavimo protokolą.
-- Kol ruošiami kraujo komponentai, greitai skirkite kristaloidus, siekdami maždaug `100 mmHg` sistolinio spaudimo.
-- Gavus galimybę, pradėkite kraujo komponentų transfuziją.
-- Koreguokite krešėjimo sutrikimus, trombocitopeniją, fibrinogeno stoką ir hipokalcemiją pagal vietinį protokolą.
-- Apsvarstykite traneksamo rūgštį.
+- jei protrombino laikas `>1,5` karto viršija kontrolę, skirkite vitamino `K 10 mg IV` ir `2` vienetus šviežiai šaldytos plazmos;
+- jei trombocitų `<50 x 10^9/L`, skirkite trombocitų koncentrato;
+- jei fibrinogeno `<1,5 g/L`, skirkite krioprecipitato;
+- apsvarstykite traneksamo rūgštį;
+- koreguokite hipokalcemiją ir palaikykite jonizuotą kalcį `>1,13 mmol/L`.
 
 ## Kardiogeninis šokas
 
-Kardiogeninis šokas yra dažna šoko priežastis. Jam būdinga hipotenzija kartu su plaučių edema, dažniausiai dėl kairiojo skilvelio nepakankamumo. Mirštamumas išlieka didelis, todėl šią būklę reikia atpažinti ir gydyti kuo anksčiau.
+Kardiogeninis šokas yra viena dažniausių šoko formų ir pasižymi dideliu mirštamumu ligoninėje. Dažniausiai jis pasireiškia hipotenzija kartu su plaučių edema ir dažniausiai susijęs su kairiojo skilvelio nepakankamumu. Kadangi gydymo logika čia skiriasi nuo hipovoleminio ar vazodilatacinio šoko, kardiogeninį šoką reikia atpažinti anksti.
 
-### Prioritetai
+## Kardiogeninio šoko prioritetai
 
-- koreguokite dideles aritmijas;
-- jei yra `ST` pakilimo ūminio koronarinio sindromo požymių, kuo greičiau organizuokite perkutaninę koronarinę intervenciją;
-- atlikite skubią echokardiografiją;
-- didinkite įkvepiamo deguonies koncentraciją, siekdami `SpO2 >90 %` arba arterinio `PaO2 >8 kPa`;
-- jei nepavyksta palaikyti pakankamos oksigenacijos, apsvarstykite `CPAP`, intubaciją ir dirbtinę plaučių ventiliaciją;
-- prireikus pradėkite inotropų ar vazopresorių terapiją;
-- diuretikus skirkite tik tada, kai padidėjus širdies išstumiamajam tūriui išlieka skysčių perkrova.
+- Koreguokite reikšmingas aritmijas.
+- Jei `EKG` rodo `ST` segmento pakilimo ūminį koronarinį sindromą, kuo anksčiau svarstykite pirminę angioplastiką.
+- Skubiai atlikite echokardiografiją, kad įvertintumėte dešiniojo ir kairiojo skilvelio funkciją ir atmestumėte tarpskilvelinės pertvaros plyšimą, širdies tamponadą bei ūminę aortos ar mitralinio vožtuvo regurgitaciją.
+- Didinkite įkvepiamo deguonies koncentraciją ir siekite saturacijos `>90 %` arba arterinio `PaO2 >8 kPa`.
+- Jei to nepakanka su `60 %` deguonies, svarstykite `CPAP`; kai kuriems pacientams gali prireikti intubacijos ir dirbtinės plaučių ventiliacijos.
+- Apsvarstykite inotropų ir vazopresorių terapiją.
+- Diuretikai kardiogeninio šoko pradžioje dažnai mažai veiksmingi, tačiau padidėjus širdies išmetimui ir esant skysčių perkrovai galima skirti furozemido `40 mg IV`.
+
+## 2.9 lentelė. Inotropų ir vazopresorių dozės
+
+| Vaistas | Dozė | Poveikis |
+| --- | --- | --- |
+| Adrenalinas | `0,05 mcg/kg/min.` | `beta-1` inotropinis ir `beta-2` vazodilatacinis poveikis |
+| Adrenalinas | `0,05-5 mcg/kg/min.` | `beta-1` inotropinis ir `alpha-1` vazokonstrikcinis poveikis |
+| Dobutaminas | `5-40 mcg/kg/min.` | `beta-1` inotropinis ir `beta-2` vazodilatacinis poveikis |
+| Dopaminas | `5-10 mcg/kg/min.` | `beta-1` inotropinis poveikis |
+| Dopaminas | `10-40 mcg/kg/min.` | `alpha-1` vazokonstrikcinis poveikis |
+| Noradrenalinas | `0,05-5 mcg/kg/min.` | `alpha-1` vazokonstrikcinis ir `beta-1` inotropinis poveikis |
+| Milrinonas | `0,375-0,75 mcg/kg/min.` | Fosfodiesterazės inhibitorius; didina kontraktilumą ir plečia kraujagysles |
 
 ## 2.7 lentelė. Echokardiografiniai radiniai esant hipotenzijai
 
-| Priežastis | Apatinė tuščioji vena | Kairysis skilvelis | Dešinysis skilvelis |
-| --- | --- | --- | --- |
-| Hipovolemija | Subliuškusi | Mažas, susitraukia stipriai | Mažas, susitraukia stipriai |
-| Sepsis | Dažnai subliuškusi | Normalus arba išsiplėtęs; funkcija įvairi | Normalus arba išsiplėtęs; funkcija įvairi |
-| Kairiojo skilvelio nepakankamumas dėl išemijos | Normali arba išsiplėtusi | Išsiplėtęs, susitraukimas sumažėjęs regioniškai ar globaliai | Dažniausiai normalus |
-| Didelė ūminė plaučių embolija | Išsiplėtusi | Normalus arba mažas | Išsiplėtęs, funkcija sumažėjusi |
-| Širdies tamponada | Išsiplėtusi | Normalus arba mažas | Diastolinis sienelės kolapsas |
-| Dešiniojo skilvelio infarktas | Išsiplėtusi | Normalus arba padidėjęs, jei kartu yra kairiojo skilvelio pažeidimas | Išsiplėtęs, funkcija sumažėjusi |
+| Hipotenzijos priežastis | `IVC` | `LV` dydis | `LV` susitraukimas | `RV` dydis | `RV` susitraukimas |
+| --- | --- | --- | --- | --- | --- |
+| Hipovolemija | Suplokštėjusi | Mažas | Padidėjęs | Mažas | Padidėjęs |
+| Sepsis | Suplokštėjusi | Normalus arba padidėjęs | Normalus, sumažėjęs arba padidėjęs | Normalus arba padidėjęs | Normalus arba sumažėjęs |
+| Kairiojo skilvelio disfunkcija dėl išemijos | Normalus arba išsiplėtęs | Padidėjęs | Regioniškai arba globaliai sumažėjęs | Dažniausiai normalus | Dažniausiai normalus, išskyrus kartu esant dešiniojo skilvelio infarktui |
+| Masyvi plaučių embolija | Išsiplėtusi | Normalus arba mažas | Normalus arba padidėjęs | Padidėjęs | Sumažėjęs |
+| Širdies tamponada | Išsiplėtusi | Normalus arba mažas | Normalus arba padidėjęs | Normalus arba mažas | Diastolinis laisvosios sienelės kolapsas |
+| Dešiniojo skilvelio infarktas | Išsiplėtusi | Normalus arba padidėjęs, jei kartu yra apatinis kairiojo skilvelio infarktas | Normalus arba sumažėjęs | Padidėjęs | Sumažėjęs |
 
-## 2.8 lentelė. Inotropų ir vazopresorių parinkimas
+## 2.8 lentelė. Inotropų ir vazopresorių pasirinkimas
 
-| Hipotenzijos priežastis | Tinkamiausia terapija pagal originalo lentelę |
+| Hipotenzijos priežastis | Pasirenkamas gydymas |
 | --- | --- |
-| Kairiojo skilvelio nepakankamumas | Dobutaminas arba milrinonas, jei sistolinis spaudimas `>90 mmHg` |
-| Dešiniojo skilvelio infarktas | Dobutaminas, jei sistolinis spaudimas `80–90 mmHg` |
-| Plaučių embolija | Noradrenalinas, jei sistolinis spaudimas `<80 mmHg` |
-| Širdies tamponada, kol laukiama perikardiocentezės | Noradrenalinas |
-| Septinis šokas | Noradrenalinas; jei mažas širdies išstumiamasis tūris, pridėkite dobutamino |
+| Kairiojo skilvelio nepakankamumas | Dobutaminas arba milrinonas, jei `sAKS >90 mmHg`; kai kuriais atvejais digoksinas |
+| Dešiniojo skilvelio infarktas | Dobutaminas, jei `sAKS 80-90 mmHg` |
+| Plaučių embolija | Noradrenalinas, jei `sAKS <80 mmHg` |
+| Širdies tamponada laukiant perikardiocentezės | Noradrenalinas |
+| Septinis šokas | Noradrenalinas; jei širdies išmetimas mažas, pridėkite dobutamino |
 | Anafilaksinis šokas | Adrenalinas |
 
-## 2.9 lentelė. Inotropų ir vazopresorių dozės pagal originalo lentelę
+Jei sistolinis kraujospūdis pakilo bent iki `100 mmHg`, galima pradėti mažos dozės nitratų infuziją, pavyzdžiui, izosorbido dinitrato `2 mg/val.`. Jei pacientas negerėja, svarstykite hemodinaminę stebėseną pulso bangos kontūro arba termodiliucijos metodais, kad gydymą galėtumėte titruoti tiksliau. Jei įtariate chirurgiškai koreguojamą priežastį, pavyzdžiui, papiliarinio raumens plyšimą, arba ūminę miokardo išemiją be infarkto, gydymą aptarkite su kardiologu. Kai kuriems pacientams gali prireikti `ECMO` ar kitos mechaninės kraujotakos palaikymo priemonės.
 
-| Vaistas | Dozė `µg/kg/min.` | Pagrindinis poveikis |
-| --- | --- | --- |
-| Adrenalinas | `0,05`<br>`0,05–5` | Mažesnėmis dozėmis – `beta-1` inotropija ir `beta-2` vazodilatacija; didesnėmis – taip pat `alpha-1` vazokonstrikcija |
-| Dobutaminas | `5–40` | `beta-1` inotropija ir `beta-2` vazodilatacija |
-| Dopaminas | `5–10`<br>`10–40` | Mažesnėmis dozėmis – `beta-1` inotropija; didesnėmis – `alpha-1` vazokonstrikcija |
-| Noradrenalinas | `0,05–5` | `alpha-1` vazokonstrikcija ir `beta-1` inotropija |
-| Milrinonas | `0,375–0,75` | Fosfodiesterazės inhibitorius; inotropinis poveikis ir vazodilatacija |
+## Tolesnis hipotenzijos ir šoko valdymas
 
-<!-- page:38 -->
+Pagrindiniai tikslai:
 
-## Tolesnis šoko valdymas
-
-Toliau siekite penkių pagrindinių tikslų:
-
-1. **Nustatyti priežastį ir skirti tikslinį gydymą.**
-   Pvz., perikardiocentezė esant tamponadai, perkutaninė koronarinė intervencija esant ūminiam koronariniam sindromui, chirurginis gydymas esant mechaninei vožtuvo ar pertvaros komplikacijai.
-
-2. **Koreguoti aritmijas.**
-   Gyvybei pavojingą skilvelinę ar supraventrikulinę tachikardiją gydykite elektrine kardioverzija. Sunkią bradikardiją gydykite atropinu, išoriniu širdies stimuliavimu arba laikinuoju širdies stimuliatoriumi, jei reikia.
-
-3. **Koreguoti hipovolemiją.**
-   Jei hipovolemija akivaizdi, skirkite atitinkamų skysčių ar kraujo komponentų. Jei įrodymai ne tokie aiškūs, bet skysčių perkrovos nėra, skirkite diagnostinį skysčių boliusą ir stebėkite atsaką.
-
-4. **Koreguoti hipoksiją ir biocheminius sutrikimus.**
-   Palaikykite `PaO2 >8 kPa`, arterinę saturaciją `>90 %`. Jei `pH <7,1` ir būklė blogėja, galima svarstyti `50 mL` `8,4 %` natrio bikarbonato, kol gydoma pagrindinė priežastis.
-
-5. **Pradėti inotropų ar vazopresorių terapiją, jei hipotenzija išlieka.**
-   Jei nepaisant hipovolemijos korekcijos ar jos atmetimo sistolinis spaudimas išlieka `<90 mmHg` arba `MAP <65 mmHg`, pradėkite hemodinaminį palaikymą ir tuo pačiu ieškokite priežasties.
+- nustatyti priežastį ir skirti tikslinį gydymą, pavyzdžiui, perikardiocentezę tamponados atveju, `PCI` ūminio koronarinio sindromo atveju ar chirurginę korekciją esant mechaninei komplikacijai;
+- koreguoti širdies ritmo sutrikimus;
+- koreguoti hipovolemiją, vengiant skysčių perkrovos;
+- koreguoti hipoksemiją ir biocheminius sutrikimus;
+- pradėti inotropų ar vazopresorių terapiją, jei hipotenzija išlieka.
 
 ## Santrauka
 
-- Kritiškai sunkų pacientą visada vertinkite `ABCDE` principu.
-- Pagrindiniai pavojų rodikliai yra kvėpavimo dažnis, saturacija, kraujospūdis, pulsas, perfuzija, sąmonė, temperatūra ir glikemija.
-- `NEWS2` naudinga kaip mokomoji sistema, tačiau Lietuvos praktikoje sąmonės lygį dažniau apibūdina `AVPU` ir `GKS`.
-- Esant hipotenzijai ar šokui, vien „normalus“ kraujospūdis neatmeta hipoperfuzijos.
-- Šoko metu svarbiausia kuo greičiau nustatyti priežastį ir ją gydyti tikslingai.
-- Kardiogeninio šoko atveju anksti svarstykite echokardiografiją, intervencinę kardiologiją ir intensyviosios terapijos komandos įtraukimą.
+1. Nustatykite diagnozę ir skirkite tikslinį gydymą.
+   - Apsvarstykite priežastis pagal `2.4 lentelę`.
+   - Jei diagnozė neaiški, atlikite echokardiografiją.
+   - Jei pacientas ilgai vartojo steroidus arba įtariate ūminį antinksčių nepakankamumą, skirkite hidrokortizono `200 mg IV`.
+2. Koreguokite širdies ritmo sutrikimus.
+   - Skilvelinę tachikardiją arba supraventrikulinę tachikardiją su gyvybei pavojingais požymiais gydykite sinchronine elektrine kardioversija.
+   - Esant ūminei prieširdžių virpėjimo atakai ir skilvelių dažniui `>140/min.`, po hipoksijos ir elektrolitų korekcijos svarstykite elektrinę kardioversiją; jei jos nereikia iš karto, skirkite amjodaroną `IV`.
+   - Esant sunkiai bradikardijai (`<40/min.`), skirkite atropino `0,6-1,2 mg IV`, dozes kartodami kas `5 min.` iki bendros `3 mg` dozės; jei atsakas menkas, naudokite transkutaninį stimuliavimą arba laikinojo stimuliatoriaus laidą.
+3. Koreguokite hipovolemiją.
+   - Jei hipovolemija aiški, skirkite kraują, kristaloidus arba kitus skysčius pagal priežastį.
+   - Jei dėl hipovolemijos nesate tikri, bet nėra skysčių perkrovos požymių, atlikite diagnostinį skysčių boliusą.
+   - Jei `sAKS <90 mmHg` arba `MAP <65 mmHg` išlieka nepaisant hipovolemijos korekcijos, ieškokite kitų priežasčių, dažniausiai sepsio.
+   - Kraujavimo metu santykinę hipotenziją kartais galima toleruoti, kol kraujavimas nesustabdytas chirurgiškai.
+4. Koreguokite hipoksemiją ir biocheminius sutrikimus.
+   - Palaikykite `PaO2 >8 kPa` ir arterinę saturaciją `>90 %`.
+   - Sunki metabolinė acidozė gali didinti hipotenziją; svarbiausia nustatyti priežastį.
+   - Jei arterinis `pH <7,1` ir toliau blogėja, galima svarstyti `50 mL` `8,4 %` natrio bikarbonato, kol laukiate pagrindinės ligos gydymo efekto.
+5. Naudokite inotropus ir vazopresorius, jei hipotenzija refrakterinė.
+   - Jei `sAKS <90 mmHg` arba `MAP <65 mmHg` ir išlieka hipoperfuzijos požymių, pradėkite inotropų ar vazopresorių terapiją, lygiagrečiai ieškodami priežasties.
+   - Vien sumažėjusi kairiojo skilvelio išstūmio frakcija be hipoperfuzijos požymių nėra indikacija inotropams.
+   - Rekomenduojama invazinė arterinio ir centrinio veninio spaudimo stebėsena.
+   - Terapijos pasirinkimas ir dozės pateikti `2.8` ir `2.9 lentelėse`.
+   - Kai kuriais atvejais būtina aptarti intraaortinę balioninę kontrapulsaciją ar kairiojo skilvelio pagalbinį prietaisą kaip tiltą iki galutinio gydymo.
 
-## Tolesnis skaitymas
+## Tolimesni šaltiniai
 
-- [National Early Warning Score (NEWS) 2](https://www.rcp.ac.uk/improving-care/resources/national-early-warning-score-news-2)
-- [SAM sunkios traumos metodika](https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/Metodiniai%20dokumentai/SUNKIOS%20TRAUMOS.pdf)
-- [GMP tarnybos duomenų aprašo dokumentas](https://greitojipagalba.lt/wp-content/uploads/2026/03/Informavimas_del_AD_GMP_IS_new.pdf)
-- Originalo bibliografijoje papildomai nurodyti šokui, hemodinamikai ir kardiogeniniam šokui skirti intensyviosios terapijos bei kardiologijos straipsniai.
+- [Francis GS, Bartos JA, Adatya S. Inotropes](https://pubmed.ncbi.nlm.nih.gov/24768842/)
+- [Harjola V-P, Mebazaa A, Celutkiene J. Contemporary management of acute right ventricular failure](https://pubmed.ncbi.nlm.nih.gov/26597290/)
+- [Levy B, Bastien O, Bendjelid K. Experts' recommendations for the management of adult patients with cardiogenic shock](https://annalsofintensivecare.springeropen.com/articles/10.1186/s13613-015-0052-1)
+- [Royal College of Physicians. National Early Warning Score (NEWS) 2](https://www.rcp.ac.uk/improving-care/resources/national-early-warning-score-news-2/)
+- [Soar J., Deakin C. D., Nolan J. P. ir kt. Adult advanced life support guidelines](https://www.resus.org.uk/library/2021-resuscitation-guidelines/adult-advanced-life-support-guidelines)

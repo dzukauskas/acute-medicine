@@ -1,7 +1,7 @@
-# 2 skyrius. The critically ill patient
+# 002 The critically ill patient
 
-- Puslapiai: 28–39
-- PDF: `books/acute-medicine/source/pdf/Acute Medicine A Practical Guide to the Management of Medical Emergencies (Mridula Rajwani (Editor) etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf`
+- Skyrius: `002 The critically ill patient`
+- Puslapiai: `28-39`
 - Angliškas pagalbinis failas: `books/acute-medicine/source/chapters-en/002-the-critically-ill-patient.md`
 - Lietuviškas failas: `books/acute-medicine/lt/chapters/002-the-critically-ill-patient.md`
 
@@ -13,141 +13,121 @@
 - Priorities
 - Airway and breathing
 - Circulation
-- Neurological status
-- Exposure
+- Neurological status (`disability`)
+- Exposure (`entire examination`)
 - Further management
 - Shock
+- General
+- Priorities
+- If there is obvious haemorrhage
 - Cardiogenic shock
+- Priorities
+- Further management
 - Summary
-- Further reading
 
 ### Lentelės
 
 - Table 2.1 Nine key observations in suspected critical illness
 - Table 2.2 Assessment and stabilisation of the airway
 - Table 2.3 Investigation of the critically ill patient
-- Table 2.4 Differential diagnosis of hypotension and shock
 - Table 2.5 Clinical signs pointing to the cause of hypotension
+- Table 2.4 Differential diagnosis of hypotension and shock
 - Table 2.6 Indications for urgent echocardiography in the hypotensive patient
+- Table 2.9 Inotropic/vasopressor therapy: dosages
 - Table 2.7 Echocardiographic findings in hypotension
 - Table 2.8 Choice of inotropic/vasopressor therapy
-- Table 2.9 Inotropic/vasopressor therapy: dosages
 
 ### Paveikslai / schemos / algoritmai
 
+- Chart 1 The NEWS2 scoring system
+- Chart 2 NEWS2 thresholds and triggers
+- Chart 3 Clinical response to the NEWS2 trigger thresholds
 - Figure 2.1 Approach to the patient with suspected critical illness
 - Figure 2.2 Management of hypotension and shock
 
 ### Rėmeliai / papildomi blokai
 
 - Box 2.1 The critically ill patient: principles of management
-- Chart 1 NEWS2 scoring system
-- Chart 2 NEWS2 thresholds and triggers
-- Chart 3 Clinical response to the NEWS2 trigger thresholds
 
 ## Rizikingi terminai
 
 - critically ill patient
 - critical illness
-- airway obstruction
-- respiratory distress
+- ABCDE
+- ACVPU
+- AVPU
+- NEWS2
 - organ perfusion
 - low cardiac output
-- jugular venous pressure
-- ACVPU
-- NEWS2
+- jugular venous pressure (JVP)
+- fluid challenge
 - shock
 - cardiogenic shock
-- fluid challenge
+- cardiac obstruction
+- cardiac pump failure
+- pulmonary oedema
 - inotrope
 - vasopressor
-- pulmonary oedema
+- inferior vena cava (IVC)
+- LV
+- RV
 
-## Lietuvos šaltiniai
+## Naudoti Lietuvos šaltiniai
 
-| Šaltinis | Tipas | Data / versija | Kodėl naudotas |
-| --- | --- | --- | --- |
-| [SAM sunkios traumos metodika](https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/Metodiniai%20dokumentai/SUNKIOS%20TRAUMOS.pdf) | oficiali metodika | peržiūrėta 2026-03-24 | ABCDE logikai, pirminiam vertinimui ir `AVPU / GKS` vartosenai Lietuvos praktikoje |
-| [GMP tarnybos duomenų aprašo dokumentas](https://greitojipagalba.lt/wp-content/uploads/2026/03/Informavimas_del_AD_GMP_IS_new.pdf) | oficialus GMP dokumentas | 2026-03 | Patvirtina, kad Lietuvos GMP dokumentuose vartojami `AVPU` ir `GKS`, ne `ACVPU` |
-| [SAM mokymo programa dėl cukrinio diabeto](https://sam.lrv.lt/uploads/sam/documents/files/mokymo%20programa.pdf) | mokymo programa | peržiūrėta 2026-03-24 | Hipoglikemijos riba `<4 mmol/l` mokomajame Lietuvos kontekste |
-| [LSMU straipsnis apie hipoglikemiją sergant diabetu](https://lsmu.lt/cris/entities/publication/8f86737c-326d-4f40-b866-f7b4f14f8059) | akademinis šaltinis | 2022; peržiūrėta 2026-03-24 | Papildo vietinį kontekstą dėl hipoglikemijos ir `4 mmol/l` orientyro |
+- 2026-03-25, Lietuvos SAM metodinis dokumentas `Sunkios traumos`: pateikia oficialią vartoseną `kritinės būklės`, `kritinės būklės pacientas`, `AVPU`, `ABCDE` ir kritinių būklių atpažinimo logiką. URL: `https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/Metodiniai%20dokumentai/SUNKIOS%20TRAUMOS.pdf`
+- 2026-03-25, LSMU publikacija `Kardiogeninis šokas`: patvirtina nusistovėjusią formą `kardiogeninis šokas`. URL: `https://lsmu.lt/cris/entities/publication/28a8152c-14aa-4d93-8997-fbf60a6b3a9a`
+- 2026-03-25, LSMU publikacijos įrašas apie plaučių arterijos tromboemboliją: vartojama forma `obstrukcinis šokas`, todėl `pump failure` + `cardiac obstruction` junginyje tinkamesnė LT kategorinė forma yra `obstrukcinė arba kardiogeninė priežastis`, ne pažodinis vertinys apie `siurblį`. URL: `https://lsmu.lt/cris/entities/publication/b6f7279f-2781-44ba-977e-d1b73003d3c0`
+- 2026-03-25, e-seimo COVID-19 gydymo gairėse `NEWS2` minima kaip specifinis vertinimo įrankis tam tikrame kontekste, bet ne kaip visoms kritinėms būklėms taikomas universalus nacionalinis standartas. URL: `https://e-seimas.lrs.lt/rs/legalact/TAD/8240eae06f5c11ea80d605b3c706f034/`
 
-## Europos / tarptautiniai šaltiniai
+## Naudoti Europos / tarptautiniai šaltiniai
 
-| Šaltinis | Tipas | Data / versija | Kodėl naudotas |
-| --- | --- | --- | --- |
-| [National Early Warning Score (NEWS) 2](https://www.rcp.ac.uk/improving-care/resources/national-early-warning-score-news-2) | oficialus RCP šaltinis | peržiūrėta 2026-03-24 | Originalo `NEWS2` ir `ACVPU` konteksto paaiškinimui |
-| [NEWS2 final report PDF](https://www.rcp.ac.uk/media/a4ibkkbf/news2-final-report_0_0.pdf) | oficialus RCP PDF | peržiūrėta 2026-03-24 | Patvirtina, kad `C` `ACVPU` skalėje reiškia new confusion ir yra JK `NEWS2` dalis |
+- 2026-03-25, `Royal College of Physicians` `NEWS2` ataskaita: naudota tik originalo grafinių lentelių reikšmei suprasti. URL: `https://www.rcp.ac.uk/improving-care/resources/national-early-warning-score-news-2/`
+- 2026-03-25, source PDF, p. 28-39: naudotas kaip kanoninis apimties, algoritmų ir lentelių šaltinis.
 
 ## Lokalizacijos sprendimai
 
-- Skyrius rašomas nuo nulio pagal PDF puslapius 28–39, ne pagal ankstesnius `study/` medžio failus.
-- Originalo `ACVPU` adaptuotas į Lietuvos kontekstui labiau tinkamą `AVPU`, o detalesniam neurologiniam įvertinimui nurodomas `GKS`.
-- `NEWS2` paliekama kaip mokomasis originalo kontekstas, bet ne kaip numatytoji Lietuvos reagavimo sistema.
-- Pagrindinės fiziologinės ribos, hipoglikemijos korekcijos ir šoko algoritmų logika verčiama kaip studijų konspektas; vietose, kur originalas aiškiai remiasi JK sistema, paliekamas paaiškinantis callout.
+- Skyriaus pavadinimui pasirenkama forma `Kritinės būklės pacientas`, o ne `kritiškai sunkus pacientas`, nes būtent taip kritines būkles apibrėžia SAM metodinė vartosena.
+- `ACVPU` neperkeliama kaip numatytoji LT praktikos santrumpa; greitam sąmonės įvertinimui naudojama `AVPU`, o detalesniam neurologiniam vertinimui `Glazgo komos skalė (GKS)`.
+- `NEWS2` paliekamas kaip JK mokomasis kontekstas; LT tekste jis neįvardijamas kaip universalus nacionalinis standartas.
+- `Cardiac obstruction or pump failure` ir `Cardiac pump failure` verčiami per kliniškai nusistovėjusias kategorijas `obstrukcinė` ir `kardiogeninė` priežastis, o ne per pažodinį `siurblio nepakankamumą`.
+- `organ perfusion` paliekama `organų perfuzija`, ne `organų aprūpinimas krauju`, kai kalbama apie hemodinamiką.
+- `ICU` verčiama `intensyviosios terapijos skyrius`.
 
 ## Vietos, kur originalas pakeistas pagal Lietuvos praktiką
 
-- `ACVPU` perrašyta į `AVPU / GKS` logiką.
-- `NEWS2` slenksčiai pateikiami kaip JK RCP sistema, o ne Lietuvos nacionalinis standartas.
-- Abejotinos ar iš OCR iškraipytos nuorodos į kitus skyrius tikslinamos pagal aktyvų šios knygos indeksą.
+- Trys `NEWS2` chart'ai LT variante sutraukiami į vieną aiškų kontekstinį bloką su paaiškinimu, kad tai yra originalo JK balų sistema.
+- `ACVPU` pakeičiama LT praktikai artimesniu `AVPU` ir `GKS` paaiškinimu.
+- Originalo `specialist registrar level` ir panašūs NHS eskalavimo terminai neperkeliami pažodžiui; paliekama bendresnė nuoroda į skubų vyresnio gydytojo / kritinių būklių komandos įvertinimą pagal vietinę tvarką.
 
 ## Kalbinės rizikos vietos
 
-- `critical illness`, `organ perfusion`, `low cardiac output`, `fluid challenge` lengvai virsta kalkėmis, jei neperrašomi į natūralią LT medicininę prozą.
-- Šoko ir hemodinamikos sakiniai turi daug sąlyginių išlygų, todėl juos reikia skaidyti į trumpesnius, aiškesnius sakinius.
-- Didelės lentelės gali tapti neįskaitomos, jei bus verčiamos pažodžiui; pirmenybė teikiama aiškiai markdown formai.
+- Hemodinaminė proza apie perfuziją, JVP, vazodilataciją ir hipovolemiją lengvai nuslysta į EN karkasą.
+- `current problem, context and co-morbidities` linkęs virsti gremėzdišku pažodiniu sakiniu.
+- `dominant clinical problem or working diagnosis` reikalauja aiškaus LT veiksmo, ne abstrakčios nominalizacijos.
+- Lentelėse 2.4 ir 2.5 didžiausia kolokacinė rizika yra šoko kategorijų ir hipotenzijos priežasčių pavadinimai.
+- Skiltis apie inotropus ir vazopresorius turi likti techniškai tiksli, bet ne mechaniškai pažodinė.
 
 ## Anti-calque perrašymo pastabos
 
-- `critically ill patient` verčiamas kaip `kritiškai sunkus pacientas`, ne pažodine konstrukcija su `kritiškai sergantis`.
-- Vengti vardinių konstrukcijų kaip `atlikti įvertinimą`, `vykdyti stebėjimą`, `atlikti korekciją`; vietoj jų vartoti veiksmažodžius.
-- Biurokratines procedūrines formuluotes perrašyti į tiesioginius klinikinius nurodymus.
-
-## Atviros abejonės
-
-- 2.1 ir 2.2 paveikslų grafinės LT versijos dar nesukurtos; šiame etape paliekamos tekstinės algoritmo santraukos.
-- Inotropų ir vazopresorių dozės paliekamos kaip originalo studijų lentelė; jei vėliau skyrius bus naudojamas kaip praktinė klinikinė atmintinė, verta papildomai sutikrinti su naujesniais intensyviosios terapijos šaltiniais.
+- Vengti `galvokite apie sepsį`; rinktis `įtarkite sepsį`.
+- Vengti `tolesni veiksmai priklauso`; rinktis `toliau veikite / gydykite pagal...`.
+- Vengti `reikia svarstyti endotrachėjinę intubaciją`; rinktis `apsvarstykite endotrachėjinę intubaciją`.
+- Vengti `siurblio nepakankamumo`; rinktis kliniškai nusistovėjusias kategorijas `kardiogeninė` ar `obstrukcinė` priežastis.
+- Vengti ilgo NHS organizacinio žargono; LT tekste svarbus klinikinis sprendimas, o ne britiško vaidmens pavadinimo kalkė.
 
 ## Adjudication sprendimai
 
-- `narrative-08-shock`: `B` - pasirinkta skaidyta LT proza, kad perfuzijos ir hipotenzijos logika liktų aiški be EN karkaso.
-- `narrative-09-cardiogenic-shock`: `B` - palikta aiški hemodinaminė seka, bet sakinys sutrumpintas ir suaktyvintas.
-- `algorithm-2.1-approach-to-the-patient-with-suspected-critical-illness`: `B` - pasirinkta trumpa komandiška eiga, nes ji geriau tinka `ABCDE` veiksmų sekai.
-- `algorithm-2.2-management-of-hypotension-and-shock`: `B` - pasirinkta glausta veiksmų seka, išlaikant diagnostinę ir hemodinaminę logiką.
-- `callout-2.1-the-critically-ill-patient-principles-of-management`: `B` - principai perrašyti į trumpus aktyvius LT punktus vietoje procedūrinio EN karkaso.
-- `chart-1-news2-scoring-system`: `hibridinis` - trys originalo diagramos sutrauktos į vieną LT santrauką, bet išlaikytas aiškus JK konteksto atskyrimas.
-- `chart-2-news2-thresholds-and-triggers`: `hibridinis` - slenksčiai palikti kaip originalo sistemos paaiškinimas, ne kaip Lietuvos standartas.
-- `chart-3-clinical-response-to-the-news2-trigger-thresholds`: `hibridinis` - atsako logika palikta mokomajam kontekstui, bet neperkelta kaip vietinė procedūra.
-
-## Chapter pack ir review kilpa
-
-- Sugeneruotas `chapter_packs/002-the-critically-ill-patient.yaml`.
-- Seed ir skyriaus-specific formuluotės perkeltos į `gold_phrases.tsv`.
-- Atrinkti blokiniai etalonai `gold_sections/`.
-- Lokalizacijos override'ai suvesti į `localization_overrides.tsv`.
-- Sugeneruotas `adjudication_packs/002-the-critically-ill-patient.yaml`.
-- Rankinio review pėdsakai suvesti į `review_deltas/002-the-critically-ill-patient.tsv`.
-- Regresijos pavyzdžiai palikti `regression_examples/002-the-critically-ill-patient.jsonl`.
+- `narrative-08-shock` - `hibridinis` - palikta originalo fiziologinė logika, bet hemodinaminė proza perrašyta natūralia LT medicinine kalba.
+- `narrative-12-cardiogenic-shock` - `hibridinis` - išlaikytas klinikinis turinys, bet išvengta pažodinių EN konstrukcijų ir sustiprinta LT kardiologinė kolokacija.
+- `chart-1-the-news2-scoring-system` - `B` - vietoje tiesioginio grafinio vertimo paliktas LT kontekstinis paaiškinimas apie JK `NEWS2` sistemos paskirtį.
+- `chart-2-news2-thresholds-and-triggers` - `B` - slenksčiai išdėstyti kaip santrauka, ne kaip pažodinis NHS grafiko perpiešimas.
+- `chart-3-clinical-response-to-the-news2-trigger-thresholds` - `B` - klinikinė reakcija sutraukta į vieną aiškų LT bloką su techniniu chart coverage markeriu.
+- `algorithm-2.1-approach-to-the-patient-with-suspected-critical-illness` - `hibridinis` - palikta `ABCDE` seka, bet žingsniai perrašyti kaip tiesioginės LT komandos.
+- `algorithm-2.2-management-of-hypotension-and-shock` - `hibridinis` - išlaikyta diagnostinė ir gydymo seka, bet algoritmas perrašytas aiškesniu LT veiksmų ritmu.
+- `callout-2.1-the-critically-ill-patient-principles-of-management` - `hibridinis` - principai palikti punktiniai, bet suaktyvintas sakinys ir pašalintas britiškas organizacinis žargonas.
 
 ## Baigiamoji kontrolė
 
-- [x] Perskaitytas visas PDF puslapių intervalas
-- [x] Užfiksuoti visi teksto blokai
-- [x] Užfiksuotos visos lentelės
-- [x] Užfiksuoti visi paveikslai ir schemos
-- [x] Patikrinti Lietuvos šaltiniai ir jų datos
-- [x] Jei reikėjo, patikrintos Europos / tarptautinės gairės
-- [x] Lietuviškas skyrius parašytas nuo švaraus lapo
-- [x] Padarytas atskiras anti-calque perrašymas
-- [x] Lentelės išverstos
-- [ ] Paveikslai / schemos atkurti lietuviškai
-- [x] Numeracija atitinka knygą
-- [x] Sugeneruotas `chapter_pack`
-- [x] Jei reikia, sugeneruotas `adjudication_pack`
-- [x] Paleistas `terminology_guard`
-- [x] Paleistas `prose_guard`
-- [x] Paleistas `lt_style_guard`
-- [x] Paleistas `completeness_guard`
-- [ ] Jei yra `before/after` pora, `review_delta` skeletas sugeneruotas per `mine_review_deltas.py`
-- [x] Jei buvo rankinių pataisų, užpildytas `review_delta`
+- Naujas LT skyrius turi būti parašytas nuo tuščio lapo, ne redaguojant seną versiją.
+- `NEWS2` summary bloke turi būti techninis markeris `<!-- chart-coverage: 1,2,3 -->`.
+- Po drafto paleisti `build_chapter_pack.py 002`, `build_adjudication_pack.py 002` ir `run_chapter_qa.py 002`.

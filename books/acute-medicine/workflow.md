@@ -90,6 +90,8 @@ Kai originalo logika nesutampa su Lietuvos praktika:
 - neatitikimas pažymimas `research` faile;
 - jei reikia, skyriuje paliekamas trumpas callout paaiškinimas.
 
+Jei kyla abejonių dėl LT termino, kolokacijos ar klinikinės kategorijos pavadinimo, sprendimo negalima priimti „iš klausos“. Pirma reikia patikrinti Lietuvos medicininę vartoseną internete ir `research` faile užrašyti bent šaltinį bei datą.
+
 ## Dvigubas QA
 
 Kiekvienas skyrius turi praeiti du atskirus kokybės vartus:
@@ -184,13 +186,19 @@ Pirmoje iteracijoje rule promotion visada yra žmogaus patvirtinama. Skriptai ga
 Kiekvienam paveikslui ar algoritmui:
 
 1. parenkamas vienas kanoninis šaltinis ir jis įrašomas į `lt/figures/manifest.tsv`;
-2. numatytoji redaguojama forma yra `Whimsical` lenta;
+2. vienintelė aktyvi redaguojama forma šiame projekte yra `Whimsical` lenta;
 3. `manifest.tsv` turi saugoti redaguojamo šaltinio tipą ir jo nuorodą ar failo kelią;
-4. jei reikia failinio atsarginio varianto arba `Whimsical` netinka konkrečiam atvejui, leidžiamas `Excalidraw`;
+4. jei `Whimsical` kelias šioje sesijoje neveikia, darbas stabdomas ir aiškiai įvardijamas blokatorius; negalima savavališkai pereiti į `Excalidraw`, `svg_file` ar kitą pakaitinį workflow;
 5. vienam paveikslui gali būti tik vienas aktyvus redaguojamas kanoninis šaltinis;
 6. į repo saugomas galutinis `png`, skirtas `Obsidian` ir skyriaus `md` failams;
-7. po bet kokio redagavimo `Whimsical` ar `Excalidraw` šaltinyje `png` turi būti atnaujintas;
+7. po bet kokio redagavimo `Whimsical` lentoje `png` turi būti atnaujintas;
 8. po paveikslu paliekama trumpa lietuviška santrauka.
+
+`manifest.tsv` aktyviam workflow leidžiamas tik vienas `canonical_source_type`:
+
+- `whimsical_board`
+
+`svg_file`, `excalidraw_file` ar kiti ad hoc tipai negali būti aktyvus kanoninis šaltinis.
 
 Projektuojant tekstinius blokus `Whimsical` lentoje galioja atsargos taisyklė:
 
@@ -238,10 +246,11 @@ Kai tai duoda realią naudą, naudok:
 
 - `pdf_reader` PDF puslapių, lentelių ir vaizdų tikrinimui;
 - `whimsical-desktop` MCP schemų, algoritmų ir išdėstymo kūrimui;
+- [$whimsical-diagram-export](/Users/dzukauskas/.codex/skills/whimsical-diagram-export/SKILL.md) kai reikia iš `Whimsical` lentos atnaujinti repo `png`;
 - [Whimsical official export docs](https://help.whimsical.com/imports-exports/exporting-from-whimsical) kai reikia patikslinti oficialų `svg/png/pdf` eksporto kelią;
-- [$excalidraw-diagram](/Users/dzukauskas/.codex/skills/excalidraw-diagram-skill/SKILL.md) kai reikia failinio šaltinio ar `Whimsical` nėra tinkamas;
 - interneto paiešką naujausių šaltinių patikrai;
 - `scripts/terminology_guard.py` terminų ir draudžiamų frazių kontrolei;
 - `scripts/prose_guard.py` sakinio lygio kalkių ir vertimo karkaso kontrolei;
 - `scripts/lt_style_guard.py` LT tipografijai, intervalams, nepertraukiamiems tarpams ir anglų terminų rodymo higienai;
+- `scripts/validate_figures_manifest.py` aktyvių figūrų manifestui ir skyriaus paveikslėlių nuorodoms tikrinti;
 - atitinkamus skills, kai užduotis sutampa su jų paskirtimi.

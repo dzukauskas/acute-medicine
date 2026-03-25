@@ -4,10 +4,10 @@ source_md: books/acute-medicine/source/chapters-en/001-cardiorespiratory-arrest-
 lt_target_md: books/acute-medicine/lt/chapters/001-cardiorespiratory-arrest-in-hospital.md
 scaffold: books/acute-medicine/adjudication_scaffold.md
 candidates:
-- block_id: narrative-12-decisions-surrounding-cpr
+- block_id: narrative-12-decisions-regarding-cardiopulmonary-resuscitation
   block_type: narrative
-  heading: Decisions surrounding CPR
-  source_anchor: Decisions surrounding CPR
+  heading: Decisions regarding cardiopulmonary resuscitation
+  source_anchor: Decisions regarding cardiopulmonary resuscitation
   draft_mode: narrative-prose
   tags:
   - legal-localization
@@ -22,14 +22,12 @@ candidates:
   decision_criteria: Palik variantą, kuris aiškiai atskiria JK/originalo kontekstą nuo LT praktikos ir
     neapkrauna dvikalbiu triukšmu.
   relevant_style_hotspots:
-  - &id001
-    category: language_risk
-    text: Pasyvios konstrukcijos su sprendimas dėl ... turi būti ... lengvai persikelia iš originalo ir
-      reikalauja atskiro perrašymo.
-  - &id002
-    category: localization_decision
-    text: Po ROSC dalis bus sulyginta ne tik su knygos 2021 logika, bet ir su ERC 2025 post-resuscitation
-      care nuostatomis.
+  - category: language_risk
+    text: The appropriateness of a resuscitation attempt should be considered... linkęs virsti administraciniu
+      pasyvu.
+  - category: language_risk
+    text: prolonged resuscitation attempt ir decisions regarding cardiopulmonary resuscitation lengvai
+      virsta biurokratine kalba.
   matched_localization_overrides: []
 - block_id: algorithm-1.1-algorithm-for-adult-advanced-life-support
   block_type: algorithm
@@ -49,13 +47,13 @@ candidates:
   decision_criteria: Palik variantą, kuris nepraranda klinikinės logikos, bet skamba kaip aiški lietuviška
     veiksmų komanda.
   relevant_style_hotspots:
-  - *id001
+  - category: language_risk
+    text: Pastraipa po ROSC turi likti kliniškai aiški ir neperkrauta technine nuosaka.
   - category: anti_calque
-    text: advanced life support suvienodintas į specialusis gaivinimas, ne paliekant tiesioginį pažodinį
-      vertinį.
-  - *id002
-  - category: local_practice_change
-    text: Po ROSC temperatūros ir hemodinamikos dalis bus tikslinama pagal ERC/ESICM 2025.
+    text: Vengti perteklinio EN ritmų veidrodinio kartojimo; pirmą kartą išskleisti LT forma, toliau trumpinti
+      tik kur tai padeda skaitomumui.
+  - category: localization_decision
+    text: advanced life support verčiamas specialusis gaivinimas, ne pažangusis gyvybės palaikymas.
   matched_localization_overrides:
   - source_term: advanced life support
     local_lt: specialusis gaivinimas

@@ -6,8 +6,10 @@
 
 1. Perskaitykite PDF.
 2. Užpildykite `research` failą.
-3. Sugeneruokite `chapter_pack`.
-4. Tik tada generuokite LT skyrių.
+3. Ginčytinus LT terminus, kolokacijas ir klinikinių kategorijų pavadinimus pirmiausia patikrinkite Lietuvos medicininėje literatūroje internete ir užrašykite šaltinį bei datą.
+4. Jei vartotojas nurodo konkretų įrankį ar workflow, jo nekeiskite savo nuožiūra; jei jis neveikia, sustokite ir įvardykite blokatorių.
+5. Sugeneruokite `chapter_pack`.
+6. Tik tada generuokite LT skyrių.
 
 Be `chapter_pack` drafting nelaikomas galiojančiu.
 

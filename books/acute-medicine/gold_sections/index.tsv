@@ -1,8 +1,1 @@
 example_id	source_chapter	block_id	block_type	tags	notes	path
-gs-001-als-algorithm	001	algorithm-1.1-algorithm-for-adult-advanced-life-support	algorithm	algorithmic|resuscitation|stepwise	Trumpa komandinio algoritmo santrauka su aktyviais veiksmažodžiais.	gold_sections/001-als-algorithm.md
-gs-001-2222-callout	001	narrative-02-initial-management	legal_localization	uk-localization|legal-localization|contextual	Trumpas LT lokalizacinis callout apie vidinį numerį ir vietinę tvarką.	gold_sections/001-2222-callout.md
-gs-001-cpr-legal	001	narrative-12-decisions-surrounding-cpr	legal_localization	legal-localization|uk-localization|contextual	JK dokumentų neprilyginimo LT tvarkai pavyzdys.	gold_sections/001-cpr-legal.md
-gs-002-shock-prose	002	narrative-08-shock	narrative	hemodynamic|complex-prose	Trumpas hemodinaminės prozos pavyzdys su natūraliu LT ritmu.	gold_sections/002-shock-prose.md
-gs-002-shock-algorithm	002	algorithm-2.2-management-of-hypotension-and-shock	algorithm	algorithmic|hemodynamic|stepwise	Glausta hipotenzijos ir šoko veiksmų seka.	gold_sections/002-shock-algorithm.md
-gs-002-table-hypotension	002	table-2.5-clinical-signs-pointing-to-the-cause-of-hypotension	table	table-structured|hemodynamic	Trumpas aiškios LT markdown lentelės pavyzdys.	gold_sections/002-table-hypotension.md
-gs-002-news2-callout	002	callout-1-news2-scoring-system	chart	uk-localization|monitoring|chart-summary	JK NEWS2 chart'ų sutraukto LT paaiškinimo pavyzdys.	gold_sections/002-news2-callout.md

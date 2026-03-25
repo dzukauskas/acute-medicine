@@ -1,5 +1,0 @@
-block_id	defect_class	bad_form	fixed_form	severity	promote_target	notes
-narrative-01-background	clinical_localization	advanced life support	specialusis gaivinimas	p1	localization_overrides.tsv	Lietuvos gaivinimo vartosenoje pasirinkta natūralesnė forma.
-narrative-01-background	calque	eskaluoti pagalbą	kviesti papildomą pagalbą	p2	calque_patterns.tsv	Veiksmas turi būti įvardytas konkrečiai, ne vadybine kalkės forma.
-narrative-02-initial-management	calque	pradinis valdymas	pradiniai veiksmai	p2	gold_phrases.tsv	Antraštėse ir algoritminiuose blokuose natūralesnė LT forma.
-narrative-11-decisions	bureaucratic_passive	sprendimas dėl gaivinimo turi būti priimamas	šį klausimą reikia aptarti iš anksto	p2	gold_phrases.tsv	Pasyvus administracinis karkasas pakeistas aktyvia lietuviška forma.

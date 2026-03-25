@@ -24,6 +24,8 @@ Praktiškai tai reiškia:
 - geriau `koreguokite`, ne `atlikite korekciją`;
 - geriau `nuspręskite` ar `aptarkite`, ne `sprendimas turi būti priimamas`.
 
+Jei kyla abejonių dėl termino, kolokacijos ar klinikinės kategorijos pavadinimo, jo negalima rinktis vien iš intuicijos. Pirma patikrinkite Lietuvos medicininę vartoseną internete, o tik tada fiksuokite formuluotę tekste ar `termbase`.
+
 ## Tipografija ir techninė rašyba
 
 Projekte laikomos norminėmis šios taisyklės:
@@ -85,6 +87,8 @@ Rankiniam auditui palikti:
 - genityvų grandinių aiškumą sudėtingesniais atvejais;
 - temos–remos tvarką;
 - semantiškai subtilias formuluotes.
+
+Tokias subtilias formuluotes prieš galutinai paliekant reikia sutikrinti su Lietuvos medicinine literatūra internete, jei yra bent menkiausia abejonė, kad pasirinktas LT variantas gali būti nenusistovėjęs ar dirbtinis.
 
 Jei tokia rankinė pataisa kartojasi, ji turi būti perkelta bent į vieną iš sluoksnių:
 

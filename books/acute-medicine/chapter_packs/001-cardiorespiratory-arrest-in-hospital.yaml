@@ -1,5 +1,5 @@
 chapter_slug: 001-cardiorespiratory-arrest-in-hospital
-chapter_title: 1 skyrius. Kardiorespiracinis sustojimas ligoninėje
+chapter_title: 1 skyrius. Širdies sustojimas ligoninėje
 page_range: 22-27
 source_md: books/acute-medicine/source/chapters-en/001-cardiorespiratory-arrest-in-hospital.md
 lt_target_md: books/acute-medicine/lt/chapters/001-cardiorespiratory-arrest-in-hospital.md
@@ -50,8 +50,8 @@ blocks:
   adjudication_candidate: false
 - block_id: narrative-06-ventricular-fibrillation-pulseless-ventricular-tachycardia
   block_type: narrative
-  heading: Ventricular fibrillation / pulseless ventricular tachycardia
-  source_anchor: Ventricular fibrillation / pulseless ventricular tachycardia
+  heading: Ventricular fibrillation/pulseless ventricular tachycardia
+  source_anchor: Ventricular fibrillation/pulseless ventricular tachycardia
   risk_flags: []
   tags: []
   draft_mode: narrative-prose
@@ -65,10 +65,10 @@ blocks:
   - resuscitation
   draft_mode: narrative-prose
   adjudication_candidate: false
-- block_id: narrative-08-pulseless-electrical-activity-asystole
+- block_id: narrative-08-pulseless-electrical-activity-pea-asystole
   block_type: narrative
-  heading: Pulseless electrical activity / asystole
-  source_anchor: Pulseless electrical activity / asystole
+  heading: Pulseless electrical activity (PEA)/asystole
+  source_anchor: Pulseless electrical activity (PEA)/asystole
   risk_flags: []
   tags: []
   draft_mode: narrative-prose
@@ -82,41 +82,34 @@ blocks:
   - resuscitation
   draft_mode: narrative-prose
   adjudication_candidate: false
-- block_id: narrative-10-following-return-of-spontaneous-circulation
+- block_id: narrative-10-following-return-of-spontaneous-circulation-rosc
   block_type: narrative
-  heading: Following return of spontaneous circulation
-  source_anchor: Following return of spontaneous circulation
-  risk_flags: []
-  tags: []
-  draft_mode: narrative-prose
-  adjudication_candidate: false
-- block_id: narrative-11-when-to-stop-resuscitation
-  block_type: narrative
-  heading: When to stop resuscitation
-  source_anchor: When to stop resuscitation
+  heading: Following return of spontaneous circulation (ROSC)
+  source_anchor: Following return of spontaneous circulation (ROSC)
   risk_flags: []
   tags:
   - resuscitation
   draft_mode: narrative-prose
   adjudication_candidate: false
-- block_id: narrative-12-decisions-surrounding-cpr
+- block_id: narrative-11-duration-of-a-resuscitation-attempt
   block_type: narrative
-  heading: Decisions surrounding CPR
-  source_anchor: Decisions surrounding CPR
+  heading: Duration of a resuscitation attempt
+  source_anchor: Duration of a resuscitation attempt
+  risk_flags: []
+  tags:
+  - resuscitation
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+- block_id: narrative-12-decisions-regarding-cardiopulmonary-resuscitation
+  block_type: narrative
+  heading: Decisions regarding cardiopulmonary resuscitation
+  source_anchor: Decisions regarding cardiopulmonary resuscitation
   risk_flags: []
   tags:
   - legal-localization
   - resuscitation
   draft_mode: narrative-prose
   adjudication_candidate: true
-- block_id: narrative-13-further-reading
-  block_type: narrative
-  heading: Further reading
-  source_anchor: Further reading
-  risk_flags: []
-  tags: []
-  draft_mode: narrative-prose
-  adjudication_candidate: false
 - block_id: algorithm-1.1-algorithm-for-adult-advanced-life-support
   block_type: algorithm
   heading: Algorithm for adult advanced life support
@@ -224,6 +217,15 @@ active_terms:
   section_scope: '001'
   local_override_tag: ''
   example_lt: Po spontaninės kraujotakos atsikūrimo (ROSC) atlikite pilną ABCDE įvertinimą.
+- en: futile resuscitation
+  lt: beviltiškas gaivinimas
+  status: approved
+  banned_lt:
+  - futile resuscitation
+  first_use_policy: pirmą kartą galima paaiškinti
+  section_scope: '001'
+  local_override_tag: lt_legal_rewrite
+  example_lt: Beviltiškas gaivinimas turi būti vertinamas pagal Lietuvos teisinę ir klinikinę tvarką.
 - en: advanced life support
   lt: specialusis gaivinimas
   status: preferred
@@ -285,16 +287,6 @@ active_acronyms:
   ambiguous_context: Gali būti supainiotas su VF ar pVT.
   preferred_lt_context: Aritmijų ir defibriliuotino ritmo kontekstas.
   section_scope: '001'
-- acronym: SpO2
-  lt: deguonies įsotinimas
-  en: pulse oximetry saturation
-  policy: pirmą kartą paaiškinti
-  notes: Trumpinys gali likti po pirmo aiškaus konteksto.
-  must_expand_first: 'yes'
-  allowed_in_headings: 'yes'
-  ambiguous_context: Gali būti vartojamas be paaiškinimo, jei pastraipa labai tanki.
-  preferred_lt_context: Deguonies saturacijos kontekstas.
-  section_scope: '001'
 - acronym: ABCDE
   lt: ABCDE įvertinimas
   en: airway breathing circulation disability exposure
@@ -305,25 +297,15 @@ active_acronyms:
   ambiguous_context: ''
   preferred_lt_context: Struktūruoto paciento vertinimo kontekstas.
   section_scope: '001'
-- acronym: ERC
-  lt: Europos gaivinimo taryba
-  en: European Resuscitation Council
+- acronym: GMP
+  lt: greitoji medicinos pagalba
+  en: emergency medical services
   policy: galima vartoti
-  notes: Pirmą kartą galima išskleisti bibliografiniame ar gairių kontekste.
+  notes: Lietuvos kontekste nusistovėjęs trumpinys.
   must_expand_first: 'no'
-  allowed_in_headings: 'no'
+  allowed_in_headings: 'yes'
   ambiguous_context: ''
-  preferred_lt_context: Gairių ir bibliografijos kontekstas.
-  section_scope: '001'
-- acronym: SAM
-  lt: Sveikatos apsaugos ministerija
-  en: Ministry of Health
-  policy: galima vartoti
-  notes: Lietuvos teisės aktų ir metodikų kontekstas.
-  must_expand_first: 'no'
-  allowed_in_headings: 'no'
-  ambiguous_context: ''
-  preferred_lt_context: Teisės aktų ir metodikų kontekstas.
+  preferred_lt_context: Lietuvos sistemos ir organizacinio reagavimo kontekstas.
   section_scope: '001'
 localization_overrides:
 - source_term: '2222'
@@ -352,54 +334,51 @@ localization_overrides:
   notes: Naudoti ir tekstuose, ir figūrose.
 style_hotspots:
 - category: language_risk
-  text: Tiesioginiai ALS tipo terminų vertiniai, ypač advanced life support, linkę skambėti kaip kalkės,
-    jei neperrašomi pagal Lietuvos gaivinimo vartoseną.
+  text: The initial response ensuring early chest compressions... lengvai nuslysta į gremėzdišką vertinį.
 - category: language_risk
-  text: Pasyvios konstrukcijos su sprendimas dėl ... turi būti ... lengvai persikelia iš originalo ir
-    reikalauja atskiro perrašymo.
+  text: The appropriateness of a resuscitation attempt should be considered... linkęs virsti administraciniu
+    pasyvu.
 - category: language_risk
-  text: Originalo ritmų, adrenalino ir po ROSC sakiniai turi daug sąlyginių išlygų, todėl lietuviškai
-    juos reikia skaidyti į trumpesnius sakinius.
+  text: The team leader will hand control... reikalauja natūralaus komandinio LT ritmo.
 - category: language_risk
-  text: Gaivinimo algoritmo veiksmų aprašas turi būti aktyvus ir komandiškas, o ne vardinis ar biurokratinis.
+  text: prolonged resuscitation attempt ir decisions regarding cardiopulmonary resuscitation lengvai virsta
+    biurokratine kalba.
+- category: language_risk
+  text: Pastraipa po ROSC turi likti kliniškai aiški ir neperkrauta technine nuosaka.
 - category: anti_calque
-  text: advanced life support suvienodintas į specialusis gaivinimas, ne paliekant tiesioginį pažodinį
-    vertinį.
+  text: Vengti eskaluoti pagalbą; rinktis kviesti papildomą pagalbą.
 - category: anti_calque
-  text: Pakeistos pasyvios biurokratinės formos, pvz. sprendimas dėl ... turi būti priimamas, į aktyvesnes
-    lietuviškas konstrukcijas.
+  text: Vengti prioritetas yra; algoritmo ir veiksmų bloke rašyti tiesioginį nurodymą.
 - category: anti_calque
-  text: Pašalintos angliško karkaso frazės, pvz. prioritetas yra, eskaluoti pagalbą, naudingas kaip bendras
-    kontekstas.
+  text: Vengti sprendimas dėl gaivinimo turi būti priimamas; rinktis aiškią aktyvią formą apie išankstinį
+    aptarimą.
 - category: anti_calque
-  text: Ilgi, logiškai apkrauti sakiniai apie adrenaliną, po ROSC priežiūrą ir CPR ribas suskaidyti į
-    trumpesnes, natūralesnes lietuviškas formuluotes.
+  text: Vengti perteklinio EN ritmų veidrodinio kartojimo; pirmą kartą išskleisti LT forma, toliau trumpinti
+    tik kur tai padeda skaitomumui.
 - category: localization_decision
-  text: Skyrius bus rašomas nuo nulio remiantis PDF, ne ankstesniu ištrauktu markdown failu.
+  text: Skyriaus pavadinimui pirmenybė teikiama formai Širdies sustojimas ligoninėje, nes skyrius praktiškai
+    aprašo in-hospital cardiac arrest; bendresnė forma kardiorespiracinis sustojimas paliekama tik ten,
+    kur iš tiesų kalbama apie kvėpavimo ir kraujotakos išnykimą kartu.
 - category: localization_decision
-  text: JK vidaus instrukcijos, pvz. 2222, negali likti kaip universalus Lietuvos standartas.
+  text: advanced life support verčiamas specialusis gaivinimas, ne pažangusis gyvybės palaikymas.
 - category: localization_decision
-  text: Vienetai ir klinikinė rašysena turi būti Lietuvos / ES / SI formatu.
+  text: Chest compressions versti krūtinės ląstos paspaudimai, ne širdies masažas.
 - category: localization_decision
-  text: Pagrindiniame tekste prioritetas teikiamas Lietuvos teisinei ir klinikinei logikai, o RCUK / NCAA
-    / ReSPECT paliekami tik kaip originalo kontekstas.
+  text: Agonal breathing versti agoninis kvėpavimas; tekste tai turi būti aiškiai įvardyta kaip širdies
+    sustojimo požymis.
 - category: localization_decision
-  text: Ten, kur Lietuvos šaltiniuose trumpinių vartojimas nevienodas, pagrindiniame tekste bus teikiama
-    pirmenybė pilnam lietuviškam terminui, o ne trumpiniui.
+  text: ReSPECT ir DNACPR paliekami tik kaip JK konteksto pavadinimai; Lietuvos tekste jie neperkelti
+    kaip vietiniai dokumentai ar procedūros.
 - category: localization_decision
-  text: Po ROSC dalis bus sulyginta ne tik su knygos 2021 logika, bet ir su ERC 2025 post-resuscitation
-    care nuostatomis.
+  text: 2222 nekeičiamas į tariamą universalų LT standartą; vietoje to nurodoma vadovautis įstaigos vidaus
+    kritinės pagalbos arba gaivinimo komandos iškvietimo tvarka.
 - category: local_practice_change
-  text: Vidinis kritinės pagalbos iškvietimas bus rašomas kaip vietinės ligoninės reagavimo sistemos veiksmas,
-    ne kaip universali nuoroda skambinti 2222.
+  text: JK vidaus numeris 2222 nepateikiamas kaip visoms Lietuvos įstaigoms galiojanti taisyklė.
 - category: local_practice_change
-  text: ReSPECT / DNACPR dalis bus perrašyta pagal Lietuvos paciento nesutikimo, kad būtų gaivinamas ir
-    beviltiško gaivinimo reglamentavimą.
+  text: ReSPECT ir DNACPR skyriaus pabaigoje pakeičiami LT teisinio ir etinio konteksto paaiškinimu apie
+    paciento valią, beviltišką gaivinimą ir dokumentuotą sprendimą.
 - category: local_practice_change
-  text: Po ROSC temperatūros ir hemodinamikos dalis bus tikslinama pagal ERC/ESICM 2025.
-- category: local_practice_change
-  text: Automatinio išorinio defibriliatoriaus trumpinio nevienodumo Lietuvoje problema sprendžiama pagrindiniame
-    tekste vartojant pilną termino formą, o ne vieną ginčytiną trumpinį.
+  text: AED mode ir standalone AED paliekami kaip techniniai terminai, bet be JK organizacinių implikacijų.
 gold_examples:
 - kind: phrase
   source_chapter: '001'
@@ -497,92 +476,3 @@ gold_examples:
   notes: Apibrėžimus trumpinti iki natūralaus LT ritmo.
   category: syntax
   bad_en_shaped_lt: kardiogeninis šokas yra viena dažniausių ... ir pasižymi
-- kind: section
-  example_id: gs-001-als-algorithm
-  source_chapter: '001'
-  block_id: algorithm-1.1-algorithm-for-adult-advanced-life-support
-  block_type: algorithm
-  tags:
-  - algorithmic
-  - resuscitation
-  - stepwise
-  text: '1. Jei pacientas nereaguoja ir nekvėpuoja normaliai, kvieskite pagalbą ir pradėkite gaivinimą.
-
-    2. Atlikite gaivinimą santykiu `30 : 2` ir prijunkite defibriliatorių ar monitorių.
-
-    3. Įvertinkite ritmą.
-
-    4. Jei ritmas defibriliuotinas, atlikite vieną iškrovą ir iš karto tęskite gaivinimą 2 min.
-
-    5. Jei ritmas nedefibriliuotinas, iš karto tęskite gaivinimą 2 min. ir kuo anksčiau skirkite adrenalino.'
-  notes: Trumpa komandinio algoritmo santrauka su aktyviais veiksmažodžiais.
-  path: gold_sections/001-als-algorithm.md
-- kind: section
-  example_id: gs-001-2222-callout
-  source_chapter: '001'
-  block_id: narrative-02-initial-management
-  block_type: legal_localization
-  tags:
-  - uk-localization
-  - legal-localization
-  - contextual
-  text: '> [!WARNING]
-
-    > Lietuvos kontekstas: originale nurodytas vidinis numeris `2222` atspindi JK ligoninių praktiką.
-    Lietuvoje naudokite savo įstaigos vidaus kritinės pagalbos arba gaivinimo komandos iškvietimo tvarką.'
-  notes: Trumpas LT lokalizacinis callout apie vidinį numerį ir vietinę tvarką.
-  path: gold_sections/001-2222-callout.md
-- kind: section
-  example_id: gs-001-cpr-legal
-  source_chapter: '001'
-  block_id: narrative-12-decisions-surrounding-cpr
-  block_type: legal_localization
-  tags:
-  - legal-localization
-  - uk-localization
-  - contextual
-  text: '> [!WARNING]
-
-    > `ReSPECT` ir `DNACPR` yra JK sistemos dokumentai. Lietuvoje jų negalima perkelti kaip tiesioginio
-    atitikmens. Reikia vadovautis Lietuvos teisės aktais, įstaigos vidaus tvarka ir dokumentuotais konsiliumo
-    sprendimais.'
-  notes: JK dokumentų neprilyginimo LT tvarkai pavyzdys.
-  path: gold_sections/001-cpr-legal.md
-- kind: section
-  example_id: gs-002-shock-algorithm
-  source_chapter: '002'
-  block_id: algorithm-2.2-management-of-hypotension-and-shock
-  block_type: algorithm
-  tags:
-  - algorithmic
-  - hemodynamic
-  - stepwise
-  text: '1. Jei sistolinis spaudimas `<90 mmHg`, `MAP <65 mmHg` arba sistolinis spaudimas krito `>40 mmHg`
-    ir yra organų disfunkcijos požymių, vertinkite pacientą kaip ištiktą šoko.
-
-    2. Vertinkite pagal `ABCDE`.
-
-    3. Prijunkite deguonį, `EKG`, veninę prieigą.
-
-    4. Stabilizuokite kvėpavimo takus ir kvėpavimą.
-
-    5. Nustačius priežastį, gydykite ją tikslingai ir, jei reikia, pradėkite inotropų ar vazopresorių
-    terapiją.'
-  notes: Glausta hipotenzijos ir šoko veiksmų seka.
-  path: gold_sections/002-shock-algorithm.md
-- kind: section
-  example_id: gs-002-shock-prose
-  source_chapter: '002'
-  block_id: narrative-08-shock
-  block_type: narrative
-  tags:
-  - hemodynamic
-  - complex-prose
-  text: 'Šokas reiškia ūminį kraujotakos nepakankamumą, kai ląstelės negali tinkamai panaudoti deguonies,
-    todėl vystosi organų funkcijos sutrikimas ir laktatinė acidozė.
-
-
-    Kompensaciniai mechanizmai pradžioje gali išlaikyti kraujospūdį, todėl „normalus“ arterinis spaudimas
-    dar nereiškia, kad organų perfuzija pakankama.'
-  notes: Trumpas hemodinaminės prozos pavyzdys su natūraliu LT ritmu.
-  path: gold_sections/002-shock-prose.md

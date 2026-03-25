@@ -42,6 +42,10 @@ def main() -> int:
         "inventory validation",
         [sys.executable, str(SCRIPT_DIR / "validate_chapter_inventory.py"), slug],
     )
+    run_step(
+        "figure manifest validation",
+        [sys.executable, str(SCRIPT_DIR / "validate_figures_manifest.py"), slug],
+    )
 
     if not pack_path.exists():
         raise SystemExit(

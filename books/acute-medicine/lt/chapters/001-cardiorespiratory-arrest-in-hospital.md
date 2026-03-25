@@ -1,221 +1,127 @@
-# 1 skyrius. Kardiorespiracinis sustojimas ligoninėje
+# 1 skyrius. Širdies sustojimas ligoninėje
 
-- Autorė originale: Ann Thompson
-- Puslapiai: 22–27
-- Tipas: lokalizuotas studijų konspektas pagal originalų PDF, Lietuvos šaltinius ir ERC 2025
+Šiame skyriuje glaustai aprašomas širdies sustojimo ligoninėje valdymas pagal 2021 m. `Resuscitation Council UK` suaugusiųjų specialiojo gaivinimo logiką, tačiau JK organizacinės detalės pritaikytos Lietuvos praktikai. Visi ligoninės sveikatos priežiūros specialistai turi mokėti atpažinti širdies sustojimą ir reguliariai atnaujinti gaivinimo įgūdžius.
 
-> [!NOTE]
-> Originalus skyrius remiasi 2021 m. RCUK gairėmis. Ši lietuviška versija papildomai sulyginta su galiojančiu Lietuvos gaivinimo standartu, Lietuvos teisės aktais ir naujausiomis ERC 2025 gairėmis.
+Klausimą, ar gaivinimą apskritai reikia pradėti, būtina aptarti iš anksto, kai aišku, kad gaivinimas būtų netikslingas ar beviltiškas. Tai nėra vien techninis klausimas apie algoritmą: svarbi paciento valia, klinikinis kontekstas ir aiškiai dokumentuotas sprendimas.
 
-<!-- page:22 -->
+## Bendra informacija
 
-Šiame skyriuje aptariamas širdies sustojimo ligoninėje atpažinimas, pradiniai veiksmai, ritmo analizė, specialusis gaivinimas ir priežiūra po spontaninės kraujotakos atsikūrimo. Visi stacionaro darbuotojai turi mokėti atpažinti širdies sustojimą, nedelsdami pradėti gaivinimą ir laiku iškviesti papildomą pagalbą.
+Širdies sustojimas ligoninėje pasitaiko maždaug `1-1,5` karto `1000` hospitalizacijų per metus. Dažniausiai pirmasis ritmas būna nedefibriliuotinas: elektrinė veikla be pulso (`PEA`) sudaro apie `52 %`, asistolija apie `21 %`, o defibriliuotini ritmai, tokie kaip skilvelių virpėjimas ar skilvelinė tachikardija be pulso, sudaro tik apie `17 %`.
 
-Kai yra pagrindo manyti, kad gaivinimas būtų netikslingas ar beviltiškas, šį klausimą reikia aptarti iš anksto, o ne kritinės situacijos metu.
-
-## Pagrindinė informacija
-
-Širdies sustojimas ligoninėje pasitaiko maždaug 1–1,5 atvejo 1000 hospitalizacijų per metus. Dažniausias pradinis ritmas yra nedefibriliuotinas: elektrinė veikla be pulso (PEA) sudaro apie 52 %, asistolija apie 21 %. Defibriliuotinas ritmas, t. y. skilvelių virpėjimas arba skilvelinė tachikardija be pulso, nustatomas maždaug 17 % atvejų.
-
-Dauguma šių įvykių įvyksta vidaus ligų skyriuose gydomiems pacientams. Blogėjimo požymiai iki širdies sustojimo pastebimi maždaug 50–80 % pacientų, todėl ankstyvas būklės blogėjimo atpažinimas ir skubus pagalbos iškvietimas yra itin svarbi širdies sustojimo prevencijos priemonė.
-
-> [!IMPORTANT]
-> Ligoninėje širdies sustojimo prevencija prasideda anksčiau nei pats gaivinimas: reikia atpažinti blogėjančią būklę, nedelsti kviesti papildomą pagalbą ir aktyvuoti reagavimo komandą.
+Dauguma įvykių ligoninėje ištinka palatose, dažniausiai medicininio profilio pacientams. Svarbiausia praktinė žinutė yra ta, kad `50-80 %` pacientų iki širdies sustojimo jau turi ankstyvo fiziologinio blogėjimo požymių, todėl blogėjančios būklės atpažinimas ir prevencija yra tokie pat svarbūs kaip pats gaivinimas.
 
 ## Pradiniai veiksmai
 
-Suaugusiojo specialusis gaivinimas prasideda nuo greito, struktūruoto įvertinimo:
+Įvertinkite saugumą, patikrinkite paciento reakciją ir nedelsdami kvieskite papildomą pagalbą. Kvėpavimo takus atverkite galvos atlošimo ir smakro pakėlimo manevru. Kvėpavimą ir kitus gyvybės požymius vertinkite ne ilgiau kaip `10 s`; centrinį pulsą galima tikrinti tik kartu su kvėpavimo vertinimu.
 
-1. Užtikrinkite savo ir aplinkinių saugą.
-2. Įvertinkite paciento reakciją.
-3. Šaukitės pagalbos.
-4. Atverkite kvėpavimo takus galvos atlošimo ir smakro pakėlimo manevru.
-5. Ne ilgiau kaip 10 s vertinkite kvėpavimą ir kitus gyvybės požymius.
-6. Jei tikrinate centrinį pulsą, tai darykite tik kartu su kvėpavimo vertinimu.
-7. Patvirtinus širdies sustojimą, nedelsdami pradėkite gaivinimą ir pasirūpinkite defibriliatoriumi ar monitoriumi.
+Agoninis kvėpavimas turi būti laikomas širdies sustojimo požymiu. Patvirtinus širdies sustojimą, reikia kuo greičiau gauti defibriliatorių ir pradėti krūtinės ląstos paspaudimus. Jei prie paciento esate vienas, trumpam jį palikite tik tam, kad atsivestumėte pagalbą ir atsineštumėte įrangą.
 
-> [!IMPORTANT]
-> Agoninis kvėpavimas turi būti laikomas širdies sustojimo požymiu, o ne „dar esančiu kvėpavimu“.
+> Originale minimas vidinis numeris `2222`. Lietuvos tekste vadovaukitės savo įstaigos kritinės pagalbos arba gaivinimo komandos iškvietimo tvarka.
 
-> [!WARNING]
-> Lietuvos kontekstas: originale nurodytas vidinis numeris `2222` atspindi JK ligoninių praktiką. Lietuvoje naudokite savo įstaigos vidaus kritinės pagalbos arba gaivinimo komandos iškvietimo tvarką. Kai kuriose Lietuvos ligoninėse, pvz. Santaros klinikose, nuo 2025 m. taip pat taikomas `2222`, bet tai nėra universalus nacionalinis standartas visoms įstaigoms.
-
-<!-- page:23 -->
-
-## 1.1 paveikslas. Suaugusiojo specialusis gaivinimas
+## 1.1 paveikslas. Suaugusiojo specialiojo gaivinimo algoritmas
 
 ![1.1 paveikslas. Suaugusiojo specialusis gaivinimas](../figures/001-figure-1-1-advanced-life-support.png)
 
-Mokymuisi papildomai naudokite šią tekstinę algoritmo santrauką:
-
-1. Jei pacientas nereaguoja ir nekvėpuoja normaliai, kvieskite pagalbą ir pradėkite gaivinimą.
-2. Atlikite gaivinimą santykiu `30 : 2` ir prijunkite defibriliatorių ar monitorių.
-3. Įvertinkite ritmą.
-4. Jei ritmas defibriliuotinas, atlikite vieną iškrovą ir iš karto tęskite gaivinimą 2 min.
-5. Jei ritmas nedefibriliuotinas, iš karto tęskite gaivinimą 2 min. ir kuo anksčiau skirkite adrenalino.
-6. Po kiekvieno 2 min. ciklo iš naujo įvertinkite ritmą.
-7. Po trečios iškrovos skirkite 1 mg adrenalino ir 300 mg amjodarono į veną arba į kaulą.
-8. Adrenaliną kartokite kas 3–5 min., o po penktos iškrovos galima svarstyti dar 150 mg amjodarono.
-9. Viso gaivinimo metu užtikrinkite kokybiškus krūtinės ląstos paspaudimus, skirkite deguonį, naudokite kapnografiją, užtikrinkite kraujagyslinę arba intraosinę prieigą ir ieškokite grįžtamų priežasčių.
-10. Po spontaninės kraujotakos atsikūrimo tęskite ABCDE vertinimą, priežasties korekciją ir pogaiviniminę priežiūrą.
+1. Įsitikinkite, kad saugu, patikrinkite reakciją ir kvieskite pagalbą.
+2. Atverkite kvėpavimo takus, ne ilgiau kaip `10 s` vertinkite kvėpavimą ir gyvybės požymius.
+3. Jei kvėpavimas nenormalus arba jo nėra, kvieskite gaivinimo komandą pagal vietinę tvarką, atneškite defibriliatorių ir pradėkite krūtinės ląstos paspaudimus.
+4. Atlikite `30` krūtinės ląstos paspaudimų ir `2` įpūtimų ciklus, kol bus galima įvertinti ritmą.
+5. Įvertinkite ritmą: ar jis defibriliuotinas, ar nedefibriliuotinas.
+6. Jei ritmas defibriliuotinas, atlikite vieną iškrovą, iš karto atnaujinkite `CPR` `2 min.` ir po to ritmą įvertinkite iš naujo.
+7. Po trečios iškrovos skirkite adrenalino `1 mg` `IV/IO` ir amjodarono `300 mg` `IV/IO`; adrenaliną kartokite kas `3-5 min.`, o po penktos iškrovos galima svarstyti papildomą amjodarono `150 mg` dozę.
+8. Jei ritmas nedefibriliuotinas, iš karto tęskite `CPR` `2 min.`, adrenaliną skirkite kuo greičiau, vėliau kartokite kas antrą `CPR` ciklą.
+9. Visų ciklų metu ieškokite grįžtamųjų priežasčių (`4H` ir `4T`), užtikrinkite kvėpavimo takus, deguonies tiekimą, kraujagyslinį priėjimą ir kapnografijos stebėseną.
+10. Atsikūrus spontaninei kraujotakai, atlikite pilną `ABCDE` įvertinimą, koreguokite priežastį ir planuokite tolesnį gydymą bei perkėlimą.
 
 ## Krūtinės ląstos paspaudimai
 
-Krūtinės ląstos paspaudimus pradėkite iš karto, kai tik patvirtinamas širdies sustojimas.
+Krūtinės ląstos paspaudimus pradėkite vos tik patvirtinę širdies sustojimą. Rankas dėkite apatinės krūtinkaulio pusės viduryje, tai yra krūtinės centre.
 
-- Rankas dėkite į krūtinkaulio apatinės pusės vidurį.
-- Paspaudimų dažnis turi būti `100–120/min.`.
-- Gylis turi būti `5–6 cm`.
-- Po kiekvieno paspaudimo leiskite krūtinės ląstai pilnai atsistatyti.
-- Po 30 paspaudimų padarykite trumpą pauzę 2 įpūtimams, jei komanda pasirengusi ventiliuoti.
-- Bet kuri pauzė paspaudimuose turi būti trumpesnė nei 5 s.
-- Paspaudimus atliekantys darbuotojai turėtų keistis bent kas 2 min.
-- Jei yra galimybė, naudokite grįžtamojo ryšio priemones paspaudimų kokybei vertinti.
-- Esant indikacijoms ir turint priemonę, galima naudoti mechaninį krūtinės ląstos paspaudimų prietaisą.
+Paspaudimus atlikite `100-120/min.` dažniu, maždaug `5-6 cm` gyliu, leisdami krūtinės ląstai po kiekvieno paspaudimo visiškai atsitiesti. Po `30` paspaudimų trumpam sustokite, kad būtų galima atlikti `2` įpūtimus, jei kolegos jau pasirengę ventiliuoti maišo-kaukės sistema.
+
+Pertraukos turi būti kuo trumpesnės ir neviršyti `5 s`. Paspaudimus atliekantys komandos nariai turi keistis bent kas `2 min.`, kad būtų išlaikyta gera kokybė. Jei yra `CPR` kokybės stebėjimo prietaisas, juo naudokitės. Jei prieinamas mechaninis krūtinės ląstos paspaudimų prietaisas, jį galima pasitelkti užsitęsus gaivinimui.
 
 ## Kvėpavimo takai ir ventiliacija
 
-Kvėpavimo takams atverti naudokite galvos atlošimo ir smakro pakėlimo arba žandikaulio pakėlimo manevrą. Jei reikia, išsiurbkite sekreciją iš burnos ertmės.
+Kvėpavimo takams atverti naudokite galvos atlošimo ir smakro pakėlimo manevrą arba apatinio žandikaulio pakėlimą. Esant poreikiui, išsiurbkite sekretą iš burnos ertmės tiesiogiai matydami kvėpavimo takus.
 
-Ventiliacijai naudokite maišą su vožtuvu ir kauke, prijungtą prie `15 L/min.` deguonies srauto. Tai dviejų žmonių technika:
+Ventiliavimui naudokite maišo-kaukės sistemą, prijungtą prie `15 L/min.` deguonies. Tai dviejų žmonių technika: vienas komandos narys tvirtai laiko kaukę ir atveria kvėpavimo takus, kitas po kiekvienų `30` paspaudimų atlieka įpūtimus.
 
-- vienas darbuotojas sandariai priglaudžia kaukę ir atveria kvėpavimo takus;
-- kitas po kiekvienų 30 paspaudimų atlieka įpūtimus.
+Kiekvienas įpūtimas turėtų trukti maždaug `1 s` ir būti tik toks, kad pakiltų krūtinės ląsta. Perteklinė ventiliacija didina skrandžio prisipūtimo ir barotraumos riziką. Jei reikia, įveskite orofaringinį vamzdelį. Vėliau, jei komanda moka, galima įvesti supraglotinį prietaisą, pavyzdžiui `i-gel`. Endotrachėjinę intubaciją turėtų atlikti tik kvėpavimo takų valdymo patirties turintis specialistas.
 
-Kiekvienas įpūtimas turi trukti apie 1 s ir būti tik tokio tūrio, kad matytųsi krūtinės ląstos pakilimas. Perteklinės ventiliacijos reikia vengti, nes ji didina skrandžio išpūtimo ir barotraumos riziką.
+Užtikrinus kvėpavimo takus supraglotiniu prietaisu arba endotrachėjiniu vamzdeliu, paspaudimai ir ventiliacija gali būti asinchroniniai: paspaudimus tęskite `100-120/min.`, o ventiliuokite `10-12` kartų per minutę. Jei įmanoma, prijunkite banginę kapnografiją ir stebėkite ją viso gaivinimo metu.
 
-Jei reikia, įstatykite orofaringinį vamzdelį. Gaivinimo metu galima įvesti supraglotinį kvėpavimo takų prietaisą, pvz. `i-gel`, jei personalas moka tai atlikti.
+## Širdies sustojimo ritmų valdymas
 
-Endotrachėjinę intubaciją turėtų atlikti tik patyręs specialistas. Įtvirtinus supraglotinį prietaisą ar endotrachėjinį vamzdelį, krūtinės ląstos paspaudimai ir ventiliacija gali būti asinchroniniai: paspaudimai tęsiami `100–120/min.`, ventiliacija atliekama `10–12/min.` dažniu.
+Kai krūtinės ląstos paspaudimai jau pradėti, kuo greičiau prijunkite defibriliatorių. Elektrodus klijuokite ant sausos odos, pasirūpinkite geru kontaktu ir taisyklinga padėtimi: vienas elektrodas dedamas dešinėje krūtinkaulio pusėje po raktikauliu, kitas - kairėje vidurinėje pažasties linijoje, vengiant krūties audinio.
 
-Viso gaivinimo metu, kai tik tai įmanoma, prijunkite bangos formos kapnografiją.
+Įjungus defibriliatorių, paspaudimus trumpam sustabdykite tik tiek, kiek reikia ritmo analizei. Ritmą skirstykite į defibriliuotiną arba nedefibriliuotiną. Ligoninėje dažniausias pirmasis ritmas yra `PEA`.
 
-<!-- page:24 -->
+### Skilvelių virpėjimas arba skilvelinė tachikardija be pulso
 
-## Širdies sustojimo ritmo valdymas
+Jei ritmas defibriliuotinas ir naudojamas rankinis defibriliatorius, komanda turi dirbti griežta seka:
 
-Vos pradėjus krūtinės ląstos paspaudimus, kuo greičiau prijunkite defibriliatorių ir įvertinkite ritmą.
+1. Trumpam sustabdykite paspaudimus ir patvirtinkite ritmą.
+2. Vėl atnaujinkite paspaudimus, kol defibriliatoriaus operatorius paruoš saugią iškrovą.
+3. Operatorius turi aiškiai matyti paspaudimus atliekantį komandos narį ir garsiai komandą informuoti, kada visi turi atsitraukti.
+4. Kraunant iškrovą niekas neturi liesti paciento; laisvai tekantį deguonį reikia patraukti nuo paciento.
+5. Atlikus iškrovą krūtinės ląstos paspaudimus iš karto atnaujinkite.
 
-Defibriliatoriaus elektrodus klijuokite ant sausos odos, gerai prispausdami:
+Po kiekvienos iškrovos tęskite `CPR` `2 min.` ir tada ritmą įvertinkite iš naujo. Po trečios iškrovos, vėl atnaujinus `CPR`, skirkite adrenalino `1 mg` `1 : 10 000` `IV/IO` ir amjodarono `300 mg` `IV/IO`. Adrenaliną kartokite kas `3-5 min.`, o po penktos iškrovos galima svarstyti papildomą amjodarono `150 mg` dozę.
 
-- vieną elektrodą dėkite dešinėje krūtinkaulio pusėje, žemiau raktikaulio;
-- kitą elektrodą dėkite kairėje vidurinėje pažasties linijoje, vengdami krūties audinio.
+### AED ir pulso tikrinimas
 
-Įjungę defibriliatorių, ritmą tikrinkite kuo trumpiau, tik tiek, kiek reikia nuspręsti dėl tolesnių veiksmų. Ritmai skirstomi į:
+Komanda turi mokėti naudotis savo įstaigoje esančiais defibriliatoriais. Jei naudojamas automatinis išorinis defibriliatorius (`AED`), būtina klausytis jo komandų, bet prieš paspaudžiant iškrovos mygtuką vis tiek atlikti įprastus saugumo patikrinimus.
 
-- defibriliuotiną: skilvelių virpėjimas arba skilvelinė tachikardija be pulso;
-- nedefibriliuotiną: elektrinė veikla be pulso arba asistolija.
+Skilvelių virpėjimas nėra suderinamas su pulsu, todėl nereikia gaišti laiko pulso paieškai prieš iškrovą. Pulsą tikrinkite tik tada, kai ritmas gali būti suderinamas su gyvybe. Po iškrovos pulso iš karto netikrinkite - pirmiausia tęskite `CPR`.
 
-## Defibriliuotinas ritmas
+### Elektrinė veikla be pulso (`PEA`) / asistolija
 
-Jei ritmas defibriliuotinas ir naudojamas rankinis defibriliatorius:
+Prijungus defibriliatorių ir patvirtinus `PEA` arba asistoliją, krūtinės ląstos paspaudimus atnaujinkite nedelsdami ir tęskite `2 min.`. Adrenaliną `1 mg` `1 : 10 000` `IV/IO` skirkite kuo greičiau, vos tik yra kraujagyslinis priėjimas.
 
-1. Trumpai sustabdykite paspaudimus tik ritmo patvirtinimui.
-2. Komandos vadovas aiškiai įvardija ritmą.
-3. Kol defibriliatorius kraunamas, paspaudimai tęsiami, jei tai techniškai saugu.
-4. Visi aplink pacientą atsitraukia, laisvai tiekiamas deguonis atitraukiamas nuo krūtinės ląstos zonos.
-5. Atlikite iškrovą.
-6. Iš karto po iškrovos atnaujinkite gaivinimą ir tęskite 2 min.
-7. Po 2 min. ciklo iš naujo įvertinkite ritmą.
+Adrenaliną kartokite kas `3-5 min.` arba kas antrą `CPR` ciklą. Ritmo patikrinimas visada turi būti atliktas prieš vaisto suleidimą. Pulsą tikrinkite tik tada, kai ritmas gali būti suderinamas su gyvybe.
 
-Jei po pirmų 2 min. ritmas išlieka defibriliuotinas, kartokite seką. Po trečios iškrovos ir atnaujinus gaivinimą skirkite:
+Pradėjus skirti adrenaliną, jį tęskite kas `3-5 min.` nepriklausomai nuo vėliau matomo ritmo. Amjodaronas skiriamas po trijų iškrovų, nesvarbu, ar jos buvo iš eilės, ar atskirtos nedefibriliuotinais ciklais.
 
-- `adrenalino 1 mg 1 : 10 000` į veną arba į kaulą;
-- `amjodarono 300 mg` į veną arba į kaulą.
+## Grįžtamosios širdies sustojimo priežastys
 
-Adrenaliną kartokite kas `3–5 min.`, t. y. maždaug kas antrą gaivinimo ciklą. Po penktos iškrovos galima svarstyti dar `150 mg` amjodarono.
-
-> [!IMPORTANT]
-> Jei ritmas aiškiai defibriliuotinas, pulso prieš iškrovą tikrinti nereikia. Po iškrovos taip pat nedarykite papildomos pauzės pulso ar ritmo tikrinimui.
-
-## Defibriliatoriai ir pulso tikrinimas
-
-Personalas turi mokėti naudotis įstaigoje naudojamais defibriliatoriais. Vieni aparatai gali veikti automatinio išorinio defibriliatoriaus režimu, kiti naudojami kaip rankiniai defibriliatoriai su monitoriumi.
-
-Automatinio išorinio defibriliatoriaus režimu būtina tiksliai vykdyti balso komandas, tačiau saugos patikra prieš iškrovą išlieka tokia pat svarbi kaip ir dirbant rankiniu režimu.
-
-Pulsą tikrinkite tik tada, kai monitoriuje matomas organizuotas ritmas, galintis užtikrinti kraujotaką.
-
-<!-- page:25 -->
-
-## Nedefibriliuotinas ritmas: elektrinė veikla be pulso ir asistolija
-
-Jei prijungus elektrodus patvirtinama elektrinė veikla be pulso arba asistolija:
-
-1. Nedelsdami atnaujinkite krūtinės ląstos paspaudimus.
-2. Tęskite gaivinimą 2 min. ciklais.
-3. `Adrenalino 1 mg 1 : 10 000` į veną arba į kaulą skirkite kuo anksčiau, vos tik turima prieiga.
-4. Adrenaliną kartokite kas `3–5 min.`.
-5. Prieš kiekvieną adrenalino dozę patikrinkite ritmą.
-
-Paskyrus pirmą adrenalino dozę, toliau jį kartokite kas antrą gaivinimo ciklą. Šios tvarkos laikykitės ir tada, kai ritmas išlieka nedefibriliuotinas, ir tada, kai vėliau tampa defibriliuotinas.
-
-## Grįžtamos širdies sustojimo priežastys
-
-Kol vyksta gaivinimas, komandos vadovas turi rinkti informaciją apie įvykius iki širdies sustojimo, peržiūrėti ligos istoriją ir kryptingai ieškoti grįžtamų priežasčių. Klasikinė atmintinė yra `4H ir 4T`:
+Kai `CPR` jau vyksta, komandos vadovas turi greitai surinkti informaciją apie iki sustojimo buvusius įvykius ir paciento ligas. Praktikoje grįžtamosios priežastys dažniausiai atsimenamos kaip `4H` ir `4T`:
 
 - hipoksija;
 - hipovolemija;
 - hiperkalemija, hipokalemija ir kiti metaboliniai sutrikimai;
 - hipotermija;
-- trombozė, koronarinė arba plautinė;
+- trombozė (`koronarinė` arba `plaučių arterijos`);
 - įtampos pneumotoraksas;
 - širdies tamponada;
 - toksinai.
 
-Nustačius tikėtiną grįžtamą priežastį, ją pradėkite šalinti nedelsdami ir tuo pat metu tęskite gaivinimą. Jei gaivinimas užsitęsia, pvz. kai skiriama trombolizė dėl plautinės embolijos, mechaninis krūtinės ląstos paspaudimų prietaisas gali padėti išlaikyti kokybiškus paspaudimus.
+Nustačius galimą grįžtamąją priežastį, ją gydykite nedelsdami, nenutraukdami specialiojo gaivinimo. Jei gaivinimas užsitęsia, pavyzdžiui, skiriant trombolizę dėl plaučių embolijos, ypač naudinga mechaninė krūtinės ląstos paspaudimų sistema, jei komanda moka ja naudotis. Kai kurias priežastis gali padėti atpažinti ultragarsas, tačiau vaizdą reikia įgyti per ritmo patikrinimo langą, neilgiau kaip per `10 s`.
 
-Ultragarsas gali padėti nustatyti kai kurias grįžtamas priežastis, tačiau jį turi atlikti įgudęs specialistas ir taip, kad ritmo patikros pauzė neviršytų 10 s.
+## Po spontaninės kraujotakos atsikūrimo (`ROSC`)
 
-## Po spontaninės kraujotakos atsikūrimo (ROSC)
+Po spontaninės kraujotakos atsikūrimo atlikite pilną `ABCDE` įvertinimą. Deguonies saturaciją palaikykite `94-98 %`; jei kvėpavimo takų apsauga vis dar nepakankama, svarstykite endotrachėjinę intubaciją, jei ji dar neatlikta. Ventiliuojant tęskite kapnografijos stebėseną ir siekite normokapnijos.
 
-Po spontaninės kraujotakos atsikūrimo reikia pilno `ABCDE` įvertinimo.
+Įsitikinkite, kad pacientas turi patikimą kraujagyslinį priėjimą, tęskite monitoravimą ir atlikite `12` derivacijų `EKG`. Skysčius skirkite taip, kad būtų atkurta normovolemija ir sistolinis kraujospūdis būtų didesnis kaip `100 mmHg`.
 
-- Palaikykite deguonies įsotinimą (`SpO2`) `94–98 %`.
-- Užtikrinkite kvėpavimo takus; jei reikia ilgalaikio kvėpavimo takų valdymo, svarstykite endotrachėjinę intubaciją.
-- Ventiliaciją koreguokite taip, kad `PaCO2` išliktų normokapnijos ribose: `4,7–6,0 kPa` (`35–45 mmHg`).
-- Užtikrinkite patikimą kraujagyslinę prieigą, tęstinį monitoravimą ir atlikite 12 derivacijų EKG.
-- Koreguokite skysčius ir kraujotaką taip, kad pacientas išliktų normovolemiškas ir būtų užtikrinta organų perfuzija.
-- Praktinis orientyras: `vidutinis arterinis spaudimas >65 mmHg`, o sistolinis arterinis kraujospūdis dažniausiai bent apie `100 mmHg`.
-- Aktyviai venkite karščiavimo, ypač komos būklėje esantiems pacientams po ROSC; jei taikoma temperatūros kontrolė, ji derinama su intensyviosios terapijos komanda pagal aktualų protokolą.
+Temperatūrą palaikykite `32-36 °C` ribose. Po `ROSC` pacientai dažnai būna atšalę, todėl juos reikia užkloti ir prireikus šildyti, kartu vengiant drebėjimo. Toliau gydykite nustatytą priežastį ir kuo anksčiau įtraukite atitinkamus specialistus, pavyzdžiui, kardiologus ar chirurgus. Perkėlimą turi atlikti įgudusi komanda su visa reikiama įranga.
 
-Nustačius priežastį, tęskite jos gydymą ir nedelsdami pasitelkite reikiamus specialistus, pvz. kardiologus, chirurgus ar intensyviosios terapijos komandą. Anksti nuspręskite, kur pacientas bus gydomas toliau. Pacientą turėtų pervežti tam pasirengusi komanda, turinti visą būtiną įrangą.
-
-Po įvykio svarbūs du dalykai:
-
-- komandos aptarimas po įvykio;
-- aiški ir tiksli dokumentacija medicinos įrašuose.
-
-<!-- page:27 -->
+Po įvykio komandai naudinga trumpa aptarimo sesija, o įvykis turi būti aiškiai užfiksuotas medicinos dokumentuose.
 
 ## Gaivinimo trukmė
 
-Gaivinimo trukmė negali būti vienoda visiems pacientams. Sprendžiant, ar tęsti gaivinimą, ar jį nutraukti, reikia įvertinti:
+Gaivinimo trukmė nustatoma individualiai kiekvienam pacientui. Komandos vadovas gaivinimo metu turi surinkti pakankamai informacijos apie sustojimo aplinkybes, paciento bendrą būklę, gretutines ligas ir realią tikimybę pasiekti ne tik `ROSC`, bet ir priimtiną ilgalaikę išeitį.
 
-- širdies sustojimo aplinkybes;
-- iki jo buvusią paciento būklę ir ligas;
-- tikėtiną grįžtamą priežastį;
-- realią tikimybę pasiekti ne tik ROSC, bet ir kliniškai prasmingą išgyvenimą.
+Sprendimas nutraukti gaivinimą turi būti aiškiai išsakytas visai komandai. Visi nariai turi suprasti planą ir turėti galimybę užduoti klausimus. Pacientui svarbūs artimieji turi būti informuoti apie įvykį ir jiems turi būti sudaryta galimybė atsisveikinti bei gauti aiškų paaiškinimą apie tolesnius veiksmus.
 
-Komandos vadovas turi aiškiai pasakyti planą komandai ir iš anksto įspėti, jei artėjama prie sprendimo nutraukti gaivinimą. Artimuosius reikia aiškiai informuoti ir, kai tinkama, sudaryti jiems galimybę būti su pacientu.
+## Sprendimai dėl gaivinimo
 
-## Sprendimai dėl kardiopulmoninio gaivinimo
+Širdies sustojimą ligoninėje patyrę pacientai dažnai serga sunkiomis gretutinėmis ligomis arba turi gyvenimą ribojančią patologiją. `CPR` nėra neutralus veiksmas: kai kuriems pacientams jis tik pailgina mirimo procesą, nesuteikdamas realios galimybės pasveikti.
 
-Originale cituojamas JK `NCAA` auditas, kuriame išrašymą iš ligoninės pasiekė `23,9 %` pacientų. Šis rodiklis tinka tik bendram kontekstui, bet jo negalima tiesiogiai laikyti Lietuvos sveikatos sistemos rodikliu.
+Originale minimas `ReSPECT` planas ir ankstesnė `DNACPR` praktika yra JK sistemos dokumentai. Lietuvos praktikoje šių formų nereikia perkelti kaip tariamų vietinių standartų. Reikia vadovautis paciento iš anksto išreikšta valia, jo nesutikimu būti gaivinamam, įstaigos vidaus tvarka ir galiojančiais teisės aktais. Kai gaivinimas būtų beviltiškas arba mediciniškai netikslingas, sprendimas turi būti aiškiai aptartas ir dokumentuotas Lietuvos teisiniame bei klinikiniame kontekste.
 
-Lietuvoje sprendžiant, ar gaivinimą pradėti, tęsti ar jo netaikyti, reikia vadovautis Lietuvos teisine ir klinikine tvarka, o ne `ReSPECT` ar `DNACPR` formomis. Pagrindiniai kriterijai yra:
+## Tolimesni šaltiniai
 
-- paciento iš anksto pareikštas rašytinis nesutikimas, kad jis būtų gaivinamas;
-- gydytojų konsiliumo sprendimas, kad gaivinimas prilygtų beviltiškam gaivinimui;
-- tinkamas šio sprendimo dokumentavimas pagal galiojančią Lietuvos tvarką.
-
-> [!WARNING]
-> `ReSPECT` ir `DNACPR` yra JK sistemos dokumentai. Lietuvoje jų negalima perkelti kaip tiesioginio atitikmens. Reikia vadovautis Lietuvos teisės aktais, įstaigos vidaus tvarka ir dokumentuotais konsiliumo sprendimais.
-
-## Tolesnis skaitymas
-
-- [SAM įsakymas Nr. V-822 „Dėl gaivinimo standartų patvirtinimo“](https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.405743/asr)
-- [Lietuvos Respublikos žmogaus mirties nustatymo ir kritinių būklių įstatymas](https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.37504/asr)
-- [Pradinis ir specialusis suaugusiųjų gaivinimas. Būklės po gaivinimo](https://www.knygynas.vu.lt/pradinis-ir-specialusis-suaugusiuju-gaivinimas-bukles-po-gaivinimo-3)
-- [European Resuscitation Council Guidelines 2025 Adult Advanced Life Support](https://www.erc.edu/media/vedoa2ga/gl2025-05-als-e.pdf)
-- [ERC/ESICM Guidelines 2025 Post-Resuscitation Care](https://www.erc.edu/media/atqopqm4/gl2025-07-post-resus-e.pdf)
+- [National Cardiac Arrest Audit (NCAA)](https://ncaa.icnarc.org/Home)
+- [Resuscitation Council UK ReSPECT](https://www.resus.org.uk/respect/respect-healthcare-professionals)
+- [Resuscitation Council UK Adult advanced life support guidelines](https://www.resus.org.uk/library/2021-resuscitation-guidelines/adult-advanced-life-support-guidelines)

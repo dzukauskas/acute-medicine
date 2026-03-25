@@ -1,6 +1,6 @@
 chapter_slug: 002-the-critically-ill-patient
-chapter_title: 2 skyrius. Kritiškai sunkus pacientas
-page_range: 28–39
+chapter_title: 2 skyrius. Kritinės būklės pacientas
+page_range: 28-39
 source_md: books/acute-medicine/source/chapters-en/002-the-critically-ill-patient.md
 lt_target_md: books/acute-medicine/lt/chapters/002-the-critically-ill-patient.md
 blocks:
@@ -37,19 +37,19 @@ blocks:
   tags: []
   draft_mode: narrative-prose
   adjudication_candidate: false
-- block_id: narrative-05-neurological-status
+- block_id: narrative-05-neurological-status-disability
   block_type: narrative
-  heading: Neurological status
-  source_anchor: Neurological status
+  heading: Neurological status (disability)
+  source_anchor: Neurological status (disability)
   risk_flags: []
   tags:
   - neurological
   draft_mode: narrative-prose
   adjudication_candidate: false
-- block_id: narrative-06-exposure
+- block_id: narrative-06-exposure-entire-examination
   block_type: narrative
-  heading: Exposure
-  source_anchor: Exposure
+  heading: Exposure (entire examination)
+  source_anchor: Exposure (entire examination)
   risk_flags: []
   tags: []
   draft_mode: narrative-prose
@@ -74,7 +74,31 @@ blocks:
   - hemodynamic
   draft_mode: narrative-prose
   adjudication_candidate: true
-- block_id: narrative-09-cardiogenic-shock
+- block_id: narrative-09-general
+  block_type: narrative
+  heading: General
+  source_anchor: General
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+- block_id: narrative-10-priorities
+  block_type: narrative
+  heading: Priorities
+  source_anchor: Priorities
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+- block_id: narrative-11-if-there-is-obvious-haemorrhage
+  block_type: narrative
+  heading: If there is obvious haemorrhage
+  source_anchor: If there is obvious haemorrhage
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+- block_id: narrative-12-cardiogenic-shock
   block_type: narrative
   heading: Cardiogenic shock
   source_anchor: Cardiogenic shock
@@ -85,18 +109,27 @@ blocks:
   - hemodynamic
   draft_mode: narrative-prose
   adjudication_candidate: true
-- block_id: narrative-10-summary
+- block_id: narrative-13-priorities
   block_type: narrative
-  heading: Summary
-  source_anchor: Summary
+  heading: Priorities
+  source_anchor: Priorities
   risk_flags: []
   tags: []
   draft_mode: narrative-prose
   adjudication_candidate: false
-- block_id: narrative-11-further-reading
+- block_id: narrative-14-further-management
   block_type: narrative
-  heading: Further reading
-  source_anchor: Further reading
+  heading: Further management
+  source_anchor: Further management
+  risk_flags:
+  - algorithmic_narrative
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+- block_id: narrative-15-summary
+  block_type: narrative
+  heading: Summary
+  source_anchor: Summary
   risk_flags: []
   tags: []
   draft_mode: narrative-prose
@@ -146,22 +179,6 @@ blocks:
   adjudication_candidate: false
   completion_hint: 2.3 lentelė
   summary_allowed: false
-- block_id: table-2.4-differential-diagnosis-of-hypotension-and-shock
-  block_type: table
-  heading: Differential diagnosis of hypotension and shock
-  source_anchor: Table 2.4 Differential diagnosis of hypotension and shock
-  source_label: '2.4'
-  risk_flags:
-  - complex_prose
-  - structured_content
-  tags:
-  - complex-prose
-  - hemodynamic
-  - table-structured
-  draft_mode: table-compression
-  adjudication_candidate: false
-  completion_hint: 2.4 lentelė
-  summary_allowed: false
 - block_id: table-2.5-clinical-signs-pointing-to-the-cause-of-hypotension
   block_type: table
   heading: Clinical signs pointing to the cause of hypotension
@@ -178,6 +195,22 @@ blocks:
   adjudication_candidate: false
   completion_hint: 2.5 lentelė
   summary_allowed: false
+- block_id: table-2.4-differential-diagnosis-of-hypotension-and-shock
+  block_type: table
+  heading: Differential diagnosis of hypotension and shock
+  source_anchor: Table 2.4 Differential diagnosis of hypotension and shock
+  source_label: '2.4'
+  risk_flags:
+  - complex_prose
+  - structured_content
+  tags:
+  - complex-prose
+  - hemodynamic
+  - table-structured
+  draft_mode: table-compression
+  adjudication_candidate: false
+  completion_hint: 2.4 lentelė
+  summary_allowed: false
 - block_id: table-2.6-indications-for-urgent-echocardiography-in-the-hypotensive-patient
   block_type: table
   heading: Indications for urgent echocardiography in the hypotensive patient
@@ -193,6 +226,22 @@ blocks:
   draft_mode: table-compression
   adjudication_candidate: false
   completion_hint: 2.6 lentelė
+  summary_allowed: false
+- block_id: table-2.9-inotropic-vasopressor-therapy-dosages
+  block_type: table
+  heading: 'Inotropic/vasopressor therapy: dosages'
+  source_anchor: 'Table 2.9 Inotropic/vasopressor therapy: dosages'
+  source_label: '2.9'
+  risk_flags:
+  - complex_prose
+  - structured_content
+  tags:
+  - complex-prose
+  - hemodynamic
+  - table-structured
+  draft_mode: table-compression
+  adjudication_candidate: false
+  completion_hint: 2.9 lentelė
   summary_allowed: false
 - block_id: table-2.7-echocardiographic-findings-in-hypotension
   block_type: table
@@ -226,22 +275,54 @@ blocks:
   adjudication_candidate: false
   completion_hint: 2.8 lentelė
   summary_allowed: false
-- block_id: table-2.9-inotropic-vasopressor-therapy-dosages
-  block_type: table
-  heading: 'Inotropic/vasopressor therapy: dosages'
-  source_anchor: 'Table 2.9 Inotropic/vasopressor therapy: dosages'
-  source_label: '2.9'
+- block_id: chart-1-the-news2-scoring-system
+  block_type: chart
+  heading: The NEWS2 scoring system
+  source_anchor: Chart 1 The NEWS2 scoring system
+  source_label: '1'
   risk_flags:
-  - complex_prose
+  - localization_override
   - structured_content
   tags:
-  - complex-prose
-  - hemodynamic
-  - table-structured
-  draft_mode: table-compression
-  adjudication_candidate: false
-  completion_hint: 2.9 lentelė
-  summary_allowed: false
+  - chart-summary
+  - monitoring
+  - uk-localization
+  draft_mode: local-context-callout
+  adjudication_candidate: true
+  completion_hint: NEWS2 originalo kontekste
+  summary_allowed: true
+- block_id: chart-2-news2-thresholds-and-triggers
+  block_type: chart
+  heading: NEWS2 thresholds and triggers
+  source_anchor: Chart 2 NEWS2 thresholds and triggers
+  source_label: '2'
+  risk_flags:
+  - localization_override
+  - structured_content
+  tags:
+  - chart-summary
+  - monitoring
+  - uk-localization
+  draft_mode: local-context-callout
+  adjudication_candidate: true
+  completion_hint: NEWS2 originalo kontekste
+  summary_allowed: true
+- block_id: chart-3-clinical-response-to-the-news2-trigger-thresholds
+  block_type: chart
+  heading: Clinical response to the NEWS2 trigger thresholds
+  source_anchor: Chart 3 Clinical response to the NEWS2 trigger thresholds
+  source_label: '3'
+  risk_flags:
+  - localization_override
+  - structured_content
+  tags:
+  - chart-summary
+  - monitoring
+  - uk-localization
+  draft_mode: local-context-callout
+  adjudication_candidate: true
+  completion_hint: NEWS2 originalo kontekste
+  summary_allowed: true
 - block_id: algorithm-2.1-approach-to-the-patient-with-suspected-critical-illness
   block_type: algorithm
   heading: Approach to the patient with suspected critical illness
@@ -288,54 +369,6 @@ blocks:
   adjudication_candidate: true
   completion_hint: 2.1 rėmelis
   summary_allowed: false
-- block_id: chart-1-news2-scoring-system
-  block_type: chart
-  heading: NEWS2 scoring system
-  source_anchor: Chart 1 NEWS2 scoring system
-  source_label: '1'
-  risk_flags:
-  - localization_override
-  - structured_content
-  tags:
-  - chart-summary
-  - monitoring
-  - uk-localization
-  draft_mode: local-context-callout
-  adjudication_candidate: true
-  completion_hint: NEWS2 originalo kontekste
-  summary_allowed: true
-- block_id: chart-2-news2-thresholds-and-triggers
-  block_type: chart
-  heading: NEWS2 thresholds and triggers
-  source_anchor: Chart 2 NEWS2 thresholds and triggers
-  source_label: '2'
-  risk_flags:
-  - localization_override
-  - structured_content
-  tags:
-  - chart-summary
-  - monitoring
-  - uk-localization
-  draft_mode: local-context-callout
-  adjudication_candidate: true
-  completion_hint: NEWS2 originalo kontekste
-  summary_allowed: true
-- block_id: chart-3-clinical-response-to-the-news2-trigger-thresholds
-  block_type: chart
-  heading: Clinical response to the NEWS2 trigger thresholds
-  source_anchor: Chart 3 Clinical response to the NEWS2 trigger thresholds
-  source_label: '3'
-  risk_flags:
-  - localization_override
-  - structured_content
-  tags:
-  - chart-summary
-  - monitoring
-  - uk-localization
-  draft_mode: local-context-callout
-  adjudication_candidate: true
-  completion_hint: NEWS2 originalo kontekste
-  summary_allowed: true
 active_terms:
 - en: critical illness
   lt: kritinė būklė
@@ -348,7 +381,7 @@ active_terms:
   local_override_tag: ''
   example_lt: Staiga blogėjant fiziologiniams rodikliams įtarkite kritinę būklę.
 - en: critically ill patient
-  lt: kritiškai sunkus pacientas
+  lt: kritinės būklės pacientas
   status: preferred
   banned_lt:
   - kritiškai sergantis pacientas
@@ -356,7 +389,7 @@ active_terms:
   first_use_policy: nebūtina išskleisti
   section_scope: '002'
   local_override_tag: ''
-  example_lt: Kritiškai sunkų pacientą vertinkite sistemingai pagal ABCDE.
+  example_lt: Kritinės būklės pacientą vertinkite sistemingai pagal ABCDE.
 - en: shock
   lt: šokas
   status: preferred
@@ -463,16 +496,6 @@ active_acronyms:
   ambiguous_context: ''
   preferred_lt_context: Struktūruoto paciento vertinimo kontekstas.
   section_scope: '002'
-- acronym: GMP
-  lt: greitoji medicinos pagalba
-  en: emergency medical services
-  policy: galima vartoti
-  notes: Lietuvos kontekste nusistovėjęs trumpinys.
-  must_expand_first: 'no'
-  allowed_in_headings: 'yes'
-  ambiguous_context: ''
-  preferred_lt_context: Lietuvos sistemos ir organizacinio reagavimo kontekstas.
-  section_scope: '002'
 - acronym: SAM
   lt: Sveikatos apsaugos ministerija
   en: Ministry of Health
@@ -507,10 +530,11 @@ active_acronyms:
   lt: nacionalinis ankstyvojo perspėjimo balas 2
   en: National Early Warning Score 2
   policy: riboti
-  notes: JK mokomasis kontekstas; ne Lietuvos nacionalinis standartas.
+  notes: JK vertinimo sistema; Lietuvoje minima tik kai kuriuose specifiniuose protokoluose, bet nėra
+    universalus nacionalinis standartas visoms kritinėms būklėms.
   must_expand_first: 'yes'
   allowed_in_headings: 'yes'
-  ambiguous_context: JK sistemos trumpinys; neturi būti pateikiamas kaip Lietuvos standartas.
+  ambiguous_context: JK sistemos trumpinys; neturi būti pateikiamas kaip universalus Lietuvos standartas.
   preferred_lt_context: Originalo JK konteksto paaiškinimas.
   section_scope: '002'
 - acronym: MAP
@@ -555,15 +579,16 @@ active_acronyms:
   section_scope: '002'
 localization_overrides:
 - source_term: ACVPU
-  local_lt: AVPU, o detalesniam neurologiniam vertinimui – GKS
+  local_lt: AVPU, o detalesniam neurologiniam vertinimui – Glazgo komos skalė (GKS)
   scope: '002'
   reason: JK `ACVPU` turi papildomą `new confusion` logiką, kuri Lietuvoje nėra standartinis greitas įvertinimas.
   source_ref: books/acute-medicine/research/002-the-critically-ill-patient.md
   notes: Paaiškinti kaip JK kontekstą, bet ne perkelti kaip numatytą Lietuvos praktiką.
 - source_term: NEWS2
-  local_lt: pateikti kaip JK mokomąjį kontekstą, ne kaip Lietuvos nacionalinį standartą
+  local_lt: pateikti kaip JK mokomąjį kontekstą, ne kaip universalų Lietuvos standartą
   scope: '002'
-  reason: '`NEWS2` originale svarbus, bet Lietuvoje jo slenksčiai nėra universalus nacionalinis standartas.'
+  reason: '`NEWS2` originale svarbus; Lietuvoje jis minimas tik kai kuriuose specifiniuose protokoluose,
+    bet nėra universalus nacionalinis standartas visoms kritinėms būklėms.'
   source_ref: books/acute-medicine/research/002-the-critically-ill-patient.md
   notes: Leisti trumpą callout arba atskirą pastabą.
 - source_term: ICU
@@ -574,40 +599,53 @@ localization_overrides:
   notes: Anglišką trumpinį palikti tik jei kontekstas tarptautinis ar bibliografinis.
 style_hotspots:
 - category: language_risk
-  text: critical illness, organ perfusion, low cardiac output, fluid challenge lengvai virsta kalkėmis,
-    jei neperrašomi į natūralią LT medicininę prozą.
+  text: Hemodinaminė proza apie perfuziją, JVP, vazodilataciją ir hipovolemiją lengvai nuslysta į EN karkasą.
 - category: language_risk
-  text: Šoko ir hemodinamikos sakiniai turi daug sąlyginių išlygų, todėl juos reikia skaidyti į trumpesnius,
-    aiškesnius sakinius.
+  text: current problem, context and co-morbidities linkęs virsti gremėzdišku pažodiniu sakiniu.
 - category: language_risk
-  text: Didelės lentelės gali tapti neįskaitomos, jei bus verčiamos pažodžiui; pirmenybė teikiama aiškiai
-    markdown formai.
+  text: dominant clinical problem or working diagnosis reikalauja aiškaus LT veiksmo, ne abstrakčios nominalizacijos.
+- category: language_risk
+  text: Lentelėse 2.4 ir 2.5 didžiausia kolokacinė rizika yra šoko kategorijų ir hipotenzijos priežasčių
+    pavadinimai.
+- category: language_risk
+  text: Skiltis apie inotropus ir vazopresorius turi likti techniškai tiksli, bet ne mechaniškai pažodinė.
 - category: anti_calque
-  text: critically ill patient verčiamas kaip kritiškai sunkus pacientas, ne pažodine konstrukcija su
-    kritiškai sergantis.
+  text: Vengti galvokite apie sepsį; rinktis įtarkite sepsį.
 - category: anti_calque
-  text: Vengti vardinių konstrukcijų kaip atlikti įvertinimą, vykdyti stebėjimą, atlikti korekciją; vietoj
-    jų vartoti veiksmažodžius.
+  text: Vengti tolesni veiksmai priklauso; rinktis toliau veikite / gydykite pagal....
 - category: anti_calque
-  text: Biurokratines procedūrines formuluotes perrašyti į tiesioginius klinikinius nurodymus.
+  text: Vengti reikia svarstyti endotrachėjinę intubaciją; rinktis apsvarstykite endotrachėjinę intubaciją.
+- category: anti_calque
+  text: Vengti siurblio nepakankamumo; rinktis kliniškai nusistovėjusias kategorijas kardiogeninė ar obstrukcinė
+    priežastis.
+- category: anti_calque
+  text: Vengti ilgo NHS organizacinio žargono; LT tekste svarbus klinikinis sprendimas, o ne britiško
+    vaidmens pavadinimo kalkė.
 - category: localization_decision
-  text: Skyrius rašomas nuo nulio pagal PDF puslapius 28–39, ne pagal ankstesnius study/ medžio failus.
+  text: Skyriaus pavadinimui pasirenkama forma Kritinės būklės pacientas, o ne kritiškai sunkus pacientas,
+    nes būtent taip kritines būkles apibrėžia SAM metodinė vartosena.
 - category: localization_decision
-  text: Originalo ACVPU adaptuotas į Lietuvos kontekstui labiau tinkamą AVPU, o detalesniam neurologiniam
-    įvertinimui nurodomas GKS.
+  text: ACVPU neperkeliama kaip numatytoji LT praktikos santrumpa; greitam sąmonės įvertinimui naudojama
+    AVPU, o detalesniam neurologiniam vertinimui Glazgo komos skalė (GKS).
 - category: localization_decision
-  text: NEWS2 paliekama kaip mokomasis originalo kontekstas, bet ne kaip numatytoji Lietuvos reagavimo
-    sistema.
+  text: NEWS2 paliekamas kaip JK mokomasis kontekstas; LT tekste jis neįvardijamas kaip universalus nacionalinis
+    standartas.
 - category: localization_decision
-  text: Pagrindinės fiziologinės ribos, hipoglikemijos korekcijos ir šoko algoritmų logika verčiama kaip
-    studijų konspektas; vietose, kur originalas aiškiai remiasi JK sistema, paliekamas paaiškinantis callout.
+  text: Cardiac obstruction or pump failure ir Cardiac pump failure verčiami per kliniškai nusistovėjusias
+    kategorijas obstrukcinė ir kardiogeninė priežastis, o ne per pažodinį siurblio nepakankamumą.
+- category: localization_decision
+  text: organ perfusion paliekama organų perfuzija, ne organų aprūpinimas krauju, kai kalbama apie hemodinamiką.
+- category: localization_decision
+  text: ICU verčiama intensyviosios terapijos skyrius.
 - category: local_practice_change
-  text: ACVPU perrašyta į AVPU / GKS logiką.
+  text: Trys NEWS2 chart'ai LT variante sutraukiami į vieną aiškų kontekstinį bloką su paaiškinimu, kad
+    tai yra originalo JK balų sistema.
 - category: local_practice_change
-  text: NEWS2 slenksčiai pateikiami kaip JK RCP sistema, o ne Lietuvos nacionalinis standartas.
+  text: ACVPU pakeičiama LT praktikai artimesniu AVPU ir GKS paaiškinimu.
 - category: local_practice_change
-  text: Abejotinos ar iš OCR iškraipytos nuorodos į kitus skyrius tikslinamos pagal aktyvų šios knygos
-    indeksą.
+  text: Originalo specialist registrar level ir panašūs NHS eskalavimo terminai neperkeliami pažodžiui;
+    paliekama bendresnė nuoroda į skubų vyresnio gydytojo / kritinių būklių komandos įvertinimą pagal
+    vietinę tvarką.
 gold_examples:
 - kind: phrase
   source_chapter: '001'
@@ -705,134 +743,3 @@ gold_examples:
   notes: Apibrėžimus trumpinti iki natūralaus LT ritmo.
   category: syntax
   bad_en_shaped_lt: kardiogeninis šokas yra viena dažniausių ... ir pasižymi
-- kind: section
-  example_id: gs-002-news2-callout
-  source_chapter: '002'
-  block_id: callout-1-news2-scoring-system
-  block_type: chart
-  tags:
-  - uk-localization
-  - monitoring
-  - chart-summary
-  text: '## `NEWS2` originalo kontekste
-
-
-    - `NEWS2` vertina kvėpavimo dažnį, deguonies saturaciją, deguonies skyrimą, sistolinį kraujospūdį,
-    pulsą, sąmonės būklę ir temperatūrą.
-
-    - Vienas ryškiai pakitęs rodiklis jau laikomas priežastimi skubiai peržiūrėti pacientą.
-
-
-    > [!WARNING]
-
-    > `NEWS2` ir `ACVPU` yra JK `RCP` sistemos dalis. Lietuvos dokumentuose dažniau rasite `AVPU` ir `GKS`.'
-  notes: JK NEWS2 chart'ų sutraukto LT paaiškinimo pavyzdys.
-  path: gold_sections/002-news2-callout.md
-- kind: section
-  example_id: gs-002-shock-algorithm
-  source_chapter: '002'
-  block_id: algorithm-2.2-management-of-hypotension-and-shock
-  block_type: algorithm
-  tags:
-  - algorithmic
-  - hemodynamic
-  - stepwise
-  text: '1. Jei sistolinis spaudimas `<90 mmHg`, `MAP <65 mmHg` arba sistolinis spaudimas krito `>40 mmHg`
-    ir yra organų disfunkcijos požymių, vertinkite pacientą kaip ištiktą šoko.
-
-    2. Vertinkite pagal `ABCDE`.
-
-    3. Prijunkite deguonį, `EKG`, veninę prieigą.
-
-    4. Stabilizuokite kvėpavimo takus ir kvėpavimą.
-
-    5. Nustačius priežastį, gydykite ją tikslingai ir, jei reikia, pradėkite inotropų ar vazopresorių
-    terapiją.'
-  notes: Glausta hipotenzijos ir šoko veiksmų seka.
-  path: gold_sections/002-shock-algorithm.md
-- kind: section
-  example_id: gs-002-shock-prose
-  source_chapter: '002'
-  block_id: narrative-08-shock
-  block_type: narrative
-  tags:
-  - hemodynamic
-  - complex-prose
-  text: 'Šokas reiškia ūminį kraujotakos nepakankamumą, kai ląstelės negali tinkamai panaudoti deguonies,
-    todėl vystosi organų funkcijos sutrikimas ir laktatinė acidozė.
-
-
-    Kompensaciniai mechanizmai pradžioje gali išlaikyti kraujospūdį, todėl „normalus“ arterinis spaudimas
-    dar nereiškia, kad organų perfuzija pakankama.'
-  notes: Trumpas hemodinaminės prozos pavyzdys su natūraliu LT ritmu.
-  path: gold_sections/002-shock-prose.md
-- kind: section
-  example_id: gs-002-table-hypotension
-  source_chapter: '002'
-  block_id: table-2.5-clinical-signs-pointing-to-the-cause-of-hypotension
-  block_type: table
-  tags:
-  - table-structured
-  - hemodynamic
-  text: '| Priežastis | Pulso tūris | Odos temperatūra | Jungo veninis spaudimas (JVP) |
-
-    | --- | --- | --- | --- |
-
-    | Hipovolemija | Mažas | Vėsi | Žema |
-
-    | Mechaninė obstrukcija ar siurblio nepakankamumas | Mažas | Vėsi | Normali arba padidėjusi |
-
-    | Vazodilatacija | Normalus arba padidėjęs | Šilta | Žema |'
-  notes: Trumpas aiškios LT markdown lentelės pavyzdys.
-  path: gold_sections/002-table-hypotension.md
-- kind: section
-  example_id: gs-001-als-algorithm
-  source_chapter: '001'
-  block_id: algorithm-1.1-algorithm-for-adult-advanced-life-support
-  block_type: algorithm
-  tags:
-  - algorithmic
-  - resuscitation
-  - stepwise
-  text: '1. Jei pacientas nereaguoja ir nekvėpuoja normaliai, kvieskite pagalbą ir pradėkite gaivinimą.
-
-    2. Atlikite gaivinimą santykiu `30 : 2` ir prijunkite defibriliatorių ar monitorių.
-
-    3. Įvertinkite ritmą.
-
-    4. Jei ritmas defibriliuotinas, atlikite vieną iškrovą ir iš karto tęskite gaivinimą 2 min.
-
-    5. Jei ritmas nedefibriliuotinas, iš karto tęskite gaivinimą 2 min. ir kuo anksčiau skirkite adrenalino.'
-  notes: Trumpa komandinio algoritmo santrauka su aktyviais veiksmažodžiais.
-  path: gold_sections/001-als-algorithm.md
-- kind: section
-  example_id: gs-001-2222-callout
-  source_chapter: '001'
-  block_id: narrative-02-initial-management
-  block_type: legal_localization
-  tags:
-  - uk-localization
-  - legal-localization
-  - contextual
-  text: '> [!WARNING]
-
-    > Lietuvos kontekstas: originale nurodytas vidinis numeris `2222` atspindi JK ligoninių praktiką.
-    Lietuvoje naudokite savo įstaigos vidaus kritinės pagalbos arba gaivinimo komandos iškvietimo tvarką.'
-  notes: Trumpas LT lokalizacinis callout apie vidinį numerį ir vietinę tvarką.
-  path: gold_sections/001-2222-callout.md
-- kind: section
-  example_id: gs-001-cpr-legal
-  source_chapter: '001'
-  block_id: narrative-12-decisions-surrounding-cpr
-  block_type: legal_localization
-  tags:
-  - legal-localization
-  - uk-localization
-  - contextual
-  text: '> [!WARNING]
-
-    > `ReSPECT` ir `DNACPR` yra JK sistemos dokumentai. Lietuvoje jų negalima perkelti kaip tiesioginio
-    atitikmens. Reikia vadovautis Lietuvos teisės aktais, įstaigos vidaus tvarka ir dokumentuotais konsiliumo
-    sprendimais.'
-  notes: JK dokumentų neprilyginimo LT tvarkai pavyzdys.
-  path: gold_sections/001-cpr-legal.md

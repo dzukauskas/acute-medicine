@@ -32,22 +32,23 @@ When a source could be outdated, verify the latest version and record exact date
 
 1. Read the full chapter page range from the PDF and inventory sections, tables, figures, algorithms, and boxed content.
 2. Identify the chapter's clinical decision points and research Lithuanian practice for them before drafting.
-3. Build or load the chapter-specific `chapter_pack` before generating any Lithuanian draft.
-4. Draft per block type, not with one universal prose mode:
+3. If a Lithuanian term, collocation, or clinical category label is even slightly doubtful, verify current Lithuanian medical usage online before choosing the wording. Record the source and date in the research log.
+4. Build or load the chapter-specific `chapter_pack` before generating any Lithuanian draft.
+5. Draft per block type, not with one universal prose mode:
    - `narrative-prose`
    - `table-compression`
    - `algorithm-stepwise`
    - `local-context-callout`
    Treat `chart` content as a distinct source block type even when the LT output becomes one summarized local-context block.
-5. If the chapter pack marks `adjudication_candidate` blocks, build or load the chapter-specific `adjudication_pack` before final polishing.
-6. Write the Lithuanian chapter concept-first, not sentence-by-sentence from English.
-7. Translate tables fully into markdown when they remain readable.
-8. Recreate figure text, labels, legends, algorithm steps, and `chart` content in Lithuanian.
-9. For each figure, keep exactly one canonical editable source of truth. Prefer a `Whimsical` board by default. If a file-based editable source is required, use `Excalidraw`. Do not keep parallel active sources for the same figure.
-10. Keep the repository `png` in sync with the active editable source after each diagram revision.
-11. Use brief callouts only where local practice, safety, or interpretation needs emphasis.
-12. Compare the finished chapter back to the PDF so no content block is missed.
-13. Run both clinical QA and language QA before treating the chapter as complete.
+6. If the chapter pack marks `adjudication_candidate` blocks, build or load the chapter-specific `adjudication_pack` before final polishing.
+7. Write the Lithuanian chapter concept-first, not sentence-by-sentence from English.
+8. Translate tables fully into markdown when they remain readable.
+9. Recreate figure text, labels, legends, algorithm steps, and `chart` content in Lithuanian.
+10. For each figure, keep exactly one canonical editable source of truth. In this project, the active editable source is the `Whimsical` board recorded in `lt/figures/manifest.tsv`. Do not swap to another diagram tool unless the user explicitly approves that change and the repo workflow allows it.
+11. Keep the repository `png` in sync with the active editable source after each diagram revision.
+12. Use brief callouts only where local practice, safety, or interpretation needs emphasis.
+13. Compare the finished chapter back to the PDF so no content block is missed.
+14. Run both clinical QA and language QA before treating the chapter as complete.
 
 ## Language QA
 
@@ -73,7 +74,8 @@ If a chapter is manually corrected after drafting, leave a structured `review_de
 - Use PDF-reading tools to inspect source pages, tables, and figure text directly.
 - Use web research for current Lithuanian and European medical sources when the information is time-sensitive.
 - Use `whimsical-desktop` MCP as the primary diagram tool when it is available.
-- Use `Excalidraw` when a file-based editable source is needed or when `Whimsical` is not the right fit.
+- If the user explicitly names a tool or workflow, do not silently substitute another one. If that tool is unavailable, stop and report the blocker instead of improvising.
+- For this repository's active figures, follow the `Whimsical` export path and `lt/figures/manifest.tsv`; do not introduce `Excalidraw` as an active source unless the user explicitly changes that rule.
 - If the repository already has workflow, terminology, acronym, or research templates, follow them before inventing new structure.
 
 ## Output expectations
