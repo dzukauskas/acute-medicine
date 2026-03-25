@@ -1,0 +1,23 @@
+source_term	jurisdiction	signal_type	match_mode	pattern	notes
+Patient Information Leaflet	uk	reference tool	literal	Patient Information Leaflet	UK patient leaflet term.
+PIL	uk	reference tool	regex	\bPIL\b	UK patient leaflet acronym.
+Consumer Medicines Information	australia	reference tool	literal	Consumer Medicines Information	Australian patient leaflet term.
+CMI	australia	reference tool	regex	\bCMI\b	Australian patient leaflet acronym.
+JRCALC	uk	guideline	regex	\b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b	UK ambulance guideline source.
+NHS	uk	service model	regex	\b(?:NHS|National Health Service)\b	UK health service context.
+NHSI	uk	service model	regex	\b(?:NHSI|NHS Improvement|National Health Service Improvement)\b	UK improvement service context.
+HCPC	uk	regulator	regex	\b(?:HCPC|Health and Care Professions Council)\b	UK regulator.
+CQC	uk	regulator	regex	\b(?:CQC|Care Quality Commission)\b	UK regulator.
+PGD	uk	law	regex	\b(?:PGD|Patient Group Direction)\b	UK medicines supply mechanism.
+PSD	uk	law	regex	\b(?:PSD|Patient Specific Direction)\b	UK medicines supply mechanism.
+BNF	uk	reference tool	regex	\b(?:BNF|British National Formulary)\b	UK formulary.
+cBNF	uk	reference tool	regex	\b(?:cBNF|Children'?s BNF)\b	UK paediatric formulary.
+MIMS	uk	reference tool	regex	\bMIMS(?: Australia)?\b	MIMS market-specific reference tool.
+Australian Medicines Handbook	australia	reference tool	literal	Australian Medicines Handbook	Australian medicines handbook.
+AMH	australia	reference tool	regex	\bAMH\b	Australian Medicines Handbook acronym.
+Paramedicine Board Australia	australia	regulator	literal	Paramedicine Board Australia	Australian regulator.
+2222	uk	service model	regex	\b2222\b	UK emergency call escalation number.
+ReSPECT	uk	law	regex	\bReSPECT\b	UK treatment escalation / resuscitation framework.
+DNACPR	uk	law	regex	\bDNACPR\b	UK resuscitation legal framework.
+NEWS2	uk	guideline	regex	\bNEWS2\b	UK early warning score.
+ACVPU	uk	guideline	regex	\bACVPU\b	UK consciousness assessment mnemonic.

@@ -39,7 +39,7 @@ Use this skill when a figure's canonical source is a `Whimsical` board and the r
 
 - Do not keep manual browser screenshots as the final asset if `/svg` export works.
 - Do not add a second editable source next to the Whimsical board.
-- Keep the board URL and the target PNG path in `books/acute-medicine/lt/figures/manifest.tsv`.
+- Keep the board URL and the target PNG path in the active book's `lt/figures/manifest.tsv`.
 - After rendering, sync to Obsidian if the user wants live vault updates.
 - Do not leave long Lithuanian headings sitting right on the note edge in Whimsical. If a title only barely fits, widen the block before export.
 - If the exported PNG shows text touching a block edge, clipped text, or visibly smaller padding than in Whimsical, fix the board layout first and then re-render.
@@ -55,9 +55,9 @@ Before considering a figure done, visually check the rendered PNG:
 
 ## Current project paths
 
-- Manifest: `books/acute-medicine/lt/figures/manifest.tsv`
+- Manifest: `books/<slug>/lt/figures/manifest.tsv`
 - Renderer: `scripts/render_whimsical_figure.py`
-- Obsidian sync: `scripts/sync_obsidian_acute_medicine.sh`
+- Obsidian sync: `scripts/sync_obsidian_book.sh`
 
 ## When to fall back
 

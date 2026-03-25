@@ -49,7 +49,8 @@ Todėl naujame Mac reikia ne kopijuoti visą seną `~/.codex`, o atkurti minimal
 3. Pasiklokuok šį repo.
 4. Paleisk bootstrap skriptą.
 5. Prisijunk prie `Codex`, `GitHub` ir `Whimsical`.
-6. Patikrink, kad `Obsidian` syncas veikia.
+6. Susibootstrap'ink pirmą konkrečią knygą.
+7. Patikrink, kad tos knygos `Obsidian` syncas veikia.
 
 ## Rekomenduojama katalogų struktūra
 
@@ -59,6 +60,7 @@ Jei nori mažiausiai papildomų pakeitimų, naudok tą pačią struktūrą:
 - vault: `/Users/<username>/Library/Mobile Documents/iCloud~md~obsidian/Documents/PARAMEDIKAS`
 
 Jei `username` ar kelių struktūra skirsis, nieko baisaus. Sync agentą ir `Codex` MCP setupą galima sugeneruoti pagal naujus kelius.
+Repo dabar remiasi root `repo_config.toml`, todėl `Obsidian` vault bazinį kelią ir `launchd` prefiksą keisk tame faile, ne shell skriptuose.
 
 ## Vieno paleidimo bootstrap
 
@@ -66,7 +68,7 @@ Paleisk:
 
 ```bash
 cd "/Users/<username>/Projects/Acute Medicine"
-./scripts/bootstrap_macos.sh "/Users/<username>/Library/Mobile Documents/iCloud~md~obsidian/Documents/PARAMEDIKAS/Acute Medicine"
+./scripts/bootstrap_macos.sh
 ```
 
 Šis skriptas:
@@ -77,7 +79,7 @@ cd "/Users/<username>/Projects/Acute Medicine"
 - įdiegia Python priklausomybes iš `requirements.txt`;
 - įrašo repo custom skillus į `~/.codex/skills`;
 - sukonfigūruoja pagrindinius MCP serverius;
-- įdiegia `Obsidian` sync agentą, jei perduotas vault kelias.
+- nekuria jokio book-specific sync agento, nes jis dabar kuriamas bootstrap'inant konkrečią knygą.
 
 ## Po bootstrap ranka padaryk dar šiuos veiksmus
 
@@ -96,10 +98,28 @@ Tada:
 .venv/bin/python scripts/render_whimsical_figure.py --login
 ```
 
-4. Atidaryk `Obsidian`
-5. Patikrink, ar vault kataloge atsirado:
-   - `Acute Medicine/chapters/`
-   - `Acute Medicine/figures/`
+4. Bootstrap'ink konkrečią knygą:
+
+```bash
+python3 scripts/bootstrap_book_from_pdf.py \
+  --pdf "/abs/path/to/book.pdf" \
+  --contents-pages 7-14 \
+  --page-offset 38 \
+  --backmatter-start 343
+```
+
+Jei TOC parseris nesusitvarko su nestandartiniu PDF, paleisk su chapter map sidecar:
+
+```bash
+python3 scripts/bootstrap_book_from_pdf.py \
+  --pdf "/abs/path/to/book.pdf" \
+  --chapter-map "/abs/path/to/book.chapters.yaml"
+```
+
+5. Atidaryk `Obsidian`
+6. Patikrink, ar vault kataloge atsirado:
+   - `<Book Title>/chapters/`
+   - `<Book Title>/figures/`
 
 ## Repo custom skillas
 
@@ -119,10 +139,10 @@ Todėl bent šita svarbi workflow logika nebepriklauso tik nuo seno Mac.
 
 Repo naudoja:
 
-- `scripts/sync_obsidian_acute_medicine.sh`
+- `scripts/sync_obsidian_book.sh`
 - `scripts/install_obsidian_sync_agent.sh`
 
-`install_obsidian_sync_agent.sh` sugeneruoja `LaunchAgent` pagal dabartinio kompiuterio kelius. Tai svarbu, nes `plist` failai su hardcoded keliais nėra patikimi tarp skirtingų Mac.
+`install_obsidian_sync_agent.sh` dabar kviečiamas iš `scripts/bootstrap_book_from_pdf.py` ir sugeneruoja per-book `LaunchAgent` pagal `repo_config.toml` ir pasirinktos knygos katalogą. Tai svarbu, nes `plist` failai su hardcoded keliais nėra patikimi tarp skirtingų Mac.
 
 ## Codex MCP
 
@@ -151,6 +171,11 @@ Ji įrašyta į:
 - `requirements.txt`
 
 Po `requirements.txt` įdiegimo bootstrap skriptas papildomai įrašo ir `Chromium`, nes jis reikalingas `Whimsical` render skriptui.
+
+PDF bootstrap šiame repo yra `PyMuPDF-first`. Praktikoje tai reiškia:
+
+- `PyMuPDF` turi būti repo `.venv`;
+- paleidus `python3 scripts/bootstrap_book_from_pdf.py ...`, skriptas pats persijungs į `.venv`, jei sistemos interpreteryje `fitz` nėra.
 
 ## Ko nerekomenduojama kopijuoti iš seno Mac
 

@@ -7,10 +7,12 @@ import re
 from pathlib import Path
 
 from book_workflow_support import (
+    activate_book_root,
     chapter_paths_for_slug,
     load_yaml,
     normalize_key,
     parse_markdown_sections,
+    resolve_book_root,
     resolve_chapter_slug,
 )
 
@@ -22,6 +24,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Check whether structured chapter-pack blocks are represented in the LT chapter."
     )
+    parser.add_argument("--book-root", help="Optional books/<slug> root. If omitted, uses MEDBOOK_ROOT.")
     parser.add_argument("chapter", help="Chapter slug, chapter number, or direct path to a chapter pack YAML.")
     return parser.parse_args()
 
@@ -30,12 +33,22 @@ def load_pack_and_target(raw: str) -> tuple[dict, Path]:
     path = Path(raw)
     if path.suffix in {".yaml", ".yml"} and path.is_file():
         pack = load_yaml(path)
+        active_book_root = resolve_book_root()
+        base_root = active_book_root or path.resolve().parents[1]
         lt_target = Path(pack.get("lt_target_md", ""))
+        if lt_target and not lt_target.is_absolute():
+            lt_target = base_root / lt_target
         return pack, lt_target
     slug = resolve_chapter_slug(raw)
     paths = chapter_paths_for_slug(slug)
     pack = load_yaml(paths["pack"])
-    return pack, Path(pack.get("lt_target_md", "")) if pack.get("lt_target_md") else paths["lt"]
+    if pack.get("lt_target_md"):
+        lt_target = Path(pack.get("lt_target_md", ""))
+        if not lt_target.is_absolute():
+            lt_target = paths["pack"].resolve().parents[1] / lt_target
+    else:
+        lt_target = paths["lt"]
+    return pack, lt_target
 
 
 def block_present(block: dict, lt_text: str) -> bool:
@@ -131,6 +144,7 @@ def should_check(block: dict) -> bool:
 
 def main() -> int:
     args = parse_args()
+    activate_book_root(args.book_root)
     pack, lt_target = load_pack_and_target(args.chapter)
     if not lt_target.exists():
         raise SystemExit(f"Nerastas LT failas: {lt_target}")

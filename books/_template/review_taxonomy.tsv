@@ -1,0 +1,15 @@
+defect_class	description	automatable	default_promote_target	notes
+term	Neteisingas ar nepageidaujamas LT termino variantas.	yes	termbase.tsv	Tinka, kai galima aiškiai apibrėžti pageidaujamą terminą.
+acronym	Netinkamas trumpinio vartojimas, neišskleidimas ar heading policy pažeidimas.	yes	acronyms.tsv	Tinka `first use`, `allowed in headings` ir ribojimo taisyklėms.
+calque	Akivaizdi angliško sakinio ar junginio kalkė.	yes	calque_patterns.tsv	Promuoti tik aukšto precision atvejais.
+nominalization	Perteklinė daiktavardinė konstrukcija vietoj veiksmažodžio.	yes	gold_phrases.tsv	Jei taisymas labai stabilus, galima papildyti ir `calque_patterns.tsv`.
+collocation	Nenatūrali medicininė kolokacija ar netikęs žodžių junginys.	sometimes	gold_phrases.tsv	Geriausiai sprendžiama pozityviais pavyzdžiais.
+syntax	Sakinio struktūra natūraliam LT ritmui per sunki ar per daug EN formos.	sometimes	regression_examples	Ilgainiui gali maitinti adjudication ar prompto pavyzdžius.
+typography	Skaitmenų, intervalų, vienetų ar ženklų rašybos klaida.	yes	lt_style_guard.py	Taisyklės turi likti aukšto precision.
+english_overuse	Perteklinis anglų termino ar santrumpos rodymas LT tekste.	yes	lt_style_guard.py	Dažnai kartu reikia atnaujinti ir `acronyms.tsv`.
+clinical_localization	Originalo UK ar kitas vietinis kontekstas nepakankamai adaptuotas LT praktikai.	sometimes	localization_overrides.tsv	Dažnai reikalauja `research` atramos.
+jurisdiction_drift	UK ar Australia institucinė, teisinė ar guideline logika palikta kaip tariamas LT/EU standartas.	sometimes	localization_overrides.tsv	Dažniausiai reikia `Originalo kontekstas` bloko arba LT/EU perrašymo.
+market_drift	Originalo rinkos prieinamumas, pakuotės ar reference įrankiai pateikti kaip aktualūs LT rinkai.	sometimes	localization_overrides.tsv	Padeda kaupti pasikartojančias rinkos adaptacijos taisykles.
+dose_drift	Dozė, vartojimo kelias ar koncentracija neatitinka LT/EU šaltinių bazės arba perkelta vien iš originalo.	sometimes	localization_overrides.tsv	Dažnai kartu reikia atnaujinti `research` ir LT/EU šaltinių bazę.
+brand_drift	Prekinis pavadinimas paliktas vietoje bendrinio / INN arba rodomas be LT/EU pagrindo.	sometimes	localization_overrides.tsv	Numatytasis sprendimas dažniausiai yra `genericize`.
+content_type_drift	Turinio blokas išverstas ne tuo režimu arba prapuolė struktūruotas blokas.	sometimes	regression_examples	Naudinga completeness ir section-type prompting sluoksniui.

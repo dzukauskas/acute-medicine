@@ -5,6 +5,8 @@ import argparse
 import re
 from pathlib import Path
 
+from book_workflow_support import resolve_book_root
+
 
 MARKDOWN_LINK_RE = re.compile(r"\[([^\]]*)\]\([^)]+\)")
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
@@ -52,16 +54,18 @@ NO_SPACE_BEFORE_UNIT_RE = re.compile(
     rf"(?P<number>\d+(?:,\d+)?(?:–\d+(?:,\d+)?)?)(?P<unit>{UNIT_PATTERN})\b"
 )
 
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Flag Lithuanian medical typography and low-noise style issues."
     )
     parser.add_argument(
+        "--book-root",
+        help="Optional books/<slug> root. If omitted, uses MEDBOOK_ROOT.",
+    )
+    parser.add_argument(
         "paths",
         nargs="*",
-        default=["books/acute-medicine/lt/chapters"],
-        help="Files or directories to scan. Defaults to books/acute-medicine/lt/chapters.",
+        help="Files or directories to scan. If omitted, scans <book-root>/lt/chapters.",
     )
     return parser.parse_args()
 
@@ -204,8 +208,13 @@ def scan_file(file_path: Path) -> list[str]:
 
 def main() -> int:
     args = parse_args()
+    book_root = resolve_book_root(args.book_root)
+    scan_paths = args.paths or ([str(book_root / "lt" / "chapters")] if book_root else [])
+    if not scan_paths:
+        raise SystemExit("Nurodykite scan kelią arba nustatykite MEDBOOK_ROOT / --book-root.")
+
     findings: list[str] = []
-    for file_path in iter_markdown_files(args.paths):
+    for file_path in iter_markdown_files(scan_paths):
         findings.extend(scan_file(file_path))
 
     if findings:

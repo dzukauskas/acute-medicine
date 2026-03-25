@@ -6,11 +6,10 @@ import re
 import sys
 from pathlib import Path
 
-from book_workflow_support import chapter_paths_for_slug, read_tsv, resolve_chapter_slug
+from book_workflow_support import chapter_paths_for_slug, read_tsv, resolve_book_root, resolve_chapter_slug
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MANIFEST_PATH = REPO_ROOT / "books/acute-medicine/lt/figures/manifest.tsv"
 ALLOWED_CANONICAL_TYPES = {"whimsical_board"}
 IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 
@@ -19,12 +18,15 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Validate active figure manifest rows and optional chapter image references."
     )
+    parser.add_argument(
+        "--book-root",
+        help="Optional books/<slug> root. If omitted, uses MEDBOOK_ROOT.",
+    )
     parser.add_argument("chapter", nargs="?", help="Optional chapter slug or number.")
     parser.add_argument(
         "--manifest",
         type=Path,
-        default=MANIFEST_PATH,
-        help="Path to lt/figures/manifest.tsv.",
+        help="Path to lt/figures/manifest.tsv. Defaults to <book-root>/lt/figures/manifest.tsv.",
     )
     return parser.parse_args()
 
@@ -120,10 +122,10 @@ def extract_image_refs(chapter_path: Path) -> list[str]:
     return refs
 
 
-def validate_chapter_refs(chapter: str, by_png_path: dict[str, dict[str, str]]) -> list[str]:
+def validate_chapter_refs(chapter: str, by_png_path: dict[str, dict[str, str]], book_root: Path | None) -> list[str]:
     errors: list[str] = []
-    slug = resolve_chapter_slug(chapter)
-    lt_path = chapter_paths_for_slug(slug)["lt"]
+    slug = resolve_chapter_slug(chapter, book_root)
+    lt_path = chapter_paths_for_slug(slug, book_root)["lt"]
     if not lt_path.exists():
         return [f"Nerastas LT skyrius: {lt_path}"]
 
@@ -147,11 +149,17 @@ def validate_chapter_refs(chapter: str, by_png_path: dict[str, dict[str, str]]) 
 
 def main() -> int:
     args = parse_args()
-    rows = load_manifest_rows(args.manifest)
+    book_root = resolve_book_root(args.book_root)
+    manifest_path = args.manifest
+    if manifest_path is None:
+        if book_root is None:
+            raise SystemExit("Nurodykite --manifest arba nustatykite MEDBOOK_ROOT / --book-root.")
+        manifest_path = book_root / "lt" / "figures" / "manifest.tsv"
+    rows = load_manifest_rows(manifest_path)
     errors, by_png_path = validate_manifest_rows(rows)
 
     if args.chapter:
-        errors.extend(validate_chapter_refs(args.chapter, by_png_path))
+        errors.extend(validate_chapter_refs(args.chapter, by_png_path, book_root))
 
     if errors:
         for error in errors:

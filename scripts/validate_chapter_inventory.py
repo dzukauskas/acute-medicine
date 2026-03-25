@@ -5,6 +5,7 @@ import argparse
 import re
 
 from book_workflow_support import (
+    activate_book_root,
     chapter_paths_for_slug,
     extract_inventory,
     extract_source_structured_items,
@@ -21,6 +22,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Validate that the research inventory covers all structured source blocks."
     )
+    parser.add_argument("--book-root", help="Optional books/<slug> root. If omitted, uses MEDBOOK_ROOT.")
     parser.add_argument("chapter", help="Chapter slug or number.")
     return parser.parse_args()
 
@@ -92,7 +94,8 @@ def validate_chapter_inventory_or_raise(slug: str) -> None:
 
 def main() -> int:
     args = parse_args()
-    slug = resolve_chapter_slug(args.chapter)
+    activate_book_root(args.book_root)
+    slug = resolve_chapter_slug(args.chapter, args.book_root)
     try:
         validate_chapter_inventory_or_raise(slug)
     except ValueError as exc:

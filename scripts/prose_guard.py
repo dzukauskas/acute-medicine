@@ -6,6 +6,8 @@ import csv
 import re
 from pathlib import Path
 
+from book_workflow_support import resolve_book_root
+
 
 Rule = dict[str, str]
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
@@ -81,22 +83,33 @@ def main() -> int:
         description="Flag Lithuanian prose calques and translation-shaped sentence patterns."
     )
     parser.add_argument(
+        "--book-root",
+        help="Optional books/<slug> root. If omitted, uses MEDBOOK_ROOT.",
+    )
+    parser.add_argument(
         "paths",
         nargs="*",
-        default=["books/acute-medicine/lt/chapters"],
-        help="Files or directories to scan. Defaults to books/acute-medicine/lt/chapters.",
+        help="Files or directories to scan. If omitted, scans <book-root>/lt/chapters.",
     )
     parser.add_argument(
         "--rules",
         nargs="*",
-        default=["books/acute-medicine/calque_patterns.tsv"],
-        help="One or more TSV rule files. Defaults to the active book calque rule set.",
+        help="One or more TSV rule files. Defaults to <book-root>/calque_patterns.tsv.",
     )
     args = parser.parse_args()
 
-    rules = load_rules([Path(raw) for raw in args.rules])
+    book_root = resolve_book_root(args.book_root)
+    paths = args.paths or ([str(book_root / "lt" / "chapters")] if book_root else [])
+    if not paths:
+        raise SystemExit("Nurodykite scan kelią arba nustatykite MEDBOOK_ROOT / --book-root.")
+
+    rules = args.rules or ([str(book_root / "calque_patterns.tsv")] if book_root else [])
+    if not rules:
+        raise SystemExit("Nenurodytas rules failas. Perduokite --rules arba nustatykite MEDBOOK_ROOT / --book-root.")
+
+    rules = load_rules([Path(raw) for raw in rules])
     files: list[Path] = []
-    for raw in args.paths:
+    for raw in paths:
         path = Path(raw)
         if path.is_dir():
             files.extend(sorted(p for p in path.rglob("*.md") if p.is_file()))

@@ -6,17 +6,14 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-from book_workflow_support import BOOK_ROOT, chapter_number_from_slug, read_tsv, resolve_chapter_slug
-
-
-REVIEW_TAXONOMY_PATH = BOOK_ROOT / "review_taxonomy.tsv"
-REVIEW_DELTAS_DIR = BOOK_ROOT / "review_deltas"
+from book_workflow_support import activate_book_root, chapter_number_from_slug, read_tsv, require_book_root, resolve_chapter_slug
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Summarize review deltas into normalized promotion candidates."
     )
+    parser.add_argument("--book-root", help="Optional books/<slug> root. If omitted, uses MEDBOOK_ROOT.")
     parser.add_argument("chapter", help="Chapter slug or number.")
     parser.add_argument(
         "--emit-regression",
@@ -27,7 +24,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def review_delta_path(slug: str) -> Path:
-    return REVIEW_DELTAS_DIR / f"{slug}.tsv"
+    return require_book_root() / "review_deltas" / f"{slug}.tsv"
 
 
 def render_gold_phrase(row: dict[str, str], slug: str) -> str:
@@ -48,8 +45,16 @@ def render_calque_pattern(row: dict[str, str], slug: str) -> str:
 
 def render_localization_override(row: dict[str, str], slug: str) -> str:
     chapter_number = chapter_number_from_slug(slug)
+    defect_class = row.get("defect_class", "").strip()
+    replacement_mode = "replace_lt"
+    if defect_class == "brand_drift":
+        replacement_mode = "genericize"
+    elif defect_class == "market_drift":
+        replacement_mode = "genericize"
+    elif defect_class == "jurisdiction_drift":
+        replacement_mode = "original_context_callout"
     return (
-        f"{row['bad_form']}\t{row['fixed_form']}\t{chapter_number}\t"
+        f"{row['bad_form']}\tmixed-anglosphere\t{replacement_mode}\t{row['fixed_form']}\t\t{chapter_number}\t"
         f"{row['notes']}\t{review_delta_path(slug)}\tgenerated candidate"
     )
 
@@ -82,12 +87,14 @@ def resolved_target(row: dict[str, str], taxonomy: dict[str, dict[str, str]]) ->
 
 def main() -> int:
     args = parse_args()
-    slug = resolve_chapter_slug(args.chapter)
+    activate_book_root(args.book_root)
+    slug = resolve_chapter_slug(args.chapter, args.book_root)
     delta_path = review_delta_path(slug)
     if not delta_path.exists():
         raise SystemExit(f"Nerastas review delta failas: {delta_path}")
 
-    taxonomy = {row["defect_class"]: row for row in read_tsv(REVIEW_TAXONOMY_PATH)}
+    taxonomy_path = require_book_root() / "review_taxonomy.tsv"
+    taxonomy = {row["defect_class"]: row for row in read_tsv(taxonomy_path)}
     deltas = read_tsv(delta_path)
     grouped: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in deltas:

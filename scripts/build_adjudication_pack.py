@@ -4,27 +4,33 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from book_workflow_support import ADJUDICATION_PACKS_DIR, BOOK_ROOT, dump_yaml, load_yaml, read_tsv, resolve_chapter_slug, split_multi
-
-
-PROFILES_PATH = BOOK_ROOT / "adjudication_profiles.tsv"
-SCAFFOLD_PATH = BOOK_ROOT / "adjudication_scaffold.md"
-CHAPTER_PACKS_DIR = BOOK_ROOT / "chapter_packs"
+from book_workflow_support import activate_book_root, dump_yaml, load_yaml, read_tsv, require_book_root, resolve_chapter_slug, split_multi
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Build a targeted adjudication pack for high-risk blocks.")
+    parser.add_argument("--book-root", help="Optional books/<slug> root. If omitted, uses MEDBOOK_ROOT.")
     parser.add_argument("chapter", help="Chapter slug or number.")
     parser.add_argument(
         "--out",
-        help="Optional output path. Defaults to books/acute-medicine/adjudication_packs/<slug>.yaml.",
+        help="Optional output path. Defaults to $MEDBOOK_ROOT/adjudication_packs/<slug>.yaml.",
     )
     return parser.parse_args()
 
 
+def book_paths() -> dict[str, Path]:
+    book_root = require_book_root()
+    return {
+        "profiles": book_root / "adjudication_profiles.tsv",
+        "scaffold": book_root / "adjudication_scaffold.md",
+        "chapter_packs": book_root / "chapter_packs",
+        "adjudication_packs": book_root / "adjudication_packs",
+    }
+
+
 def load_profiles() -> dict[str, dict[str, object]]:
     profiles: dict[str, dict[str, object]] = {}
-    for row in read_tsv(PROFILES_PATH):
+    for row in read_tsv(book_paths()["profiles"]):
         profiles[row["profile_id"]] = {
             "profile_id": row["profile_id"],
             "applies_to_block_types": split_multi(row.get("applies_to_block_types", "")),
@@ -136,7 +142,8 @@ def is_high_risk(block: dict, pack: dict) -> bool:
 
 
 def build_pack(slug: str) -> dict[str, object]:
-    pack_path = CHAPTER_PACKS_DIR / f"{slug}.yaml"
+    paths = book_paths()
+    pack_path = paths["chapter_packs"] / f"{slug}.yaml"
     pack = load_yaml(pack_path)
     profiles = load_profiles()
 
@@ -180,16 +187,17 @@ def build_pack(slug: str) -> dict[str, object]:
         "chapter_pack": str(pack_path),
         "source_md": pack.get("source_md", ""),
         "lt_target_md": pack.get("lt_target_md", ""),
-        "scaffold": str(SCAFFOLD_PATH),
+        "scaffold": str(paths["scaffold"]),
         "candidates": candidates,
     }
 
 
 def main() -> int:
     args = parse_args()
-    slug = resolve_chapter_slug(args.chapter)
+    activate_book_root(args.book_root)
+    slug = resolve_chapter_slug(args.chapter, args.book_root)
     data = build_pack(slug)
-    output_path = Path(args.out) if args.out else ADJUDICATION_PACKS_DIR / f"{slug}.yaml"
+    output_path = Path(args.out) if args.out else book_paths()["adjudication_packs"] / f"{slug}.yaml"
     output_path.parent.mkdir(parents=True, exist_ok=True)
     dump_yaml(output_path, data)
     print(output_path)

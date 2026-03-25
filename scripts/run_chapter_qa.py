@@ -2,12 +2,13 @@
 from __future__ import annotations
 
 import argparse
+import os
 import subprocess
 import sys
 import tempfile
 from pathlib import Path
 
-from book_workflow_support import chapter_paths_for_slug, load_yaml, normalize_yaml_structure, resolve_chapter_slug
+from book_workflow_support import activate_book_root, chapter_paths_for_slug, load_yaml, normalize_yaml_structure, resolve_chapter_slug
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -17,6 +18,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Run the canonical chapter QA pipeline against a fresh and semantically current chapter pack."
     )
+    parser.add_argument("--book-root", help="Optional books/<slug> root. If omitted, uses MEDBOOK_ROOT.")
     parser.add_argument("chapter", help="Chapter slug or number.")
     return parser.parse_args()
 
@@ -33,18 +35,24 @@ def run_step(label: str, args: list[str]) -> None:
 
 def main() -> int:
     args = parse_args()
-    slug = resolve_chapter_slug(args.chapter)
+    activate_book_root(args.book_root)
+    slug = resolve_chapter_slug(args.chapter, args.book_root)
     paths = chapter_paths_for_slug(slug)
     lt_target = paths["lt"]
     pack_path = paths["pack"]
+    book_root = args.book_root or os.environ.get("MEDBOOK_ROOT", "")
 
     run_step(
         "inventory validation",
-        [sys.executable, str(SCRIPT_DIR / "validate_chapter_inventory.py"), slug],
+        [sys.executable, str(SCRIPT_DIR / "validate_chapter_inventory.py"), "--book-root", book_root, slug] if book_root else [sys.executable, str(SCRIPT_DIR / "validate_chapter_inventory.py"), slug],
+    )
+    run_step(
+        "localization readiness",
+        [sys.executable, str(SCRIPT_DIR / "validate_localization_readiness.py"), "--book-root", book_root, slug] if book_root else [sys.executable, str(SCRIPT_DIR / "validate_localization_readiness.py"), slug],
     )
     run_step(
         "figure manifest validation",
-        [sys.executable, str(SCRIPT_DIR / "validate_figures_manifest.py"), slug],
+        [sys.executable, str(SCRIPT_DIR / "validate_figures_manifest.py"), "--book-root", book_root, slug] if book_root else [sys.executable, str(SCRIPT_DIR / "validate_figures_manifest.py"), slug],
     )
 
     if not pack_path.exists():
@@ -60,6 +68,7 @@ def main() -> int:
             [
                 sys.executable,
                 str(SCRIPT_DIR / "build_chapter_pack.py"),
+                *([] if not book_root else ["--book-root", book_root]),
                 slug,
                 "--out",
                 str(temp_pack),
@@ -76,10 +85,31 @@ def main() -> int:
             )
 
         run_step(
+            "adjudication resolution",
+            [
+                sys.executable,
+                str(SCRIPT_DIR / "validate_adjudication_resolution.py"),
+                *([] if not book_root else ["--book-root", book_root]),
+                slug,
+            ],
+        )
+
+        run_step(
             "terminology_guard",
             [
                 sys.executable,
                 str(SCRIPT_DIR / "terminology_guard.py"),
+                *([] if not book_root else ["--book-root", book_root]),
+                str(lt_target),
+                "--chapter-pack",
+                str(temp_pack),
+            ],
+        )
+        run_step(
+            "localization_guard",
+            [
+                sys.executable,
+                str(SCRIPT_DIR / "localization_guard.py"),
                 str(lt_target),
                 "--chapter-pack",
                 str(temp_pack),
@@ -87,15 +117,15 @@ def main() -> int:
         )
         run_step(
             "prose_guard",
-            [sys.executable, str(SCRIPT_DIR / "prose_guard.py"), str(lt_target)],
+            [sys.executable, str(SCRIPT_DIR / "prose_guard.py"), *([] if not book_root else ["--book-root", book_root]), str(lt_target)],
         )
         run_step(
             "lt_style_guard",
-            [sys.executable, str(SCRIPT_DIR / "lt_style_guard.py"), str(lt_target)],
+            [sys.executable, str(SCRIPT_DIR / "lt_style_guard.py"), *([] if not book_root else ["--book-root", book_root]), str(lt_target)],
         )
         run_step(
             "completeness_guard",
-            [sys.executable, str(SCRIPT_DIR / "completeness_guard.py"), str(temp_pack)],
+            [sys.executable, str(SCRIPT_DIR / "completeness_guard.py"), *([] if not book_root else ["--book-root", book_root]), str(temp_pack)],
         )
 
     print(f"Chapter QA passed for {slug}.")

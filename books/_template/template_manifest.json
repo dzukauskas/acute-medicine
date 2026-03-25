@@ -1,0 +1,44 @@
+{
+  "always_refresh": [
+    "README.md",
+    "workflow.md",
+    "source-priority.md",
+    "language-style.md",
+    "translation-style.md",
+    "drafting-scaffold.md",
+    "adjudication_scaffold.md",
+    "research/README.md",
+    "research/_template.md",
+    "lt/figures/README.md",
+    "localization_signals.base.tsv",
+    "clinical_policy_markers.tsv"
+  ],
+  "refresh_if_empty": [
+    "termbase.tsv",
+    "acronyms.tsv",
+    "gold_phrases.tsv",
+    "gold_sections/index.tsv",
+    "localization_overrides.tsv",
+    "review_taxonomy.tsv",
+    "adjudication_profiles.tsv",
+    "lt/figures/manifest.tsv",
+    "calque_patterns.tsv",
+    "disallowed_terms.tsv",
+    "disallowed_phrases.tsv",
+    "localization_signals.tsv"
+  ],
+  "required_directories": [
+    "source/pdf",
+    "source/chapters-en",
+    "source/index",
+    "lt/chapters",
+    "lt/figures",
+    "research",
+    "chapter_packs",
+    "adjudication_packs",
+    "review_deltas",
+    "regression_examples",
+    "archive",
+    "gold_sections"
+  ]
+}

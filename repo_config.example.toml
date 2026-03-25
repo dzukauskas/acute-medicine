@@ -1,0 +1,4 @@
+[obsidian]
+base_dir = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents"
+vault_name = "PARAMEDIKAS"
+launch_agent_prefix = "lt.medbook.obsidian-sync"

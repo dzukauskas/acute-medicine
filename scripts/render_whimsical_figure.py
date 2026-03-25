@@ -16,13 +16,11 @@ from pathlib import Path
 from PIL import Image
 from playwright.sync_api import sync_playwright
 
+from book_workflow_support import default_obsidian_dest, resolve_book_root, resolve_repo_path
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_MANIFEST = REPO_ROOT / "books/acute-medicine/lt/figures/manifest.tsv"
-DEFAULT_STORAGE_STATE = Path("~/.cache/acute-medicine/whimsical-storage-state.json").expanduser()
-DEFAULT_OBSIDIAN_DEST = Path(
-    "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/PARAMEDIKAS/Acute Medicine"
-).expanduser()
+DEFAULT_STORAGE_STATE = Path("~/.cache/codex-whimsical/storage-state.json").expanduser()
 
 
 def parse_args() -> argparse.Namespace:
@@ -31,10 +29,13 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("figure_id", nargs="?", help="Manifest figure_id to render.")
     parser.add_argument(
+        "--book-root",
+        help="Optional books/<slug> root. If omitted, uses MEDBOOK_ROOT.",
+    )
+    parser.add_argument(
         "--manifest",
         type=Path,
-        default=DEFAULT_MANIFEST,
-        help="Path to manifest.tsv.",
+        help="Path to manifest.tsv. Defaults to <book-root>/lt/figures/manifest.tsv.",
     )
     parser.add_argument(
         "--storage-state",
@@ -67,10 +68,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--obsidian-dest",
         type=Path,
-        default=DEFAULT_OBSIDIAN_DEST,
-        help="Obsidian destination used when --sync-obsidian is set.",
+        help="Obsidian destination used when --sync-obsidian is set. Defaults to the path resolved from repo_config.toml.",
     )
     return parser.parse_args()
+
+
+def infer_book_root(book_root_arg: str | None, manifest_path: Path | None) -> Path | None:
+    book_root = resolve_book_root(book_root_arg)
+    if book_root is not None:
+        return book_root
+    if manifest_path is not None:
+        return manifest_path.resolve().parents[2]
+    return None
 
 
 def ensure_inkscape() -> None:
@@ -222,15 +231,32 @@ def convert_svg_to_png(svg_path: Path, png_path: Path, width: int) -> None:
     )
 
 
-def sync_obsidian(dest: Path) -> None:
+def sync_obsidian(dest: Path, book_root: Path) -> None:
+    book_root_rel = book_root.resolve().relative_to(REPO_ROOT)
     subprocess.run(
-        [str(REPO_ROOT / "scripts/sync_obsidian_acute_medicine.sh"), str(dest)],
+        [
+            str(REPO_ROOT / "scripts/sync_obsidian_book.sh"),
+            "--book-root",
+            str(book_root_rel),
+            "--dest",
+            str(dest),
+        ],
         check=True,
     )
 
 
 def main() -> int:
     args = parse_args()
+    manifest_path = args.manifest
+    book_root = infer_book_root(args.book_root, manifest_path)
+    if manifest_path is None:
+        if book_root is None:
+            raise SystemExit("Nurodykite --manifest arba nustatykite MEDBOOK_ROOT / --book-root.")
+        manifest_path = book_root / "lt" / "figures" / "manifest.tsv"
+    else:
+        manifest_path = resolve_repo_path(manifest_path)
+        book_root = infer_book_root(args.book_root, manifest_path)
+
     storage_state = args.storage_state.expanduser()
     if args.login:
         login_whimsical(storage_state)
@@ -240,7 +266,7 @@ def main() -> int:
     if not args.figure_id:
         raise SystemExit("Pass a figure_id or use --login.")
 
-    manifest_row = load_manifest_row(args.manifest, args.figure_id)
+    manifest_row = load_manifest_row(manifest_path, args.figure_id)
     if manifest_row["canonical_source_type"] != "whimsical_board":
         raise SystemExit(
             f"Figure {args.figure_id} is not configured as a Whimsical board in the manifest."
@@ -262,8 +288,11 @@ def main() -> int:
     print(f"Rendered {args.figure_id} -> {png_path}")
 
     if args.sync_obsidian:
-        sync_obsidian(args.obsidian_dest.expanduser())
-        print(f"Synced Obsidian vault -> {args.obsidian_dest.expanduser()}")
+        if book_root is None:
+            raise SystemExit("Nepavyko nustatyti knygos darbo vietos Obsidian sync veiksmui.")
+        obsidian_dest = args.obsidian_dest.expanduser() if args.obsidian_dest else default_obsidian_dest(book_root)
+        sync_obsidian(obsidian_dest, book_root)
+        print(f"Synced Obsidian vault -> {obsidian_dest}")
 
     return 0
 

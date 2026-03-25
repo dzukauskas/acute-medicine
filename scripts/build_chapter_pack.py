@@ -6,30 +6,29 @@ import re
 from pathlib import Path
 
 from book_workflow_support import (
-    BOOK_ROOT,
-    GOLD_SECTIONS_DIR,
+    activate_book_root,
     chapter_number_from_slug,
     chapter_paths_for_slug,
+    detect_source_localization_signals,
     dump_yaml,
     extract_inventory,
+    extract_localization_research,
+    jurisdiction_to_pack_context,
+    load_localization_overrides,
     metadata_value,
+    normalize_authority_basis,
     normalize_key,
     parse_markdown_sections,
     parse_structured_label,
     read_tsv,
+    require_book_root,
     resolve_chapter_slug,
     scope_allows,
     slugify,
     split_multi,
 )
 from validate_chapter_inventory import validate_chapter_inventory_or_raise
-
-
-TERMBASE_PATH = BOOK_ROOT / "termbase.tsv"
-ACRONYMS_PATH = BOOK_ROOT / "acronyms.tsv"
-GOLD_PHRASES_PATH = BOOK_ROOT / "gold_phrases.tsv"
-GOLD_SECTIONS_INDEX_PATH = GOLD_SECTIONS_DIR / "index.tsv"
-LOCALIZATION_OVERRIDES_PATH = BOOK_ROOT / "localization_overrides.tsv"
+from validate_localization_readiness import validate_localization_readiness_or_raise
 
 
 BLOCK_TYPE_TO_MODE = {
@@ -137,12 +136,25 @@ TAG_KEYWORDS = {
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Build a chapter-specific preflight pack.")
+    parser.add_argument("--book-root", help="Optional books/<slug> root. If omitted, uses MEDBOOK_ROOT.")
     parser.add_argument("chapter", help="Chapter slug or number, for example 002 or 002-the-critically-ill-patient.")
     parser.add_argument(
         "--out",
-        help="Optional output path. Defaults to books/acute-medicine/chapter_packs/<slug>.yaml.",
+        help="Optional output path. Defaults to $MEDBOOK_ROOT/chapter_packs/<slug>.yaml.",
     )
     return parser.parse_args()
+
+
+def book_paths() -> dict[str, Path]:
+    book_root = require_book_root()
+    return {
+        "book_root": book_root,
+        "termbase": book_root / "termbase.tsv",
+        "acronyms": book_root / "acronyms.tsv",
+        "gold_phrases": book_root / "gold_phrases.tsv",
+        "gold_sections_index": book_root / "gold_sections" / "index.tsv",
+        "localization_overrides": book_root / "localization_overrides.tsv",
+    }
 
 
 def load_chapter_context(slug: str) -> dict[str, object]:
@@ -212,7 +224,7 @@ def select_active_terms(slug: str, inventory: dict[str, list[str]], source_text:
     risky_norms = {normalize_key(item) for item in inventory["risky_terms"]}
     source_blob = normalize_key("\n".join([source_text, research_text]))
     rows = []
-    for row in read_tsv(TERMBASE_PATH):
+    for row in read_tsv(book_paths()["termbase"]):
         if not scope_allows(row.get("section_scope", "all"), chapter_number):
             continue
         en_norm = normalize_key(row["en"])
@@ -236,7 +248,7 @@ def select_active_acronyms(slug: str, source_text: str, research_text: str) -> l
     chapter_number = chapter_scope_number(slug)
     blob = f"{source_text}\n{research_text}"
     rows = []
-    for row in read_tsv(ACRONYMS_PATH):
+    for row in read_tsv(book_paths()["acronyms"]):
         acronym = row["acronym"]
         if acronym not in blob and row["lt"] not in blob and row["en"] not in blob:
             continue
@@ -261,7 +273,7 @@ def select_localization_overrides(slug: str, source_text: str, research_text: st
     chapter_number = chapter_scope_number(slug)
     blob = normalize_key(f"{source_text}\n{research_text}")
     rows = []
-    for row in read_tsv(LOCALIZATION_OVERRIDES_PATH):
+    for row in load_localization_overrides(book_paths()["localization_overrides"]):
         if not scope_allows(row.get("scope", "all"), chapter_number):
             continue
         if normalize_key(row["source_term"]) not in blob:
@@ -271,15 +283,16 @@ def select_localization_overrides(slug: str, source_text: str, research_text: st
 
 
 def load_gold_section_examples() -> list[dict[str, object]]:
-    if not GOLD_SECTIONS_INDEX_PATH.exists():
+    paths = book_paths()
+    if not paths["gold_sections_index"].exists():
         return []
 
     rows: list[dict[str, object]] = []
-    for row in read_tsv(GOLD_SECTIONS_INDEX_PATH):
+    for row in read_tsv(paths["gold_sections_index"]):
         relative_path = row.get("path", "")
         if not relative_path:
             continue
-        example_path = BOOK_ROOT / relative_path
+        example_path = paths["book_root"] / relative_path
         if not example_path.exists():
             continue
         rows.append(
@@ -300,7 +313,7 @@ def load_gold_section_examples() -> list[dict[str, object]]:
 
 def load_gold_phrase_examples() -> list[dict[str, object]]:
     examples: list[dict[str, object]] = []
-    for row in read_tsv(GOLD_PHRASES_PATH):
+    for row in read_tsv(book_paths()["gold_phrases"]):
         tags = detect_tags(f"{row['bad_en_shaped_lt']} {row['preferred_lt']}", "narrative", [])
         examples.append(
             {
@@ -357,6 +370,44 @@ def classify_narrative_block(item: str) -> tuple[str, list[str], list[str]]:
     return block_type, sorted(set(risk_flags)), tags
 
 
+def extract_source_excerpt(source_text: str, anchor: str, *, window: int = 8) -> str:
+    anchor_norm = normalize_key(anchor)
+    if not anchor_norm:
+        return ""
+
+    lines = [
+        line.strip()
+        for line in source_text.splitlines()
+        if line.strip() and not line.lstrip().startswith("<!--")
+    ]
+    tokens = [token for token in anchor_norm.split() if len(token) > 2]
+    best_index = -1
+    best_score = 0
+
+    for index, line in enumerate(lines):
+        line_norm = normalize_key(line)
+        if anchor_norm in line_norm:
+            best_index = index
+            best_score = 999
+            break
+        if not tokens:
+            continue
+        score = sum(1 for token in tokens if token in line_norm)
+        if score > best_score and score >= max(1, len(tokens) // 2):
+            best_index = index
+            best_score = score
+
+    if best_index < 0:
+        return ""
+
+    excerpt_lines: list[str] = []
+    for line in lines[best_index : best_index + window]:
+        if excerpt_lines and line.startswith("# "):
+            break
+        excerpt_lines.append(line)
+    return "\n".join(excerpt_lines).strip()
+
+
 def completion_hint_for(kind: str, label: str, title: str) -> str:
     if kind == "table":
         return f"{label} lentelė"
@@ -371,7 +422,7 @@ def completion_hint_for(kind: str, label: str, title: str) -> str:
     return title
 
 
-def make_structured_block(kind: str, label: str, title: str, source_anchor: str) -> dict[str, object]:
+def make_structured_block(kind: str, label: str, title: str, source_anchor: str, source_text: str) -> dict[str, object]:
     normalized_title = normalize_key(title)
     if kind == "table":
         block_type = "table"
@@ -391,12 +442,14 @@ def make_structured_block(kind: str, label: str, title: str, source_anchor: str)
         risk_flags.append("complex_prose")
 
     tags = detect_tags(title, block_type, risk_flags)
+    source_excerpt = extract_source_excerpt(source_text, source_anchor or title)
     return {
         "block_id": f"{block_type}-{label}-{slugify(title)}" if label else f"{block_type}-{slugify(title)}",
         "block_type": block_type,
         "heading": title,
         "source_anchor": source_anchor,
         "source_label": label,
+        "source_excerpt": source_excerpt,
         "risk_flags": sorted(set(risk_flags)),
         "tags": tags,
         "draft_mode": BLOCK_TYPE_TO_MODE[block_type],
@@ -406,7 +459,7 @@ def make_structured_block(kind: str, label: str, title: str, source_anchor: str)
     }
 
 
-def build_blocks(inventory: dict[str, list[str]]) -> list[dict[str, object]]:
+def build_blocks(inventory: dict[str, list[str]], source_text: str) -> list[dict[str, object]]:
     blocks: list[dict[str, object]] = []
     for idx, item in enumerate(inventory["subsections"], start=1):
         block_type, risk_flags, tags = classify_narrative_block(item)
@@ -416,6 +469,7 @@ def build_blocks(inventory: dict[str, list[str]]) -> list[dict[str, object]]:
                 "block_type": block_type,
                 "heading": item,
                 "source_anchor": item,
+                "source_excerpt": extract_source_excerpt(source_text, item),
                 "risk_flags": risk_flags,
                 "tags": tags,
                 "draft_mode": BLOCK_TYPE_TO_MODE[block_type],
@@ -429,7 +483,7 @@ def build_blocks(inventory: dict[str, list[str]]) -> list[dict[str, object]]:
             title = item
             if kind and label:
                 title = re.sub(rf"^(Table|Figure|Box|Chart)\s+{re.escape(label)}\s+", "", item)
-            blocks.append(make_structured_block(kind or "figure", label, title, item))
+            blocks.append(make_structured_block(kind or "figure", label, title, item, source_text))
     return blocks
 
 
@@ -446,6 +500,127 @@ def build_style_hotspots(inventory: dict[str, list[str]]) -> list[dict[str, str]
     return hotspots
 
 
+def block_mentions_term(block_blob: str, term: str) -> bool:
+    term_norm = normalize_key(term)
+    return bool(term_norm) and term_norm in block_blob
+
+
+def default_localization_policy(block: dict[str, object]) -> dict[str, object]:
+    tags = set(block.get("tags", []))
+    block_type = block.get("block_type", "")
+    if block_type in {"legal_localization", "chart"} or "uk-localization" in tags or "legal-localization" in tags:
+        return {
+            "jurisdiction_context": "mixed-anglosphere",
+            "localization_action": "original_context_callout",
+            "authority_basis": "original-context-only",
+            "localization_note": "Pagrindiniame LT tekste nepalikite kaip vietinio standarto; jei reikia, rodykite tik `Originalo kontekstas` bloke.",
+            "matched_localization_terms": [],
+        }
+    return {
+        "jurisdiction_context": "universal",
+        "localization_action": "replace_lt",
+        "authority_basis": "LT",
+        "localization_note": "Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.",
+        "matched_localization_terms": [],
+    }
+
+
+def infer_authority_basis_from_action(action: str) -> str:
+    if action == "replace_eu":
+        return "EU"
+    if action in {"original_context_callout", "omit_nontransferable"}:
+        return "original-context-only"
+    return "LT"
+
+
+def annotate_block_localization(
+    block: dict[str, object],
+    localization_research: dict[str, object],
+    overrides: list[dict[str, str]],
+) -> dict[str, object]:
+    block_blob = normalize_key(
+        " ".join(
+            [
+                str(block.get("heading", "")),
+                str(block.get("source_anchor", "")),
+                str(block.get("source_excerpt", "")),
+                " ".join(str(tag) for tag in block.get("tags", [])),
+            ]
+        )
+    )
+    matched_signals = [
+        row for row in localization_research["signals"] if block_mentions_term(block_blob, row.get("source_term", ""))
+    ]
+    matched_decisions = [
+        row for row in localization_research["decisions"] if block_mentions_term(block_blob, row.get("source_term", ""))
+    ]
+    matched_overrides = [row for row in overrides if block_mentions_term(block_blob, row.get("source_term", ""))]
+
+    if not matched_signals and not matched_decisions and not matched_overrides:
+        return default_localization_policy(block)
+
+    if matched_signals and not matched_decisions:
+        matched_terms = ", ".join(sorted({row.get("source_term", "") for row in matched_signals if row.get("source_term", "")}))
+        raise ValueError(
+            f"Blokui `{block.get('block_id', 'unknown')}` aptikti jurisdikciniai signalai ({matched_terms}), "
+            "bet nėra tikslaus `LT/EU pakeitimo sprendimai` atitikmens research faile."
+        )
+
+    jurisdictions = [
+        row.get("jurisdiction", "")
+        for row in matched_signals + matched_overrides
+        if row.get("jurisdiction", "").strip()
+    ]
+    action = ""
+    authority_basis = ""
+    localization_note = ""
+
+    if matched_decisions:
+        first_decision = matched_decisions[0]
+        action = first_decision.get("replacement_mode", "").strip()
+        authority_basis = normalize_authority_basis(first_decision.get("authority_basis", ""))
+        localization_note = first_decision.get("localization_note", "").strip() or first_decision.get("notes", "").strip()
+
+    if not action and matched_overrides:
+        first_override = matched_overrides[0]
+        action = first_override.get("replacement_mode", "").strip()
+        authority_basis = infer_authority_basis_from_action(action)
+        localization_note = first_override.get("local_lt", "").strip() or first_override.get("reason", "").strip()
+
+    if not action:
+        fallback = default_localization_policy(block)
+        action = str(fallback["localization_action"])
+        authority_basis = str(fallback["authority_basis"])
+        localization_note = str(fallback["localization_note"])
+
+    return {
+        "jurisdiction_context": jurisdiction_to_pack_context(jurisdictions),
+        "localization_action": action,
+        "authority_basis": authority_basis or infer_authority_basis_from_action(action),
+        "localization_note": localization_note,
+        "matched_localization_terms": sorted(
+            {
+                row.get("source_term", "")
+                for row in matched_signals + matched_decisions + matched_overrides
+                if row.get("source_term", "").strip()
+            }
+        ),
+    }
+
+
+def enrich_blocks_with_localization(
+    blocks: list[dict[str, object]],
+    localization_research: dict[str, object],
+    overrides: list[dict[str, str]],
+) -> list[dict[str, object]]:
+    enriched: list[dict[str, object]] = []
+    for block in blocks:
+        enriched_block = dict(block)
+        enriched_block.update(annotate_block_localization(enriched_block, localization_research, overrides))
+        enriched.append(enriched_block)
+    return enriched
+
+
 def infer_chapter_title(slug: str, lt_text: str, source_text: str) -> str:
     for text in (lt_text, source_text):
         first_line = next((line.strip() for line in text.splitlines() if line.strip()), "")
@@ -456,15 +631,26 @@ def infer_chapter_title(slug: str, lt_text: str, source_text: str) -> str:
 
 def main() -> int:
     args = parse_args()
-    slug = resolve_chapter_slug(args.chapter)
+    activate_book_root(args.book_root)
+    slug = resolve_chapter_slug(args.chapter, args.book_root)
     try:
         validate_chapter_inventory_or_raise(slug)
+        validate_localization_readiness_or_raise(slug)
     except ValueError as exc:
         raise SystemExit(str(exc))
     paths = chapter_paths_for_slug(slug)
     context = load_chapter_context(slug)
     inventory = extract_inventory(context["research_sections"])
-    blocks = build_blocks(inventory)
+    localization_research = extract_localization_research(context["research_sections"])
+    overrides = select_localization_overrides(slug, context["source_text"], context["research_text"])
+    try:
+        blocks = enrich_blocks_with_localization(
+            build_blocks(inventory, context["source_text"]),
+            localization_research,
+            overrides,
+        )
+    except ValueError as exc:
+        raise SystemExit(str(exc))
     data = {
         "chapter_slug": slug,
         "chapter_title": infer_chapter_title(slug, context["lt_text"], context["source_text"]),
@@ -474,7 +660,9 @@ def main() -> int:
         "blocks": blocks,
         "active_terms": select_active_terms(slug, inventory, context["source_text"], context["research_text"]),
         "active_acronyms": select_active_acronyms(slug, context["source_text"], context["research_text"]),
-        "localization_overrides": select_localization_overrides(slug, context["source_text"], context["research_text"]),
+        "localization_overrides": overrides,
+        "source_jurisdiction_signals": detect_source_localization_signals(context["source_text"], args.book_root),
+        "localization_decisions": localization_research["decisions"],
         "style_hotspots": build_style_hotspots(inventory),
         "gold_examples": select_gold_examples(slug, blocks),
     }

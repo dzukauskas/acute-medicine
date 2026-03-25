@@ -7,23 +7,17 @@ import re
 from pathlib import Path
 
 from book_workflow_support import (
-    BOOK_ROOT,
     MARKDOWN_LINK_RE,
     load_yaml,
     parse_bool,
     read_tsv,
+    resolve_book_root,
     strip_markdown,
     split_multi,
 )
 
 
 Rule = dict[str, str]
-TERMBASE_PATH = BOOK_ROOT / "termbase.tsv"
-ACRONYMS_PATH = BOOK_ROOT / "acronyms.tsv"
-LEGACY_RULE_PATHS = [
-    BOOK_ROOT / "disallowed_terms.tsv",
-    BOOK_ROOT / "disallowed_phrases.tsv",
-]
 
 
 def parse_args() -> argparse.Namespace:
@@ -31,20 +25,21 @@ def parse_args() -> argparse.Namespace:
         description="Flag terminology, acronym, and heading-policy issues in LT translation files."
     )
     parser.add_argument(
+        "--book-root",
+        help="Optional books/<slug> root. If omitted, uses MEDBOOK_ROOT.",
+    )
+    parser.add_argument(
         "paths",
         nargs="*",
-        default=["books/acute-medicine/lt/chapters"],
-        help="Files or directories to scan. Defaults to books/acute-medicine/lt/chapters.",
+        help="Files or directories to scan. If omitted, scans <book-root>/lt/chapters.",
     )
     parser.add_argument(
         "--termbase",
-        default=str(TERMBASE_PATH),
-        help="Path to the active termbase TSV.",
+        help="Path to the active termbase TSV. Defaults to <book-root>/termbase.tsv.",
     )
     parser.add_argument(
         "--acronyms",
-        default=str(ACRONYMS_PATH),
-        help="Path to the active acronym TSV.",
+        help="Path to the active acronym TSV. Defaults to <book-root>/acronyms.tsv.",
     )
     parser.add_argument(
         "--chapter-pack",
@@ -53,10 +48,29 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--legacy-rules",
         nargs="*",
-        default=[str(path) for path in LEGACY_RULE_PATHS if path.exists()],
-        help="Optional legacy banned-term TSV files kept for compatibility.",
+        help="Optional legacy banned-term TSV files kept for compatibility. Defaults to <book-root>/disallowed_*.tsv.",
     )
     return parser.parse_args()
+
+
+def default_paths(book_root: Path | None) -> dict[str, object]:
+    if book_root is None:
+        return {
+            "scan_paths": [],
+            "termbase": None,
+            "acronyms": None,
+            "legacy_rules": [],
+        }
+    legacy_rule_paths = [
+        book_root / "disallowed_terms.tsv",
+        book_root / "disallowed_phrases.tsv",
+    ]
+    return {
+        "scan_paths": [str(book_root / "lt" / "chapters")],
+        "termbase": book_root / "termbase.tsv",
+        "acronyms": book_root / "acronyms.tsv",
+        "legacy_rules": [str(path) for path in legacy_rule_paths if path.exists()],
+    }
 
 
 def build_legacy_pattern(rule: Rule) -> re.Pattern[str]:
@@ -261,13 +275,28 @@ def scan_acronyms(file_path: Path, text: str, acronym_rows: list[dict]) -> list[
 
 def main() -> int:
     args = parse_args()
+    book_root = resolve_book_root(args.book_root)
+    defaults = default_paths(book_root)
+    scan_paths = args.paths or list(defaults["scan_paths"])
+    if not scan_paths:
+        raise SystemExit("Nurodykite scan kelią arba nustatykite MEDBOOK_ROOT / --book-root.")
+
     chapter_pack_path = Path(args.chapter_pack) if args.chapter_pack else None
-    term_rows = active_terms(Path(args.termbase), chapter_pack_path)
-    acronym_rows = active_acronyms(Path(args.acronyms), chapter_pack_path)
-    legacy_rules = load_legacy_rules([Path(raw) for raw in args.legacy_rules])
+    termbase_path = Path(args.termbase) if args.termbase else defaults["termbase"]
+    acronyms_path = Path(args.acronyms) if args.acronyms else defaults["acronyms"]
+    legacy_rule_paths = args.legacy_rules if args.legacy_rules is not None else list(defaults["legacy_rules"])
+
+    if chapter_pack_path is None and termbase_path is None:
+        raise SystemExit("Nenurodytas termbase failas. Perduokite --termbase arba nustatykite MEDBOOK_ROOT / --book-root.")
+    if chapter_pack_path is None and acronyms_path is None:
+        raise SystemExit("Nenurodytas acronyms failas. Perduokite --acronyms arba nustatykite MEDBOOK_ROOT / --book-root.")
+
+    term_rows = active_terms(Path(termbase_path) if termbase_path else Path(), chapter_pack_path)
+    acronym_rows = active_acronyms(Path(acronyms_path) if acronyms_path else Path(), chapter_pack_path)
+    legacy_rules = load_legacy_rules([Path(raw) for raw in legacy_rule_paths])
 
     findings: list[str] = []
-    for file_path in iter_markdown_files(args.paths):
+    for file_path in iter_markdown_files(scan_paths):
         text = file_path.read_text(encoding="utf-8")
         findings.extend(scan_legacy_rules(file_path, text, legacy_rules))
         findings.extend(scan_terms(file_path, text, term_rows))
