@@ -191,3 +191,5 @@ style_hotspots:
 - category: local_practice_change
   text: JK institucinių pavadinimų svoris sumažintas ir perkeltas į Originalo kontekstas.
 gold_examples: []
+term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates: []

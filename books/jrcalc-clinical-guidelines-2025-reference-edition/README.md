@@ -21,6 +21,7 @@
 - `adjudication_packs/`: high-risk blokų targeted adjudication paketai.
 - `research/`: skyriaus šaltinių ir sprendimų failai.
 - `review_deltas/`: struktūriniai rankinio review skirtumai.
+- `term_candidates.tsv`: book-level terminų ir santrumpų kandidatų inbox, renkamas per skyrių workflow prieš promotion.
 - `regression_examples/`: trumpi „blogai -> gerai“ pavyzdžiai būsimiems promptams ir regresijų kontrolei.
 - `archive/`: knygos vidinis archyvas.
 - `workflow.md`: kanoninis šios knygos darbo workflow.
@@ -67,6 +68,13 @@ Jis sukuria `research/<slug>.checklist.md` su:
 - aptiktais UK / Australia / US / rinkos signalais iš source skyriaus.
 
 Review metu pasikartojančios taisyklės pirmiausia fiksuojamos `review_deltas/` ar book-local override sluoksnyje, o į `shared/` keliamos tik per review-gated promotion.
+
+`term_candidates.tsv` nėra aktyvi taisyklių bazė. Tai tik kandidatinis inbox:
+
+- `build_chapter_pack.py` automatiškai atnaujina einamo skyriaus kandidatus;
+- kandidatai renkami iš `## Rizikingi terminai` ir iš source aptiktų nežinomų santrumpų;
+- jei kandidatas jau yra `shared/lexicon/` bazėse arba yra tik lokalizacijos signalas / rinkos proper noun, jis į inbox nepatenka;
+- `shared/lexicon/termbase.tsv` ir `shared/lexicon/acronyms.tsv` pildomi tik po review.
 
 Diagramoms ir algoritmams šiame projekte naudojamas tik `Whimsical` workflow. Jei vartotojas nurodo konkretų įrankį, jo negalima savavališkai pakeisti kitu.
 

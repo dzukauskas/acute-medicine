@@ -13,6 +13,7 @@
   ],
   "refresh_if_empty": [
     "termbase.local.tsv",
+    "term_candidates.tsv",
     "acronyms.local.tsv",
     "gold_phrases.local.tsv",
     "gold_sections/index.tsv",

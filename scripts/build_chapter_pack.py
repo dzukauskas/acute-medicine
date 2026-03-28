@@ -27,6 +27,7 @@ from book_workflow_support import (
     parse_markdown_sections,
     parse_structured_label,
     resolve_chapter_slug,
+    term_candidates_path,
     scope_allows,
     slugify,
     structured_block_id,
@@ -34,6 +35,7 @@ from book_workflow_support import (
     structured_completion_hint,
     split_multi,
 )
+from mine_term_candidates import refresh_term_candidates_for_chapter
 from validate_chapter_inventory import validate_chapter_inventory_or_raise
 from validate_localization_readiness import validate_localization_readiness_or_raise
 
@@ -746,6 +748,7 @@ def main() -> int:
         raise SystemExit(str(exc))
     paths = chapter_paths_for_slug(slug)
     context = load_chapter_context(slug)
+    term_candidates = refresh_term_candidates_for_chapter(slug, book_root=args.book_root)
     inventory = extract_inventory(context["research_sections"])
     localization_research = extract_localization_research(context["research_sections"])
     overrides = select_localization_overrides(slug, context["source_text"], context["research_text"])
@@ -793,6 +796,8 @@ def main() -> int:
         "localization_decisions": localization_research["decisions"],
         "style_hotspots": build_style_hotspots(inventory),
         "gold_examples": select_gold_examples(slug, blocks),
+        "term_candidates_path": str(term_candidates_path(args.book_root)),
+        "term_candidates": term_candidates,
     }
 
     output_path = Path(args.out) if args.out else paths["pack"]

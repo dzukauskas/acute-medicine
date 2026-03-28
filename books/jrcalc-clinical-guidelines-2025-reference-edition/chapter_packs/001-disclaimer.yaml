@@ -266,3 +266,5 @@ style_hotspots:
 - category: local_practice_change
   text: patient care record konkretinta kaip paciento priežiūros dokumentai.
 gold_examples: []
+term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates: []

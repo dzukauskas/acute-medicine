@@ -36,6 +36,23 @@ BOOK_LOCAL_OVERRIDE_FILENAMES = {
     "adjudication_profiles": "adjudication_profiles.local.tsv",
 }
 
+TERM_CANDIDATE_FIELDS = [
+    "candidate_id",
+    "candidate_kind",
+    "source_term",
+    "source_expansion",
+    "chapter_slug",
+    "source_context",
+    "proposed_lt",
+    "status",
+    "scope",
+    "candidate_origin",
+    "reason",
+    "banned_lt",
+    "source_ref",
+    "notes",
+]
+
 MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 INLINE_CODE_RE = re.compile(r"`([^`]*)`")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*)$")
@@ -620,6 +637,10 @@ def chapter_paths_for_slug(slug: str, book_root: str | Path | None = None) -> di
     }
 
 
+def term_candidates_path(book_root: str | Path | None = None) -> Path:
+    return require_book_root(book_root) / "term_candidates.tsv"
+
+
 def chapter_number_from_slug(slug: str) -> str:
     match = re.match(r"^(\d{3})-", slug)
     if not match:
@@ -921,6 +942,10 @@ def load_disallowed_term_rows(book_root: str | Path | None = None) -> list[dict[
 
 def load_disallowed_phrase_rows(book_root: str | Path | None = None) -> list[dict[str, str]]:
     return merge_appended_rows(disallowed_phrase_paths(book_root))
+
+
+def load_term_candidate_rows(book_root: str | Path | None = None) -> list[dict[str, str]]:
+    return optional_tsv_rows(term_candidates_path(book_root))
 
 
 def normalize_localization_override_row(row: dict[str, str]) -> dict[str, str]:

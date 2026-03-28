@@ -86,6 +86,13 @@ EPUB bootstrap:
 
 EPUB v1 šiame repo yra `repo-native`, be papildomo EPUB skill ar MCP serverio. Teksto extraction vykdomas per `EbookLib` ir `BeautifulSoup`.
 
+Terminų rinkimo politika šiame repo yra `candidate inbox -> approved local/shared`, o ne tiesioginis auto-write į aktyvias bazes:
+
+- `books/<slug>/term_candidates.tsv` kaupia per skyrius surinktus terminų ir santrumpų kandidatus;
+- `build_chapter_pack.py` automatiškai atnaujina einamo skyriaus kandidatų eilutes;
+- aktyvūs QA sluoksniai vis dar skaito tik `shared/lexicon/*.tsv` ir `*.local.tsv`;
+- promotion į `shared/lexicon/` lieka review-gated.
+
 ## Repo config
 
 Shared repo nustatymai laikomi root faile:

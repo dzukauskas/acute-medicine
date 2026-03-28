@@ -33,6 +33,7 @@ Skyrius laikomas baigtu tik kai:
 4c. jei reikia, sugeneruotas `research/<slug>.checklist.md` per `python3 scripts/generate_research_checklist.py --book-root books/<slug> <chapter>`;
 4d. norminiai klinikiniai teiginiai užfiksuoti claim-level matricoje, o struktūriniai blokai turi aiškią LT lokalizacijos strategiją;
 5. sugeneruotas `chapter_pack`;
+5a. automatiškai atnaujintas `term_candidates.tsv` einamam skyriui;
 6. lietuviškas skyrius parašytas nuo švaraus lapo pagal `chapter_pack`;
 7. padarytas atskiras anti-calque perrašymas;
 8. lentelės pilnai išverstos;
@@ -51,6 +52,7 @@ Prieš bet kokį drafting skyriui privaloma sugeneruoti `chapter_packs/<slug>.ya
 - skyriaus blokų inventorių;
 - blokų `tags[]` ir `adjudication_candidate`;
 - aktyvius terminus ir akronimus;
+- einamo skyriaus `term_candidates` inbox išrašą;
 - lokalizacijos override'us;
 - stiliaus hotspot'us;
 - pozityvius LT pavyzdžius iš `shared/prose/gold_phrases.tsv`, `shared/examples/gold_sections/` ir, jei tokių yra, local `gold_sections/`.
@@ -117,6 +119,14 @@ Kai originalo logika ar sistemos kontekstas nesutampa su Lietuvos praktika:
 Jei kyla abejonių dėl LT termino, kolokacijos ar klinikinės kategorijos pavadinimo, sprendimo negalima priimti „iš klausos“. Pirma reikia patikrinti Lietuvos medicininę vartoseną internete ir `research` faile užrašyti bent šaltinį bei datą.
 
 Book-local taisyklės leidžiamos tik per `*.local.tsv` override'us arba local `gold_sections/`. Pasikartojančios reusable taisyklės po review promuojamos į `shared/`, ne į konkrečios knygos root.
+
+Terminų rinkimo tvarka:
+
+- aktyvios bazės (`shared/lexicon/*.tsv`, `*.local.tsv`) nėra pildomos tiesiai iš drafto;
+- `build_chapter_pack.py` prieš sugeneruodamas pack atnaujina `term_candidates.tsv`;
+- kandidatai renkami iš `## Rizikingi terminai` ir iš source aptiktų nežinomų santrumpų;
+- lokalizacijos signalai, rinkos proper noun'ai ir jau aktyviose bazėse esantys terminai į kandidatų inbox nepatenka;
+- po review kandidatas arba promuojamas į `shared/lexicon/`, arba lieka `*.local.tsv`, arba atmetamas.
 
 ## Dvigubas QA
 
