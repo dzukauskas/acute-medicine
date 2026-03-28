@@ -325,7 +325,7 @@ def render_text(
             "",
             "## Rankiniai veiksmai prieš draftą",
             "",
-            "- Peržiūrėkite PDF puslapių intervalą ranka ir patikslinkite, ar visi norminiai teiginiai sugaudyti.",
+            "- Peržiūrėkite originalo skyriaus intervalą ar šaltinio segmentus ranka ir patikslinkite, ar visi norminiai teiginiai sugaudyti.",
             "- Jei claim lieka pagrindiniame LT tekste kaip norminis, jam būtinas konkretus LT šaltinis.",
             "- Jei LT sluoksnio nepakanka ir tenka remtis ES, research faile užpildykite `lt_gap_reason`.",
             "- `figure` ir `algorithm` editable šaltinis šiame repo lieka tik `Whimsical`.",

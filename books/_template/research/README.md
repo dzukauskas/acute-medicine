@@ -5,7 +5,7 @@ Vienas failas šiame kataloge = vienas skyrius.
 Kiekviename faile turi būti:
 
 - skyriaus numeris ir pavadinimas;
-- PDF puslapių intervalas;
+- PDF puslapių intervalas arba source segmentų sąrašas;
 - pilnas skyriaus inventorius;
 - rizikingi terminai;
 - naudoti Lietuvos šaltiniai su datomis;

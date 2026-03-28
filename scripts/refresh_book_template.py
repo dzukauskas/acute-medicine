@@ -6,7 +6,13 @@ import json
 import re
 from pathlib import Path
 
-from book_workflow_support import REPO_ROOT, book_title_from_readme, default_obsidian_dest, first_pdf_path, resolve_repo_path
+from book_workflow_support import (
+    REPO_ROOT,
+    book_title_from_readme,
+    default_obsidian_dest,
+    first_source_artifact,
+    resolve_repo_path,
+)
 
 
 TEMPLATE_ROOT = REPO_ROOT / "books" / "_template"
@@ -35,13 +41,16 @@ def render_template_text(template_path: Path, context: dict[str, str]) -> str:
 
 def context_for_book(book_root: Path) -> dict[str, str]:
     title = book_title_from_readme(book_root)
-    pdf_path = first_pdf_path(book_root)
-    pdf_name = pdf_path.name if pdf_path else "SOURCE.pdf"
+    source_artifact = first_source_artifact(book_root)
+    source_kind = source_artifact[0] if source_artifact else "pdf"
+    source_name = source_artifact[1].name if source_artifact else "SOURCE.pdf"
     return {
         "BOOK_TITLE": title,
         "BOOK_SLUG": book_root.name,
         "BOOK_ROOT": book_root.relative_to(REPO_ROOT).as_posix(),
-        "BOOK_PDF_NAME": pdf_name,
+        "BOOK_SOURCE_KIND": source_kind,
+        "BOOK_SOURCE_NAME": source_name,
+        "BOOK_PDF_NAME": source_name if source_kind == "pdf" else "SOURCE.pdf",
         "OBSIDIAN_DEST": default_obsidian_dest(book_root).as_posix(),
     }
 

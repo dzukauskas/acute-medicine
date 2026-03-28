@@ -10,11 +10,11 @@ Tai nėra pažodinis originalo rinkos vertimas.
 
 Kanoninis šaltinis visada yra:
 
-- `books/{{BOOK_SLUG}}/source/pdf/{{BOOK_PDF_NAME}}`
+- `books/{{BOOK_SLUG}}/source/{{BOOK_SOURCE_KIND}}/{{BOOK_SOURCE_NAME}}`
 
-`source/chapters-en/` failai yra tik pagalbinė navigacija. Jie niekada nepakeičia pilno PDF perskaitymo.
-PDF bootstrap ir chapter extraction vykdomi per `PyMuPDF`, ne per ad hoc CLI dump'us.
-Jei TOC parseris negali patikimai nustatyti skyrių ribų, naudojamas `chapter map` YAML sidecar (`<pdf-stem>.chapters.yaml`).
+`source/chapters-en/` failai yra tik pagalbinė navigacija. Jie niekada nepakeičia pilno originalo perskaitymo.
+PDF bootstrap ir chapter extraction vykdomi per `PyMuPDF`, o EPUB bootstrap ir XHTML extraction vykdomi per `EbookLib` bei `BeautifulSoup`.
+Jei TOC parseris negali patikimai nustatyti skyrių ribų, naudojamas `chapter map` YAML sidecar (`<source-stem>.chapters.yaml`).
 
 Bendri repo skriptai šiai knygai kviečiami su:
 
@@ -24,7 +24,7 @@ Bendri repo skriptai šiai knygai kviečiami su:
 
 Skyrius laikomas baigtu tik kai:
 
-1. perskaitytas visas PDF puslapių intervalas;
+1. perskaitytas visas source skyriaus intervalas arba segmentų rinkinys;
 2. sudarytas pilnas skyriaus inventorius;
 3. patikrinti naujausi prieinami Lietuvos šaltiniai;
 4. jei jų nepakanka, patikrintos naujausios Europos ar tarptautinės gairės;
@@ -38,7 +38,7 @@ Skyrius laikomas baigtu tik kai:
 8. lentelės pilnai išverstos;
 9. schemos, paveikslai ir `chart` tipo originalo grafikai atkurti lietuviškai arba aiškiai sutraukti į LT bloką;
 10. jei skyriuje yra `high-risk` blokų, jiems sugeneruotas `adjudication_pack`;
-11. viskas sutikrinta su PDF;
+11. viskas sutikrinta su kanoniniu originalu;
 12. paleistas terminų, prozos, tipografijos ir komplektiškumo QA;
 13. jei skyrius buvo taisytas ranka, užfiksuotas `review_delta` ir parengti rule-promotion kandidatai.
 
@@ -143,7 +143,8 @@ Kiekvienas skyrius turi praeiti du atskirus kokybės vartus:
 
 Kiekvienam paveikslui ar algoritmui:
 
-1. parenkamas vienas kanoninis šaltinis ir jis įrašomas į `lt/figures/manifest.tsv`;
-2. vienintelė aktyvi redaguojama forma šiame projekte yra `Whimsical` lenta;
-3. į repo saugomas galutinis `png`, skirtas `Obsidian` ir skyriaus `md` failams;
-4. jei `Whimsical` kelias šioje sesijoje neveikia, darbas stabdomas ir aiškiai įvardijamas blokatorius.
+1. source kandidatas pirmiausia užfiksuojamas `source/index/figures.tsv`, jei originalas buvo EPUB;
+2. parenkamas vienas kanoninis aktyvus šaltinis ir jis įrašomas į `lt/figures/manifest.tsv`;
+3. vienintelė aktyvi redaguojama forma šiame projekte yra `Whimsical` lenta;
+4. į repo saugomas galutinis `png`, skirtas `Obsidian` ir skyriaus `md` failams;
+5. jei `Whimsical` kelias šioje sesijoje neveikia, darbas stabdomas ir aiškiai įvardijamas blokatorius.

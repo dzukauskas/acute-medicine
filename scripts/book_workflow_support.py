@@ -185,6 +185,15 @@ def read_tsv(path: Path) -> list[dict[str, str]]:
         return rows
 
 
+def write_tsv(path: Path, fieldnames: list[str], rows: Iterable[dict[str, str]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", lineterminator="\n")
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({field: row.get(field, "") for field in fieldnames})
+
+
 def split_multi(value: str) -> list[str]:
     if not value.strip():
         return []
@@ -518,12 +527,34 @@ def obsidian_launch_agent_label(book_root: Path) -> str:
     return f"{obsidian_config()['launch_agent_prefix']}-{book_slug(book_root)}"
 
 
+def repo_relative_path(path: Path) -> str:
+    return path.resolve().relative_to(REPO_ROOT).as_posix()
+
+
 def first_pdf_path(book_root: Path) -> Path | None:
     pdf_dir = book_root / "source" / "pdf"
     if not pdf_dir.exists():
         return None
     pdfs = sorted(path for path in pdf_dir.glob("*.pdf") if path.is_file())
     return pdfs[0] if pdfs else None
+
+
+def first_epub_path(book_root: Path) -> Path | None:
+    epub_dir = book_root / "source" / "epub"
+    if not epub_dir.exists():
+        return None
+    epubs = sorted(path for path in epub_dir.glob("*.epub") if path.is_file())
+    return epubs[0] if epubs else None
+
+
+def first_source_artifact(book_root: Path) -> tuple[str, Path] | None:
+    pdf_path = first_pdf_path(book_root)
+    if pdf_path is not None:
+        return ("pdf", pdf_path)
+    epub_path = first_epub_path(book_root)
+    if epub_path is not None:
+        return ("epub", epub_path)
+    return None
 
 
 def resolve_chapter_slug(raw: str, book_root: str | Path | None = None) -> str:
@@ -620,6 +651,17 @@ def source_text_for_policy_checks(source_text: str) -> str:
 def find_section_lines(sections: dict[tuple[str, ...], list[str]], *suffix: str) -> list[str]:
     for key, lines in sections.items():
         if len(key) >= len(suffix) and tuple(key[-len(suffix):]) == suffix:
+            return lines
+    return []
+
+
+def find_section_lines_any(
+    sections: dict[tuple[str, ...], list[str]],
+    suffix_options: Iterable[tuple[str, ...]],
+) -> list[str]:
+    for suffix in suffix_options:
+        lines = find_section_lines(sections, *suffix)
+        if lines:
             return lines
     return []
 
@@ -731,13 +773,49 @@ def clean_inventory_items(items: list[str]) -> list[str]:
 
 def extract_inventory(sections: dict[tuple[str, ...], list[str]]) -> dict[str, list[str]]:
     return {
-        "subsections": clean_inventory_items(bullet_items(find_section_lines(sections, "PDF inventorius", "Poskyriai"))),
-        "tables": clean_inventory_items(bullet_items(find_section_lines(sections, "PDF inventorius", "Lentelės"))),
+        "subsections": clean_inventory_items(
+            bullet_items(
+                find_section_lines_any(
+                    sections,
+                    (
+                        ("Source inventorius", "Poskyriai"),
+                        ("PDF inventorius", "Poskyriai"),
+                    ),
+                )
+            )
+        ),
+        "tables": clean_inventory_items(
+            bullet_items(
+                find_section_lines_any(
+                    sections,
+                    (
+                        ("Source inventorius", "Lentelės"),
+                        ("PDF inventorius", "Lentelės"),
+                    ),
+                )
+            )
+        ),
         "figures": clean_inventory_items(
-            bullet_items(find_section_lines(sections, "PDF inventorius", "Paveikslai / schemos / algoritmai"))
+            bullet_items(
+                find_section_lines_any(
+                    sections,
+                    (
+                        ("Source inventorius", "Paveikslai / schemos / algoritmai"),
+                        ("PDF inventorius", "Paveikslai / schemos / algoritmai"),
+                    ),
+                )
+            )
         ),
         "boxes": clean_inventory_items(
-            bullet_items(find_section_lines(sections, "PDF inventorius", "Rėmeliai / papildomi blokai"))
+            bullet_items(
+                find_section_lines_any(
+                    sections,
+                    (
+                        ("Source inventorius", "Rėmeliai / papildomi blokai"),
+                        ("PDF inventorius", "Rėmeliai / papildomi blokai"),
+                    ),
+                )
+            )
         ),
         "risky_terms": bullet_items(find_section_lines(sections, "Rizikingi terminai")),
         "language_risks": bullet_items(find_section_lines(sections, "Kalbinės rizikos vietos")),

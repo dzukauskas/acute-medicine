@@ -71,7 +71,7 @@ def validate_chapter_inventory(slug: str) -> list[str]:
     for kind, label in missing_keys:
         source_item = source_index[(kind, label)]
         errors.append(
-            f"{paths['research']}: PDF inventorius missing {kind.title()} {label} "
+            f"{paths['research']}: Source inventorius missing {kind.title()} {label} "
             f"`{source_item['title']}` from {paths['source']}"
         )
 
@@ -79,7 +79,7 @@ def validate_chapter_inventory(slug: str) -> list[str]:
     for kind, label in extra_keys:
         research_item = research_index[(kind, label)]
         errors.append(
-            f"{paths['research']}: PDF inventorius lists {kind.title()} {label} "
+            f"{paths['research']}: Source inventorius lists {kind.title()} {label} "
             f"`{research_item['title']}`, but source chapter has no matching structured block"
         )
 

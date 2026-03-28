@@ -19,6 +19,7 @@
     "localization_overrides.local.tsv",
     "adjudication_profiles.local.tsv",
     "lt/figures/manifest.tsv",
+    "source/index/figures.tsv",
     "calque_patterns.local.tsv",
     "disallowed_terms.local.tsv",
     "disallowed_phrases.local.tsv",
@@ -26,7 +27,9 @@
   ],
   "required_directories": [
     "source/pdf",
+    "source/epub",
     "source/chapters-en",
+    "source/figures-raw",
     "source/index",
     "lt/chapters",
     "lt/figures",

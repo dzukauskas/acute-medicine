@@ -1,11 +1,12 @@
 # XXX skyrius. [Pavadinimas]
 
 - Puslapiai:
-- PDF:
+- Šaltinio segmentai:
+- Originalo failas:
 - Angliškas pagalbinis failas:
 - Lietuviškas failas:
 
-## PDF inventorius
+## Source inventorius
 
 ### Poskyriai
 
@@ -178,7 +179,7 @@ Leistini `Statusas`:
 
 ## Baigiamoji kontrolė
 
-- [ ] Perskaitytas visas PDF puslapių intervalas
+- [ ] Perskaitytas visas source skyriaus intervalas arba segmentų rinkinys
 - [ ] Užfiksuoti visi teksto blokai
 - [ ] Užfiksuotos visos lentelės
 - [ ] Užfiksuoti visi paveikslai ir schemos

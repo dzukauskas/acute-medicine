@@ -179,7 +179,8 @@ def load_chapter_context(slug: str) -> dict[str, object]:
         "research_text": research_text,
         "lt_text": lt_text,
         "research_sections": sections,
-        "page_range": metadata_value(pre_heading_lines, "Puslapiai"),
+        "page_range": metadata_value(pre_heading_lines, "Puslapiai")
+        or metadata_value(pre_heading_lines, "Šaltinio segmentai"),
         "source_md": metadata_value(pre_heading_lines, "Angliškas pagalbinis failas") or str(paths["source"]),
         "lt_target_md": metadata_value(pre_heading_lines, "Lietuviškas failas") or str(paths["lt"]),
     }

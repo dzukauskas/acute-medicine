@@ -2,15 +2,18 @@
 
 Šis katalogas yra atskira darbo vieta knygai *{{BOOK_TITLE}}*.
 
-## Kanoninis PDF
+## Kanoninis originalo failas
 
-- `source/pdf/{{BOOK_PDF_NAME}}`
+- `source/{{BOOK_SOURCE_KIND}}/{{BOOK_SOURCE_NAME}}`
 
 ## Struktūra
 
-- `source/pdf/`: kanoninis PDF.
-- `source/chapters-en/`: iš PDF ištraukti angliški skyriai tik navigacijai ir sutikrinimui.
-- `source/index/`: skyriaus indeksai ir puslapių intervalai.
+- `source/pdf/`: kanoninis PDF, jei knyga bootstrap'inta iš PDF.
+- `source/epub/`: kanoninis EPUB, jei knyga bootstrap'inta iš EPUB.
+- `source/chapters-en/`: iš originalo ištraukti angliški skyriai tik navigacijai ir sutikrinimui.
+- `source/index/`: skyriaus indeksai ir source inventory failai.
+- `source/index/figures.tsv`: chapter-referenced source paveikslų kandidatų inventorius.
+- `source/figures-raw/`: iš originalo ištraukti source image assetai.
 - `lt/chapters/`: nuo naujo rašomi lietuviški skyriai.
 - `lt/figures/`: lietuviškos schemos ir paveikslai.
 - `lt/figures/manifest.tsv`: aktyvių paveikslų kanoninių `Whimsical` šaltinių registras.
@@ -38,7 +41,7 @@ Repo-global aktyvios taisyklės laikomos `shared/` kataloge:
 
 ## Taisyklė
 
-Skyrių tekstas, lentelės, schemos ir paveikslai kuriami nuo naujo tik iš PDF ir naujausių patikrintų Lietuvos bei, jei reikia, Europos šaltinių.
+Skyrių tekstas, lentelės, schemos ir paveikslai kuriami nuo naujo tik iš kanoninio originalo failo ir naujausių patikrintų Lietuvos bei, jei reikia, Europos šaltinių.
 
 Pagrindinis LT tekstas yra skirtas Lietuvos medicinos studijoms ir praktikai, todėl:
 
@@ -67,15 +70,17 @@ Review metu pasikartojančios taisyklės pirmiausia fiksuojamos `review_deltas/`
 
 Diagramoms ir algoritmams šiame projekte naudojamas tik `Whimsical` workflow. Jei vartotojas nurodo konkretų įrankį, jo negalima savavališkai pakeisti kitu.
 
-PDF šaltinių bootstrap ir tekstinis extraction šiame repo yra `PyMuPDF-first`. Jei skriptas paleidžiamas su sistemos `python3`, bet `PyMuPDF` ten nėra, jis automatiškai persijungia į repo `.venv`, jei ji paruošta.
+PDF šaltinių bootstrap ir tekstinis extraction šiame repo yra `PyMuPDF-first`. EPUB bootstrap ir XHTML extraction vyksta per `EbookLib` ir `BeautifulSoup`. Jei skriptas paleidžiamas su sistemos `python3`, bet trūksta reikalingų modulių, jis automatiškai persijungia į repo `.venv`, jei ji paruošta.
 
-Jei PDF turinio puslapiai nėra patikimai parsinuojami automatiškai, naudokite chapter map sidecar:
+Jei PDF ar EPUB TOC parseris negali patikimai nustatyti skyrių ribų, naudokite chapter map sidecar:
 
-- `source/pdf/<book>.chapters.yaml`
+- `source/<kind>/<book>.chapters.yaml`
 
 arba bootstrap metu perduokite:
 
 - `--chapter-map /abs/path/to/<book>.chapters.yaml`
+
+EPUB bootstrap automatiškai sukuria `source/index/figures.tsv`, bet tai nėra aktyvus `Whimsical` manifestas. Į `lt/figures/manifest.tsv` patenka tik tie paveikslai, kuriems jau sukurtas `Whimsical` board ir sugeneruotas aktyvus `png`.
 
 ## Bendrų skriptų taikymas šiai knygai
 

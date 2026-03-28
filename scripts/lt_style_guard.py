@@ -16,7 +16,7 @@ REPO_PATH_RE = re.compile(r"\b(?:books|scripts|codex)/[A-Za-z0-9._/\- ]+")
 FENCE_RE = re.compile(r"^\s*```")
 TABLE_SEPARATOR_RE = re.compile(r"^\s*\|?(?:\s*:?-+:?\s*\|)+\s*$")
 METADATA_RE = re.compile(
-    r"^\s*-\s*(Autoriai originale|Autorė originale|Puslapiai|PDF|Angliškas pagalbinis failas|Lietuviškas failas|Tipas):"
+    r"^\s*-\s*(Autoriai originale|Autorė originale|Puslapiai|Šaltinio segmentai|PDF|EPUB|Originalo failas|Angliškas pagalbinis failas|Lietuviškas failas|Tipas):"
 )
 HTML_COMMENT_RE = re.compile(r"^\s*<!--.*-->\s*$")
 ASCII_RANGE_RE = re.compile(r"\b\d+(?:,\d+)?\s*-\s*\d+(?:,\d+)?\b")

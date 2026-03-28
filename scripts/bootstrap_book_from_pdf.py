@@ -421,6 +421,8 @@ def template_context(book_root: Path, title: str, pdf_name: str) -> dict[str, st
         "BOOK_TITLE": title,
         "BOOK_SLUG": book_root.name,
         "BOOK_ROOT": book_root.relative_to(REPO_ROOT).as_posix(),
+        "BOOK_SOURCE_KIND": "pdf",
+        "BOOK_SOURCE_NAME": pdf_name,
         "BOOK_PDF_NAME": pdf_name,
         "OBSIDIAN_DEST": obsidian_dest_for_title(title).as_posix(),
     }

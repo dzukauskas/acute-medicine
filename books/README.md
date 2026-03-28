@@ -30,7 +30,7 @@ repo/
 
 ## Naujos knygos bootstrap
 
-Kanoninis entrypoint:
+PDF kanoninis entrypoint:
 
 ```bash
 python3 scripts/bootstrap_book_from_pdf.py \
@@ -60,6 +60,31 @@ python3 scripts/bootstrap_book_from_pdf.py \
 Jei šalia PDF yra `<pdf-stem>.chapters.yaml`, bootstrap jį pasiims automatiškai ir nebandys spėlioti skyrių ribų iš turinio puslapių.
 
 PDF bootstrap ir chapter extraction šiame repo yra `PyMuPDF-first`. Jei skriptas paleidžiamas su sistemos `python3`, bet `PyMuPDF` ten nėra, jis automatiškai persijungia į repo `.venv`, jei ji paruošta.
+
+EPUB kanoninis entrypoint:
+
+```bash
+python3 scripts/bootstrap_book_from_epub.py \
+  --epub "/abs/path/to/book.epub"
+```
+
+Jei EPUB TOC / nav sluoksnis netvarkingas, naudokite chapter map sidecar:
+
+```bash
+python3 scripts/bootstrap_book_from_epub.py \
+  --epub "/abs/path/to/book.epub" \
+  --chapter-map "/abs/path/to/book.chapters.yaml"
+```
+
+EPUB bootstrap:
+
+- nukopijuoja EPUB į `source/epub/`;
+- sugeneruoja `source/index/chapters.{json,md}`;
+- ištraukia skyrius į `source/chapters-en/`;
+- išinventorizuoja chapter-referenced paveikslų kandidatus į `source/index/figures.tsv`;
+- išsaugo originalius image assetus `source/figures-raw/`.
+
+EPUB v1 šiame repo yra `repo-native`, be papildomo EPUB skill ar MCP serverio. Teksto extraction vykdomas per `EbookLib` ir `BeautifulSoup`.
 
 ## Repo config
 
