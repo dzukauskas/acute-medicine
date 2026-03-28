@@ -1,2 +1,5 @@
 en	lt	note	status	banned_lt	first_use_policy	section_scope	example_lt	local_override_tag
 Advanced life support	specializuotas gaivinimas	Naudokite LT/EU-first termino formą vietoj pažodinių EN variantų.	preferred	pažangus gaivinimas	must_expand_first	all	specializuotas gaivinimas (ALS)	
+Breech Birth	vaisiaus sėdmenų pirmeiga	Akušeriniame kontekste pirmą kartą vartokite pilną termino formą.	preferred		must_expand_first	all	gairės dėl vaisiaus sėdmenų pirmeigos	
+Cord Prolapse	virkštelės iškritimas	Naudokite standartinį LT akušerinį terminą.	preferred			all	virkštelės iškritimas	
+Shoulder Dystocia	vaisiaus pečių distocija	Akušeriniame kontekste pirmą kartą vartokite pilną termino formą.	preferred	petukų distocija | petukų distocijai	must_expand_first	all	vaisiaus pečių distocija	

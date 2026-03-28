@@ -79,6 +79,21 @@ BOOK_TITLE="$(printf '%s\n' "$CONFIG_VALUES" | sed -n '1p')"
 DEFAULT_DEST="$(printf '%s\n' "$CONFIG_VALUES" | sed -n '2p')"
 
 DEST_DIR="${OBSIDIAN_BOOK_DEST:-${DEST_DIR:-$DEFAULT_DEST}}"
+DEST_DIR="$("$PYTHON_BIN" - "$REPO_ROOT" "$BOOK_ROOT" "$DEST_DIR" "$PWD" <<'PY'
+import sys
+from pathlib import Path
+
+repo_root = Path(sys.argv[1])
+book_root = Path(sys.argv[2])
+dest_dir = sys.argv[3]
+cwd = Path(sys.argv[4])
+sys.path.insert(0, str(repo_root / "scripts"))
+
+from book_workflow_support import validate_obsidian_sync_destination
+
+print(validate_obsidian_sync_destination(dest_dir, book_root, repo_root=repo_root, cwd=cwd))
+PY
+)"
 
 mkdir -p "$DEST_DIR"
 

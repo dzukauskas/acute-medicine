@@ -1,0 +1,268 @@
+chapter_slug: 001-disclaimer
+chapter_title: 1 skyrius. Atsakomybės ribojimas
+page_range: EPUB segmentas c76.xhtml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/001-disclaimer.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/001-disclaimer.md
+blocks:
+- block_id: narrative-01-disclaimer
+  block_type: narrative
+  heading: Disclaimer
+  source_anchor: Disclaimer
+  source_excerpt: '# Chapter 1 Disclaimer
+
+    - Šaltinio segmentai: c76.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    Disclaimer
+
+    Using these Guidelines
+
+    The Association of Ambulance Chief Executives and the Joint Royal Colleges Ambulance Liaison Committee
+    have made every effort to ensure that the information, tables, drawings and diagrams contained in
+    these guidelines are accurate at the time of publication. However, the guidelines are advisory and
+    have been developed to assist healthcare professionals, and patients, to make decisions about the
+    management of the patient’s health, including treatments. This advice is intended to support the decision
+    making process and is not a substitute for sound clinical judgement. The guidelines cannot always
+    contain all the information necessary for determining appropriate care and cannot address all individual
+    situations; therefore, individuals using these guidelines must ensure they have the appropriate knowledge
+    and skills to enable suitable interpretation.
+
+    JRCALC has referenced NICE in these guidelines. NICE guidance is prepared for the National Health
+    Service in England and is subject to regular review and may be updated or withdrawn. NICE has not
+    checked the use of its content in these guidelines to confirm that it accurately reflects the NICE
+    publications from which it is taken.
+
+    Users of these guidelines must always be aware that alterations after the date of publication cannot
+    be incorporated into the printed edition.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste nevartoti kaip norminio autoriteto; palikti tik `Originalo
+    kontekstas` bloke.
+  matched_localization_terms:
+  - JRCALC
+  - NICE
+  matched_claim_ids:
+  - claim-001-competence
+  - claim-002-documentation
+  - claim-003-uk-availability
+  matched_claim_types:
+  - algorithm_step
+  - legal_scope
+  - market_availability
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-02-using-these-guidelines
+  block_type: narrative
+  heading: Using these Guidelines
+  source_anchor: Using these Guidelines
+  source_excerpt: 'Using these Guidelines
+
+    The Association of Ambulance Chief Executives and the Joint Royal Colleges Ambulance Liaison Committee
+    have made every effort to ensure that the information, tables, drawings and diagrams contained in
+    these guidelines are accurate at the time of publication. However, the guidelines are advisory and
+    have been developed to assist healthcare professionals, and patients, to make decisions about the
+    management of the patient’s health, including treatments. This advice is intended to support the decision
+    making process and is not a substitute for sound clinical judgement. The guidelines cannot always
+    contain all the information necessary for determining appropriate care and cannot address all individual
+    situations; therefore, individuals using these guidelines must ensure they have the appropriate knowledge
+    and skills to enable suitable interpretation.
+
+    JRCALC has referenced NICE in these guidelines. NICE guidance is prepared for the National Health
+    Service in England and is subject to regular review and may be updated or withdrawn. NICE has not
+    checked the use of its content in these guidelines to confirm that it accurately reflects the NICE
+    publications from which it is taken.
+
+    Users of these guidelines must always be aware that alterations after the date of publication cannot
+    be incorporated into the printed edition.
+
+    The Association of Ambulance Chief Executives and the Joint Royal Colleges Ambulance Liaison Committee
+    do not guarantee and accept no legal liability of any nature arising from or connected to, the accuracy,
+    reliability, currency or completeness of the content of these guidelines.
+
+    Although some modification of the guidelines may be required by individual ambulance services, and
+    approved by the relevant local clinical committees, to ensure they respond to the health requirements
+    of their local communities, the majority of the guidance is universally applicable to NHS ambulance
+    services.
+
+    JRCALC acknowledge the benefits of research and is supportive of innovation and to the promotion,
+    conduct and use of research to improve the current and future health and care of our patients. Research
+    can lead to patients benefitting from earlier access to new treatments and technologies. Paramedics
+    may be involved in research as part of their clinical practice and may engage patients in research.
+
+    Modification of the guidelines may occur when participating in research that has been approved by
+    a research ethics committee.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste nevartoti kaip norminio autoriteto; palikti tik `Originalo
+    kontekstas` bloke.
+  matched_localization_terms:
+  - JRCALC
+  - NHS
+  - NICE
+  matched_claim_ids:
+  - claim-001-competence
+  - claim-002-documentation
+  - claim-003-uk-availability
+  matched_claim_types:
+  - algorithm_step
+  - legal_scope
+  - market_availability
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  structured_block_policy: null
+clinical_claims:
+- claim_id: claim-001-competence
+  claim_type: algorithm_step
+  source_anchor: Using these Guidelines
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: MN 167:2019; MN 135:2019
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: LT tekste paliekamas bendras principas, kad rekomendacijos nepakeičia klinikinio sprendimo ir
+    taikomos tik turint atitinkamą kompetenciją.
+  matched_block_ids:
+  - narrative-01-disclaimer
+  - narrative-02-using-these-guidelines
+- claim_id: claim-002-documentation
+  claim_type: legal_scope
+  source_anchor: Using these Guidelines
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: SAM įsakymas Nr. V-1234 dėl Kortelės Nr. 110/a; MN 167:2019
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: LT tekste paliekamas dokumentavimo ir profesinės atsakomybės principas, be JK sistemos institucinių
+    nuorodų.
+  matched_block_ids:
+  - narrative-01-disclaimer
+  - narrative-02-using-these-guidelines
+- claim_id: claim-003-uk-availability
+  claim_type: market_availability
+  source_anchor: Using these Guidelines
+  final_rendering: original_context_callout
+  authority_basis: original-context-only
+  primary_lt_source: ''
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Tai JK rinkos ir organizacinės aprėpties teiginys; LT tekste rodomas tik kaip originalo kontekstas,
+    ne kaip LT norminis standartas.
+  matched_block_ids:
+  - narrative-01-disclaimer
+  - narrative-02-using-these-guidelines
+structured_block_policies: []
+active_terms: []
+active_acronyms: []
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: NHS
+  jurisdiction: uk
+  replacement_mode: omit_nontransferable
+  local_lt: taikyti Lietuvos sveikatos sistemos ir GMP organizacinę logiką
+  eu_fallback: taikyti ES ir vietinę organizacinę logiką
+  scope: all
+  reason: '`NHS` yra JK sistemos institucinis kontekstas, ne LT norminis terminas.'
+  source_ref: ''
+  notes: Nepalikti kaip vietinio standarto.
+source_jurisdiction_signals:
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+- source_term: NHS
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: regex
+  pattern: \b(?:NHS|National Health Service)\b
+  notes: UK health service context.
+localization_decisions:
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste nevartoti kaip norminio autoriteto; palikti tik `Originalo
+    kontekstas` bloke.
+  source_ref: '`shared/localization/localization_overrides.tsv` (`JRCALC`); originalus skyrius `c76.xhtml`'
+  notes: Disclaimer taikomas konkrečiam JK leidiniui.
+- source_term: NHS
+  replacement_mode: omit_nontransferable
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste pakeisti į bendrą LT GMP organizacinį kontekstą; NHS palikti
+    tik aiškinamajame bloke.
+  source_ref: '`shared/localization/localization_overrides.tsv` (`NHS`); SAM įsakymas Nr. V-1131'
+  notes: NHS nėra LT norminė sistema.
+- source_term: NICE
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: NICE minima tik kaip originalo leidinyje naudotas šaltinis; LT norminiam tekstui
+    neperkeliama.
+  source_ref: originalus skyrius `c76.xhtml`
+  notes: NICE turinys originale nurodomas kaip nepatikrintas dėl atkartojimo tikslumo šiame leidinyje.
+style_hotspots:
+- category: language_risk
+  text: advisory nepalikti kaip pažodinio advisory guidelines; rašyti konsultacinio pobūdžio rekomendacijos.
+- category: language_risk
+  text: sound clinical judgement neversti pažodžiui kaip garsus klinikinis sprendimas; rinktis klinikinis
+    sprendimas arba profesinis klinikinis vertinimas.
+- category: language_risk
+  text: variation from standard clinical practice perrašyti natūraliai, vengiant biurokratinio sakinio
+    karkaso.
+- category: anti_calque
+  text: Vengti pažodinių karkasų sprendimų priėmimo procesui paremti ir užtikrinti tinkamą interpretaciją;
+    rinktis trumpesnes LT medicininės kalbos formas.
+- category: anti_calque
+  text: Ilgas disclaimer pastraipas skaidyti į trumpesnius informacinius vienetus.
+- category: anti_calque
+  text: UK institucines nuorodas iškelti iš pagrindinės prozos, kad LT tekstas neskambėtų kaip vertimas
+    iš JK vidaus dokumento.
+- category: localization_decision
+  text: Pagrindinis LT tekstas perrašomas kaip bendras naudojimo ir atsakomybės ribojimo skyrius, be JK
+    institucijų norminio svorio.
+- category: localization_decision
+  text: JK-specific terminai ir organizaciniai modeliai perkeliami į atskirą Originalo kontekstas bloką.
+- category: localization_decision
+  text: Teiginys apie dokumentavimą paliekamas pagrindiniame LT tekste, nes jis turi aiškų LT norminį
+    atitikmenį.
+- category: local_practice_change
+  text: NHS ambulance services pakeista į bendrą LT GMP organizacinį kontekstą.
+- category: local_practice_change
+  text: patient care record konkretinta kaip paciento priežiūros dokumentai.
+gold_examples: []

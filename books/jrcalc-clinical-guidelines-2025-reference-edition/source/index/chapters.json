@@ -1,0 +1,1096 @@
+[
+  {
+    "number": 1,
+    "title": "Disclaimer",
+    "full_title": "Chapter 1 Disclaimer",
+    "slug": "001-disclaimer",
+    "source_hrefs": [
+      "c76.xhtml"
+    ],
+    "start_href": "c76.xhtml"
+  },
+  {
+    "number": 2,
+    "title": "Foreword",
+    "full_title": "Chapter 2 Foreword",
+    "slug": "002-foreword",
+    "source_hrefs": [
+      "c7Z.xhtml"
+    ],
+    "start_href": "c7Z.xhtml"
+  },
+  {
+    "number": 3,
+    "title": "Guideline Developers and Contributors",
+    "full_title": "Chapter 3 Guideline Developers and Contributors",
+    "slug": "003-guideline-developers-and-contributors",
+    "source_hrefs": [
+      "c8W.xhtml"
+    ],
+    "start_href": "c8W.xhtml"
+  },
+  {
+    "number": 4,
+    "title": "Guideline Development Methodology",
+    "full_title": "Chapter 4 Guideline Development Methodology",
+    "slug": "004-guideline-development-methodology",
+    "source_hrefs": [
+      "cMD.xhtml"
+    ],
+    "start_href": "cMD.xhtml"
+  },
+  {
+    "number": 5,
+    "title": "Update Analysis \u2013 \u2018What\u2019s changed?\u2019",
+    "full_title": "Chapter 5 Update Analysis \u2013 \u2018What\u2019s changed?\u2019",
+    "slug": "005-update-analysis-what-s-changed",
+    "source_hrefs": [
+      "cND.xhtml"
+    ],
+    "start_href": "cND.xhtml"
+  },
+  {
+    "number": 6,
+    "title": "List of Abbreviations",
+    "full_title": "Chapter 6 List of Abbreviations",
+    "slug": "006-list-of-abbreviations",
+    "source_hrefs": [
+      "c1DC.xhtml"
+    ],
+    "start_href": "c1DC.xhtml"
+  },
+  {
+    "number": 7,
+    "title": "Section 1 \u2013 General Guidance",
+    "full_title": "Chapter 7 Section 1 \u2013 General Guidance",
+    "slug": "007-section-1-general-guidance",
+    "source_hrefs": [
+      "c2R8.xhtml"
+    ],
+    "start_href": "c2R8.xhtml"
+  },
+  {
+    "number": 8,
+    "title": "Clinical Considerations in Relation to Diversity and Equality",
+    "full_title": "Chapter 8 Clinical Considerations in Relation to Diversity and Equality",
+    "slug": "008-clinical-considerations-in-relation-to-diversity-and-equality",
+    "source_hrefs": [
+      "c2RJ.xhtml"
+    ],
+    "start_href": "c2RJ.xhtml"
+  },
+  {
+    "number": 9,
+    "title": "Conditions Requiring Specific Prehospital Clinical Management",
+    "full_title": "Chapter 9 Conditions Requiring Specific Prehospital Clinical Management",
+    "slug": "009-conditions-requiring-specific-prehospital-clinical-management",
+    "source_hrefs": [
+      "c3CK.xhtml"
+    ],
+    "start_href": "c3CK.xhtml"
+  },
+  {
+    "number": 10,
+    "title": "Consent in Pre-hospital Care",
+    "full_title": "Chapter 10 Consent in Pre-hospital Care",
+    "slug": "010-consent-in-pre-hospital-care",
+    "source_hrefs": [
+      "c3ZY.xhtml"
+    ],
+    "start_href": "c3ZY.xhtml"
+  },
+  {
+    "number": 11,
+    "title": "Domestic Abuse",
+    "full_title": "Chapter 11 Domestic Abuse",
+    "slug": "011-domestic-abuse",
+    "source_hrefs": [
+      "c40P.xhtml"
+    ],
+    "start_href": "c40P.xhtml"
+  },
+  {
+    "number": 12,
+    "title": "Duty of Care",
+    "full_title": "Chapter 12 Duty of Care",
+    "slug": "012-duty-of-care",
+    "source_hrefs": [
+      "c4AK.xhtml"
+    ],
+    "start_href": "c4AK.xhtml"
+  },
+  {
+    "number": 13,
+    "title": "End of Life Care",
+    "full_title": "Chapter 13 End of Life Care",
+    "slug": "013-end-of-life-care",
+    "source_hrefs": [
+      "c4GW.xhtml"
+    ],
+    "start_href": "c4GW.xhtml"
+  },
+  {
+    "number": 14,
+    "title": "Human Factors",
+    "full_title": "Chapter 14 Human Factors",
+    "slug": "014-human-factors",
+    "source_hrefs": [
+      "c5FC.xhtml"
+    ],
+    "start_href": "c5FC.xhtml"
+  },
+  {
+    "number": 15,
+    "title": "Intravascular Fluid Therapy in Adults",
+    "full_title": "Chapter 15 Intravascular Fluid Therapy in Adults",
+    "slug": "015-intravascular-fluid-therapy-in-adults",
+    "source_hrefs": [
+      "c5N8.xhtml"
+    ],
+    "start_href": "c5N8.xhtml"
+  },
+  {
+    "number": 16,
+    "title": "Intravascular Fluid Therapy in Children",
+    "full_title": "Chapter 16 Intravascular Fluid Therapy in Children",
+    "slug": "016-intravascular-fluid-therapy-in-children",
+    "source_hrefs": [
+      "c68Z.xhtml"
+    ],
+    "start_href": "c68Z.xhtml"
+  },
+  {
+    "number": 17,
+    "title": "Mental Capacity Act 2005",
+    "full_title": "Chapter 17 Mental Capacity Act 2005",
+    "slug": "017-mental-capacity-act-2005",
+    "source_hrefs": [
+      "c6CE.xhtml"
+    ],
+    "start_href": "c6CE.xhtml"
+  },
+  {
+    "number": 18,
+    "title": "Pain Management in Adults and Children",
+    "full_title": "Chapter 18 Pain Management in Adults and Children",
+    "slug": "018-pain-management-in-adults-and-children",
+    "source_hrefs": [
+      "c6TA.xhtml",
+      "c7ET.xhtml"
+    ],
+    "start_href": "c6TA.xhtml"
+  },
+  {
+    "number": 19,
+    "title": "Patient Confidentiality",
+    "full_title": "Chapter 19 Patient Confidentiality",
+    "slug": "019-patient-confidentiality",
+    "source_hrefs": [
+      "c7MF.xhtml"
+    ],
+    "start_href": "c7MF.xhtml"
+  },
+  {
+    "number": 20,
+    "title": "Patients with Communication Difficulties",
+    "full_title": "Chapter 20 Patients with Communication Difficulties",
+    "slug": "020-patients-with-communication-difficulties",
+    "source_hrefs": [
+      "c7VN.xhtml"
+    ],
+    "start_href": "c7VN.xhtml"
+  },
+  {
+    "number": 21,
+    "title": "Safeguarding Adults at Risk",
+    "full_title": "Chapter 21 Safeguarding Adults at Risk",
+    "slug": "021-safeguarding-adults-at-risk",
+    "source_hrefs": [
+      "c823.xhtml"
+    ],
+    "start_href": "c823.xhtml"
+  },
+  {
+    "number": 22,
+    "title": "Safeguarding Children",
+    "full_title": "Chapter 22 Safeguarding Children",
+    "slug": "022-safeguarding-children",
+    "source_hrefs": [
+      "c8H4.xhtml"
+    ],
+    "start_href": "c8H4.xhtml"
+  },
+  {
+    "number": 23,
+    "title": "Sexual Assault",
+    "full_title": "Chapter 23 Sexual Assault",
+    "slug": "023-sexual-assault",
+    "source_hrefs": [
+      "c99H.xhtml"
+    ],
+    "start_href": "c99H.xhtml"
+  },
+  {
+    "number": 24,
+    "title": "Staff Health and Wellbeing",
+    "full_title": "Chapter 24 Staff Health and Wellbeing",
+    "slug": "024-staff-health-and-wellbeing",
+    "source_hrefs": [
+      "c9P6.xhtml"
+    ],
+    "start_href": "c9P6.xhtml"
+  },
+  {
+    "number": 25,
+    "title": "Section 2 \u2013 Resuscitation",
+    "full_title": "Chapter 25 Section 2 \u2013 Resuscitation",
+    "slug": "025-section-2-resuscitation",
+    "source_hrefs": [
+      "c9VC.xhtml"
+    ],
+    "start_href": "c9VC.xhtml"
+  },
+  {
+    "number": 26,
+    "title": "Out-of-Hospital Cardiac Arrest: Overview",
+    "full_title": "Chapter 26 Out-of-Hospital Cardiac Arrest: Overview",
+    "slug": "026-out-of-hospital-cardiac-arrest-overview",
+    "source_hrefs": [
+      "c9VN.xhtml"
+    ],
+    "start_href": "c9VN.xhtml"
+  },
+  {
+    "number": 27,
+    "title": "Advanced Life Support",
+    "full_title": "Chapter 27 Advanced Life Support",
+    "slug": "027-advanced-life-support",
+    "source_hrefs": [
+      "cA6G.xhtml"
+    ],
+    "start_href": "cA6G.xhtml"
+  },
+  {
+    "number": 28,
+    "title": "Basic Life Support in Adults",
+    "full_title": "Chapter 28 Basic Life Support in Adults",
+    "slug": "028-basic-life-support-in-adults",
+    "source_hrefs": [
+      "cB4X.xhtml"
+    ],
+    "start_href": "cB4X.xhtml"
+  },
+  {
+    "number": 29,
+    "title": "Basic Life Support in Children",
+    "full_title": "Chapter 29 Basic Life Support in Children",
+    "slug": "029-basic-life-support-in-children",
+    "source_hrefs": [
+      "cB9B.xhtml"
+    ],
+    "start_href": "cB9B.xhtml"
+  },
+  {
+    "number": 30,
+    "title": "Emergency Tracheostomy and Laryngectomy Pre-Hospital Management",
+    "full_title": "Chapter 30 Emergency Tracheostomy and Laryngectomy Pre-Hospital Management",
+    "slug": "030-emergency-tracheostomy-and-laryngectomy-pre-hospital-management",
+    "source_hrefs": [
+      "cBJX.xhtml"
+    ],
+    "start_href": "cBJX.xhtml"
+  },
+  {
+    "number": 31,
+    "title": "Foreign Body Airway Obstruction",
+    "full_title": "Chapter 31 Foreign Body Airway Obstruction",
+    "slug": "031-foreign-body-airway-obstruction",
+    "source_hrefs": [
+      "cBXR.xhtml"
+    ],
+    "start_href": "cBXR.xhtml"
+  },
+  {
+    "number": 32,
+    "title": "Return of Spontaneous Circulation",
+    "full_title": "Chapter 32 Return of Spontaneous Circulation",
+    "slug": "032-return-of-spontaneous-circulation",
+    "source_hrefs": [
+      "cC75.xhtml"
+    ],
+    "start_href": "cC75.xhtml"
+  },
+  {
+    "number": 33,
+    "title": "Termination of Resuscitation and Verification of Death in Adults",
+    "full_title": "Chapter 33 Termination of Resuscitation and Verification of Death in Adults",
+    "slug": "033-termination-of-resuscitation-and-verification-of-death-in-adults",
+    "source_hrefs": [
+      "cCCP.xhtml"
+    ],
+    "start_href": "cCCP.xhtml"
+  },
+  {
+    "number": 34,
+    "title": "Termination of Resuscitation and Verification of Death in Children",
+    "full_title": "Chapter 34 Termination of Resuscitation and Verification of Death in Children",
+    "slug": "034-termination-of-resuscitation-and-verification-of-death-in-children",
+    "source_hrefs": [
+      "cCX8.xhtml"
+    ],
+    "start_href": "cCX8.xhtml"
+  },
+  {
+    "number": 35,
+    "title": "Section 3 \u2013 Medical Emergencies",
+    "full_title": "Chapter 35 Section 3 \u2013 Medical Emergencies",
+    "slug": "035-section-3-medical-emergencies",
+    "source_hrefs": [
+      "cD4Z.xhtml"
+    ],
+    "start_href": "cD4Z.xhtml"
+  },
+  {
+    "number": 36,
+    "title": "Medical Emergencies in Adults - Overview",
+    "full_title": "Chapter 36 Medical Emergencies in Adults - Overview",
+    "slug": "036-medical-emergencies-in-adults-overview",
+    "source_hrefs": [
+      "cD56.xhtml"
+    ],
+    "start_href": "cD56.xhtml"
+  },
+  {
+    "number": 37,
+    "title": "Medical Emergencies in Children - Overview",
+    "full_title": "Chapter 37 Medical Emergencies in Children - Overview",
+    "slug": "037-medical-emergencies-in-children-overview",
+    "source_hrefs": [
+      "cDTJ.xhtml"
+    ],
+    "start_href": "cDTJ.xhtml"
+  },
+  {
+    "number": 38,
+    "title": "Abdominal Pain",
+    "full_title": "Chapter 38 Abdominal Pain",
+    "slug": "038-abdominal-pain",
+    "source_hrefs": [
+      "cEGY.xhtml"
+    ],
+    "start_href": "cEGY.xhtml"
+  },
+  {
+    "number": 39,
+    "title": "Acute Behavioural Disturbance (ABD)",
+    "full_title": "Chapter 39 Acute Behavioural Disturbance (ABD)",
+    "slug": "039-acute-behavioural-disturbance-abd",
+    "source_hrefs": [
+      "cFHF.xhtml"
+    ],
+    "start_href": "cFHF.xhtml"
+  },
+  {
+    "number": 40,
+    "title": "Acute Coronary Syndrome",
+    "full_title": "Chapter 40 Acute Coronary Syndrome",
+    "slug": "040-acute-coronary-syndrome",
+    "source_hrefs": [
+      "cG5F.xhtml"
+    ],
+    "start_href": "cG5F.xhtml"
+  },
+  {
+    "number": 41,
+    "title": "Adrenal Insufficiency Patients",
+    "full_title": "Chapter 41 Adrenal Insufficiency Patients",
+    "slug": "041-adrenal-insufficiency-patients",
+    "source_hrefs": [
+      "cGJ5.xhtml"
+    ],
+    "start_href": "cGJ5.xhtml"
+  },
+  {
+    "number": 42,
+    "title": "Agitated Patients",
+    "full_title": "Chapter 42 Agitated Patients",
+    "slug": "042-agitated-patients",
+    "source_hrefs": [
+      "cGWC.xhtml"
+    ],
+    "start_href": "cGWC.xhtml"
+  },
+  {
+    "number": 43,
+    "title": "Alcohol-use Disorders",
+    "full_title": "Chapter 43 Alcohol-use Disorders",
+    "slug": "043-alcohol-use-disorders",
+    "source_hrefs": [
+      "cH6Z.xhtml"
+    ],
+    "start_href": "cH6Z.xhtml"
+  },
+  {
+    "number": 44,
+    "title": "Allergic Reactions including Anaphylaxis",
+    "full_title": "Chapter 44 Allergic Reactions including Anaphylaxis",
+    "slug": "044-allergic-reactions-including-anaphylaxis",
+    "source_hrefs": [
+      "cHJ9.xhtml"
+    ],
+    "start_href": "cHJ9.xhtml"
+  },
+  {
+    "number": 45,
+    "title": "Altered Level of Consciousness",
+    "full_title": "Chapter 45 Altered Level of Consciousness",
+    "slug": "045-altered-level-of-consciousness",
+    "source_hrefs": [
+      "cHYX.xhtml"
+    ],
+    "start_href": "cHYX.xhtml"
+  },
+  {
+    "number": 46,
+    "title": "Asthma in Adults and Children",
+    "full_title": "Chapter 46 Asthma in Adults and Children",
+    "slug": "046-asthma-in-adults-and-children",
+    "source_hrefs": [
+      "cJJW.xhtml"
+    ],
+    "start_href": "cJJW.xhtml"
+  },
+  {
+    "number": 47,
+    "title": "Behavioural Emergencies",
+    "full_title": "Chapter 47 Behavioural Emergencies",
+    "slug": "047-behavioural-emergencies",
+    "source_hrefs": [
+      "cK4N.xhtml"
+    ],
+    "start_href": "cK4N.xhtml"
+  },
+  {
+    "number": 48,
+    "title": "Cardiac Arrhythmia and Sudden Cardiac Death",
+    "full_title": "Chapter 48 Cardiac Arrhythmia and Sudden Cardiac Death",
+    "slug": "048-cardiac-arrhythmia-and-sudden-cardiac-death",
+    "source_hrefs": [
+      "cKCU.xhtml"
+    ],
+    "start_href": "cKCU.xhtml"
+  },
+  {
+    "number": 49,
+    "title": "Chronic Obstructive Pulmonary Disease",
+    "full_title": "Chapter 49 Chronic Obstructive Pulmonary Disease",
+    "slug": "049-chronic-obstructive-pulmonary-disease",
+    "source_hrefs": [
+      "cKUM.xhtml"
+    ],
+    "start_href": "cKUM.xhtml"
+  },
+  {
+    "number": 50,
+    "title": "Delirium",
+    "full_title": "Chapter 50 Delirium",
+    "slug": "050-delirium",
+    "source_hrefs": [
+      "cMBS.xhtml"
+    ],
+    "start_href": "cMBS.xhtml"
+  },
+  {
+    "number": 51,
+    "title": "Dyspnoea",
+    "full_title": "Chapter 51 Dyspnoea",
+    "slug": "051-dyspnoea",
+    "source_hrefs": [
+      "cN18.xhtml"
+    ],
+    "start_href": "cN18.xhtml"
+  },
+  {
+    "number": 52,
+    "title": "Febrile Illness in Children",
+    "full_title": "Chapter 52 Febrile Illness in Children",
+    "slug": "052-febrile-illness-in-children",
+    "source_hrefs": [
+      "cNU1.xhtml"
+    ],
+    "start_href": "cNU1.xhtml"
+  },
+  {
+    "number": 53,
+    "title": "Gastrointestinal Bleeding",
+    "full_title": "Chapter 53 Gastrointestinal Bleeding",
+    "slug": "053-gastrointestinal-bleeding",
+    "source_hrefs": [
+      "cPHZ.xhtml"
+    ],
+    "start_href": "cPHZ.xhtml"
+  },
+  {
+    "number": 54,
+    "title": "Glycaemic Emergencies in Adults and Children",
+    "full_title": "Chapter 54 Glycaemic Emergencies in Adults and Children",
+    "slug": "054-glycaemic-emergencies-in-adults-and-children",
+    "source_hrefs": [
+      "cPW8.xhtml"
+    ],
+    "start_href": "cPW8.xhtml"
+  },
+  {
+    "number": 55,
+    "title": "Headache",
+    "full_title": "Chapter 55 Headache",
+    "slug": "055-headache",
+    "source_hrefs": [
+      "cRU4.xhtml"
+    ],
+    "start_href": "cRU4.xhtml"
+  },
+  {
+    "number": 56,
+    "title": "Heart Failure",
+    "full_title": "Chapter 56 Heart Failure",
+    "slug": "056-heart-failure",
+    "source_hrefs": [
+      "cS50.xhtml"
+    ],
+    "start_href": "cS50.xhtml"
+  },
+  {
+    "number": 57,
+    "title": "Heat Related Illness",
+    "full_title": "Chapter 57 Heat Related Illness",
+    "slug": "057-heat-related-illness",
+    "source_hrefs": [
+      "cSF8.xhtml",
+      "cSN5.xhtml"
+    ],
+    "start_href": "cSF8.xhtml"
+  },
+  {
+    "number": 58,
+    "title": "Hyperventilation Syndrome",
+    "full_title": "Chapter 58 Hyperventilation Syndrome",
+    "slug": "058-hyperventilation-syndrome",
+    "source_hrefs": [
+      "cSVT.xhtml"
+    ],
+    "start_href": "cSVT.xhtml"
+  },
+  {
+    "number": 59,
+    "title": "Hypothermia",
+    "full_title": "Chapter 59 Hypothermia",
+    "slug": "059-hypothermia",
+    "source_hrefs": [
+      "cTFD.xhtml"
+    ],
+    "start_href": "cTFD.xhtml"
+  },
+  {
+    "number": 60,
+    "title": "Implantable Cardioverter Defibrillator",
+    "full_title": "Chapter 60 Implantable Cardioverter Defibrillator",
+    "slug": "060-implantable-cardioverter-defibrillator",
+    "source_hrefs": [
+      "cTVC.xhtml"
+    ],
+    "start_href": "cTVC.xhtml"
+  },
+  {
+    "number": 61,
+    "title": "Low Back Pain (Non-traumatic)",
+    "full_title": "Chapter 61 Low Back Pain (Non-traumatic)",
+    "slug": "061-low-back-pain-non-traumatic",
+    "source_hrefs": [
+      "cU5E.xhtml"
+    ],
+    "start_href": "cU5E.xhtml"
+  },
+  {
+    "number": 62,
+    "title": "Management and Resuscitation of Patients with Left Ventricular Assist Devices (LVADs)",
+    "full_title": "Chapter 62 Management and Resuscitation of Patients with Left Ventricular Assist Devices (LVADs)",
+    "slug": "062-management-and-resuscitation-of-patients-with-left-ventricular-assist-devices-lvads",
+    "source_hrefs": [
+      "cURA.xhtml"
+    ],
+    "start_href": "cURA.xhtml"
+  },
+  {
+    "number": 63,
+    "title": "Meningococcal Meningitis and Septicaemia",
+    "full_title": "Chapter 63 Meningococcal Meningitis and Septicaemia",
+    "slug": "063-meningococcal-meningitis-and-septicaemia",
+    "source_hrefs": [
+      "cV52.xhtml"
+    ],
+    "start_href": "cV52.xhtml"
+  },
+  {
+    "number": 64,
+    "title": "Mental Health Presentations",
+    "full_title": "Chapter 64 Mental Health Presentations",
+    "slug": "064-mental-health-presentations",
+    "source_hrefs": [
+      "cVFT.xhtml"
+    ],
+    "start_href": "cVFT.xhtml"
+  },
+  {
+    "number": 65,
+    "title": "Non-Traumatic Chest Pain/Discomfort",
+    "full_title": "Chapter 65 Non-Traumatic Chest Pain/Discomfort",
+    "slug": "065-non-traumatic-chest-pain-discomfort",
+    "source_hrefs": [
+      "cX83.xhtml"
+    ],
+    "start_href": "cX83.xhtml"
+  },
+  {
+    "number": 66,
+    "title": "Overdose and Poisoning in Adults and Children",
+    "full_title": "Chapter 66 Overdose and Poisoning in Adults and Children",
+    "slug": "066-overdose-and-poisoning-in-adults-and-children",
+    "source_hrefs": [
+      "cXFR.xhtml"
+    ],
+    "start_href": "cXFR.xhtml"
+  },
+  {
+    "number": 67,
+    "title": "Paediatric Gastroenteritis",
+    "full_title": "Chapter 67 Paediatric Gastroenteritis",
+    "slug": "067-paediatric-gastroenteritis",
+    "source_hrefs": [
+      "cXVH.xhtml"
+    ],
+    "start_href": "cXVH.xhtml"
+  },
+  {
+    "number": 68,
+    "title": "Pulmonary Embolism",
+    "full_title": "Chapter 68 Pulmonary Embolism",
+    "slug": "068-pulmonary-embolism",
+    "source_hrefs": [
+      "cYEU.xhtml"
+    ],
+    "start_href": "cYEU.xhtml"
+  },
+  {
+    "number": 69,
+    "title": "Respiratory Illness in Children",
+    "full_title": "Chapter 69 Respiratory Illness in Children",
+    "slug": "069-respiratory-illness-in-children",
+    "source_hrefs": [
+      "cYWR.xhtml"
+    ],
+    "start_href": "cYWR.xhtml"
+  },
+  {
+    "number": 70,
+    "title": "Seizures in Adults",
+    "full_title": "Chapter 70 Seizures in Adults",
+    "slug": "070-seizures-in-adults",
+    "source_hrefs": [
+      "cZE5.xhtml"
+    ],
+    "start_href": "cZE5.xhtml"
+  },
+  {
+    "number": 71,
+    "title": "Seizures in Children",
+    "full_title": "Chapter 71 Seizures in Children",
+    "slug": "071-seizures-in-children",
+    "source_hrefs": [
+      "c10AV.xhtml"
+    ],
+    "start_href": "c10AV.xhtml"
+  },
+  {
+    "number": 72,
+    "title": "Sepsis",
+    "full_title": "Chapter 72 Sepsis",
+    "slug": "072-sepsis",
+    "source_hrefs": [
+      "c10R3.xhtml"
+    ],
+    "start_href": "c10R3.xhtml"
+  },
+  {
+    "number": 73,
+    "title": "Sickle Cell Disease",
+    "full_title": "Chapter 73 Sickle Cell Disease",
+    "slug": "073-sickle-cell-disease",
+    "source_hrefs": [
+      "c1269.xhtml"
+    ],
+    "start_href": "c1269.xhtml"
+  },
+  {
+    "number": 74,
+    "title": "Stroke and Transient Ischaemic Attack",
+    "full_title": "Chapter 74 Stroke and Transient Ischaemic Attack",
+    "slug": "074-stroke-and-transient-ischaemic-attack",
+    "source_hrefs": [
+      "c12F5.xhtml"
+    ],
+    "start_href": "c12F5.xhtml"
+  },
+  {
+    "number": 75,
+    "title": "Vascular Emergencies",
+    "full_title": "Chapter 75 Vascular Emergencies",
+    "slug": "075-vascular-emergencies",
+    "source_hrefs": [
+      "c12Y9.xhtml"
+    ],
+    "start_href": "c12Y9.xhtml"
+  },
+  {
+    "number": 76,
+    "title": "Section 4 \u2013 Trauma",
+    "full_title": "Chapter 76 Section 4 \u2013 Trauma",
+    "slug": "076-section-4-trauma",
+    "source_hrefs": [
+      "c142H.xhtml"
+    ],
+    "start_href": "c142H.xhtml"
+  },
+  {
+    "number": 77,
+    "title": "Trauma Emergencies in Adults \u2013 Overview",
+    "full_title": "Chapter 77 Trauma Emergencies in Adults \u2013 Overview",
+    "slug": "077-trauma-emergencies-in-adults-overview",
+    "source_hrefs": [
+      "c142S.xhtml",
+      "c1469.xhtml"
+    ],
+    "start_href": "c142S.xhtml"
+  },
+  {
+    "number": 78,
+    "title": "Trauma Emergencies in Children \u2013 Overview",
+    "full_title": "Chapter 78 Trauma Emergencies in Children \u2013 Overview",
+    "slug": "078-trauma-emergencies-in-children-overview",
+    "source_hrefs": [
+      "c14Z8.xhtml"
+    ],
+    "start_href": "c14Z8.xhtml"
+  },
+  {
+    "number": 79,
+    "title": "Abdominal Trauma",
+    "full_title": "Chapter 79 Abdominal Trauma",
+    "slug": "079-abdominal-trauma",
+    "source_hrefs": [
+      "c15HB.xhtml"
+    ],
+    "start_href": "c15HB.xhtml"
+  },
+  {
+    "number": 80,
+    "title": "Burns and Scalds",
+    "full_title": "Chapter 80 Burns and Scalds",
+    "slug": "080-burns-and-scalds",
+    "source_hrefs": [
+      "c15U8.xhtml"
+    ],
+    "start_href": "c15U8.xhtml"
+  },
+  {
+    "number": 81,
+    "title": "Drowning",
+    "full_title": "Chapter 81 Drowning",
+    "slug": "081-drowning",
+    "source_hrefs": [
+      "c16AJ.xhtml"
+    ],
+    "start_href": "c16AJ.xhtml"
+  },
+  {
+    "number": 82,
+    "title": "Electrical Injuries",
+    "full_title": "Chapter 82 Electrical Injuries",
+    "slug": "082-electrical-injuries",
+    "source_hrefs": [
+      "c16P8.xhtml"
+    ],
+    "start_href": "c16P8.xhtml"
+  },
+  {
+    "number": 83,
+    "title": "Falls in Older Adults",
+    "full_title": "Chapter 83 Falls in Older Adults",
+    "slug": "083-falls-in-older-adults",
+    "source_hrefs": [
+      "c16XW.xhtml"
+    ],
+    "start_href": "c16XW.xhtml"
+  },
+  {
+    "number": 84,
+    "title": "Head Injury",
+    "full_title": "Chapter 84 Head Injury",
+    "slug": "084-head-injury",
+    "source_hrefs": [
+      "c17SU.xhtml"
+    ],
+    "start_href": "c17SU.xhtml"
+  },
+  {
+    "number": 85,
+    "title": "Limb Trauma",
+    "full_title": "Chapter 85 Limb Trauma",
+    "slug": "085-limb-trauma",
+    "source_hrefs": [
+      "c1878.xhtml"
+    ],
+    "start_href": "c1878.xhtml"
+  },
+  {
+    "number": 86,
+    "title": "Pelvic Trauma",
+    "full_title": "Chapter 86 Pelvic Trauma",
+    "slug": "086-pelvic-trauma",
+    "source_hrefs": [
+      "c18ZG.xhtml"
+    ],
+    "start_href": "c18ZG.xhtml"
+  },
+  {
+    "number": 87,
+    "title": "Spinal Injury and Spinal Cord Injury",
+    "full_title": "Chapter 87 Spinal Injury and Spinal Cord Injury",
+    "slug": "087-spinal-injury-and-spinal-cord-injury",
+    "source_hrefs": [
+      "c19C5.xhtml"
+    ],
+    "start_href": "c19C5.xhtml"
+  },
+  {
+    "number": 88,
+    "title": "Thoracic Trauma",
+    "full_title": "Chapter 88 Thoracic Trauma",
+    "slug": "088-thoracic-trauma",
+    "source_hrefs": [
+      "c19VY.xhtml"
+    ],
+    "start_href": "c19VY.xhtml"
+  },
+  {
+    "number": 89,
+    "title": "Section 5 \u2013 Maternity Care",
+    "full_title": "Chapter 89 Section 5 \u2013 Maternity Care",
+    "slug": "089-section-5-maternity-care",
+    "source_hrefs": [
+      "c1AGG.xhtml"
+    ],
+    "start_href": "c1AGG.xhtml"
+  },
+  {
+    "number": 90,
+    "title": "Maternity Care (including Obstetric Emergencies Overview)",
+    "full_title": "Chapter 90 Maternity Care (including Obstetric Emergencies Overview)",
+    "slug": "090-maternity-care-including-obstetric-emergencies-overview",
+    "source_hrefs": [
+      "c1AGR.xhtml"
+    ],
+    "start_href": "c1AGR.xhtml"
+  },
+  {
+    "number": 91,
+    "title": "Breech Birth",
+    "full_title": "Chapter 91 Breech Birth",
+    "slug": "091-breech-birth",
+    "source_hrefs": [
+      "c1B0G.xhtml"
+    ],
+    "start_href": "c1B0G.xhtml"
+  },
+  {
+    "number": 92,
+    "title": "Care of the Newborn",
+    "full_title": "Chapter 92 Care of the Newborn",
+    "slug": "092-care-of-the-newborn",
+    "source_hrefs": [
+      "c1B86.xhtml"
+    ],
+    "start_href": "c1B86.xhtml"
+  },
+  {
+    "number": 93,
+    "title": "Cord Prolapse",
+    "full_title": "Chapter 93 Cord Prolapse",
+    "slug": "093-cord-prolapse",
+    "source_hrefs": [
+      "c1BRD.xhtml"
+    ],
+    "start_href": "c1BRD.xhtml"
+  },
+  {
+    "number": 94,
+    "title": "Imminent Birth",
+    "full_title": "Chapter 94 Imminent Birth",
+    "slug": "094-imminent-birth",
+    "source_hrefs": [
+      "c1BUB.xhtml"
+    ],
+    "start_href": "c1BUB.xhtml"
+  },
+  {
+    "number": 95,
+    "title": "Management of Post-partum Haemorrhage (PPH)",
+    "full_title": "Chapter 95 Management of Post-partum Haemorrhage (PPH)",
+    "slug": "095-management-of-post-partum-haemorrhage-pph",
+    "source_hrefs": [
+      "c1CGM.xhtml"
+    ],
+    "start_href": "c1CGM.xhtml"
+  },
+  {
+    "number": 96,
+    "title": "Maternal Resuscitation",
+    "full_title": "Chapter 96 Maternal Resuscitation",
+    "slug": "096-maternal-resuscitation",
+    "source_hrefs": [
+      "c1CPB.xhtml"
+    ],
+    "start_href": "c1CPB.xhtml"
+  },
+  {
+    "number": 97,
+    "title": "Newborn Life Support",
+    "full_title": "Chapter 97 Newborn Life Support",
+    "slug": "097-newborn-life-support",
+    "source_hrefs": [
+      "c1CZY.xhtml"
+    ],
+    "start_href": "c1CZY.xhtml"
+  },
+  {
+    "number": 98,
+    "title": "Pre-eclampsia and Eclampsia",
+    "full_title": "Chapter 98 Pre-eclampsia and Eclampsia",
+    "slug": "098-pre-eclampsia-and-eclampsia",
+    "source_hrefs": [
+      "c1DC4.xhtml"
+    ],
+    "start_href": "c1DC4.xhtml"
+  },
+  {
+    "number": 99,
+    "title": "Shoulder Dystocia",
+    "full_title": "Chapter 99 Shoulder Dystocia",
+    "slug": "099-shoulder-dystocia",
+    "source_hrefs": [
+      "c1DK0.xhtml"
+    ],
+    "start_href": "c1DK0.xhtml"
+  },
+  {
+    "number": 100,
+    "title": "Trauma in Pregnancy",
+    "full_title": "Chapter 100 Trauma in Pregnancy",
+    "slug": "100-trauma-in-pregnancy",
+    "source_hrefs": [
+      "c1DSW.xhtml"
+    ],
+    "start_href": "c1DSW.xhtml"
+  },
+  {
+    "number": 101,
+    "title": "Vaginal Bleeding during Pregnancy up to 20 weeks Gestation",
+    "full_title": "Chapter 101 Vaginal Bleeding during Pregnancy up to 20 weeks Gestation",
+    "slug": "101-vaginal-bleeding-during-pregnancy-up-to-20-weeks-gestation",
+    "source_hrefs": [
+      "c1DY6.xhtml"
+    ],
+    "start_href": "c1DY6.xhtml"
+  },
+  {
+    "number": 102,
+    "title": "Vaginal Bleeding during Pregnancy after 20 weeks Gestation",
+    "full_title": "Chapter 102 Vaginal Bleeding during Pregnancy after 20 weeks Gestation",
+    "slug": "102-vaginal-bleeding-during-pregnancy-after-20-weeks-gestation",
+    "source_hrefs": [
+      "c1E48.xhtml"
+    ],
+    "start_href": "c1E48.xhtml"
+  },
+  {
+    "number": 103,
+    "title": "Vaginal Bleeding: Gynaecological Causes",
+    "full_title": "Chapter 103 Vaginal Bleeding: Gynaecological Causes",
+    "slug": "103-vaginal-bleeding-gynaecological-causes",
+    "source_hrefs": [
+      "c1E7B.xhtml"
+    ],
+    "start_href": "c1E7B.xhtml"
+  },
+  {
+    "number": 104,
+    "title": "Section 6 \u2013 Special Situations",
+    "full_title": "Chapter 104 Section 6 \u2013 Special Situations",
+    "slug": "104-section-6-special-situations",
+    "source_hrefs": [
+      "c1ECP.xhtml"
+    ],
+    "start_href": "c1ECP.xhtml"
+  },
+  {
+    "number": 105,
+    "title": "Atropine for CBRNE",
+    "full_title": "Chapter 105 Atropine for CBRNE",
+    "slug": "105-atropine-for-cbrne",
+    "source_hrefs": [
+      "c1ECX.xhtml"
+    ],
+    "start_href": "c1ECX.xhtml"
+  },
+  {
+    "number": 106,
+    "title": "Chemical Biological Radiological Nuclear (CBRN) Incidents Including Hazardous Materials",
+    "full_title": "Chapter 106 Chemical Biological Radiological Nuclear (CBRN) Incidents Including Hazardous Materials",
+    "slug": "106-chemical-biological-radiological-nuclear-cbrn-incidents-including-hazardous-materials",
+    "source_hrefs": [
+      "c1ETC.xhtml"
+    ],
+    "start_href": "c1ETC.xhtml"
+  },
+  {
+    "number": 107,
+    "title": "Major, Complex and High-Risk Incidents",
+    "full_title": "Chapter 107 Major, Complex and High-Risk Incidents",
+    "slug": "107-major-complex-and-high-risk-incidents",
+    "source_hrefs": [
+      "c1F98.xhtml"
+    ],
+    "start_href": "c1F98.xhtml"
+  },
+  {
+    "number": 108,
+    "title": "Police Incapacitants",
+    "full_title": "Chapter 108 Police Incapacitants",
+    "slug": "108-police-incapacitants",
+    "source_hrefs": [
+      "c1G2M.xhtml"
+    ],
+    "start_href": "c1G2M.xhtml"
+  },
+  {
+    "number": 109,
+    "title": "Index",
+    "full_title": "Chapter 109 Index",
+    "slug": "109-index",
+    "source_hrefs": [
+      "c1GDJ.xhtml",
+      "c1HEC.xhtml"
+    ],
+    "start_href": "c1GDJ.xhtml"
+  }
+]

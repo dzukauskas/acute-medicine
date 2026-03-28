@@ -1,0 +1,29 @@
+chapter_slug: 002-foreword
+chapter_pack: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/chapter_packs/002-foreword.yaml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/002-foreword.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/002-foreword.md
+scaffold: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/adjudication_scaffold.md
+candidates:
+- block_id: narrative-01-foreword
+  block_type: narrative
+  heading: Foreword
+  source_anchor: Foreword
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  profile_id: market-localization
+  selection_mode: profile_match
+  selection_reason: Matched profile `market-localization` via block_type `narrative` and signals market-localization.
+  decision_note_required: true
+  variant_a_goal: Tiksliai perrašyti rinkos, brand ar prieinamumo teiginį pagal LT rinką.
+  variant_b_goal: Suvesti teiginį į bendrinį / INN ar LT rinkos formą, neapkraunant originalo rinkos kontekstu.
+  decision_criteria: Palik variantą, kuris nepalieka originalo rinkos prieinamumo ar brandų kaip LT realybės.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-001-original-app-ecosystem
+  structured_block_policy: null

@@ -1,0 +1,193 @@
+chapter_slug: 002-foreword
+chapter_title: 2 skyrius. Pratarmė
+page_range: EPUB segmentas c7Z.xhtml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/002-foreword.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/002-foreword.md
+blocks:
+- block_id: narrative-01-foreword
+  block_type: narrative
+  heading: Foreword
+  source_anchor: Foreword
+  source_excerpt: '# Chapter 2 Foreword
+
+    - Šaltinio segmentai: c7Z.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    Foreword
+
+    Welcome to the JRCALC Clinical Guidelines 2025. It is three years since the last full print publication
+    of JRCALC guidelines. During this time, we continued work to ensure guidance was reviewed, updated
+    and newly developed guidance was issued so that we continue to provide the best possible care to our
+    patients. We are aware that the majority of people now access guidance and information via the JRCALC
+    apps, iCPG and JRCALC Plus, and this remains the preferred way of accessing current clinical guidance,
+    particularly when needing guidance for direct patient care. However, we understand that people still
+    want access to printed material, in particular students and for general use as a reference book.
+
+    In this 2025 print edition, we have removed the medicines section. New guidelines are being added
+    regularly and existing guidelines expanded, which, on a practical level, means the size of the book
+    is constantly growing; we want to keep the book a manageable size for users, and for it to reflect
+    how the book is mostly used. Furthermore, it supports our recommendation that students and clinicians
+    access the most current information for medicines via the apps. For all references to medicines with
+    the book, please refer to the relevant medicine on the apps.
+
+    The apps give us the ability to publish updates to guidance in real-time and in the three years since
+    the previous print edition, we have released a total of ten clinical updates, all of which are included
+    in this book.
+
+    We have engaged with a number of patients, patients’ representatives and patient organisations who
+    have supported us and provided a new focus on the patient perspective when updating guidance. These
+    include The Sickle Cell Society, The Addison’s Disease support group, Parkinsons UK, MND Association
+    and the National Poisons Information Service (NPIS-Toxbase).'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip šio konkretaus originalo leidinio ir jo skaitmeninių platformų kontekstą.
+  matched_localization_terms:
+  - JRCALC
+  - JRCALC Plus
+  - NPIS-Toxbase
+  - iCPG
+  matched_claim_ids:
+  - claim-001-original-app-ecosystem
+  matched_claim_types:
+  - market_availability
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+clinical_claims:
+- claim_id: claim-001-original-app-ecosystem
+  claim_type: market_availability
+  source_anchor: Foreword
+  final_rendering: original_context_callout
+  authority_basis: original-context-only
+  primary_lt_source: ''
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Nuorodos į `JRCALC apps`, `iCPG` ir `JRCALC Plus`, taip pat vaistų skyriaus nebuvimas spausdintame
+    leidime, paliekami tik kaip originalo leidinio naudojimo ir prieigos kontekstas.
+  matched_block_ids:
+  - narrative-01-foreword
+structured_block_policies: []
+active_terms:
+- en: Breech Birth
+  lt: vaisiaus sėdmenų pirmeiga
+  status: preferred
+  banned_lt: []
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: gairės dėl vaisiaus sėdmenų pirmeigos
+- en: Cord Prolapse
+  lt: virkštelės iškritimas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: virkštelės iškritimas
+- en: Shoulder Dystocia
+  lt: vaisiaus pečių distocija
+  status: preferred
+  banned_lt:
+  - petukų distocija
+  - petukų distocijai
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: vaisiaus pečių distocija
+active_acronyms: []
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: DEA
+  jurisdiction: us
+  replacement_mode: omit_nontransferable
+  local_lt: remtis Lietuvos ir ES kontroliuojamų medžiagų reguliavimu
+  eu_fallback: remtis ES reguliavimu
+  scope: all
+  reason: '`DEA` yra JAV institucinis ir teisinis kontekstas, ne LT/EU norminis standartas.'
+  source_ref: ''
+  notes: Nepalikti pagrindiniame LT tekste.
+source_jurisdiction_signals:
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+localization_decisions:
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip šio konkretaus originalo leidinio ir jo skaitmeninių platformų kontekstą.
+  source_ref: '`shared/localization/localization_overrides.tsv` (`JRCALC`); originalus skyrius `c7Z.xhtml`'
+  notes: Pratarmė aprašo originalaus leidinio ekosistemą, ne LT norminį standartą.
+- source_term: iCPG
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Neperkelti kaip LT norminio įrankio; rodyti tik aiškinant, kaip originale pasiekiamos
+    gairės.
+  source_ref: originalus skyrius `c7Z.xhtml`
+  notes: LT vartotojui tai tik originalo platformos pavadinimas.
+- source_term: JRCALC Plus
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Neperkelti kaip LT norminio įrankio; palikti tik originalo kontekste.
+  source_ref: originalus skyrius `c7Z.xhtml`
+  notes: Tai originalo leidinio platforma, ne LT klinikinis autoritetas.
+- source_term: NPIS-Toxbase
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Neperkelti kaip LT norminio toksikologinio šaltinio.
+  source_ref: originalus skyrius `c7Z.xhtml`
+  notes: LT tekste tai tik padėkos dalies originalo institucinis kontekstas.
+style_hotspots:
+- category: language_risk
+  text: preferred way of accessing current clinical guidance nepalikti kaip gremėzdiškos pažodinės konstrukcijos.
+- category: language_risk
+  text: supports our recommendation perrašyti be biurokratinio anglų karkaso.
+- category: language_risk
+  text: Ilgą vienos pastraipos naujienų sąrašą skaidyti į skaitomus LT informacinius vienetus.
+- category: anti_calque
+  text: Pratarmę rašyti kaip natūralią lietuvišką leidimo įžangą, o ne kaip pažodinį organizacinį memorandumą.
+- category: anti_calque
+  text: 'newly developed guidance was issued perrašyti paprasčiau: parengtos naujos gairės, atnaujintos
+    rekomendacijos.'
+- category: anti_calque
+  text: Vengti tiesioginio anglų sakinių ritmikos atkartojimo padėkų ir leidinio pokyčių pastraipose.
+- category: localization_decision
+  text: Pagrindinis LT tekstas pateikiamas kaip knygos pratarmė ir leidimo apžvalga, o ne kaip LT norminis
+    skyrius.
+- category: localization_decision
+  text: Platformų ir JK institucijų pavadinimai paliekami tik tiek, kiek reikia originalo leidiniui suprasti.
+- category: localization_decision
+  text: Vaistų informacijos nuoroda į originalo programėles neperkeliama kaip LT rekomendacija.
+- category: local_practice_change
+  text: Nuoroda į vaistų informaciją originalo programėlėse LT tekste apibrėžta kaip originalo leidinio
+    naudojimo pastaba, ne kaip vietinio darbo rekomendacija.
+- category: local_practice_change
+  text: JK institucinių pavadinimų svoris sumažintas ir perkeltas į Originalo kontekstas.
+gold_examples: []

@@ -124,6 +124,45 @@ def resolve_repo_path(raw: str | Path) -> Path:
     return path.resolve()
 
 
+def resolve_runtime_path(raw: str | Path, *, base_dir: str | Path | None = None) -> Path:
+    path = Path(raw).expanduser()
+    if not path.is_absolute():
+        anchor = Path(base_dir).expanduser() if base_dir is not None else Path.cwd()
+        path = anchor / path
+    return path.resolve()
+
+
+def path_is_within(child: Path, parent: Path) -> bool:
+    try:
+        child.relative_to(parent)
+        return True
+    except ValueError:
+        return False
+
+
+def validate_obsidian_sync_destination(
+    dest_dir: str | Path,
+    book_root: str | Path,
+    *,
+    repo_root: str | Path = REPO_ROOT,
+    cwd: str | Path | None = None,
+) -> Path:
+    resolved_dest = resolve_runtime_path(dest_dir, base_dir=cwd)
+    resolved_repo_root = resolve_runtime_path(repo_root, base_dir=cwd)
+    resolved_book_root = resolve_runtime_path(book_root, base_dir=cwd)
+    resolved_lt_root = resolved_book_root / "lt"
+
+    for forbidden_root in (resolved_repo_root, resolved_book_root, resolved_lt_root):
+        if path_is_within(resolved_dest, forbidden_root):
+            raise SystemExit(
+                "Nesaugi Obsidian sync paskirtis: "
+                f"{resolved_dest}\n"
+                "Sync paskirtis negali būti repo viduje, knygos darbo vietoje arba `lt/` kataloge."
+            )
+
+    return resolved_dest
+
+
 def ensure_python_module(module_name: str, package_name: str | None = None) -> None:
     try:
         importlib.import_module(module_name)
