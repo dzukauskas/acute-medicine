@@ -1,0 +1,263 @@
+chapter_slug: 004-guideline-development-methodology
+chapter_title: 4 skyrius. Gairių rengimo metodika
+page_range: EPUB segmentas cMD.xhtml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/004-guideline-development-methodology.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/004-guideline-development-methodology.md
+blocks:
+- block_id: narrative-01-guideline-development-methodology
+  block_type: narrative
+  heading: Guideline Development Methodology
+  source_anchor: Guideline Development Methodology
+  source_excerpt: '# Chapter 4 Guideline Development Methodology
+
+    - Šaltinio segmentai: cMD.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    Guideline Development Methodology
+
+    The methodology used by JRCALC (Joint Royal Colleges Ambulance Liaison Committee) to develop the UK
+    Ambulance Services Clinical Practice Guidelines is designed to comply with the criteria used by the
+    AGREE II (Appraisal of Guidelines for Research and Evaluation in Europe) instrument. This process
+    is a leading academic tool to identify good quality guidelines: http://www.agreetrust.org/
+
+    The purpose of the AGREE II, is to provide a framework to:
+
+    - assess the quality of guidelines
+
+    - provide a methodological strategy for the development of guidelines'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip konkretaus originalo leidinio gairių sistemos pavadinimą.
+  matched_localization_terms:
+  - JRCALC
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-02-guideline-selection
+  block_type: narrative
+  heading: Guideline Selection
+  source_anchor: Guideline Selection
+  source_excerpt: 'Guideline Selection
+
+    JRCALC, NASMeD (National Ambulance Service Medical Directors) and the ALPG (Ambulance Lead Paramedic
+    Group) will advise on those clinical guidelines which need updating and those clinical conditions
+    which need a new guideline developing. These are then prioritised and assessed with regard, to urgency
+    and risk. Clinical topics can be identified through a variety of means including the monitoring of
+    serious incidents within individual UK Ambulance Service Trusts, preventing future death reports issued
+    by coroners and national service reconfigurations. In addition JRCALC provide extensive clinical expertise
+    and advice on potential new developments to ensure that the guidelines capture latest best practice
+    and future innovations and encourage further research into pre hospital care.
+
+    Feedback is welcome via JRCALC@AACE.org
+
+    Editorial Independence
+
+    No external funding has been received for the development of these guidelines and no competing or
+    conflicting interests have been declared by those involved in their development.
+
+    Citing the JRCALC Guidelines
+
+    The JRCALC Guidelines are cited as:
+
+    Joint Royal Colleges Ambulance Liaison Committee, Association of Ambulance Chief Executives (2025)
+    JRCALC Clinical Guidelines 2025. Bridgwater: Class Professional Publishing.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: mixed-anglosphere
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip konkretaus originalo leidinio gairių sistemos pavadinimą.
+  matched_localization_terms:
+  - ALPG
+  - DEA
+  - JRCALC
+  - NASMeD
+  matched_claim_ids:
+  - claim-001-methodology-monitoring
+  matched_claim_types:
+  - monitoring
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-03-editorial-independence
+  block_type: narrative
+  heading: Editorial Independence
+  source_anchor: Editorial Independence
+  source_excerpt: 'Editorial Independence
+
+    No external funding has been received for the development of these guidelines and no competing or
+    conflicting interests have been declared by those involved in their development.
+
+    Citing the JRCALC Guidelines
+
+    The JRCALC Guidelines are cited as:
+
+    Joint Royal Colleges Ambulance Liaison Committee, Association of Ambulance Chief Executives (2025)
+    JRCALC Clinical Guidelines 2025. Bridgwater: Class Professional Publishing.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip konkretaus originalo leidinio gairių sistemos pavadinimą.
+  matched_localization_terms:
+  - JRCALC
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-04-citing-the-jrcalc-guidelines
+  block_type: narrative
+  heading: Citing the JRCALC Guidelines
+  source_anchor: Citing the JRCALC Guidelines
+  source_excerpt: 'Citing the JRCALC Guidelines
+
+    The JRCALC Guidelines are cited as:
+
+    Joint Royal Colleges Ambulance Liaison Committee, Association of Ambulance Chief Executives (2025)
+    JRCALC Clinical Guidelines 2025. Bridgwater: Class Professional Publishing.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip konkretaus originalo leidinio gairių sistemos pavadinimą.
+  matched_localization_terms:
+  - JRCALC
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+clinical_claims:
+- claim_id: claim-001-methodology-monitoring
+  claim_type: monitoring
+  source_anchor: Guideline Selection
+  final_rendering: original_context_callout
+  authority_basis: original-context-only
+  primary_lt_source: ''
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Originale aprašoma, pagal kokius JK proceso signalus ir stebėsenos duomenis parenkamos gairių
+    atnaujinimo temos; LT tekste tai paliekama tik kaip originalo rengimo proceso paaiškinimas.
+  matched_block_ids:
+  - narrative-02-guideline-selection
+structured_block_policies: []
+active_terms: []
+active_acronyms: []
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: DEA
+  jurisdiction: us
+  replacement_mode: omit_nontransferable
+  local_lt: remtis Lietuvos ir ES kontroliuojamų medžiagų reguliavimu
+  eu_fallback: remtis ES reguliavimu
+  scope: all
+  reason: '`DEA` yra JAV institucinis ir teisinis kontekstas, ne LT/EU norminis standartas.'
+  source_ref: ''
+  notes: Nepalikti pagrindiniame LT tekste.
+source_jurisdiction_signals:
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+localization_decisions:
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip konkretaus originalo leidinio gairių sistemos pavadinimą.
+  source_ref: '`shared/localization/localization_overrides.tsv` (`JRCALC`); originalus skyrius `cMD.xhtml`'
+  notes: Negalima pateikti kaip LT norminio ar metodologinio autoriteto.
+- source_term: NASMeD
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip oficialią originalo organizacinio tinklo santrumpą.
+  source_ref: originalus skyrius `cMD.xhtml`
+  notes: LT tekste nekurti lietuviško institucinio atitikmens.
+- source_term: ALPG
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip oficialią originalo profesinės grupės santrumpą.
+  source_ref: originalus skyrius `cMD.xhtml`
+  notes: LT tekste tai tik originalo organizacinio proceso dalis.
+style_hotspots:
+- category: language_risk
+  text: designed to comply with the criteria used by... nepalikti gremėzdiškos pažodinės konstrukcijos.
+- category: language_risk
+  text: provide a framework to versti kaip aiškią paskirtį, ne tiesioginę anglų kalbos kalkę.
+- category: language_risk
+  text: guideline developing ir national service reconfigurations neperrašyti pažodžiui be paaiškinimo.
+- category: anti_calque
+  text: Pagrindinę pastraipą rašyti kaip trumpą metodologinę santrauką, ne kaip pažodinį procedūrinį anglišką
+    aprašą.
+- category: anti_calque
+  text: AGREE II funkcijas geriau perteikti punktų sąrašu.
+- category: anti_calque
+  text: Redakcinę nepriklausomybę ir citavimo informaciją laikyti originalo leidinio kontekstu.
+- category: localization_decision
+  text: Pagrindiniame LT tekste paliktas tik bendras metodologinis paaiškinimas.
+- category: localization_decision
+  text: JK organizacinė gairių atrankos logika perkelta į Originalo kontekstas bloką.
+- category: localization_decision
+  text: AGREE II paminėtas kaip metodologinis karkasas, bet ne kaip LT nacionalinis reguliacinis sluoksnis.
+- category: local_practice_change
+  text: Vengta perteikti JK service model ir incident reporting logiką kaip vietinį LT gairių rengimo
+    standartą.
+- category: local_practice_change
+  text: Ceremoninis ir organizacinis originalo tonas sutrumpintas iki aiškios LT metodologinės santraukos.
+gold_examples: []
+term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates:
+- candidate_id: 004-guideline-development-methodology-acronym-aace
+  candidate_kind: acronym
+  source_term: AACE
+  source_expansion: ''
+  chapter_slug: 004-guideline-development-methodology
+  source_context: Feedback is welcome via JRCALC@AACE.org
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''

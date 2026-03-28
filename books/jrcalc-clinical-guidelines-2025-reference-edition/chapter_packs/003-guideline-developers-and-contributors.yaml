@@ -1,0 +1,351 @@
+chapter_slug: 003-guideline-developers-and-contributors
+chapter_title: 3 skyrius. Gairių rengėjai ir bendraautoriai
+page_range: EPUB segmentas c8W.xhtml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/003-guideline-developers-and-contributors.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/003-guideline-developers-and-contributors.md
+blocks:
+- block_id: narrative-01-guideline-developers-and-contributors
+  block_type: narrative
+  heading: Guideline Developers and Contributors
+  source_anchor: Guideline Developers and Contributors
+  source_excerpt: '# Chapter 3 Guideline Developers and Contributors
+
+    - Šaltinio segmentai: c8W.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    Guideline Developers and Contributors
+
+    The authors and editors would like to thank everyone who has contributed to the JRCALC guidelines.
+    Many people have given freely and generously of their time and expertise to help draft, develop and
+    improve the guidelines. In particular, we wish to acknowledge the work of the members of the Joint
+    Royal Colleges Ambulance Liaison Committee, the National Ambulance Service Medical Directors group,
+    the Ambulance Lead Paramedics group, Ambulance Pharmacists Network and national groups for End of
+    Life, Safeguarding and Maternity. Other contributors have come from a variety of multidisciplinary
+    groups which include healthcare professionals, educators and patients.
+
+    EDITORIAL LEADS
+
+    Dr Simon Brown, GP and Assistant Medical Director, South Central Ambulance Service, JRCALC guideline
+    lead
+
+    Cathryn James, Senior Clinical Support Manager for NASMeD and JRCALC, AACE'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip konkretaus originalo leidinio ir jo rengėjų tinklo pavadinimą.
+  matched_localization_terms:
+  - AACE
+  - JRCALC
+  - Joint Royal Colleges Ambulance Liaison Committee
+  - NASMeD
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-02-editorial-leads
+  block_type: narrative
+  heading: Editorial Leads
+  source_anchor: Editorial Leads
+  source_excerpt: 'EDITORIAL LEADS
+
+    Dr Simon Brown, GP and Assistant Medical Director, South Central Ambulance Service, JRCALC guideline
+    lead
+
+    Cathryn James, Senior Clinical Support Manager for NASMeD and JRCALC, AACE
+
+    Elizabeth (Lizzy) Roebuck, Clinical Support Manager for NASMeD and JRCALC, AACE
+
+    JRCALC Chair: Dr Alison Walker, Honorary Medical Director, West Midlands Ambulance Service and Consultant
+    in Emergency Medicine, Harrogate & District NHS FT
+
+    NASMeD Chairs: Katherine Noble, Medical Director, North East Ambulance Service and Simon Walsh, Medical
+    Director, East of England Ambulance Service
+
+    JRCALC COMMITTEE MEMBERS
+
+    Mark Baxter, The Royal College of Physicians of London'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip konkretaus originalo leidinio ir jo rengėjų tinklo pavadinimą.
+  matched_localization_terms:
+  - AACE
+  - JRCALC
+  - NASMeD
+  - NHS
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-03-jrcalc-committee-members
+  block_type: narrative
+  heading: JRCALC Committee Members
+  source_anchor: JRCALC Committee Members
+  source_excerpt: 'JRCALC COMMITTEE MEMBERS
+
+    Mark Baxter, The Royal College of Physicians of London
+
+    John Black, NASMeD and Medical Director South Central Ambulance Service
+
+    Dave Bywater, Ambulance Lead Paramedic Group
+
+    Charles D Deakin, The Royal College of Anaesthetists
+
+    Rachel Drain, The Royal College of Midwives
+
+    Christopher (Toby) Edmunds, The Royal College of Emergency Medicine
+
+    Timothy Edwards, Ambulance Lead Paramedic Group'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: mixed-anglosphere
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip konkretaus originalo leidinio ir jo rengėjų tinklo pavadinimą.
+  matched_localization_terms:
+  - DEA
+  - JRCALC
+  - NASMeD
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-04-jrcalc-contributors
+  block_type: narrative
+  heading: JRCALC Contributors
+  source_anchor: JRCALC Contributors
+  source_excerpt: 'JRCALC Contributors
+
+    Peter Aitken
+
+    Paul Aitken-Fell
+
+    Waqas Akhtar
+
+    Tasnim Ali
+
+    Belinda Allan
+
+    Lisa Anderson
+
+    Mark Anderson'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip konkretaus originalo leidinio ir jo rengėjų tinklo pavadinimą.
+  matched_localization_terms:
+  - JRCALC
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-05-contributors-prior-to-2016
+  block_type: narrative
+  heading: Contributors Prior to 2016
+  source_anchor: Contributors Prior to 2016
+  source_excerpt: 'Contributors Prior to 2016
+
+    Rob Andrews
+
+    Marcus Bailey
+
+    Andy Carson (posthumous)
+
+    Kyee Han
+
+    Brendan Lloyd
+
+    Kevin Mackway-Jones
+
+    Andrew McIntyre'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+clinical_claims: []
+structured_block_policies: []
+active_terms: []
+active_acronyms: []
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: NHS
+  jurisdiction: uk
+  replacement_mode: omit_nontransferable
+  local_lt: taikyti Lietuvos sveikatos sistemos ir GMP organizacinę logiką
+  eu_fallback: taikyti ES ir vietinę organizacinę logiką
+  scope: all
+  reason: '`NHS` yra JK sistemos institucinis kontekstas, ne LT norminis terminas.'
+  source_ref: ''
+  notes: Nepalikti kaip vietinio standarto.
+- source_term: DEA
+  jurisdiction: us
+  replacement_mode: omit_nontransferable
+  local_lt: remtis Lietuvos ir ES kontroliuojamų medžiagų reguliavimu
+  eu_fallback: remtis ES reguliavimu
+  scope: all
+  reason: '`DEA` yra JAV institucinis ir teisinis kontekstas, ne LT/EU norminis standartas.'
+  source_ref: ''
+  notes: Nepalikti pagrindiniame LT tekste.
+- source_term: AHA
+  jurisdiction: us
+  replacement_mode: original_context_callout
+  local_lt: remtis ERC ir Lietuvos / ES klinikinėmis gairėmis
+  eu_fallback: remtis ERC ir ES gairėmis
+  scope: all
+  reason: '`AHA` gairės negali būti rodomos kaip LT/EU numatytasis standartas, jei taikomas Europos kontekstas.'
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas arba lyginant gaires.
+source_jurisdiction_signals:
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+- source_term: NHS
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: regex
+  pattern: \b(?:NHS|National Health Service)\b
+  notes: UK health service context.
+localization_decisions:
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip konkretaus originalo leidinio ir jo rengėjų tinklo pavadinimą.
+  source_ref: '`shared/localization/localization_overrides.tsv` (`JRCALC`); originalus skyrius `c8W.xhtml`'
+  notes: Nenaudoti kaip LT klinikinio ar institucinio autoriteto pavadinimo.
+- source_term: Joint Royal Colleges Ambulance Liaison Committee
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti oficialų komiteto pavadinimą originalo kalba.
+  source_ref: originalus skyrius `c8W.xhtml`
+  notes: Tai konkretaus JK komiteto vardas, ne LT institucijos atitikmuo.
+- source_term: NASMeD
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip oficialią originalo organizacinio tinklo santrumpą.
+  source_ref: originalus skyrius `c8W.xhtml`
+  notes: LT tekste nekurti dirbtinio lietuviško atitikmens.
+- source_term: AACE
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip oficialią originalo organizacijos santrumpą.
+  source_ref: originalus skyrius `c8W.xhtml`
+  notes: LT tekste tai tik originalo partnerinė organizacija.
+- source_term: NHS
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik darboviečių ir afiliacijų kontekste.
+  source_ref: originalus skyrius `c8W.xhtml`
+  notes: Negalima pateikti kaip LT sveikatos sistemos analogo.
+style_hotspots:
+- category: language_risk
+  text: have given freely and generously of their time and expertise nepalikti pažodine, iškilminga angliška
+    konstrukcija.
+- category: language_risk
+  text: Neperversti oficialių organizacijų pavadinimų į dirbtinius lietuviškus vardus.
+- category: language_risk
+  text: Contributor sąrašų neperkrauti nereikalingais lietuviškais paaiškinimais.
+- category: anti_calque
+  text: Įžangą rašyti kaip trumpą lietuvišką padėką ir credits paaiškinimą, ne kaip pažodinę ceremoninę
+    anglų kalbos pastraipą.
+- category: anti_calque
+  text: Other contributors have come from a variety of multidisciplinary groups perrašyti paprasčiau ir
+    natūraliau.
+- category: anti_calque
+  text: Pareigų pavadinimus versti saikingai, oficialius institucijų vardus paliekant originalo forma.
+- category: localization_decision
+  text: Skyrius LT versijoje pateikiamas kaip padėkos ir prisidėjusių asmenų sąrašas, o ne kaip vietinis
+    organizacinis modelis.
+- category: localization_decision
+  text: Oficialūs komitetų, tarnybų, tinklų ir kolegijų pavadinimai paliekami originalo kalba.
+- category: localization_decision
+  text: Verčiami tik bendriniai vaidmenų pavadinimai ir skyriaus antraštės.
+- category: local_practice_change
+  text: Originalo ceremoninė padėkos proza sutrumpinta ir perrašyta į aiškesnę LT credits formą.
+- category: local_practice_change
+  text: Vengta kurti tariamus lietuviškus JK institucijų ir organizacijų pavadinimų atitikmenis.
+gold_examples: []
+term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates:
+- candidate_id: 003-guideline-developers-and-contributors-acronym-aace
+  candidate_kind: acronym
+  source_term: AACE
+  source_expansion: ''
+  chapter_slug: 003-guideline-developers-and-contributors
+  source_context: Cathryn James, Senior Clinical Support Manager for NASMeD and JRCALC, AACE
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: research_risky_term | source_acronym
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje akronimų bazėje. | Aptikta source tekste
+    kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 003-guideline-developers-and-contributors-term-nasmed
+  candidate_kind: term
+  source_term: NASMeD
+  source_expansion: ''
+  chapter_slug: 003-guideline-developers-and-contributors
+  source_context: Cathryn James, Senior Clinical Support Manager for NASMeD and JRCALC, AACE
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''

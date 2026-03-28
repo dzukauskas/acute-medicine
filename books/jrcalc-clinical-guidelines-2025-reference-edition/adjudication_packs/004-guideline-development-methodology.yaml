@@ -1,0 +1,32 @@
+chapter_slug: 004-guideline-development-methodology
+chapter_pack: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/chapter_packs/004-guideline-development-methodology.yaml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/004-guideline-development-methodology.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/004-guideline-development-methodology.md
+scaffold: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/adjudication_scaffold.md
+candidates:
+- block_id: narrative-02-guideline-selection
+  block_type: narrative
+  heading: Guideline Selection
+  source_anchor: Guideline Selection
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: original-context-only
+  profile_id: algorithm-step
+  selection_mode: profile_match
+  selection_reason: Matched profile `algorithm-step` via block_type `narrative` and signals algorithm-step.
+  decision_note_required: true
+  variant_a_goal: Palikti kliniškai pilną algoritmo žingsnį ir sprendimo logiką.
+  variant_b_goal: Kuo aiškiau ir komandiškiau lietuviškai išdėstyti veiksmą.
+  decision_criteria: Palik variantą, kuris išlaiko sprendimo seką, bet skamba kaip aiški LT algoritmo
+    komanda.
+  relevant_style_hotspots:
+  - category: language_risk
+    text: guideline developing ir national service reconfigurations neperrašyti pažodžiui be paaiškinimo.
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-001-methodology-monitoring
+  structured_block_policy: null
