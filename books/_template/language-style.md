@@ -24,7 +24,7 @@ Praktiškai tai reiškia:
 - geriau `koreguokite`, ne `atlikite korekciją`;
 - geriau `nuspręskite` ar `aptarkite`, ne `sprendimas turi būti priimamas`.
 
-Jei kyla abejonių dėl termino, kolokacijos ar klinikinės kategorijos pavadinimo, jo negalima rinktis vien iš intuicijos. Pirma patikrinkite Lietuvos medicininę vartoseną internete, o tik tada fiksuokite formuluotę tekste ar `termbase`.
+Jei kyla abejonių dėl termino, kolokacijos ar klinikinės kategorijos pavadinimo, jo negalima rinktis vien iš intuicijos. Pirma patikrinkite Lietuvos medicininę vartoseną internete, o tik tada fiksuokite formuluotę tekste ar `shared/lexicon/termbase.tsv` / `books/<slug>/termbase.local.tsv`.
 
 ## LT/EU-first lokalizacija
 

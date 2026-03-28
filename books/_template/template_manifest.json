@@ -9,24 +9,20 @@
     "adjudication_scaffold.md",
     "research/README.md",
     "research/_template.md",
-    "lt/figures/README.md",
-    "lt_source_map.tsv",
-    "localization_signals.base.tsv",
-    "clinical_policy_markers.tsv"
+    "lt/figures/README.md"
   ],
   "refresh_if_empty": [
-    "termbase.tsv",
-    "acronyms.tsv",
-    "gold_phrases.tsv",
+    "termbase.local.tsv",
+    "acronyms.local.tsv",
+    "gold_phrases.local.tsv",
     "gold_sections/index.tsv",
-    "localization_overrides.tsv",
-    "review_taxonomy.tsv",
-    "adjudication_profiles.tsv",
+    "localization_overrides.local.tsv",
+    "adjudication_profiles.local.tsv",
     "lt/figures/manifest.tsv",
-    "calque_patterns.tsv",
-    "disallowed_terms.tsv",
-    "disallowed_phrases.tsv",
-    "localization_signals.tsv"
+    "calque_patterns.local.tsv",
+    "disallowed_terms.local.tsv",
+    "disallowed_phrases.local.tsv",
+    "localization_signals.local.tsv"
   ],
   "required_directories": [
     "source/pdf",

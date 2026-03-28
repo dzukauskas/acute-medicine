@@ -127,6 +127,15 @@ def main() -> int:
             "completeness_guard",
             [sys.executable, str(SCRIPT_DIR / "completeness_guard.py"), *([] if not book_root else ["--book-root", book_root]), str(temp_pack)],
         )
+        run_step(
+            "manual audit validation",
+            [
+                sys.executable,
+                str(SCRIPT_DIR / "validate_manual_audit.py"),
+                *([] if not book_root else ["--book-root", book_root]),
+                slug,
+            ],
+        )
 
     print(f"Chapter QA passed for {slug}.")
     return 0

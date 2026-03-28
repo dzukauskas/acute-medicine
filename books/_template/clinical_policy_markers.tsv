@@ -1,9 +1,0 @@
-topic	match_mode	pattern	notes
-dose	regex	\bdose(?:s| range| ranges)?\b	Dose markers.
-dose	regex	\bdosage\b	Dosage markers.
-indication	regex	\bindication(?:s)?\b	Indication markers.
-contraindication	regex	\bcontraindication(?:s)?\b	Contraindication markers.
-route	regex	\broute(?:s)?\b	Route markers.
-route	regex	\badministration route(?:s)?\b	Administration route markers.
-concentration	regex	\bconcentration(?:s)?\b	Concentration markers.
-market availability	regex	\b(?:availability|available|formulary)\b	Market availability markers.

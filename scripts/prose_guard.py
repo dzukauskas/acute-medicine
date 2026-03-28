@@ -6,7 +6,7 @@ import csv
 import re
 from pathlib import Path
 
-from book_workflow_support import resolve_book_root
+from book_workflow_support import calque_pattern_paths, disallowed_phrase_paths, disallowed_term_paths, resolve_book_root
 
 
 Rule = dict[str, str]
@@ -16,12 +16,39 @@ MARKDOWN_LINK_RE = re.compile(r"\[[^\]]*\]\([^)]+\)")
 
 def load_rules(paths: list[Path]) -> list[Rule]:
     rows: list[Rule] = []
+    seen: set[tuple[str, str, str, str, str, str, str]] = set()
     for path in paths:
+        if not path.exists():
+            continue
         with path.open("r", encoding="utf-8") as f:
             reader = csv.DictReader(f, delimiter="\t")
             for row in reader:
-                rows.append(
-                    {
+                if path.name.startswith("disallowed_terms"):
+                    normalized = {
+                        "rule_file": path.name,
+                        "match_type": "phrase",
+                        "banned": row.get("banned", "").strip(),
+                        "preferred": row.get("preferred", "").strip(),
+                        "reason": row.get("reason", "").strip(),
+                        "category": "term",
+                        "severity": "medium",
+                        "promoted_from": "",
+                        "notes": "",
+                    }
+                elif path.name.startswith("disallowed_phrases"):
+                    normalized = {
+                        "rule_file": path.name,
+                        "match_type": row.get("match_type", "phrase").strip() or "phrase",
+                        "banned": row.get("banned", "").strip(),
+                        "preferred": row.get("preferred", "").strip(),
+                        "reason": row.get("reason", "").strip(),
+                        "category": "phrase",
+                        "severity": "medium",
+                        "promoted_from": "",
+                        "notes": "",
+                    }
+                else:
+                    normalized = {
                         "rule_file": path.name,
                         "match_type": row.get("match_type", "phrase").strip() or "phrase",
                         "banned": row["banned"].strip(),
@@ -32,8 +59,21 @@ def load_rules(paths: list[Path]) -> list[Rule]:
                         "promoted_from": row.get("promoted_from", "").strip(),
                         "notes": row.get("notes", "").strip(),
                     }
+
+                identity = (
+                    normalized["match_type"].lower(),
+                    normalized["banned"].lower(),
+                    normalized["preferred"].lower(),
+                    normalized["reason"].lower(),
+                    normalized["category"].lower(),
+                    normalized["severity"].lower(),
+                    normalized["notes"].lower(),
                 )
-    return rows
+                if identity in seen:
+                    continue
+                seen.add(identity)
+                rows.append(normalized)
+    return [row for row in rows if row["banned"]]
 
 
 def build_pattern(rule: Rule) -> re.Pattern[str]:
@@ -94,7 +134,7 @@ def main() -> int:
     parser.add_argument(
         "--rules",
         nargs="*",
-        help="One or more TSV rule files. Defaults to <book-root>/calque_patterns.tsv.",
+        help="One or more TSV rule files. Defaults to shared prose rules + matching <book-root>/*.local.tsv overrides.",
     )
     args = parser.parse_args()
 
@@ -103,7 +143,11 @@ def main() -> int:
     if not paths:
         raise SystemExit("Nurodykite scan kelią arba nustatykite MEDBOOK_ROOT / --book-root.")
 
-    rules = args.rules or ([str(book_root / "calque_patterns.tsv")] if book_root else [])
+    rules = args.rules or (
+        [*(str(path) for path in calque_pattern_paths(book_root)), *(str(path) for path in disallowed_term_paths(book_root)), *(str(path) for path in disallowed_phrase_paths(book_root))]
+        if book_root
+        else []
+    )
     if not rules:
         raise SystemExit("Nenurodytas rules failas. Perduokite --rules arba nustatykite MEDBOOK_ROOT / --book-root.")
 

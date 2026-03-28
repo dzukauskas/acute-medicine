@@ -1,6 +1,6 @@
 # Books
 
-Repo yra book-agnostic: kiekviena nauja knyga bootstrap'inama į atskirą `books/<slug>/` katalogą, o bendras shared šaltinis laikomas tik `books/_template/`.
+Repo yra book-agnostic: kiekviena nauja knyga bootstrap'inama į atskirą `books/<slug>/` katalogą, o reusable taisyklių bazė laikoma repo-global `shared/` sluoksnyje.
 
 ## Repo standartas
 
@@ -12,18 +12,21 @@ Repo yra book-agnostic: kiekviena nauja knyga bootstrap'inama į atskirą `books
 Shared LT-source branduolys laikomas:
 
 - `books/_template/source-priority.md`
-- `books/_template/lt_source_map.tsv`
+- `shared/localization/lt_source_map.tsv`
 
 ## Ką laikome `books/`
 
 ```text
-books/
-  _template/
-  <book-slug>/
+repo/
+  shared/
+  books/
+    _template/
+    <book-slug>/
 ```
 
-- `books/_template/` yra vienintelis shared bootstrap ir refresh šaltinis.
-- `books/<book-slug>/` yra pilnai self-contained vienos knygos darbo vieta.
+- `shared/` yra vienintelis aktyvus reusable taisyklių sluoksnis.
+- `books/_template/` yra bootstrap ir refresh scaffold šaltinis.
+- `books/<book-slug>/` saugo knygos content artefaktus ir tik optional `*.local.tsv` override'us.
 
 ## Naujos knygos bootstrap
 
@@ -50,7 +53,7 @@ python3 scripts/bootstrap_book_from_pdf.py \
 - išveda pavadinimą ir slug iš PDF;
 - sukuria `books/<slug>/`;
 - nukopijuoja PDF į `source/pdf/`;
-- nukopijuoja pilną `books/_template/`;
+- nukopijuoja `books/_template/` scaffold'us ir header-only local override stub'us;
 - sugeneruoja `source/index/` ir `source/chapters-en/`;
 - automatiškai sukonfigūruoja Obsidian sync pagal `repo_config.toml` default'us, pvz. `PARAMEDIKAS/<Book Title>`.
 
@@ -81,6 +84,7 @@ python3 scripts/refresh_book_template.py --book-root books/<slug>
 ```
 
 Refresh perrašo tik template-valdomus docs failus ir tuščius scaffold'us. Jis neliečia realių content artefaktų.
+Ne tušti `*.local.tsv` override failai ir užpildyti local `gold_sections/` pavyzdžiai paliekami nepakeisti.
 
 ## Generic QA
 
@@ -89,5 +93,8 @@ Book-scoped skriptai nebeturi aktyvios knygos pagal nutylėjimą. Juos kvieskite
 ```bash
 MEDBOOK_ROOT=books/<slug> python3 scripts/run_chapter_qa.py 001
 MEDBOOK_ROOT=books/<slug> python3 scripts/build_chapter_pack.py 001
+MEDBOOK_ROOT=books/<slug> python3 scripts/generate_research_checklist.py 001
 MEDBOOK_ROOT=books/<slug> scripts/sync_obsidian_book.sh
 ```
+
+Pagal nutylėjimą šie skriptai aktyvias taisykles krauna iš `shared/` ir, jei tokie yra, iš `books/<slug>/*.local.tsv`.

@@ -4,7 +4,15 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from book_workflow_support import activate_book_root, dump_yaml, load_yaml, read_tsv, require_book_root, resolve_chapter_slug, split_multi
+from book_workflow_support import (
+    activate_book_root,
+    dump_yaml,
+    load_adjudication_profile_rows,
+    load_yaml,
+    require_book_root,
+    resolve_chapter_slug,
+    split_multi,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -21,7 +29,6 @@ def parse_args() -> argparse.Namespace:
 def book_paths() -> dict[str, Path]:
     book_root = require_book_root()
     return {
-        "profiles": book_root / "adjudication_profiles.tsv",
         "scaffold": book_root / "adjudication_scaffold.md",
         "chapter_packs": book_root / "chapter_packs",
         "adjudication_packs": book_root / "adjudication_packs",
@@ -30,7 +37,7 @@ def book_paths() -> dict[str, Path]:
 
 def load_profiles() -> dict[str, dict[str, object]]:
     profiles: dict[str, dict[str, object]] = {}
-    for row in read_tsv(book_paths()["profiles"]):
+    for row in load_adjudication_profile_rows():
         profiles[row["profile_id"]] = {
             "profile_id": row["profile_id"],
             "applies_to_block_types": split_multi(row.get("applies_to_block_types", "")),
@@ -77,7 +84,9 @@ def relevant_hotspots(block: dict, pack: dict) -> list[dict]:
 
 def choose_profile_from_profiles(block: dict, profiles: dict[str, dict[str, object]]) -> tuple[dict[str, object] | None, str]:
     block_type = block.get("block_type", "")
-    tags = set(block.get("tags", []))
+    tags = set(block.get("tags", [])) | set(block.get("semantic_risk_reasons", [])) | set(
+        block.get("matched_claim_types", [])
+    )
 
     best_profile: dict[str, object] | None = None
     best_score = -1
@@ -100,7 +109,7 @@ def choose_profile_from_profiles(block: dict, profiles: dict[str, dict[str, obje
             if matched_tags:
                 best_reason = (
                     f"Matched profile `{profile['profile_id']}` via block_type `{block_type}` "
-                    f"and tags {', '.join(matched_tags)}."
+                    f"and signals {', '.join(matched_tags)}."
                 )
             else:
                 best_reason = f"Matched profile `{profile['profile_id']}` via block_type `{block_type}`."
@@ -110,7 +119,9 @@ def choose_profile_from_profiles(block: dict, profiles: dict[str, dict[str, obje
 
 def choose_profile_fallback(block: dict, profiles: dict[str, dict[str, object]]) -> tuple[dict[str, object] | None, str]:
     block_type = block.get("block_type", "")
-    tags = set(block.get("tags", []))
+    tags = set(block.get("tags", [])) | set(block.get("semantic_risk_reasons", [])) | set(
+        block.get("matched_claim_types", [])
+    )
 
     if block_type == "algorithm":
         return profiles.get("algorithm-stepwise"), "Fallback selected algorithm profile for block_type `algorithm`."
@@ -122,6 +133,16 @@ def choose_profile_fallback(block: dict, profiles: dict[str, dict[str, object]])
         return profiles.get("local-context-callout"), (
             "Fallback selected local-context profile from localization-oriented tags."
         )
+    if tags & {"dose-claim"}:
+        return profiles.get("dose-claim"), "Fallback selected dose-claim profile from semantic risk."
+    if tags & {"drug-selection", "indication", "contraindication"}:
+        return profiles.get("drug-selection"), "Fallback selected drug-selection profile from semantic risk."
+    if tags & {"algorithm-step", "algorithm_step", "monitoring"}:
+        return profiles.get("algorithm-step"), "Fallback selected algorithm-step profile from semantic risk."
+    if tags & {"legal-scope", "legal_scope"}:
+        return profiles.get("legal-scope"), "Fallback selected legal-scope profile from semantic risk."
+    if tags & {"market-localization", "market_availability"}:
+        return profiles.get("market-localization"), "Fallback selected market-localization profile from semantic risk."
     if tags & {"hemodynamic", "complex-prose"} or "complex_prose" in block.get("risk_flags", []):
         return profiles.get("hemodynamic-prose"), (
             "Fallback selected hemodynamic prose profile from tags or complex_prose risk."
@@ -132,6 +153,8 @@ def choose_profile_fallback(block: dict, profiles: dict[str, dict[str, object]])
 
 
 def is_high_risk(block: dict, pack: dict) -> bool:
+    if block.get("semantic_risk_level") == "high":
+        return True
     if block.get("adjudication_candidate"):
         return True
     if block.get("block_type") in {"algorithm", "legal_localization", "chart"}:
@@ -170,6 +193,9 @@ def build_pack(slug: str) -> dict[str, object]:
                 "draft_mode": block.get("draft_mode"),
                 "tags": block.get("tags", []),
                 "risk_flags": block.get("risk_flags", []),
+                "semantic_risk_level": block.get("semantic_risk_level", ""),
+                "semantic_risk_reasons": block.get("semantic_risk_reasons", []),
+                "required_authority_basis": block.get("required_authority_basis", ""),
                 "profile_id": profile["profile_id"],
                 "selection_mode": selection_mode,
                 "selection_reason": selection_reason,
@@ -179,6 +205,8 @@ def build_pack(slug: str) -> dict[str, object]:
                 "decision_criteria": profile["decision_criteria"],
                 "relevant_style_hotspots": relevant_hotspots(block, pack),
                 "matched_localization_overrides": matched_overrides,
+                "matched_claim_ids": block.get("matched_claim_ids", []),
+                "structured_block_policy": block.get("structured_block_policy"),
             }
         )
 

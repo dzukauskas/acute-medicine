@@ -6,7 +6,24 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-from book_workflow_support import activate_book_root, chapter_number_from_slug, read_tsv, require_book_root, resolve_chapter_slug
+from book_workflow_support import (
+    activate_book_root,
+    chapter_number_from_slug,
+    load_review_taxonomy_rows,
+    read_tsv,
+    require_book_root,
+    resolve_chapter_slug,
+    review_taxonomy_path,
+)
+
+
+PROMOTION_TARGET_ALIASES = {
+    "termbase.tsv": "shared/lexicon/termbase.tsv",
+    "acronyms.tsv": "shared/lexicon/acronyms.tsv",
+    "gold_phrases.tsv": "shared/prose/gold_phrases.tsv",
+    "calque_patterns.tsv": "shared/prose/calque_patterns.tsv",
+    "localization_overrides.tsv": "shared/localization/localization_overrides.tsv",
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -53,9 +70,11 @@ def render_localization_override(row: dict[str, str], slug: str) -> str:
         replacement_mode = "genericize"
     elif defect_class == "jurisdiction_drift":
         replacement_mode = "original_context_callout"
+    elif defect_class == "dose_drift":
+        replacement_mode = "replace_lt"
     return (
         f"{row['bad_form']}\tmixed-anglosphere\t{replacement_mode}\t{row['fixed_form']}\t\t{chapter_number}\t"
-        f"{row['notes']}\t{review_delta_path(slug)}\tgenerated candidate"
+        f"{row['notes']}\t{review_delta_path(slug)}\tgenerated from defect_class={defect_class or 'unknown'}"
     )
 
 
@@ -71,16 +90,23 @@ def render_regression_example(row: dict[str, str], slug: str) -> str:
     return json.dumps(payload, ensure_ascii=False)
 
 
+def normalize_promotion_target(target: str) -> str:
+    cleaned = target.strip()
+    if not cleaned:
+        return ""
+    return PROMOTION_TARGET_ALIASES.get(cleaned, cleaned)
+
+
 def resolved_target(row: dict[str, str], taxonomy: dict[str, dict[str, str]]) -> str:
     explicit_target = row.get("promote_target", "").strip()
     if explicit_target:
-        return explicit_target
+        return normalize_promotion_target(explicit_target)
 
     defect_class = row.get("defect_class", "").strip()
     taxon = taxonomy.get(defect_class)
     default_target = (taxon or {}).get("default_promote_target", "").strip()
     if default_target:
-        return default_target
+        return normalize_promotion_target(default_target)
 
     return "manual-review"
 
@@ -93,8 +119,7 @@ def main() -> int:
     if not delta_path.exists():
         raise SystemExit(f"Nerastas review delta failas: {delta_path}")
 
-    taxonomy_path = require_book_root() / "review_taxonomy.tsv"
-    taxonomy = {row["defect_class"]: row for row in read_tsv(taxonomy_path)}
+    taxonomy = {row["defect_class"]: row for row in load_review_taxonomy_rows()}
     deltas = read_tsv(delta_path)
     grouped: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in deltas:
@@ -104,6 +129,7 @@ def main() -> int:
         f"# Promotion candidates for {slug}",
         "",
         f"- Review delta: `{delta_path}`",
+        f"- Taxonomy: `{review_taxonomy_path()}`",
         "",
         "## Taxonomy summary",
     ]
@@ -115,9 +141,9 @@ def main() -> int:
         )
 
     renderers = {
-        "gold_phrases.tsv": render_gold_phrase,
-        "calque_patterns.tsv": render_calque_pattern,
-        "localization_overrides.tsv": render_localization_override,
+        "shared/prose/gold_phrases.tsv": render_gold_phrase,
+        "shared/prose/calque_patterns.tsv": render_calque_pattern,
+        "shared/localization/localization_overrides.tsv": render_localization_override,
         "regression_examples": render_regression_example,
     }
 

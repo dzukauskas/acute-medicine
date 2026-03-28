@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 
 from book_workflow_support import (
+    CLINICAL_CLAIM_TYPES,
     activate_book_root,
     chapter_number_from_slug,
     chapter_paths_for_slug,
@@ -14,17 +15,23 @@ from book_workflow_support import (
     extract_inventory,
     extract_localization_research,
     jurisdiction_to_pack_context,
+    load_acronym_rows,
+    load_gold_phrase_rows,
+    load_gold_section_examples,
     load_localization_overrides,
+    load_termbase_rows,
     metadata_value,
     normalize_authority_basis,
+    normalize_claim_type,
     normalize_key,
     parse_markdown_sections,
     parse_structured_label,
-    read_tsv,
-    require_book_root,
     resolve_chapter_slug,
     scope_allows,
     slugify,
+    structured_block_id,
+    structured_block_type,
+    structured_completion_hint,
     split_multi,
 )
 from validate_chapter_inventory import validate_chapter_inventory_or_raise
@@ -62,6 +69,17 @@ COMPLEX_PROSE_KEYWORDS = {
     "fluid",
     "echocardiography",
     "hemodynamic",
+}
+HIGH_RISK_REASON_BY_CLAIM_TYPE = {
+    "dose": "dose-claim",
+    "route": "dose-claim",
+    "concentration": "dose-claim",
+    "indication": "drug-selection",
+    "contraindication": "drug-selection",
+    "algorithm_step": "algorithm-step",
+    "monitoring": "algorithm-step",
+    "legal_scope": "legal-scope",
+    "market_availability": "market-localization",
 }
 
 TAG_KEYWORDS = {
@@ -145,18 +163,6 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def book_paths() -> dict[str, Path]:
-    book_root = require_book_root()
-    return {
-        "book_root": book_root,
-        "termbase": book_root / "termbase.tsv",
-        "acronyms": book_root / "acronyms.tsv",
-        "gold_phrases": book_root / "gold_phrases.tsv",
-        "gold_sections_index": book_root / "gold_sections" / "index.tsv",
-        "localization_overrides": book_root / "localization_overrides.tsv",
-    }
-
-
 def load_chapter_context(slug: str) -> dict[str, object]:
     paths = chapter_paths_for_slug(slug)
     source_text = paths["source"].read_text(encoding="utf-8")
@@ -224,7 +230,7 @@ def select_active_terms(slug: str, inventory: dict[str, list[str]], source_text:
     risky_norms = {normalize_key(item) for item in inventory["risky_terms"]}
     source_blob = normalize_key("\n".join([source_text, research_text]))
     rows = []
-    for row in read_tsv(book_paths()["termbase"]):
+    for row in load_termbase_rows():
         if not scope_allows(row.get("section_scope", "all"), chapter_number):
             continue
         en_norm = normalize_key(row["en"])
@@ -248,7 +254,7 @@ def select_active_acronyms(slug: str, source_text: str, research_text: str) -> l
     chapter_number = chapter_scope_number(slug)
     blob = f"{source_text}\n{research_text}"
     rows = []
-    for row in read_tsv(book_paths()["acronyms"]):
+    for row in load_acronym_rows():
         acronym = row["acronym"]
         if acronym not in blob and row["lt"] not in blob and row["en"] not in blob:
             continue
@@ -273,7 +279,7 @@ def select_localization_overrides(slug: str, source_text: str, research_text: st
     chapter_number = chapter_scope_number(slug)
     blob = normalize_key(f"{source_text}\n{research_text}")
     rows = []
-    for row in load_localization_overrides(book_paths()["localization_overrides"]):
+    for row in load_localization_overrides():
         if not scope_allows(row.get("scope", "all"), chapter_number):
             continue
         if normalize_key(row["source_term"]) not in blob:
@@ -282,38 +288,9 @@ def select_localization_overrides(slug: str, source_text: str, research_text: st
     return rows
 
 
-def load_gold_section_examples() -> list[dict[str, object]]:
-    paths = book_paths()
-    if not paths["gold_sections_index"].exists():
-        return []
-
-    rows: list[dict[str, object]] = []
-    for row in read_tsv(paths["gold_sections_index"]):
-        relative_path = row.get("path", "")
-        if not relative_path:
-            continue
-        example_path = paths["book_root"] / relative_path
-        if not example_path.exists():
-            continue
-        rows.append(
-            {
-                "kind": "section",
-                "example_id": row["example_id"],
-                "source_chapter": row["source_chapter"],
-                "block_id": row["block_id"],
-                "block_type": row["block_type"],
-                "tags": split_multi(row.get("tags", "")),
-                "text": example_path.read_text(encoding="utf-8").strip(),
-                "notes": row.get("notes", ""),
-                "path": row["path"],
-            }
-        )
-    return rows
-
-
-def load_gold_phrase_examples() -> list[dict[str, object]]:
+def phrase_examples() -> list[dict[str, object]]:
     examples: list[dict[str, object]] = []
-    for row in read_tsv(book_paths()["gold_phrases"]):
+    for row in load_gold_phrase_rows():
         tags = detect_tags(f"{row['bad_en_shaped_lt']} {row['preferred_lt']}", "narrative", [])
         examples.append(
             {
@@ -336,7 +313,7 @@ def select_gold_examples(slug: str, blocks: list[dict[str, object]]) -> list[dic
     chapter_block_types = {block.get("block_type", "") for block in blocks}
 
     gold_examples: list[dict[str, object]] = []
-    gold_examples.extend(load_gold_phrase_examples())
+    gold_examples.extend(phrase_examples())
 
     scored_sections: list[tuple[int, dict[str, object]]] = []
     for example in load_gold_section_examples():
@@ -408,32 +385,9 @@ def extract_source_excerpt(source_text: str, anchor: str, *, window: int = 8) ->
     return "\n".join(excerpt_lines).strip()
 
 
-def completion_hint_for(kind: str, label: str, title: str) -> str:
-    if kind == "table":
-        return f"{label} lentelė"
-    if kind == "figure":
-        return f"{label} paveikslas"
-    if kind == "box":
-        return f"{label} rėmelis"
-    if kind == "chart" and "news2" in normalize_key(title):
-        return "NEWS2 originalo kontekste"
-    if kind == "chart":
-        return f"{label} diagrama"
-    return title
-
-
 def make_structured_block(kind: str, label: str, title: str, source_anchor: str, source_text: str) -> dict[str, object]:
     normalized_title = normalize_key(title)
-    if kind == "table":
-        block_type = "table"
-    elif kind == "figure":
-        block_type = "algorithm" if any(word in normalized_title for word in {"algorithm", "approach", "management"}) else "figure_caption"
-    elif kind == "box":
-        block_type = "callout"
-    elif kind == "chart":
-        block_type = "chart"
-    else:
-        block_type = "figure_caption"
+    block_type = structured_block_type(kind, title)
 
     risk_flags: list[str] = ["structured_content"]
     if any(keyword in normalized_title for keyword in LOCALIZATION_KEYWORDS):
@@ -444,7 +398,7 @@ def make_structured_block(kind: str, label: str, title: str, source_anchor: str,
     tags = detect_tags(title, block_type, risk_flags)
     source_excerpt = extract_source_excerpt(source_text, source_anchor or title)
     return {
-        "block_id": f"{block_type}-{label}-{slugify(title)}" if label else f"{block_type}-{slugify(title)}",
+        "block_id": structured_block_id(kind, label, title),
         "block_type": block_type,
         "heading": title,
         "source_anchor": source_anchor,
@@ -454,7 +408,7 @@ def make_structured_block(kind: str, label: str, title: str, source_anchor: str,
         "tags": tags,
         "draft_mode": BLOCK_TYPE_TO_MODE[block_type],
         "adjudication_candidate": is_adjudication_candidate(block_type, risk_flags, tags),
-        "completion_hint": completion_hint_for(kind, label, title),
+        "completion_hint": structured_completion_hint(kind, label, title),
         "summary_allowed": kind == "chart",
     }
 
@@ -533,6 +487,83 @@ def infer_authority_basis_from_action(action: str) -> str:
     return "LT"
 
 
+def claim_matches_block(claim: dict[str, str], block: dict[str, object]) -> bool:
+    source_anchor = normalize_key(claim.get("source_anchor", ""))
+    if not source_anchor:
+        return False
+    haystacks = [
+        normalize_key(str(block.get("heading", ""))),
+        normalize_key(str(block.get("source_anchor", ""))),
+        normalize_key(str(block.get("source_excerpt", ""))),
+    ]
+    return any(source_anchor in haystack or haystack in source_anchor for haystack in haystacks if haystack)
+
+
+def matching_claims_for_block(claims: list[dict[str, str]], block: dict[str, object]) -> list[dict[str, str]]:
+    matched = [claim for claim in claims if claim_matches_block(claim, block)]
+    matched.sort(key=lambda row: (row.get("claim_type", ""), row.get("claim_id", "")))
+    return matched
+
+
+def matching_structured_policy_for_block(
+    policies: list[dict[str, str]],
+    block: dict[str, object],
+) -> dict[str, str] | None:
+    block_id = str(block.get("block_id", "")).strip()
+    for row in policies:
+        if row.get("block_id", "").strip() == block_id:
+            return row
+    return None
+
+
+def semantic_risk_reason_set(
+    block: dict[str, object],
+    matched_claims: list[dict[str, str]],
+) -> list[str]:
+    reasons: set[str] = set()
+    for claim in matched_claims:
+        claim_type = normalize_claim_type(claim.get("claim_type", ""))
+        if claim_type in HIGH_RISK_REASON_BY_CLAIM_TYPE:
+            reasons.add(HIGH_RISK_REASON_BY_CLAIM_TYPE[claim_type])
+
+    block_type = block.get("block_type", "")
+    tags = set(block.get("tags", []))
+    if block_type == "algorithm":
+        reasons.add("algorithm-step")
+    if block_type == "legal_localization" or tags & {"legal-localization"}:
+        reasons.add("legal-scope")
+    if block.get("localization_action") in {"genericize", "omit_nontransferable"}:
+        reasons.add("market-localization")
+    return sorted(reasons)
+
+
+def semantic_risk_level_for(block: dict[str, object], reasons: list[str]) -> str:
+    if reasons or block.get("block_type") in {"algorithm", "legal_localization", "chart"}:
+        return "high"
+    tags = set(block.get("tags", []))
+    risk_flags = set(block.get("risk_flags", []))
+    if tags & {"hemodynamic", "monitoring", "uk-localization", "legal-localization"} or risk_flags & {
+        "complex_prose",
+        "algorithmic_narrative",
+    }:
+        return "medium"
+    return "low"
+
+
+def required_authority_basis_for(
+    block: dict[str, object],
+    matched_claims: list[dict[str, str]],
+) -> str:
+    final_renderings = {claim.get("final_rendering", "").strip() for claim in matched_claims}
+    if "keep_lt_normative" in final_renderings:
+        return "LT"
+    if "keep_eu_normative" in final_renderings:
+        return "EU"
+    if final_renderings & {"original_context_callout", "omit"}:
+        return "original-context-only"
+    return str(block.get("authority_basis", "") or "LT")
+
+
 def annotate_block_localization(
     block: dict[str, object],
     localization_research: dict[str, object],
@@ -608,6 +639,62 @@ def annotate_block_localization(
     }
 
 
+def annotate_block_semantics(
+    block: dict[str, object],
+    localization_research: dict[str, object],
+) -> dict[str, object]:
+    matched_claims = matching_claims_for_block(localization_research["claims"], block)
+    structured_policy = matching_structured_policy_for_block(
+        localization_research["structured_block_policies"], block
+    )
+
+    if block.get("block_type") in {"table", "algorithm", "figure_caption", "callout", "chart"} and structured_policy is None:
+        raise ValueError(
+            f"Blokui `{block.get('block_id', 'unknown')}` trūksta eilutės "
+            "`## Struktūrinių blokų lokalizacijos sprendimai` lentelėje."
+        )
+
+    if structured_policy:
+        lt_strategy = structured_policy.get("lt_strategy", "").strip()
+        authority_source = structured_policy.get("authority_source", "").strip()
+        if block.get("block_type") == "algorithm" and not authority_source:
+            raise ValueError(
+                f"Algorithm block `{block.get('block_id', 'unknown')}` privalo turėti `authority_source` "
+                "sekcijoje `## Struktūrinių blokų lokalizacijos sprendimai`."
+            )
+        if block.get("block_type") == "table" and matched_claims and not authority_source:
+            raise ValueError(
+                f"Norminį klinikinį turinį turinti lentelė `{block.get('block_id', 'unknown')}` "
+                "negali būti palikta be `authority_source`."
+            )
+        if lt_strategy == "original_context_callout" and structured_policy.get("original_context_allowed", "").strip().lower() not in {
+            "yes",
+            "true",
+            "taip",
+            "1",
+        }:
+            raise ValueError(
+                f"Block `{block.get('block_id', 'unknown')}` su `original_context_callout` privalo turėti "
+                "`original_context_allowed = yes`."
+            )
+
+    semantic_risk_reasons = semantic_risk_reason_set(block, matched_claims)
+    semantic_risk_level = semantic_risk_level_for(block, semantic_risk_reasons)
+    required_authority_basis = required_authority_basis_for(block, matched_claims)
+
+    return {
+        "matched_claim_ids": [row.get("claim_id", "") for row in matched_claims if row.get("claim_id", "").strip()],
+        "matched_claim_types": sorted(
+            {row.get("claim_type", "") for row in matched_claims if row.get("claim_type", "").strip()}
+        ),
+        "semantic_risk_level": semantic_risk_level,
+        "semantic_risk_reasons": semantic_risk_reasons,
+        "required_authority_basis": required_authority_basis,
+        "structured_block_policy": structured_policy,
+        "adjudication_candidate": bool(block.get("adjudication_candidate")) or semantic_risk_level == "high",
+    }
+
+
 def enrich_blocks_with_localization(
     blocks: list[dict[str, object]],
     localization_research: dict[str, object],
@@ -617,6 +704,7 @@ def enrich_blocks_with_localization(
     for block in blocks:
         enriched_block = dict(block)
         enriched_block.update(annotate_block_localization(enriched_block, localization_research, overrides))
+        enriched_block.update(annotate_block_semantics(enriched_block, localization_research))
         enriched.append(enriched_block)
     return enriched
 
@@ -627,6 +715,23 @@ def infer_chapter_title(slug: str, lt_text: str, source_text: str) -> str:
         if first_line.startswith("# "):
             return first_line[2:].strip()
     return slug.split("-", 1)[1].replace("-", " ").title()
+
+
+def attach_claim_block_matches(
+    claims: list[dict[str, str]],
+    blocks: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    enriched_claims: list[dict[str, object]] = []
+    for claim in claims:
+        matched_block_ids = [
+            str(block.get("block_id", ""))
+            for block in blocks
+            if claim_matches_block(claim, block)
+        ]
+        enriched_claim = dict(claim)
+        enriched_claim["matched_block_ids"] = matched_block_ids
+        enriched_claims.append(enriched_claim)
+    return enriched_claims
 
 
 def main() -> int:
@@ -651,6 +756,26 @@ def main() -> int:
         )
     except ValueError as exc:
         raise SystemExit(str(exc))
+    clinical_claims = attach_claim_block_matches(localization_research["claims"], blocks)
+    unmatched_claims = [claim["claim_id"] for claim in clinical_claims if claim.get("claim_id") and not claim.get("matched_block_ids")]
+    if unmatched_claims:
+        raise SystemExit(
+            "Nepavyko claim-level įrašų susieti su chapter_pack blokais: "
+            + ", ".join(unmatched_claims)
+            + ". Patikrinkite `source_anchor` reikšmes `## Norminių teiginių matrica`."
+        )
+    block_ids = {str(block.get("block_id", "")) for block in blocks}
+    unknown_structured_policies = [
+        row.get("block_id", "")
+        for row in localization_research["structured_block_policies"]
+        if row.get("block_id", "").strip() and row.get("block_id", "").strip() not in block_ids
+    ]
+    if unknown_structured_policies:
+        raise SystemExit(
+            "Struktūrinių blokų lokalizacijos sprendimuose rasti nežinomi `block_id`: "
+            + ", ".join(unknown_structured_policies)
+            + "."
+        )
     data = {
         "chapter_slug": slug,
         "chapter_title": infer_chapter_title(slug, context["lt_text"], context["source_text"]),
@@ -658,6 +783,8 @@ def main() -> int:
         "source_md": context["source_md"],
         "lt_target_md": context["lt_target_md"],
         "blocks": blocks,
+        "clinical_claims": clinical_claims,
+        "structured_block_policies": localization_research["structured_block_policies"],
         "active_terms": select_active_terms(slug, inventory, context["source_text"], context["research_text"]),
         "active_acronyms": select_active_acronyms(slug, context["source_text"], context["research_text"]),
         "localization_overrides": overrides,

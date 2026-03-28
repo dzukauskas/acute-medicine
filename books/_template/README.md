@@ -25,11 +25,16 @@
 - `language-style.md`: LT medicininės prozos, tipografijos ir anglų terminų rodymo taisyklės.
 - `translation-style.md`: vertimo ir anti-calque disciplina.
 - `drafting-scaffold.md`: minimali drafting seka, kai aktyvus `chapter_pack`.
-- `termbase.tsv`, `acronyms.tsv`, `gold_phrases.tsv`, `gold_sections/`, `localization_overrides.tsv`: reusable taisyklių sluoksniai.
-- `lt_source_map.tsv`: kanoninis LT-source branduolio žemėlapis pagal temas.
-- `localization_signals.base.tsv`: shared UK / Australia / US / rinkos signalų registry.
-- `localization_signals.tsv`: knygos papildomi signalai, jei shared registry nepakanka.
-- `clinical_policy_markers.tsv`: norminio vaistų turinio detektoriaus markeriai.
+- `termbase.local.tsv`, `acronyms.local.tsv`, `gold_phrases.local.tsv`, `calque_patterns.local.tsv`, `disallowed_terms.local.tsv`, `disallowed_phrases.local.tsv`, `localization_overrides.local.tsv`, `localization_signals.local.tsv`, `adjudication_profiles.local.tsv`: optional book-local override stub'ai.
+- `gold_sections/`: optional local pozityvių pavyzdžių sluoksnis.
+
+Repo-global aktyvios taisyklės laikomos `shared/` kataloge:
+
+- `shared/lexicon/`: termbase ir akronimai.
+- `shared/prose/`: gold phrase, calque ir disallowed taisyklės.
+- `shared/localization/`: localization override'ai, signalai, clinical marker'iai ir `lt_source_map`.
+- `shared/review/`: review taxonomy ir adjudication profiliai.
+- `shared/examples/gold_sections/`: bendri pozityvūs skyrių pavyzdžiai.
 
 ## Taisyklė
 
@@ -45,7 +50,20 @@ Pagrindinis LT tekstas yra skirtas Lietuvos medicinos studijoms ir praktikai, to
 
 Jei kyla abejonių dėl LT termino, kolokacijos ar klinikinės kategorijos pavadinimo, prieš pasirenkant formuluotę privaloma patikrinti Lietuvos medicininę vartoseną internete ir tą patikrą užfiksuoti `research` faile.
 
-Prieš pildydami `research` failą, naudokite `lt_source_map.tsv` ir `source-priority.md`, kad iškart pasirinktumėte teisingą LT-source kelią pagal temą: paramediko kompetencija, GMP, farmakologija, vaistų registracija, kompensavimas, infekcijos, specialybinės rekomendacijos, terminija ar fundamentiniai mokslai.
+Prieš pildydami `research` failą, naudokite `shared/localization/lt_source_map.tsv` ir `source-priority.md`, kad iškart pasirinktumėte teisingą LT-source kelią pagal temą: paramediko kompetencija, GMP, farmakologija, vaistų registracija, kompensavimas, infekcijos, specialybinės rekomendacijos, terminija ar fundamentiniai mokslai.
+
+Prieš pildydami realų `research/<slug>.md`, galite sugeneruoti pagalbinį checklist failą:
+
+- `MEDBOOK_ROOT=books/{{BOOK_SLUG}} python3 scripts/generate_research_checklist.py 001`
+
+Jis sukuria `research/<slug>.checklist.md` su:
+
+- preliminaria norminių claim tipų matrica;
+- preliminaria struktūrinių blokų lokalizacijos lentele;
+- rekomenduojamais LT-source keliais pagal `shared/localization/lt_source_map.tsv`;
+- aptiktais UK / Australia / US / rinkos signalais iš source skyriaus.
+
+Review metu pasikartojančios taisyklės pirmiausia fiksuojamos `review_deltas/` ar book-local override sluoksnyje, o į `shared/` keliamos tik per review-gated promotion.
 
 Diagramoms ir algoritmams šiame projekte naudojamas tik `Whimsical` workflow. Jei vartotojas nurodo konkretų įrankį, jo negalima savavališkai pakeisti kitu.
 

@@ -1,0 +1,4 @@
+match_type	banned	preferred	reason
+phrase	eskaluoti pagalbą	kviesti papildomą pagalbą	Angliško `escalate care/help` kalkė; lietuviškai rinktis konkretų veiksmą.
+phrase	pacientas reikalauja	pacientui reikia	Angliško `patient requires` kalkė.
+phrase	sekti paciento būklę	stebėti paciento būklę	Kalbant apie klinikinę stebėseną, lietuviškai teikti pirmenybę `stebėti`, ne `sekti`.

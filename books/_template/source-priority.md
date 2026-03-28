@@ -11,11 +11,22 @@ Greita taisyklė:
 
 ## LT-source branduolio žemėlapis
 
-Repo template failas:
+Repo-global failas:
 
-- `lt_source_map.tsv`
+- `shared/localization/lt_source_map.tsv`
 
 Kiekviename `research/<slug>.md` faile turi būti aiškiai užrašyta, kuriuo šio žemėlapio keliu buvo remtasi.
+
+Praktinis pirmas žingsnis prieš pildant research:
+
+- paleisti `python3 scripts/generate_research_checklist.py --book-root books/<slug> <chapter>`
+
+Checklist failas nepriima sprendimų už žmogų, bet automatiškai surenka:
+
+- aptiktus jurisdikcinius signalus;
+- preliminarius norminių claim tipų kandidatus;
+- struktūrinių blokų `block_id`;
+- rekomenduojamus LT-source kelius pagal šį žemėlapį.
 
 ### 1. Paramediko kompetencija ir GMP
 

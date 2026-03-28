@@ -8,7 +8,7 @@ import re
 import sys
 import tomllib
 from pathlib import Path
-from typing import Iterable
+from typing import Callable, Iterable
 
 import yaml
 
@@ -16,6 +16,25 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parents[1]
 BOOK_ROOT_ENV_VAR = "MEDBOOK_ROOT"
 REPO_CONFIG_PATH = REPO_ROOT / "repo_config.toml"
+SHARED_ROOT = REPO_ROOT / "shared"
+SHARED_LEXICON_DIR = SHARED_ROOT / "lexicon"
+SHARED_PROSE_DIR = SHARED_ROOT / "prose"
+SHARED_LOCALIZATION_DIR = SHARED_ROOT / "localization"
+SHARED_REVIEW_DIR = SHARED_ROOT / "review"
+SHARED_EXAMPLES_DIR = SHARED_ROOT / "examples"
+SHARED_GOLD_SECTIONS_DIR = SHARED_EXAMPLES_DIR / "gold_sections"
+
+BOOK_LOCAL_OVERRIDE_FILENAMES = {
+    "termbase": "termbase.local.tsv",
+    "acronyms": "acronyms.local.tsv",
+    "gold_phrases": "gold_phrases.local.tsv",
+    "calque_patterns": "calque_patterns.local.tsv",
+    "disallowed_terms": "disallowed_terms.local.tsv",
+    "disallowed_phrases": "disallowed_phrases.local.tsv",
+    "localization_overrides": "localization_overrides.local.tsv",
+    "localization_signals": "localization_signals.local.tsv",
+    "adjudication_profiles": "adjudication_profiles.local.tsv",
+}
 
 MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 INLINE_CODE_RE = re.compile(r"`([^`]*)`")
@@ -40,6 +59,48 @@ LOCALIZATION_REPLACEMENT_MODES = {
     "genericize",
     "original_context_callout",
     "omit_nontransferable",
+}
+CLINICAL_CLAIM_TYPES = {
+    "dose",
+    "indication",
+    "contraindication",
+    "route",
+    "concentration",
+    "algorithm_step",
+    "monitoring",
+    "legal_scope",
+    "market_availability",
+}
+CLAIM_FINAL_RENDERINGS = {
+    "keep_lt_normative",
+    "keep_eu_normative",
+    "original_context_callout",
+    "omit",
+}
+STRUCTURED_BLOCK_STRATEGIES = {
+    "rewrite_lt",
+    "compress_lt",
+    "recreate_figure",
+    "original_context_callout",
+    "omit",
+}
+AUDIT_STATUSES = {"ok", "sutvarkyta", "eskaluoti"}
+MANUAL_AUDIT_AREAS = (
+    "terminija",
+    "kolokacijos",
+    "gramatika",
+    "semantika",
+    "norminė logika",
+    "atviros abejonės",
+)
+STRUCTURED_ALGORITHM_KEYWORDS = {"algorithm", "approach", "management"}
+CLINICAL_CLAIM_TYPE_ALIASES = {
+    "market availability": "market_availability",
+    "market_availability": "market_availability",
+    "legal scope": "legal_scope",
+    "legal_scope": "legal_scope",
+    "algorithm step": "algorithm_step",
+    "algorithm_step": "algorithm_step",
 }
 LOCALIZATION_SIGNAL_MATCH_MODES = {"literal", "regex"}
 CLINICAL_POLICY_MARKER_MATCH_MODES = {"literal", "regex"}
@@ -141,6 +202,27 @@ def parse_bool(value: str, default: bool = False) -> bool:
     return cleaned in {"1", "true", "yes", "y", "taip"}
 
 
+def normalize_claim_type(value: str) -> str:
+    cleaned = normalize_key(value).replace(" ", "_")
+    cleaned = CLINICAL_CLAIM_TYPE_ALIASES.get(cleaned, cleaned)
+    return cleaned if cleaned in CLINICAL_CLAIM_TYPES else ""
+
+
+def normalize_claim_final_rendering(value: str) -> str:
+    cleaned = normalize_key(value).replace(" ", "_")
+    return cleaned if cleaned in CLAIM_FINAL_RENDERINGS else ""
+
+
+def normalize_structured_block_strategy(value: str) -> str:
+    cleaned = normalize_key(value).replace(" ", "_")
+    return cleaned if cleaned in STRUCTURED_BLOCK_STRATEGIES else ""
+
+
+def normalize_audit_status(value: str) -> str:
+    cleaned = normalize_key(value)
+    return cleaned if cleaned in AUDIT_STATUSES else ""
+
+
 def strip_markdown(text: str) -> str:
     text = INLINE_CODE_RE.sub(r"\1", text)
     text = MARKDOWN_LINK_RE.sub(r"\1", text)
@@ -164,6 +246,215 @@ def slugify(text: str) -> str:
 
 def require_book_root(raw: str | Path | None = None) -> Path:
     return resolve_book_root(raw, required=True)
+
+
+def shared_rule_path(*parts: str) -> Path:
+    return SHARED_ROOT.joinpath(*parts)
+
+
+def optional_book_root(raw: str | Path | None = None) -> Path | None:
+    return resolve_book_root(raw, required=False)
+
+
+def book_local_override_path(kind: str, book_root: str | Path | None = None) -> Path | None:
+    filename = BOOK_LOCAL_OVERRIDE_FILENAMES.get(kind)
+    if not filename:
+        raise KeyError(f"Nežinomas local override tipas: {kind}")
+    active_book_root = optional_book_root(book_root)
+    if active_book_root is None:
+        return None
+    return active_book_root / filename
+
+
+def termbase_paths(book_root: str | Path | None = None) -> list[Path]:
+    paths: list[Path] = [shared_rule_path("lexicon", "termbase.tsv")]
+    local_path = book_local_override_path("termbase", book_root)
+    if local_path is not None:
+        paths.append(local_path)
+    return paths
+
+
+def acronym_paths(book_root: str | Path | None = None) -> list[Path]:
+    paths: list[Path] = [shared_rule_path("lexicon", "acronyms.tsv")]
+    local_path = book_local_override_path("acronyms", book_root)
+    if local_path is not None:
+        paths.append(local_path)
+    return paths
+
+
+def gold_phrase_paths(book_root: str | Path | None = None) -> list[Path]:
+    paths: list[Path] = [shared_rule_path("prose", "gold_phrases.tsv")]
+    local_path = book_local_override_path("gold_phrases", book_root)
+    if local_path is not None:
+        paths.append(local_path)
+    return paths
+
+
+def calque_pattern_paths(book_root: str | Path | None = None) -> list[Path]:
+    paths: list[Path] = [shared_rule_path("prose", "calque_patterns.tsv")]
+    local_path = book_local_override_path("calque_patterns", book_root)
+    if local_path is not None:
+        paths.append(local_path)
+    return paths
+
+
+def disallowed_term_paths(book_root: str | Path | None = None) -> list[Path]:
+    paths: list[Path] = [shared_rule_path("prose", "disallowed_terms.tsv")]
+    local_path = book_local_override_path("disallowed_terms", book_root)
+    if local_path is not None:
+        paths.append(local_path)
+    return paths
+
+
+def disallowed_phrase_paths(book_root: str | Path | None = None) -> list[Path]:
+    paths: list[Path] = [shared_rule_path("prose", "disallowed_phrases.tsv")]
+    local_path = book_local_override_path("disallowed_phrases", book_root)
+    if local_path is not None:
+        paths.append(local_path)
+    return paths
+
+
+def localization_override_paths(book_root: str | Path | None = None) -> list[Path]:
+    paths: list[Path] = [shared_rule_path("localization", "localization_overrides.tsv")]
+    local_path = book_local_override_path("localization_overrides", book_root)
+    if local_path is not None:
+        paths.append(local_path)
+    return paths
+
+
+def localization_signal_registry_paths(book_root: str | Path | None = None) -> list[Path]:
+    paths: list[Path] = [shared_rule_path("localization", "localization_signals.base.tsv")]
+    local_path = book_local_override_path("localization_signals", book_root)
+    if local_path is not None:
+        paths.append(local_path)
+    return paths
+
+
+def adjudication_profile_paths(book_root: str | Path | None = None) -> list[Path]:
+    paths: list[Path] = [shared_rule_path("review", "adjudication_profiles.tsv")]
+    local_path = book_local_override_path("adjudication_profiles", book_root)
+    if local_path is not None:
+        paths.append(local_path)
+    return paths
+
+
+def review_taxonomy_path() -> Path:
+    return shared_rule_path("review", "review_taxonomy.tsv")
+
+
+def clinical_policy_markers_path() -> Path:
+    return shared_rule_path("localization", "clinical_policy_markers.tsv")
+
+
+def lt_source_map_path() -> Path:
+    return shared_rule_path("localization", "lt_source_map.tsv")
+
+
+def shared_gold_sections_dir() -> Path:
+    return SHARED_GOLD_SECTIONS_DIR
+
+
+def local_gold_sections_dir(book_root: str | Path | None = None) -> Path | None:
+    active_book_root = optional_book_root(book_root)
+    if active_book_root is None:
+        return None
+    return active_book_root / "gold_sections"
+
+
+def gold_section_index_sources(book_root: str | Path | None = None) -> list[tuple[Path, Path]]:
+    sources: list[tuple[Path, Path]] = [(shared_gold_sections_dir() / "index.tsv", shared_gold_sections_dir())]
+    local_dir = local_gold_sections_dir(book_root)
+    if local_dir is not None:
+        sources.append((local_dir / "index.tsv", local_dir))
+    return sources
+
+
+def require_tsv_rows(path: Path) -> list[dict[str, str]]:
+    if not path.exists():
+        raise SystemExit(f"Nerastas TSV failas: {path}")
+    return read_tsv(path)
+
+
+def optional_tsv_rows(path: Path | None) -> list[dict[str, str]]:
+    if path is None or not path.exists():
+        return []
+    return read_tsv(path)
+
+
+def normalize_tsv_row(row: dict[str, str]) -> dict[str, str]:
+    return {key: (value or "").strip() for key, value in row.items()}
+
+
+def normalize_rule_key(value: str) -> str:
+    return normalize_key(value)
+
+
+def normalize_row_signature(row: dict[str, str]) -> str:
+    return "\u241f".join(f"{key}={normalize_key(value)}" for key, value in row.items())
+
+
+def merge_keyed_rows(
+    paths: Iterable[Path | None],
+    key_field: str,
+    *,
+    row_normalizer: Callable[[dict[str, str]], dict[str, str]] | None = None,
+    key_normalizer: Callable[[str], str] = normalize_rule_key,
+) -> list[dict[str, str]]:
+    rows_by_key: dict[str, dict[str, str]] = {}
+    order: list[str] = []
+
+    for index, path in enumerate(paths):
+        rows = require_tsv_rows(path) if index == 0 and path is not None else optional_tsv_rows(path)
+        for raw_row in rows:
+            row = row_normalizer(raw_row) if row_normalizer else normalize_tsv_row(raw_row)
+            key_value = row.get(key_field, "").strip()
+            if not key_value:
+                continue
+            key = key_normalizer(key_value)
+            if not key:
+                continue
+            if key not in order:
+                order.append(key)
+            rows_by_key[key] = row
+
+    return [rows_by_key[key] for key in order if key in rows_by_key]
+
+
+def merge_appended_rows(
+    paths: Iterable[Path | None],
+    *,
+    row_normalizer: Callable[[dict[str, str]], dict[str, str]] | None = None,
+    row_identity: Callable[[dict[str, str]], str] = normalize_row_signature,
+) -> list[dict[str, str]]:
+    merged_rows: list[dict[str, str]] = []
+    seen: set[str] = set()
+
+    for index, path in enumerate(paths):
+        rows = require_tsv_rows(path) if index == 0 and path is not None else optional_tsv_rows(path)
+        for raw_row in rows:
+            row = row_normalizer(raw_row) if row_normalizer else normalize_tsv_row(raw_row)
+            identity = row_identity(row)
+            if not identity or identity in seen:
+                continue
+            seen.add(identity)
+            merged_rows.append(row)
+
+    return merged_rows
+
+
+def resolve_indexed_text_path(source_root: Path, index_path: Path, relative_path: str) -> Path | None:
+    raw_path = relative_path.strip()
+    if not raw_path:
+        return None
+    candidates = [
+        source_root / raw_path,
+        index_path.parent / raw_path,
+        REPO_ROOT / raw_path,
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    return None
 
 
 def load_toml(path: Path) -> dict[str, object]:
@@ -388,6 +679,42 @@ def parse_structured_label(text: str) -> tuple[str, str]:
     return match.group(1).lower(), match.group(2)
 
 
+def structured_block_type(kind: str, title: str) -> str:
+    normalized_title = normalize_key(title)
+    if kind == "table":
+        return "table"
+    if kind == "figure":
+        if any(word in normalized_title for word in STRUCTURED_ALGORITHM_KEYWORDS):
+            return "algorithm"
+        return "figure_caption"
+    if kind == "box":
+        return "callout"
+    if kind == "chart":
+        return "chart"
+    return "figure_caption"
+
+
+def structured_block_id(kind: str, label: str, title: str) -> str:
+    block_type = structured_block_type(kind, title)
+    if label:
+        return f"{block_type}-{label}-{slugify(title)}"
+    return f"{block_type}-{slugify(title)}"
+
+
+def structured_completion_hint(kind: str, label: str, title: str) -> str:
+    if kind == "table":
+        return f"{label} lentelė"
+    if kind == "figure":
+        return f"{label} paveikslas"
+    if kind == "box":
+        return f"{label} rėmelis"
+    if kind == "chart" and "news2" in normalize_key(title):
+        return "NEWS2 originalo kontekste"
+    if kind == "chart":
+        return f"{label} diagrama"
+    return title
+
+
 def clean_inventory_items(items: list[str]) -> list[str]:
     cleaned: list[str] = []
     for item in items:
@@ -455,6 +782,30 @@ def term_matches(left: str, right: str) -> bool:
     return left_norm == right_norm or left_norm in right_norm or right_norm in left_norm
 
 
+def load_termbase_rows(book_root: str | Path | None = None) -> list[dict[str, str]]:
+    return merge_keyed_rows(termbase_paths(book_root), "en")
+
+
+def load_acronym_rows(book_root: str | Path | None = None) -> list[dict[str, str]]:
+    return merge_keyed_rows(acronym_paths(book_root), "acronym")
+
+
+def load_gold_phrase_rows(book_root: str | Path | None = None) -> list[dict[str, str]]:
+    return merge_appended_rows(gold_phrase_paths(book_root))
+
+
+def load_calque_pattern_rows(book_root: str | Path | None = None) -> list[dict[str, str]]:
+    return merge_appended_rows(calque_pattern_paths(book_root))
+
+
+def load_disallowed_term_rows(book_root: str | Path | None = None) -> list[dict[str, str]]:
+    return merge_appended_rows(disallowed_term_paths(book_root))
+
+
+def load_disallowed_phrase_rows(book_root: str | Path | None = None) -> list[dict[str, str]]:
+    return merge_appended_rows(disallowed_phrase_paths(book_root))
+
+
 def normalize_localization_override_row(row: dict[str, str]) -> dict[str, str]:
     replacement_mode = row.get("replacement_mode", "").strip() or "replace_lt"
     if replacement_mode not in LOCALIZATION_REPLACEMENT_MODES:
@@ -473,8 +824,18 @@ def normalize_localization_override_row(row: dict[str, str]) -> dict[str, str]:
     }
 
 
-def load_localization_overrides(path: Path) -> list[dict[str, str]]:
-    return [normalize_localization_override_row(row) for row in read_tsv(path)]
+def load_localization_overrides(
+    path: Path | None = None,
+    *,
+    book_root: str | Path | None = None,
+) -> list[dict[str, str]]:
+    if path is not None:
+        return [normalize_localization_override_row(row) for row in require_tsv_rows(path)]
+    return merge_keyed_rows(
+        localization_override_paths(book_root),
+        "source_term",
+        row_normalizer=normalize_localization_override_row,
+    )
 
 
 def normalize_localization_signal_row(row: dict[str, str]) -> dict[str, str]:
@@ -493,32 +854,12 @@ def normalize_localization_signal_row(row: dict[str, str]) -> dict[str, str]:
     }
 
 
-def localization_signal_registry_paths(book_root: str | Path | None = None) -> list[Path]:
-    active_book_root = require_book_root(book_root)
-    return [
-        active_book_root / "localization_signals.base.tsv",
-        active_book_root / "localization_signals.tsv",
-    ]
-
-
 def load_localization_signal_specs(book_root: str | Path | None = None) -> list[dict[str, str]]:
-    rows_by_term: dict[str, dict[str, str]] = {}
-    order: list[str] = []
-    for path in localization_signal_registry_paths(book_root):
-        if not path.exists():
-            if path.name == "localization_signals.base.tsv":
-                raise SystemExit(f"Nerastas localization signal registry failas: {path}")
-            continue
-        for row in read_tsv(path):
-            normalized = normalize_localization_signal_row(row)
-            source_term = normalized.get("source_term", "")
-            if not source_term:
-                continue
-            key = normalize_key(source_term)
-            if key not in order:
-                order.append(key)
-            rows_by_term[key] = normalized
-    return [rows_by_term[key] for key in order if key in rows_by_term]
+    return merge_keyed_rows(
+        localization_signal_registry_paths(book_root),
+        "source_term",
+        row_normalizer=normalize_localization_signal_row,
+    )
 
 
 def localization_signal_matches(spec: dict[str, str], text: str) -> bool:
@@ -552,7 +893,7 @@ def detect_source_localization_signals(source_text: str, book_root: str | Path |
 
 
 def normalize_clinical_policy_marker_row(row: dict[str, str]) -> dict[str, str]:
-    topic = row.get("topic", "").strip()
+    topic = normalize_claim_type(row.get("topic", "").strip())
     match_mode = (row.get("match_mode", "") or "literal").strip().lower()
     if match_mode not in CLINICAL_POLICY_MARKER_MATCH_MODES:
         match_mode = "literal"
@@ -566,11 +907,60 @@ def normalize_clinical_policy_marker_row(row: dict[str, str]) -> dict[str, str]:
 
 
 def load_clinical_policy_markers(book_root: str | Path | None = None) -> list[dict[str, str]]:
-    active_book_root = require_book_root(book_root)
-    marker_path = active_book_root / "clinical_policy_markers.tsv"
-    if not marker_path.exists():
-        raise SystemExit(f"Nerastas clinical policy marker failas: {marker_path}")
-    return [normalize_clinical_policy_marker_row(row) for row in read_tsv(marker_path) if row.get("topic", "").strip()]
+    del book_root
+    return [
+        normalize_clinical_policy_marker_row(row)
+        for row in require_tsv_rows(clinical_policy_markers_path())
+        if row.get("topic", "").strip()
+    ]
+
+
+def load_lt_source_map(book_root: str | Path | None = None) -> list[dict[str, str]]:
+    del book_root
+    return require_tsv_rows(lt_source_map_path())
+
+
+def load_review_taxonomy_rows() -> list[dict[str, str]]:
+    return require_tsv_rows(review_taxonomy_path())
+
+
+def load_adjudication_profile_rows(book_root: str | Path | None = None) -> list[dict[str, str]]:
+    return merge_keyed_rows(adjudication_profile_paths(book_root), "profile_id")
+
+
+def load_gold_section_examples(book_root: str | Path | None = None) -> list[dict[str, object]]:
+    rows_by_id: dict[str, dict[str, object]] = {}
+    order: list[str] = []
+
+    for index, (index_path, source_root) in enumerate(gold_section_index_sources(book_root)):
+        rows = require_tsv_rows(index_path) if index == 0 else optional_tsv_rows(index_path)
+        for row in rows:
+            example_id = row.get("example_id", "").strip()
+            relative_path = row.get("path", "").strip()
+            if not example_id or not relative_path:
+                continue
+
+            example_path = resolve_indexed_text_path(source_root, index_path, relative_path)
+            if example_path is None:
+                continue
+
+            key = normalize_key(example_id)
+            if key not in order:
+                order.append(key)
+            rows_by_key_row = {
+                "kind": "section",
+                "example_id": example_id,
+                "source_chapter": row.get("source_chapter", "").strip(),
+                "block_id": row.get("block_id", "").strip(),
+                "block_type": row.get("block_type", "").strip(),
+                "tags": split_multi(row.get("tags", "")),
+                "text": example_path.read_text(encoding="utf-8").strip(),
+                "notes": row.get("notes", "").strip(),
+                "path": relative_path,
+            }
+            rows_by_id[key] = rows_by_key_row
+
+    return [rows_by_id[key] for key in order if key in rows_by_id]
 
 
 def clinical_policy_marker_matches(marker: dict[str, str], text: str) -> bool:
@@ -602,6 +992,9 @@ def extract_localization_research(sections: dict[tuple[str, ...], list[str]]) ->
     signal_rows = markdown_table_rows(find_section_lines(sections, "Jurisdikcijos ir rinkos signalai"))
     decision_rows = markdown_table_rows(find_section_lines(sections, "LT/EU pakeitimo sprendimai"))
     source_rows = markdown_table_rows(find_section_lines(sections, "Vaistų ir dozių LT/EU šaltinių bazė"))
+    claim_rows = markdown_table_rows(find_section_lines(sections, "Norminių teiginių matrica"))
+    structured_policy_rows = markdown_table_rows(find_section_lines(sections, "Struktūrinių blokų lokalizacijos sprendimai"))
+    manual_audit_rows = markdown_table_rows(find_section_lines(sections, "Finalus agento auditas"))
 
     return {
         "signals": [
@@ -629,7 +1022,7 @@ def extract_localization_research(sections: dict[tuple[str, ...], list[str]]) ->
         ],
         "authority_sources": [
             {
-                "topic": row.get("tema", "") or row.get("topic", ""),
+                "topic": normalize_claim_type(row.get("tema", "") or row.get("topic", "")),
                 "source": row.get("šaltinis", "") or row.get("saltinis", "") or row.get("source", ""),
                 "jurisdiction": row.get("jurisdikcija", "") or row.get("jurisdiction", ""),
                 "date": row.get("data_versija", "") or row.get("date_version", ""),
@@ -637,6 +1030,42 @@ def extract_localization_research(sections: dict[tuple[str, ...], list[str]]) ->
             }
             for row in source_rows
             if row.get("tema", "") or row.get("topic", "")
+        ],
+        "claims": [
+            {
+                "claim_id": row.get("claim_id", "") or row.get("teiginio_id", ""),
+                "claim_type": normalize_claim_type(row.get("claim_type", "") or row.get("teiginio_tipas", "")),
+                "source_anchor": row.get("source_anchor", "") or row.get("šaltinio_vieta", "") or row.get("saltinio_vieta", ""),
+                "final_rendering": normalize_claim_final_rendering(row.get("final_rendering", "") or row.get("galutinis_pateikimas", "")),
+                "authority_basis": row.get("authority_basis", "") or row.get("autoritetas", ""),
+                "primary_lt_source": row.get("primary_lt_source", "") or row.get("pagrindinis_lt_saltinis", "") or row.get("pagrindinis_lt_šaltinis", ""),
+                "eu_fallback_source": row.get("eu_fallback_source", "") or row.get("eu_fallback_saltinis", "") or row.get("eu_fallback_šaltinis", ""),
+                "lt_gap_reason": row.get("lt_gap_reason", "") or row.get("lt_spragos_priezastis", "") or row.get("lt_spragos_priežastis", ""),
+                "note": row.get("note", "") or row.get("pastaba", ""),
+            }
+            for row in claim_rows
+            if any(value.strip() for value in row.values())
+        ],
+        "structured_block_policies": [
+            {
+                "block_id": row.get("block_id", "") or row.get("bloko_id", ""),
+                "block_type": row.get("block_type", "") or row.get("bloko_tipas", ""),
+                "lt_strategy": normalize_structured_block_strategy(row.get("lt_strategy", "") or row.get("lt_strategija", "")),
+                "authority_source": row.get("authority_source", "") or row.get("autoriteto_saltinis", "") or row.get("autoriteto_šaltinis", ""),
+                "original_context_allowed": row.get("original_context_allowed", "") or row.get("originalo_kontekstas_leidziamas", "") or row.get("originalo_kontekstas_leidžiamas", ""),
+                "note": row.get("note", "") or row.get("pastaba", ""),
+            }
+            for row in structured_policy_rows
+            if any(value.strip() for value in row.values())
+        ],
+        "manual_audit": [
+            {
+                "area": normalize_key(row.get("sritis", "") or row.get("area", "")),
+                "status": normalize_audit_status(row.get("statusas", "") or row.get("status", "")),
+                "note": row.get("pastaba", "") or row.get("note", ""),
+            }
+            for row in manual_audit_rows
+            if any(value.strip() for value in row.values())
         ],
         "nontransferable": bullet_items(find_section_lines(sections, "Neperkeliamas originalo turinys")),
     }

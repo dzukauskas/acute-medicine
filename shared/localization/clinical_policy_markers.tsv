@@ -1,0 +1,15 @@
+topic	match_mode	pattern	notes
+dose	regex	\bdose(?:s| range| ranges)?\b	Dose markers.
+dose	regex	\bdosage\b	Dosage markers.
+indication	regex	\bindication(?:s)?\b	Indication markers.
+contraindication	regex	\bcontraindication(?:s)?\b	Contraindication markers.
+route	regex	\broute(?:s)?\b	Route markers.
+route	regex	\badministration route(?:s)?\b	Administration route markers.
+concentration	regex	\bconcentration(?:s)?\b	Concentration markers.
+monitoring	regex	\bmonitor(?:ing)?\b	Monitoring markers.
+algorithm_step	regex	\balgorithm\b	Algorithm markers.
+algorithm_step	regex	\bmanagement of\b	Algorithmic management markers.
+algorithm_step	regex	\bapproach to\b	Algorithmic approach markers.
+legal_scope	regex	\bscope of practice\b	Legal scope markers.
+legal_scope	regex	\b(?:paramedic|practitioner).{0,40}\b(?:may|must|should|can)\b	Competence / scope markers.
+market_availability	regex	\b(?:availability|available|formulary)\b	Market availability markers.

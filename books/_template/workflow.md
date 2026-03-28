@@ -28,8 +28,10 @@ Skyrius laikomas baigtu tik kai:
 2. sudarytas pilnas skyriaus inventorius;
 3. patikrinti naujausi prieinami Lietuvos šaltiniai;
 4. jei jų nepakanka, patikrintos naujausios Europos ar tarptautinės gairės;
-4a. `lt_source_map.tsv` ir `source-priority.md` pagalba parinktas teisingas LT-source kelias pagal skyriaus temą;
+4a. `shared/localization/lt_source_map.tsv` ir `source-priority.md` pagalba parinktas teisingas LT-source kelias pagal skyriaus temą;
 4b. `research` faile užfiksuoti visi UK / Australia / US / kiti rinkos signalai ir jiems parinktas LT/EU pakeitimo sprendimas;
+4c. jei reikia, sugeneruotas `research/<slug>.checklist.md` per `python3 scripts/generate_research_checklist.py --book-root books/<slug> <chapter>`;
+4d. norminiai klinikiniai teiginiai užfiksuoti claim-level matricoje, o struktūriniai blokai turi aiškią LT lokalizacijos strategiją;
 5. sugeneruotas `chapter_pack`;
 6. lietuviškas skyrius parašytas nuo švaraus lapo pagal `chapter_pack`;
 7. padarytas atskiras anti-calque perrašymas;
@@ -51,11 +53,12 @@ Prieš bet kokį drafting skyriui privaloma sugeneruoti `chapter_packs/<slug>.ya
 - aktyvius terminus ir akronimus;
 - lokalizacijos override'us;
 - stiliaus hotspot'us;
-- pozityvius LT pavyzdžius iš `gold_phrases.tsv` ir `gold_sections/`.
+- pozityvius LT pavyzdžius iš `shared/prose/gold_phrases.tsv`, `shared/examples/gold_sections/` ir, jei tokių yra, local `gold_sections/`.
 
 Be `chapter_pack` drafteris negali pradėti generavimo.
 
 `build_chapter_pack.py` taip pat yra LT/EU-first vartai: jei source skyriuje aptinkami UK / Australia / US signalai, bet `research` faile jiems nėra aiškaus LT/EU sprendimo, pack generavimas turi baigtis klaida.
+Jei skyriuje aptinkamas norminis klinikinis turinys, `chapter_pack` taip pat negali būti sugeneruotas be claim-level LT/EU atramos ir struktūrinių blokų politikos.
 
 Prieš research ir drafting visada pirmiausia nuspręskite, kuriam LT-source branduolio keliui priklauso skyrius ar konkretus blokas:
 
@@ -113,6 +116,8 @@ Kai originalo logika ar sistemos kontekstas nesutampa su Lietuvos praktika:
 
 Jei kyla abejonių dėl LT termino, kolokacijos ar klinikinės kategorijos pavadinimo, sprendimo negalima priimti „iš klausos“. Pirma reikia patikrinti Lietuvos medicininę vartoseną internete ir `research` faile užrašyti bent šaltinį bei datą.
 
+Book-local taisyklės leidžiamos tik per `*.local.tsv` override'us arba local `gold_sections/`. Pasikartojančios reusable taisyklės po review promuojamos į `shared/`, ne į konkrečios knygos root.
+
 ## Dvigubas QA
 
 Kiekvienas skyrius turi praeiti du atskirus kokybės vartus:
@@ -131,7 +136,8 @@ Kiekvienas skyrius turi praeiti du atskirus kokybės vartus:
 - `scripts/terminology_guard.py` su `chapter_pack`, jei jis yra;
 - `scripts/localization_guard.py` su `chapter_pack`;
 - `scripts/completeness_guard.py`;
-- trumpą rankinį kalbinį auditą.
+- `scripts/validate_manual_audit.py`;
+- trumpą, bet privalomą agento rankinį kalbinį ir semantinį auditą, užfiksuotą `research` faile.
 
 ## Paveikslų taisyklė
 
