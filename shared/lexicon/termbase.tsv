@@ -1,5 +1,40 @@
 en	lt	note	status	banned_lt	first_use_policy	section_scope	example_lt	local_override_tag
 Advanced life support	specializuotas gaivinimas	Naudokite LT/EU-first termino formą vietoj pažodinių EN variantų.	preferred	pažangus gaivinimas	must_expand_first	all	specializuotas gaivinimas (ALS)	
+Basic Life Support	pradinis gaivinimas	Naudokite LT medicininėje vartosenoje įprastą termino formą.	preferred	bazinis gaivinimas	must_expand_first	all	pradinis gaivinimas (BLS)	
 Breech Birth	vaisiaus sėdmenų pirmeiga	Akušeriniame kontekste pirmą kartą vartokite pilną termino formą.	preferred		must_expand_first	all	gairės dėl vaisiaus sėdmenų pirmeigos	
 Cord Prolapse	virkštelės iškritimas	Naudokite standartinį LT akušerinį terminą.	preferred			all	virkštelės iškritimas	
 Shoulder Dystocia	vaisiaus pečių distocija	Akušeriniame kontekste pirmą kartą vartokite pilną termino formą.	preferred	petukų distocija | petukų distocijai	must_expand_first	all	vaisiaus pečių distocija	
+Abdominal Pain	pilvo skausmas	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	pilvo skausmas	
+Abdominal Trauma	pilvo trauma	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	pilvo trauma	
+Acute Coronary Syndrome	ūminis koronarinis sindromas	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	ūminis koronarinis sindromas (ŪKS)	
+Alcohol-Use Disorders	alkoholio vartojimo sutrikimai	Patikrinta LT interneto medicinos ir visuomenės sveikatos šaltiniuose 2026-03-28.	preferred			all	alkoholio vartojimo sutrikimai	
+Allergic Reactions including Anaphylaxis	alerginės reakcijos, įskaitant anafilaksiją	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	alerginės reakcijos, įskaitant anafilaksiją	
+Altered Level of Consciousness	sutrikusi sąmonė	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred	sutrikęs sąmonės lygis | pakitęs sąmonės lygis		all	sutrikusi sąmonė	
+Burns and Scalds	nudegimai ir nuplikymai	Patikrinta LT interneto medicinos ir visuomenės sveikatos šaltiniuose 2026-03-28.	preferred			all	nudegimai ir nuplikymai	
+Care of the Newborn	naujagimio priežiūra	Patikrinta LT interneto akušerijos ir neonatologijos šaltiniuose 2026-03-28.	preferred			all	naujagimio priežiūra	
+Chronic Obstructive Pulmonary Disease	lėtinė obstrukcinė plaučių liga	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	lėtinė obstrukcinė plaučių liga (LOPL)	
+Electrical Injuries	elektros trauma	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	elektros trauma	
+Foreign Body Airway Obstruction	kvėpavimo takų obstrukcija svetimkūniu	Patikrinta LT interneto skubiosios pagalbos šaltiniuose 2026-03-28.	preferred			all	kvėpavimo takų obstrukcija svetimkūniu	
+Gastrointestinal Bleeding	kraujavimas iš virškinimo trakto	Patikrinta LT interneto medicinos ir norminiuose šaltiniuose 2026-03-28.	preferred			all	kraujavimas iš virškinimo trakto	
+Head Injury	galvos trauma	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	galvos trauma	
+Heart Failure	širdies nepakankamumas	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	širdies nepakankamumas	
+Hyperventilation Syndrome	hiperventiliacijos sindromas	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	hiperventiliacijos sindromas	
+Implantable Cardioverter Defibrillator	implantuojamas kardioverteris-defibriliatorius	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred	implantuojamas kardioverteris defibriliatorius		all	implantuojamas kardioverteris-defibriliatorius (IKD)	
+Intravascular Fluid Therapy	infuzinė terapija	Patikrinta SAM ir LT akademiniuose šaltiniuose 2026-03-29. `Infuzinė terapija` teiktina kaip kanoninis skyriaus pavadinimo atitikmuo; `intraveninė terapija` ar `IV` vartotini tik tada, kai kalbama apie konkretų vartojimo kelią ar intraveninę infuziją.	preferred	infuzoterapija		all	infuzinė terapija	
+Limb Trauma	galūnių trauma	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	galūnių trauma	
+Low Back Pain	apatinės nugaros dalies skausmas	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	apatinės nugaros dalies skausmas	
+Management of Post-partum Haemorrhage	pogimdyminio kraujavimo valdymas	Patikrinta LT interneto akušerijos šaltiniuose 2026-03-28.	preferred			all	pogimdyminio kraujavimo valdymas	
+Newborn Life Support	naujagimio gaivinimas	Patikrinta LT interneto neonatologijos šaltiniuose 2026-03-28.	preferred			all	naujagimio gaivinimas	
+Out-of-Hospital Cardiac Arrest: Overview	širdies sustojimas už ligoninės ribų: apžvalga	Patikrinta LT interneto GMP ir gaivinimo šaltiniuose 2026-03-28.	preferred			all	širdies sustojimas už ligoninės ribų	
+Overdose and Poisoning	apsinuodijimas ir perdozavimas	Patikrinta LT interneto medicinos ir toksikologijos šaltiniuose 2026-03-28.	preferred			all	apsinuodijimas ir perdozavimas	
+Pelvic Trauma	dubens trauma	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	dubens trauma	
+Pre-eclampsia and Eclampsia	preeklampsija ir eklampsija	Patikrinta LT interneto akušerijos šaltiniuose 2026-03-28.	preferred			all	preeklampsija ir eklampsija	
+Pulmonary Embolism	plaučių embolija	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	plaučių embolija	
+Return of Spontaneous Circulation	spontaninės kraujotakos atsinaujinimas	Patikrinta LT interneto gaivinimo šaltiniuose 2026-03-28.	preferred	spontaninės kraujotakos atkūrimas		all	spontaninės kraujotakos atsinaujinimas (ROSC)	
+Sickle Cell Disease	pjautuvinių ląstelių liga	Patikrinta LT interneto laboratorinės medicinos šaltiniuose 2026-03-28.	preferred	pjautuvinė anemija		all	pjautuvinių ląstelių liga	
+Spinal Injury and Spinal Cord Injury	stuburo trauma ir nugaros smegenų sužalojimas	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred	stuburo ir nugaros smegenų trauma		all	stuburo trauma ir nugaros smegenų sužalojimas	
+Thoracic Trauma	krūtinės trauma	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	krūtinės trauma	
+Trauma in Pregnancy	trauma nėštumo metu	Patikrinta LT interneto akušerijos ir traumų šaltiniuose 2026-03-28.	preferred			all	trauma nėštumo metu	
+Vaginal Bleeding	kraujavimas iš makšties	Patikrinta LT interneto akušerijos ir ginekologijos šaltiniuose 2026-03-28.	preferred			all	kraujavimas iš makšties	
+Transient Ischaemic Attack	praeinantis smegenų išemijos priepuolis	Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29. LT medicinoje vartojama santrumpa `PSIP`; viešojoje kalboje gali pasitaikyti `mikroinsultas`, bet formaliame medicininiame tekste vartotinas tikslus terminas.	preferred	mikroinsultas	must_expand_first	all	praeinantis smegenų išemijos priepuolis (PSIP)	
+Stroke and Transient Ischaemic Attack	insultas ir praeinantis smegenų išemijos priepuolis	Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29. Skyriaus pavadinime `Transient Ischaemic Attack` daliai taikytinas LT terminas `praeinantis smegenų išemijos priepuolis (PSIP)`; `mikroinsultas` laikytinas nekanoniniu viešosios kalbos pavadinimu.	preferred	mikroinsultas		all	insultas ir praeinantis smegenų išemijos priepuolis (PSIP)	

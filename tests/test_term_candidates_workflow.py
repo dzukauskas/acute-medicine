@@ -238,6 +238,7 @@ class TermCandidateWorkflowTests(unittest.TestCase):
             with (
                 patch.object(build_chapter_pack, "validate_chapter_inventory_or_raise", lambda *_: None),
                 patch.object(build_chapter_pack, "validate_localization_readiness_or_raise", lambda *_: None),
+                patch.object(build_chapter_pack, "validate_term_readiness_or_raise", lambda *_args, **_kwargs: None),
                 patch.object(
                     build_chapter_pack,
                     "parse_args",

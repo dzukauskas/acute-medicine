@@ -4,7 +4,9 @@ Repo yra book-agnostic: kiekviena nauja knyga bootstrap'inama į atskirą `books
 
 ## Repo standartas
 
+- šiame repo aprašytos workflow ir LT-source taisyklės yra privalomos, ne rekomendacinės;
 - pagrindinis LT tekstas rašomas Lietuvos / ES logika;
+- angliški medicininiai terminai negali būti verčiami „iš klausos“: prieš užrakinant LT atitikmenį juos privaloma patikrinti interneto LT šaltiniuose ir užfiksuoti `research` faile;
 - UK, Australijos, JAV ar kitas originalo rinkos kontekstas negali likti pagrindiniame LT tekste kaip tariamas vietinis standartas;
 - jei originalo kontekstą verta parodyti, jis leidžiamas tik aiškiai pažymėtame `Originalo kontekstas` bloke;
 - vaistų pavadinimai pagrindiniame LT tekste pagal nutylėjimą yra bendriniai / INN, o dozės, vartojimo keliai ir indikacijos remiami LT, o jei jų nepakanka, ES šaltiniais.
@@ -89,8 +91,9 @@ EPUB v1 šiame repo yra `repo-native`, be papildomo EPUB skill ar MCP serverio. 
 Terminų rinkimo politika šiame repo yra `candidate inbox -> approved local/shared`, o ne tiesioginis auto-write į aktyvias bazes:
 
 - `books/<slug>/term_candidates.tsv` kaupia per skyrius surinktus terminų ir santrumpų kandidatus;
-- `build_chapter_pack.py` automatiškai atnaujina einamo skyriaus kandidatų eilutes;
+- `build_chapter_pack.py` automatiškai atnaujina einamo skyriaus kandidatų eilutes ir prieš pack generavimą paleidžia privalomą terminijos readiness vartą;
 - aktyvūs QA sluoksniai vis dar skaito tik `shared/lexicon/*.tsv` ir `*.local.tsv`;
+- vien `term_candidates.tsv` statusas aktyvios bazės nepakeičia: terminas laikomas užrakintu tik tada, kai jis patenka į `shared/lexicon/*.tsv` arba `*.local.tsv`, arba kai kandidatas aiškiai atmestas kaip `rejected`, `original_context_only` ar `localization_only`;
 - promotion į `shared/lexicon/` lieka review-gated.
 
 ## Repo config
@@ -126,6 +129,7 @@ Book-scoped skriptai nebeturi aktyvios knygos pagal nutylėjimą. Juos kvieskite
 MEDBOOK_ROOT=books/<slug> python3 scripts/run_chapter_qa.py 001
 MEDBOOK_ROOT=books/<slug> python3 scripts/build_chapter_pack.py 001
 MEDBOOK_ROOT=books/<slug> python3 scripts/generate_research_checklist.py 001
+MEDBOOK_ROOT=books/<slug> python3 scripts/validate_term_readiness.py 001
 MEDBOOK_ROOT=books/<slug> scripts/sync_obsidian_book.sh
 ```
 

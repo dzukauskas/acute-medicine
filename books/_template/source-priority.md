@@ -1,6 +1,7 @@
 # Šaltinių Prioritetas
 
 Šis failas apibrėžia ne tik bendrą prioritetą, bet ir kanoninį LT-source branduolį, kuriuo turi remtis kiekviena nauja knyga.
+Čia aprašytos taisyklės šiame repo yra privalomos. Jos nėra rekomendaciniai patarimai ar „best effort“ gairės.
 
 Greita taisyklė:
 
@@ -16,6 +17,7 @@ Repo-global failas:
 - `shared/localization/lt_source_map.tsv`
 
 Kiekviename `research/<slug>.md` faile turi būti aiškiai užrašyta, kuriuo šio žemėlapio keliu buvo remtasi.
+Jei skyriuje yra aukštos rizikos terminas ar santrumpa, kurio LT atitikmuo nėra aktyvioje bazėje, prieš draftą reikia arba užrakinti jį `shared/lexicon/*.tsv` / `*.local.tsv`, arba aiškiai atmesti `term_candidates.tsv` faile kaip ne terminologinį ar tik originalo-konteksto vienetą.
 
 Praktinis pirmas žingsnis prieš pildant research:
 
@@ -27,6 +29,12 @@ Checklist failas nepriima sprendimų už žmogų, bet automatiškai surenka:
 - preliminarius norminių claim tipų kandidatus;
 - struktūrinių blokų `block_id`;
 - rekomenduojamus LT-source kelius pagal šį žemėlapį.
+
+Praktinis pirmas žingsnis prieš drafting:
+
+- paleisti `python3 scripts/build_chapter_pack.py --book-root books/<slug> <chapter>`;
+- jei pack generavimas sustoja dėl terminijos readiness klaidos, pirmiausia išspręsti terminų / santrumpų triage, o ne tęsti rašymą ranka apeinant vartus.
+- jei angliškas medicininis terminas dar nėra aktyvioje bazėje, jo LT atitikmuo privalo būti patikrintas interneto LT šaltiniuose pagal šį prioritetą; spėjimas ar laisva improvizacija neleidžiami.
 
 ### 1. Paramediko kompetencija ir GMP
 

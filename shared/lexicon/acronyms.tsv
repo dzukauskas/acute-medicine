@@ -1,2 +1,10 @@
 acronym	lt	en	policy	notes	must_expand_first	allowed_in_headings	ambiguous_context	preferred_lt_context
 ALS	specializuotas gaivinimas	Advanced life support	lt-first	Pirmą kartą išskleisti LT forma; `pažangus gaivinimas` nelaikyti kanoniniu variantu.	yes	no		specializuotas gaivinimas
+BLS	pradinis gaivinimas	Basic Life Support	lt-first	Pirmą kartą išskleisti LT forma; `bazinis gaivinimas` nelaikyti kanoniniu variantu.	yes	no		pradinis gaivinimas
+ACS	ūminis koronarinis sindromas	Acute Coronary Syndrome	lt-first	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	yes	no		ūminis koronarinis sindromas
+APGAR	Apgar balas	APGAR score	lt-first	Patikrinta LT interneto neonatologijos šaltiniuose 2026-03-28.	yes	no		Apgar balas
+CBRN	cheminiai, biologiniai, radiologiniai ir branduoliniai	Chemical Biological Radiological Nuclear	original-first	Valstybinėje civilinės saugos vartosenoje naudojama CBRN santrumpa; pirmą kartą galima išskleisti LT forma.	no	yes		CBRN
+CRB-65	CRB-65 skalė	CRB-65 score	original-first	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28; prireikus pirmą kartą paaiškinti kaip skalę.	no	yes		CRB-65 skalė
+DKA	diabetinė ketoacidozė	Diabetic ketoacidosis	lt-first	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	yes	no		diabetinė ketoacidozė
+LVAD	kairiojo skilvelio pagalbinis įrenginys	Left Ventricular Assist Device	original-first	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28; pirmą kartą vartoti pilną LT formą su LVAD santrumpa.	yes	yes		kairiojo skilvelio pagalbinis įrenginys (LVAD)
+PSIP	praeinantis smegenų išemijos priepuolis	Transient Ischaemic Attack	lt-first	Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29. Viešojoje kalboje gali pasitaikyti `mikroinsultas`, bet formaliame medicininiame tekste vartotinas tikslus terminas.	yes	no		praeinantis smegenų išemijos priepuolis (PSIP)

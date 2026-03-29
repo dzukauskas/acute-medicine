@@ -17,6 +17,7 @@ from book_workflow_support import (
     load_termbase_rows,
     normalize_key,
     parse_markdown_sections,
+    strip_markdown,
     read_tsv,
     resolve_chapter_slug,
     slugify,
@@ -95,6 +96,32 @@ RESEARCH_NOTE_KEYWORDS = {
 }
 MANUAL_PRESERVE_FIELDS = ("proposed_lt", "status", "scope", "banned_lt", "source_ref", "notes")
 PERSON_TITLE_TOKENS = {"dr", "mr", "mrs", "ms", "prof", "professor"}
+SOURCE_HEADING_RE = re.compile(r"^(?P<level>#{1,6})\s+(?P<title>.+)$")
+TABLE_ROW_RE = re.compile(r"^\|.*\|$")
+TABLE_SEPARATOR_RE = re.compile(r"^:?-{3,}:?$")
+GENERIC_SOURCE_TITLE_TERMS = {
+    "chapter",
+    "general guidance",
+    "guideline title",
+    "introduction",
+    "medical",
+    "maternity",
+    "resuscitation",
+    "special situations",
+    "test chapter",
+    "trauma",
+    "update analysis what s changed",
+}
+TITLE_QUALIFIER_PATTERNS = (
+    re.compile(r"\s+\((?:formerly|previously)\b[^)]*\)\s*$", re.IGNORECASE),
+    re.compile(r"\s+in\s+adults?(?:\s+and\s+children)?\s*$", re.IGNORECASE),
+    re.compile(r"\s+in\s+children\s*$", re.IGNORECASE),
+    re.compile(r"\s+during\s+pregnancy\b.*$", re.IGNORECASE),
+    re.compile(r"\s+after\s+\d+\s+weeks?\s+gestation\b.*$", re.IGNORECASE),
+    re.compile(r"\s+up\s+to\s+\d+\s+weeks?\s+gestation\b.*$", re.IGNORECASE),
+)
+TITLE_WORD_MIN = 2
+TITLE_WORD_MAX = 6
 
 
 def parse_args() -> argparse.Namespace:
@@ -237,6 +264,104 @@ def looks_like_person_name_context(source_context: str, source_expansion: str) -
     return all(token.isupper() for token in non_title_tokens)
 
 
+def collapse_spaces(value: str) -> str:
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def strip_title_qualifiers(title: str) -> str:
+    candidate = collapse_spaces(strip_markdown(title))
+    candidate = re.sub(r"^chapter\s+\d+\s*[:.\-–—]?\s*", "", candidate, flags=re.IGNORECASE)
+    candidate = re.sub(r"\s*\([^)]*\)\s*$", "", candidate)
+    for pattern in TITLE_QUALIFIER_PATTERNS:
+        candidate = pattern.sub("", candidate)
+    return collapse_spaces(candidate.strip(" -–—:;,."))
+
+
+def is_title_candidate(value: str, *, source_context: str = "") -> bool:
+    candidate = strip_title_qualifiers(value)
+    normalized = normalize_key(candidate)
+    if not normalized or normalized in GENERIC_SOURCE_TITLE_TERMS or normalized.endswith(" chapter"):
+        return False
+    words = candidate.split()
+    if len(words) < TITLE_WORD_MIN or len(words) > TITLE_WORD_MAX:
+        return False
+    if looks_like_non_terminology_candidate(candidate, source_context):
+        return False
+    return True
+
+
+def source_heading_titles(source_text: str) -> list[tuple[str, str]]:
+    titles: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for raw_line in source_text.splitlines():
+        match = SOURCE_HEADING_RE.match(raw_line.strip())
+        if not match:
+            continue
+        title = strip_markdown(match.group("title").strip())
+        candidate = strip_title_qualifiers(title)
+        if not is_title_candidate(candidate, source_context=raw_line):
+            continue
+        normalized = normalize_key(candidate)
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        titles.append((candidate, raw_line.strip()))
+    return titles
+
+
+def source_guideline_titles(source_text: str) -> list[tuple[str, str]]:
+    titles: list[tuple[str, str]] = []
+    seen: set[str] = set()
+
+    def split_row(line: str) -> list[str]:
+        return [cell.strip() for cell in line.strip().strip("|").split("|")]
+
+    def iter_table_blocks(text: str) -> list[list[str]]:
+        blocks: list[list[str]] = []
+        current: list[str] = []
+        for raw_line in text.splitlines():
+            line = raw_line.strip()
+            if TABLE_ROW_RE.match(line):
+                current.append(line)
+                continue
+            if current:
+                blocks.append(current)
+                current = []
+        if current:
+            blocks.append(current)
+        return blocks
+
+    for block in iter_table_blocks(source_text):
+        if len(block) < 3:
+            continue
+        header = split_row(block[0])
+        separator = split_row(block[1])
+        if not header or len(separator) < len(header):
+            continue
+        if not all(TABLE_SEPARATOR_RE.match(cell.replace(" ", "")) for cell in separator[: len(header)]):
+            continue
+        for line in block[2:]:
+            cells = split_row(line)
+            if not cells:
+                continue
+            first_cell = cells[0].strip()
+            if not first_cell:
+                continue
+            if normalize_key(first_cell) in GENERIC_SOURCE_TITLE_TERMS:
+                continue
+            if len(cells) > 1 and all(not cell.strip() for cell in cells[1:]):
+                continue
+            candidate = strip_title_qualifiers(first_cell)
+            if not is_title_candidate(candidate, source_context=first_cell):
+                continue
+            normalized = normalize_key(candidate)
+            if normalized in seen:
+                continue
+            seen.add(normalized)
+            titles.append((candidate, line))
+    return titles
+
+
 def merge_candidate_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     merged: dict[str, dict[str, str]] = {}
     order: list[str] = []
@@ -355,6 +480,37 @@ def mine_source_acronym_candidates(
     return rows
 
 
+def mine_source_title_term_candidates(
+    *,
+    chapter_slug: str,
+    source_text: str,
+    book_root: str | Path | None = None,
+) -> list[dict[str, str]]:
+    known_terms = approved_term_keys(book_root)
+    localization_terms = localization_signal_terms(book_root)
+    rows: list[dict[str, str]] = []
+    for origin, titles in (
+        ("source_heading", source_heading_titles(source_text)),
+        ("source_guideline_title", source_guideline_titles(source_text)),
+    ):
+        for source_term, source_context in titles:
+            if normalize_key(source_term) in known_terms:
+                continue
+            if looks_like_localization_signal(source_term, localization_terms):
+                continue
+            rows.append(
+                candidate_row(
+                    chapter_slug=chapter_slug,
+                    candidate_kind="term",
+                    source_term=source_term,
+                    source_context=source_context,
+                    candidate_origin=origin,
+                    reason="Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti sutikrinta su LT-source sluoksniu.",
+                )
+            )
+    return merge_candidate_rows(rows)
+
+
 def mine_chapter_term_candidates(
     slug: str,
     *,
@@ -375,6 +531,13 @@ def mine_chapter_term_candidates(
     )
     rows.extend(
         mine_source_acronym_candidates(
+            chapter_slug=slug,
+            source_text=source_text,
+            book_root=book_root,
+        )
+    )
+    rows.extend(
+        mine_source_title_term_candidates(
             chapter_slug=slug,
             source_text=source_text,
             book_root=book_root,

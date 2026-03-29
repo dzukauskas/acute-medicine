@@ -27,6 +27,7 @@ Skyrius laikomas baigtu tik kai:
 1. perskaitytas visas source skyriaus intervalas arba segmentų rinkinys;
 2. sudarytas pilnas skyriaus inventorius;
 3. patikrinti naujausi prieinami Lietuvos šaltiniai;
+3a. kiekvienas naujas ar abejonių keliantis angliškas medicininis terminas privalomai sutikrintas interneto LT šaltiniuose pagal `source-priority.md` ir `shared/localization/lt_source_map.tsv`, o `research` faile užrašytas bent šaltinis ir data;
 4. jei jų nepakanka, patikrintos naujausios Europos ar tarptautinės gairės;
 4a. `shared/localization/lt_source_map.tsv` ir `source-priority.md` pagalba parinktas teisingas LT-source kelias pagal skyriaus temą;
 4b. `research` faile užfiksuoti visi UK / Australia / US / kiti rinkos signalai ir jiems parinktas LT/EU pakeitimo sprendimas;
@@ -34,6 +35,7 @@ Skyrius laikomas baigtu tik kai:
 4d. norminiai klinikiniai teiginiai užfiksuoti claim-level matricoje, o struktūriniai blokai turi aiškią LT lokalizacijos strategiją;
 5. sugeneruotas `chapter_pack`;
 5a. automatiškai atnaujintas `term_candidates.tsv` einamam skyriui;
+5b. jei `term_candidates.tsv` lieka neužrakintų aukštos rizikos terminų ar santrumpų iš `## Rizikingi terminai`, source antraščių ar `Guideline Title` laukų, `chapter_pack` generavimas privalo baigtis klaida iki triage;
 6. lietuviškas skyrius parašytas nuo švaraus lapo pagal `chapter_pack`;
 7. padarytas atskiras anti-calque perrašymas;
 8. lentelės pilnai išverstos;
@@ -61,6 +63,7 @@ Be `chapter_pack` drafteris negali pradėti generavimo.
 
 `build_chapter_pack.py` taip pat yra LT/EU-first vartai: jei source skyriuje aptinkami UK / Australia / US signalai, bet `research` faile jiems nėra aiškaus LT/EU sprendimo, pack generavimas turi baigtis klaida.
 Jei skyriuje aptinkamas norminis klinikinis turinys, `chapter_pack` taip pat negali būti sugeneruotas be claim-level LT/EU atramos ir struktūrinių blokų politikos.
+Jei skyriuje lieka neužrakinti aukštos rizikos terminai ar santrumpos, `chapter_pack` taip pat negali būti sugeneruotas, kol vienetas nėra arba aktyvioje bazėje (`shared/lexicon/*.tsv`, `*.local.tsv`), arba aiškiai atmestas kaip `rejected`, `original_context_only` ar `localization_only` `term_candidates.tsv` faile.
 
 Prieš research ir drafting visada pirmiausia nuspręskite, kuriam LT-source branduolio keliui priklauso skyrius ar konkretus blokas:
 
@@ -117,6 +120,8 @@ Kai originalo logika ar sistemos kontekstas nesutampa su Lietuvos praktika:
 - jei LT oficialaus šaltinio nėra, pagrindiniame tekste remiamasi ES šaltiniu, o tai užfiksuojama `research` faile.
 
 Jei kyla abejonių dėl LT termino, kolokacijos ar klinikinės kategorijos pavadinimo, sprendimo negalima priimti „iš klausos“. Pirma reikia patikrinti Lietuvos medicininę vartoseną internete ir `research` faile užrašyti bent šaltinį bei datą.
+Ši taisyklė šiame repo yra privaloma, ne rekomendacinė. Jei workflow ar validatorius reikalauja LT-source patikros, drafteris privalo ją atlikti prieš rašydamas galutinį LT tekstą.
+Angliškų medicininių terminų vertimas be internetinės LT-source patikros laikomas klaida net tada, kai LT atitikmuo atrodo „akivaizdus“.
 
 Book-local taisyklės leidžiamos tik per `*.local.tsv` override'us arba local `gold_sections/`. Pasikartojančios reusable taisyklės po review promuojamos į `shared/`, ne į konkrečios knygos root.
 
@@ -124,7 +129,7 @@ Terminų rinkimo tvarka:
 
 - aktyvios bazės (`shared/lexicon/*.tsv`, `*.local.tsv`) nėra pildomos tiesiai iš drafto;
 - `build_chapter_pack.py` prieš sugeneruodamas pack atnaujina `term_candidates.tsv`;
-- kandidatai renkami iš `## Rizikingi terminai` ir iš source aptiktų nežinomų santrumpų;
+- kandidatai renkami iš `## Rizikingi terminai`, iš source aptiktų nežinomų santrumpų ir iš aukštos vertės source antraščių bei `Guideline Title` laukų;
 - lokalizacijos signalai, rinkos proper noun'ai ir jau aktyviose bazėse esantys terminai į kandidatų inbox nepatenka;
 - po review kandidatas arba promuojamas į `shared/lexicon/`, arba lieka `*.local.tsv`, arba atmetamas.
 
@@ -139,6 +144,7 @@ Kiekvienas skyrius turi praeiti du atskirus kokybės vartus:
 
 - atskirą anti-calque perrašymą;
 - `scripts/validate_localization_readiness.py` prieš pack generavimą;
+- `scripts/validate_term_readiness.py` prieš pack generavimą;
 - `scripts/validate_adjudication_resolution.py`, jei skyriuje yra `adjudication_candidate`;
 - sutikrinimą su `language-style.md`;
 - `scripts/prose_guard.py`;

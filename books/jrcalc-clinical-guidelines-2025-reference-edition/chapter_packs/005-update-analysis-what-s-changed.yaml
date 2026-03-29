@@ -1,0 +1,1774 @@
+chapter_slug: 005-update-analysis-what-s-changed
+chapter_title: '5 skyrius. Atnaujinimų apžvalga: kas pasikeitė?'
+page_range: EPUB segmentas cND.xhtml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/005-update-analysis-what-s-changed.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/005-update-analysis-what-s-changed.md
+blocks:
+- block_id: narrative-01-update-analysis-what-s-changed
+  block_type: narrative
+  heading: Update Analysis – What's changed?
+  source_anchor: Update Analysis – What's changed?
+  source_excerpt: '# Chapter 5 Update Analysis – ‘What’s changed?’
+
+    - Šaltinio segmentai: cND.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    Update Analysis – ‘What’s changed?’
+
+    | Col 1 | Col 2 | Col 3 |
+
+    | --- | --- | --- |
+
+    | General Guidance |  |  |
+
+    | Guideline Title | Last Update | Notes |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti kaip originalaus leidinio atnaujinimų katalogo pavadinimą.
+  matched_localization_terms:
+  - JRCALC
+  matched_claim_ids:
+  - claim-004-algorithm-step-update-log
+  matched_claim_types:
+  - algorithm_step
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-02-general-guidance
+  block_type: narrative
+  heading: General Guidance
+  source_anchor: General Guidance
+  source_excerpt: '| General Guidance |  |  |
+
+    | Guideline Title | Last Update | Notes |
+
+    | Clinical Considerations in Relation to Diversity and Equality | April 2025 | New wording added around
+    pulse oximetry in dark skin, and also regarding terminology in the disability section. |
+
+    | Conditions Requiring Specific Prehospital Clinical Management | July 2024 | New guideline covering
+    a number of clinical presentations where specific pre-hospital clinical considerations are needed.
+    |
+
+    | Consent in Pre-hospital Care | September 2021 | Reviewed and updated. |
+
+    | Domestic Abuse | September 2022 | Revised and updated with current legislation. |
+
+    | Duty of Care | May 2021 | Reviewed and updated. |
+
+    | End of Life Care | May 2021 | Reviewed and updated and includes the Macmillan/UKONS tool. |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: australia-specific
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: pakuotės lapelis
+  matched_localization_terms:
+  - CMI
+  matched_claim_ids:
+  - claim-004-algorithm-step-update-log
+  matched_claim_types:
+  - algorithm_step
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-03-resuscitation
+  block_type: narrative
+  heading: Resuscitation
+  source_anchor: Resuscitation
+  source_excerpt: '| Resuscitation |  |  |
+
+    | Guideline Title | Last Update | Notes |
+
+    | Advanced Life Support | April 2025 | An amendment in section 10.3 to confirm that intra-osseous
+    (IO) obtained blood may be used to check blood sugar. |
+
+    | Basic Life Support in Adults | September 2022 | Reviewed and updated in line with RCUK. New wording
+    added. |
+
+    | Basic Life Support in Children | September 2022 | Reviewed and updated in line with RCUK. New wording
+    added. |
+
+    | Emergency Tracheostomy and Laryngectomy Pre-hospital Management | September 2022 | Reviewed in line
+    with RCUK. Revised management algorithms. |
+
+    | Foreign Body Airway Obstruction | September 2022 | Reviewed in line with RCUK. All reversible causes
+    should be considered. |
+
+    | Out-of-Hospital Cardiac Arrest: Overview | September 2022 | Reviewed and updated in line with RCUK.
+    New wording added. |'
+  risk_flags: []
+  tags:
+  - resuscitation
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik aiškinant, kad originale dalis gairių peržiūrėtos pagal RCUK.
+  matched_localization_terms:
+  - RCUK
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-04-medical
+  block_type: narrative
+  heading: Medical
+  source_anchor: Medical
+  source_excerpt: '| Medical |  |  |
+
+    | Guideline Title | Current Update | Notes |
+
+    | Abdominal Pain | April 2025 | Revised and updated. The common causes table for adults and children
+    has been revised and symptom indicators added to aid working diagnosis. Includes diagram of abdominal
+    regions. |
+
+    | Acute Behavioural Disturbance (ABD) | February 2021 | Additional wording to emphasise close monitoring
+    of a restrained patient. |
+
+    | Acute Coronary Syndrome | January 2023 | Small change to wording about health inequalities, regarding
+    women and ACS. |
+
+    | Adrenal Insufficiency Patients (formerly called Steroid-dependent Patients) | April 2025 | Reviewed
+    and updated in line with NICE guidanace NG24. Note new title (previously called Steroid-dependent
+    Patients). |
+
+    | Agitated Patients | January 2023 | New guideline to sit alongside ABD. |
+
+    | Alcohol-Use Disorders | September 2023 | A new paragraph is included on alcoholic ketoacidosis.
+    |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip originalo atnaujinimų komentarų kontekstą.
+  matched_localization_terms:
+  - NICE
+  matched_claim_ids:
+  - claim-001-dose-update-log
+  - claim-002-indication-update-log
+  - claim-003-monitoring-update-log
+  matched_claim_types:
+  - dose
+  - indication
+  - monitoring
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - dose-claim
+  - drug-selection
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-05-trauma
+  block_type: narrative
+  heading: Trauma
+  source_anchor: Trauma
+  source_excerpt: '| Low Back Pain (Non-traumatic) | September 2022 | Guidance on the assessment and management
+    of this common presentation. |
+
+    | Management and Resuscitation of Patients with Left Ventricular Assist Devices (LVADs) | April 2025
+    | Revised and updated. Small changes include: If possible, anterior-posterior pad positioning would
+    be preferable based on the LVAD position within the chest wall. LVAD centre emergency contacts numbers
+    were checked for accuracy. |
+
+    | Medical Emergencies in Adults – Overview | February 2022 | New wording around frailty scoring added;
+    consider using the clincial frailty scale, as per local pathways. |
+
+    | Medical Emergencies in Children – Overview | February 2021 | New reference added, linking to an
+    interactive education tool. |
+
+    | Meningococcal Meningitis and Septicaemia | July 2019 | Reviewed and updated. |
+
+    | Mental Health Presentations | May 2023 | Completely revised guideline. |
+
+    | Non-Traumatic Chest Pain/Discomfort | July 2019 | Reviewed and updated. |
+
+    | Overdose and Poisoning in Adults and Children | October 2024 | Revised and updated guideline with
+    support from the National Poison Information Service (NPIS) and RCEM toxicologists. New algorithm
+    included. Substance management table removed. |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip originalo toksikologinės partnerystės pavadinimą.
+  matched_localization_terms:
+  - NPIS
+  matched_claim_ids:
+  - claim-001-dose-update-log
+  - claim-002-indication-update-log
+  - claim-003-monitoring-update-log
+  matched_claim_types:
+  - dose
+  - indication
+  - monitoring
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - dose-claim
+  - drug-selection
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-06-maternity
+  block_type: narrative
+  heading: Maternity
+  source_anchor: Maternity
+  source_excerpt: '| Maternity |  |  |
+
+    | Guideline Title | Last Update | Notes |
+
+    | Breech Birth | September 2023 | Revised standalone guideline with new algorithm. |
+
+    | Care of the Newborn | October 2024 | Removal of APGAR score. |
+
+    | Cord Prolapse | October 2024 | New standalone guideline. Management algorithm can also be found
+    on the algorithms tab in the app. |
+
+    | Imminent Birth | October 2024 | Fully reviewed and revised. New wording about identifying if birth
+    is imminent and when to consider conveying to hospital. Inclusion of free birth, water birth, home
+    birth and en caul birth. Revised management algorithm. New table of high-risk pregnancy features.
+    Photos included to show estimates of volumes of blood loss. |
+
+    | Management of Post-partum Haemorrhage (PPH) | January 2024 | New guideline. Includes a new algorithm.
+    |
+
+    | Maternal Resuscitation | July 2019 | Reviewed and updated. |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-07-special-situations
+  block_type: narrative
+  heading: Special Situations
+  source_anchor: Special Situations
+  source_excerpt: '| Special Situations |  |  |
+
+    | Guideline Title | Last Update | Notes |
+
+    | Atropine for CBRNE | October 2022 | Reviewed and updated. |
+
+    | Chemical Biological Radiological Nuclear (CBRN) Incidents Including Hazardous Materials | March
+    2024 | Revised and updated by NARU. Revised CRESS tool. Step 123 removed and new: Recognise, Assess
+    and React figure included. |
+
+    | Major, Complex and High-Risk Incidents | January 2024 | Reviewed and updated by NARU. Includes the
+    new major incident triage tool algorithm (MITT). Includes the Ten Second Triage (TST), a new primary
+    scene triage tool that has been developed for use by all first responders to any incident with multiple
+    casualties. |
+
+    | Police Incapacitants | October 2022 | Reviewed and updated by NARU. Updated guidance on Conducted
+    Energy Devices (Tasers). Updated assessment and management of irritant/incapacitant sprays, attenuating
+    energy projectiles and batons. |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip originalo specialiųjų situacijų rengimo kontekstą.
+  matched_localization_terms:
+  - NARU
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+clinical_claims:
+- claim_id: claim-001-dose-update-log
+  claim_type: dose
+  source_anchor: Medical
+  final_rendering: original_context_callout
+  authority_basis: original-context-only
+  primary_lt_source: ''
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Medicinos skyriaus atnaujinimų lentelėje nurodoma, kad kai kuriose gairėse, pvz., apie anafilaksiją,
+    akcentuotos pakartotinės IM adrenalino dozės; LT skyriuje tai paliekama tik kaip atnaujinimų suvestinės
+    pastaba.
+  matched_block_ids:
+  - narrative-04-medical
+  - narrative-05-trauma
+- claim_id: claim-002-indication-update-log
+  claim_type: indication
+  source_anchor: Medical
+  final_rendering: original_context_callout
+  authority_basis: original-context-only
+  primary_lt_source: ''
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Medicinos skyriaus atnaujinimų lentelėje minima, kad buvo peržiūrėtos kontraindikacijos, atsargumo
+    priemonės ir skyrimo kriterijai; tai perteikiama tik kaip originalo skyriaus pokytis.
+  matched_block_ids:
+  - narrative-04-medical
+  - narrative-05-trauma
+- claim_id: claim-003-monitoring-update-log
+  claim_type: monitoring
+  source_anchor: Medical
+  final_rendering: original_context_callout
+  authority_basis: original-context-only
+  primary_lt_source: ''
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Sustiprintos suvaržyto paciento stebėsenos ir kitų monitoring'o pakeitimų paminėjimai šiame skyriuje
+    nėra perrašomi kaip LT norminiai nurodymai.
+  matched_block_ids:
+  - narrative-04-medical
+  - narrative-05-trauma
+- claim_id: claim-004-algorithm-step-update-log
+  claim_type: algorithm_step
+  source_anchor: General Guidance
+  final_rendering: original_context_callout
+  authority_basis: original-context-only
+  primary_lt_source: ''
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Bendrųjų gairių atnaujinimų lentelėje minima vaikų skysčių terapijos algoritmo korekcija ir DKA
+    boliuso trukmės pakeitimas; tai rodomas tik kaip originalo leidinio pokytis.
+  matched_block_ids:
+  - narrative-01-update-analysis-what-s-changed
+  - narrative-02-general-guidance
+structured_block_policies: []
+active_terms:
+- en: Advanced life support
+  lt: specializuotas gaivinimas
+  status: preferred
+  banned_lt:
+  - pažangus gaivinimas
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: specializuotas gaivinimas (ALS)
+- en: Basic Life Support
+  lt: pradinis gaivinimas
+  status: preferred
+  banned_lt:
+  - bazinis gaivinimas
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: pradinis gaivinimas (BLS)
+- en: Breech Birth
+  lt: vaisiaus sėdmenų pirmeiga
+  status: preferred
+  banned_lt: []
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: gairės dėl vaisiaus sėdmenų pirmeigos
+- en: Cord Prolapse
+  lt: virkštelės iškritimas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: virkštelės iškritimas
+- en: Shoulder Dystocia
+  lt: vaisiaus pečių distocija
+  status: preferred
+  banned_lt:
+  - petukų distocija
+  - petukų distocijai
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: vaisiaus pečių distocija
+- en: Abdominal Pain
+  lt: pilvo skausmas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: pilvo skausmas
+- en: Abdominal Trauma
+  lt: pilvo trauma
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: pilvo trauma
+- en: Acute Coronary Syndrome
+  lt: ūminis koronarinis sindromas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: ūminis koronarinis sindromas (ŪKS)
+- en: Alcohol-Use Disorders
+  lt: alkoholio vartojimo sutrikimai
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: alkoholio vartojimo sutrikimai
+- en: Allergic Reactions including Anaphylaxis
+  lt: alerginės reakcijos, įskaitant anafilaksiją
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: alerginės reakcijos, įskaitant anafilaksiją
+- en: Altered Level of Consciousness
+  lt: sutrikusi sąmonė
+  status: preferred
+  banned_lt:
+  - sutrikęs sąmonės lygis
+  - pakitęs sąmonės lygis
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: sutrikusi sąmonė
+- en: Burns and Scalds
+  lt: nudegimai ir nuplikymai
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: nudegimai ir nuplikymai
+- en: Care of the Newborn
+  lt: naujagimio priežiūra
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: naujagimio priežiūra
+- en: Chronic Obstructive Pulmonary Disease
+  lt: lėtinė obstrukcinė plaučių liga
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: lėtinė obstrukcinė plaučių liga (LOPL)
+- en: Electrical Injuries
+  lt: elektros trauma
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: elektros trauma
+- en: Foreign Body Airway Obstruction
+  lt: kvėpavimo takų obstrukcija svetimkūniu
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: kvėpavimo takų obstrukcija svetimkūniu
+- en: Gastrointestinal Bleeding
+  lt: kraujavimas iš virškinimo trakto
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: kraujavimas iš virškinimo trakto
+- en: Head Injury
+  lt: galvos trauma
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: galvos trauma
+- en: Heart Failure
+  lt: širdies nepakankamumas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: širdies nepakankamumas
+- en: Hyperventilation Syndrome
+  lt: hiperventiliacijos sindromas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: hiperventiliacijos sindromas
+- en: Implantable Cardioverter Defibrillator
+  lt: implantuojamas kardioverteris-defibriliatorius
+  status: preferred
+  banned_lt:
+  - implantuojamas kardioverteris defibriliatorius
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: implantuojamas kardioverteris-defibriliatorius (IKD)
+- en: Intravascular Fluid Therapy
+  lt: infuzinė terapija
+  status: preferred
+  banned_lt:
+  - infuzoterapija
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: infuzinė terapija
+- en: Limb Trauma
+  lt: galūnių trauma
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: galūnių trauma
+- en: Low Back Pain
+  lt: apatinės nugaros dalies skausmas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: apatinės nugaros dalies skausmas
+- en: Management of Post-partum Haemorrhage
+  lt: pogimdyminio kraujavimo valdymas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: pogimdyminio kraujavimo valdymas
+- en: Newborn Life Support
+  lt: naujagimio gaivinimas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: naujagimio gaivinimas
+- en: 'Out-of-Hospital Cardiac Arrest: Overview'
+  lt: 'širdies sustojimas už ligoninės ribų: apžvalga'
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: širdies sustojimas už ligoninės ribų
+- en: Overdose and Poisoning
+  lt: apsinuodijimas ir perdozavimas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: apsinuodijimas ir perdozavimas
+- en: Pelvic Trauma
+  lt: dubens trauma
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: dubens trauma
+- en: Pre-eclampsia and Eclampsia
+  lt: preeklampsija ir eklampsija
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: preeklampsija ir eklampsija
+- en: Pulmonary Embolism
+  lt: plaučių embolija
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: plaučių embolija
+- en: Return of Spontaneous Circulation
+  lt: spontaninės kraujotakos atsinaujinimas
+  status: preferred
+  banned_lt:
+  - spontaninės kraujotakos atkūrimas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: spontaninės kraujotakos atsinaujinimas (ROSC)
+- en: Sickle Cell Disease
+  lt: pjautuvinių ląstelių liga
+  status: preferred
+  banned_lt:
+  - pjautuvinė anemija
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: pjautuvinių ląstelių liga
+- en: Spinal Injury and Spinal Cord Injury
+  lt: stuburo trauma ir nugaros smegenų sužalojimas
+  status: preferred
+  banned_lt:
+  - stuburo ir nugaros smegenų trauma
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: stuburo trauma ir nugaros smegenų sužalojimas
+- en: Thoracic Trauma
+  lt: krūtinės trauma
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: krūtinės trauma
+- en: Trauma in Pregnancy
+  lt: trauma nėštumo metu
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: trauma nėštumo metu
+- en: Vaginal Bleeding
+  lt: kraujavimas iš makšties
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: kraujavimas iš makšties
+- en: Transient Ischaemic Attack
+  lt: praeinantis smegenų išemijos priepuolis
+  status: preferred
+  banned_lt:
+  - mikroinsultas
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: praeinantis smegenų išemijos priepuolis (PSIP)
+- en: Stroke and Transient Ischaemic Attack
+  lt: insultas ir praeinantis smegenų išemijos priepuolis
+  status: preferred
+  banned_lt:
+  - mikroinsultas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: insultas ir praeinantis smegenų išemijos priepuolis (PSIP)
+active_acronyms:
+- acronym: ALS
+  lt: specializuotas gaivinimas
+  en: Advanced life support
+  policy: lt-first
+  notes: Pirmą kartą išskleisti LT forma; `pažangus gaivinimas` nelaikyti kanoniniu variantu.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: specializuotas gaivinimas
+  section_scope: '005'
+- acronym: BLS
+  lt: pradinis gaivinimas
+  en: Basic Life Support
+  policy: lt-first
+  notes: Pirmą kartą išskleisti LT forma; `bazinis gaivinimas` nelaikyti kanoniniu variantu.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: pradinis gaivinimas
+  section_scope: '005'
+- acronym: ACS
+  lt: ūminis koronarinis sindromas
+  en: Acute Coronary Syndrome
+  policy: lt-first
+  notes: Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: ūminis koronarinis sindromas
+  section_scope: '005'
+- acronym: APGAR
+  lt: Apgar balas
+  en: APGAR score
+  policy: lt-first
+  notes: Patikrinta LT interneto neonatologijos šaltiniuose 2026-03-28.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: Apgar balas
+  section_scope: '005'
+- acronym: CBRN
+  lt: cheminiai, biologiniai, radiologiniai ir branduoliniai
+  en: Chemical Biological Radiological Nuclear
+  policy: original-first
+  notes: Valstybinėje civilinės saugos vartosenoje naudojama CBRN santrumpa; pirmą kartą galima išskleisti
+    LT forma.
+  must_expand_first: 'no'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: CBRN
+  section_scope: '005'
+- acronym: CRB-65
+  lt: CRB-65 skalė
+  en: CRB-65 score
+  policy: original-first
+  notes: Patikrinta LT interneto medicinos šaltiniuose 2026-03-28; prireikus pirmą kartą paaiškinti kaip
+    skalę.
+  must_expand_first: 'no'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: CRB-65 skalė
+  section_scope: '005'
+- acronym: DKA
+  lt: diabetinė ketoacidozė
+  en: Diabetic ketoacidosis
+  policy: lt-first
+  notes: Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: diabetinė ketoacidozė
+  section_scope: '005'
+- acronym: LVAD
+  lt: kairiojo skilvelio pagalbinis įrenginys
+  en: Left Ventricular Assist Device
+  policy: original-first
+  notes: Patikrinta LT interneto medicinos šaltiniuose 2026-03-28; pirmą kartą vartoti pilną LT formą
+    su LVAD santrumpa.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: kairiojo skilvelio pagalbinis įrenginys (LVAD)
+  section_scope: '005'
+- acronym: PSIP
+  lt: praeinantis smegenų išemijos priepuolis
+  en: Transient Ischaemic Attack
+  policy: lt-first
+  notes: Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29. Viešojoje kalboje gali pasitaikyti
+    `mikroinsultas`, bet formaliame medicininiame tekste vartotinas tikslus terminas.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: praeinantis smegenų išemijos priepuolis (PSIP)
+  section_scope: '005'
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: CMI
+  jurisdiction: australia
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `CMI` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: ReSPECT
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos gydymo apimties ir paciento valios dokumentavimo praktika
+  eu_fallback: remtis LT ir ES teisine bei klinikine praktika
+  scope: all
+  reason: JK `ReSPECT` sistema nėra LT norminis standartas.
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+- source_term: DNACPR
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos teisine ir klinikine sprendimų dėl gaivinimo apimties praktika
+  eu_fallback: remtis LT ir ES teisine bei klinikine praktika
+  scope: all
+  reason: JK `DNACPR` mechanizmas negali būti perkeliamas kaip LT standartas.
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+- source_term: DEA
+  jurisdiction: us
+  replacement_mode: omit_nontransferable
+  local_lt: remtis Lietuvos ir ES kontroliuojamų medžiagų reguliavimu
+  eu_fallback: remtis ES reguliavimu
+  scope: all
+  reason: '`DEA` yra JAV institucinis ir teisinis kontekstas, ne LT/EU norminis standartas.'
+  source_ref: ''
+  notes: Nepalikti pagrindiniame LT tekste.
+- source_term: USP
+  jurisdiction: us
+  replacement_mode: original_context_callout
+  local_lt: remtis Europos farmakopėja ir LT/EU oficialiais šaltiniais
+  eu_fallback: remtis European Pharmacopoeia
+  scope: all
+  reason: '`USP` yra JAV reference standartas, ne LT/EU numatytasis standartas.'
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+source_jurisdiction_signals:
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+- source_term: ReSPECT
+  jurisdiction: uk
+  signal_type: law
+  match_mode: regex
+  pattern: \bReSPECT\b
+  notes: UK treatment escalation / resuscitation framework.
+- source_term: DNACPR
+  jurisdiction: uk
+  signal_type: law
+  match_mode: regex
+  pattern: \bDNACPR\b
+  notes: UK resuscitation legal framework.
+localization_decisions:
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti kaip originalaus leidinio atnaujinimų katalogo pavadinimą.
+  source_ref: '`shared/localization/localization_overrides.tsv` (`JRCALC`); originalus skyrius `cND.xhtml`'
+  notes: Nenaudoti kaip LT norminių gairių katalogo.
+- source_term: RCUK
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik aiškinant, kad originale dalis gairių peržiūrėtos pagal RCUK.
+  source_ref: originalus skyrius `cND.xhtml`
+  notes: Tai ne LT norminis autoritetas šiame vertime.
+- source_term: NICE
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip originalo atnaujinimų komentarų kontekstą.
+  source_ref: originalus skyrius `cND.xhtml`
+  notes: Šiame skyriuje NICE nuorodos nėra perrašomos į LT klinikinius nurodymus.
+- source_term: ReSPECT
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik originalo komentare apie JK sprendimų ir planavimo sistemą.
+  source_ref: originalus skyrius `cND.xhtml`
+  notes: Nenaudoti kaip LT teisinio atitikmens.
+- source_term: DNACPR
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip originalo teisinio ir organizacinio konteksto dalį.
+  source_ref: originalus skyrius `cND.xhtml`
+  notes: Nenaudoti kaip LT teisinio termino pakaitalo.
+- source_term: SARC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip JK paslaugų modelio pavadinimą.
+  source_ref: originalus skyrius `cND.xhtml`
+  notes: LT tekste tai tik originalo nuoroda į JK centrus.
+- source_term: NPIS
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip originalo toksikologinės partnerystės pavadinimą.
+  source_ref: originalus skyrius `cND.xhtml`
+  notes: Nenaudoti kaip LT informacinio šaltinio pakaitalo.
+- source_term: NARU
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip originalo specialiųjų situacijų rengimo kontekstą.
+  source_ref: originalus skyrius `cND.xhtml`
+  notes: Tai JK organizacinio konteksto santrumpa.
+style_hotspots:
+- category: language_risk
+  text: reviewed and updated in line with... nepalikti kaip pasikartojančios pažodinės kalkės.
+- category: language_risk
+  text: new wording added, small wording update, fully revised and updated versti įvairiau, kad lentelės
+    nebūtų mechaniškos.
+- category: language_risk
+  text: standalone guideline, overview, tool, flowchart, algorithm vartoti nuosekliai ir neperkrauti anglų
+    kalbos ritmika.
+- category: anti_calque
+  text: Lentelių pastabas rašyti kaip trumpas LT santraukas, ne kaip pažodinį release notes stilių.
+- category: anti_calque
+  text: Vengti to paties sakinio karkaso kartojimo kiekvienoje eilutėje.
+- category: anti_calque
+  text: Kiekvieną skyrių grupę pateikti kaip aiškią teminę atnaujinimų lentelę, ne kaip mechanišką eksportuotą
+    registrą.
+- category: localization_decision
+  text: Pagrindinis LT tekstas pateikiamas kaip originalaus 2025 m. leidimo atnaujinimų suvestinė.
+- category: localization_decision
+  text: Lentelių pavadinimai ir pastabos išverstos į natūralią LT santraukų kalbą, bet išlaikytas originalo
+    struktūrinis suskirstymas pagal skyrių grupes.
+- category: localization_decision
+  text: Ten, kur pastabose minimos konkrečios JK sistemos, teisės aktai, skalės ar organizacijos, jos
+    paliktos tik originalo kontekste.
+- category: local_practice_change
+  text: Atnaujinimų komentarai neperteikti kaip LT norminiai nurodymai net ir tada, kai juose minimos
+    dozės, indikacijos, monitoring'as ar algoritmai.
+- category: local_practice_change
+  text: Formalus originalo changelog stilius perrašytas į skaitomesnį LT lentelių santraukos stilių.
+gold_examples: []
+term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates:
+- candidate_id: 005-update-analysis-what-s-changed-acronym-abd
+  candidate_kind: acronym
+  source_term: ABD
+  source_expansion: Acute Behavioural Disturbance
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Abdominal Pain | April 2025 | Revised and updated. The common causes table for adults
+    and children has been revised and symptom indicators added to aid working diagnosis. Includes diagram
+    of abdominal regions. |'
+  proposed_lt: Acute Behavioural Disturbance (ABD)
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/rs/actualedition/TAIS.348729/EEvxjRRsMN/format/ISO_PDF/
+  notes: JK originalo santrumpa arba neperkeliamas originalo konteksto vienetas; į LT akronimų bazę nekelti.
+- candidate_id: 005-update-analysis-what-s-changed-acronym-adrt
+  candidate_kind: acronym
+  source_term: ADRT
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Termination of Resuscitation and Verification of Death in Adults | September 2022
+    | Reviewed and updated in line with RCUK. New section on advance care planning included and more guidance
+    added to clarify decisions around ADRT, lasting power of attorney and DNACPR, expected and unexpected
+    deaths. |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK originalo santrumpa arba neperkeliamas originalo konteksto vienetas; į LT akronimų bazę nekelti.
+- candidate_id: 005-update-analysis-what-s-changed-acronym-bm
+  candidate_kind: acronym
+  source_term: BM
+  source_expansion: nce no absolute blood glucose threshold was identified in the literature, symptomatic
+    patients with a blood glucose level
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Glycaemic Emergencies in Adults and Children | July 2025 | Section 3.1, which covers
+    hypoglycaemia in patients without diabetes, has been updated following a review of the evidence. Since
+    no absolute blood glucose threshold was identified in the literature, symptomatic patients with a
+    blood glucose level (BM) of less than 3.9 mmol/L can now be considered hypoglycaemic. |'
+  proposed_lt: ''
+  status: not_acronym
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Tai ne aktyvios LT akronimų bazės vienetas šiam projektui. Neperkelti į shared akronimų sluoksnį.
+- candidate_id: 005-update-analysis-what-s-changed-acronym-cbrne
+  candidate_kind: acronym
+  source_term: CBRNE
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Atropine for CBRNE | October 2022 | Reviewed and updated. |'
+  proposed_lt: CBRNE
+  status: localization_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Santrumpa paliekama tik lokaliame specialiųjų situacijų wording sluoksnyje; į shared akronimų
+    bazę nepromuoti be atskiro LT terminijos pagrindo.
+- candidate_id: 005-update-analysis-what-s-changed-acronym-iv
+  candidate_kind: acronym
+  source_term: IV
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Clinical Considerations in Relation to Diversity and Equality | April 2025 | New
+    wording added around pulse oximetry in dark skin, and also regarding terminology in the disability
+    section. |'
+  proposed_lt: ''
+  status: not_acronym
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: '`IV` šiame projekte laikoma vartojimo kelio santrumpa (`intraveninis` / `į veną`), o ne `Intravascular
+    Fluid Therapy` sinonimu. Į aktyvią šio skyriaus terminų triage bazę nekelti kaip atskiro pavadinimo.'
+- candidate_id: 005-update-analysis-what-s-changed-acronym-ng24
+  candidate_kind: acronym
+  source_term: NG24
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Adrenal Insufficiency Patients (formerly called Steroid-dependent Patients) | April
+    2025 | Reviewed and updated in line with NICE guidanace NG24. Note new title (previously called Steroid-dependent
+    Patients). |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK originalo santrumpa arba neperkeliamas originalo konteksto vienetas; į LT akronimų bazę nekelti.
+- candidate_id: 005-update-analysis-what-s-changed-acronym-nice
+  candidate_kind: acronym
+  source_term: NICE
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Adrenal Insufficiency Patients (formerly called Steroid-dependent Patients) | April
+    2025 | Reviewed and updated in line with NICE guidanace NG24. Note new title (previously called Steroid-dependent
+    Patients). |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term | source_acronym
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje akronimų bazėje. | Aptikta source tekste
+    kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK originalo santrumpa arba neperkeliamas originalo konteksto vienetas; į LT akronimų bazę nekelti.
+- candidate_id: 005-update-analysis-what-s-changed-acronym-rcuk
+  candidate_kind: acronym
+  source_term: RCUK
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Basic Life Support in Adults | September 2022 | Reviewed and updated in line with
+    RCUK. New wording added. |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term | source_acronym
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje akronimų bazėje. | Aptikta source tekste
+    kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK originalo santrumpa arba neperkeliamas originalo konteksto vienetas; į LT akronimų bazę nekelti.
+- candidate_id: 005-update-analysis-what-s-changed-acronym-sarc
+  candidate_kind: acronym
+  source_term: SARC
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Sexual Assault | March 2024 | Fully revised and updated. Emphasis on use of Sexual
+    Assault Referral Centres (SARCs). |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK originalo santrumpa arba neperkeliamas originalo konteksto vienetas; į LT akronimų bazę nekelti.
+- candidate_id: 005-update-analysis-what-s-changed-term-acute-behavioural-disturbance
+  candidate_kind: term
+  source_term: Acute Behavioural Disturbance
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Acute Behavioural Disturbance (ABD) | February 2021 | Additional wording to emphasise
+    close monitoring of a restrained patient. |'
+  proposed_lt: Acute Behavioural Disturbance (ABD)
+  status: original_context_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/rs/actualedition/TAIS.348729/EEvxjRRsMN/format/ISO_PDF/
+  notes: Originalo JK ar tarptautinis kontekstinis vienetas; aktyvioje LT terminų bazėje nefiksuoti. Jei
+    prireiks, pilną LT sprendimą daryti lokalizuojant konkretų skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-adrenal-insufficiency-patients
+  candidate_kind: term
+  source_term: Adrenal Insufficiency Patients
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Adrenal Insufficiency Patients (formerly called Steroid-dependent Patients) | April
+    2025 | Reviewed and updated in line with NICE guidanace NG24. Note new title (previously called Steroid-dependent
+    Patients). |'
+  proposed_lt: antinksčių nepakankamumu sergantys pacientai
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-agitated-patients
+  candidate_kind: term
+  source_term: Agitated Patients
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Agitated Patients | January 2023 | New guideline to sit alongside ABD. |'
+  proposed_lt: Sujaudinti pacientai
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-atropine-for-cbrne
+  candidate_kind: term
+  source_term: Atropine for CBRNE
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Atropine for CBRNE | October 2022 | Reviewed and updated. |'
+  proposed_lt: atropinas CBRNE situacijoms
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-behavioural-emergencies
+  candidate_kind: term
+  source_term: Behavioural Emergencies
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Behavioural Emergencies | April 2025 | New guideline that should be used in conjunction
+    with other existing guidelines including: agitation, delirium and acute behavioural disturbance. |'
+  proposed_lt: Elgesio krizės
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-conditions-requiring-specific-prehospital-clinical-management
+  candidate_kind: term
+  source_term: Conditions Requiring Specific Prehospital Clinical Management
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Conditions Requiring Specific Prehospital Clinical Management | July 2024 | New guideline
+    covering a number of clinical presentations where specific pre-hospital clinical considerations are
+    needed. |'
+  proposed_lt: Būklės, kurioms reikalingas specifinis ikihospitalinis klinikinis valdymas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-consent-in-pre-hospital-care
+  candidate_kind: term
+  source_term: Consent in Pre-hospital Care
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Consent in Pre-hospital Care | September 2021 | Reviewed and updated. |'
+  proposed_lt: Sutikimas ikihospitalinėje priežiūroje
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-domestic-abuse
+  candidate_kind: term
+  source_term: Domestic Abuse
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Domestic Abuse | September 2022 | Revised and updated with current legislation. |'
+  proposed_lt: Smurtas artimoje aplinkoje
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-duty-of-care
+  candidate_kind: term
+  source_term: Duty of Care
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Duty of Care | May 2021 | Reviewed and updated. |'
+  proposed_lt: Rūpestingumo pareiga
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-emergency-tracheostomy-and-laryngectomy-pre-hospital-management
+  candidate_kind: term
+  source_term: Emergency Tracheostomy and Laryngectomy Pre-hospital Management
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Emergency Tracheostomy and Laryngectomy Pre-hospital Management | September 2022
+    | Reviewed in line with RCUK. Revised management algorithms. |'
+  proposed_lt: Skubi tracheostomos ir laringektomos pacientų ikihospitalinė priežiūra
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-end-of-life-care
+  candidate_kind: term
+  source_term: End of Life Care
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| End of Life Care | May 2021 | Reviewed and updated and includes the Macmillan/UKONS
+    tool. |'
+  proposed_lt: Gyvenimo pabaigos priežiūra
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-falls-in-older-adults
+  candidate_kind: term
+  source_term: Falls in Older Adults
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Falls in Older Adults | February 2022 | New wording around frailty scoring added;
+    consider using the clinical frailty scale, as per local pathways. |'
+  proposed_lt: Vyresnio amžiaus suaugusiųjų griuvimai
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-febrile-illness
+  candidate_kind: term
+  source_term: Febrile Illness
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Febrile Illness in Children | July 2019 | Reviewed and updated. |'
+  proposed_lt: karščiavimu pasireiškiančios ligos
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-glycaemic-emergencies
+  candidate_kind: term
+  source_term: Glycaemic Emergencies
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Glycaemic Emergencies in Adults and Children | July 2025 | Section 3.1, which covers
+    hypoglycaemia in patients without diabetes, has been updated following a review of the evidence. Since
+    no absolute blood glucose threshold was identified in the literature, symptomatic patients with a
+    blood glucose level (BM) of less than 3.9 mmol/L can now be considered hypoglycaemic. |'
+  proposed_lt: glikeminės skubios būklės
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-heat-related-illness
+  candidate_kind: term
+  source_term: Heat Related Illness
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Heat Related Illness | September 2023 | A full review and update. New table of medications
+    predisposing to heat related illness. |'
+  proposed_lt: Su karščiu susijusios būklės
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-human-factors
+  candidate_kind: term
+  source_term: Human Factors
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Human Factors | September 2022 | New guideline. A short section on human factors
+    will remain in ‘Out-of-Hospital Cardiac Arrest: Overview’. |'
+  proposed_lt: Žmogiškieji veiksniai
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-imminent-birth
+  candidate_kind: term
+  source_term: Imminent Birth
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Imminent Birth | October 2024 | Fully reviewed and revised. New wording about identifying
+    if birth is imminent and when to consider conveying to hospital. Inclusion of free birth, water birth,
+    home birth and en caul birth. Revised management algorithm. New table of high-risk pregnancy features.
+    Photos included to show estimates of volumes of blood loss. |'
+  proposed_lt: Artėjantis gimdymas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-major-complex-and-high-risk-incidents
+  candidate_kind: term
+  source_term: Major, Complex and High-Risk Incidents
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Major, Complex and High-Risk Incidents | January 2024 | Reviewed and updated by NARU.
+    Includes the new major incident triage tool algorithm (MITT). Includes the Ten Second Triage (TST),
+    a new primary scene triage tool that has been developed for use by all first responders to any incident
+    with multiple casualties. |'
+  proposed_lt: Dideli, sudėtingi ir didelės rizikos incidentai
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-maternal-resuscitation
+  candidate_kind: term
+  source_term: Maternal Resuscitation
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Maternal Resuscitation | July 2019 | Reviewed and updated. |'
+  proposed_lt: Motinos gaivinimas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-maternity-care
+  candidate_kind: term
+  source_term: Maternity Care
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Maternity Care (including Obstetric Emergency Overview) | October 2024 | Includes
+    a new Prehospital Maternity Decision Tool to be used for pregnant patients and up to 4 weeks post-partum.
+    |'
+  proposed_lt: akušerinė priežiūra
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-medical-emergencies-in-adults-overview
+  candidate_kind: term
+  source_term: Medical Emergencies in Adults – Overview
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Medical Emergencies in Adults – Overview | February 2022 | New wording around frailty
+    scoring added; consider using the clincial frailty scale, as per local pathways. |'
+  proposed_lt: Medicininės skubios būklės suaugusiesiems – apžvalga
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-medical-emergencies-in-children-overview
+  candidate_kind: term
+  source_term: Medical Emergencies in Children – Overview
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Medical Emergencies in Children – Overview | February 2021 | New reference added,
+    linking to an interactive education tool. |'
+  proposed_lt: Medicininės skubios būklės vaikams – apžvalga
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-meningococcal-meningitis-and-septicaemia
+  candidate_kind: term
+  source_term: Meningococcal Meningitis and Septicaemia
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Meningococcal Meningitis and Septicaemia | July 2019 | Reviewed and updated. |'
+  proposed_lt: Meningokokinis meningitas ir septicemija
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-mental-capacity-act-2005
+  candidate_kind: term
+  source_term: Mental Capacity Act 2005
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Mental Capacity Act 2005 | September 2022 | Revised and updated with current legislation.
+    New flowchart for assessing mental capacity included with information around causative nexus. |'
+  proposed_lt: '`Mental Capacity Act 2005`'
+  status: original_context_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Originalo JK ar tarptautinis kontekstinis vienetas; aktyvioje LT terminų bazėje nefiksuoti. Jei
+    prireiks, pilną LT sprendimą daryti lokalizuojant konkretų skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-mental-health-presentations
+  candidate_kind: term
+  source_term: Mental Health Presentations
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Mental Health Presentations | May 2023 | Completely revised guideline. |'
+  proposed_lt: Psichikos sveikatos būklės
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-non-traumatic-chest-pain-discomfort
+  candidate_kind: term
+  source_term: Non-Traumatic Chest Pain/Discomfort
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Non-Traumatic Chest Pain/Discomfort | July 2019 | Reviewed and updated. |'
+  proposed_lt: netrauminis krūtinės skausmas ar diskomfortas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-paediatric-gastroenteritis
+  candidate_kind: term
+  source_term: Paediatric Gastroenteritis
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Paediatric Gastroenteritis | July 2019 | Reviewed and updated. |'
+  proposed_lt: Gastroenteritas vaikams
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-pain-management
+  candidate_kind: term
+  source_term: Pain Management
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Pain Management in Adults and Children | July 2025 | Previously separate guidelines
+    for adults and children have now been unified into a single guideline. The updated guideline provides
+    age-specific treatment recommendations and incorporates the PAINAD scale for assessing pain in patients
+    with cognitive impairment. The treatment section has been revised and includes a table outlining pre-hospital
+    analgesia options. |'
+  proposed_lt: skausmo valdymas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-patient-confidentiality
+  candidate_kind: term
+  source_term: Patient Confidentiality
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Patient Confidentiality | June 2019 | Reviewed and updated. |'
+  proposed_lt: Paciento konfidencialumas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-patients-with-communication-difficulties
+  candidate_kind: term
+  source_term: Patients with Communication Difficulties
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Patients with Communication Difficulties | April 2025 | Amended wording following
+    feedback around patients who are deaf. |'
+  proposed_lt: Pacientai, turintys bendravimo sunkumų
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-police-incapacitants
+  candidate_kind: term
+  source_term: Police Incapacitants
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Police Incapacitants | October 2022 | Reviewed and updated by NARU. Updated guidance
+    on Conducted Energy Devices (Tasers). Updated assessment and management of irritant/incapacitant sprays,
+    attenuating energy projectiles and batons. |'
+  proposed_lt: Policijos naudojamos neutralizuojančios priemonės
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-respiratory-illness
+  candidate_kind: term
+  source_term: Respiratory Illness
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Respiratory Illness in Children | September 2022 | Removal of modified Taussig croup
+    score as not advised by NICE. Dexamethasone is now indicated for children with croup. |'
+  proposed_lt: kvėpavimo takų ligos
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-safeguarding-adults-at-risk
+  candidate_kind: term
+  source_term: Safeguarding Adults at Risk
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Safeguarding Adults at Risk | September 2022 | Revised and updated with current legislation.
+    |'
+  proposed_lt: Pažeidžiamų suaugusiųjų apsauga
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-safeguarding-children
+  candidate_kind: term
+  source_term: Safeguarding Children
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Safeguarding Children | September 2022 | Revised and updated with current legislation.
+    |'
+  proposed_lt: Vaikų apsauga
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-sexual-assault
+  candidate_kind: term
+  source_term: Sexual Assault
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Sexual Assault | March 2024 | Fully revised and updated. Emphasis on use of Sexual
+    Assault Referral Centres (SARCs). |'
+  proposed_lt: Seksualinis smurtas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-staff-health-and-wellbeing
+  candidate_kind: term
+  source_term: Staff Health and Wellbeing
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Staff Health and Wellbeing | June 2019 | Reviewed and updated. |'
+  proposed_lt: Personalo sveikata ir gerovė
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-trauma-emergencies-in-adults-overview
+  candidate_kind: term
+  source_term: Trauma Emergencies in Adults – Overview
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Trauma Emergencies in Adults – Overview | April 2025 | Small wording update to reflect
+    current trust practices around use of collars for immobilisation. |'
+  proposed_lt: Trauminės skubios būklės suaugusiesiems – apžvalga
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-trauma-emergencies-in-children-overview
+  candidate_kind: term
+  source_term: Trauma Emergencies in Children – Overview
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Trauma Emergencies in Children – Overview | February 2022 | New guidance around assessment
+    and management of hanging added. New reference added. |'
+  proposed_lt: Trauminės skubios būklės vaikams – apžvalga
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-vaginal-bleeding-gynaecological-causes
+  candidate_kind: term
+  source_term: 'Vaginal Bleeding: Gynaecological Causes'
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Vaginal Bleeding: Gynaecological Causes | March 2020 | Reviewed and updated. |'
+  proposed_lt: 'Kraujavimas iš makšties: ginekologinės priežastys'
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
+- candidate_id: 005-update-analysis-what-s-changed-term-vascular-emergencies
+  candidate_kind: term
+  source_term: Vascular Emergencies
+  source_expansion: ''
+  chapter_slug: 005-update-analysis-what-s-changed
+  source_context: '| Vascular Emergencies | July 2025 | This guideline has been updated in response to
+    recent clinical feedback and now includes a new section addressing ‘other vascular bleed’ considerations.
+    |'
+  proposed_lt: kraujagyslių skubios būklės
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
+    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.

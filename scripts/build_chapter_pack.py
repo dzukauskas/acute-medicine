@@ -38,6 +38,7 @@ from book_workflow_support import (
 from mine_term_candidates import refresh_term_candidates_for_chapter
 from validate_chapter_inventory import validate_chapter_inventory_or_raise
 from validate_localization_readiness import validate_localization_readiness_or_raise
+from validate_term_readiness import validate_term_readiness_or_raise
 
 
 BLOCK_TYPE_TO_MODE = {
@@ -749,6 +750,10 @@ def main() -> int:
     paths = chapter_paths_for_slug(slug)
     context = load_chapter_context(slug)
     term_candidates = refresh_term_candidates_for_chapter(slug, book_root=args.book_root)
+    try:
+        validate_term_readiness_or_raise(slug, book_root=args.book_root, current_rows=term_candidates)
+    except ValueError as exc:
+        raise SystemExit(str(exc))
     inventory = extract_inventory(context["research_sections"])
     localization_research = extract_localization_research(context["research_sections"])
     overrides = select_localization_overrides(slug, context["source_text"], context["research_text"])
