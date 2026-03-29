@@ -192,7 +192,7 @@ The glossary of terms listed below is designed to assist reading ease and is NOT
 |  | S – Sensation |
 |  | C – Circulation |
 | msec | Millisecond |
-| MTC | Major Triage Centre |
+| MTC | Major Trauma Centre |
 | NARU | National Ambulance Resilience Unit |
 | NEET | Not in Education, Employment or Training |
 | NEWS | National Early Warning Score |

@@ -28,7 +28,7 @@
 
 - Santrumpų eilučių: `227`
 - Unikalių santrumpų: `221`
-- Dubletai, kuriems reikia atskiro sprendimo: `CPP`, `CRT`, `CSE`, `FGM`, `ICD`, `IN`
+- Dubletai, kuriems reikia atskiro sprendimo: `CPP`, `CRT`, `CSE`, `ICD`, `IN`
 - Jau padengta aktyvioje `shared` bazėje: `14`
 - Dar nepadengta aktyvioje `shared` bazėje: `213`
 
@@ -84,16 +84,16 @@
 | ALoC | Altered level of consciousness | sutrikusi sąmonė | approved_global | LT klinikinė vartosena | Jau užrakinta `shared/lexicon`. |
 | ALS | Advanced Life Support | specializuotas gaivinimas (ALS) | approved_global | LT gaivinimo vartosena | Jau užrakinta `shared/lexicon`. |
 | AMHP | Approved Mental Health Professional | palikti originalo JK kontekste | original_context_only | JK paslaugų modelio terminas | Neperkelti į LT aktyvią bazę. |
-| APC | Antero-Posterior Compression | kol kas tikslinti lokalizuojant atitinkamą traumos skyrių | open | LT traumų vartosena reikalinga | Tai ne šio žodyno vien tik mechaniškai verčiamas vienetas. |
+| APC | Antero-Posterior Compression | lokaliai vartoti `horizontalaus spaudimo iš priekio arba iš užpakalio sukelti lūžiai` | localization_only | LT dubens traumų klasifikacijos vartosena | Originali `APC` santrumpa nekelta į `shared`; LT šaltiniuose vartojamas aprašomasis Young-Burgess klasifikacijos pavadinimas. |
 | ARDS | Acute Respiratory Distress Syndrome | ūminis respiracinio distreso sindromas (ARDS) | approved_global | LT intensyviosios terapijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | ATMIST | Age / Time / Mechanism / Injuries / Signs / Treatment | ATMIST perdavimo schema | localization_only | GMP perdavimo mnemonika | Santrumpė paliekama originali, o LT tekste aiškinami jos komponentai. |
-| ATP | Anti-Tachycardia Pacing | kol kas tikslinti lokalizuojant atitinkamą kardiologijos skyrių | open | LT kardiologijos vartosena reikalinga | Reikia atskiro LT šaltinio. |
+| ATP | Anti-Tachycardia Pacing | antitachikardinė stimuliacija (ATP) | approved_global | LT kardiologijos ir implantuojamų prietaisų vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | AV | Atrioventricular | atrioventrikulinis | approved_global | LT kardiologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | AVPU | Alert / Voice / Pain / Unresponsive | AVPU vertinimas; lokalizuojami tik atsako lygiai | localization_only | GMP neurologinės būklės vertinimo schema | Santrumpė paliekama originali. |
 | BBB | Bundle branch block | Hiso pluošto kojytės blokada | approved_global | LT kardiologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
-| BG | Blood Glucose | kol kas lokalizuoti kaip `gliukozė kraujyje`, bet nekelti į shared akronimus be papildomo pagrindo | open | LT diabetologijos / GMP vartosena reikalinga | `BG` gali būti per daug anglizuota LT dokumentacijai. |
+| BG | Blood Glucose | lokaliai vartoti `gliukozė kraujyje` arba `glikemija` | localization_only | LT diabetologijos ir GMP vartosena | Originali `BG` santrumpa nekelta į `shared`; LT šaltiniuose aktyvesnės pilnos formos. |
 | BIA | Best Interest Assessors | palikti originalo JK kontekste | original_context_only | JK paslaugų ir teisės modelis | Į LT aktyvią bazę nekelti. |
-| BiPAP | Bilevel Positive Pressure Ventilation | kol kas palikti `BiPAP` su aprašomąja LT forma | open | LT intensyviosios terapijos vartosena reikalinga | Reikia apsispręsti, ar LT tekste laikyti santrumpę, ar pilną aprašą. |
+| BiPAP | Bilevel Positive Pressure Ventilation | dviejų lygių teigiamo slėgio ventiliacija (BiPAP) | approved_global | LT intensyviosios terapijos ir SAM metodinė vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | BLS | Basic Life Support | pradinis gaivinimas (BLS) | approved_global | LT gaivinimo vartosena | Jau užrakinta `shared/lexicon`. |
 | BM | Stick Measures blood sugar | nekelti į aktyvią bazę | not_acronym | projekto terminų politika | Tai nepageidautinas, anglizuotas praktinis trumpinys. |
 | BMI | Body mass index | lokaliai vartoti `kūno masės indeksas (KMI)` | localization_only | LT visuomenės sveikatos ir klinikinė vartosena | Originali `BMI` santrumpa nekelta į `shared`, nes LT aktyvi vartosena remiasi `KMI`. |
@@ -102,7 +102,7 @@
 | BR | Breech | lokaliai vartoti `vaisiaus sėdmenų pirmeiga` | localization_only | LT akušerinė vartosena | Remiasi jau užrakintu `Breech Birth -> vaisiaus sėdmenų pirmeiga`; trumpinys `BR` nekeliamas į `shared`. |
 | BTCS | Bilateral Tonic-Clonic Seizures | lokaliai vartoti `abipusiai toniniai-kloniniai traukuliai` | localization_only | LT vaikų neurologijos vartosena | Originali `BTCS` santrumpa nekelta į `shared`, nes LT praktikoje aktyvaus akronimo vartosena nestabili. |
 | BTS | British Thoracic Society | palikti originalo JK organizacijos kontekste | original_context_only | JK profesinė draugija | Ne LT medicininio termino bazės vienetas. |
-| BVM | Bag-Valve-Mask | kol kas nekelti į `shared`; reikia atskiro LT šaltinio dėl kanoninio wording | open | LT gaivinimo / skubiosios pagalbos vartosena dar tikslintina | Negalima spėlioti tarp `maišas su vožtuvu ir kauke`, `gaivinimo maišas` ir kitų variantų. |
+| BVM | Bag-Valve-Mask | lokaliai vartoti konkretų prietaiso aprašą, pvz., `Ambu tipo kvėpavimo maišas su apsauginiu slėgio vožtuvu ir kauke` | localization_only | LT gaivinimo ir neonatologijos įrangos vartosena | Originali `BVM` santrumpa nekelta į `shared`; LT vartosena labiau aprašo konkretų prietaisą. |
 
 ## 006 triage: C-D blokas (2026-03-29)
 
@@ -113,12 +113,12 @@
 | CBRNE | Chemical, Biological, Radiological, Nuclear and Explosive | lokaliai aiškinti LT forma, bet nekelti į `shared` | localization_only | LT civilinės saugos vartosenoje dominuoja `CBRN`, ne `CBRNE` | Šio leidinio originali santrumpa negali tapti kanoniniu LT bazės vienetu. |
 | CBT | Cognitive Behavioural Therapy | kognityvinė elgesio terapija (CBT) | approved_global | LT psichiatrijos ir psichologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | CCF | Congestive cardiac failure | stazinis širdies nepakankamumas (CCF) | approved_global | LT kardiologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
-| CCS | Central Cord Syndrome | kol kas nekelti į `shared`; lokalizuoti kaip `nugaros smegenų centrinio pluošto sindromas` tik su papildomu kontekstu | open | e-TAR / TLK vartosena | Oficiali LT forma rasta, bet projekto žodyne dar reikia apsispręsti dėl kanoninio wording, nes vartosena variantiška. |
+| CCS | Central Cord Syndrome | lokaliai vartoti `nugaros smegenų centrinio pluošto sindromas` | localization_only | VLK / TLK-10-AM vartosena ir dubleto kontrolė | Originali `CCS` santrumpa nekelta į `shared`, nes tame pačiame leidinyje ji vartojama ir kaip `casualty clearing station`. |
 | CES | Cauda Equina Syndrome | arklio uodegos sindromas (CES) | approved_global | LT neurochirurgijos ir ortopedijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | CEW | Controlled Electrical Weapon | palikti originalo kontekste arba aiškinti aprašomai lokaliai | original_context_only | policijos / saugumo terminas, ne LT medicininės bazės branduolys | Į `shared/lexicon` nekelti. |
 | CFR | Community first responder | palikti originalo JK reagavimo modelio kontekste | original_context_only | JK / Airijos ikihospitalinių paslaugų modelis | Ne LT norminis atitikmuo. |
 | CMHT | Community Mental Health Team | palikti originalo JK paslaugų kontekste | original_context_only | JK psichikos sveikatos paslaugų struktūra | Ne LT aktyvios bazės vienetas. |
-| CMI | Combined Mechanical Injury | kol kas tikslinti traumos kontekste | open | LT traumų vartosena reikalinga | Neužrakinti mechaniškai be konkretaus klinikinio konteksto. |
+| CMI | Combined Mechanical Injury | kol kas nekelti į `shared`; reikia stipresnio LT dubens traumų šaltinio dėl kanoninio atitikmens | open | LT dubens traumų vartosena dar nepakankamai užrakinta | JRCALC aprašo tai kaip kelių mechanizmų derinį, bet stabilaus LT kanoninio termino interneto šaltiniuose dar neradau. |
 | CNS | Central Nervous System | centrinė nervų sistema (CNS) | approved_global | LT neurologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | CO | Carbon monoxide | anglies monoksidas (CO) | approved_global | LT toksikologijos ir visuomenės sveikatos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | CO2 | Carbon dioxide | anglies dioksidas (CO2) | approved_global | LT akademinė ir standartizacijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
@@ -126,8 +126,8 @@
 | COPD | Chronic Obstructive Pulmonary Disease | lėtinė obstrukcinė plaučių liga (LOPL / COPD) | approved_global | LT pulmonologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`; LT vartosenoje dažnesnė `LOPL`. |
 | CPAP | Continuous Positive Airway Pressure | nuolatinis teigiamas kvėpavimo takų slėgis (CPAP) | approved_global | LT oficiali ir ligoninių vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | CPN | Community Psychiatric Nurse | palikti originalo JK paslaugų kontekste | original_context_only | JK paslaugų modelis | Į LT aktyvią bazę nekelti. |
-| CPP | Cerebral Perfusion Pressure | `smegenų perfuzinis spaudimas`, bet dėl dubleto kol kas nekelti į `shared` | open | LT neurochirurgijos vartosena | Dubletas su `coronary perfusion pressure`; reikia atskiro kontekstinio sprendimo. |
-| CPP | Coronary perfusion pressure | `koronarinis / vainikinių arterijų perfuzinis spaudimas`, bet dėl dubleto kol kas nekelti į `shared` | open | LT kardiologijos vartosena dar tikslintina | Dubletas su `cerebral perfusion pressure`. |
+| CPP | Cerebral Perfusion Pressure | lokaliai vartoti `smegenų perfuzinis spaudimas` | localization_only | LT neurotraumos ir neuroanesteziologijos vartosena | Dubletas su `coronary perfusion pressure`; aktyvios `CPP` santrumpos į `shared` nekelti. |
+| CPP | Coronary perfusion pressure | lokaliai vartoti `vainikinių arterijų perfuzinis spaudimas` | localization_only | LT gaivinimo fiziologijos vartosena | Dubletas su `cerebral perfusion pressure`; aktyvios `CPP` santrumpos į `shared` nekelti. |
 | CPR | Cardiopulmonary Resuscitation | kardiopulmoninis gaivinimas (CPR) | approved_global | LT gaivinimo vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | CPR-IC | CPR-induced consciousness | kol kas nekelti į `shared`; lokalizuoti aprašomai tik atitinkamame gaivinimo kontekste | open | LT šaltinio pagrindas silpnas | Neužrakinti be stipresnio LT pagrindo. |
 | CRT | Capillary Refill Test | lokaliai vartoti `kapiliarų prisipildymo laikas`, bet originalios `CRT` santrumpos nekelti į `shared` | localization_only | LT skubiosios pagalbos vartosena | Dubletas su `cardiac resynchronisation therapy`; automatinis aktyvus akronimas būtų rizikingas. |
@@ -163,7 +163,7 @@
 | EtCO2 | Exhaled (end-tidal) carbon dioxide | iškvepiamo oro anglies dioksidas (EtCO2) | approved_global | LT anesteziologijos ir gaivinimo vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | FAST | F – Face / A – Arms / S – Speech / T – Test | FAST schema; LT lokalizuoti komponentus | localization_only | insulto atpažinimo mnemonika | Santrumpė paliekama originali, nes remiasi EN raidėmis. |
 | FBAO | Foreign Body Airway Obstruction | kvėpavimo takų obstrukcija svetimkūniu (FBAO) | approved_global | LT skubiosios pagalbos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`, remiantis jau validuotu terminu. |
-| FGM | Female genital mutilation | kol kas nekelti į `shared`; reikia stipresnio LT šaltinio dėl kanoninio wording | open | LT viešosios sveikatos / žmogaus teisių vartosena dar tikslintina | Šiame bloke eilutė pasikartoja du kartus; dubleto sprendimą atidėti iki termino užrakinimo. |
+| FGM | Female genital mutilation | lokaliai vartoti `moterų lytinių organų žalojimas` | localization_only | LT žmogaus teisių, viešosios sveikatos ir pagalbos nukentėjusiems vartosena | Originali `FGM` santrumpa nekelta į `shared`; LT vartosenoje vyrauja pilna forma, o source žodyne eilutė dubliuojasi tik dėl raidžių dydžio. |
 | FLACC | F – Face / L – Legs / A – Activity / C – Cry / C – Consolability | FLACC skausmo vertinimo skalė | localization_only | LT vaikų skausmo vertinimo metodikos | Santrumpė paliekama originali; LT metodikose vartojama kaip skalės pavadinimas. |
 | FII | Fabricated or Induced Illness | kol kas nekelti į `shared`; reikia patikimo LT šaltinio dėl kanoninio termino | open | LT vaikų apsaugos ir pediatrijos vartosena dar tikslintina | Negalima spėlioti tarp kelių galimų vertimo variantų. |
 
@@ -183,7 +183,7 @@
 | HFpEF | Heart failure with preserved ejection fraction | širdies nepakankamumas su išlikusia kairiojo skilvelio išstūmio frakcija (HFpEF) | approved_global | LT kardiologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | HFrEF | Heart failure with reduced ejection fraction | širdies nepakankamumas su sumažėjusia kairiojo skilvelio išstūmio frakcija (HFrEF) | approved_global | LT kardiologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | HIV | Human Immunodeficiency Virus | žmogaus imunodeficito virusas (ŽIV / HIV) | approved_global | LT infekcinių ligų vartosena | Užrakinta `shared/lexicon/acronyms.tsv`; LT vartosenoje dažnesnė santrumpa `ŽIV`. |
-| HME | Heat moisture exchanger | kol kas nekelti į `shared`; reikia patikimo LT šaltinio dėl kanoninio wording | open | LT anesteziologijos / kvėpavimo terapijos vartosena dar tikslintina | Negalima spėlioti tarp `šilumos ir drėgmės keitiklio`, `filtro` ir kitų variantų. |
+| HME | Heat moisture exchanger | lokaliai vartoti `šilumos ir drėgmės keitiklis (dirbtinė nosis)` | localization_only | LT tracheostomos ir kvėpavimo takų priežiūros vartosena | Originali `HME` santrumpa nekelta į `shared`, nes šiame leidinyje ta pati santrumpa vartojama ir kita reikšme (`Homemade Explosives`). |
 | HPV | Human papillomavirus | žmogaus papilomos virusas (ŽPV / HPV) | approved_global | LT infekcinių ligų ir onkoprevencijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`; LT vartosenoje dažnesnė santrumpa `ŽPV`. |
 | HR | Heart Rate | lokaliai vartoti `širdies susitraukimų dažnis` | localization_only | LT kardiologinė ir monitoravimo vartosena | Originali `HR` santrumpa nekelta į `shared`; LT tekstuose dažnesnė pilna forma arba `ŠSD`. |
 | HVS | Hyperventilation Syndrome | hiperventiliacijos sindromas (HVS) | approved_global | remiasi jau validuotu LT terminu | Užrakinta `shared/lexicon/acronyms.tsv`. |
@@ -192,7 +192,7 @@
 
 | Santrumpa | Originalas | LT sprendimas | Statusas | LT šaltinio kryptis | Pastaba |
 | --- | --- | --- | --- | --- | --- |
-| IA | Impaired awareness | kol kas nekelti į `shared`; reikia patikimo LT šaltinio dėl kanoninio neurologinio wording | open | LT epileptologijos vartosena dar tikslintina | Negalima spėlioti tarp `sutrikęs sąmoningumas`, `sutrikęs budrumas` ir kitų variantų. |
+| IA | Impaired awareness | lokaliai vartoti `hipoglikemijos nejutimas` | localization_only | LT diabetologijos vartosena | Šiame leidinyje `IA` reiškia ne bendrą sąmoningumo sutrikimą, o sumažėjusį ar išnykusį hipoglikemijos jutimą. |
 | IBS | Irritable Bowel Syndrome | dirgliosios žarnos sindromas (DŽS / IBS) | approved_global | LT gastroenterologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`; LT vartosenoje dažnesnė santrumpa `DŽS`. |
 | ICD | International Classification of Diseases | lokaliai vartoti `Tarptautinė ligų klasifikacija (TLK)` | localization_only | LT kodavimo ir klasifikavimo vartosena | Dubletas su `Implantable Cardioverter Defibrillator`; originalios `ICD` santrumpos į `shared` nekelti. |
 | ICD | Implantable Cardioverter Defibrillator | lokaliai vartoti `implantuojamas kardioverteris-defibriliatorius (IKD)` | localization_only | LT kardiologijos vartosena | LT terminas jau užrakintas `shared/lexicon/termbase.tsv`, bet dėl dubleto aktyvios `ICD` santrumpos į `shared` nekelti. |
@@ -221,7 +221,7 @@
 | kg | Kilogram | lokaliai vartoti `kg` / `kilogramas` pagal sakinį | not_acronym | SI vienetų vartosena | Tai vieneto žymėjimas, ne medicininis akronimas. |
 | kPa | Kilopascal | lokaliai vartoti `kPa` / `kilopaskalis` pagal sakinį | not_acronym | SI vienetų vartosena | Tai vieneto žymėjimas, ne medicininis akronimas. |
 | LBBB | Left Bundle Branch Block | kairiosios Hiso pluošto kojytės blokada (LBBB) | approved_global | LT kardiologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`; LT vartosenoje galimi vietiniai trumpiniai, bet šiame leidinyje laikomasi originalios `LBBB` santrumpos. |
-| LC | Lateral Compression | kol kas nekelti į `shared`; reikia tvirtesnio LT traumų klasifikacijos šaltinio dėl kanoninio wording | open | LT dubens traumų vartosena dar tikslintina | Negalima spėlioti tarp kelių galimų aprašomųjų variantų. |
+| LC | Lateral Compression | lokaliai vartoti `šoninio spaudimo sukelti lūžiai` / `lateralinės kompresijos pažeidimai` pagal kontekstą | localization_only | LT dubens traumų klasifikacijos vartosena | Originali `LC` santrumpa nekelta į `shared`; LT šaltiniuose aktyvesni aprašomieji Young-Burgess / AO klasifikacijos pavadinimai. |
 | LMP | Last Menstrual Period | lokaliai vartoti `paskutinių mėnesinių pirmoji diena` | localization_only | LT akušerinė vartosena | Originali `LMP` santrumpa nekelta į `shared`, nes LT tekstuose dažniau vartojama pilna forma. |
 | LOC | Level of Consciousness | lokaliai vartoti `sąmonės lygis` | localization_only | LT neurologinė ir skubiosios pagalbos vartosena | Originali `LOC` santrumpa nekelta į `shared`; LT klinikiniuose tekstuose paprastai vartojama pilna forma ar skalės pavadinimas. |
 | LPA | Lasting Power of Attorney | palikti originalo JK teisės kontekste | original_context_only | JK teisės sistema | Ne medicininės terminijos branduolys. |
@@ -252,7 +252,7 @@
 | MOI | Mechanisms of Injury | lokaliai vartoti `traumos mechanizmas` | localization_only | LT traumatologijos ir GMP vartosena | Originali `MOI` santrumpa nekelta į `shared`. |
 | MSC | M – Motor / S – Sensation / C – Circulation | MSC vertinimas; LT lokalizuoti komponentus | localization_only | klinikinės vertinimo mnemonikos vartosena | Tai mnemonika, ne LT aktyvios terminų bazės akronimas. |
 | msec | Millisecond | lokaliai vartoti `ms` / `milisekundė` pagal sakinį | not_acronym | vienetų vartosena | Tai vieneto žymėjimas, ne medicininis akronimas. |
-| MTC | Major Triage Centre | kol kas nekelti į `shared`; tikėtina source / formatavimo ar terminijos neaiškumo problema | open | reikia patikrinti pagal originalų šaltinį | Negalima spėlioti, ar turėta omenyje `Major Trauma Centre`, kol tai nepatvirtinta originale. |
+| MTC | Major Trauma Centre | palikti originalo JK traumų sistemos kontekste | original_context_only | vidinė leidinio vartosena ir JK traumų tinklo modelis | 006 helper source eilutė buvo akivaizdžiai klaidinga kaip `Major Triage Centre`; kituose šios knygos skyriuose vartojama `Major Trauma Centre`. |
 | NARU | National Ambulance Resilience Unit | palikti originalo JK sistemos kontekste | original_context_only | JK tarnybų modelis | Į LT aktyvią bazę nekelti. |
 | NEET | Not in Education, Employment or Training | palikti originalo socialinės politikos kontekste | original_context_only | JK / socialinės politikos terminas | Ne medicininės terminijos branduolys. |
 | NEWS | National Early Warning Score | ankstyvojo perspėjimo skalė (NEWS) | approved_global | LT skubiosios pagalbos ir sepsio vartosena | Užrakinta `shared/lexicon/acronyms.tsv`; LT šaltiniuose plačiai matoma ir forma `NEWS2`. |
@@ -278,7 +278,7 @@
 | PCO 2 | Measure of the Partial Pressure of Carbon dioxide | lokaliai vartoti `dalinis anglies dioksido slėgis`, pagal kontekstą dažniausiai `pCO2` / `PaCO2` | localization_only | LT anesteziologijos ir kraujo dujų vartosena | Source žyma nenuosekli, todėl nekelta į `shared` kaip atskiras aktyvus akronimas. |
 | PE | Pulmonary Embolism | plaučių embolija (PE) | approved_global | LT kardiologijos ir akušerijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`; remiasi jau validuotu termino įrašu. |
 | PEaRL | Pupils Equal and Reacting to Light | PEaRL vertinimas; LT lokalizuoti kaip `vyzdžiai vienodi ir reaguoja į šviesą` | localization_only | klinikinio ištyrimo mnemonic tipo žyma | Santrumpė nekelta į `shared`, nes tai aprašomoji trumpa mnemonika. |
-| PEA | Pulseless Electrical Activity | kol kas nekelti į `shared`; reikia tvirtesnio LT šaltinio tiksliai formai tarp `elektrinio aktyvumo be pulso` ir senesnės `elektromechaninės disociacijos` vartosenos | open | LT gaivinimo vartosena dar tikslintina | Negalima spėlioti tarp kelių konkurencinių LT formų. |
+| PEA | Pulseless Electrical Activity | elektromechaninė disociacija (EMD / PEA) | approved_global | LT kardiologijos ir gaivinimo vartosena | Užrakinta `shared/lexicon/acronyms.tsv`; LT šaltiniuose matoma ir aprašomoji forma `elektrinis aktyvumas be pulso`. |
 | PEF | Peak Expiratory Flow | didžiausias iškvėpimo srovės greitis (PEF) | approved_global | LT pulmonologijos ir SAM vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | PEFR | Peak Expiratory Flow Rate | lokaliai vartoti tą pačią LT formą kaip `PEF` | localization_only | LT pulmonologijos vartosena | Neaktyvinta atskirai, kad nedubliuotų aktyvaus `PEF` įrašo. |
 | PHECG | Pre-hospital 12-lead electrocardiogram | lokaliai vartoti `ikihospitalinė 12 derivacijų elektrokardiograma` | localization_only | LT GMP ir kardiologinė vartosena | Originali `PHECG` santrumpa nekelta į `shared`. |
@@ -340,8 +340,12 @@
 
 ### C-D blokui faktiškai naudoti LT interneto šaltiniai
 
-- e-TAR TLK / traumų kodavimo vartosena dėl `CCS`: `nugaros smegenų centrinio pluošto sindromas`  
-  https://www.e-tar.lt/rs/lasupplement/3a0abe6011ef11ea9d279ea27696ab7b/d379c5d0127811ea9d279ea27696ab7b/format/ISO_PDF/
+- VLK TLK-10-AM vartosena dėl `CCS`: `nugaros smegenų centrinio pluošto sindromas (nugaros smegenų nevisiškas nutraukimas) kaklo lygyje`  
+  https://ebook.vlk.lt/e.vadovas_iki2016.12.31/topic/lt.webmedia.vlk.drg.icd.ebook.content/html/icd/19skyrius.html
+- SAM sunkios traumos metodika dėl `CPP`: `galvos smegenų perfuzinis spaudimas`  
+  https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/Metodiniai%20dokumentai/SUNKIOS%20TRAUMOS.pdf
+- LSMU / Medicina gaivinimo fiziologijos vartosena dėl `CPP`: `vainikinių arterijų perfuzinis spaudimas`  
+  https://medicina.lsmuni.lt/med/0604/0604-11l.pdf
 - SAM 2024 veiklos ataskaita dėl `CPAP`: `Continuous Positive Airway Pressure – nuolatinis teigiamas kvėpavimo takų slėgis`  
   https://sam.lrv.lt/public/canonical/1744181951/27435/24-03_SAM%2520VEIKLOS%2520ATASKAITA_final.pdf
 - LSMU pulmonologijos vartosena dėl `COPD`: `lėtinė obstrukcinė plaučių liga (LOPL)`  
@@ -355,12 +359,26 @@
 
 ### Papildomi A-B ir E-F blokų LT interneto šaltiniai
 
+- VGTU biomechanikos / traumatologijos darbas dėl `APC`: `horizontalaus spaudimo iš priekio arba iš užpakalio sukelti lūžiai` Young-Burgess klasifikacijoje  
+  https://gs.elaba.lt/object/elaba%3A2144459/2144459.pdf
 - SAM / LSMU vartosena dėl `BMI`: `kūno masės indeksas (KMI)`  
   https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/visuomenes-sveikatos-prieziura/mityba-ir-fizinis-aktyvumas/Sveikos_ir_tvarios_mitybos_rekom_ilgos_2022.pdf
 - LSMU vartosena dėl `BP`: `arterinis kraujospūdis (AKS)`  
   https://lsmu.lt/cris/entities/publication/7c8fb233-3610-4232-ba9f-d626c30d0698
 - LSMU vartosena dėl `BTCS`: `toniniai-kloniniai`, `generalizuoti toniniai-kloniniai traukuliai`  
   https://lsmu.lt/cris/entities/publication/8131199e-99ae-4e5e-b669-352e03b02ea0
+- LSMU / SAM vartosena dėl `ATP`: `antitachikardinė stimuliacija`  
+  https://lsmu.lt/cris/entities/publication/7e8cf9a7-f717-48ce-9b40-416dedd756de
+- SAM diabetologinė vartosena dėl `BG`: `glikemija`, `gliukozės koncentracija kraujyje`  
+  https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/Metodiniai%20dokumentai/CUKRINIS%20DIABETAS.pdf
+- SAM širdies nepakankamumo metodika dėl `BiPAP`: `dviejų lygių teigiamo slėgio ventiliacija`  
+  https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/Diagnostikos_metodikos_ir_rekomendacijos/Metodikos/Sirdies_nepakankamumas_Metodika_2017%20m_NEW.pdf
+- SAM metodika dėl `BVM`: `Ambu tipo kvėpavimo maišas su apsauginiu slėgio vožtuvu`  
+  https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Programos_ir_projektai/Sveicarijos_parama/Akuserines%20metodikos/Cezario%20pjuvio%20operacija_%20Indikacijos.pdf
+- Moterų informacijos centro ir Europos Parlamento LT vartosena dėl `FGM`: `moterų lytinių organų žalojimas` / `moterų lyties organų žalojimas`  
+  https://lygus.lt/wp-content/uploads/2024/05/Metodika_.pdf
+- Moterų informacijos centro LT vartosena dėl `FGM`: `moterų lytinių organų žalojimas (MLOŽ)`  
+  https://lygus.lt/kategorija/lyciu-lygybe/page/9/
 - SAM vartosena dėl `ECG`: `EKG – elektrokardiograma (angl. ECG)`  
   https://sam.lrv.lt/public/canonical/1732168008/26447/kardioonkologija_2023_spaudai.pdf
 - VU vartosena dėl `ECT`: `elektrokonvulsinė terapija`  
@@ -386,6 +404,8 @@
   https://lsmu.lt/cris/entities/etd/894b2c78-446b-4a21-8afb-83ee0afaede2
 - SAM / LSMU vartosena dėl `GTN`: `glicerolio trinitratas`, klinikinėje praktikoje siejamas su nitroglicerinu  
   https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Sveikatos_mokslai/2022%20SM3%28Internetas%29.pdf
+- LSMUL Kauno klinikų vartosena dėl `HME`: `šilumos – drėgmės keitiklis (dirbtinė nosis)`  
+  https://www.kaunoklinikos.lt/media/file/Tracheostominio%20vamzdelio%20prie%C5%BEi%C5%ABra.pdf
 - SAM vartosena dėl `HCP`: `sveikatos priežiūros specialistas`  
   https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/E.%20sveikata/El._sveikatos_paslaugu_ir_bendradarbiavimo_infrastrukturos_IS/ESPBIISspecifikacija.pdf
 - LSMU vartosena dėl `HFpEF` ir `HFrEF`: `širdies nepakankamumas su išlikusia / sumažėjusia išstūmio frakcija`  
@@ -401,14 +421,22 @@
 
 - SAM / Sveikatos mokslai vartosena dėl `IBS`: `dirgliosios žarnos sindromas (DŽS)`, angl. `IBS`  
   https://sam.lrv.lt/uploads/sam/documents/files/%21%21%E2%99%A52021%20SM5%28SAM_Internetas%29.pdf
+- NVSC / oficiali santrumpų vartosena dėl `ICD`: LT dokumentuose vartojama `TLK – tarptautinė ligų klasifikacija`  
+  https://nvsc.lrv.lt/uploads/nvsc/documents/files/VIRUSINIO%20HEPATITO%20A%20EPIDEMIOLOGIJOS%2C%20KLINIKOS%20IR%20PROFILAKTIKOS%20METODIN%C4%96S%20REKOMENDACIJOS.pdf
+- LSMU kardiologinė vartosena dėl `ICD`: `implantuojamasis kardioverteris defibriliatorius (IKD)`  
+  https://lsmu.lt/cris/entities/publication/7e8cf9a7-f717-48ce-9b40-416dedd756de
 - SAM / neuroanesteziologinė vartosena dėl `ICP`: `intrakranijinis spaudimas`  
   https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Sveikatos_mokslai/Moksliniai_straipsniai%E2%80%93zurnalas_Sveikatos%20mokslai/2010m/2010SM_5VIdalisindd.pdf
 - LSMU vartosena dėl `IHD`: `išeminė širdies liga`  
   https://lsmu.lt/cris/entities/publication/26645598-41b7-4688-af21-55eb76882f97
 - LSMU vartosena dėl `IM`: `į raumenis`  
   https://lsmu.lt/cris/entities/etd/508f136e-d479-4a06-80f9-4c8343b5bcd1
+- SAM / Sveikatos mokslai vartosena dėl `IN`: `intranazalinis vaistų skyrimo būdas`  
+  https://sam.lrv.lt/media/viesa/saugykla/2025/4/HMtsoFlyAIE.pdf
 - LSMU / Medas vartosena dėl `IVC`: `apatinė tuščioji vena`  
   https://medas.lsmu.lt/lt/kursas/1992763669
+- LSMU diabetologinė vartosena dėl `IA`: `hipoglikemijos nejutimas`  
+  https://lsmu.lt/cris/entities/publication/3d954eb3-0330-4807-9dca-e4d11e5baaa8
 - VU / SAM vartosena dėl `JVP`: `padidėjęs jungo venų spaudimas`  
   https://sam.lrv.lt/media/viesa/saugykla/2025/4/HMtsoFlyAIE.pdf
 
@@ -416,6 +444,8 @@
 
 - LSMU kardiologinė vartosena dėl `LBBB`: `kairiosios Hiso pluošto kojytės blokada`  
   https://lsmu.lt/cris/entities/publication/d8fc6bd9-8cb7-4013-a073-bedb6a7dc9cc
+- VGTU biomechanikos / traumatologijos darbas dėl `LC`: `šoninio spaudimo sukelti lūžiai`; tame pačiame LT šaltinyje aprašoma ir dubens žiedo lūžių Young-Burgess klasifikacija  
+  https://gs.elaba.lt/object/elaba%3A2144459/2144459.pdf
 - E-TAR akušerinės formos vartosena dėl `LMP`: `paskutinių normalių mėnesinių data` / pirmosios paskutinių mėnesinių dienos logika  
   https://www.e-tar.lt/rs/legalact/3916e6203cf911efbdaea558de59136c/
 - SAM metodinė vartosena dėl `LOC`: `sąmonės lygis`  
@@ -437,6 +467,7 @@
   https://lsmu.lt/cris/entities/publication/9e90a73c-c9ad-4749-8b97-cbf45625cfda
 - LSMU vartosena dėl `MI`: `miokardo infarktas (MI)`  
   https://lsmu.lt/cris/entities/publication/1ed313f1-764d-4697-9cf7-f87d5a2b8a54/full
+- Vidinė leidinio vartosena dėl `MTC`: 006 helper source eilutė klaidingai nurodyta kaip `Major Triage Centre`, tačiau 086 skyriuje vartojama `Major Trauma Centre`; traktuoti kaip helper source korekciją, ne LT termino promotion.
 - LSMU vartosena dėl `NEWS`: `NEWS (angl. National Early Warning Score)` / `NEWS2` skalė  
   https://lsmu.lt/cris/entities/etd/fbd31011-69c3-4c2b-b4c1-2b79fc0b777f/full
 - LSMU / SAM vartosena dėl `NLS`: `naujagimio gaivinimas`  
@@ -460,6 +491,8 @@
   https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Programos_ir_projektai/Sveicarijos_parama/1%20knyga_%20Normalus%20n%C4%97%C5%A1tumas%20ir%20gimdymas.pdf
 - LSMU / SAM vartosena dėl `PEF`: `didžiausias iškvėpimo srovės greitis`  
   https://lsmu.lt/cris/entities/publication/233d8eb2-6515-4330-9608-f8f33e6e95be
+- LSMU kardiologinė vartosena dėl `PEA`: `elektrinis aktyvumas be pulso (anksčiau vadinta elektromechanine disociacija)`  
+  https://lsmu.lt/cris/bitstream/20.500.12512/106194/2/ISBN9789955860051.pdf
 - VU / neurologijos vartosena dėl `PNES`: `psichogeniniai neepilepsiniai priepuoliai`  
   https://www.zurnalai.vu.lt/neurologijos_seminarai/article/view/38295
 - VU / LSMU vartosena dėl `PTSD`: `potrauminio streso sutrikimas`  
@@ -519,7 +552,7 @@
 | URTI | Upper Respiratory Tract Infection | lokaliai vartoti `viršutinių kvėpavimo takų infekcija` | localization_only | LT pediatrijos ir šeimos medicinos vartosena | Originali `URTI` santrumpa nekelta į `shared`; LT šaltiniuose aktyvesnė pilna forma ir `ŪVKTI`. |
 | UTI | Urinary Tract Infection | lokaliai vartoti `šlapimo takų infekcija` | localization_only | LT pediatrijos, nefrologijos ir šeimos medicinos vartosena | Originali `UTI` santrumpa nekelta į `shared`; LT tekstuose dažnesnė pilna forma. |
 | VF | Ventricular Fibrillation | skilvelių virpėjimas (VF) | approved_global | LT gaivinimo ir kardiologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
-| VS | Vertical Shear | kol kas nekelti į `shared`; reikia tvirtesnio LT traumų klasifikacijos wording | open | LT dubens traumų vartosena dar tikslintina | Negalima spėlioti tarp `vertikaliosios šlyties`, `vertikaliojo poslinkio` ir kitų variantų be stabilesnio LT šaltinio pagrindo. |
+| VS | Vertical Shear | lokaliai vartoti `vertikalaus spaudimo sukelti lūžiai` / `vertikalus ir horizontalus dubens nestabilumas` pagal kontekstą | localization_only | LT dubens traumų klasifikacijos vartosena | Originali `VS` santrumpa nekelta į `shared`; LT šaltiniuose vartojami aprašomieji Young-Burgess ir AO C tipo klasifikacijos terminai. |
 | VT | Ventricular Tachycardia | skilvelinė tachikardija (VT) | approved_global | LT kardiologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | VTE | Venous Thromboembolism | venų tromboembolija (VTE) | approved_global | LT kraujagyslių, vidaus ligų ir akušerijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 
@@ -531,6 +564,8 @@
   https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/19_%20Vaiku%20vemimas.pdf
 - LSMU vartosena dėl `VF`: `skilvelių virpėjimas`  
   https://lsmu.lt/cris/entities/publication/f2d2128d-b3ce-45ef-9796-5aa648b5f3c0
+- VGTU biomechanikos / traumatologijos darbas dėl `VS`: `vertikalaus spaudimo sukelti lūžiai` Young-Burgess klasifikacijoje  
+  https://gs.elaba.lt/object/elaba%3A2144459/2144459.pdf
 - LSMU vartosena dėl `VT`: `skilvelinė tachikardija`  
   https://lsmu.lt/cris/entities/publication/42b40013-8f9b-4153-a97b-392d2e02838d
 - SAM metodika dėl `VTE`: `venų tromboembolija (VTE)`  
@@ -562,7 +597,7 @@
 - Dar nepadengta aktyvioje `shared` bazėje: `199`
 - A-B blokas uždarytas pilnai; praleistų santrumpų nebėra.
 - E-F bloke papildomai užrakinta į `shared/lexicon/acronyms.tsv`: `ECMO`, `EF`, `EtCO2`, `FBAO`
-- E-F bloke sąmoningai nekelta į aktyvią bazę dėl LT santrumpų skirtumo, mnemonikos ar nepakankamo LT pagrindo: `ECG`, `ECT`, `ED`, `EDD`, `EOC`, `ERC`, `ESC`, `ET`, `FAST`, `FGM`, `FLACC`, `FII`
+- E-F bloke sąmoningai nekelta į aktyvią bazę dėl LT santrumpų skirtumo, mnemonikos ar originalios EN santrumpos netinkamumo LT aktyviam sluoksniui: `ECG`, `ECT`, `ED`, `EDD`, `EOC`, `ERC`, `ESC`, `ET`, `FAST`, `FGM`, `FLACC`, `FII`
 
 ## Tarpinė pažanga po A-H blokų
 
@@ -570,7 +605,7 @@
 - Jau padengta aktyvioje `shared` bazėje: `34`
 - Dar nepadengta aktyvioje `shared` bazėje: `193`
 - G-H bloke papildomai užrakinta į `shared/lexicon/acronyms.tsv`: `GTN`, `HFpEF`, `HFrEF`, `HIV`, `HPV`, `HVS`
-- G-H bloke sąmoningai nekelta į aktyvią bazę dėl LT santrumpų skirtumo, JK konteksto ar nepakankamo LT pagrindo: `g`, `GBS`, `GCS`, `GDPR`, `GP`, `GUM`, `HART`, `HCP`, `HME`, `HR`
+- G-H bloke sąmoningai nekelta į aktyvią bazę dėl LT santrumpų skirtumo, JK konteksto ar daugiareikšmiškumo: `g`, `GBS`, `GCS`, `GDPR`, `GP`, `GUM`, `HART`, `HCP`, `HME`, `HR`
 
 ## Tarpinė pažanga po A-J blokų
 
@@ -578,7 +613,7 @@
 - Jau padengta aktyvioje `shared` bazėje: `39`
 - Dar nepadengta aktyvioje `shared` bazėje: `188`
 - I-J bloke papildomai užrakinta į `shared/lexicon/acronyms.tsv`: `IBS`, `ICP`, `IHD`, `IVC`, `JVP`
-- I-J bloke sąmoningai nekelta į aktyvią bazę dėl dubletų, LT santrumpų skirtumo, JK konteksto ar nepakankamo LT pagrindo: `IA`, `ICD`, `ICE`, `ILCOR`, `IM`, `IMCA`, `IN`, `IO`, `IPAP`, `ITD`, `ITU`, `IV`, `J`, `JESIP`, `JRCALC`
+- I-J bloke sąmoningai nekelta į aktyvią bazę dėl dubletų, LT santrumpų skirtumo, JK konteksto ar techninio prietaiso neaiškumo: `IA`, `ICD`, `ICE`, `ILCOR`, `IM`, `IMCA`, `IN`, `IO`, `IPAP`, `ITD`, `ITU`, `IV`, `J`, `JESIP`, `JRCALC`
 
 ## Tarpinė pažanga po A-L blokų
 
@@ -594,15 +629,15 @@
 - Jau padengta aktyvioje `shared` bazėje: `49`
 - Dar nepadengta aktyvioje `shared` bazėje: `178`
 - M-N bloke papildomai užrakinta į `shared/lexicon/acronyms.tsv`: `MAOI`, `MAP`, `MDMA`, `MI`, `NEWS`, `NLS`, `NSTEMI`
-- M-N bloke sąmoningai nekelta į aktyvią bazę dėl vienetų žymėjimo, JK konteksto, LT santrumpų skirtumo ar source neaiškumo: `MBRRACE`, `MCA`, `mcg`, `mCPR`, `MECC`, `mg`, `MHA`, `MINAP`, `ml`, `mmHG`, `mmol`, `mmol/l`, `MOI`, `MSC`, `msec`, `MTC`, `NARU`, `NEET`, `NG`, `NHS`, `NICE`, `NPA`, `NPIS`, `NSAID`
+- M-N bloke sąmoningai nekelta į aktyvią bazę dėl vienetų žymėjimo, JK konteksto ar LT santrumpų skirtumo: `MBRRACE`, `MCA`, `mcg`, `mCPR`, `MECC`, `mg`, `MHA`, `MINAP`, `ml`, `mmHG`, `mmol`, `mmol/l`, `MOI`, `MSC`, `msec`, `MTC`, `NARU`, `NEET`, `NG`, `NHS`, `NICE`, `NPA`, `NPIS`, `NSAID`
 
 ## Tarpinė pažanga po A-P blokų
 
 - Eilučių iš viso: `227`
 - Jau padengta aktyvioje `shared` bazėje: `56`
 - Dar nepadengta aktyvioje `shared` bazėje: `171`
-- O-P bloke papildomai užrakinta į `shared/lexicon/acronyms.tsv`: `OHCA`, `OPA`, `ORS`, `PE`, `PEF`, `PNES`, `PTSD`
-- O-P bloke sąmoningai nekelta į aktyvią bazę dėl vienetų žymėjimo, LT santrumpų skirtumo, JK konteksto ar nepakankamo LT pagrindo: `O2`, `OOH`, `P`, `PCO2`, `PEaRL`, `PEA`, `PEFR`, `PHECG`, `PPCI`, `PPE`, `PPH`, `PRESS`, `PSP`, `PV`
+- O-P bloke papildomai užrakinta į `shared/lexicon/acronyms.tsv`: `OHCA`, `OPA`, `ORS`, `PE`, `PEF`, `PEA`, `PNES`, `PTSD`
+- O-P bloke sąmoningai nekelta į aktyvią bazę dėl vienetų žymėjimo, LT santrumpų skirtumo, JK konteksto ar nepakankamo LT pagrindo: `O2`, `OOH`, `P`, `PCO2`, `PEaRL`, `PEFR`, `PHECG`, `PPCI`, `PPE`, `PPH`, `PRESS`, `PSP`, `PV`
 
 ## Tarpinė pažanga po A-R blokų
 
@@ -639,24 +674,26 @@
 ## Tarpinė pažanga po A-Z blokų
 
 - Eilučių iš viso: `227`
-- Jau padengta aktyvioje `shared` bazėje: `71`
-- Dar nepadengta aktyvioje `shared` bazėje: `156`
+- Jau padengta aktyvioje `shared` bazėje: `74`
+- Dar nepadengta aktyvioje `shared` bazėje: `153`
+- Po papildomo `open` vienetų tikslinimo į `shared/lexicon/acronyms.tsv` dar papildomai užrakinta: `BiPAP`, `PEA`, `ATP`.
 - W-Z bloke papildomai nieko neužrakinta į `shared/lexicon/acronyms.tsv`.
 - `WHO` sąmoningai nekelta į aktyvią bazę, nes LT oficiali vartosena remiasi forma `Pasaulio sveikatos organizacija (PSO)`, o `X`, `Y`, `Z` source įrašų šiame skyriuje nėra.
 
 ## Atviros abejonės
 
-- Iš aktyvioje `shared` bazėje nepadengtų `156` eilučių nemaža dalis jau sąmoningai palikta `localization_only` ar `original_context_only`; atvirai neišspręsti pirmiausia lieka dubletai ir `open` statuso vienetai.
-- Dubletai (`CPP`, `CRT`, `CSE`, `FGM`, `ICD`, `IN`) turi būti išspręsti taip, kad LT žodyne abi reikšmės neliktų supainiotos.
+- Iš aktyvioje `shared` bazėje nepadengtų `153` eilučių nemaža dalis jau sąmoningai palikta `localization_only` ar `original_context_only`; atvirai neišspręstų `open` statuso vienetų po papildomo `FGM`, `HME`, `IA` ir `MTC` patikslinimo liko `4`.
+- Dar atviri tik šie vienetai: `CMI`, `CPR-IC`, `FII`, `ITD`.
+- Dubletai (`CPP`, `CRT`, `CSE`, `ICD`, `IN`) jau išspręsti taip, kad LT žodyne abi reikšmės neliktų supainiotos.
 - JK institucinės ir teisės santrumpos (`ADRT`, `DNACPR`, `DoLS`, `MCA`, `NICE`, `NHS`, `ReSPECT` ir kt.) turi būti atskirtos nuo aktyvios LT medicininės terminijos.
 
 ## Finalus agento auditas
 
 | Sritis | Statusas | Pastaba |
 | --- | --- | --- |
-| terminija | vykdoma | `A-Z` source santrumpų triage užbaigtas, bet daliai vienetų dar reikia atskiro dubletų ar `open` statuso sprendimo prieš galimą promotion į `shared`. |
+| terminija | vykdoma | `A-Z` source santrumpų triage užbaigtas; po papildomo patikslinimo atviri liko tik `CMI`, `CPR-IC`, `FII`, `ITD`. |
 | kolokacijos | ok | Tai santrumpų žodynas, ne naratyvinis skyrius. |
 | gramatika | ok |  |
 | semantika | vykdoma | Reikia tiksliai atskirti klinikines santrumpas nuo originalo JK konteksto ir mnemonikų. |
 | norminė logika | vykdoma | JK organizacinės ir teisinės santrumpos negali būti automatiškai lokalizuotos kaip LT norminis sluoksnis. |
-| atviros abejonės | yra | Dubletai ir didelis nepadengtų santrumpų kiekis. |
+| atviros abejonės | yra | Likę keturi atviri vienetai: `CMI`, `CPR-IC`, `FII`, `ITD`. |
