@@ -165,7 +165,7 @@
 | FBAO | Foreign Body Airway Obstruction | kvėpavimo takų obstrukcija svetimkūniu (FBAO) | approved_global | LT skubiosios pagalbos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`, remiantis jau validuotu terminu. |
 | FGM | Female genital mutilation | lokaliai vartoti `moterų lytinių organų žalojimas` | localization_only | LT žmogaus teisių, viešosios sveikatos ir pagalbos nukentėjusiems vartosena | Originali `FGM` santrumpa nekelta į `shared`; LT vartosenoje vyrauja pilna forma, o source žodyne eilutė dubliuojasi tik dėl raidžių dydžio. |
 | FLACC | F – Face / L – Legs / A – Activity / C – Cry / C – Consolability | FLACC skausmo vertinimo skalė | localization_only | LT vaikų skausmo vertinimo metodikos | Santrumpė paliekama originali; LT metodikose vartojama kaip skalės pavadinimas. |
-| FII | Fabricated or Induced Illness | kol kas nekelti į `shared`; reikia patikimo LT šaltinio dėl kanoninio termino | open | LT vaikų apsaugos ir pediatrijos vartosena dar tikslintina | Negalima spėlioti tarp kelių galimų vertimo variantų. |
+| FII | Fabricated or Induced Illness | lokaliai vartoti `medicininė prievarta prieš vaikus`, prireikus aiškinant kaip `įgaliotojo asmens Miunhauzeno sindromas` | localization_only | LT SAM vaikų metodikos ir LSMU psichiatrijos vartosena | Originali `FII` santrumpa nekelta į `shared`; LT šaltiniai šią sąvoką sieja su medicininiu vaikų išnaudojimu ir įgaliotojo asmens Miunhauzeno sindromu. |
 
 ## 006 triage: G-H blokas (2026-03-29)
 
@@ -205,7 +205,7 @@
 | IN | Intranasal | lokaliai vartoti `intranazinis` / `per nosį` | localization_only | LT klinikinė vartosena | Ši santrumpa žodyne kartojasi du kartus; į `shared` nekelta. |
 | IO | Intraosseous | lokaliai vartoti `intraosinis` / `į kaulą` | localization_only | LT skubiosios pagalbos ir procedūrų vartosena | Originali `IO` santrumpa nekelta į `shared`, nes LT aktyvi vartosena nėra pakankamai stabili. |
 | IPAP | I – Intent / P – Plans / A – Actions / P – Protection | IPAP mnemonika; LT lokalizuoti tik komponentus | localization_only | psichikos sveikatos rizikos vertinimo mnemonika | Šiame skyriuje `IPAP` nėra kvėpavimo aparato parametras, todėl traktuojama kaip mnemonika. |
-| ITD | Impedance threshold device | kol kas nekelti į `shared`; reikia patikimo LT šaltinio dėl kanoninio prietaiso pavadinimo | open | LT gaivinimo įrangos vartosena dar tikslintina | Negalima spėlioti tarp kelių galimų techninių variantų. |
+| ITD | Impedance threshold device | įkvėpimo impedancinio slenksčio vožtuvas (ITD) | approved_global | LSMU gaivinimo fiziologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`; LT šaltinyje vartojama tiksli forma `įkvėpimo impedancinio slenksčio vožtuvas`. |
 | ITU | Intensive Care Unit | lokaliai vartoti `intensyviosios terapijos skyrius` | localization_only | LT ligoninių vartosena | Originali `ITU` santrumpa nekelta į `shared`; LT sistemoje vartojami vietiniai trumpiniai ar pilnas pavadinimas. |
 | IV | Intravenous | lokaliai vartoti `intraveninis` / `į veną` | localization_only | LT klinikinė vartosena | Originali `IV` santrumpa nekelta į `shared`; vartotina tik kaip vartojimo kelio žyma kontekste. |
 | IVC | Inferior Vena Cava | apatinė tuščioji vena (ATV / IVC) | approved_global | LT skubiosios echoskopijos ir anatomijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`; LT vartosenoje dažnesnė santrumpa `ATV`. |
@@ -379,6 +379,10 @@
   https://lygus.lt/wp-content/uploads/2024/05/Metodika_.pdf
 - Moterų informacijos centro LT vartosena dėl `FGM`: `moterų lytinių organų žalojimas (MLOŽ)`  
   https://lygus.lt/kategorija/lyciu-lygybe/page/9/
+- SAM vaikų metodinė vartosena dėl `FII`: `medicininė prievarta prieš vaikus – medicininis vaikų išnaudojimas`, susidedantis iš vaiko ligos išgalvojimo arba sukėlimo  
+  https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/19_%20Vaiku%20vemimas.pdf
+- LSMU vartosena dėl `FII` pediatrinio ekvivalento: `įgaliotojo asmens Miunhauzeno sindromas`  
+  https://sam.lrv.lt/uploads/sam/documents/files/%C5%BDurnalas%20Sveikatos%20mokslai%202021%20m_%20Nr_%204.pdf
 - SAM vartosena dėl `ECG`: `EKG – elektrokardiograma (angl. ECG)`  
   https://sam.lrv.lt/public/canonical/1732168008/26447/kardioonkologija_2023_spaudai.pdf
 - VU vartosena dėl `ECT`: `elektrokonvulsinė terapija`  
@@ -674,26 +678,34 @@
 ## Tarpinė pažanga po A-Z blokų
 
 - Eilučių iš viso: `227`
-- Jau padengta aktyvioje `shared` bazėje: `74`
-- Dar nepadengta aktyvioje `shared` bazėje: `153`
-- Po papildomo `open` vienetų tikslinimo į `shared/lexicon/acronyms.tsv` dar papildomai užrakinta: `BiPAP`, `PEA`, `ATP`.
+- Jau padengta aktyvioje `shared` bazėje: `75`
+- Dar nepadengta aktyvioje `shared` bazėje: `152`
+- Po papildomo `open` vienetų tikslinimo į `shared/lexicon/acronyms.tsv` dar papildomai užrakinta: `BiPAP`, `PEA`, `ATP`, `ITD`.
 - W-Z bloke papildomai nieko neužrakinta į `shared/lexicon/acronyms.tsv`.
 - `WHO` sąmoningai nekelta į aktyvią bazę, nes LT oficiali vartosena remiasi forma `Pasaulio sveikatos organizacija (PSO)`, o `X`, `Y`, `Z` source įrašų šiame skyriuje nėra.
 
 ## Atviros abejonės
 
-- Iš aktyvioje `shared` bazėje nepadengtų `153` eilučių nemaža dalis jau sąmoningai palikta `localization_only` ar `original_context_only`; atvirai neišspręstų `open` statuso vienetų po papildomo `FGM`, `HME`, `IA` ir `MTC` patikslinimo liko `4`.
-- Dar atviri tik šie vienetai: `CMI`, `CPR-IC`, `FII`, `ITD`.
+- Iš aktyvioje `shared` bazėje nepadengtų `152` eilučių nemaža dalis jau sąmoningai palikta `localization_only` ar `original_context_only`; atvirai neišspręstų `open` statuso vienetų po papildomo `FGM`, `HME`, `IA`, `MTC`, `FII` ir `ITD` patikslinimo liko `2`.
+- Dar atviri tik šie vienetai: `CMI`, `CPR-IC`.
 - Dubletai (`CPP`, `CRT`, `CSE`, `ICD`, `IN`) jau išspręsti taip, kad LT žodyne abi reikšmės neliktų supainiotos.
 - JK institucinės ir teisės santrumpos (`ADRT`, `DNACPR`, `DoLS`, `MCA`, `NICE`, `NHS`, `ReSPECT` ir kt.) turi būti atskirtos nuo aktyvios LT medicininės terminijos.
+
+## Papildomas LT-source patikrinimas likusiems open vienetams (2026-03-29)
+
+- `CMI`: papildomai tikrinta LT dubens traumų ir biomechanikos vartosena; patikimo kanoninio LT atitikmens `Combined Mechanical Injury` nerasta. Kol kas palikta `open`.
+- `CPR-IC`: papildomai tikrinta LT gaivinimo ir ikihospitalinės medicinos interneto vartosena; patikimo kanoninio LT termino `CPR-induced consciousness` nerasta. Kol kas palikta `open`.
+- `FII`: papildomai tikrinta LT vaikų apsaugos, pediatrijos ir sveikatos politikos vartosena; rasta pakankamas LT pagrindas lokaliam sprendimui `medicininė prievarta prieš vaikus`, aiškinant ryšį su `įgaliotojo asmens Miunhauzeno sindromu`. Į `shared` nekelta.
+- `ITD`: papildomai tikrinta LT gaivinimo įrangos ir anesteziologijos vartosena; LSMU šaltinyje rastas kanoninis atitikmuo `įkvėpimo impedancinio slenksčio vožtuvas`, todėl vienetas perkeltas į `approved_global`.
+- Likusiems dviem atviriems vienetams galioja ta pati taisyklė: kol nėra pakankamo LT interneto šaltinio pagrindo, nei į `shared`, nei į lokalų aktyvų sluoksnį jų nekelti.
 
 ## Finalus agento auditas
 
 | Sritis | Statusas | Pastaba |
 | --- | --- | --- |
-| terminija | vykdoma | `A-Z` source santrumpų triage užbaigtas; po papildomo patikslinimo atviri liko tik `CMI`, `CPR-IC`, `FII`, `ITD`. |
+| terminija | vykdoma | `A-Z` source santrumpų triage užbaigtas; po papildomo patikslinimo atviri liko tik `CMI` ir `CPR-IC`. |
 | kolokacijos | ok | Tai santrumpų žodynas, ne naratyvinis skyrius. |
 | gramatika | ok |  |
 | semantika | vykdoma | Reikia tiksliai atskirti klinikines santrumpas nuo originalo JK konteksto ir mnemonikų. |
 | norminė logika | vykdoma | JK organizacinės ir teisinės santrumpos negali būti automatiškai lokalizuotos kaip LT norminis sluoksnis. |
-| atviros abejonės | yra | Likę keturi atviri vienetai: `CMI`, `CPR-IC`, `FII`, `ITD`. |
+| atviros abejonės | yra | Likę du atviri vienetai: `CMI`, `CPR-IC`. |
