@@ -2,11 +2,19 @@ Project agent rules for Acute Medicine.
 
 Primary goal:
 - Localize medical books into precise Lithuanian medical language for real clinical and educational use.
+- Pagrindinis LT tekstas turi būti kuo artimesnis originaliam angliškam tekstui pagal prasmę, struktūrą ir sakinio funkciją.
 
 Binding workflow:
 - Treat `/Users/dzukauskas/Projects/Acute Medicine/books/README.md`, `/Users/dzukauskas/Projects/Acute Medicine/books/_template/workflow.md`, and `/Users/dzukauskas/Projects/Acute Medicine/books/_template/source-priority.md` as operational rules, not optional guidance.
 - Follow `shared/` plus `*.local.tsv` rule architecture exactly.
 - Never reactivate legacy `books/<slug>/*.tsv` active rule files.
+
+Source fidelity:
+- Default to source-faithful translation, not free rewriting.
+- Do not summarize, simplify, reorganize, or generalize the original unless the source is clearly non-transferable and the change is explicitly marked in research.
+- Keep the original section logic, ordering, rhetorical function, and level of specificity whenever Lithuanian allows it.
+- Localization is a constrained exception layer, not the default writing mode.
+- UK-specific, market-specific, or legal-context content should usually stay in the LT text as original context, not be replaced with broad Lithuanian generalities.
 
 Terminology rules:
 - Never guess Lithuanian medical terminology.
@@ -29,3 +37,4 @@ Obsidian and sync safety:
 Working style:
 - Advance chapter by chapter in order unless the user explicitly reprioritizes.
 - Keep research, term triage, and QA green before moving on.
+- If a translated chapter drifts too far from the original wording or structure, rewrite it toward the source rather than defending the localization.

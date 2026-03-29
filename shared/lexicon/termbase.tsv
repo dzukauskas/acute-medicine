@@ -10,31 +10,50 @@ Acute Coronary Syndrome	ūminis koronarinis sindromas	Patikrinta LT interneto me
 Alcohol-Use Disorders	alkoholio vartojimo sutrikimai	Patikrinta LT interneto medicinos ir visuomenės sveikatos šaltiniuose 2026-03-28.	preferred			all	alkoholio vartojimo sutrikimai	
 Allergic Reactions including Anaphylaxis	alerginės reakcijos, įskaitant anafilaksiją	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	alerginės reakcijos, įskaitant anafilaksiją	
 Altered Level of Consciousness	sutrikusi sąmonė	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred	sutrikęs sąmonės lygis | pakitęs sąmonės lygis		all	sutrikusi sąmonė	
+Antidiuretic Hormone	antidiurezinis hormonas	Patikrinta LT interneto endokrinologijos ir pediatrijos šaltiniuose 2026-03-29.	preferred			all	antidiurezinis hormonas (ADH)	
+Autonomic Dysreflexia	autonominė disrefleksija	Patikrinta LT interneto medicinos šaltiniuose 2026-03-29.	preferred			all	autonominė disrefleksija	
 Burns and Scalds	nudegimai ir nuplikymai	Patikrinta LT interneto medicinos ir visuomenės sveikatos šaltiniuose 2026-03-28.	preferred			all	nudegimai ir nuplikymai	
 Care of the Newborn	naujagimio priežiūra	Patikrinta LT interneto akušerijos ir neonatologijos šaltiniuose 2026-03-28.	preferred			all	naujagimio priežiūra	
+Cauda Equina Syndrome	arklio uodegos sindromas	Patikrinta LT interneto neurochirurgijos ir teisės šaltiniuose 2026-03-29.	preferred			all	arklio uodegos sindromas	
+Cerebral Palsy	cerebrinis paralyžius	Patikrinta LT interneto medicinos šaltiniuose 2026-03-29.	preferred			all	cerebrinis paralyžius	
 Chronic Obstructive Pulmonary Disease	lėtinė obstrukcinė plaučių liga	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	lėtinė obstrukcinė plaučių liga (LOPL)	
+Diabetes Insipidus	necukrinis diabetas	Patikrinta LT interneto endokrinologijos šaltiniuose 2026-03-29.	preferred			all	necukrinis diabetas	
 Electrical Injuries	elektros trauma	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	elektros trauma	
+Epiglottitis	epiglotitas	Patikrinta LT interneto pediatrijos ir infekcinių ligų šaltiniuose 2026-03-29.	preferred	epiglottitas		all	epiglotitas	
+Factor V Leiden	Leideno krešėjimo faktoriaus mutacija	Patikrinta LT interneto hematologijos ir akušerijos šaltiniuose 2026-03-29.	preferred			all	Leideno krešėjimo faktoriaus mutacija	
 Foreign Body Airway Obstruction	kvėpavimo takų obstrukcija svetimkūniu	Patikrinta LT interneto skubiosios pagalbos šaltiniuose 2026-03-28.	preferred			all	kvėpavimo takų obstrukcija svetimkūniu	
 Gastrointestinal Bleeding	kraujavimas iš virškinimo trakto	Patikrinta LT interneto medicinos ir norminiuose šaltiniuose 2026-03-28.	preferred			all	kraujavimas iš virškinimo trakto	
+Guillain-Barre Syndrome	Guillain-Barré sindromas	Patikrinta LT interneto LSMU ir e-Seimo šaltiniuose 2026-03-29. Viešojoje ir senesnėje LT vartosenoje matoma ir forma `Gijeno-Barė sindromas`, bet aktyvioje bazėje laikoma akademinė forma.	preferred	Gijeno-Barė sindromas | Gijeno-Bare sindromas		all	Guillain-Barré sindromas	
 Head Injury	galvos trauma	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	galvos trauma	
+Haemophilia	hemofilija	Patikrinta LT interneto hematologijos šaltiniuose 2026-03-29.	preferred			all	hemofilija	
 Heart Failure	širdies nepakankamumas	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	širdies nepakankamumas	
 Hyperventilation Syndrome	hiperventiliacijos sindromas	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	hiperventiliacijos sindromas	
 Implantable Cardioverter Defibrillator	implantuojamas kardioverteris-defibriliatorius	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred	implantuojamas kardioverteris defibriliatorius		all	implantuojamas kardioverteris-defibriliatorius (IKD)	
 Intravascular Fluid Therapy	infuzinė terapija	Patikrinta SAM ir LT akademiniuose šaltiniuose 2026-03-29. `Infuzinė terapija` teiktina kaip kanoninis skyriaus pavadinimo atitikmuo; `intraveninė terapija` ar `IV` vartotini tik tada, kai kalbama apie konkretų vartojimo kelią ar intraveninę infuziją.	preferred	infuzoterapija		all	infuzinė terapija	
+Kawasaki Disease	Kawasaki liga	Patikrinta LT interneto pediatrijos ir infekcinių ligų šaltiniuose 2026-03-29.	preferred			all	Kawasaki liga	
 Limb Trauma	galūnių trauma	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	galūnių trauma	
 Low Back Pain	apatinės nugaros dalies skausmas	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	apatinės nugaros dalies skausmas	
 Management of Post-partum Haemorrhage	pogimdyminio kraujavimo valdymas	Patikrinta LT interneto akušerijos šaltiniuose 2026-03-28.	preferred			all	pogimdyminio kraujavimo valdymas	
+Marfan Syndrome	Marfano sindromas	Patikrinta LT interneto medicinos šaltiniuose 2026-03-29.	preferred			all	Marfano sindromas	
+Motor Neurone Disease	motorinių neuronų liga	Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29.	preferred			all	motorinių neuronų liga	
+Multiple Sclerosis	išsėtinė sklerozė	Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29.	preferred			all	išsėtinė sklerozė	
+Muscular Dystrophy	raumenų distrofija	Patikrinta LT interneto neurologijos ir neuroraumeninių ligų šaltiniuose 2026-03-29.	preferred			all	raumenų distrofija	
+Myasthenia Gravis	sunkioji miastenija	Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29.	preferred	miastenija gravis		all	sunkioji miastenija	
 Newborn Life Support	naujagimio gaivinimas	Patikrinta LT interneto neonatologijos šaltiniuose 2026-03-28.	preferred			all	naujagimio gaivinimas	
 Out-of-Hospital Cardiac Arrest: Overview	širdies sustojimas už ligoninės ribų: apžvalga	Patikrinta LT interneto GMP ir gaivinimo šaltiniuose 2026-03-28.	preferred			all	širdies sustojimas už ligoninės ribų	
 Overdose and Poisoning	apsinuodijimas ir perdozavimas	Patikrinta LT interneto medicinos ir toksikologijos šaltiniuose 2026-03-28.	preferred			all	apsinuodijimas ir perdozavimas	
+Parkinson's Disease	Parkinsono liga	Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29.	preferred			all	Parkinsono liga	
 Pelvic Trauma	dubens trauma	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	dubens trauma	
 Pre-eclampsia and Eclampsia	preeklampsija ir eklampsija	Patikrinta LT interneto akušerijos šaltiniuose 2026-03-28.	preferred			all	preeklampsija ir eklampsija	
 Pulmonary Embolism	plaučių embolija	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	plaučių embolija	
 Return of Spontaneous Circulation	spontaninės kraujotakos atsinaujinimas	Patikrinta LT interneto gaivinimo šaltiniuose 2026-03-28.	preferred	spontaninės kraujotakos atkūrimas		all	spontaninės kraujotakos atsinaujinimas (ROSC)	
 Sickle Cell Disease	pjautuvinių ląstelių liga	Patikrinta LT interneto laboratorinės medicinos šaltiniuose 2026-03-28.	preferred	pjautuvinė anemija		all	pjautuvinių ląstelių liga	
+Spinal Cord Injury	nugaros smegenų pažeidimas	Patikrinta LT interneto norminiuose ir reabilitacijos šaltiniuose 2026-03-29.	preferred	nugaros smegenų sužalojimas		all	nugaros smegenų pažeidimas	
 Spinal Injury and Spinal Cord Injury	stuburo trauma ir nugaros smegenų sužalojimas	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred	stuburo ir nugaros smegenų trauma		all	stuburo trauma ir nugaros smegenų sužalojimas	
 Thoracic Trauma	krūtinės trauma	Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.	preferred			all	krūtinės trauma	
+Thrombophilia	trombofilija	Patikrinta LT interneto akušerijos ir hematologijos šaltiniuose 2026-03-29.	preferred			all	trombofilija	
 Trauma in Pregnancy	trauma nėštumo metu	Patikrinta LT interneto akušerijos ir traumų šaltiniuose 2026-03-28.	preferred			all	trauma nėštumo metu	
+Urinary Retention	šlapimo susilaikymas	Patikrinta LT interneto urologijos ir neurologijos šaltiniuose 2026-03-29.	preferred			all	šlapimo susilaikymas	
 Vaginal Bleeding	kraujavimas iš makšties	Patikrinta LT interneto akušerijos ir ginekologijos šaltiniuose 2026-03-28.	preferred			all	kraujavimas iš makšties	
 Transient Ischaemic Attack	praeinantis smegenų išemijos priepuolis	Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29. LT medicinoje vartojama santrumpa `PSIP`; viešojoje kalboje gali pasitaikyti `mikroinsultas`, bet formaliame medicininiame tekste vartotinas tikslus terminas.	preferred	mikroinsultas	must_expand_first	all	praeinantis smegenų išemijos priepuolis (PSIP)	
 Stroke and Transient Ischaemic Attack	insultas ir praeinantis smegenų išemijos priepuolis	Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29. Skyriaus pavadinime `Transient Ischaemic Attack` daliai taikytinas LT terminas `praeinantis smegenų išemijos priepuolis (PSIP)`; `mikroinsultas` laikytinas nekanoniniu viešosios kalbos pavadinimu.	preferred	mikroinsultas		all	insultas ir praeinantis smegenų išemijos priepuolis (PSIP)	

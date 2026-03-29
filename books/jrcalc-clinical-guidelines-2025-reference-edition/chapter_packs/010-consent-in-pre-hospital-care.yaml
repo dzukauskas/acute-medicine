@@ -1,0 +1,184 @@
+chapter_slug: 010-consent-in-pre-hospital-care
+chapter_title: 10 skyrius. Sutikimas ikihospitalinėje pagalboje
+page_range: EPUB segmentas c3ZY.xhtml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/010-consent-in-pre-hospital-care.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/010-consent-in-pre-hospital-care.md
+blocks:
+- block_id: narrative-01-consent-in-pre-hospital-care
+  block_type: narrative
+  heading: Consent in Pre-hospital Care
+  source_anchor: Consent in Pre-hospital Care
+  source_excerpt: '# Chapter 10 Consent in Pre-hospital Care
+
+    - Šaltinio segmentai: c3ZY.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    Consent in Pre-hospital Care
+
+    1. Consent in Pre-hospital Care
+
+    - The laws and guidance that relate to consent to assessment, treatment, care and other interventions
+    are different in the countries and/or jurisdictions that constitute the UK.
+
+    - Therefore, these guidelines do not offer guidance on obtaining consent beyond the general advice
+    in this statement; the Joint Royal Colleges Ambulance Liaison Committee (JRCALC) advises strongly
+    that readers should seek specific guidance on consent from their ambulance services, Trusts or other
+    relevant employers.
+
+    - JRCALC advises that obtaining consent in ways that are lawful in the jurisdiction in which each
+    reader works is fundamental to meeting patients’ legal and ethical rights in determining what happens
+    to them and to their own bodies. Therefore, it is important to ensure that you always act in the patient’s
+    best interest and that you have legally valid consent to conduct assessments, treatments or interventions,
+    and provide care.'
+  risk_flags: []
+  tags:
+  - legal-localization
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: '`JRCALC` minėti tik kaip originalo šaltinį; LT tekste pereiti prie bendrų LT pacientų
+    teisių ir informuoto sutikimo principų.'
+  matched_localization_terms:
+  - JRCALC
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: original-context-only
+  structured_block_policy: &id001
+    block_id: narrative-01-consent-in-pre-hospital-care
+    block_type: narrative
+    lt_strategy: rewrite_lt
+    authority_source: Lietuvos Respublikos pacientų teisių ir žalos sveikatai atlyginimo įstatymas; Lietuvos
+      bioetikos komitetas
+    original_context_allowed: 'yes'
+    note: Pagrindinę sutikimo logiką lokalizuoti į LT pacientų teisių sluoksnį, o JK jurisdikcinį skirtumą
+      palikti tik originalo kontekste.
+clinical_claims: []
+structured_block_policies:
+- *id001
+active_terms: []
+active_acronyms: []
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+source_jurisdiction_signals:
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+localization_decisions:
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: '`JRCALC` minėti tik kaip originalo šaltinį; LT tekste pereiti prie bendrų LT pacientų
+    teisių ir informuoto sutikimo principų.'
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Proper noun, ne LT norminis autoritetas.
+- source_term: UK jurisdictions
+  replacement_mode: replace_lt
+  authority_basis: LT
+  localization_note: Vietoje JK jurisdikcijų skirtumų aiškinti, kad LT praktikoje būtina vadovautis galiojančia
+    LT teise ir vietine įstaigos tvarka.
+  source_ref: Lietuvos Respublikos pacientų teisių ir žalos sveikatai atlyginimo įstatymas
+  notes: Tiesioginio JK teisės perkėlimo vengti.
+style_hotspots: []
+gold_examples: []
+term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates:
+- candidate_id: 010-consent-in-pre-hospital-care-term-consent
+  candidate_kind: term
+  source_term: consent
+  source_expansion: ''
+  chapter_slug: 010-consent-in-pre-hospital-care
+  source_context: '# Chapter 10 Consent in Pre-hospital Care'
+  proposed_lt: sutikimas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://bioetika.lrv.lt/lt/duk/
+  notes: Teisinis / bioetinis LT vartosenos vienetas; palikti book-scoped, nepromuoti į shared medicininę
+    terminų bazę.
+- candidate_id: 010-consent-in-pre-hospital-care-term-consent-in-pre-hospital-care
+  candidate_kind: term
+  source_term: Consent in Pre-hospital Care
+  source_expansion: ''
+  chapter_slug: 010-consent-in-pre-hospital-care
+  source_context: '# Chapter 10 Consent in Pre-hospital Care'
+  proposed_lt: Sutikimas ikihospitalinėje pagalboje
+  status: localization_only
+  scope: book
+  candidate_origin: source_heading
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: https://bioetika.lrv.lt/lt/duk/
+  notes: Skyriaus antraštės lokalizacija; nepromuoti į shared medicininę terminų bazę.
+- candidate_id: 010-consent-in-pre-hospital-care-term-legally-valid-representative
+  candidate_kind: term
+  source_term: legally valid representative
+  source_expansion: ''
+  chapter_slug: 010-consent-in-pre-hospital-care
+  source_context: '- Consent must be obtained from each patient or their legally valid representative
+    (defined according to the law in the relevant country or jurisdiction) prior to conducting examinations
+    or treatment, or providing care.'
+  proposed_lt: teisėtas paciento atstovas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.59064/asr
+  notes: Teisinis LT pacientų teisių vartosenos vienetas; palikti book-scoped.
+- candidate_id: 010-consent-in-pre-hospital-care-term-pre-hospital-care
+  candidate_kind: term
+  source_term: pre-hospital care
+  source_expansion: ''
+  chapter_slug: 010-consent-in-pre-hospital-care
+  source_context: '# Chapter 10 Consent in Pre-hospital Care'
+  proposed_lt: ikihospitalinė pagalba
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/Metodiniai%20dokumentai/SUNKIOS%20TRAUMOS.pdf
+  notes: Lokalizacinis GMP konteksto vienetas; nepromuoti į shared terminų bazę.
+- candidate_id: 010-consent-in-pre-hospital-care-term-refusal-of-assessment-care-or-treatment
+  candidate_kind: term
+  source_term: refusal of assessment, care or treatment
+  source_expansion: ''
+  chapter_slug: 010-consent-in-pre-hospital-care
+  source_context: ''
+  proposed_lt: atsisakymas būti vertinamam, priimti priežiūrą ar gydymą
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.59064/asr
+  notes: Teisinis / etinis LT wording vienetas; palikti book-scoped.

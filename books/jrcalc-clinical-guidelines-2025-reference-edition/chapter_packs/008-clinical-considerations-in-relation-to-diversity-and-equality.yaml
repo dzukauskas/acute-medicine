@@ -1,0 +1,2425 @@
+chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+chapter_title: 8 skyrius. Klinikiniai aspektai, susiję su įvairove ir lygiomis galimybėmis
+page_range: EPUB segmentas c2RJ.xhtml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/008-clinical-considerations-in-relation-to-diversity-and-equality.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/008-clinical-considerations-in-relation-to-diversity-and-equality.md
+blocks:
+- block_id: narrative-01-clinical-considerations-in-relation-to-diversity-and-equality
+  block_type: narrative
+  heading: Clinical Considerations in Relation to Diversity and Equality
+  source_anchor: Clinical Considerations in Relation to Diversity and Equality
+  source_excerpt: '# Chapter 8 Clinical Considerations in Relation to Diversity and Equality
+
+    - Šaltinio segmentai: c2RJ.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    Clinical Considerations in Relation to Diversity and Equality
+
+    1. Introduction
+
+    - The people we care for come from a diverse set of heritages and with individual needs and expectations
+    from their healthcare providers. There is an expectation that the care they receive is delivered in
+    a sensitive and respectful manner and in a manner that is accessible to them.
+
+    - The JRCALC guidelines seek to set out the clinical practice and approach to the people who seek
+    help from ambulance services. In a diverse society we need to understand how our clinical practice
+    needs to flex and adapt to ensure an equity of care for all.
+
+    - The JRCALC guidelines of their nature are subject to change and are never static as they manage
+    often incomplete scientific knowledge and changes in society and behaviour.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste naudoti tik kaip originalo gairių leidinio kontekstą, o ne
+    kaip LT norminį autoritetą.
+  matched_localization_terms:
+  - JRCALC
+  - ReSPECT
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-02-introduction
+  block_type: narrative
+  heading: Introduction
+  source_anchor: Introduction
+  source_excerpt: '1. Introduction
+
+    - The people we care for come from a diverse set of heritages and with individual needs and expectations
+    from their healthcare providers. There is an expectation that the care they receive is delivered in
+    a sensitive and respectful manner and in a manner that is accessible to them.
+
+    - The JRCALC guidelines seek to set out the clinical practice and approach to the people who seek
+    help from ambulance services. In a diverse society we need to understand how our clinical practice
+    needs to flex and adapt to ensure an equity of care for all.
+
+    - The JRCALC guidelines of their nature are subject to change and are never static as they manage
+    often incomplete scientific knowledge and changes in society and behaviour.
+
+    - This section is no different and reflects a starting point in an area where societal custom and
+    attitudes are changing rapidly and where scientific evidence regarding best approaches and clinical
+    practice are incomplete.
+
+    - There is a commitment as with all guidelines that where there is new evidence or changes to consensus
+    on approach these will be reflected.
+
+    - This section contains the background and underpinning information to support an inclusive approach.
+    Individual guidelines will contain the accommodations or flexing of clinical practice that may help
+    ensure the best assessment and delivery of care to an individual.
+
+    2. Why do we Need to Flex our Clinical Practice?'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste naudoti tik kaip originalo gairių leidinio kontekstą, o ne
+    kaip LT norminį autoritetą.
+  matched_localization_terms:
+  - JRCALC
+  - ReSPECT
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-03-why-do-we-need-to-flex-our-clinical-practice
+  block_type: narrative
+  heading: Why do we Need to Flex our Clinical Practice?
+  source_anchor: Why do we Need to Flex our Clinical Practice?
+  source_excerpt: '2. Why do we Need to Flex our Clinical Practice?
+
+    - The purpose of this work is to create best clinical practice within a diverse society and optimise
+    patient care. Failure to recognise when care or clinical practice needs to be flexed or adapted can
+    result in poor outcomes for the individual.
+
+    - Different patient groups and individuals will have different needs to others, and illness and diseases
+    may present differently or need additional consideration if we are to manage them appropriately and
+    equally.
+
+    - The skill and requirement to be able to flex our practice is therefore a clinical, professional,
+    and ethical outcome.
+
+    - Additionally, for many of these groups there is a legal requirement to adapt care and approach where
+    required.
+
+    2.1 Equality Act 2010
+
+    - The Equality Act 2010 sets out nine protected characteristics of individuals and places a requirement
+    on those providing services to them to do so without discrimination and to make reasonable adaptions
+    where required to provide equal access to those services.
+
+    Protected Characteristics (Equality Act 2010)'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti kaip JK originalo teisinį kontekstą, o pagrindiniame LT tekste remtis LT
+    nediskriminavimo ir lygių galimybių principais.
+  matched_localization_terms:
+  - Equality Act 2010
+  matched_claim_ids:
+  - claim-008-001
+  matched_claim_types:
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-04-equality-act-2010
+  block_type: narrative
+  heading: Equality Act 2010
+  source_anchor: Equality Act 2010
+  source_excerpt: '2.1 Equality Act 2010
+
+    - The Equality Act 2010 sets out nine protected characteristics of individuals and places a requirement
+    on those providing services to them to do so without discrimination and to make reasonable adaptions
+    where required to provide equal access to those services.
+
+    Protected Characteristics (Equality Act 2010)
+
+    - age
+
+    - gender reassignment
+
+    - being married or in a civil partnership
+
+    - being pregnant or on maternity leave
+
+    - disability'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti kaip JK originalo teisinį kontekstą, o pagrindiniame LT tekste remtis LT
+    nediskriminavimo ir lygių galimybių principais.
+  matched_localization_terms:
+  - Equality Act 2010
+  matched_claim_ids:
+  - claim-008-001
+  matched_claim_types:
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-05-health-inequality-and-cognitive-bias
+  block_type: narrative
+  heading: Health Inequality and Cognitive Bias
+  source_anchor: Health Inequality and Cognitive Bias
+  source_excerpt: '2.2 Health Inequality and Cognitive Bias
+
+    - There are strong correlations between some of the protected characteristics and health inequalities
+    with certain groups.
+
+    - The causes for this are multifactorial and where bias or discrimination are contributing factors
+    this should be recognised and minimised.
+
+    - At an individual level practitioners should be aware that their preconceptions and liability to
+    cognitive bias can influence how they perceive and care for patients and actively minimise their impact.
+    1
+
+    2.3 Inadvertent Bias and Preconceptions in the Initial Approach to Patients
+
+    - It is important to achieve rapport and mutual respect with the people we care for in order for them
+    to be best able to confide in us with the confidence that they will be respected.
+
+    - This enables them to receive the most appropriate care and for the practitioner to carry out the
+    best possible assessment.
+
+    - The words we use can impact on how people respond to us and how they feel about the care they are
+    given, but importantly, it is good practice when approaching a patient to ask them how they would
+    like to be known.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Jei minimas šiame ar kituose susijusiuose skyriuose, rodyti tik kaip JK originalo
+    advance care planning kontekstą.
+  matched_localization_terms:
+  - ReSPECT
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-06-inadvertent-bias-and-preconceptions-in-the-initial-approach-to-patients
+  block_type: narrative
+  heading: Inadvertent Bias and Preconceptions in the Initial Approach to Patients
+  source_anchor: Inadvertent Bias and Preconceptions in the Initial Approach to Patients
+  source_excerpt: '2.3 Inadvertent Bias and Preconceptions in the Initial Approach to Patients
+
+    - It is important to achieve rapport and mutual respect with the people we care for in order for them
+    to be best able to confide in us with the confidence that they will be respected.
+
+    - This enables them to receive the most appropriate care and for the practitioner to carry out the
+    best possible assessment.
+
+    - The words we use can impact on how people respond to us and how they feel about the care they are
+    given, but importantly, it is good practice when approaching a patient to ask them how they would
+    like to be known.
+
+    - A patient’s recorded name on medical records may be different to what they would like to be called.
+
+    - Clinicians should use and record the patient’s chosen name, especially when handing over care of
+    the patient to other health care professionals so as to ensure the correct name is used for the patient
+    further down the chain of care. Clinicians should ask patients what pronouns they use in much the
+    same way we ask what patients would like to be called. This could be especially important for certain
+    groups of people, for example people with gender dysphoria.
+
+    2.4 Direct and Indirect Discrimination
+
+    Direct discrimination is said to have occurred when a person is treated unfairly as a result of their
+    protected characteristic. This can occur because that person has a protected characteristic, or is
+    perceived to have that characteristic, or be connected to a person with that characteristic.'
+  risk_flags:
+  - algorithmic_narrative
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Jei minimas šiame ar kituose susijusiuose skyriuose, rodyti tik kaip JK originalo
+    advance care planning kontekstą.
+  matched_localization_terms:
+  - ReSPECT
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: medium
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-07-direct-and-indirect-discrimination
+  block_type: narrative
+  heading: Direct and Indirect Discrimination
+  source_anchor: Direct and Indirect Discrimination
+  source_excerpt: '2.4 Direct and Indirect Discrimination
+
+    Direct discrimination is said to have occurred when a person is treated unfairly as a result of their
+    protected characteristic. This can occur because that person has a protected characteristic, or is
+    perceived to have that characteristic, or be connected to a person with that characteristic.
+
+    Indirect discrimination arises when circumstances are applied equally to a population, but this disproportionately
+    discriminates against a proportion of that population with a shared protected characteristic leading
+    to personal disadvantage.
+
+    3. Ethnicity and Race
+
+    - We refer to ethnicity and not race to reflect the heritage and cultural identity of an individual.
+    We should recognise and reflect in our practice the different cultural differences and concerns regarding
+    health and wellbeing.
+
+    - Consent to examination and/or treatment may legitimately be restricted by cultural, religious or
+    ethnic expectations. Care should be taken to be respectful of the restrictions the individual may
+    place on their care. Refer to Consent in Pre-Hospital Care .
+
+    - Consideration should be given to how reasonable adjustments may be made to overcome such difficulties
+    by either modifying the treatment offered or offering examination by a same sex practitioner. (Local
+    practice and guidance should be followed.) Consent where communication is limited and or comprehension
+    not clear, such as where there are language barriers or learning difficulties, should be handled sensitively
+    and in line with the Mental Capacity Act 2005. 2
+
+    4. Skin Colour and Tone'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remtis paciento teisių, informuoto sutikimo ir atstovavimo
+    logika pagal LT teisę.
+  matched_localization_terms:
+  - Mental Capacity Act 2005
+  - ReSPECT
+  matched_claim_ids:
+  - claim-008-002
+  matched_claim_types:
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-08-ethnicity-and-race
+  block_type: narrative
+  heading: Ethnicity and Race
+  source_anchor: Ethnicity and Race
+  source_excerpt: '3. Ethnicity and Race
+
+    - We refer to ethnicity and not race to reflect the heritage and cultural identity of an individual.
+    We should recognise and reflect in our practice the different cultural differences and concerns regarding
+    health and wellbeing.
+
+    - Consent to examination and/or treatment may legitimately be restricted by cultural, religious or
+    ethnic expectations. Care should be taken to be respectful of the restrictions the individual may
+    place on their care. Refer to Consent in Pre-Hospital Care .
+
+    - Consideration should be given to how reasonable adjustments may be made to overcome such difficulties
+    by either modifying the treatment offered or offering examination by a same sex practitioner. (Local
+    practice and guidance should be followed.) Consent where communication is limited and or comprehension
+    not clear, such as where there are language barriers or learning difficulties, should be handled sensitively
+    and in line with the Mental Capacity Act 2005. 2
+
+    4. Skin Colour and Tone
+
+    General principles
+
+    - Skin tone refers to the individual combination of pigmentation in a person’s skin, whilst skin colour
+    can change when a person is unwell.
+
+    - Assess for skin changes closely using natural light if possible (or non-fluorescent light to avoid
+    a blue tinge). Lighting conditions can affect how you see changes in skin colour.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remtis paciento teisių, informuoto sutikimo ir atstovavimo
+    logika pagal LT teisę.
+  matched_localization_terms:
+  - Mental Capacity Act 2005
+  - ReSPECT
+  matched_claim_ids:
+  - claim-008-002
+  matched_claim_types:
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-09-skin-colour-and-tone
+  block_type: narrative
+  heading: Skin Colour and Tone
+  source_anchor: Skin Colour and Tone
+  source_excerpt: '4. Skin Colour and Tone
+
+    General principles
+
+    - Skin tone refers to the individual combination of pigmentation in a person’s skin, whilst skin colour
+    can change when a person is unwell.
+
+    - Assess for skin changes closely using natural light if possible (or non-fluorescent light to avoid
+    a blue tinge). Lighting conditions can affect how you see changes in skin colour.
+
+    - Palpate the skin for a raised rash or swelling and/or local changes in skin temperature.
+
+    - Consider moistening the skin (if unbroken) to enhance the visibility of skin changes.
+
+    - If erythema is identified, it may be pink, purple or red, or the skin may become darker than the
+    surrounding area.
+
+    - Contusions may only be seen as an area of skin that is darker than its surroundings. They could
+    alternatively be a purple/maroon or green/yellow colour.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-10-disability
+  block_type: narrative
+  heading: Disability
+  source_anchor: Disability
+  source_excerpt: '- disability
+
+    - race including colour, nationality, ethnic or national origin
+
+    - religion or belief
+
+    - sex
+
+    - sexual orientation
+
+    2.2 Health Inequality and Cognitive Bias
+
+    - There are strong correlations between some of the protected characteristics and health inequalities
+    with certain groups.
+
+    - The causes for this are multifactorial and where bias or discrimination are contributing factors
+    this should be recognised and minimised.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids:
+  - claim-008-003
+  matched_claim_types:
+  - algorithm_step
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-11-learning-disability
+  block_type: narrative
+  heading: Learning Disability
+  source_anchor: Learning Disability
+  source_excerpt: '5.1 Learning Disability
+
+    - A learning disability (LD) is a reduced intellectual ability and difficulty with everyday activities,
+    e.g. household tasks, socialising or managing money, that affects someone for their whole life. The
+    level of impairment can vary from mild to severe in all conditions.
+
+    - A learning disability is different from a learning difficulty, as a learning difficulty does not
+    affect general intellect. Examples of learning difficulties include attention deficit-hyperactivity
+    disorder (ADHD) and dyslexia.
+
+    - People with learning disabilities are likely to die 20 years earlier than people without them. Reasons
+    include increased comorbidities, challenges with accessing healthcare, difficulties in assessment
+    and inappropriate or delayed care. 3 , 4
+
+    - People with LD are up to 5 times more likely to die of something treatable compared to others. 3
+
+    - The top three causes of death in people with LD are respiratory illness, cardiovascular disease
+    and cancer. 4
+
+    - 2.16% of adults and 2.5% of children have a learning disability. 5
+
+    - People with dementia, frailty needs, mental health problems and other communication needs are also
+    at higher risk of ill health. This is for similar reasons to people with learning disabilities, such
+    as difficulties accessing healthcare, multiple comorbidities, medications and assessment challenges.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: us-specific
+  localization_action: omit_nontransferable
+  authority_basis: original-context-only
+  localization_note: remtis Lietuvos ir ES kontroliuojamų medžiagų reguliavimu
+  matched_localization_terms:
+  - DEA
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-12-neurodivergence
+  block_type: narrative
+  heading: Neurodivergence
+  source_anchor: Neurodivergence
+  source_excerpt: '5.2 Neurodivergence
+
+    - Neurodiversity: this term means that some people’s brains work in a way that is unique to them.
+    The general population is neurodiverse, with a wide range of variation in how people’s brains work.
+
+    - Neurotypical: this is a term used to broadly describe how the majority of people’s brains work.
+
+    - Neurodivergent: this includes autistic people, those with ADHD or dyslexia, and those with other
+    types of neurodivergence including forms of learning difficulty (as opposed to learning disability).
+
+    - There are many different types of learning difficulty. Some of the more well-known are dyslexia,
+    ADHD, dyspraxia and dyscalculia. A person can have one, or a combination.
+
+    - Some neurodivergent people will have a learning disability too, although most will not.
+
+    - Some neurodivergent people will face challenges with communication.
+
+    - Autism is a form of neurodivergence. Every autistic patient is different, with different strengths
+    and challenges.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-13-general-principles
+  block_type: narrative
+  heading: General Principles
+  source_anchor: General Principles
+  source_excerpt: 'General principles
+
+    - Skin tone refers to the individual combination of pigmentation in a person’s skin, whilst skin colour
+    can change when a person is unwell.
+
+    - Assess for skin changes closely using natural light if possible (or non-fluorescent light to avoid
+    a blue tinge). Lighting conditions can affect how you see changes in skin colour.
+
+    - Palpate the skin for a raised rash or swelling and/or local changes in skin temperature.
+
+    - Consider moistening the skin (if unbroken) to enhance the visibility of skin changes.
+
+    - If erythema is identified, it may be pink, purple or red, or the skin may become darker than the
+    surrounding area.
+
+    - Contusions may only be seen as an area of skin that is darker than its surroundings. They could
+    alternatively be a purple/maroon or green/yellow colour.
+
+    - Peripheral cyanosis may be difficult to detect. Use natural light (or non-fluorescent light to avoid
+    a blue tinge) and examine the lips, mucous membranes and tongue for central cyanosis.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-14-maternity-and-gender-related-conditions
+  block_type: narrative
+  heading: Maternity and Gender Related Conditions
+  source_anchor: Maternity and Gender Related Conditions
+  source_excerpt: '6. Maternity and Gender Related Conditions
+
+    - The maternity section in the guidelines, uses the term ‘woman, women or mother’ in relation to the
+    gynaecological and pregnancy related conditions that ambulance clinicians may be called to assess
+    and manage.
+
+    - This is consistent with where other conditions traditionally associated with males are considered
+    and the term ‘man and men’ are used.
+
+    - It is acknowledged that these terms do not reflect the diverse range of patients that you may see
+    with such conditions including those who identify as non-binary or transgender.
+
+    - We will keep this language under review and acknowledge that there is as yet a lack of consensus
+    in clinical practice as how best to reflect these issues and challenges.
+
+    - Language aside it is important that when assessing all patients to be mindful of drawing erroneous
+    conclusions related to perceived gender related diagnoses.
+
+    - Where clinically appropriate gender-neutral descriptions will be adopted.
+
+    7. Sexual Orientation'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-15-sexual-orientation
+  block_type: narrative
+  heading: Sexual Orientation
+  source_anchor: Sexual Orientation
+  source_excerpt: '- sexual orientation
+
+    2.2 Health Inequality and Cognitive Bias
+
+    - There are strong correlations between some of the protected characteristics and health inequalities
+    with certain groups.
+
+    - The causes for this are multifactorial and where bias or discrimination are contributing factors
+    this should be recognised and minimised.
+
+    - At an individual level practitioners should be aware that their preconceptions and liability to
+    cognitive bias can influence how they perceive and care for patients and actively minimise their impact.
+    1
+
+    2.3 Inadvertent Bias and Preconceptions in the Initial Approach to Patients
+
+    - It is important to achieve rapport and mutual respect with the people we care for in order for them
+    to be best able to confide in us with the confidence that they will be respected.
+
+    - This enables them to receive the most appropriate care and for the practitioner to carry out the
+    best possible assessment.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Jei minimas šiame ar kituose susijusiuose skyriuose, rodyti tik kaip JK originalo
+    advance care planning kontekstą.
+  matched_localization_terms:
+  - ReSPECT
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-16-overview
+  block_type: narrative
+  heading: Overview
+  source_anchor: Overview
+  source_excerpt: '7.1 Overview
+
+    - In 2021 1.5 million people (3.2% of the population aged 16 years and over) identified as having
+    a sexuality other than heterosexual. 11
+
+    - Conditions such as depression, anxiety, self-harm and substance misuse including alcohol are found
+    with greater frequency amongst the LGBT+ community than in the general population. 12
+
+    - These can have a basis in their experience of hostility and discrimination because of their sexual
+    orientation.
+
+    - Clinicians should be aware of these often-hidden health issues and reflect these in their clinical
+    assessment and practice.
+
+    7.2 Consent to Sharing Sexual Orientation with Other Health Professionals
+
+    - Clinicians taking a social history from patients and asking about family and support structures
+    must not make assumptions as to sexuality.
+
+    - Where relevant information regarding a patient’s sexuality has been obtained, this information should
+    be recorded and handed over to other health care professionals with the patient’s consent, to ensure
+    this information is available for those caring for the patient further along the chain of care.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-17-consent-to-sharing-sexual-orientation-with-other-health-professionals
+  block_type: narrative
+  heading: Consent to Sharing Sexual Orientation with Other Health Professionals
+  source_anchor: Consent to Sharing Sexual Orientation with Other Health Professionals
+  source_excerpt: '7.2 Consent to Sharing Sexual Orientation with Other Health Professionals
+
+    - Clinicians taking a social history from patients and asking about family and support structures
+    must not make assumptions as to sexuality.
+
+    - Where relevant information regarding a patient’s sexuality has been obtained, this information should
+    be recorded and handed over to other health care professionals with the patient’s consent, to ensure
+    this information is available for those caring for the patient further along the chain of care.
+
+    - Patients may be reluctant to consent to this information being shared. Where the regarding sexual
+    orientation is relevant to possible diagnosis and could alter or influence care, it is expected that
+    the professional will encourage the individual patient to allow sharing of this sensitive information.
+
+    8. Gender
+
+    8.1 What is transgender/non-binary?
+
+    - The sex of all children born in the UK is observed, confirmed and recorded at birth. This is usually
+    based on their genitalia and traditionally that child is then raised in a way which matches this assigned
+    sex. A minority find that how they view themselves and their gender does not match with the sex they
+    were assigned. Identifying as a different gender to that recorded at birth is what makes someone transgender.
+
+    - If someone finds that their gender identity does not fit with the male/female binary and they identify
+    more as someone else or in-between, then they commonly will identify as non-binary.'
+  risk_flags: []
+  tags:
+  - legal-localization
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: mixed-anglosphere
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste nepalikite kaip vietinio standarto; jei reikia, rodykite
+    tik `Originalo kontekstas` bloke.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-18-gender
+  block_type: narrative
+  heading: Gender
+  source_anchor: Gender
+  source_excerpt: '- gender reassignment
+
+    - being married or in a civil partnership
+
+    - being pregnant or on maternity leave
+
+    - disability
+
+    - race including colour, nationality, ethnic or national origin
+
+    - religion or belief
+
+    - sex
+
+    - sexual orientation'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids:
+  - claim-008-004
+  matched_claim_types:
+  - algorithm_step
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-19-what-is-transgender-non-binary
+  block_type: narrative
+  heading: What is transgender/non-binary?
+  source_anchor: What is transgender/non-binary?
+  source_excerpt: '8.1 What is transgender/non-binary?
+
+    - The sex of all children born in the UK is observed, confirmed and recorded at birth. This is usually
+    based on their genitalia and traditionally that child is then raised in a way which matches this assigned
+    sex. A minority find that how they view themselves and their gender does not match with the sex they
+    were assigned. Identifying as a different gender to that recorded at birth is what makes someone transgender.
+
+    - If someone finds that their gender identity does not fit with the male/female binary and they identify
+    more as someone else or in-between, then they commonly will identify as non-binary.
+
+    - There is no one size fits all approach to the provision of care for transgender/non-binary patients.
+    Some patients may identify in ways not covered in these guidelines. If in doubt – ask. The patient
+    is the expert on their own experiences and will be able to clarify how they would like you to refer
+    to them.
+
+    8.2 Transitioning
+
+    - Some patients who discover that their gender identity is not that which they were assigned at birth,
+    may decide to begin transitioning to their actual gender.
+
+    | Col 1 |
+
+    | --- |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-20-transitioning
+  block_type: narrative
+  heading: Transitioning
+  source_anchor: Transitioning
+  source_excerpt: '8.2 Transitioning
+
+    - Some patients who discover that their gender identity is not that which they were assigned at birth,
+    may decide to begin transitioning to their actual gender.
+
+    | Col 1 |
+
+    | --- |
+
+    | Social transitioning occurs when the individual has begun to inform others – also known as coming
+    out. Medical transitioning involves individuals taking steps to change their appearance in a more
+    permanent way. |
+
+    - Some acts of Social Transitioning: Changing their names either legally or socially Using pronouns
+    in their preferred gender Using the bathroom of their preferred gender Adopting the traditional clothing
+    and hairstyle of their gender Using binders to reduce the appearance of breasts or implants to increase
+    breast size Using packers to replicate the appearance of male genitalia through underwear or tucking
+    to conceal genitalia.
+
+    - Some acts of Medical Transitioning: Taking hormones to induce endocrinological changes. Gender confirmation
+    surgery on genitalia (sometimes referred to as bottom surgery) Breast removal/breast augmentation
+    (sometimes referred to as top surgery) Facial surgery Laser hair removal
+
+    8.3 Considering Transition when Providing Emergency Care'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-21-considering-transition-when-providing-emergency-care
+  block_type: narrative
+  heading: Considering Transition when Providing Emergency Care
+  source_anchor: Considering Transition when Providing Emergency Care
+  source_excerpt: '8.3 Considering Transition when Providing Emergency Care
+
+    - Always consider the gender of a patient might not be obvious or what they were assigned at birth.
+    While it is preferred that patients are referred to by their names and pronouns, consideration as
+    to both their gender assigned at birth and their current stage of transition is essential for the
+    provision of good medical care. Male and non-binary patients may need to be screened for medical emergencies
+    such as ectopic pregnancy, while female and non-binary patients may need to be screened for medical
+    emergencies such as testicular torsion.
+
+    - Clinicians should consider undertaking a relevant history of transition including any social, hormonal
+    and surgical elements of the individual’s transition. These should be recorded, and any relevant details
+    noted, then handed over to other relevant health care professionals as required. 13
+
+    - Patients may be reluctant to consent to this information being shared, so it is important that clinicians
+    ensure the patient understands the importance of this information to the provision of proper medical
+    care. Patients should be reassured that their current name, pronouns and gender identity will also
+    be handed over alongside their assigned gender identity and birth and transitional history.
+
+    8.4 Disorders of Sex Development
+
+    - There are also people that do not fit the binary physical classification of male or female, these
+    people were previously known as Intersex. 14
+
+    - Due to the complexity of the various conditions that may be considered intersex (e.g. Klinefelter
+    syndrome, Turners syndrome, XXX, XYY, X0, XXYY to name only a few), the clinician may need to ask
+    their patient about how the condition affects them and if they have any particular treatment requirements.
+
+    8.5 Gender Dysphoria'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-22-disorders-of-sex-development
+  block_type: narrative
+  heading: Disorders of Sex Development
+  source_anchor: Disorders of Sex Development
+  source_excerpt: '8.4 Disorders of Sex Development
+
+    - There are also people that do not fit the binary physical classification of male or female, these
+    people were previously known as Intersex. 14
+
+    - Due to the complexity of the various conditions that may be considered intersex (e.g. Klinefelter
+    syndrome, Turners syndrome, XXX, XYY, X0, XXYY to name only a few), the clinician may need to ask
+    their patient about how the condition affects them and if they have any particular treatment requirements.
+
+    8.5 Gender Dysphoria
+
+    - Gender dysphoria (GD) is a term that describes a sense of unease that a person may have because
+    of a mismatch between their biological sex and their gender identity.
+
+    - Gender dysphoria is a constellation of symptoms experienced by most trans/non-binary people. This
+    can be experienced as physical discomfort, and psychological and emotional distress. Deadnaming an
+    individual or using the wrong pronouns can trigger dysphoria in patients. Clinicians should use the
+    right pronouns and name for a patient.
+
+    - People with gender dysphoria may have a range of feelings and behaviours that show discomfort or
+    distress. The level of distress can be severe and affect all areas of their life.
+
+    - Gender dysphoria is not a mental illness, but some people may develop mental health problems because
+    of gender dysphoria.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: us-specific
+  localization_action: omit_nontransferable
+  authority_basis: original-context-only
+  localization_note: remtis Lietuvos ir ES kontroliuojamų medžiagų reguliavimu
+  matched_localization_terms:
+  - DEA
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-23-gender-dysphoria
+  block_type: narrative
+  heading: Gender Dysphoria
+  source_anchor: Gender Dysphoria
+  source_excerpt: '- Clinicians should use and record the patient’s chosen name, especially when handing
+    over care of the patient to other health care professionals so as to ensure the correct name is used
+    for the patient further down the chain of care. Clinicians should ask patients what pronouns they
+    use in much the same way we ask what patients would like to be called. This could be especially important
+    for certain groups of people, for example people with gender dysphoria.
+
+    2.4 Direct and Indirect Discrimination
+
+    Direct discrimination is said to have occurred when a person is treated unfairly as a result of their
+    protected characteristic. This can occur because that person has a protected characteristic, or is
+    perceived to have that characteristic, or be connected to a person with that characteristic.
+
+    Indirect discrimination arises when circumstances are applied equally to a population, but this disproportionately
+    discriminates against a proportion of that population with a shared protected characteristic leading
+    to personal disadvantage.
+
+    3. Ethnicity and Race
+
+    - We refer to ethnicity and not race to reflect the heritage and cultural identity of an individual.
+    We should recognise and reflect in our practice the different cultural differences and concerns regarding
+    health and wellbeing.
+
+    - Consent to examination and/or treatment may legitimately be restricted by cultural, religious or
+    ethnic expectations. Care should be taken to be respectful of the restrictions the individual may
+    place on their care. Refer to Consent in Pre-Hospital Care .
+
+    - Consideration should be given to how reasonable adjustments may be made to overcome such difficulties
+    by either modifying the treatment offered or offering examination by a same sex practitioner. (Local
+    practice and guidance should be followed.) Consent where communication is limited and or comprehension
+    not clear, such as where there are language barriers or learning difficulties, should be handled sensitively
+    and in line with the Mental Capacity Act 2005. 2'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remtis paciento teisių, informuoto sutikimo ir atstovavimo
+    logika pagal LT teisę.
+  matched_localization_terms:
+  - Mental Capacity Act 2005
+  - ReSPECT
+  matched_claim_ids:
+  - claim-008-002
+  matched_claim_types:
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-24-cultural-differences
+  block_type: narrative
+  heading: Cultural Differences
+  source_anchor: Cultural Differences
+  source_excerpt: '- We refer to ethnicity and not race to reflect the heritage and cultural identity
+    of an individual. We should recognise and reflect in our practice the different cultural differences
+    and concerns regarding health and wellbeing.
+
+    - Consent to examination and/or treatment may legitimately be restricted by cultural, religious or
+    ethnic expectations. Care should be taken to be respectful of the restrictions the individual may
+    place on their care. Refer to Consent in Pre-Hospital Care .
+
+    - Consideration should be given to how reasonable adjustments may be made to overcome such difficulties
+    by either modifying the treatment offered or offering examination by a same sex practitioner. (Local
+    practice and guidance should be followed.) Consent where communication is limited and or comprehension
+    not clear, such as where there are language barriers or learning difficulties, should be handled sensitively
+    and in line with the Mental Capacity Act 2005. 2
+
+    4. Skin Colour and Tone
+
+    General principles
+
+    - Skin tone refers to the individual combination of pigmentation in a person’s skin, whilst skin colour
+    can change when a person is unwell.
+
+    - Assess for skin changes closely using natural light if possible (or non-fluorescent light to avoid
+    a blue tinge). Lighting conditions can affect how you see changes in skin colour.
+
+    - Palpate the skin for a raised rash or swelling and/or local changes in skin temperature.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remtis paciento teisių, informuoto sutikimo ir atstovavimo
+    logika pagal LT teisę.
+  matched_localization_terms:
+  - Mental Capacity Act 2005
+  - ReSPECT
+  matched_claim_ids:
+  - claim-008-002
+  matched_claim_types:
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-25-talking-about-people
+  block_type: narrative
+  heading: Talking about People
+  source_anchor: Talking about People
+  source_excerpt: '10. Talking about People
+
+    - It is easy to give unintended offence by referring to an individual using insensitive, inappropriate
+    or outdated language.
+
+    - Similarly, not understanding an unfamiliar term used by an individual about their needs or protected
+    characteristics can make providing appropriate adjustments challenging.
+
+    - This section does not cover all such terms, but it includes some of the more frequently used terms
+    and examples of preferred approaches.
+
+    10.1 Gender and Sexuality
+
+    | Col 1 | Col 2 |
+
+    | --- | --- |
+
+    | Some useful terms when caring for transgender/non-binary patients, writing notes and handing over
+    care. |  |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-26-gender-and-sexuality
+  block_type: narrative
+  heading: Gender and Sexuality
+  source_anchor: Gender and Sexuality
+  source_excerpt: '10.1 Gender and Sexuality
+
+    | Col 1 | Col 2 |
+
+    | --- | --- |
+
+    | Some useful terms when caring for transgender/non-binary patients, writing notes and handing over
+    care. |  |
+
+    | Assigned male at birth (AMAB) | Someone who was assigned male sex and gender identity at birth |
+
+    | Assigned female at birth (AFAB) | Someone who was assigned female sex and gender at birth |
+
+    | Transgender | Those who were assigned a gender at birth that is incongruent with their actual gender
+    identity |
+
+    | Trans | An acceptable and commonly used term, short for transgender |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-27-person-centred-language
+  block_type: narrative
+  heading: Person Centred Language
+  source_anchor: Person Centred Language
+  source_excerpt: '10.2 Person Centred Language
+
+    - Person centred language reflects good manners and helps develop empathy facilitating good communication
+    and care.
+
+    - The general approach should be to describe the person with a disease or impairment not as a condition
+    or disability. i.e. Person with diabetes, not a diabetic.
+
+    - It may be more appropriate to describe the adjustment that needs to be considered rather than the
+    specific condition, i.e. John has some communication difficulties and finds it easier to lip read.
+    This is important as many conditions and impairments produce different levels of disability for people,
+    i.e. restricted vision and uses visual aids may have different needs to someone with little or no
+    vision who needs written material in a different format or uses an electronic reading device.
+
+    - The table produced below is for illustration rather than a complete list. 28
+
+    | Col 1 | Col 2 |
+
+    | --- | --- |
+
+    | Use | Avoid |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-28-current-areas-for-development-not-completely-within-the-remit-of-jrcalc
+  block_type: narrative
+  heading: Current Areas for Development not Completely within the Remit of JRCALC
+  source_anchor: Current Areas for Development not Completely within the Remit of JRCALC
+  source_excerpt: '11. Current Areas for Development not Completely within the Remit of JRCALC
+
+    - As stated at the start of this chapter, promoting equality and removing particularly inadvertent
+    or indirect bias is a continuing challenge for organisations. JRCALC references national standards
+    of practice which reflect the current limitations of evidence and policy, but where we feel there
+    are opportunities to reflect if the science and practice of medicine allows us to remove bias, we
+    will undertake to do this.
+
+    - With this in mind we are having conversations regarding skin tone and colour in currently widely
+    used tools.
+
+    - Tools under discussion include: NICE Fever in Children guidance APGAR scoring CRESS tool Pulse oximetry
+
+    References
+
+    | Col 1 | Col 2 |
+
+    | --- | --- |
+
+    | 1. | HCPC. 2023. The Standards of Proficiency of a Paramedic Clause 5.3. Available from: https://www.hcpc-uk.org/standards/standards-of-proficiency/paramedics/
+    . Accessed 15/3/2024. |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste naudoti tik kaip originalo gairių leidinio kontekstą, o ne
+    kaip LT norminį autoritetą.
+  matched_localization_terms:
+  - HCPC
+  - JRCALC
+  matched_claim_ids:
+  - claim-008-005
+  matched_claim_types:
+  - market_availability
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+clinical_claims:
+- claim_id: claim-008-001
+  claim_type: legal_scope
+  source_anchor: Equality Act 2010
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: Lietuvos Respublikos lygių galimybių įstatymas
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: LT tekste akcentuojamas nediskriminavimo ir lygių galimybių principas, ne pažodinis JK įstatymo
+    perkėlimas.
+  matched_block_ids:
+  - narrative-03-why-do-we-need-to-flex-our-clinical-practice
+  - narrative-04-equality-act-2010
+- claim_id: claim-008-002
+  claim_type: legal_scope
+  source_anchor: language barriers or learning difficulties
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: Pacientų teisių ir žalos sveikatai atlyginimo įstatymas
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Sprendimai dėl sutikimo ir informacijos pateikimo lokalizuojami pagal LT paciento teisių sluoksnį.
+  matched_block_ids:
+  - narrative-07-direct-and-indirect-discrimination
+  - narrative-08-ethnicity-and-race
+  - narrative-23-gender-dysphoria
+  - narrative-24-cultural-differences
+- claim_id: claim-008-003
+  claim_type: algorithm_step
+  source_anchor: disability / access / assistance aids
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: Asmens su negalia teisių apsaugos pagrindų įstatymas
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: 'Pagrindinis LT principas: prieinamumas ir pagalbinių priemonių užtikrinimas.'
+  matched_block_ids:
+  - narrative-10-disability
+- claim_id: claim-008-004
+  claim_type: algorithm_step
+  source_anchor: gender related care / transition
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: SAM 2022 lyties tapatumo sutrikimo diagnostikos ir gydymo tvarkos sluoksnis
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Klinikinę siuntimo logiką lokalizuoti į LT sistemą, ne į GP / GDC modelį.
+  matched_block_ids:
+  - narrative-18-gender
+- claim_id: claim-008-005
+  claim_type: market_availability
+  source_anchor: Pulse oximetry
+  final_rendering: original_context_callout
+  authority_basis: original-context-only
+  primary_lt_source: ''
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Originale minimi JK įrankiai ir gairės rodomi kaip originalo diskusijos kryptis, o ne kaip LT
+    pareiga.
+  matched_block_ids:
+  - narrative-28-current-areas-for-development-not-completely-within-the-remit-of-jrcalc
+structured_block_policies: []
+active_terms: []
+active_acronyms:
+- acronym: ADHD
+  lt: aktyvumo ir dėmesio sutrikimas
+  en: Attention Deficit Hyperactivity Disorder
+  policy: original-first
+  notes: Patikrinta LT interneto psichiatrijos ir psichologijos šaltiniuose 2026-03-29. LT tekstuose gali
+    pasitaikyti ir `ADS`, bet šiame leidinyje laikomasi originalios `ADHD` santrumpės.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: aktyvumo ir dėmesio sutrikimas (ADHD)
+  section_scope: 008
+- acronym: APGAR
+  lt: Apgar balas
+  en: APGAR score
+  policy: lt-first
+  notes: Patikrinta LT interneto neonatologijos šaltiniuose 2026-03-28.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: Apgar balas
+  section_scope: 008
+- acronym: CT
+  lt: kompiuterinė tomografija
+  en: Computerised Tomography
+  policy: lt-first
+  notes: Patikrinta LT interneto radiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kompiuterinė tomografija (KT / CT)
+  section_scope: 008
+- acronym: NEWS
+  lt: ankstyvojo perspėjimo skalė
+  en: National Early Warning Score
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir SAM susijusiuose šaltiniuose 2026-03-29. LT vartosenoje plačiai
+    matoma ir originali `NEWS` / `NEWS2` santrumpa, todėl ji paliekama su LT išskleidimu.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: ankstyvojo perspėjimo skalė (NEWS)
+  section_scope: 008
+- acronym: PE
+  lt: plaučių embolija
+  en: Pulmonary Embolism
+  policy: original-first
+  notes: Remiasi jau validuotu LT termino įrašu `Pulmonary Embolism -> plaučių embolija` ir papildomai
+    patikrinta LT interneto kardiologijos bei SAM šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: plaučių embolija (PE)
+  section_scope: 008
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: NHS
+  jurisdiction: uk
+  replacement_mode: omit_nontransferable
+  local_lt: taikyti Lietuvos sveikatos sistemos ir GMP organizacinę logiką
+  eu_fallback: taikyti ES ir vietinę organizacinę logiką
+  scope: all
+  reason: '`NHS` yra JK sistemos institucinis kontekstas, ne LT norminis terminas.'
+  source_ref: ''
+  notes: Nepalikti kaip vietinio standarto.
+- source_term: HCPC
+  jurisdiction: uk
+  replacement_mode: omit_nontransferable
+  local_lt: taikyti Lietuvos profesinės atsakomybės ir kompetencijų reguliavimą
+  eu_fallback: taikyti vietinį ir ES reguliavimą
+  scope: all
+  reason: JK profesinis reguliatorius negali būti rodomas kaip LT norminis standartas.
+  source_ref: ''
+  notes: Palikti tik originalo kontekstui, jei reikia.
+- source_term: ReSPECT
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos gydymo apimties ir paciento valios dokumentavimo praktika
+  eu_fallback: remtis LT ir ES teisine bei klinikine praktika
+  scope: all
+  reason: JK `ReSPECT` sistema nėra LT norminis standartas.
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+- source_term: NEWS2
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos naudojamomis būklės vertinimo sistemomis ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir vietine praktika
+  scope: all
+  reason: '`NEWS2` yra UK early warning score ir negali būti rodomas kaip LT standartas.'
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+- source_term: DEA
+  jurisdiction: us
+  replacement_mode: omit_nontransferable
+  local_lt: remtis Lietuvos ir ES kontroliuojamų medžiagų reguliavimu
+  eu_fallback: remtis ES reguliavimu
+  scope: all
+  reason: '`DEA` yra JAV institucinis ir teisinis kontekstas, ne LT/EU norminis standartas.'
+  source_ref: ''
+  notes: Nepalikti pagrindiniame LT tekste.
+source_jurisdiction_signals:
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+- source_term: NHS
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: regex
+  pattern: \b(?:NHS|National Health Service)\b
+  notes: UK health service context.
+- source_term: HCPC
+  jurisdiction: uk
+  signal_type: regulator
+  match_mode: regex
+  pattern: \b(?:HCPC|Health and Care Professions Council)\b
+  notes: UK regulator.
+- source_term: ReSPECT
+  jurisdiction: uk
+  signal_type: law
+  match_mode: regex
+  pattern: \bReSPECT\b
+  notes: UK treatment escalation / resuscitation framework.
+- source_term: NEWS2
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \bNEWS2\b
+  notes: UK early warning score.
+localization_decisions:
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste naudoti tik kaip originalo gairių leidinio kontekstą, o ne
+    kaip LT norminį autoritetą.
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Leidinio proper noun, ne LT klinikinio reguliavimo šaltinis.
+- source_term: Equality Act 2010
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti kaip JK originalo teisinį kontekstą, o pagrindiniame LT tekste remtis LT
+    nediskriminavimo ir lygių galimybių principais.
+  source_ref: JK originalas; Lietuvos Respublikos lygių galimybių įstatymas
+  notes: Nenaudoti kaip tariamo tiesiogiai galiojančio LT teisės akto.
+- source_term: Mental Capacity Act 2005
+  replacement_mode: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remtis paciento teisių, informuoto sutikimo ir atstovavimo
+    logika pagal LT teisę.
+  source_ref: Pacientų teisių ir žalos sveikatai atlyginimo įstatymas
+  notes: JK teisės akto pavadinimą palikti tik originalo konteksto ar research lygmenyje.
+- source_term: NHS / NHS England
+  replacement_mode: omit_nontransferable
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste nevartoti kaip vietinio paslaugų modelio; jei reikia, minėti
+    tik kaip originalo kontekstą.
+  source_ref: '`shared/localization/localization_overrides.tsv`; LT GMP / pacientų teisės šaltiniai'
+  notes: Organizacinis, ne LT norminis terminas.
+- source_term: GP / GDC
+  replacement_mode: replace_lt
+  authority_basis: LT
+  localization_note: Klinikinę logiką lokalizuoti kaip siuntimą šeimos gydytojui ar atitinkamam specialistui
+    pagal LT sveikatos sistemos kelią.
+  source_ref: SAM 2022 tvarkos aprašas; VU publikacija
+  notes: Neperkelti JK referral pathway pažodžiui.
+- source_term: HCPC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Neminiuoti kaip LT profesionalų kompetencijos autoriteto.
+  source_ref: originalo referencijos
+  notes: JK reguliuotojas.
+- source_term: NEWS2
+  replacement_mode: original_context_callout
+  authority_basis: mixed
+  localization_note: Palikti kaip žinomą originalo vertinimo įrankį, bet LT tekste neformuluoti kaip vienintelio
+    ar privalomo LT standarto.
+  source_ref: originalus skyrius; LT klinikinio vertinimo logika
+  notes: Praktinis, ne vien tik jurisdikcinis signalas.
+- source_term: ReSPECT
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Jei minimas šiame ar kituose susijusiuose skyriuose, rodyti tik kaip JK originalo
+    advance care planning kontekstą.
+  source_ref: originalo referencijos
+  notes: Ne LT klinikinis ar teisinis institutas.
+style_hotspots:
+- category: language_risk
+  text: equality šiame skyriuje neturi būti susiaurinta vien iki lygybės; LT klinikiniame kontekste dažnai
+    tikslesnė forma yra lygių galimybių užtikrinimas.
+- category: language_risk
+  text: equity of care geriau perteikti kaip vienoda ir teisinga prieiga prie priežiūros, o ne pažodinį
+    priežiūros lygybė.
+- category: language_risk
+  text: learning disability ir learning difficulty negalima suplakti.
+- category: language_risk
+  text: gender dysphoria, gender incongruence, transgender, non-binary turi būti vartojami nuosekliai
+    ir pagarbiai.
+- category: language_risk
+  text: darker skin nevartoti taip, lyg šviesi oda būtų norma.
+- category: anti_calque
+  text: Vengti pažodinių biurokratinių konstrukcijų iš tipo flex clinical practice; LT tekste rašyti pritaikyti
+    klinikinę praktiką, prisitaikyti prie paciento poreikių.
+- category: anti_calque
+  text: Socialinių ir kultūrinių skirtumų aprašus versti trumpiau ir konkrečiau, vengiant perteklinės
+    deklaratyvios anglų prozos.
+- category: anti_calque
+  text: Ten, kur originale vardijami JK mokymai ar organizacijos, neperkrauti LT teksto nereikalingais
+    proper noun, jei jie neturi tiesioginės klinikinės vertės.
+- category: localization_decision
+  text: Pagrindinis LT tekstas orientuojamas į įtraukų ir prieinamą klinikinį bendravimą, ne į JK teisinės
+    sistemos aprašymą.
+- category: localization_decision
+  text: JK teisės aktai paliekami tik kaip originalo kontekstas, o pagrindiniai veiklos principai perrašomi
+    pagal LT pacientų teisių, lygių galimybių ir negalios teisių logiką.
+- category: localization_decision
+  text: Socialiai ir kultūriškai jautrūs terminai verčiami kuo mažiau ideologizuotai ir kuo labiau kliniškai
+    bei pagarbiai.
+- category: localization_decision
+  text: Terminai, kurių LT vartosena nėra visiškai nusistovėjusi (neurodivergent, deadname, deadnaming,
+    binder, packer), tekste aiškinami aprašomai, nepromuojant jų į bendrą aktyvią terminų bazę.
+- category: local_practice_change
+  text: Equality Act 2010 pakeistas nuoroda į LT nediskriminavimo principus, vietoje pažodinio JK teisės
+    akto perkėlimo.
+- category: local_practice_change
+  text: Mental Capacity Act 2005 funkciškai pakeistas LT paciento teisių, informuoto sutikimo ir atstovavimo
+    logika.
+- category: local_practice_change
+  text: GP ir Gender Dysphoria clinic siuntimo logika pakeista į bendrą LT sveikatos sistemos kelią.
+- category: local_practice_change
+  text: woman / women / mother vartosena išlaikyta ten, kur kalbama apie ginekologines ar nėštumo būkles,
+    bet papildomai aiškiai pripažįstama, kad klinikinėje praktikoje gali būti ir kitų lytinių tapatybių
+    pacientų.
+gold_examples: []
+term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates:
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-afab
+  candidate_kind: acronym
+  source_term: AFAB
+  source_expansion: Assigned female at birth
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Assigned female at birth (AFAB) | Someone who was assigned female sex and gender
+    at birth |'
+  proposed_lt: asmuo, kuriam gimimo metu priskirta moteriškoji lytis
+  status: localization_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Jautri tapatybės sąvoka; vartoti tik lokaliai šiame skyriuje, į shared akronimų bazę nekelti.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-amab
+  candidate_kind: acronym
+  source_term: AMAB
+  source_expansion: Assigned male at birth
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Assigned male at birth (AMAB) | Someone who was assigned male sex and gender identity
+    at birth |'
+  proposed_lt: asmuo, kuriam gimimo metu priskirta vyriškoji lytis
+  status: localization_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Jautri tapatybės sąvoka; vartoti tik lokaliai šiame skyriuje, į shared akronimų bazę nekelti.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-cipold
+  candidate_kind: acronym
+  source_term: CIPOLD
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| 3. | HQIP. Confidential Enquiry into Deaths of People with Learning Disabilities
+    CIPOLD 2013 . 2013. Available from: https://www.hqip.org.uk/resource/confidential-enquiry-into-deaths-of-people-with-learning-disabilities-cipold-2013/#.Xbya1fZ2vIU.
+    |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK audito / confidential enquiry santrumpa; į LT aktyvią bazę nekelti.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-gcs
+  candidate_kind: acronym
+  source_term: GCS
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Where possible, establish the regular parameters for the individual e.g.: GCS, Pain
+    score, level of activity etc, this may differ to non-disabled patients. Compare if/how this is different
+    to regular parameters.'
+  proposed_lt: Glazgo komos skalė
+  status: localization_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: https://lsmu.lt/cris/entities/etd/894b2c78-446b-4a21-8afb-83ee0afaede2
+  notes: Plačiai vartojamas klinikinis terminas; šiame žingsnyje paliekamas lokaliame sluoksnyje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-gdc
+  candidate_kind: acronym
+  source_term: GDC
+  source_expansion: threatening concerns you should Refer the patient to their GP for consideration of
+    referral to a Gender Dysphoria clinic
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Assessment and Management | Assess for any physical or physiological concerns (self-harm,
+    suicide attempt, hypoxia secondary to binding, infection from surgery) and refer to the Mental Health
+    team if necessary. If there are no life-threatening concerns you should Refer the patient to their
+    GP for consideration of referral to a Gender Dysphoria clinic (GDC) where an assessment by a specialist
+    team can be undertaken. |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK Gender Dysphoria clinic santrumpa; LT referral pathway pažodžiui neperkelti.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-gic
+  candidate_kind: acronym
+  source_term: GIC
+  source_expansion: Gender Identity Clinic
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- When referring to disability it encompasses temporary and permanent, visible and
+    non-visible conditions and impairments, physical and psychological, mental health conditions and neurodivergent
+    conditions. It is accepted that disability is different for everyone and can result in varying levels
+    of disruption to daily life. Not everyone will be comfortable with the term disability or impairment
+    (or other disability related terminology) being used to refer to a particular condition, and some
+    conditions may be labelled as ‘differences’. The term disability is used, however it is recognised
+    and accepted that there are different positions, perspectives and views on this terminology and (we)
+    wish to acknowledge this.'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK Gender Identity Clinic proper noun; į LT aktyvią bazę nekelti.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-gov
+  candidate_kind: acronym
+  source_term: GOV
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| 2. | Mental Capacity Act 2005. https://www.legislation.gov.uk/ukpga/2005/9/contents
+    |'
+  proposed_lt: ''
+  status: not_acronym
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: False positive iš GOV.UK URL; ne aktyvus medicininis akronimas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-gp
+  candidate_kind: acronym
+  source_term: GP
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Assessment and Management | Assess for any physical or physiological concerns (self-harm,
+    suicide attempt, hypoxia secondary to binding, infection from surgery) and refer to the Mental Health
+    team if necessary. If there are no life-threatening concerns you should Refer the patient to their
+    GP for consideration of referral to a Gender Dysphoria clinic (GDC) where an assessment by a specialist
+    team can be undertaken. |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK šeimos gydytojo vaidmuo; LT tekste lokalizuojama per bendrą siuntimo logiką.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-hqip
+  candidate_kind: acronym
+  source_term: HQIP
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| 3. | HQIP. Confidential Enquiry into Deaths of People with Learning Disabilities
+    CIPOLD 2013 . 2013. Available from: https://www.hqip.org.uk/resource/confidential-enquiry-into-deaths-of-people-with-learning-disabilities-cipold-2013/#.Xbya1fZ2vIU.
+    |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK organizacijos santrumpa iš referencijų; į LT aktyvią bazę nekelti.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-ld
+  candidate_kind: acronym
+  source_term: LD
+  source_expansion: A learning disability
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- The causes for this are multifactorial and where bias or discrimination are contributing
+    factors this should be recognised and minimised.'
+  proposed_lt: intelekto negalia
+  status: localization_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/rs/lasupplement/TAP/5baf50502fca11efb121d2fe3a0eff27/952d0869338811efb121d2fe3a0eff27/format/ISO_PDF/
+  notes: Originalo LD santrumpa į LT aktyvią akronimų bazę nepromuojama; tekste vartoti pilną terminą.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-lgbt
+  candidate_kind: acronym
+  source_term: LGBT
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Conditions such as depression, anxiety, self-harm and substance misuse including
+    alcohol are found with greater frequency amongst the LGBT+ community than in the general population.
+    12'
+  proposed_lt: LGBT+ bendruomenė
+  status: localization_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Plačiai atpažįstamas trumpinys; šiame skyriuje paliekamas lokaliame wording sluoksnyje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-mbrrace
+  candidate_kind: acronym
+  source_term: MBRRACE
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| 27. | Knight M, Bunch K, Tuffnell D, Shakespeare J et al. (eds). MBRRACE (2020) Saving
+    Lives, Improving Mothers’ Care: Lessons learned to inform maternity care from the UK and Ireland Confidential
+    Enquiries into Maternal Deaths and Morbidity 2016–18. Available from: https://www.npeu.ox.ac.uk/assets/downloads/mbrrace-uk/reports/maternal-report-2020/MBRRACE-
+    UK_Maternal_Report_Dec_2020_v10_ONLINE_VERSION_1404.pdf. |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK audito programos santrumpa; ne LT aktyvios bazės vienetas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-sa
+  candidate_kind: acronym
+  source_term: SA
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- disability'
+  proposed_lt: ''
+  status: not_acronym
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: False positive; ne santrumpa.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-sp0
+  candidate_kind: acronym
+  source_term: SP0
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Pulse oximetry can over-estimate oxygen levels, and this inaccuracy is more likely
+    to occur in patients with a dark skin tone than a light skin tone. The SP0 2 reading may misleadingly
+    suggest the patient is within a normal oxygenation range despite oxygen saturations being low. Use
+    caution and a wide clinical assessment to assess for possible hypoxia, particularly respiratory rate.'
+  proposed_lt: ''
+  status: not_acronym
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: OCR / source formato artefaktas iš `SpO2`; ne savarankiškas akronimas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-sv
+  candidate_kind: acronym
+  source_term: SV
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| 8. | Aronowitz SV et al. Mixed studies review of factors influencing receipt of pain
+    treatment by injured black patients. Journal of Advanced Nursing 2020 , 76(1): 34–46. doi: 10.1111/jan.14215.
+    |'
+  proposed_lt: ''
+  status: not_acronym
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Autoriaus inicialų fragmentas iš literatūros sąrašo; ne santrumpa.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-unfe
+  candidate_kind: acronym
+  source_term: UNFE-
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| 14. | Office of the United Nations High Commissioner for Human Rights. 2016. “Free
+    & Equal Campaign Fact Sheet: Intersex. Available from: https://www.unfe.org/wp-content/uploads/2017/05/UNFE-Intersex.pdf
+    |'
+  proposed_lt: ''
+  status: not_acronym
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: URL slug fragmentas; ne akronimų bazės vienetas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-x0
+  candidate_kind: acronym
+  source_term: X0
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Due to the complexity of the various conditions that may be considered intersex (e.g.
+    Klinefelter syndrome, Turners syndrome, XXX, XYY, X0, XXYY to name only a few), the clinician may
+    need to ask their patient about how the condition affects them and if they have any particular treatment
+    requirements.'
+  proposed_lt: ''
+  status: not_acronym
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Kariotipinė žyma, ne akronimų bazės vienetas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-xxx
+  candidate_kind: acronym
+  source_term: XXX
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Due to the complexity of the various conditions that may be considered intersex (e.g.
+    Klinefelter syndrome, Turners syndrome, XXX, XYY, X0, XXYY to name only a few), the clinician may
+    need to ask their patient about how the condition affects them and if they have any particular treatment
+    requirements.'
+  proposed_lt: ''
+  status: not_acronym
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Kariotipinė žyma, ne akronimų bazės vienetas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-xxyy
+  candidate_kind: acronym
+  source_term: XXYY
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Due to the complexity of the various conditions that may be considered intersex (e.g.
+    Klinefelter syndrome, Turners syndrome, XXX, XYY, X0, XXYY to name only a few), the clinician may
+    need to ask their patient about how the condition affects them and if they have any particular treatment
+    requirements.'
+  proposed_lt: ''
+  status: not_acronym
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Kariotipinė žyma, ne akronimų bazės vienetas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-xyy
+  candidate_kind: acronym
+  source_term: XYY
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Due to the complexity of the various conditions that may be considered intersex (e.g.
+    Klinefelter syndrome, Turners syndrome, XXX, XYY, X0, XXYY to name only a few), the clinician may
+    need to ask their patient about how the condition affects them and if they have any particular treatment
+    requirements.'
+  proposed_lt: ''
+  status: not_acronym
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Kariotipinė žyma, ne akronimų bazės vienetas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-assessment-and-management
+  candidate_kind: term
+  source_term: Assessment and Management
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Assessment and Management | Assess for any physical or physiological concerns (self-harm,
+    suicide attempt, hypoxia secondary to binding, infection from surgery) and refer to the Mental Health
+    team if necessary. If there are no life-threatening concerns you should Refer the patient to their
+    GP for consideration of referral to a Gender Dysphoria clinic (GDC) where an assessment by a specialist
+    team can be undertaken. |'
+  proposed_lt: vertinimas ir valdymas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Lentelės stulpelio antraštė; į shared terminų bazę nepromuoti.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-assigned-female-at-birth
+  candidate_kind: term
+  source_term: Assigned female at birth
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Assigned female at birth (AFAB) | Someone who was assigned female sex and gender
+    at birth |'
+  proposed_lt: asmuo, kuriam gimimo metu priskirta moteriškoji lytis
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Jautri tapatybės sąvoka; vartoti tik lokaliai šiame skyriuje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-assigned-male-at-birth
+  candidate_kind: term
+  source_term: Assigned male at birth
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Assigned male at birth (AMAB) | Someone who was assigned male sex and gender identity
+    at birth |'
+  proposed_lt: asmuo, kuriam gimimo metu priskirta vyriškoji lytis
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Jautri tapatybės sąvoka; vartoti tik lokaliai šiame skyriuje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-autism
+  candidate_kind: term
+  source_term: autism
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- For more information on learning disability and autism take a look at the Oliver
+    McGowan Training on Learning Disability and Autism for healthcare staff.'
+  proposed_lt: autizmas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lsmu.lt/cris/entities/publication/9cd0a6b2-9bef-4bf8-88ed-d84b331a0a9f
+  notes: Patvirtinta LT akademinėje vartosenoje; šiame žingsnyje nepromuojama į shared.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-chosen-name
+  candidate_kind: term
+  source_term: chosen name
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Clinicians should use and record the patient’s chosen name, especially when handing
+    over care of the patient to other health care professionals so as to ensure the correct name is used
+    for the patient further down the chain of care. Clinicians should ask patients what pronouns they
+    use in much the same way we ask what patients would like to be called. This could be especially important
+    for certain groups of people, for example people with gender dysphoria.'
+  proposed_lt: pasirinktas vardas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Pagarbaus bendravimo ir dokumentavimo terminas; šiam skyriui paliekamas lokalus wording.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-cognitive-bias
+  candidate_kind: term
+  source_term: cognitive bias
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: 2.2 Health Inequality and Cognitive Bias
+  proposed_lt: kognityvinis šališkumas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Šio skyriaus klinikinės komunikacijos terminas; kol kas nepromuojamas į shared.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-contusions
+  candidate_kind: term
+  source_term: contusions
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Contusions may only be seen as an area of skin that is darker than its surroundings.
+    They could alternatively be a purple/maroon or green/yellow colour.'
+  proposed_lt: kontūzijos
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Klinikinėje odoje apžiūros vietoje vartojamas medicininis terminas; šiam skyriui paliekamas lokalus
+    sprendimas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-disorders-of-sex-development
+  candidate_kind: term
+  source_term: disorders of sex development
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: 8.4 Disorders of Sex Development
+  proposed_lt: lyties raidos sutrikimai
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtingas ir jautrus terminas; šiame skyriuje vartojamas lokaliai, nepromuojamas į shared.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-diversity-and-equality
+  candidate_kind: term
+  source_term: diversity and equality
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '# Chapter 8 Clinical Considerations in Relation to Diversity and Equality'
+  proposed_lt: įvairovė ir lygios galimybės
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Skyriaus pavadinimo wording vienetas; į shared terminų bazę nepromuoti.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-equality-act-2010
+  candidate_kind: term
+  source_term: Equality Act 2010
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: 2.1 Equality Act 2010
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK teisės akto proper noun; LT tekste palikti tik originalo kontekste.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-erythema
+  candidate_kind: term
+  source_term: erythema
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- If erythema is identified, it may be pink, purple or red, or the skin may become
+    darker than the surrounding area.'
+  proposed_lt: eritema
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lsmu.lt/cris/bitstream/20.500.12512/104582/1/BMD_Simona_Jakstaite..pdf
+  notes: Medicininis odos pokyčio terminas; šiame skyriuje paliekamas lokalus sprendimas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-ethnicity
+  candidate_kind: term
+  source_term: ethnicity
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: 3. Ethnicity and Race
+  proposed_lt: etniškumas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Šio skyriaus socialinio ir kultūrinio konteksto terminas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-gender-confirmation-surgery
+  candidate_kind: term
+  source_term: Gender confirmation surgery
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Gender confirmation surgery | Surgical interventions and procedures which alter the
+    patient’s body to better reflect their gender identity |'
+  proposed_lt: lyties patvirtinimo chirurgija
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Jautrus terminas; vartoti lokaliai šiame skyriuje, nepromuoti į shared.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-gender-dysphoria
+  candidate_kind: term
+  source_term: gender dysphoria
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Clinicians should use and record the patient’s chosen name, especially when handing
+    over care of the patient to other health care professionals so as to ensure the correct name is used
+    for the patient further down the chain of care. Clinicians should ask patients what pronouns they
+    use in much the same way we ask what patients would like to be called. This could be especially important
+    for certain groups of people, for example people with gender dysphoria.'
+  proposed_lt: lyties disforija
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/uploads/sam/documents/files/%21%21%E2%99%A52023%20SM3%28SAM%20Internetas%29.pdf
+  notes: Patikrinta LT medicinos šaltiniuose; šiame žingsnyje paliekama lokaliai dėl jautraus konteksto.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-health-inequalities
+  candidate_kind: term
+  source_term: health inequalities
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- There are strong correlations between some of the protected characteristics and health
+    inequalities with certain groups.'
+  proposed_lt: sveikatos netolygumai
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Viešosios sveikatos ir prieigos prie priežiūros terminas; šio skyriaus lokalizacijos wording.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-learning-difficulty
+  candidate_kind: term
+  source_term: learning difficulty
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- A learning disability is different from a learning difficulty, as a learning difficulty
+    does not affect general intellect. Examples of learning difficulties include attention deficit-hyperactivity
+    disorder (ADHD) and dyslexia.'
+  proposed_lt: mokymosi sutrikimas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/rs/lasupplement/TAP/9a60cf604eac11ec86bdcb0a6d573b32/1947f66eede1b9025ff9959d525358b8/format/ISO_PDF/
+  notes: Nesutapatinti su `learning disability`; šiame skyriuje laikomas lokalizacijos sprendimu.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-learning-disability
+  candidate_kind: term
+  source_term: learning disability
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: 5.1 Learning Disability
+  proposed_lt: intelekto negalia
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/rs/lasupplement/TAP/5baf50502fca11efb121d2fe3a0eff27/952d0869338811efb121d2fe3a0eff27/format/ISO_PDF/
+  notes: LT kontekste vartoti kaip `intelekto negalia`; į shared kol kas nepromuoti dėl JK/LT sąvokų nevienodo
+    lauko.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-neurodivergent
+  candidate_kind: term
+  source_term: neurodivergent
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- When referring to disability it encompasses temporary and permanent, visible and
+    non-visible conditions and impairments, physical and psychological, mental health conditions and neurodivergent
+    conditions. It is accepted that disability is different for everyone and can result in varying levels
+    of disruption to daily life. Not everyone will be comfortable with the term disability or impairment
+    (or other disability related terminology) being used to refer to a particular condition, and some
+    conditions may be labelled as ‘differences’. The term disability is used, however it is recognised
+    and accepted that there are different positions, perspectives and views on this terminology and (we)
+    wish to acknowledge this.'
+  proposed_lt: asmuo, kurio neurologinė raida ar funkcionavimas skiriasi nuo daugumos
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lsmu.lt/wp-content/uploads/2025-avevita-16.pdf
+  notes: LT vartosena nėra iki galo nusistovėjusi; naudoti aprašomąją formą, nepromuoti į shared.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-neurodiversity
+  candidate_kind: term
+  source_term: neurodiversity
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Neurodiversity: this term means that some people’s brains work in a way that is unique
+    to them. The general population is neurodiverse, with a wide range of variation in how people’s brains
+    work.'
+  proposed_lt: neuroįvairovė
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lsmu.lt/wp-content/uploads/2025-avevita-16.pdf
+  notes: Terminas matomas LT akademinėje vartosenoje; šiame skyriuje paliekamas lokalus.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-neurotypical
+  candidate_kind: term
+  source_term: neurotypical
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Neurotypical: this is a term used to broadly describe how the majority of people’s
+    brains work.'
+  proposed_lt: neurotipiškas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lsmu.lt/cris/entities/etd/a9b66928-18eb-414c-8268-c7fcc95d8b77
+  notes: LT vartosena matoma akademinėje erdvėje; šio skyriaus terminas, nepromuojamas į shared.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-non-binary
+  candidate_kind: term
+  source_term: non-binary
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- It is acknowledged that these terms do not reflect the diverse range of patients
+    that you may see with such conditions including those who identify as non-binary or transgender.'
+  proposed_lt: nebinarinės tapatybės asmuo
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Jautri tapatybės sąvoka; naudoti lokaliai šiame skyriuje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-peripheral-cyanosis
+  candidate_kind: term
+  source_term: peripheral cyanosis
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Peripheral cyanosis may be difficult to detect. Use natural light (or non-fluorescent
+    light to avoid a blue tinge) and examine the lips, mucous membranes and tongue for central cyanosis.'
+  proposed_lt: periferinė cianozė
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lsmu.lt/cris/bitstream/20.500.12512/106194/2/ISBN9789955860051.pdf
+  notes: Medicininis klinikinis terminas; šiame skyriuje paliekamas lokalus.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-person-centred-language
+  candidate_kind: term
+  source_term: person centred language
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: 10.2 Person Centred Language
+  proposed_lt: į asmenį orientuota kalba
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Komunikacijos principo terminas; lokaliai šiame skyriuje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-person-with-a-visual-impairment
+  candidate_kind: term
+  source_term: Person with a visual impairment
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Person with a visual impairment | Blind |'
+  proposed_lt: asmuo, turintis regos sutrikimą
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Pagarbaus bendravimo wording; lokaliai šiame skyriuje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-person-with-restricted-growth
+  candidate_kind: term
+  source_term: Person with restricted growth
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Person with restricted growth | Dwarf, Midget |'
+  proposed_lt: asmuo, turintis žemo ūgio būklę
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Pagarbaus bendravimo wording; lokaliai šiame skyriuje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-pronouns
+  candidate_kind: term
+  source_term: pronouns
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Clinicians should use and record the patient’s chosen name, especially when handing
+    over care of the patient to other health care professionals so as to ensure the correct name is used
+    for the patient further down the chain of care. Clinicians should ask patients what pronouns they
+    use in much the same way we ask what patients would like to be called. This could be especially important
+    for certain groups of people, for example people with gender dysphoria.'
+  proposed_lt: įvardžiai
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Pagarbaus bendravimo terminas; naudoti lokaliai šiame skyriuje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-protected-characteristics
+  candidate_kind: term
+  source_term: protected characteristics
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- The Equality Act 2010 sets out nine protected characteristics of individuals and
+    places a requirement on those providing services to them to do so without discrimination and to make
+    reasonable adaptions where required to provide equal access to those services.'
+  proposed_lt: saugomos asmens savybės
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK teisės akto konteksto terminas; LT tekste vartojamas tik paaiškinamai.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-risk-factors
+  candidate_kind: term
+  source_term: Risk factors
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Risk factors | Isolation or rejection from family or friends based on their identity.
+    Those with known GD or who are in the process of being diagnosed are at higher risk of mental health
+    problems. Barriers to accessing healthcare. Bullying and harassment. Victimisation and hate crimes.
+    |'
+  proposed_lt: rizikos veiksniai
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Lentelės antraštės wording vienetas; į shared nepromuoti.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-sexual-orientation
+  candidate_kind: term
+  source_term: sexual orientation
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- sexual orientation'
+  proposed_lt: seksualinė orientacija
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Patvirtinta LT sveikatos sistemos komunikacijos šaltiniuose; lokaliai šiame skyriuje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-signs-and-symptoms
+  candidate_kind: term
+  source_term: Signs and symptoms
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Signs and symptoms | Children A diagnosis of gender dysphoria in childhood is rare.
+    Adolescent and Adult If feelings of gender dysphoria began in childhood, by now there may be a much
+    clearer sense of a gender identity and how to deal with it. Certain that their gender identity conflicts
+    with their biological sex. Comfortable only when in the gender role of your preferred gender identity
+    (may include non-binary). A strong desire to hide or be rid of physical signs of your biological sex,
+    such as breasts or facial hair. Having or suppressing these feelings affects their emotional and psychological
+    wellbeing. |'
+  proposed_lt: požymiai ir simptomai
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Lentelės antraštės wording vienetas; į shared nepromuoti.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-skin-tone
+  candidate_kind: term
+  source_term: skin tone
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- Skin tone refers to the individual combination of pigmentation in a person’s skin,
+    whilst skin colour can change when a person is unwell.'
+  proposed_lt: odos tonas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Šio skyriaus dermatologinio vertinimo terminas.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-transgender
+  candidate_kind: term
+  source_term: transgender
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '- It is acknowledged that these terms do not reflect the diverse range of patients
+    that you may see with such conditions including those who identify as non-binary or transgender.'
+  proposed_lt: translytis asmuo
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Jautri tapatybės sąvoka; naudoti lokaliai šiame skyriuje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-transitioning
+  candidate_kind: term
+  source_term: transitioning
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: 8.2 Transitioning
+  proposed_lt: tranzicija
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
+  notes: Jautrios tapatybės temos terminas; naudoti lokaliai šiame skyriuje.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-uses-british-sign-language-lip-reads
+  candidate_kind: term
+  source_term: Uses British sign language/lip-reads
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Uses British sign language/lip-reads | Deaf, Deaf Mute |'
+  proposed_lt: asmuo, vartojantis gestų kalbą / skaitantis iš lūpų
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK `British sign language` lokalizuota į bendresnę LT suprantamą formą.
+- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-term-wheel-chair-user
+  candidate_kind: term
+  source_term: Wheel-chair user
+  source_expansion: ''
+  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+  source_context: '| Wheel-chair user | Confined to a wheelchair |'
+  proposed_lt: vežimėlio naudotojas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Į asmenį orientuotos kalbos principo terminas; lokaliai šiame skyriuje.

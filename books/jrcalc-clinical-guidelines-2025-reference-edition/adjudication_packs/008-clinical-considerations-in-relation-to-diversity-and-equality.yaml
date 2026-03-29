@@ -1,0 +1,341 @@
+chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
+chapter_pack: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/chapter_packs/008-clinical-considerations-in-relation-to-diversity-and-equality.yaml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/008-clinical-considerations-in-relation-to-diversity-and-equality.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/008-clinical-considerations-in-relation-to-diversity-and-equality.md
+scaffold: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/adjudication_scaffold.md
+candidates:
+- block_id: narrative-03-why-do-we-need-to-flex-our-clinical-practice
+  block_type: narrative
+  heading: Why do we Need to Flex our Clinical Practice?
+  source_anchor: Why do we Need to Flex our Clinical Practice?
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots:
+  - &id001
+    category: local_practice_change
+    text: Equality Act 2010 pakeistas nuoroda į LT nediskriminavimo principus, vietoje pažodinio JK teisės
+      akto perkėlimo.
+  - &id002
+    category: local_practice_change
+    text: Mental Capacity Act 2005 funkciškai pakeistas LT paciento teisių, informuoto sutikimo ir atstovavimo
+      logika.
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-008-001
+  structured_block_policy: null
+- block_id: narrative-04-equality-act-2010
+  block_type: narrative
+  heading: Equality Act 2010
+  source_anchor: Equality Act 2010
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots:
+  - category: language_risk
+    text: equality šiame skyriuje neturi būti susiaurinta vien iki lygybės; LT klinikiniame kontekste
+      dažnai tikslesnė forma yra lygių galimybių užtikrinimas.
+  - *id001
+  - *id002
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-008-001
+  structured_block_policy: null
+- block_id: narrative-07-direct-and-indirect-discrimination
+  block_type: narrative
+  heading: Direct and Indirect Discrimination
+  source_anchor: Direct and Indirect Discrimination
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots:
+  - &id003
+    category: language_risk
+    text: learning disability ir learning difficulty negalima suplakti.
+  - category: anti_calque
+    text: Socialinių ir kultūrinių skirtumų aprašus versti trumpiau ir konkrečiau, vengiant perteklinės
+      deklaratyvios anglų prozos.
+  - category: localization_decision
+    text: Socialiai ir kultūriškai jautrūs terminai verčiami kuo mažiau ideologizuotai ir kuo labiau kliniškai
+      bei pagarbiai.
+  - &id004
+    category: local_practice_change
+    text: GP ir Gender Dysphoria clinic siuntimo logika pakeista į bendrą LT sveikatos sistemos kelią.
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-008-002
+  structured_block_policy: null
+- block_id: narrative-08-ethnicity-and-race
+  block_type: narrative
+  heading: Ethnicity and Race
+  source_anchor: Ethnicity and Race
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-008-002
+  structured_block_policy: null
+- block_id: narrative-10-disability
+  block_type: narrative
+  heading: Disability
+  source_anchor: Disability
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: LT
+  profile_id: algorithm-step
+  selection_mode: profile_match
+  selection_reason: Matched profile `algorithm-step` via block_type `narrative` and signals algorithm-step.
+  decision_note_required: true
+  variant_a_goal: Palikti kliniškai pilną algoritmo žingsnį ir sprendimo logiką.
+  variant_b_goal: Kuo aiškiau ir komandiškiau lietuviškai išdėstyti veiksmą.
+  decision_criteria: Palik variantą, kuris išlaiko sprendimo seką, bet skamba kaip aiški LT algoritmo
+    komanda.
+  relevant_style_hotspots:
+  - *id003
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-008-003
+  structured_block_policy: null
+- block_id: narrative-11-learning-disability
+  block_type: narrative
+  heading: Learning Disability
+  source_anchor: Learning Disability
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  profile_id: market-localization
+  selection_mode: profile_match
+  selection_reason: Matched profile `market-localization` via block_type `narrative` and signals market-localization.
+  decision_note_required: true
+  variant_a_goal: Tiksliai perrašyti rinkos, brand ar prieinamumo teiginį pagal LT rinką.
+  variant_b_goal: Suvesti teiginį į bendrinį / INN ar LT rinkos formą, neapkraunant originalo rinkos kontekstu.
+  decision_criteria: Palik variantą, kuris nepalieka originalo rinkos prieinamumo ar brandų kaip LT realybės.
+  relevant_style_hotspots:
+  - *id003
+  matched_localization_overrides: []
+  matched_claim_ids: []
+  structured_block_policy: null
+- block_id: narrative-17-consent-to-sharing-sexual-orientation-with-other-health-professionals
+  block_type: narrative
+  heading: Consent to Sharing Sexual Orientation with Other Health Professionals
+  source_anchor: Consent to Sharing Sexual Orientation with Other Health Professionals
+  draft_mode: narrative-prose
+  tags:
+  - legal-localization
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: original-context-only
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots:
+  - &id005
+    category: language_risk
+    text: equity of care geriau perteikti kaip vienoda ir teisinga prieiga prie priežiūros, o ne pažodinį
+      priežiūros lygybė.
+  - &id007
+    category: localization_decision
+    text: Pagrindinis LT tekstas orientuojamas į įtraukų ir prieinamą klinikinį bendravimą, ne į JK teisinės
+      sistemos aprašymą.
+  - &id008
+    category: localization_decision
+    text: Terminai, kurių LT vartosena nėra visiškai nusistovėjusi (neurodivergent, deadname, deadnaming,
+      binder, packer), tekste aiškinami aprašomai, nepromuojant jų į bendrą aktyvią terminų bazę.
+  matched_localization_overrides: []
+  matched_claim_ids: []
+  structured_block_policy: null
+- block_id: narrative-18-gender
+  block_type: narrative
+  heading: Gender
+  source_anchor: Gender
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: LT
+  profile_id: algorithm-step
+  selection_mode: profile_match
+  selection_reason: Matched profile `algorithm-step` via block_type `narrative` and signals algorithm-step.
+  decision_note_required: true
+  variant_a_goal: Palikti kliniškai pilną algoritmo žingsnį ir sprendimo logiką.
+  variant_b_goal: Kuo aiškiau ir komandiškiau lietuviškai išdėstyti veiksmą.
+  decision_criteria: Palik variantą, kuris išlaiko sprendimo seką, bet skamba kaip aiški LT algoritmo
+    komanda.
+  relevant_style_hotspots:
+  - &id006
+    category: language_risk
+    text: gender dysphoria, gender incongruence, transgender, non-binary turi būti vartojami nuosekliai
+      ir pagarbiai.
+  - *id004
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-008-004
+  structured_block_policy: null
+- block_id: narrative-22-disorders-of-sex-development
+  block_type: narrative
+  heading: Disorders of Sex Development
+  source_anchor: Disorders of Sex Development
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  profile_id: market-localization
+  selection_mode: profile_match
+  selection_reason: Matched profile `market-localization` via block_type `narrative` and signals market-localization.
+  decision_note_required: true
+  variant_a_goal: Tiksliai perrašyti rinkos, brand ar prieinamumo teiginį pagal LT rinką.
+  variant_b_goal: Suvesti teiginį į bendrinį / INN ar LT rinkos formą, neapkraunant originalo rinkos kontekstu.
+  decision_criteria: Palik variantą, kuris nepalieka originalo rinkos prieinamumo ar brandų kaip LT realybės.
+  relevant_style_hotspots:
+  - *id005
+  matched_localization_overrides: []
+  matched_claim_ids: []
+  structured_block_policy: null
+- block_id: narrative-23-gender-dysphoria
+  block_type: narrative
+  heading: Gender Dysphoria
+  source_anchor: Gender Dysphoria
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots:
+  - *id006
+  - *id004
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-008-002
+  structured_block_policy: null
+- block_id: narrative-24-cultural-differences
+  block_type: narrative
+  heading: Cultural Differences
+  source_anchor: Cultural Differences
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots:
+  - *id007
+  - *id008
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-008-002
+  structured_block_policy: null
+- block_id: narrative-28-current-areas-for-development-not-completely-within-the-remit-of-jrcalc
+  block_type: narrative
+  heading: Current Areas for Development not Completely within the Remit of JRCALC
+  source_anchor: Current Areas for Development not Completely within the Remit of JRCALC
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  profile_id: market-localization
+  selection_mode: profile_match
+  selection_reason: Matched profile `market-localization` via block_type `narrative` and signals market-localization.
+  decision_note_required: true
+  variant_a_goal: Tiksliai perrašyti rinkos, brand ar prieinamumo teiginį pagal LT rinką.
+  variant_b_goal: Suvesti teiginį į bendrinį / INN ar LT rinkos formą, neapkraunant originalo rinkos kontekstu.
+  decision_criteria: Palik variantą, kuris nepalieka originalo rinkos prieinamumo ar brandų kaip LT realybės.
+  relevant_style_hotspots:
+  - *id005
+  matched_localization_overrides:
+  - source_term: JRCALC
+    jurisdiction: uk
+    replacement_mode: original_context_callout
+    local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+    eu_fallback: remtis ES gairėmis ir SmPC
+    scope: all
+    reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+    source_ref: ''
+    notes: Leisti tik `Originalo kontekstas` bloke.
+  matched_claim_ids:
+  - claim-008-005
+  structured_block_policy: null

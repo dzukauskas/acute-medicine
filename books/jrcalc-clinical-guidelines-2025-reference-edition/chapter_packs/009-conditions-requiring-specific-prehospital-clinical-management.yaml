@@ -1,0 +1,1846 @@
+chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+chapter_title: 9 skyrius. Būklės, kurioms reikalingas specifinis ikihospitalinis klinikinis valdymas
+page_range: EPUB segmentas c3CK.xhtml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/009-conditions-requiring-specific-prehospital-clinical-management.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/009-conditions-requiring-specific-prehospital-clinical-management.md
+blocks:
+- block_id: narrative-01-conditions-requiring-specific-prehospital-clinical-management
+  block_type: narrative
+  heading: Conditions Requiring Specific Prehospital Clinical Management
+  source_anchor: Conditions Requiring Specific Prehospital Clinical Management
+  source_excerpt: '# Chapter 9 Conditions Requiring Specific Prehospital Clinical Management
+
+    - Šaltinio segmentai: c3CK.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    Conditions Requiring Specific Prehospital Clinical Management
+
+    1. Introduction
+
+    - This document aims to provide both guidance on conditions that are less frequently encountered in
+    the out-of-hospital environment, and conditions that may require additional considerations further
+    to the standard JRCALC guidance.
+
+    - It is important to remember that patients experiencing chronic or rare diseases are often experts
+    in their own condition. This knowledge should be respected and will often heavily influence your decision-making
+    regarding both treatment and transportation decisions.
+
+    - As clinicians we appropriately have a lower threshold for wanting to convey these clinically complex
+    patients to hospital, however careful consideration must be given to whether this really is the best
+    option for the patient both medically and holistically. The constantly evolving community healthcare
+    services available may better fit the patient’s overall needs.'
+  risk_flags:
+  - algorithmic_narrative
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste naudoti tik kaip originalaus leidinio ar originalo rekomendacijų
+    kontekstą, bet ne kaip LT norminį autoritetą.
+  matched_localization_terms:
+  - JRCALC
+  - ReSPECT
+  matched_claim_ids:
+  - todo-market-availability-05
+  matched_claim_types:
+  - market_availability
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-02-introduction
+  block_type: narrative
+  heading: Introduction
+  source_anchor: Introduction
+  source_excerpt: '1. Introduction
+
+    - This document aims to provide both guidance on conditions that are less frequently encountered in
+    the out-of-hospital environment, and conditions that may require additional considerations further
+    to the standard JRCALC guidance.
+
+    - It is important to remember that patients experiencing chronic or rare diseases are often experts
+    in their own condition. This knowledge should be respected and will often heavily influence your decision-making
+    regarding both treatment and transportation decisions.
+
+    - As clinicians we appropriately have a lower threshold for wanting to convey these clinically complex
+    patients to hospital, however careful consideration must be given to whether this really is the best
+    option for the patient both medically and holistically. The constantly evolving community healthcare
+    services available may better fit the patient’s overall needs.
+
+    - Many patients with long-term conditions will have personalised advance care plans or ReSPECT plans
+    (Recommended Summary Plan for Emergency Care and Treatment) in place. These outline recommendations
+    for a person’s clinical care and treatment in a future emergency in which they are unable to make
+    or express choices.
+
+    - Finally, it must be recognised that some of these conditions may be undiagnosed. Consequently, arrangements
+    for formal diagnosis should be pursued, incorporating appropriate safety-netting measures as needed.
+
+    2. Autonomic Dysreflexia
+
+    Overview'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste naudoti tik kaip originalaus leidinio ar originalo rekomendacijų
+    kontekstą, bet ne kaip LT norminį autoritetą.
+  matched_localization_terms:
+  - JRCALC
+  - ReSPECT
+  matched_claim_ids:
+  - todo-dose-01
+  - todo-market-availability-05
+  matched_claim_types:
+  - dose
+  - market_availability
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - dose-claim
+  - market-localization
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-03-autonomic-dysreflexia
+  block_type: narrative
+  heading: Autonomic Dysreflexia
+  source_anchor: Autonomic Dysreflexia
+  source_excerpt: '2. Autonomic Dysreflexia
+
+    Overview
+
+    Autonomic dysreflexia (AD) is a potentially life-threatening condition experienced by those with spinal
+    cord injuries. It is characterized by an uninhibited sympathetic nervous system response to stimuli
+    below the level of spinal cord injury. It primarily affects individuals with spinal cord injuries
+    at T6 or above, and the most common trigger for autonomic dysreflexia are bladder and bowel distention.
+
+    Presentation/Signs & Symptoms/Disease Characteristics
+
+    - Hypertension: Greater than 20 mmHg above baseline for both systolic and diastolic.
+
+    - Severe bilateral pounding headache.
+
+    - Diaphoresis or flushing above the level of the spinal cord lesion (diaphoresis can be profuse).
+
+    - Nasal congestion.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids:
+  - todo-dose-01
+  matched_claim_types:
+  - dose
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - dose-claim
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-04-cauda-equina-syndrome
+  block_type: narrative
+  heading: Cauda Equina Syndrome
+  source_anchor: Cauda Equina Syndrome
+  source_excerpt: '3. Cauda Equina Syndrome
+
+    For Cauda Equina Syndrome (CNS), also refer to Spinal Injury and Spinal Cord Injury and Low Back Pain
+    (Non-traumatic) .
+
+    Overview
+
+    Cauda Equina Syndrome (CES) is a serious neurological condition where the nerve roots at the bottom
+    of the spinal cord become compressed. CES is considered an acute surgical emergency, as delayed treatment
+    can lead to permanent nerve damage, resulting in long-term consequences like incontinence and paralysis.
+    The condition is typically treated with surgery to relieve the pressure on the nerves. Causes of CES
+    include herniated discs, spinal stenosis, tumours, infections, or spinal injuries. Early diagnosis
+    and treatment are crucial for the best outcomes.
+
+    Presentation / Signs & Symptoms / Disease Characteristics
+
+    Cauda Equina Syndrome (CES) presents with a range of signs and symptoms, which may develop rapidly
+    or gradually.
+
+    Key symptoms include:
+
+    - Severe lower back pain Often the first symptom, this pain can be intense and persistent.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-05-cerebral-palsy
+  block_type: narrative
+  heading: Cerebral Palsy
+  source_anchor: Cerebral Palsy
+  source_excerpt: '4. Cerebral Palsy
+
+    Overview
+
+    Cerebral palsy (CP) is a group of permanent movement disorders that appear in early childhood. It’s
+    primarily characterized by poor coordination, stiff muscles, weak muscles, and tremors. There may
+    also be problems with sensation, vision, hearing, swallowing, and speaking. Other symptoms include
+    seizures and problems with thinking or reasoning, which can occur in about one-third of cases.
+
+    Cerebral palsy is caused by abnormal development or damage to the parts of the brain that control
+    movement, balance, and posture.
+
+    There is no cure for cerebral palsy, but supportive treatments, medications, and surgery can help
+    many individuals improve their motor skills and ability to communicate.
+
+    Assessment & Management / Key Points
+
+    During acute medical emergencies:
+
+    - Airway management – be cautious as patients with CP may have abnormal airway anatomy or reflexes.
+    They may also be at an increased risk of aspiration. Have a low threshold for escalation of care in
+    case of airway compromise.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: us-specific
+  localization_action: replace_eu
+  authority_basis: EU
+  localization_note: pažangusis vaikų gyvybės palaikymas
+  matched_localization_terms:
+  - PALS
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: EU
+  structured_block_policy: null
+- block_id: narrative-06-diabetes-insipidus
+  block_type: narrative
+  heading: Diabetes Insipidus
+  source_anchor: Diabetes Insipidus
+  source_excerpt: '5. Diabetes Insipidus
+
+    Overview
+
+    Diabetes Insipidus (DI) is a rare condition characterised by intense thirst and the production of
+    large amounts of urine. It is different to the more common diagnosis of diabetes mellitus in that
+    it involves antidiuretic hormone (ADH) dysfunction rather than a problem with blood sugar regulation.
+    Patients with DI will usually have normal blood glucose levels.
+
+    It’s crucial for patients with DI to maintain adequate hydration.
+
+    Presentation / Signs & Symptoms / Disease Characteristics
+
+    In severe cases or if left untreated, Diabetes Insipidus can lead to dehydration and an electrolyte
+    imbalance, which may present with symptoms such as dry mouth, hypotension, muscle pains or cramps,
+    and in extreme cases, arrhythmias, shock, or coma.
+
+    Assessment & Management
+
+    If any major <C>ABCD problems, refer to Medical Emergencies in Adults and Medical Emergencies in Children
+    .'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-07-epiglottitis
+  block_type: narrative
+  heading: Epiglottitis
+  source_anchor: Epiglottitis
+  source_excerpt: '6. Epiglottitis
+
+    For epiglottitis also refer to Foreign Body Airway Obstruction , Medical Emergencies in Children and
+    Medical Emergencies in Adults and Dyspnoea guidance.
+
+    Overview
+
+    Epiglottitis is a potentially life-threatening condition characterized by inflammation and swelling
+    of the epiglottis, a small cartilage lid that covers the trachea. This swelling can cause upper airway
+    occlusion. It’s most commonly caused by a bacterial infection, although it can also result from other
+    factors like injury.
+
+    Epiglottitis can develop rapidly and requires immediate medical attention. Symptoms include severe
+    sore throat, fever, a hoarse or muffled voice, difficulty swallowing, and, in severe cases, difficulty
+    breathing. Since the widespread introduction of Haemophilus Influenza type B (Hib) vaccination, acute
+    epiglottitis is now extremely rare in children.
+
+    Can occur in all age groups and is becoming more prevalent in adults due to decreased uptake of Hib
+    Vaccine. May present with 2–3 days of worsening symptoms followed by acute airway obstruction.
+
+    Presentation / Signs & Symptoms / Disease Characteristics
+
+    - Rapid onset Symptoms develop quickly, often over hours'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids:
+  - todo-algorithm-step-04
+  matched_claim_types:
+  - algorithm_step
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-08-factor-v-leiden
+  block_type: narrative
+  heading: Factor V Leiden
+  source_anchor: Factor V Leiden
+  source_excerpt: '7. Factor V Leiden
+
+    Overview
+
+    Factor V Leiden is a genetic disorder characterised by a mutation in the Factor V gene. This mutation
+    leads to an increased tendency for blood to clot, a condition known as thrombophilia. People with
+    Factor V Leiden are at a higher risk of developing abnormal blood clots, which can include deep vein
+    thrombosis (DVT) and pulmonary embolism (PE).
+
+    The risk of thrombosis can be influenced by other factors such as surgery, pregnancy, and the use
+    of oral contraceptives.
+
+    Assessment & Management
+
+    In patients with known Factor V Leiden be aware of their increased risk of venous thrombosis when
+    undertaking patient assessment and formulating differential diagnosis.
+
+    Assess particularly for:
+
+    - Deep vein thrombosis Swelling in one leg (rarely both legs). Pain or tenderness in one leg (rarely
+    both legs); often felt only when standing or walking. Increased warmth in the leg that is swollen
+    or painful. Red or discoloured skin around the painful area. Swollen veins that are hard or sore when
+    touched. IMPORTANT: DVTs may also occur in the patient’s upper leg, pelvis / abdomen and arms. Consider
+    Wells criteria for DVT.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-09-guillian-barre-syndrome
+  block_type: narrative
+  heading: Guillian-Barre Syndrome
+  source_anchor: Guillian-Barre Syndrome
+  source_excerpt: '8. Guillian-Barre Syndrome
+
+    Overview
+
+    Guillain-Barre syndrome is a rare inflammatory condition that affects the nerves. It most commonly
+    occurs after a recent viral infection, but not always. This causes muscle weakness, pain, and sometimes
+    paralysis. The onset of Guilian-Barre Syndrome is gradual and progressive over several days. 20–30%
+    of patients with this condition go on to require non-invasive or invasive ventilatory support. Most
+    patients make a full recovery with treatment.
+
+    Presentation / Signs & Symptoms / Disease Characteristics
+
+    Signs and symptoms of Guillain-Barre:
+
+    - Muscle weakness
+
+    - Paraesthesia
+
+    - Speech problems'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-10-haemophilia
+  block_type: narrative
+  heading: Haemophilia
+  source_anchor: Haemophilia
+  source_excerpt: '9. Haemophilia
+
+    Overview
+
+    Haemophilia is a rare condition that affects the blood’s ability to clot. It’s usually inherited and
+    most people who have it are male.
+
+    There are two main types: Haemophilia A, caused by a deficiency of clotting factor VIII, and Haemophilia
+    B, caused by a deficiency of clotting factor IX. Regardless of type, the overall principles of management
+    are the same for all bleeding disorders.
+
+    Trauma patients with haemophilia are at an increased risk of bleeding for an extended period of time;
+    this bleeding may be concealed (internal). Bleeding may also occur spontaneously. Ongoing and unmanaged
+    bleeding may result in a threat to life.
+
+    Presentation / Signs & Symptoms / Disease Characteristics
+
+    The patient may carry a Bleeding Disorder Alert Card (as below) or have a MedicAlert device.
+
+    Assess carefully for signs and symptoms of internal and external bleeding in all patients with haemophilia.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-11-kawasaki-disease
+  block_type: narrative
+  heading: Kawasaki Disease
+  source_anchor: Kawasaki Disease
+  source_excerpt: '10. Kawasaki Disease
+
+    Overview
+
+    Kawasaki Disease is an acute, usually self-limiting inflammatory condition mainly affecting children,
+    most commonly under the age of five. The cause of Kawasaki Disease isn’t fully understood.
+
+    The disease is characterized by a high fever lasting at least five days, alongside other symptoms
+    such as rash, swollen lymph nodes, red eyes, lips, and tongue, and swelling in the hands and feet.
+
+    It’s critical to diagnose and treat Kawasaki Disease early to prevent complications such as coronary
+    artery aneurysms. Kawasaki Disease is treated in hospital.
+
+    Presentation / Signs & Symptoms / Disease Characteristics
+
+    A child with Kawasaki disease has a high temperature that lasts for five days or longer, and possibly
+    one or more of the following symptoms:
+
+    - Rash'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-12-marfan-syndrome
+  block_type: narrative
+  heading: Marfan Syndrome
+  source_anchor: Marfan Syndrome
+  source_excerpt: '11. Marfan Syndrome
+
+    Overview
+
+    Marfan Syndrome is an uncommon inherited disorder of connective tissue characterised by loss of elastic
+    tissue, resulting in musculoskeletal deformities, lens subluxation (dislocation), aortic dissection,
+    and aortic root aneurysms.
+
+    These patients are at high risk of acute aortic dissection/rupture, either spontaneously or through
+    traumatic injury (refer to Vascular Emergencies ).
+
+    Assessment & Management / Key Points
+
+    Marfan Syndrome may be undiagnosed. It should be considered in patients who are tall and slim with
+    long, thin arms, legs, and fingers.
+
+    If a dissection is suspected:
+
+    Refer to Vascular Emergencies , Aortic Dissection .'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: us-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: remtis Europos farmakopėja ir LT/EU oficialiais šaltiniais
+  matched_localization_terms:
+  - USP
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-13-motor-neurone-disease
+  block_type: narrative
+  heading: Motor Neurone Disease
+  source_anchor: Motor Neurone Disease
+  source_excerpt: '12. Motor Neurone Disease
+
+    Overview
+
+    Motor Neurone Disease (MND), also known as Amyotrophic Lateral Sclerosis (ALS), is a neurodegenerative
+    condition that affects the brain and nerves. It causes weakness that worsens over time. The disease
+    primarily impacts motor neurons, which are nerve cells responsible for controlling voluntary muscle
+    activities like walking, speaking, breathing, and swallowing. As MND progresses, these neurons deteriorate
+    and die, leading to muscle weakness and atrophy.
+
+    The exact cause of MND is unknown, but it’s believed to involve a combination of genetic and environmental
+    factors. Symptoms vary but often start with slurred speech or weakness in the arms and legs. Unfortunately,
+    there is no cure for MND, and treatment focuses on relieving symptoms and improving quality of life.
+    The progression of the disease is different for each individual, but it can significantly shorten
+    life expectancy.
+
+    Assessment & Management / Key Points
+
+    Common ambulance service presentations for people with MND:
+
+    - Breathing difficulties
+
+    - Choking or swallowing problems'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids:
+  - todo-concentration-03
+  matched_claim_types:
+  - concentration
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - dose-claim
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-14-multiple-sclerosis
+  block_type: narrative
+  heading: Multiple Sclerosis
+  source_anchor: Multiple Sclerosis
+  source_excerpt: '13. Multiple Sclerosis
+
+    Overview
+
+    Multiple Sclerosis (MS) is an idiopathic, inflammatory demyelinating disorder of the brain and spinal
+    cord. It is a chronic and potentially highly disabling disorder.
+
+    The symptoms of MS vary widely from person to person and can affect any part of the body. MS is characterised
+    by episodes of multiple neurological dysfunction, e.g. vision and sensory disturbances, limb weakness,
+    gait problems and bladder and bowel symptoms followed by incomplete recovery.
+
+    Patients with an established diagnosis of MS may present with acute complications for which treatment
+    needs to be instituted promptly in order to minimise complications.
+
+    The treatments for acute episodes of MS are those that modify the inflammatory process and immune
+    system are used in an attempt to minimise this demyelination and this often includes administration
+    of high-dose cortico-steroids.
+
+    Assessment & Management / Key Points
+
+    Two-thirds of MS patients die of complications of the disease, particularly pulmonary complications.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-15-muscular-dystrophy
+  block_type: narrative
+  heading: Muscular Dystrophy
+  source_anchor: Muscular Dystrophy
+  source_excerpt: '14. Muscular Dystrophy
+
+    Overview
+
+    Muscular dystrophy defines a group of genetic muscle conditions with progressive skeletal muscle weaknesses.
+    This wasting is caused by degeneration of muscle cells. This eventually affects the respiratory muscles
+    and even the heart muscle. These conditions vary in severity and affect about 8000 to 10000 people
+    in the UK.
+
+    As the condition progresses, these patients are at increased risk of respiratory failure as the lung
+    muscles become weaker.
+
+    Assessment & Management / Key Points
+
+    Try to ascertain which type of MD the patient has. Some patients may carry alert cards. Treatment
+    differs slightly between conditions.
+
+    Patients with MD may present without the usual signs of respiratory distress.
+
+    Duchenne muscular dystrophy and Becker muscular dystrophy –'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-16-myasthenia-gravis
+  block_type: narrative
+  heading: Myasthenia Gravis
+  source_anchor: Myasthenia Gravis
+  source_excerpt: '15. Myasthenia Gravis
+
+    Overview
+
+    Myasthenia Gravis (MG) is a rare autoimmune disorder resulting from binding of autoantibodies to components
+    of the neuromuscular junction, most commonly the acetylcholine receptor. This leads to muscular weakness
+    with excessive fatigue, which is worse on exercise and improves with rest.
+
+    Acute illness, medications, pregnancy, and hypokalaemia can all exacerbate weakness and may swiftly
+    precipitate a myasthenic crisis and respiratory inadequacy.
+
+    In severe cases, this can result in life-threatening respiratory failure.
+
+    Presentation / Signs & Symptoms / Disease Characteristics
+
+    Some of the common signs and symptoms of MG may include:
+
+    - Muscle weakness, which may be worse with exercise or later in the day'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids:
+  - todo-route-02
+  matched_claim_types:
+  - route
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - dose-claim
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-17-parkinson-s-disease
+  block_type: narrative
+  heading: Parkinson’s Disease
+  source_anchor: Parkinson’s Disease
+  source_excerpt: '16. Parkinson’s Disease
+
+    Overview
+
+    Parkinson’s is a progressive, fluctuating condition that affects all aspects of daily living including
+    talking, swallowing and writing. Every person’s symptoms are different. People with Parkinson’s often
+    find it hard to move freely and may be subject to ‘freezing’. People describe this as feeling like
+    their feet are ‘glued’ to the ground. There may also be other issues including anxiety, depression,
+    dementia, hallucinations, pain and continence problems. The severity of symptoms can fluctuate from
+    day to day and people can experience rapid changes in functionality over the course of the day.
+
+    Patients may have deep brain stimulation to relieve their symptoms – fine wires are implanted into
+    the brain with a battery pack often under the skin on the chest. An ID card with model number and
+    contact details should be present.
+
+    Common complications of Parkinsons:
+
+    - Postural hypotension and falls – check meds and BP for postural changes
+
+    - Chest infection, especially aspiration pneumonia
+
+    - Urinary Tract Infections'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-18-spinal-metastases-and-metastatic-spinal-cord-compression
+  block_type: narrative
+  heading: Spinal Metastases and Metastatic Spinal Cord Compression
+  source_anchor: Spinal Metastases and Metastatic Spinal Cord Compression
+  source_excerpt: '17. Spinal Metastases and Metastatic Spinal Cord Compression
+
+    Overview
+
+    Cancer that has spread to the spine is known as ‘spinal metastases’. Without treatment, spinal metastases
+    can press on the spinal cord. This is called metastatic spinal cord compression (or MSCC). If it isn’t
+    treated quickly, MSCC can lead to serious disability, including permanent paralysis.
+
+    MSCC is rare, but very serious. About 3 to 5 in 100 people with cancer develop it. Any type of cancer
+    can lead to spinal cord compression, but it is more common in people with breast cancer, lung cancer,
+    prostate cancer, lymphoma or myeloma.
+
+    Presentation / Signs & Symptoms / Disease Characteristics
+
+    Think about the possibility of spinal metastases or MSCC in people with any of the factors below:
+
+    Cancer:
+
+    - Past or current diagnosis of cancer'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+clinical_claims:
+- claim_id: todo-dose-01
+  claim_type: dose
+  source_anchor: Autonomic Dysreflexia
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: VVKT registruotų vaistinių preparatų paieška; VVKT registracijos pažymėjimo priedai
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Poskyryje yra sakinys apie jau paskirtą gydymą ir galimą poliežuvinį nifedipiną ar GTN; prieš
+    drafting reikia patikrinti, ar konkrečios skyrimo formos ir kontekstas tinka LT skubios pagalbos aplinkai.
+  matched_block_ids:
+  - narrative-02-introduction
+  - narrative-03-autonomic-dysreflexia
+- claim_id: todo-route-02
+  claim_type: route
+  source_anchor: Myasthenia Gravis
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: VVKT registruotų vaistinių preparatų paieška; VVKT registracijos pažymėjimo priedai
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Poskyryje paliktas originalo teiginys apie geriamojo vartojimo kelio netinkamumą dėl aspiracijos
+    rizikos; jei vėliau reikės norminio LT tikslinimo, jis turi būti daromas nekeičiant originalo semantikos.
+  matched_block_ids:
+  - narrative-16-myasthenia-gravis
+- claim_id: todo-concentration-03
+  claim_type: concentration
+  source_anchor: Motor Neurone Disease
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: VVKT registruotų vaistinių preparatų paieška; SmPC; LT klinikinės metodikos
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Poskyryje palikta originalo mintis apie dalies pacientų riziką skiriant dideles deguonies koncentracijas;
+    papildoma LT norminė atrama turi tik patikslinti formuluotę, o ne pakeisti turinį.
+  matched_block_ids:
+  - narrative-13-motor-neurone-disease
+- claim_id: todo-algorithm-step-04
+  claim_type: algorithm_step
+  source_anchor: Recognition is the most important factor in the management of epiglottitis. Unrecognised
+    epiglottitis may quickly become life-threatening.
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: SAM metodikos ir rekomendacijos
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Epiglotito atpažinimo, transportavimo ir oro takų eskalacijos žingsniai turi turėti LT/EU atramą.
+  matched_block_ids:
+  - narrative-07-epiglottitis
+- claim_id: todo-market-availability-05
+  claim_type: market_availability
+  source_anchor: The constantly evolving community healthcare services available may better fit the patient’s
+    overall needs.
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: VLK kompensuojamieji vaistai; LT paslaugų organizavimo logika
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Pagrindiniame LT tekste paliekama originalo mintis apie bendruomenines paslaugas; ji neperrašoma
+    į laisvą LT sistemos abstrakciją, o JK-specifika aiškinama tik originalo konteksto bloku.
+  matched_block_ids:
+  - narrative-01-conditions-requiring-specific-prehospital-clinical-management
+  - narrative-02-introduction
+structured_block_policies: []
+active_terms:
+- en: Antidiuretic Hormone
+  lt: antidiurezinis hormonas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: antidiurezinis hormonas (ADH)
+- en: Autonomic Dysreflexia
+  lt: autonominė disrefleksija
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: autonominė disrefleksija
+- en: Cauda Equina Syndrome
+  lt: arklio uodegos sindromas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: arklio uodegos sindromas
+- en: Cerebral Palsy
+  lt: cerebrinis paralyžius
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: cerebrinis paralyžius
+- en: Diabetes Insipidus
+  lt: necukrinis diabetas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: necukrinis diabetas
+- en: Epiglottitis
+  lt: epiglotitas
+  status: preferred
+  banned_lt:
+  - epiglottitas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: epiglotitas
+- en: Factor V Leiden
+  lt: Leideno krešėjimo faktoriaus mutacija
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: Leideno krešėjimo faktoriaus mutacija
+- en: Foreign Body Airway Obstruction
+  lt: kvėpavimo takų obstrukcija svetimkūniu
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: kvėpavimo takų obstrukcija svetimkūniu
+- en: Guillain-Barre Syndrome
+  lt: Guillain-Barré sindromas
+  status: preferred
+  banned_lt:
+  - Gijeno-Barė sindromas
+  - Gijeno-Bare sindromas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: Guillain-Barré sindromas
+- en: Head Injury
+  lt: galvos trauma
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: galvos trauma
+- en: Haemophilia
+  lt: hemofilija
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: hemofilija
+- en: Intravascular Fluid Therapy
+  lt: infuzinė terapija
+  status: preferred
+  banned_lt:
+  - infuzoterapija
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: infuzinė terapija
+- en: Kawasaki Disease
+  lt: Kawasaki liga
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: Kawasaki liga
+- en: Low Back Pain
+  lt: apatinės nugaros dalies skausmas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: apatinės nugaros dalies skausmas
+- en: Marfan Syndrome
+  lt: Marfano sindromas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: Marfano sindromas
+- en: Motor Neurone Disease
+  lt: motorinių neuronų liga
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: motorinių neuronų liga
+- en: Multiple Sclerosis
+  lt: išsėtinė sklerozė
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: išsėtinė sklerozė
+- en: Muscular Dystrophy
+  lt: raumenų distrofija
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: raumenų distrofija
+- en: Myasthenia Gravis
+  lt: sunkioji miastenija
+  status: preferred
+  banned_lt:
+  - miastenija gravis
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: sunkioji miastenija
+- en: Parkinson's Disease
+  lt: Parkinsono liga
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: Parkinsono liga
+- en: Pulmonary Embolism
+  lt: plaučių embolija
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: plaučių embolija
+- en: Spinal Cord Injury
+  lt: nugaros smegenų pažeidimas
+  status: preferred
+  banned_lt:
+  - nugaros smegenų sužalojimas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: nugaros smegenų pažeidimas
+- en: Spinal Injury and Spinal Cord Injury
+  lt: stuburo trauma ir nugaros smegenų sužalojimas
+  status: preferred
+  banned_lt:
+  - stuburo ir nugaros smegenų trauma
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: stuburo trauma ir nugaros smegenų sužalojimas
+- en: Thrombophilia
+  lt: trombofilija
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: trombofilija
+- en: Urinary Retention
+  lt: šlapimo susilaikymas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: šlapimo susilaikymas
+- en: Transient Ischaemic Attack
+  lt: praeinantis smegenų išemijos priepuolis
+  status: preferred
+  banned_lt:
+  - mikroinsultas
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: praeinantis smegenų išemijos priepuolis (PSIP)
+- en: Stroke and Transient Ischaemic Attack
+  lt: insultas ir praeinantis smegenų išemijos priepuolis
+  status: preferred
+  banned_lt:
+  - mikroinsultas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: insultas ir praeinantis smegenų išemijos priepuolis (PSIP)
+active_acronyms:
+- acronym: ALS
+  lt: specializuotas gaivinimas
+  en: Advanced life support
+  policy: lt-first
+  notes: Pirmą kartą išskleisti LT forma; `pažangus gaivinimas` nelaikyti kanoniniu variantu.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: specializuotas gaivinimas
+  section_scope: 009
+- acronym: ADH
+  lt: antidiurezinis hormonas
+  en: Antidiuretic Hormone
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU endokrinologijos šaltiniuose 2026-03-29. LT literatūroje vartojama
+    ir santrumpa `ADH`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: antidiurezinis hormonas (ADH)
+  section_scope: 009
+- acronym: AV
+  lt: atrioventrikulinis
+  en: Atrioventricular
+  policy: original-first
+  notes: Patikrinta LT interneto kardiologijos šaltiniuose 2026-03-29. Vartotina kaip būdvardinė forma
+    junginiuose, pvz., AV blokada.
+  must_expand_first: 'no'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: atrioventrikulinis
+  section_scope: 009
+- acronym: CBRN
+  lt: cheminiai, biologiniai, radiologiniai ir branduoliniai
+  en: Chemical Biological Radiological Nuclear
+  policy: original-first
+  notes: Valstybinėje civilinės saugos vartosenoje naudojama CBRN santrumpa; pirmą kartą galima išskleisti
+    LT forma.
+  must_expand_first: 'no'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: CBRN
+  section_scope: 009
+- acronym: CES
+  lt: arklio uodegos sindromas
+  en: Cauda Equina Syndrome
+  policy: original-first
+  notes: Patikrinta LT interneto neurochirurgijos ir ortopedijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: arklio uodegos sindromas (CES)
+  section_scope: 009
+- acronym: CNS
+  lt: centrinė nervų sistema
+  en: Central Nervous System
+  policy: lt-first
+  notes: Patikrinta LT interneto medicinos ir neurologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: centrinė nervų sistema (CNS)
+  section_scope: 009
+- acronym: CPR
+  lt: kardiopulmoninis gaivinimas
+  en: Cardiopulmonary Resuscitation
+  policy: lt-first
+  notes: Patikrinta LT interneto gaivinimo šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kardiopulmoninis gaivinimas (CPR)
+  section_scope: 009
+- acronym: CT
+  lt: kompiuterinė tomografija
+  en: Computerised Tomography
+  policy: lt-first
+  notes: Patikrinta LT interneto radiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kompiuterinė tomografija (KT / CT)
+  section_scope: 009
+- acronym: DM
+  lt: cukrinis diabetas
+  en: Diabetes Mellitus
+  policy: lt-first
+  notes: Patikrinta LT interneto endokrinologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: cukrinis diabetas (DM)
+  section_scope: 009
+- acronym: DVT
+  lt: giliųjų venų trombozė
+  en: Deep Vein Thrombosis
+  policy: lt-first
+  notes: Patikrinta LT interneto kraujagyslių medicinos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: giliųjų venų trombozė (DVT)
+  section_scope: 009
+- acronym: FBAO
+  lt: kvėpavimo takų obstrukcija svetimkūniu
+  en: Foreign Body Airway Obstruction
+  policy: original-first
+  notes: Terminui jau taikyta LT interneto skubiosios pagalbos šaltinių patikra 2026-03-28; akronimo eilutė
+    pridėta 006 santrumpų žodyno nuoseklumui.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kvėpavimo takų obstrukcija svetimkūniu (FBAO)
+  section_scope: 009
+- acronym: GBS
+  lt: Guillain-Barré sindromas
+  en: Guillain-Barre Syndrome
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir e-Seimo šaltiniuose 2026-03-29. LT šaltiniuose matoma ir forma
+    `Gijeno-Barė`, tačiau šiame leidinyje laikomasi akademinės `Guillain-Barré sindromas` formos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: Guillain-Barré sindromas (GBS)
+  section_scope: 009
+- acronym: GTN
+  lt: glicerolio trinitratas
+  en: Glyceryl Trinitrate
+  policy: original-first
+  notes: Patikrinta LT interneto SAM kardiologijos šaltiniuose 2026-03-29. LT klinikinėje vartosenoje
+    dažnai aiškinama ir kaip trumpai veikiantis nitroglicerinas.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: glicerolio trinitratas (nitroglicerinas, GTN)
+  section_scope: 009
+- acronym: MI
+  lt: miokardo infarktas
+  en: Myocardial Infarction
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU kardiologijos šaltiniuose 2026-03-29. LT vartosenoje įprasta santrumpa
+    `MI`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: miokardo infarktas (MI)
+  section_scope: 009
+- acronym: PE
+  lt: plaučių embolija
+  en: Pulmonary Embolism
+  policy: original-first
+  notes: Remiasi jau validuotu LT termino įrašu `Pulmonary Embolism -> plaučių embolija` ir papildomai
+    patikrinta LT interneto kardiologijos bei SAM šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: plaučių embolija (PE)
+  section_scope: 009
+- acronym: SCI
+  lt: nugaros smegenų pažeidimas
+  en: Spinal Cord Injury
+  policy: original-first
+  notes: Patikrinta LT interneto SAM traumų metodikoje ir LSMU neurochirurgijos / reabilitacijos šaltiniuose
+    2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: nugaros smegenų pažeidimas (SCI)
+  section_scope: 009
+- acronym: TIA
+  lt: praeinantis smegenų išemijos priepuolis
+  en: Transient Ischaemic Attack
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU neurologijos šaltiniuose 2026-03-29. LT medicininėje vartosenoje
+    taip pat aktyvi santrumpa `PSIP`, tačiau šiame leidinyje santrumpių žodyne laikomasi originalios `TIA`
+    santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: praeinantis smegenų išemijos priepuolis (PSIP / TIA)
+  section_scope: 009
+- acronym: VT
+  lt: skilvelinė tachikardija
+  en: Ventricular Tachycardia
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir SAM kardiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: skilvelinė tachikardija (VT)
+  section_scope: 009
+- acronym: PSIP
+  lt: praeinantis smegenų išemijos priepuolis
+  en: Transient Ischaemic Attack
+  policy: lt-first
+  notes: Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29. Viešojoje kalboje gali pasitaikyti
+    `mikroinsultas`, bet formaliame medicininiame tekste vartotinas tikslus terminas.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: praeinantis smegenų išemijos priepuolis (PSIP)
+  section_scope: 009
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: CMI
+  jurisdiction: australia
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `CMI` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: NHS
+  jurisdiction: uk
+  replacement_mode: omit_nontransferable
+  local_lt: taikyti Lietuvos sveikatos sistemos ir GMP organizacinę logiką
+  eu_fallback: taikyti ES ir vietinę organizacinę logiką
+  scope: all
+  reason: '`NHS` yra JK sistemos institucinis kontekstas, ne LT norminis terminas.'
+  source_ref: ''
+  notes: Nepalikti kaip vietinio standarto.
+- source_term: ReSPECT
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos gydymo apimties ir paciento valios dokumentavimo praktika
+  eu_fallback: remtis LT ir ES teisine bei klinikine praktika
+  scope: all
+  reason: JK `ReSPECT` sistema nėra LT norminis standartas.
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+- source_term: DEA
+  jurisdiction: us
+  replacement_mode: omit_nontransferable
+  local_lt: remtis Lietuvos ir ES kontroliuojamų medžiagų reguliavimu
+  eu_fallback: remtis ES reguliavimu
+  scope: all
+  reason: '`DEA` yra JAV institucinis ir teisinis kontekstas, ne LT/EU norminis standartas.'
+  source_ref: ''
+  notes: Nepalikti pagrindiniame LT tekste.
+- source_term: PALS
+  jurisdiction: us
+  replacement_mode: replace_eu
+  local_lt: pažangusis vaikų gyvybės palaikymas
+  eu_fallback: paediatric advanced life support
+  scope: all
+  reason: '`PALS` yra JAV akronimas; pagrindiniame LT tekste vartokite neutralų arba Europos atitikmenį.'
+  source_ref: ''
+  notes: Nerodyti kaip LT standarto akronimo.
+- source_term: USP
+  jurisdiction: us
+  replacement_mode: original_context_callout
+  local_lt: remtis Europos farmakopėja ir LT/EU oficialiais šaltiniais
+  eu_fallback: remtis European Pharmacopoeia
+  scope: all
+  reason: '`USP` yra JAV reference standartas, ne LT/EU numatytasis standartas.'
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+source_jurisdiction_signals:
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+- source_term: NHS
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: regex
+  pattern: \b(?:NHS|National Health Service)\b
+  notes: UK health service context.
+- source_term: ReSPECT
+  jurisdiction: uk
+  signal_type: law
+  match_mode: regex
+  pattern: \bReSPECT\b
+  notes: UK treatment escalation / resuscitation framework.
+localization_decisions:
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste naudoti tik kaip originalaus leidinio ar originalo rekomendacijų
+    kontekstą, bet ne kaip LT norminį autoritetą.
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Leidinio proper noun, ne LT klinikinio reguliavimo šaltinis.
+- source_term: NHS
+  replacement_mode: omit_nontransferable
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste nevartoti kaip vietinio paslaugų modelio ar transportavimo
+    alternatyvų standarto; jei reikia, minėti tik originalo kontekste.
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: JK community healthcare services logika tiesiogiai neperkeliama į LT sistemą.
+- source_term: ReSPECT
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: LT tekste palikti kaip originalo JK advance care planning sistemos pavyzdį ir aiškiai
+    žymėti kaip originalo kontekstą, o ne kaip LT norminį atitikmenį.
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Ne LT klinikinis ar teisinis institutas.
+style_hotspots: []
+gold_examples: []
+term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates:
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-abcd
+  candidate_kind: acronym
+  source_term: ABCD
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: If any major <C>ABCD problems, refer to Medical Emergencies in Adults and Medical Emergencies
+    in Children .
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-ad
+  candidate_kind: acronym
+  source_term: AD
+  source_expansion: Autonomic dysreflexia
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- This document aims to provide both guidance on conditions that are less frequently
+    encountered in the out-of-hospital environment, and conditions that may require additional considerations
+    further to the standard JRCALC guidance.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-avoid
+  candidate_kind: acronym
+  source_term: AVOID
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- Avoid unnecessary procedures that may further irritate the airway.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-basics
+  candidate_kind: acronym
+  source_term: BASICS
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: Dr Lishel Horn. Consultant Haematologist. Haemophilia and Pre-Hospital Care . UK BASICS
+    Conference.
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-bmj
+  candidate_kind: acronym
+  source_term: BMJ
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: Guillain-Barre syndrome – Symptoms, diagnosis and treatment | BMJ Best Practice
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-bp
+  candidate_kind: acronym
+  source_term: BP
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- Significantly elevated BP with minimal or no symptoms (Silent Autonomic Dysreflexia).'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-bvm
+  candidate_kind: acronym
+  source_term: BVM
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- Lung volume recruitment (air stacking) may be indicated – patients may respond to
+    a self-inflating manual ventilation bag. BVM.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-cbrne
+  candidate_kind: acronym
+  source_term: CBRNE
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- Atropine (CBRNE only)'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-do
+  candidate_kind: acronym
+  source_term: DO
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- This document aims to provide both guidance on conditions that are less frequently
+    encountered in the out-of-hospital environment, and conditions that may require additional considerations
+    further to the standard JRCALC guidance.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-gb
+  candidate_kind: acronym
+  source_term: GB
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: 'Signs and symptoms of respiratory muscle fatigue in patients with GB:'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-girft
+  candidate_kind: acronym
+  source_term: GIRFT
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: 'Use the GIRFT National Suspected Cauda Equina Syndrome Pathway to support decision
+    making: https://girft-interactivepathways.org.uk/cauda-equina-1/'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-icu
+  candidate_kind: acronym
+  source_term: ICU
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- Bladder and bowel dysfunction This can range from difficulty in urinating, loss of
+    bladder control (urinary retention or incontinence), to bowel incontinence.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-important
+  candidate_kind: acronym
+  source_term: IMPORTANT
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- It is important to remember that patients experiencing chronic or rare diseases are
+    often experts in their own condition. This knowledge should be respected and will often heavily influence
+    your decision-making regarding both treatment and transportation decisions.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-ix
+  candidate_kind: acronym
+  source_term: IX
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: 'There are two main types: Haemophilia A, caused by a deficiency of clotting factor
+    VIII, and Haemophilia B, caused by a deficiency of clotting factor IX. Regardless of type, the overall
+    principles of management are the same for all bleeding disorders.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-mg
+  candidate_kind: acronym
+  source_term: MG
+  source_expansion: Myasthenia Gravis
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: Myasthenia Gravis (MG) is a rare autoimmune disorder resulting from binding of autoantibodies
+    to components of the neuromuscular junction, most commonly the acetylcholine receptor. This leads
+    to muscular weakness with excessive fatigue, which is worse on exercise and improves with rest.
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-mnd
+  candidate_kind: acronym
+  source_term: MND
+  source_expansion: Motor Neurone Disease
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: Motor Neurone Disease (MND), also known as Amyotrophic Lateral Sclerosis (ALS), is a
+    neurodegenerative condition that affects the brain and nerves. It causes weakness that worsens over
+    time. The disease primarily impacts motor neurons, which are nerve cells responsible for controlling
+    voluntary muscle activities like walking, speaking, breathing, and swallowing. As MND progresses,
+    these neurons deteriorate and die, leading to muscle weakness and atrophy.
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-mscc
+  candidate_kind: acronym
+  source_term: MSCC
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: Cancer that has spread to the spine is known as ‘spinal metastases’. Without treatment,
+    spinal metastases can press on the spinal cord. This is called metastatic spinal cord compression
+    (or MSCC). If it isn’t treated quickly, MSCC can lead to serious disability, including permanent paralysis.
+  proposed_lt: navikinė nugaros smegenų kompresija
+  status: localization_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/Metodiniai%20dokumentai/PLAU%C4%8CI%C5%B2%20V%C4%96%C5%BDYS.pdf
+  notes: LT norminiuose onkologijos šaltiniuose vartojama forma `navikinė nugaros smegenų kompresija`;
+    lokalizuoti tik šiame skyriuje, į shared akronimų bazę nepromuoti.
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-nice
+  candidate_kind: acronym
+  source_term: NICE
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: www.nice.org.uk/guidance/ng220
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-niv
+  candidate_kind: acronym
+  source_term: NIV
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- Patients may benefit from NIV – consider prehospital advanced / critical care services.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-not
+  candidate_kind: acronym
+  source_term: NOT
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- Identify and where possible remove the trigger. Common triggers include urinary retention,
+    faecal impaction, tight clothing, pressure sores or any other noxious stimulus below the level of
+    the spinal cord injury. For patients with a catheter – empty the leg bag and note the volume. Check
+    the tubing is not blocked or kinked. Loosen or remove any tight clothing.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-parkinson
+  candidate_kind: acronym
+  source_term: PARKINSON
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: 16. Parkinson’s Disease
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-stop
+  candidate_kind: acronym
+  source_term: STOP
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- It is important to recognise the significance of regular medication to patients with
+    Parkinsons. Missing doses of Parkinson’s medication increases care needs and can cause serious complications,
+    including rare but potentially fatal neuroleptic-like malignant syndrome – DO NOT STOP PARKINSON’S
+    MEDICATION.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-t6
+  candidate_kind: acronym
+  source_term: T6
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: Autonomic dysreflexia (AD) is a potentially life-threatening condition experienced by
+    those with spinal cord injuries. It is characterized by an uninhibited sympathetic nervous system
+    response to stimuli below the level of spinal cord injury. It primarily affects individuals with spinal
+    cord injuries at T6 or above, and the most common trigger for autonomic dysreflexia are bladder and
+    bowel distention.
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-uti
+  candidate_kind: acronym
+  source_term: UTI
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- Airway management – be cautious as patients with CP may have abnormal airway anatomy
+    or reflexes. They may also be at an increased risk of aspiration. Have a low threshold for escalation
+    of care in case of airway compromise.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-viii
+  candidate_kind: acronym
+  source_term: VIII
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: 'There are two main types: Haemophilia A, caused by a deficiency of clotting factor
+    VIII, and Haemophilia B, caused by a deficiency of clotting factor IX. Regardless of type, the overall
+    principles of management are the same for all bleeding disorders.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-term-airway-occlusion
+  candidate_kind: term
+  source_term: airway occlusion
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: Epiglottitis is a potentially life-threatening condition characterized by inflammation
+    and swelling of the epiglottis, a small cartilage lid that covers the trachea. This swelling can cause
+    upper airway occlusion. It’s most commonly caused by a bacterial infection, although it can also result
+    from other factors like injury.
+  proposed_lt: viršutinių kvėpavimo takų obstrukcija
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lsmu.lt/cris/entities/etd/cd4093db-696c-46fb-94be-9d05df10edd7
+  notes: Aprašomas lokalizacijos vienetas; į shared terminų bazę nepromuoti.
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-term-conditions-requiring-specific-prehospital-clinical-management
+  candidate_kind: term
+  source_term: Conditions Requiring Specific Prehospital Clinical Management
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '# Chapter 9 Conditions Requiring Specific Prehospital Clinical Management'
+  proposed_lt: Būklės, kurioms reikalingas specifinis ikihospitalinis klinikinis valdymas
+  status: localization_only
+  scope: book
+  candidate_origin: source_heading
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Sudėtinė skyriaus antraštė; nepromuoti į shared lexicon.
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-term-metastatic-spinal-cord-compression
+  candidate_kind: term
+  source_term: metastatic spinal cord compression
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: 17. Spinal Metastases and Metastatic Spinal Cord Compression
+  proposed_lt: navikinė nugaros smegenų kompresija
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/Metodiniai%20dokumentai/PLAU%C4%8CI%C5%B2%20V%C4%96%C5%BDYS.pdf
+  notes: LT norminiuose onkologijos šaltiniuose vartojama forma `navikinė nugaros smegenų kompresija`;
+    lokalizuoti tik šiame skyriuje, į shared bazę nepromuoti.
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-term-prehospital-clinical-management
+  candidate_kind: term
+  source_term: prehospital clinical management
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '# Chapter 9 Conditions Requiring Specific Prehospital Clinical Management'
+  proposed_lt: ikihospitalinis klinikinis valdymas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Aprašomas lokalizacijos wording vienetas; į shared terminų bazę nepromuoti.
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-term-saddle-anaesthesia
+  candidate_kind: term
+  source_term: saddle anaesthesia
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- Saddle anaesthesia Loss of sensation in the areas that would touch a saddle when
+    sitting – inner thighs, back of legs, and around the rectum.'
+  proposed_lt: sėdmenų ir tarpvietės nejautra (balno zonoje)
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://medgyd.lt/tlk/g83-4-arklio-uodegos-cauda-equina-sindromas/
+  notes: Aprašomas lokalizacijos vienetas pagal LT arklio uodegos sindromo šaltinių vartoseną; į shared
+    terminų bazę nepromuoti.
+- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-term-silent-autonomic-dysreflexia
+  candidate_kind: term
+  source_term: silent autonomic dysreflexia
+  source_expansion: ''
+  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+  source_context: '- Significantly elevated BP with minimal or no symptoms (Silent Autonomic Dysreflexia).'
+  proposed_lt: autonominė disrefleksija su minimaliais arba be simptomų
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://nemoku.lt/urgentines-bukles-reabilitacijos-etape/
+  notes: Aprašomas klinikinis apibūdinimas; aiškaus atskiro LT kanoninio termino nerasta, todėl nepromuoti
+    į shared bazę.

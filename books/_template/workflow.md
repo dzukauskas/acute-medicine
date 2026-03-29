@@ -4,7 +4,19 @@
 
 Galutinis rezultatas yra lietuviškas mokymosi tekstas, pritaikytas Lietuvos medicinos ir, jei reikia, Europos gairių logikai.
 
-Tai nėra pažodinis originalo rinkos vertimas.
+Tai pirmiausia yra ištikimas vertimas iš originalo į lietuvių kalbą.
+
+Pagrindinė taisyklė:
+
+- `source fidelity first`
+
+Tai reiškia:
+
+- pagrindinis LT tekstas turi išlaikyti originalo mintį, struktūrą, sakinio funkciją ir detalumo lygį;
+- skyrius neturi būti laisvai perpasakojamas, glaustinamas ar „pagerinamas“ vien dėl sklandesnio stiliaus;
+- lokalizacija taikoma tik ten, kur to tikrai reikia dėl terminijos, jurisdikcijos, rinkos ar teisinio netransferability;
+- UK / Australia / US specifika paprastai paliekama tekste kaip originalo kontekstas, o ne pakeičiama bendromis LT abstrakcijomis;
+- jei reikia nukrypti nuo originalo, nukrypimas turi būti aiškiai užfiksuotas `research` faile.
 
 ## Kanoninis šaltinis
 
@@ -110,6 +122,12 @@ Kai originalo logika ar sistemos kontekstas nesutampa su Lietuvos praktika:
 - pagrindiniame tekste taikoma Lietuvos logika;
 - neatitikimas pažymimas `research` faile;
 - jei reikia, skyriuje paliekamas trumpas `Originalo kontekstas` callout.
+
+Tačiau tai nėra leidimas perrašyti tekstą laisvai. Net ir lokalizuojant:
+
+- pirmiausia verčiama tai, kas parašyta originale;
+- tik po to minimaliai koreguojama tiek, kiek būtina;
+- jei klinikinė ar teisinė detalė LT praktikoje netransferable, ji turi būti pažymėta kaip originalo kontekstas, o ne nutylėta ar pakeista bendrine formuluote.
 
 Šiai knygai privalomas LT/EU-first principas:
 

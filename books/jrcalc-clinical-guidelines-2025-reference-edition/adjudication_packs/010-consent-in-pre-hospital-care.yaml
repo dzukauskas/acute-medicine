@@ -1,0 +1,37 @@
+chapter_slug: 010-consent-in-pre-hospital-care
+chapter_pack: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/chapter_packs/010-consent-in-pre-hospital-care.yaml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/010-consent-in-pre-hospital-care.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/010-consent-in-pre-hospital-care.md
+scaffold: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/adjudication_scaffold.md
+candidates:
+- block_id: narrative-01-consent-in-pre-hospital-care
+  block_type: narrative
+  heading: Consent in Pre-hospital Care
+  source_anchor: Consent in Pre-hospital Care
+  draft_mode: narrative-prose
+  tags:
+  - legal-localization
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: original-context-only
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids: []
+  structured_block_policy:
+    block_id: narrative-01-consent-in-pre-hospital-care
+    block_type: narrative
+    lt_strategy: rewrite_lt
+    authority_source: Lietuvos Respublikos pacientų teisių ir žalos sveikatai atlyginimo įstatymas; Lietuvos
+      bioetikos komitetas
+    original_context_allowed: 'yes'
+    note: Pagrindinę sutikimo logiką lokalizuoti į LT pacientų teisių sluoksnį, o JK jurisdikcinį skirtumą
+      palikti tik originalo kontekste.

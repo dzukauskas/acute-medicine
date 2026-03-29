@@ -1,0 +1,124 @@
+chapter_slug: 007-section-1-general-guidance
+chapter_title: 7 skyrius. 1 dalis. Bendrosios gairės
+page_range: EPUB segmentas c2R8.xhtml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/007-section-1-general-guidance.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/007-section-1-general-guidance.md
+blocks:
+- block_id: narrative-01-section-1-general-guidance
+  block_type: narrative
+  heading: Section 1 – General Guidance
+  source_anchor: Section 1 – General Guidance
+  source_excerpt: '# Chapter 7 Section 1 – General Guidance
+
+    - Šaltinio segmentai: c2R8.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    1
+
+    General Guidance'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste neakcentuoti JRCALC kaip LT norminio autoriteto; pateikti
+    tik lokalizuotą sekcijos pavadinimą.
+  matched_localization_terms:
+  - JRCALC
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+clinical_claims: []
+structured_block_policies: []
+active_terms: []
+active_acronyms: []
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+source_jurisdiction_signals:
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+localization_decisions:
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste neakcentuoti JRCALC kaip LT norminio autoriteto; pateikti
+    tik lokalizuotą sekcijos pavadinimą.
+  source_ref: '`shared/localization/localization_overrides.tsv`; originalus segmentas `c2R8.xhtml`'
+  notes: Šis skyrius yra tik struktūrinis dalies viršelis.
+style_hotspots:
+- category: language_risk
+  text: Guidance čia turi būti verčiama kaip struktūrinės dalies pavadinimas, ne kaip atskiras norminis
+    dokumentas ar instrukcija.
+- category: anti_calque
+  text: Vengti pažodinės formos Sekcija 1.
+- category: anti_calque
+  text: Nepridėti aiškinamųjų sakinių, kurių originale nėra.
+- category: localization_decision
+  text: Section 1 lokalizuota kaip 1 dalis, kad Obsidian ir LT skaitymo logika atitiktų knygos makrostruktūrą.
+- category: localization_decision
+  text: General Guidance lokalizuota kaip Bendrosios gairės.
+- category: localization_decision
+  text: Papildomo aiškinamojo teksto nepridėta, nes source segmentas yra tik struktūrinis viršelis.
+- category: local_practice_change
+  text: 'Struktūrinė antraštė suformuota pagal LT leidybos logiką: 1 dalis. Bendrosios gairės, o ne pažodinis
+    Section 1.'
+gold_examples: []
+term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates:
+- candidate_id: 007-section-1-general-guidance-term-general-guidance
+  candidate_kind: term
+  source_term: General Guidance
+  source_expansion: ''
+  chapter_slug: 007-section-1-general-guidance
+  source_context: '# Chapter 7 Section 1 – General Guidance'
+  proposed_lt: Bendrosios gairės
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Struktūrinės sekcijos pavadinimas, ne aktyvus medicininis terminas; L
+- candidate_id: 007-section-1-general-guidance-term-section-1-general-guidance
+  candidate_kind: term
+  source_term: Section 1 – General Guidance
+  source_expansion: ''
+  chapter_slug: 007-section-1-general-guidance
+  source_context: '# Chapter 7 Section 1 – General Guidance'
+  proposed_lt: 1 dalis. Bendrosios gairės
+  status: localization_only
+  scope: book
+  candidate_origin: source_heading
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Struktūrinio skyriaus viršelis; į shared terminų bazę nepromuoti, LT faile lokalizuota kaip `1
+    dalis. Bendrosios gairės`.

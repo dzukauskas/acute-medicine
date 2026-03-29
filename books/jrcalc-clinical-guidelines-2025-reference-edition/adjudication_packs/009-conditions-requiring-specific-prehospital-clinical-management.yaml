@@ -1,0 +1,152 @@
+chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
+chapter_pack: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/chapter_packs/009-conditions-requiring-specific-prehospital-clinical-management.yaml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/009-conditions-requiring-specific-prehospital-clinical-management.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/009-conditions-requiring-specific-prehospital-clinical-management.md
+scaffold: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/adjudication_scaffold.md
+candidates:
+- block_id: narrative-01-conditions-requiring-specific-prehospital-clinical-management
+  block_type: narrative
+  heading: Conditions Requiring Specific Prehospital Clinical Management
+  source_anchor: Conditions Requiring Specific Prehospital Clinical Management
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags:
+  - algorithmic_narrative
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: LT
+  profile_id: market-localization
+  selection_mode: profile_match
+  selection_reason: Matched profile `market-localization` via block_type `narrative` and signals market-localization.
+  decision_note_required: true
+  variant_a_goal: Tiksliai perrašyti rinkos, brand ar prieinamumo teiginį pagal LT rinką.
+  variant_b_goal: Suvesti teiginį į bendrinį / INN ar LT rinkos formą, neapkraunant originalo rinkos kontekstu.
+  decision_criteria: Palik variantą, kuris nepalieka originalo rinkos prieinamumo ar brandų kaip LT realybės.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - todo-market-availability-05
+  structured_block_policy: null
+- block_id: narrative-02-introduction
+  block_type: narrative
+  heading: Introduction
+  source_anchor: Introduction
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - dose-claim
+  - market-localization
+  required_authority_basis: LT
+  profile_id: dose-claim
+  selection_mode: profile_match
+  selection_reason: Matched profile `dose-claim` via block_type `narrative` and signals dose-claim.
+  decision_note_required: true
+  variant_a_goal: Išlaikyti kliniškai tikslią dozę, kelią ar koncentraciją pagal LT šaltinį.
+  variant_b_goal: Sutrumpinti formuluotę, bet neprarasti norminės prasmės ir saugos ribų.
+  decision_criteria: Palik variantą, kuris tiksliai atitinka LT norminį šaltinį ir nepalieka originalo
+    dozavimo drift'o.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - todo-dose-01
+  - todo-market-availability-05
+  structured_block_policy: null
+- block_id: narrative-03-autonomic-dysreflexia
+  block_type: narrative
+  heading: Autonomic Dysreflexia
+  source_anchor: Autonomic Dysreflexia
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - dose-claim
+  required_authority_basis: LT
+  profile_id: dose-claim
+  selection_mode: profile_match
+  selection_reason: Matched profile `dose-claim` via block_type `narrative` and signals dose-claim.
+  decision_note_required: true
+  variant_a_goal: Išlaikyti kliniškai tikslią dozę, kelią ar koncentraciją pagal LT šaltinį.
+  variant_b_goal: Sutrumpinti formuluotę, bet neprarasti norminės prasmės ir saugos ribų.
+  decision_criteria: Palik variantą, kuris tiksliai atitinka LT norminį šaltinį ir nepalieka originalo
+    dozavimo drift'o.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - todo-dose-01
+  structured_block_policy: null
+- block_id: narrative-07-epiglottitis
+  block_type: narrative
+  heading: Epiglottitis
+  source_anchor: Epiglottitis
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: LT
+  profile_id: algorithm-step
+  selection_mode: profile_match
+  selection_reason: Matched profile `algorithm-step` via block_type `narrative` and signals algorithm-step.
+  decision_note_required: true
+  variant_a_goal: Palikti kliniškai pilną algoritmo žingsnį ir sprendimo logiką.
+  variant_b_goal: Kuo aiškiau ir komandiškiau lietuviškai išdėstyti veiksmą.
+  decision_criteria: Palik variantą, kuris išlaiko sprendimo seką, bet skamba kaip aiški LT algoritmo
+    komanda.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - todo-algorithm-step-04
+  structured_block_policy: null
+- block_id: narrative-13-motor-neurone-disease
+  block_type: narrative
+  heading: Motor Neurone Disease
+  source_anchor: Motor Neurone Disease
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - dose-claim
+  required_authority_basis: LT
+  profile_id: dose-claim
+  selection_mode: profile_match
+  selection_reason: Matched profile `dose-claim` via block_type `narrative` and signals dose-claim.
+  decision_note_required: true
+  variant_a_goal: Išlaikyti kliniškai tikslią dozę, kelią ar koncentraciją pagal LT šaltinį.
+  variant_b_goal: Sutrumpinti formuluotę, bet neprarasti norminės prasmės ir saugos ribų.
+  decision_criteria: Palik variantą, kuris tiksliai atitinka LT norminį šaltinį ir nepalieka originalo
+    dozavimo drift'o.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - todo-concentration-03
+  structured_block_policy: null
+- block_id: narrative-16-myasthenia-gravis
+  block_type: narrative
+  heading: Myasthenia Gravis
+  source_anchor: Myasthenia Gravis
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - dose-claim
+  required_authority_basis: LT
+  profile_id: dose-claim
+  selection_mode: profile_match
+  selection_reason: Matched profile `dose-claim` via block_type `narrative` and signals dose-claim.
+  decision_note_required: true
+  variant_a_goal: Išlaikyti kliniškai tikslią dozę, kelią ar koncentraciją pagal LT šaltinį.
+  variant_b_goal: Sutrumpinti formuluotę, bet neprarasti norminės prasmės ir saugos ribų.
+  decision_criteria: Palik variantą, kuris tiksliai atitinka LT norminį šaltinį ir nepalieka originalo
+    dozavimo drift'o.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - todo-route-02
+  structured_block_policy: null
