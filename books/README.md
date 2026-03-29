@@ -134,3 +134,4 @@ MEDBOOK_ROOT=books/<slug> scripts/sync_obsidian_book.sh
 ```
 
 Pagal nutylėjimą šie skriptai aktyvias taisykles krauna iš `shared/` ir, jei tokie yra, iš `books/<slug>/*.local.tsv`.
+Obsidian sync nekeičia repo `lt/chapters/` struktūros, bet vault pusėje gali sugrupuoti skyrius į navigacinius `Section` aplankus pagal `source/index/chapters.json`.

@@ -95,10 +95,30 @@ print(validate_obsidian_sync_destination(dest_dir, book_root, repo_root=repo_roo
 PY
 )"
 
+STAGING_DIR="$(mktemp -d "${TMPDIR:-/tmp}/obsidian-sync-XXXXXX")"
+cleanup() {
+  rm -rf "$STAGING_DIR"
+}
+trap cleanup EXIT
+
+"$PYTHON_BIN" - "$REPO_ROOT" "$BOOK_ROOT" "$STAGING_DIR" <<'PY'
+import sys
+from pathlib import Path
+
+repo_root = Path(sys.argv[1])
+book_root = Path(sys.argv[2])
+staging_dir = Path(sys.argv[3])
+sys.path.insert(0, str(repo_root / "scripts"))
+
+from book_workflow_support import stage_obsidian_sync_tree
+
+stage_obsidian_sync_tree(book_root, staging_dir)
+PY
+
 mkdir -p "$DEST_DIR"
 
-# Mirror only the user-facing study assets needed by Obsidian while preserving
-# the chapters/figures directory structure and relative image links.
+# Mirror only the user-facing study assets needed by Obsidian. Repo chapter
+# paths stay flat, but Obsidian receives a navigation-friendly chapter tree.
 /usr/bin/rsync \
   -rlpgoD \
   --delete \
@@ -109,5 +129,5 @@ mkdir -p "$DEST_DIR"
   --include '*.md' \
   --include '*.png' \
   --exclude '*' \
-  "$SRC_DIR/" \
+  "$STAGING_DIR/" \
   "$DEST_DIR/"

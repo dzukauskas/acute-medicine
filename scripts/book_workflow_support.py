@@ -3,8 +3,10 @@ from __future__ import annotations
 
 import csv
 import importlib
+import json
 import os
 import re
+import shutil
 import sys
 import tomllib
 from pathlib import Path
@@ -69,6 +71,7 @@ STRUCTURED_SOURCE_HEADING_RE = re.compile(
 )
 TABLE_ROW_RE = re.compile(r"^\|.*\|$")
 MARKDOWN_TABLE_SEPARATOR_RE = re.compile(r"^:?-{3,}:?$")
+SECTION_TITLE_RE = re.compile(r"^Section\s+(?P<number>\d+)\s+[–-]\s+(?P<title>.+)$", re.IGNORECASE)
 
 LOCALIZATION_REPLACEMENT_MODES = {
     "replace_lt",
@@ -581,6 +584,95 @@ def default_obsidian_dest(book_root: Path) -> Path:
 
 def obsidian_launch_agent_label(book_root: Path) -> str:
     return f"{obsidian_config()['launch_agent_prefix']}-{book_slug(book_root)}"
+
+
+def chapter_index_path(book_root: str | Path | None = None) -> Path:
+    return require_book_root(book_root) / "source" / "index" / "chapters.json"
+
+
+def load_chapter_index(book_root: str | Path | None = None) -> list[dict[str, object]]:
+    path = chapter_index_path(book_root)
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, list):
+        raise SystemExit(f"Netikėtas chapter index formatas: {path}")
+    return [item for item in data if isinstance(item, dict)]
+
+
+def _obsidian_section_folder_name(section_number: int, section_title: str) -> str:
+    clean_title = re.sub(r"\s+", " ", section_title.replace("–", "-")).strip(" -")
+    return f"{section_number:02d} Section {section_number} - {clean_title}"
+
+
+def obsidian_chapter_destinations(book_root: str | Path | None = None) -> dict[str, Path]:
+    chapters = load_chapter_index(book_root)
+    if not chapters:
+        return {}
+
+    has_sections = any(
+        SECTION_TITLE_RE.match(str(chapter.get("title", "")).strip()) for chapter in chapters
+    )
+    if not has_sections:
+        return {
+            str(chapter.get("slug", "")).strip(): Path("chapters") / f"{str(chapter.get('slug', '')).strip()}.md"
+            for chapter in chapters
+            if str(chapter.get("slug", "")).strip()
+        }
+
+    current_folder = Path("chapters") / "00 Front Matter"
+    destinations: dict[str, Path] = {}
+    for chapter in chapters:
+        slug = str(chapter.get("slug", "")).strip()
+        title = str(chapter.get("title", "")).strip()
+        if not slug:
+            continue
+        section_match = SECTION_TITLE_RE.match(title)
+        if section_match:
+            current_folder = Path("chapters") / _obsidian_section_folder_name(
+                int(section_match.group("number")),
+                section_match.group("title"),
+            )
+            destinations[slug] = current_folder / f"{slug}.md"
+            continue
+        if normalize_key(title) == "index":
+            destinations[slug] = Path("chapters") / "99 Reference" / f"{slug}.md"
+            continue
+        destinations[slug] = current_folder / f"{slug}.md"
+    return destinations
+
+
+def rewrite_obsidian_chapter_markdown(markdown: str, destination_relpath: Path) -> str:
+    chapter_parent = destination_relpath.parent
+    target_figures_dir = Path("figures")
+    figures_prefix = os.path.relpath(target_figures_dir, start=chapter_parent).replace(os.sep, "/")
+    return markdown.replace("../figures/", f"{figures_prefix}/")
+
+
+def stage_obsidian_sync_tree(book_root: str | Path | None, destination_root: str | Path) -> None:
+    active_book_root = require_book_root(book_root)
+    destination = Path(destination_root)
+    if destination.exists():
+        shutil.rmtree(destination)
+    destination.mkdir(parents=True, exist_ok=True)
+
+    src_lt_root = active_book_root / "lt"
+    src_chapters_dir = src_lt_root / "chapters"
+    src_figures_dir = src_lt_root / "figures"
+
+    if src_figures_dir.exists():
+        shutil.copytree(src_figures_dir, destination / "figures", dirs_exist_ok=True)
+
+    destinations = obsidian_chapter_destinations(active_book_root)
+    for chapter_path in sorted(src_chapters_dir.glob("*.md")):
+        destination_relpath = destinations.get(chapter_path.stem, Path("chapters") / chapter_path.name)
+        destination_path = destination / destination_relpath
+        destination_path.parent.mkdir(parents=True, exist_ok=True)
+        markdown = chapter_path.read_text(encoding="utf-8")
+        destination_path.write_text(
+            rewrite_obsidian_chapter_markdown(markdown, destination_relpath),
+            encoding="utf-8",
+        )
 
 
 def repo_relative_path(path: Path) -> str:

@@ -113,6 +113,8 @@ Vienkartinis sync:
 
 - `MEDBOOK_ROOT=books/{{BOOK_SLUG}} scripts/sync_obsidian_book.sh`
 
+Repo `lt/chapters/` lieka flat, bet sync į Obsidian gali sugrupuoti skyrius į `Section` aplankus pagal `source/index/chapters.json`, kad vault navigacija atitiktų leidinio struktūrą.
+
 Automatinis `launchd` sync agentas:
 
 - `scripts/install_obsidian_sync_agent.sh --book-root books/{{BOOK_SLUG}}`
