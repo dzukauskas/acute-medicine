@@ -14,15 +14,15 @@
 
 ### Lentelės
 
-- Santrumpų žodynas (`227` eilutės)
+Struktūrinių `Table` blokų source faile nėra; santrumpų žodynas pateiktas kaip viena vientisa markdown lentelė (`227` eilutės).
 
 ### Paveikslai / schemos / algoritmai
 
-- Nėra
+Nėra.
 
 ### Rėmeliai / papildomi blokai
 
-- Nėra
+Nėra.
 
 ## Pirminė 006 inventoriaus suvestinė
 
@@ -68,6 +68,59 @@
 | LSMU / VU / Santaros vieši akademiniai tekstai | LT medicininė vartosena | žiūrėta 2026-03-29 | Klinikinių santrumpų LT atitikmenims ir jų realiai vartojamai formai patikrinti. |
 | SAM / e-Seimas | norminė LT vartosena | žiūrėta 2026-03-29 | Oficialiems ir civilinės saugos / sistemos terminams patikrinti, kai santrumpa liečia reglamentuotą sritį. |
 
+## Europos / tarptautiniai šaltiniai
+
+| Šaltinis | Tipas | Data / versija | Kodėl naudotas |
+| --- | --- | --- | --- |
+| JRCALC Clinical Guidelines 2025 Reference Edition | originalus šaltinis | 2025 leidimas | Naudotas kaip vienintelis šio skyriaus santrumpų sąrašo ir originalių išskleidimų šaltinis. |
+
+## LT-source branduolio taikymas
+
+| Sritis | Pagrindinis LT-source kelias | Konkretus LT šaltinis | ES fallback | Pastaba |
+| --- | --- | --- | --- | --- |
+| santrumpų_terminija | terminija_ir_kalbos_forma | VLKK Terminų bankas; LSMU / VU / Santaros vieši akademiniai šaltiniai | tarptautinė nomenklatūra ir originalus leidinys | Skyriuje norminių klinikinių teiginių nėra; pagrindinis darbas yra tiksliai užrakinti LT terminų ir santrumpų išskleidimus arba pažymėti juos kaip originalo kontekstą. |
+
+## Jurisdikcijos ir rinkos signalai
+
+| Signalas | Jurisdikcija | Tipas | Šaltinio vieta | Pastaba |
+| --- | --- | --- | --- | --- |
+| CMI | australia | reference tool | `c1DC.xhtml` santrumpų lentelė | Aptikta kaip lokalizacijos signalas dėl bendro repo signalų sluoksnio; šiame skyriuje iš tikro yra dubens traumos klasifikacijos santrumpa, todėl negali būti mechaniškai perkelta iš kitų rinkų vartosenos. |
+| JRCALC | uk | gairės | `c1DC.xhtml` santrumpų lentelė | Originalaus leidinio ir JK gairių sistemos santrumpa. |
+| NHS | uk | service model | `c1DC.xhtml` santrumpų lentelė | JK sveikatos sistemos organizacinis kontekstas. |
+| ReSPECT | uk | law | `c1DC.xhtml` santrumpų lentelė | JK gydymo apimties ir skubios pagalbos planavimo dokumento kontekstas. |
+| DNACPR | uk | law | `c1DC.xhtml` santrumpų lentelė | JK nurodymų dėl negaivinimo dokumentavimo kontekstas. |
+
+## LT/EU pakeitimo sprendimai
+
+| Signalas | Veiksmas | Autoritetas | LT / EU sprendimas | Šaltinio nuoroda | Pastaba |
+| --- | --- | --- | --- | --- | --- |
+| CMI | original_context_callout | original-context-only | Santrumpų žodyne palikti originalų `Combined Mechanical Injury` išskleidimą, o LT kanoninį atitikmenį spręsti tik verčiant dubens traumos skyrių. | `c1DC.xhtml`; `shared/localization/localization_overrides.tsv` | Bendras repo signalas čia duoda klaidingą rinkos atitikmenį, todėl šiai knygai taikomas aiškus originalo konteksto blokavimas. |
+| JRCALC | original_context_callout | original-context-only | Palikti tik kaip originalaus leidinio ir JK gairių sistemos santrumpą. | `shared/localization/localization_overrides.tsv` | Nenaudoti kaip LT norminio autoriteto. |
+| NHS | omit_nontransferable | LT | Pagrindiniame LT tekste nevartoti kaip vietinio sistemos standarto; prireikus aiškinti tik kaip JK sveikatos sistemos kontekstą. | `shared/localization/localization_overrides.tsv` | Organizacinis kontekstas, ne LT norminis terminas. |
+| ReSPECT | original_context_callout | original-context-only | Palikti tik kaip originalo dokumento pavadinimą / JK planavimo sistemos santrumpą. | `shared/localization/localization_overrides.tsv` | Nenaudoti kaip LT teisinio ar klinikinio atitikmens. |
+| DNACPR | original_context_callout | original-context-only | Palikti tik kaip JK dokumentavimo mechanizmo santrumpą. | `shared/localization/localization_overrides.tsv` | Nenaudoti kaip LT sprendimų dėl gaivinimo apimties termino. |
+
+## Vaistų ir dozių LT/EU šaltinių bazė
+
+| Tema | Šaltinis | Jurisdikcija | Data / versija | Pastaba |
+| --- | --- | --- | --- | --- |
+
+## Norminių teiginių matrica
+
+| claim_id | claim_type | source_anchor | final_rendering | authority_basis | primary_lt_source | eu_fallback_source | lt_gap_reason | note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+## Struktūrinių blokų lokalizacijos sprendimai
+
+| block_id | block_type | lt_strategy | authority_source | original_context_allowed | note |
+| --- | --- | --- | --- | --- | --- |
+
+## Neperkeliamas originalo turinys
+
+- JK teisinių ir organizacinių sistemų santrumpos, tokios kaip `NHS`, `ReSPECT`, `DNACPR`, `JRCALC`, šiame skyriuje paliekamos tik kaip originalo kontekstas.
+- `CMI` šiame santrumpų žodyne nelaikoma užrakintu LT terminu; ji bus sprendžiama tik verčiant dubens traumos skyrių.
+- Santrumpų žodynas nepaverčiamas LT klinikinės dokumentacijos santrumpų standartu.
+
 ## 006 triage: A-B blokas (2026-03-29)
 
 | Santrumpa | Originalas | LT sprendimas | Statusas | LT šaltinio kryptis | Pastaba |
@@ -108,7 +161,7 @@
 
 | Santrumpa | Originalas | LT sprendimas | Statusas | LT šaltinio kryptis | Pastaba |
 | --- | --- | --- | --- | --- | --- |
-| <C>ABCDE | <C> – Catastrophic haemorrhage | `<C>ABCDE` schema; LT lokalizuoti tik komponentus | localization_only | GMP / traumos mnemonika | Santrumpė paliekama originali, nes remiasi EN raidėmis. |
+| <C>ABCDE | <C> – Catastrophic haemorrhage | `<C>ABCDE` schema; LT lokalizuoti tik komponentus | localization_only | GMP / traumos mnemonika | Santrumpė paliekama originali, nes remiasi EN raidėmis; LT vertime `<C>` komponentui pasirinkta aiškesnė klinikinė forma `masyvus išorinis kraujavimas`, nors oficialiuose LT ekstremaliųjų situacijų algoritmuose vartojama ir forma `katastrofinis kraujavimas`. |
 | CAMHS | Child and Adolescent Mental Health Services | palikti originalo JK paslaugų kontekste | original_context_only | JK paslaugų modelis | Ne LT aktyvios medicininės bazės vienetas. |
 | CBRNE | Chemical, Biological, Radiological, Nuclear and Explosive | lokaliai aiškinti LT forma, bet nekelti į `shared` | localization_only | LT civilinės saugos vartosenoje dominuoja `CBRN`, ne `CBRNE` | Šio leidinio originali santrumpa negali tapti kanoniniu LT bazės vienetu. |
 | CBT | Cognitive Behavioural Therapy | kognityvinė elgesio terapija (CBT) | approved_global | LT psichiatrijos ir psichologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
@@ -703,9 +756,9 @@
 
 | Sritis | Statusas | Pastaba |
 | --- | --- | --- |
-| terminija | vykdoma | `A-Z` source santrumpų triage užbaigtas; po papildomo patikslinimo atviri liko tik `CMI` ir `CPR-IC`. |
+| terminija | eskaluoti | `A-Z` source santrumpų triage užbaigtas; po papildomo patikslinimo atviri liko tik `CMI` ir `CPR-IC`. |
 | kolokacijos | ok | Tai santrumpų žodynas, ne naratyvinis skyrius. |
 | gramatika | ok |  |
-| semantika | vykdoma | Reikia tiksliai atskirti klinikines santrumpas nuo originalo JK konteksto ir mnemonikų. |
-| norminė logika | vykdoma | JK organizacinės ir teisinės santrumpos negali būti automatiškai lokalizuotos kaip LT norminis sluoksnis. |
-| atviros abejonės | yra | Likę du atviri vienetai: `CMI`, `CPR-IC`. |
+| semantika | sutvarkyta | Klinikinės santrumpos atskirtos nuo originalo konteksto ir mnemonikų. |
+| norminė logika | sutvarkyta | Originalo organizacinės ir teisinės santrumpos atskirtos į `Originalo kontekstas` bloką ir nepaliktos kaip LT norminis sluoksnis. |
+| atviros abejonės | eskaluoti | Likę du atviri vienetai: `CMI`, `CPR-IC`. |

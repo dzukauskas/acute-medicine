@@ -1,0 +1,2585 @@
+chapter_slug: 006-list-of-abbreviations
+chapter_title: 6 skyrius. Santrumpų sąrašas
+page_range: EPUB segmentas c1DC.xhtml
+source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/006-list-of-abbreviations.md
+lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/006-list-of-abbreviations.md
+blocks:
+- block_id: narrative-01-list-of-abbreviations
+  block_type: narrative
+  heading: List of Abbreviations
+  source_anchor: List of Abbreviations
+  source_excerpt: '# Chapter 6 List of Abbreviations
+
+    - Šaltinio segmentai: c1DC.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    List of Abbreviations
+
+    The glossary of terms listed below is designed to assist reading ease and is NOT provided as a list
+    of short- hand terms. The Joint Royal Colleges Ambulance Liaison Committee reminds the user that abbreviations
+    are not to be used in any clinical documentation.
+
+    | Col 1 | Col 2 |
+
+    | --- | --- |
+
+    | Term |  |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip originalaus leidinio ir JK gairių sistemos santrumpą.
+  matched_localization_terms:
+  - JRCALC
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+clinical_claims: []
+structured_block_policies: []
+active_terms:
+- en: Advanced life support
+  lt: specializuotas gaivinimas
+  status: preferred
+  banned_lt:
+  - pažangus gaivinimas
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: specializuotas gaivinimas (ALS)
+- en: Basic Life Support
+  lt: pradinis gaivinimas
+  status: preferred
+  banned_lt:
+  - bazinis gaivinimas
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: pradinis gaivinimas (BLS)
+- en: Breech Birth
+  lt: vaisiaus sėdmenų pirmeiga
+  status: preferred
+  banned_lt: []
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: gairės dėl vaisiaus sėdmenų pirmeigos
+- en: Acute Coronary Syndrome
+  lt: ūminis koronarinis sindromas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: ūminis koronarinis sindromas (ŪKS)
+- en: Altered Level of Consciousness
+  lt: sutrikusi sąmonė
+  status: preferred
+  banned_lt:
+  - sutrikęs sąmonės lygis
+  - pakitęs sąmonės lygis
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: sutrikusi sąmonė
+- en: Chronic Obstructive Pulmonary Disease
+  lt: lėtinė obstrukcinė plaučių liga
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: lėtinė obstrukcinė plaučių liga (LOPL)
+- en: Foreign Body Airway Obstruction
+  lt: kvėpavimo takų obstrukcija svetimkūniu
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: kvėpavimo takų obstrukcija svetimkūniu
+- en: Heart Failure
+  lt: širdies nepakankamumas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: širdies nepakankamumas
+- en: Hyperventilation Syndrome
+  lt: hiperventiliacijos sindromas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: hiperventiliacijos sindromas
+- en: Implantable Cardioverter Defibrillator
+  lt: implantuojamas kardioverteris-defibriliatorius
+  status: preferred
+  banned_lt:
+  - implantuojamas kardioverteris defibriliatorius
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: implantuojamas kardioverteris-defibriliatorius (IKD)
+- en: Newborn Life Support
+  lt: naujagimio gaivinimas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: naujagimio gaivinimas
+- en: Pulmonary Embolism
+  lt: plaučių embolija
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: plaučių embolija
+- en: Return of Spontaneous Circulation
+  lt: spontaninės kraujotakos atsinaujinimas
+  status: preferred
+  banned_lt:
+  - spontaninės kraujotakos atkūrimas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: spontaninės kraujotakos atsinaujinimas (ROSC)
+- en: Transient Ischaemic Attack
+  lt: praeinantis smegenų išemijos priepuolis
+  status: preferred
+  banned_lt:
+  - mikroinsultas
+  first_use_policy: must_expand_first
+  section_scope: all
+  local_override_tag: ''
+  example_lt: praeinantis smegenų išemijos priepuolis (PSIP)
+active_acronyms:
+- acronym: ALS
+  lt: specializuotas gaivinimas
+  en: Advanced life support
+  policy: lt-first
+  notes: Pirmą kartą išskleisti LT forma; `pažangus gaivinimas` nelaikyti kanoniniu variantu.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: specializuotas gaivinimas
+  section_scope: '006'
+- acronym: BLS
+  lt: pradinis gaivinimas
+  en: Basic Life Support
+  policy: lt-first
+  notes: Pirmą kartą išskleisti LT forma; `bazinis gaivinimas` nelaikyti kanoniniu variantu.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: pradinis gaivinimas
+  section_scope: '006'
+- acronym: ACS
+  lt: ūminis koronarinis sindromas
+  en: Acute Coronary Syndrome
+  policy: lt-first
+  notes: Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: ūminis koronarinis sindromas
+  section_scope: '006'
+- acronym: AAA
+  lt: pilvinės aortos aneurizma
+  en: Abdominal Aortic Aneurysm
+  policy: original-first
+  notes: Patikrinta LT interneto kraujagyslių chirurgijos šaltiniuose 2026-03-29. Šaltinio santrumpė paliekama,
+    bet LT išskleidimui vartoti `pilvinės aortos aneurizma`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: pilvinės aortos aneurizma (AAA)
+  section_scope: '006'
+- acronym: ADHD
+  lt: aktyvumo ir dėmesio sutrikimas
+  en: Attention Deficit Hyperactivity Disorder
+  policy: original-first
+  notes: Patikrinta LT interneto psichiatrijos ir psichologijos šaltiniuose 2026-03-29. LT tekstuose gali
+    pasitaikyti ir `ADS`, bet šiame leidinyje laikomasi originalios `ADHD` santrumpės.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: aktyvumo ir dėmesio sutrikimas (ADHD)
+  section_scope: '006'
+- acronym: AED
+  lt: automatinis išorinis defibriliatorius
+  en: Automated External Defibrillation
+  policy: original-first
+  notes: Patikrinta LT interneto gaivinimo ir slaugos šaltiniuose 2026-03-29. LT medicininėje vartosenoje
+    taikomas prietaiso pavadinimas `automatinis išorinis defibriliatorius`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: automatinis išorinis defibriliatorius (AED)
+  section_scope: '006'
+- acronym: AHF
+  lt: ūminis širdies nepakankamumas
+  en: Acute Heart Failure
+  policy: original-first
+  notes: Patikrinta LT interneto kardiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: ūminis širdies nepakankamumas (AHF)
+  section_scope: '006'
+- acronym: ARDS
+  lt: ūminis respiracinio distreso sindromas
+  en: Acute Respiratory Distress Syndrome
+  policy: original-first
+  notes: Patikrinta LT interneto intensyviosios terapijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: ūminis respiracinio distreso sindromas (ARDS)
+  section_scope: '006'
+- acronym: ATP
+  lt: antitachikardinė stimuliacija
+  en: Anti-Tachycardia Pacing
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir SAM kardiologijos šaltiniuose 2026-03-29. LT vartosenoje matoma
+    forma `antitachikardinė stimuliacija`, ypač implantuojamų kardioverterių-defibriliatorių kontekste.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: antitachikardinė stimuliacija (ATP)
+  section_scope: '006'
+- acronym: AV
+  lt: atrioventrikulinis
+  en: Atrioventricular
+  policy: original-first
+  notes: Patikrinta LT interneto kardiologijos šaltiniuose 2026-03-29. Vartotina kaip būdvardinė forma
+    junginiuose, pvz., AV blokada.
+  must_expand_first: 'no'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: atrioventrikulinis
+  section_scope: '006'
+- acronym: BBB
+  lt: Hiso pluošto kojytės blokada
+  en: Bundle branch block
+  policy: original-first
+  notes: Patikrinta LT interneto kardiologijos šaltiniuose 2026-03-29. Konkrečiose vietose gali būti tikslinama
+    į kairiosios ar dešiniosios Hiso pluošto kojytės blokadą.
+  must_expand_first: 'no'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: Hiso pluošto kojytės blokada
+  section_scope: '006'
+- acronym: BiPAP
+  lt: dviejų lygių teigiamo slėgio ventiliacija
+  en: Bilevel Positive Pressure Ventilation
+  policy: original-first
+  notes: Patikrinta LT interneto SAM metodikoje 2026-03-29. LT šaltiniuose originali `BiPAP` santrumpa
+    vartojama kartu su LT išskleidimu.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: dviejų lygių teigiamo slėgio ventiliacija (BiPAP)
+  section_scope: '006'
+- acronym: CBRN
+  lt: cheminiai, biologiniai, radiologiniai ir branduoliniai
+  en: Chemical Biological Radiological Nuclear
+  policy: original-first
+  notes: Valstybinėje civilinės saugos vartosenoje naudojama CBRN santrumpa; pirmą kartą galima išskleisti
+    LT forma.
+  must_expand_first: 'no'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: CBRN
+  section_scope: '006'
+- acronym: CBT
+  lt: kognityvinė elgesio terapija
+  en: Cognitive Behavioural Therapy
+  policy: lt-first
+  notes: Patikrinta LT interneto psichologijos ir psichiatrijos šaltiniuose 2026-03-29. LT vartosenoje
+    dažna ir santrumpa `KET`, bet šiame leidinyje laikomasi originalios `CBT` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kognityvinė elgesio terapija (CBT)
+  section_scope: '006'
+- acronym: CCF
+  lt: stazinis širdies nepakankamumas
+  en: Congestive cardiac failure
+  policy: original-first
+  notes: Patikrinta LT interneto kardiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: stazinis širdies nepakankamumas (CCF)
+  section_scope: '006'
+- acronym: CES
+  lt: arklio uodegos sindromas
+  en: Cauda Equina Syndrome
+  policy: original-first
+  notes: Patikrinta LT interneto neurochirurgijos ir ortopedijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: arklio uodegos sindromas (CES)
+  section_scope: '006'
+- acronym: CNS
+  lt: centrinė nervų sistema
+  en: Central Nervous System
+  policy: lt-first
+  notes: Patikrinta LT interneto medicinos ir neurologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: centrinė nervų sistema (CNS)
+  section_scope: '006'
+- acronym: CO
+  lt: anglies monoksidas
+  en: Carbon monoxide
+  policy: lt-first
+  notes: Patikrinta LT interneto toksikologijos ir visuomenės sveikatos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: anglies monoksidas (CO)
+  section_scope: '006'
+- acronym: CO2
+  lt: anglies dioksidas
+  en: Carbon dioxide
+  policy: lt-first
+  notes: Patikrinta LT interneto akademiniuose ir standartizacijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: anglies dioksidas (CO2)
+  section_scope: '006'
+- acronym: COPD
+  lt: lėtinė obstrukcinė plaučių liga
+  en: Chronic Obstructive Pulmonary Disease
+  policy: original-first
+  notes: Patikrinta LT interneto pulmonologijos šaltiniuose 2026-03-29. LT vartosenoje įprasta santrumpa
+    `LOPL`, tačiau šio leidinio santrumpių žodyne originali `COPD` santrumpa paliekama su LT išskleidimu.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: lėtinė obstrukcinė plaučių liga (LOPL / COPD)
+  section_scope: '006'
+- acronym: CPAP
+  lt: nuolatinis teigiamas kvėpavimo takų slėgis
+  en: Continuous Positive Airway Pressure
+  policy: original-first
+  notes: Patikrinta LT interneto oficialiuose ir ligoninių šaltiniuose 2026-03-29. LT dokumentuose santrumpa
+    `CPAP` paprastai paliekama kartu su LT išskleidimu.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: nuolatinis teigiamas kvėpavimo takų slėgis (CPAP)
+  section_scope: '006'
+- acronym: CPR
+  lt: kardiopulmoninis gaivinimas
+  en: Cardiopulmonary Resuscitation
+  policy: lt-first
+  notes: Patikrinta LT interneto gaivinimo šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kardiopulmoninis gaivinimas (CPR)
+  section_scope: '006'
+- acronym: CT
+  lt: kompiuterinė tomografija
+  en: Computerised Tomography
+  policy: lt-first
+  notes: Patikrinta LT interneto radiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kompiuterinė tomografija (KT / CT)
+  section_scope: '006'
+- acronym: DKA
+  lt: diabetinė ketoacidozė
+  en: Diabetic ketoacidosis
+  policy: lt-first
+  notes: Patikrinta LT interneto medicinos šaltiniuose 2026-03-28.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: diabetinė ketoacidozė
+  section_scope: '006'
+- acronym: DM
+  lt: cukrinis diabetas
+  en: Diabetes Mellitus
+  policy: lt-first
+  notes: Patikrinta LT interneto endokrinologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: cukrinis diabetas (DM)
+  section_scope: '006'
+- acronym: DVT
+  lt: giliųjų venų trombozė
+  en: Deep Vein Thrombosis
+  policy: lt-first
+  notes: Patikrinta LT interneto kraujagyslių medicinos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: giliųjų venų trombozė (DVT)
+  section_scope: '006'
+- acronym: ECMO
+  lt: ekstrakorporinė membraninė oksigenacija
+  en: Extracorporeal membrane oxygenation
+  policy: original-first
+  notes: Patikrinta LT interneto intensyviosios terapijos ir universitetinių ligoninių šaltiniuose 2026-03-29.
+    LT vartosenoje dažna ir santrumpa `EKMO`, tačiau šiame leidinyje laikomasi originalios `ECMO` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: ekstrakorporinė membraninė oksigenacija (EKMO / ECMO)
+  section_scope: '006'
+- acronym: EF
+  lt: išstūmio frakcija
+  en: Ejection fraction
+  policy: original-first
+  notes: Patikrinta LT interneto kardiologijos ir echokardiografijos šaltiniuose 2026-03-29. LT dokumentuose
+    dažna ir santrumpa `IF`, tačiau šiame leidinyje laikomasi originalios `EF` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: išstūmio frakcija (IF / EF)
+  section_scope: '006'
+- acronym: EtCO2
+  lt: iškvepiamo oro anglies dioksidas
+  en: Exhaled (end-tidal) carbon dioxide
+  policy: original-first
+  notes: Patikrinta LT interneto anesteziologijos ir gaivinimo šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: iškvepiamo oro anglies dioksidas (EtCO2)
+  section_scope: '006'
+- acronym: FBAO
+  lt: kvėpavimo takų obstrukcija svetimkūniu
+  en: Foreign Body Airway Obstruction
+  policy: original-first
+  notes: Terminui jau taikyta LT interneto skubiosios pagalbos šaltinių patikra 2026-03-28; akronimo eilutė
+    pridėta 006 santrumpų žodyno nuoseklumui.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kvėpavimo takų obstrukcija svetimkūniu (FBAO)
+  section_scope: '006'
+- acronym: GTN
+  lt: glicerolio trinitratas
+  en: Glyceryl Trinitrate
+  policy: original-first
+  notes: Patikrinta LT interneto SAM kardiologijos šaltiniuose 2026-03-29. LT klinikinėje vartosenoje
+    dažnai aiškinama ir kaip trumpai veikiantis nitroglicerinas.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: glicerolio trinitratas (nitroglicerinas, GTN)
+  section_scope: '006'
+- acronym: HFpEF
+  lt: širdies nepakankamumas su išlikusia kairiojo skilvelio išstūmio frakcija
+  en: Heart failure with preserved ejection fraction
+  policy: original-first
+  notes: Patikrinta LT interneto kardiologijos ir LSMU akademiniuose šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: širdies nepakankamumas su išlikusia kairiojo skilvelio išstūmio frakcija (HFpEF)
+  section_scope: '006'
+- acronym: HFrEF
+  lt: širdies nepakankamumas su sumažėjusia kairiojo skilvelio išstūmio frakcija
+  en: Heart failure with reduced ejection fraction
+  policy: original-first
+  notes: Patikrinta LT interneto kardiologijos ir LSMU akademiniuose šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: širdies nepakankamumas su sumažėjusia kairiojo skilvelio išstūmio frakcija (HFrEF)
+  section_scope: '006'
+- acronym: HIV
+  lt: žmogaus imunodeficito virusas
+  en: Human Immunodeficiency Virus
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir LSMU infekcinių ligų šaltiniuose 2026-03-29. LT vartosenoje įprasta
+    santrumpa `ŽIV`, tačiau šiame leidinyje laikomasi originalios `HIV` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: žmogaus imunodeficito virusas (ŽIV / HIV)
+  section_scope: '006'
+- acronym: IBS
+  lt: dirgliosios žarnos sindromas
+  en: Irritable Bowel Syndrome
+  policy: original-first
+  notes: Patikrinta LT interneto gastroenterologijos šaltiniuose 2026-03-29. LT vartosenoje įprasta santrumpa
+    `DŽS`, tačiau šiame leidinyje laikomasi originalios `IBS` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: dirgliosios žarnos sindromas (DŽS / IBS)
+  section_scope: '006'
+- acronym: ICP
+  lt: intrakranijinis spaudimas
+  en: Intracranial Pressure
+  policy: original-first
+  notes: Patikrinta LT interneto neurochirurgijos ir SAM metodiniuose šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: intrakranijinis spaudimas (ICP)
+  section_scope: '006'
+- acronym: IHD
+  lt: išeminė širdies liga
+  en: Ischemic Heart Disease
+  policy: original-first
+  notes: Patikrinta LT interneto kardiologijos ir LSMU šaltiniuose 2026-03-29. LT vartosenoje įprasta
+    santrumpa `IŠL`, tačiau šiame leidinyje laikomasi originalios `IHD` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: išeminė širdies liga (IŠL / IHD)
+  section_scope: '006'
+- acronym: IVC
+  lt: apatinė tuščioji vena
+  en: Inferior Vena Cava
+  policy: original-first
+  notes: Patikrinta LT interneto skubiosios echoskopijos ir SAM šaltiniuose 2026-03-29. LT vartosenoje
+    įprasta santrumpa `ATV`, tačiau šiame leidinyje laikomasi originalios `IVC` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: apatinė tuščioji vena (ATV / IVC)
+  section_scope: '006'
+- acronym: JVP
+  lt: jungo venų spaudimas
+  en: Jugular Venous Pressure
+  policy: original-first
+  notes: Patikrinta LT interneto kardiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: jungo venų spaudimas (JVP)
+  section_scope: '006'
+- acronym: LBBB
+  lt: kairiosios Hiso pluošto kojytės blokada
+  en: Left Bundle Branch Block
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir LSMU kardiologijos šaltiniuose 2026-03-29. LT vartosenoje galimi
+    vietiniai trumpiniai, bet šiame leidinyje laikomasi originalios `LBBB` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kairiosios Hiso pluošto kojytės blokada (LBBB)
+  section_scope: '006'
+- acronym: LVF
+  lt: kairiojo skilvelio nepakankamumas
+  en: Left Ventricular Failure
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir LSMU kardiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kairiojo skilvelio nepakankamumas (LVF)
+  section_scope: '006'
+- acronym: LVSD
+  lt: kairiojo skilvelio sistolinė disfunkcija
+  en: Left ventricular systolic dysfunction
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU kardiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kairiojo skilvelio sistolinė disfunkcija (LVSD)
+  section_scope: '006'
+- acronym: HPV
+  lt: žmogaus papilomos virusas
+  en: Human papillomavirus
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir Santaros klinikų šaltiniuose 2026-03-29. LT vartosenoje įprasta
+    santrumpa `ŽPV`, tačiau šiame leidinyje laikomasi originalios `HPV` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: žmogaus papilomos virusas (ŽPV / HPV)
+  section_scope: '006'
+- acronym: HVS
+  lt: hiperventiliacijos sindromas
+  en: Hyperventilation Syndrome
+  policy: original-first
+  notes: Remiasi jau validuotu LT termino įrašu `Hyperventilation Syndrome -> hiperventiliacijos sindromas`;
+    akronimo eilutė pridėta 006 santrumpų žodyno nuoseklumui 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: hiperventiliacijos sindromas (HVS)
+  section_scope: '006'
+- acronym: LVAD
+  lt: kairiojo skilvelio pagalbinis įrenginys
+  en: Left Ventricular Assist Device
+  policy: original-first
+  notes: Patikrinta LT interneto medicinos šaltiniuose 2026-03-28; pirmą kartą vartoti pilną LT formą
+    su LVAD santrumpa.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'yes'
+  ambiguous_context: ''
+  preferred_lt_context: kairiojo skilvelio pagalbinis įrenginys (LVAD)
+  section_scope: '006'
+- acronym: MAOI
+  lt: monoamino oksidazės inhibitoriai
+  en: Monoamine Oxidase Inhibitor antidepressant
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir LSMU psichiatrijos / farmakologijos šaltiniuose 2026-03-29. LT
+    vartosenoje pasitaiko ir jungtinis rašymas `monoaminooksidazės inhibitoriai`, bet kaip kanoninė forma
+    parinkta oficiali SAM vartosena.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: monoamino oksidazės inhibitoriai (MAOI)
+  section_scope: '006'
+- acronym: MAP
+  lt: vidutinis arterinis kraujo spaudimas
+  en: Mean Arterial Pressure
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir LSMU anesteziologijos / hemodinamikos šaltiniuose 2026-03-29.
+    LT šaltiniuose vartojama ir trumpesnė forma `vidutinis arterinis spaudimas`, tačiau šiame leidinyje
+    užrakinama pilnesnė forma.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: vidutinis arterinis kraujo spaudimas (MAP)
+  section_scope: '006'
+- acronym: MDMA
+  lt: 3,4-metilenedioksimetamfetaminas
+  en: Methylene Dioxymethamphetamine
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU toksikologijos šaltiniuose 2026-03-29. Viešojoje kalboje gali būti
+    aiškinama kaip `ekstazis`, bet formaliame medicininiame tekste vartotinas cheminis pavadinimas.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: 3,4-metilenedioksimetamfetaminas (MDMA)
+  section_scope: '006'
+- acronym: MI
+  lt: miokardo infarktas
+  en: Myocardial Infarction
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU kardiologijos šaltiniuose 2026-03-29. LT vartosenoje įprasta santrumpa
+    `MI`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: miokardo infarktas (MI)
+  section_scope: '006'
+- acronym: NEWS
+  lt: ankstyvojo perspėjimo skalė
+  en: National Early Warning Score
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir SAM susijusiuose šaltiniuose 2026-03-29. LT vartosenoje plačiai
+    matoma ir originali `NEWS` / `NEWS2` santrumpa, todėl ji paliekama su LT išskleidimu.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: ankstyvojo perspėjimo skalė (NEWS)
+  section_scope: '006'
+- acronym: NLS
+  lt: naujagimio gaivinimas
+  en: Newborn Life Support
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir LSMU neonatologijos šaltiniuose 2026-03-29. LT praktikoje dažniausiai
+    vartojama pilna forma, tačiau šiame leidinyje santrumpių žodyne laikomasi originalios `NLS` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: naujagimio gaivinimas (NLS)
+  section_scope: '006'
+- acronym: NSTEMI
+  lt: miokardo infarktas be ST segmento pakilimo
+  en: Non-ST Segment Elevation Myocardial Infarction
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir LSMU kardiologijos šaltiniuose 2026-03-29. LT šaltiniuose vartojama
+    ir forma `MI be ST pakilimo`, tačiau šiame leidinyje laikomasi originalios `NSTEMI` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: miokardo infarktas be ST segmento pakilimo (NSTEMI)
+  section_scope: '006'
+- acronym: OHCA
+  lt: širdies sustojimas už ligoninės ribų
+  en: Out of Hospital Cardiac Arrest
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir SAM gaivinimo šaltiniuose 2026-03-29. LT vartosenoje pasitaiko
+    ir santrumpa `ŠSNL`, tačiau šiame leidinyje laikomasi originalios `OHCA` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: širdies sustojimas už ligoninės ribų (OHCA)
+  section_scope: '006'
+- acronym: OPA
+  lt: orofaringinis vamzdelis
+  en: Oropharyngeal Airway
+  policy: original-first
+  notes: Patikrinta LT interneto SAM skubiosios pagalbos ir neonatologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: orofaringinis vamzdelis (OPA)
+  section_scope: '006'
+- acronym: ORS
+  lt: oralinės rehidratacijos druskos
+  en: Oral Rehydration Salt
+  policy: original-first
+  notes: Patikrinta LT interneto SAM metodiniuose šaltiniuose 2026-03-29. LT tekste prireikus galima aiškinti
+    kaip geriamajam gliukozės ir elektrolitų tirpalui skirtas druskas.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: oralinės rehidratacijos druskos (ORS)
+  section_scope: '006'
+- acronym: PE
+  lt: plaučių embolija
+  en: Pulmonary Embolism
+  policy: original-first
+  notes: Remiasi jau validuotu LT termino įrašu `Pulmonary Embolism -> plaučių embolija` ir papildomai
+    patikrinta LT interneto kardiologijos bei SAM šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: plaučių embolija (PE)
+  section_scope: '006'
+- acronym: PEF
+  lt: didžiausias iškvėpimo srovės greitis
+  en: Peak Expiratory Flow
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir LSMU pulmonologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: didžiausias iškvėpimo srovės greitis (PEF)
+  section_scope: '006'
+- acronym: PEA
+  lt: elektromechaninė disociacija
+  en: Pulseless Electrical Activity
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU kardiologijos šaltiniuose 2026-03-29. LT literatūroje matoma ir
+    aprašomoji forma `elektrinis aktyvumas be pulso (anksčiau vadinta elektromechanine disociacija)`;
+    projekto kanoninis atitikmuo užrakinamas kaip `elektromechaninė disociacija`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: elektromechaninė disociacija (EMD / PEA)
+  section_scope: '006'
+- acronym: PNES
+  lt: psichogeniniai neepilepsiniai priepuoliai
+  en: Psychogenic non-epileptic seizures
+  policy: original-first
+  notes: Patikrinta LT interneto VU neurologijos / epileptologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: psichogeniniai neepilepsiniai priepuoliai (PNES)
+  section_scope: '006'
+- acronym: PTSD
+  lt: potrauminio streso sutrikimas
+  en: Post-traumatic Stress Disorder
+  policy: original-first
+  notes: Patikrinta LT interneto VU ir LSMU psichikos sveikatos šaltiniuose 2026-03-29. LT vartosenoje
+    dažna ir santrumpa `PTSS`, tačiau šiame leidinyje laikomasi originalios `PTSD` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: potrauminio streso sutrikimas (PTSS / PTSD)
+  section_scope: '006'
+- acronym: RBBB
+  lt: dešiniosios Hiso pluošto kojytės blokada
+  en: Right bundle branch block
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir SAM kardiologijos šaltiniuose 2026-03-29. LT vartosenoje galimi
+    vietiniai trumpiniai, bet šiame leidinyje laikomasi originalios `RBBB` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: dešiniosios Hiso pluošto kojytės blokada (RBBB)
+  section_scope: '006'
+- acronym: RCT
+  lt: atsitiktinių imčių kontroliuojamas tyrimas
+  en: Randomised Controlled Trial
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU, Higienos instituto ir SAM šaltiniuose 2026-03-29. LT mokslinėje
+    vartosenoje naudojama ir pilna forma, ir originali `RCT` santrumpa.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: atsitiktinių imčių kontroliuojamas tyrimas (RCT)
+  section_scope: '006'
+- acronym: ROSC
+  lt: spontaninės kraujotakos atsinaujinimas
+  en: Return of Spontaneous Circulation
+  policy: original-first
+  notes: Remiasi jau validuotu LT termino įrašu `Return of Spontaneous Circulation -> spontaninės kraujotakos
+    atsinaujinimas` ir papildomai patikrinta LT interneto gaivinimo šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: spontaninės kraujotakos atsinaujinimas (ROSC)
+  section_scope: '006'
+- acronym: RSV
+  lt: respiracinis sincitinis virusas
+  en: Respiratory Syncytial Virus
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU vaikų ligų ir infekcinių ligų šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: respiracinis sincitinis virusas (RSV)
+  section_scope: '006'
+- acronym: RVF
+  lt: dešiniojo skilvelio nepakankamumas
+  en: Right Ventricular Failure
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir SAM kardiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: dešiniojo skilvelio nepakankamumas (RVF)
+  section_scope: '006'
+- acronym: SBI
+  lt: sunki bakterinė infekcija
+  en: Serious Bacterial Infection
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir SAM vaikų ligų šaltiniuose 2026-03-29. LT literatūroje vartojama
+    ir originali `SBI` santrumpa.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: sunki bakterinė infekcija (SBI)
+  section_scope: '006'
+- acronym: SCI
+  lt: nugaros smegenų pažeidimas
+  en: Spinal Cord Injury
+  policy: original-first
+  notes: Patikrinta LT interneto SAM traumų metodikoje ir LSMU neurochirurgijos / reabilitacijos šaltiniuose
+    2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: nugaros smegenų pažeidimas (SCI)
+  section_scope: '006'
+- acronym: SSRIs
+  lt: selektyvieji serotonino reabsorbcijos inhibitoriai
+  en: Selective Serotonin Re-Uptake Inhibitors
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir VU psichiatrijos / farmakologijos šaltiniuose 2026-03-29. LT
+    tekstuose dažnai matoma `SSRI`, o šiame žodyne paliekama originali daugiskaitos forma `SSRIs`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: selektyvieji serotonino reabsorbcijos inhibitoriai (SSRI / SSRIs)
+  section_scope: '006'
+- acronym: STEMI
+  lt: miokardo infarktas su ST segmento pakilimu
+  en: ST Segment Elevation Myocardial Infarction
+  policy: original-first
+  notes: Patikrinta LT interneto Santaros klinikų ir LSMU kardiologijos šaltiniuose 2026-03-29. LT šaltiniuose
+    vartojama ir forma `MI su STP`, tačiau šiame leidinyje laikomasi originalios `STEMI` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: miokardo infarktas su ST segmento pakilimu (STEMI)
+  section_scope: '006'
+- acronym: SVT
+  lt: supraventrikulinė tachikardija
+  en: Supraventricular Tachycardia
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir LSMU kardiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: supraventrikulinė tachikardija (SVT)
+  section_scope: '006'
+- acronym: TBI
+  lt: trauminis galvos smegenų pažeidimas
+  en: Traumatic Brain Injury
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU neurointensyviosios terapijos ir SAM traumų šaltiniuose 2026-03-29.
+    LT vartosenoje matoma ir forma `galvos smegenų trauma`, tačiau šiame žodyne užrakinamas platesnis
+    klinikinis terminas `trauminis galvos smegenų pažeidimas`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: trauminis galvos smegenų pažeidimas (TBI)
+  section_scope: '006'
+- acronym: TIA
+  lt: praeinantis smegenų išemijos priepuolis
+  en: Transient Ischaemic Attack
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU neurologijos šaltiniuose 2026-03-29. LT medicininėje vartosenoje
+    taip pat aktyvi santrumpa `PSIP`, tačiau šiame leidinyje santrumpių žodyne laikomasi originalios `TIA`
+    santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: praeinantis smegenų išemijos priepuolis (PSIP / TIA)
+  section_scope: '006'
+- acronym: ITD
+  lt: įkvėpimo impedancinio slenksčio vožtuvas
+  en: Impedance threshold device
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU gaivinimo fiziologijos šaltiniuose 2026-03-29. LT šaltinyje vartojama
+    forma `įkvėpimo impedancinio slenksčio vožtuvas`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: įkvėpimo impedancinio slenksčio vožtuvas (ITD)
+  section_scope: '006'
+- acronym: VF
+  lt: skilvelių virpėjimas
+  en: Ventricular Fibrillation
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir gaivinimo mokymo šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: skilvelių virpėjimas (VF)
+  section_scope: '006'
+- acronym: VT
+  lt: skilvelinė tachikardija
+  en: Ventricular Tachycardia
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir SAM kardiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: skilvelinė tachikardija (VT)
+  section_scope: '006'
+- acronym: VTE
+  lt: venų tromboembolija
+  en: Venous Thromboembolism
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir LSMU kraujagyslių / akušerijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: venų tromboembolija (VTE)
+  section_scope: '006'
+- acronym: PSIP
+  lt: praeinantis smegenų išemijos priepuolis
+  en: Transient Ischaemic Attack
+  policy: lt-first
+  notes: Patikrinta LT interneto neurologijos šaltiniuose 2026-03-29. Viešojoje kalboje gali pasitaikyti
+    `mikroinsultas`, bet formaliame medicininiame tekste vartotinas tikslus terminas.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: praeinantis smegenų išemijos priepuolis (PSIP)
+  section_scope: '006'
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: CMI
+  jurisdiction: australia
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `CMI` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: NHS
+  jurisdiction: uk
+  replacement_mode: omit_nontransferable
+  local_lt: taikyti Lietuvos sveikatos sistemos ir GMP organizacinę logiką
+  eu_fallback: taikyti ES ir vietinę organizacinę logiką
+  scope: all
+  reason: '`NHS` yra JK sistemos institucinis kontekstas, ne LT norminis terminas.'
+  source_ref: ''
+  notes: Nepalikti kaip vietinio standarto.
+- source_term: AMH
+  jurisdiction: australia
+  replacement_mode: original_context_callout
+  local_lt: remtis VVKT, SmPC ir LT/EU oficialiais šaltiniais
+  eu_fallback: remtis EMA ir ES gairėmis
+  scope: all
+  reason: Trumpinys `AMH` negali būti paliktas kaip LT norminio šaltinio santrumpa.
+  source_ref: ''
+  notes: Jei minimas, tai tik kaip originalo kontekstas.
+- source_term: ReSPECT
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos gydymo apimties ir paciento valios dokumentavimo praktika
+  eu_fallback: remtis LT ir ES teisine bei klinikine praktika
+  scope: all
+  reason: JK `ReSPECT` sistema nėra LT norminis standartas.
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+- source_term: DNACPR
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos teisine ir klinikine sprendimų dėl gaivinimo apimties praktika
+  eu_fallback: remtis LT ir ES teisine bei klinikine praktika
+  scope: all
+  reason: JK `DNACPR` mechanizmas negali būti perkeliamas kaip LT standartas.
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+- source_term: NEWS2
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos naudojamomis būklės vertinimo sistemomis ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir vietine praktika
+  scope: all
+  reason: '`NEWS2` yra UK early warning score ir negali būti rodomas kaip LT standartas.'
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+- source_term: FDA
+  jurisdiction: us
+  replacement_mode: omit_nontransferable
+  local_lt: remtis VVKT ir EMA reguliaciniu bei registracijos kontekstu
+  eu_fallback: remtis ES reguliaciniu kontekstu
+  scope: all
+  reason: '`FDA` yra JAV reguliatorius ir negali būti rodomas kaip LT/EU norminis standartas.'
+  source_ref: ''
+  notes: Palikti tik originalo kontekstui, jei to reikia.
+- source_term: '911'
+  jurisdiction: us
+  replacement_mode: omit_nontransferable
+  local_lt: taikyti Lietuvos vietinius skubios pagalbos aktyvavimo numerius ir procedūras
+  eu_fallback: taikyti vietinį organizacinį kontekstą
+  scope: all
+  reason: JAV skubios pagalbos aktyvavimo numeris negali būti paliktas kaip LT praktikos dalis.
+  source_ref: ''
+  notes: Nepalikti pagrindiniame LT tekste.
+source_jurisdiction_signals:
+- source_term: CMI
+  jurisdiction: australia
+  signal_type: reference tool
+  match_mode: regex
+  pattern: \bCMI\b
+  notes: Australian patient leaflet acronym.
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+- source_term: NHS
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: regex
+  pattern: \b(?:NHS|National Health Service)\b
+  notes: UK health service context.
+- source_term: ReSPECT
+  jurisdiction: uk
+  signal_type: law
+  match_mode: regex
+  pattern: \bReSPECT\b
+  notes: UK treatment escalation / resuscitation framework.
+- source_term: DNACPR
+  jurisdiction: uk
+  signal_type: law
+  match_mode: regex
+  pattern: \bDNACPR\b
+  notes: UK resuscitation legal framework.
+localization_decisions:
+- source_term: CMI
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Santrumpų žodyne palikti originalų `Combined Mechanical Injury` išskleidimą, o LT
+    kanoninį atitikmenį spręsti tik verčiant dubens traumos skyrių.
+  source_ref: '`c1DC.xhtml`; `shared/localization/localization_overrides.tsv`'
+  notes: Bendras repo signalas čia duoda klaidingą rinkos atitikmenį, todėl šiai knygai taikomas aiškus
+    originalo konteksto blokavimas.
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip originalaus leidinio ir JK gairių sistemos santrumpą.
+  source_ref: '`shared/localization/localization_overrides.tsv`'
+  notes: Nenaudoti kaip LT norminio autoriteto.
+- source_term: NHS
+  replacement_mode: omit_nontransferable
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste nevartoti kaip vietinio sistemos standarto; prireikus aiškinti
+    tik kaip JK sveikatos sistemos kontekstą.
+  source_ref: '`shared/localization/localization_overrides.tsv`'
+  notes: Organizacinis kontekstas, ne LT norminis terminas.
+- source_term: ReSPECT
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip originalo dokumento pavadinimą / JK planavimo sistemos santrumpą.
+  source_ref: '`shared/localization/localization_overrides.tsv`'
+  notes: Nenaudoti kaip LT teisinio ar klinikinio atitikmens.
+- source_term: DNACPR
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Palikti tik kaip JK dokumentavimo mechanizmo santrumpą.
+  source_ref: '`shared/localization/localization_overrides.tsv`'
+  notes: Nenaudoti kaip LT sprendimų dėl gaivinimo apimties termino.
+style_hotspots: []
+gold_examples: []
+term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates:
+- candidate_id: 006-list-of-abbreviations-acronym-abcde
+  candidate_kind: acronym
+  source_term: ABCDE
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| ABCDE | A – Airway |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-abd
+  candidate_kind: acronym
+  source_term: ABD
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| AAA | Abdominal Aortic Aneurysm |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-adrt
+  candidate_kind: acronym
+  source_term: ADRT
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| ADRT | Advance Decision to Refuse Treatment |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-apc
+  candidate_kind: acronym
+  source_term: APC
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| APC | Antero-Posterior Compression |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-atmist
+  candidate_kind: acronym
+  source_term: ATMIST
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| ATMIST | A – Age |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-avpu
+  candidate_kind: acronym
+  source_term: AVPU
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| AVPU | A – Alert |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-bg
+  candidate_kind: acronym
+  source_term: BG
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| BG | Blood Glucose |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-bia
+  candidate_kind: acronym
+  source_term: BIA
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| BIA | Best Interest Assessors |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-bm
+  candidate_kind: acronym
+  source_term: BM
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| BM | Stick Measures blood sugar |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-bmi
+  candidate_kind: acronym
+  source_term: BMI
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| BMI | Body mass index |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-bp
+  candidate_kind: acronym
+  source_term: BP
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| BP | Blood Pressure |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-br
+  candidate_kind: acronym
+  source_term: BR
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '# Chapter 6 List of Abbreviations'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-btcs
+  candidate_kind: acronym
+  source_term: BTCS
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| BTCS | Bilateral Tonic-Clonic Seizures |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-bvm
+  candidate_kind: acronym
+  source_term: BVM
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| BVM | Bag-Valve-Mask |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-cbrne
+  candidate_kind: acronym
+  source_term: CBRNE
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CBRNE | Chemical, Biological, Radiological, Nuclear and Explosive |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-ccs
+  candidate_kind: acronym
+  source_term: CCS
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CCS | Central Cord Syndrome |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-cew
+  candidate_kind: acronym
+  source_term: CEW
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CEW | Controlled Electrical Weapon |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-cfr
+  candidate_kind: acronym
+  source_term: CFR
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CFR | Community first responder |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-cmht
+  candidate_kind: acronym
+  source_term: CMHT
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CMHT | Community Mental Health Team |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-cop
+  candidate_kind: acronym
+  source_term: COP
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| COP | Code of Practice |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-cpn
+  candidate_kind: acronym
+  source_term: CPN
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CPN | Community Psychiatric Nurse |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-cpp
+  candidate_kind: acronym
+  source_term: CPP
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CPP | Cerebral Perfusion Pressure |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-cpr
+  candidate_kind: acronym
+  source_term: CPR-
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CPR-IC | CPR-induced consciousness |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-cpr-ic
+  candidate_kind: acronym
+  source_term: CPR-IC
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CPR-IC | CPR-induced consciousness |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-crt
+  candidate_kind: acronym
+  source_term: CRT
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CRT | Capillary Refill Test |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-csa
+  candidate_kind: acronym
+  source_term: CSA
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CSA | Child Sexual Abuse |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-cse
+  candidate_kind: acronym
+  source_term: CSE
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CSE | Child Sexual Exploitation |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-dbs
+  candidate_kind: acronym
+  source_term: DBS
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| DBS | Disclosure and Barring Service |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-dpa
+  candidate_kind: acronym
+  source_term: DPA
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| DPA | Data Protection Act |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-edd
+  candidate_kind: acronym
+  source_term: EDD
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| EDD | Estimated Date of Delivery |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-eoc
+  candidate_kind: acronym
+  source_term: EOC
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| EOC | Emergency Operations Centre |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-fast
+  candidate_kind: acronym
+  source_term: FAST
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| FAST | F – Face |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-fgm
+  candidate_kind: acronym
+  source_term: FGM
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| FGM | Female genital mutilation |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-fii
+  candidate_kind: acronym
+  source_term: FII
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| FII | Fabricated or Induced Illness |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-flacc
+  candidate_kind: acronym
+  source_term: FLACC
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| FLACC | F – Face |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-gbs
+  candidate_kind: acronym
+  source_term: GBS
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| GBS | Group B Strep Infection |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-gcs
+  candidate_kind: acronym
+  source_term: GCS
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| GCS | Glasgow Coma Scale |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-gdpr
+  candidate_kind: acronym
+  source_term: GDPR
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| GDPR | General Data Protection Regulations 2018 |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-gp
+  candidate_kind: acronym
+  source_term: GP
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| GP | General Practitioner |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-gum
+  candidate_kind: acronym
+  source_term: GUM
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| GUM | Genito-urinary medicine |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-hart
+  candidate_kind: acronym
+  source_term: HART
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| HART | Hazardous Area Response Team |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-hme
+  candidate_kind: acronym
+  source_term: HME
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| HME | Heat moisture exchanger |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-hr
+  candidate_kind: acronym
+  source_term: HR
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| COPD | Chronic Obstructive Pulmonary Disease |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-icd
+  candidate_kind: acronym
+  source_term: ICD
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| ICD | International Classification of Diseases |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-ice
+  candidate_kind: acronym
+  source_term: ICE
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '|  | V – Responds to voice |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-imca
+  candidate_kind: acronym
+  source_term: IMCA
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| IMCA | Independent Mental Capacity Advocates |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-ipap
+  candidate_kind: acronym
+  source_term: IPAP
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| BiPAP | Bilevel Positive Pressure Ventilation |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-itu
+  candidate_kind: acronym
+  source_term: ITU
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| DM | Diabetes Mellitus |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-iv
+  candidate_kind: acronym
+  source_term: IV
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| ADHD | Attention Deficit Hyperactivity Disorder |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-lmp
+  candidate_kind: acronym
+  source_term: LMP
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| LMP | Last Menstrual Period |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-loc
+  candidate_kind: acronym
+  source_term: LOC
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| ALoC | Altered level of consciousness |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-lpa
+  candidate_kind: acronym
+  source_term: LPA
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| LPA | Lasting Power of Attorney |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-mbrrace
+  candidate_kind: acronym
+  source_term: MBRRACE
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| MBRRACE | Mothers and Babies: Reducing Risk through Audits and Confidential Enquiries
+    |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-mca
+  candidate_kind: acronym
+  source_term: MCA
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| IMCA | Independent Mental Capacity Advocates |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-mecc
+  candidate_kind: acronym
+  source_term: MECC
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| MECC | Making Every Contact Count |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-mha
+  candidate_kind: acronym
+  source_term: MHA
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| MHA | Mental Health Act |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-minap
+  candidate_kind: acronym
+  source_term: MINAP
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| MINAP | Myocardial Ischaemia National Audit Project |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-moi
+  candidate_kind: acronym
+  source_term: MOI
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| HME | Heat moisture exchanger |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-msc
+  candidate_kind: acronym
+  source_term: MSC
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| MSC | M – Motor |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-mtc
+  candidate_kind: acronym
+  source_term: MTC
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| MTC | Major Trauma Centre |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-naru
+  candidate_kind: acronym
+  source_term: NARU
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| NARU | National Ambulance Resilience Unit |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-neet
+  candidate_kind: acronym
+  source_term: NEET
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| NEET | Not in Education, Employment or Training |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-nice
+  candidate_kind: acronym
+  source_term: NICE
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| NICE | National Institute for Health and Care Excellence |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-npa
+  candidate_kind: acronym
+  source_term: NPA
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| NPA | Nasopharyngeal airway |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-npis
+  candidate_kind: acronym
+  source_term: NPIS
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| NPIS | National Poisons Information Service |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-nsaid
+  candidate_kind: acronym
+  source_term: NSAID
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| NSAID | Non-Steroidal Anti-inflammatory Drug |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-ooh
+  candidate_kind: acronym
+  source_term: OOH
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| OOH | Out of Hours |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-pco
+  candidate_kind: acronym
+  source_term: PCO
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| PCO 2 | Measure of the Partial Pressure of Carbon dioxide |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-pefr
+  candidate_kind: acronym
+  source_term: PEFR
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| PEFR | Peak Expiratory Flow Rate |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-phecg
+  candidate_kind: acronym
+  source_term: PHECG
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| PHECG | Pre-hospital 12-lead electrocardiogram |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-ppci
+  candidate_kind: acronym
+  source_term: PPCI
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| PPCI | Primary Percutaneous Coronary Intervention |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-ppe
+  candidate_kind: acronym
+  source_term: PPE
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| PPE | Personal Protective Equipment |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-pph
+  candidate_kind: acronym
+  source_term: PPH
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| PPH | Post-Partum Haemorrhage |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-press
+  candidate_kind: acronym
+  source_term: PRESS
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| APC | Antero-Posterior Compression |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-psp
+  candidate_kind: acronym
+  source_term: PSP
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| PSP | Patient specific protocol |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-pv
+  candidate_kind: acronym
+  source_term: PV
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| HPV | Human papillomavirus |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-role
+  candidate_kind: acronym
+  source_term: ROLE
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| ROLE | Recognition Of Life Extinct |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-rr
+  candidate_kind: acronym
+  source_term: RR
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| AC | Alternating Current |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-rtc
+  candidate_kind: acronym
+  source_term: RTC
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| RTC | Road Traffic Collision |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-rvp
+  candidate_kind: acronym
+  source_term: RVP
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| RVP | Rendezvous Point(s) |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-sarc
+  candidate_kind: acronym
+  source_term: SARC
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| SARC | Sexual Assault Referral Centre |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-sbar
+  candidate_kind: acronym
+  source_term: SBAR
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| SBAR | S – Situation |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-sbp
+  candidate_kind: acronym
+  source_term: SBP
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| SBP | Systolic Blood Pressure |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-scene
+  candidate_kind: acronym
+  source_term: SCENE
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| SCENE | S – Safety |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-sga
+  candidate_kind: acronym
+  source_term: SGA
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| SGA | Supraglottic airway |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-sob
+  candidate_kind: acronym
+  source_term: SOB
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| SOB | Shortness of breath |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-soboe
+  candidate_kind: acronym
+  source_term: SOBOE
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| SOBOE | Shortness of breath on exertion |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-socrates
+  candidate_kind: acronym
+  source_term: SOCRATES
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| SOCRATES | S – Site |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-sop
+  candidate_kind: acronym
+  source_term: SOP
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| NPA | Nasopharyngeal airway |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-sort
+  candidate_kind: acronym
+  source_term: SORT
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| SORT | Special Operations Response Team |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-tarn
+  candidate_kind: acronym
+  source_term: TARN
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| TARN | Trauma Audit Research Network |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-tbsa
+  candidate_kind: acronym
+  source_term: TBSA
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| TBSA | Total Body Surface Area |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-urti
+  candidate_kind: acronym
+  source_term: URTI
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| URTI | Upper Respiratory Tract Infection |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-uti
+  candidate_kind: acronym
+  source_term: UTI
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| FGM | Female genital mutilation |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-vs
+  candidate_kind: acronym
+  source_term: VS
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| HVS | Hyperventilation Syndrome |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-acronym-who
+  candidate_kind: acronym
+  source_term: WHO
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| WHO | World Health Organisation |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 006-list-of-abbreviations-term-co-2
+  candidate_kind: term
+  source_term: CO 2
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| CO 2 | Carbon dioxide |'
+  proposed_lt: anglies dioksidas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: https://lsmu.lt/cris/entities/publication/e5a911d6-1ebd-4643-93f6-60ea04d99c77
+  notes: Source formatuotėje yra tarpas, bet LT sprendimas šiame skyriuje jau užrakintas kaip `anglies
+    dioksidas`; į shared termbase atskiro termino nepromuoti.
+- candidate_id: 006-list-of-abbreviations-term-etco-2
+  candidate_kind: term
+  source_term: EtCO 2
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| EtCO 2 | Exhaled (end-tidal) carbon dioxide |'
+  proposed_lt: iškvepiamo oro anglies dioksidas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1744181951/27435/24-03_SAM%2520VEIKLOS%2520ATASKAITA_final.pdf
+  notes: Source formatuotėje yra tarpas, bet LT sprendimas šiame skyriuje jau užrakintas kaip `iškvepiamo
+    oro anglies dioksidas`.
+- candidate_id: 006-list-of-abbreviations-term-list-of-abbreviations
+  candidate_kind: term
+  source_term: List of Abbreviations
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '# Chapter 6 List of Abbreviations'
+  proposed_lt: Santrumpų sąrašas
+  status: localization_only
+  scope: book
+  candidate_origin: source_heading
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Skyriaus pavadinimo lokalizacija užrakinta LT faile; į shared terminų bazę nepromuoti.
+- candidate_id: 006-list-of-abbreviations-term-o-2
+  candidate_kind: term
+  source_term: O 2
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| O 2 | Oxygen |'
+  proposed_lt: deguonis
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Source formatuotėje yra tarpas, bet tai cheminio elemento žyma; LT faile lokalizuota kaip `deguonis`.
+- candidate_id: 006-list-of-abbreviations-term-pco-2
+  candidate_kind: term
+  source_term: PCO 2
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| PCO 2 | Measure of the Partial Pressure of Carbon dioxide |'
+  proposed_lt: dalinis anglies dioksido slėgis
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Šiame skyriuje vartojama kaip parametro išskleistis; LT faile lokalizuota aprašomąja forma.
+- candidate_id: 006-list-of-abbreviations-term-spo-2
+  candidate_kind: term
+  source_term: SpO 2
+  source_expansion: ''
+  chapter_slug: 006-list-of-abbreviations
+  source_context: '| SpO 2 | Oxygen Saturation Measured With Pulse Oximeter |'
+  proposed_lt: deguonies įsotinimas, matuojamas pulsoksimetru
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: Source formatuotėje yra tarpas, bet LT sprendimas šiame skyriuje užrakintas kaip `deguonies įsotinimas,
+    matuojamas pulsoksimetru`.
