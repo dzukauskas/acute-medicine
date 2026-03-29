@@ -181,7 +181,7 @@ The glossary of terms listed below is designed to assist reading ease and is NOT
 | MECC | Making Every Contact Count |
 | mg | Milligram |
 | MHA | Mental Health Act |
-| Ml | Myocardial Infarction |
+| MI | Myocardial Infarction |
 | MINAP | Myocardial Ischaemia National Audit Project |
 | ml | Millilitre |
 | mmHG | Millimetres of Mercury |
