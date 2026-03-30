@@ -1,0 +1,44 @@
+name: Python Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install zsh
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zsh
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-dev.txt
+
+      - name: Run focused unittest suite
+        run: |
+          python -m unittest \
+            tests.test_workflow_runtime \
+            tests.test_obsidian_sync_safety \
+            tests.test_refresh_template_runtime \
+            tests.test_shell_entrypoints \
+            tests.test_portable_canonical_artifacts \
+            tests.test_run_chapter_qa \
+            tests.test_validate_adjudication_resolution \
+            tests.test_end_to_end_workflow_contract \
+            tests.test_pdf_bootstrap_runtime \
+            tests.test_epub_bootstrap_runtime \
+            tests.test_epub_bootstrap_and_figures

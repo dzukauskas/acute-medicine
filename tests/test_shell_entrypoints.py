@@ -196,6 +196,7 @@ exit 0
                 self.copy_script(repo_root, name)
             self.write(repo_root / "Brewfile", "brew \"ripgrep\"\n")
             self.write(repo_root / "requirements.txt", "beautifulsoup4==4.14.2\n")
+            self.write(repo_root / "requirements-dev.txt", "-r requirements.txt\n")
             self.write(repo_root / "codex" / "skills" / "sample-skill" / "SKILL.md", "# Sample skill\n")
 
             self.write_executable(
@@ -276,13 +277,14 @@ exit 1
             self.assertIn("npm:install -g @sylphx/pdf-reader-mcp", log_lines)
             self.assertIn(f"python3:-m venv {repo_root / '.venv'}", log_lines)
             self.assertIn("pip:install --upgrade pip", log_lines)
-            self.assertIn(f"pip:install -r {repo_root / 'requirements.txt'}", log_lines)
+            self.assertIn(f"pip:install -r {repo_root / 'requirements-dev.txt'}", log_lines)
             self.assertIn("venv-python:-m playwright install chromium", log_lines)
             self.assertIn("venv-python:-c import fitz", log_lines)
             self.assertIn("codex:mcp add context7 --url https://mcp.context7.com/mcp", log_lines)
             installed_skill = home_dir / ".codex" / "skills" / "sample-skill" / "SKILL.md"
             self.assertTrue(installed_skill.exists())
             self.assertIn("Bootstrap complete.", result.stdout)
+            self.assertIn(".venv/bin/python -m unittest tests.test_end_to_end_workflow_contract", result.stdout)
 
 
 if __name__ == "__main__":

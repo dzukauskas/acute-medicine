@@ -76,10 +76,10 @@ cd "/Users/<username>/Projects/Acute Medicine"
 - įdiegia `Homebrew` paketus iš `Brewfile`;
 - įdiegia `Codex`, jei jo dar nėra;
 - sukuria `.venv`;
-- įdiegia Python priklausomybes iš `requirements.txt`;
+- įdiegia Python priklausomybes iš `requirements-dev.txt`;
 - įrašo repo custom skillus į `~/.codex/skills`;
 - sukonfigūruoja pagrindinius MCP serverius;
-- nekuria jokio book-specific sync agento, nes jis dabar kuriamas bootstrap'inant konkrečią knygą.
+- nekuria jokio book-specific sync agento; jis diegiamas tik eksplicitiškai per `--install-obsidian-sync` arba `scripts/install_obsidian_sync_agent.sh`.
 
 ## Po bootstrap ranka padaryk dar šiuos veiksmus
 
@@ -208,14 +208,27 @@ python3 scripts/print_codex_resume_prompt.py --mode engineering
 
 Ji įrašyta į:
 
-- `requirements.txt`
+- `requirements-dev.txt`
 
-Po `requirements.txt` įdiegimo bootstrap skriptas papildomai įrašo ir `Chromium`, nes jis reikalingas `Whimsical` render skriptui.
+Po `requirements-dev.txt` įdiegimo bootstrap skriptas papildomai įrašo ir `Chromium`, nes jis reikalingas `Whimsical` render skriptui.
 
 PDF bootstrap šiame repo yra `PyMuPDF-first`. Praktikoje tai reiškia:
 
 - `PyMuPDF` turi būti repo `.venv`;
 - paleidus `python3 scripts/bootstrap_book_from_pdf.py ...`, skriptas pats persijungs į `.venv`, jei sistemos interpreteryje `fitz` nėra.
+
+## Verification entrypoint
+
+Supported repo-native smoke / contract patikra naujai mašinai:
+
+```bash
+.venv/bin/python -m unittest \
+  tests.test_workflow_runtime \
+  tests.test_obsidian_sync_safety \
+  tests.test_end_to_end_workflow_contract
+```
+
+Tai minimali dokumentuoto bootstrap kelio verifikacija. Platesni prieš-commit rinkiniai gali būti leidžiami papildomai, bet ši komanda turi veikti be papildomo neaprašyto setup.
 
 ## Ko nerekomenduojama kopijuoti iš seno Mac
 

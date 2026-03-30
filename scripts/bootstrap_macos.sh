@@ -23,7 +23,7 @@ fi
 
 python3 -m venv "$REPO_ROOT/.venv"
 "$REPO_ROOT/.venv/bin/pip" install --upgrade pip
-"$REPO_ROOT/.venv/bin/pip" install -r "$REPO_ROOT/requirements.txt"
+"$REPO_ROOT/.venv/bin/pip" install -r "$REPO_ROOT/requirements-dev.txt"
 "$REPO_ROOT/.venv/bin/python" -m playwright install chromium
 "$REPO_ROOT/.venv/bin/python" -c "import fitz"
 
@@ -37,4 +37,5 @@ echo "  1. Run: codex login"
 echo "  2. Run: gh auth login"
 echo "  3. Open Whimsical desktop and sign in."
 echo "  4. Run: .venv/bin/python scripts/render_whimsical_figure.py --login"
-echo "  5. Bootstrap a concrete book workspace with scripts/bootstrap_book_from_pdf.py"
+echo "  5. Run: .venv/bin/python -m unittest tests.test_end_to_end_workflow_contract"
+echo "  6. Bootstrap a concrete book workspace with scripts/bootstrap_book_from_pdf.py"
