@@ -135,3 +135,43 @@ MEDBOOK_ROOT=books/<slug> scripts/sync_obsidian_book.sh
 
 Pagal nutylėjimą šie skriptai aktyvias taisykles krauna iš `shared/` ir, jei tokie yra, iš `books/<slug>/*.local.tsv`.
 Obsidian sync nekeičia repo `lt/chapters/` struktūros, bet vault pusėje gali sugrupuoti skyrius į navigacinius `Section` aplankus pagal `source/index/chapters.json`.
+
+## Codex thread continuity
+
+`Codex` app thread istorija šiame repo nelaikoma kanonine atmintimi. Tačiau svarbu atskirti du režimus:
+
+- knygos vertimas: `docs/book-translation-workflow.md`
+- repo / sistemos tobulinimas: `docs/repo-engineering-workflow.md`
+
+Repo-engineering režime pagrindinė ilgalaikė būsena turi būti laikoma:
+
+- `ENGINEERING_LEDGER.md`
+
+Jei darbas tęsis naujame thread ar naujame worktree, pirmiausia atnaujinkite ledger:
+
+```bash
+python3 scripts/update_engineering_ledger.py \
+  --theme "Current engineering theme" \
+  --summary "Trumpa aktyvios temos santrauka." \
+  --next-step "Pirmas konkretus žingsnis kitam thread."
+```
+
+Tik jei reikia papildomo lokalaus scratchpad, naudokite `handoffs/`:
+
+```bash
+python3 scripts/write_codex_handoff.py \
+  --title "Chapter 011 terminology blocker" \
+  --book-root books/<slug> \
+  --goal "Užbaigti blocker'ius prieš drafting." \
+  --next-step "Vėl paleisti build_chapter_pack.py 011."
+```
+
+Detalesnis operating modelis aprašytas:
+
+- `docs/codex-workflow.md`
+- `docs/book-translation-workflow.md`
+- `docs/repo-engineering-workflow.md`
+- `ENGINEERING_LEDGER.md`
+- `handoffs/README.md`
+
+`handoffs/*.md` nėra pakaitalas `research`, `chapter_pack`, `term_candidates.tsv`, QA artefaktams ar `ENGINEERING_LEDGER.md`. Jie skirti tik trumpalaikėms vietinėms pastaboms.

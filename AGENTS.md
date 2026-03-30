@@ -39,3 +39,14 @@ Working style:
 - Advance chapter by chapter in order unless the user explicitly reprioritizes.
 - Keep research, term triage, and QA green before moving on.
 - If a translated chapter drifts too far from the original wording or structure, rewrite it toward the source rather than defending the localization.
+- Treat book translation and repo engineering as separate workflows; use `docs/book-translation-workflow.md` for chapter work and `docs/repo-engineering-workflow.md` for system/tooling work.
+- The agent should proactively decide whether the current request belongs in the same Codex thread or should start a new one, and state that recommendation briefly when a task boundary changes.
+- Default thread routing:
+  - same chapter or same blocker cluster in translation work -> stay in the same thread;
+  - same technical theme in repo-engineering work -> stay in the same thread;
+  - switching translation <-> repo engineering -> recommend a new thread;
+  - switching to a different technical theme in repo-engineering work -> usually recommend a new thread;
+  - use `Hand off` only when parallel worktree / branch isolation is actually useful.
+- For repo-engineering work, keep `ENGINEERING_LEDGER.md` as the primary long-lived execution memory and update it when decisions or next steps materially change.
+- When resuming repo-engineering work, read `ENGINEERING_LEDGER.md` before relying on thread history.
+- Treat `handoffs/*.md` only as optional local scratch notes; they are not the primary or guaranteed cross-worktree memory mechanism.

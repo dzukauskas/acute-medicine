@@ -158,6 +158,35 @@ Jis konfigūruoja:
 - `playwright`
 - `whimsical-desktop`
 
+## Codex thread continuity
+
+Po bootstrap naujame Mac naudok repo-level `Codex` operating modelį:
+
+- `docs/codex-workflow.md`
+- `docs/book-translation-workflow.md`
+- `docs/repo-engineering-workflow.md`
+- `ENGINEERING_LEDGER.md`
+- `handoffs/README.md`
+
+Jei tęsiamas repo-engineering darbas kitame `Codex` thread ar naujame worktree, pirmiausia atnaujink `ENGINEERING_LEDGER.md`:
+
+```bash
+python3 scripts/update_engineering_ledger.py \
+  --theme "Current engineering theme" \
+  --summary "Trumpai įvardyk, ką tiksliai reikia tęsti." \
+  --next-step "Pirmas konkretus žingsnis naujam thread."
+```
+
+Tik jei dar reikia papildomo lokalaus scratchpad, sugeneruok `handoff`:
+
+```bash
+python3 scripts/write_codex_handoff.py \
+  --title "Current task handoff" \
+  --book-root books/<slug> \
+  --goal "Trumpai įvardyk, ką tiksliai reikia tęsti." \
+  --next-step "Pirmas konkretus žingsnis naujam thread."
+```
+
 ## Python priklausomybės
 
 Šiam repo šiuo metu būtina bent:
