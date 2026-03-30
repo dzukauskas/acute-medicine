@@ -1,7 +1,7 @@
 # Research checklist for 010-consent-in-pre-hospital-care
 
-- Angliškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/010-consent-in-pre-hospital-care.md`
-- Research failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/research/010-consent-in-pre-hospital-care.md`
+- Angliškas failas: `source/chapters-en/010-consent-in-pre-hospital-care.md`
+- Research failas: `research/010-consent-in-pre-hospital-care.md`
 - Skyriaus tipas: `jurisdikciškai jautrus / lokalizacinis`
 - Aptikti norminių claim tipai: `nenustatyta`
 - Aptikti jurisdikciniai signalai: `JRCALC`

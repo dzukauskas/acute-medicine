@@ -1,7 +1,7 @@
 # Research checklist for 003-guideline-developers-and-contributors
 
-- Angliškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/003-guideline-developers-and-contributors.md`
-- Research failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/research/003-guideline-developers-and-contributors.md`
+- Angliškas failas: `source/chapters-en/003-guideline-developers-and-contributors.md`
+- Research failas: `research/003-guideline-developers-and-contributors.md`
 - Skyriaus tipas: `jurisdikciškai jautrus / lokalizacinis`
 - Aptikti norminių claim tipai: `nenustatyta`
 - Aptikti jurisdikciniai signalai: `JRCALC, NHS`

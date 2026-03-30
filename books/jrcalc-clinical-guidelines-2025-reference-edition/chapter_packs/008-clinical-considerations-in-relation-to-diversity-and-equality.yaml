@@ -1,8 +1,8 @@
 chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
 chapter_title: 8 skyrius. Klinikiniai aspektai, susiję su įvairove ir lygiomis galimybėmis
 page_range: EPUB segmentas c2RJ.xhtml
-source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/008-clinical-considerations-in-relation-to-diversity-and-equality.md
-lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/008-clinical-considerations-in-relation-to-diversity-and-equality.md
+source_md: source/chapters-en/008-clinical-considerations-in-relation-to-diversity-and-equality.md
+lt_target_md: lt/chapters/008-clinical-considerations-in-relation-to-diversity-and-equality.md
 blocks:
 - block_id: narrative-01-clinical-considerations-in-relation-to-diversity-and-equality
   block_type: narrative
@@ -1539,7 +1539,7 @@ style_hotspots:
     bet papildomai aiškiai pripažįstama, kad klinikinėje praktikoje gali būti ir kitų lytinių tapatybių
     pacientų.
 gold_examples: []
-term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates_path: term_candidates.tsv
 term_candidates:
 - candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-afab
   candidate_kind: acronym

@@ -1,7 +1,7 @@
 # Research checklist for 006-list-of-abbreviations
 
-- Angliškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/006-list-of-abbreviations.md`
-- Research failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/research/006-list-of-abbreviations.md`
+- Angliškas failas: `source/chapters-en/006-list-of-abbreviations.md`
+- Research failas: `research/006-list-of-abbreviations.md`
 - Skyriaus tipas: `jurisdikciškai jautrus / lokalizacinis`
 - Aptikti norminių claim tipai: `nenustatyta`
 - Aptikti jurisdikciniai signalai: `CMI, JRCALC, NHS, ReSPECT, DNACPR`

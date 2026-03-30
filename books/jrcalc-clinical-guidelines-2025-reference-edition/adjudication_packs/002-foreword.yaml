@@ -1,8 +1,8 @@
 chapter_slug: 002-foreword
-chapter_pack: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/chapter_packs/002-foreword.yaml
-source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/002-foreword.md
-lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/002-foreword.md
-scaffold: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/adjudication_scaffold.md
+chapter_pack: chapter_packs/002-foreword.yaml
+source_md: source/chapters-en/002-foreword.md
+lt_target_md: lt/chapters/002-foreword.md
+scaffold: adjudication_scaffold.md
 candidates:
 - block_id: narrative-01-foreword
   block_type: narrative

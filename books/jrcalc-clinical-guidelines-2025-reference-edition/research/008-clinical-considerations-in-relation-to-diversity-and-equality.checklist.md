@@ -1,7 +1,7 @@
 # Research checklist for 008-clinical-considerations-in-relation-to-diversity-and-equality
 
-- Angliškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/008-clinical-considerations-in-relation-to-diversity-and-equality.md`
-- Research failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/research/008-clinical-considerations-in-relation-to-diversity-and-equality.md`
+- Angliškas failas: `source/chapters-en/008-clinical-considerations-in-relation-to-diversity-and-equality.md`
+- Research failas: `research/008-clinical-considerations-in-relation-to-diversity-and-equality.md`
 - Skyriaus tipas: `mišrus norminis / lokalizacinis`
 - Aptikti norminių claim tipai: `algorithm_step, legal_scope, market_availability`
 - Aptikti jurisdikciniai signalai: `JRCALC, NHS, HCPC, ReSPECT, NEWS2`

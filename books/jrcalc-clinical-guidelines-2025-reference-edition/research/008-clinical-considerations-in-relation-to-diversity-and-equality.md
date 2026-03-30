@@ -2,9 +2,9 @@
 
 - Puslapiai: EPUB segmentas `c2RJ.xhtml`
 - Šaltinio segmentai: `c2RJ.xhtml`
-- Originalo failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
-- Angliškas pagalbinis failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/008-clinical-considerations-in-relation-to-diversity-and-equality.md`
-- Lietuviškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/008-clinical-considerations-in-relation-to-diversity-and-equality.md`
+- Originalo failas: `source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
+- Angliškas pagalbinis failas: `source/chapters-en/008-clinical-considerations-in-relation-to-diversity-and-equality.md`
+- Lietuviškas failas: `lt/chapters/008-clinical-considerations-in-relation-to-diversity-and-equality.md`
 
 ## Source inventorius
 

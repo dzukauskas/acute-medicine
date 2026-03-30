@@ -1,8 +1,8 @@
 chapter_slug: 002-foreword
 chapter_title: 2 skyrius. Pratarmė
 page_range: EPUB segmentas c7Z.xhtml
-source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/002-foreword.md
-lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/002-foreword.md
+source_md: source/chapters-en/002-foreword.md
+lt_target_md: lt/chapters/002-foreword.md
 blocks:
 - block_id: narrative-01-foreword
   block_type: narrative
@@ -191,5 +191,5 @@ style_hotspots:
 - category: local_practice_change
   text: JK institucinių pavadinimų svoris sumažintas ir perkeltas į Originalo kontekstas.
 gold_examples: []
-term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates_path: term_candidates.tsv
 term_candidates: []

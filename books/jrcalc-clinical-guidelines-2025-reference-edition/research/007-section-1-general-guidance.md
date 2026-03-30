@@ -2,9 +2,9 @@
 
 - Puslapiai: EPUB segmentas `c2R8.xhtml`
 - Šaltinio segmentai: `c2R8.xhtml`
-- Originalo failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
-- Angliškas pagalbinis failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/007-section-1-general-guidance.md`
-- Lietuviškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/007-section-1-general-guidance.md`
+- Originalo failas: `source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
+- Angliškas pagalbinis failas: `source/chapters-en/007-section-1-general-guidance.md`
+- Lietuviškas failas: `lt/chapters/007-section-1-general-guidance.md`
 
 ## Source inventorius
 

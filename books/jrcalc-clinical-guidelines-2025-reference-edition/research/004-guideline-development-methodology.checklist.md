@@ -1,7 +1,7 @@
 # Research checklist for 004-guideline-development-methodology
 
-- Angliškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/004-guideline-development-methodology.md`
-- Research failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/research/004-guideline-development-methodology.md`
+- Angliškas failas: `source/chapters-en/004-guideline-development-methodology.md`
+- Research failas: `research/004-guideline-development-methodology.md`
 - Skyriaus tipas: `mišrus norminis / lokalizacinis`
 - Aptikti norminių claim tipai: `monitoring`
 - Aptikti jurisdikciniai signalai: `JRCALC`

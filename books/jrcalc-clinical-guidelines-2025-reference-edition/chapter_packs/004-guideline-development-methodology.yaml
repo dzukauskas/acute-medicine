@@ -1,8 +1,8 @@
 chapter_slug: 004-guideline-development-methodology
 chapter_title: 4 skyrius. Gairių rengimo metodika
 page_range: EPUB segmentas cMD.xhtml
-source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/004-guideline-development-methodology.md
-lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/004-guideline-development-methodology.md
+source_md: source/chapters-en/004-guideline-development-methodology.md
+lt_target_md: lt/chapters/004-guideline-development-methodology.md
 blocks:
 - block_id: narrative-01-guideline-development-methodology
   block_type: narrative
@@ -245,7 +245,7 @@ style_hotspots:
 - category: local_practice_change
   text: Ceremoninis ir organizacinis originalo tonas sutrumpintas iki aiškios LT metodologinės santraukos.
 gold_examples: []
-term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates_path: term_candidates.tsv
 term_candidates:
 - candidate_id: 004-guideline-development-methodology-acronym-aace
   candidate_kind: acronym

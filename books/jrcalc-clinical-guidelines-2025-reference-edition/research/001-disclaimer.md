@@ -2,9 +2,9 @@
 
 - Puslapiai: EPUB segmentas `c76.xhtml`
 - Šaltinio segmentai: `c76.xhtml`
-- Originalo failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
-- Angliškas pagalbinis failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/001-disclaimer.md`
-- Lietuviškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/001-disclaimer.md`
+- Originalo failas: `source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
+- Angliškas pagalbinis failas: `source/chapters-en/001-disclaimer.md`
+- Lietuviškas failas: `lt/chapters/001-disclaimer.md`
 
 ## Source inventorius
 
@@ -148,8 +148,8 @@
 
 ## Chapter pack ir review kilpa
 
-- Sugeneruotas `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/chapter_packs/001-disclaimer.yaml`.
-- Sugeneruotas `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/adjudication_packs/001-disclaimer.yaml`.
+- Sugeneruotas `chapter_packs/001-disclaimer.yaml`.
+- Sugeneruotas `adjudication_packs/001-disclaimer.yaml`.
 - Abiem narrative blokams pasirinktas `hibridinis` sprendimas: išlaikyta disclaimer logika, bet proza perrašyta į natūralesnį LT naudojimo tekstą.
 
 ## Baigiamoji kontrolė

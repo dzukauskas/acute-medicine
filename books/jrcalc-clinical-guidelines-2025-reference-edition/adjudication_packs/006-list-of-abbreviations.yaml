@@ -1,6 +1,6 @@
 chapter_slug: 006-list-of-abbreviations
-chapter_pack: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/chapter_packs/006-list-of-abbreviations.yaml
-source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/006-list-of-abbreviations.md
-lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/006-list-of-abbreviations.md
-scaffold: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/adjudication_scaffold.md
+chapter_pack: chapter_packs/006-list-of-abbreviations.yaml
+source_md: source/chapters-en/006-list-of-abbreviations.md
+lt_target_md: lt/chapters/006-list-of-abbreviations.md
+scaffold: adjudication_scaffold.md
 candidates: []

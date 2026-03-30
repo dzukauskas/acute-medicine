@@ -2,9 +2,9 @@
 
 - Puslapiai: EPUB segmentas `c3ZY.xhtml`
 - Šaltinio segmentai: `c3ZY.xhtml`
-- Originalo failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
-- Angliškas pagalbinis failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/010-consent-in-pre-hospital-care.md`
-- Lietuviškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/010-consent-in-pre-hospital-care.md`
+- Originalo failas: `source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
+- Angliškas pagalbinis failas: `source/chapters-en/010-consent-in-pre-hospital-care.md`
+- Lietuviškas failas: `lt/chapters/010-consent-in-pre-hospital-care.md`
 
 ## Source inventorius
 

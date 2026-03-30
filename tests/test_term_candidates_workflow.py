@@ -255,10 +255,7 @@ class TermCandidateWorkflowTests(unittest.TestCase):
             self.assertEqual(result, 0)
             pack_path = book_root / "chapter_packs" / f"{slug}.yaml"
             pack = yaml.safe_load(pack_path.read_text(encoding="utf-8"))
-            self.assertEqual(
-                Path(pack["term_candidates_path"]).resolve(),
-                (book_root / "term_candidates.tsv").resolve(),
-            )
+            self.assertEqual(pack["term_candidates_path"], "term_candidates.tsv")
             self.assertEqual(len(pack["term_candidates"]), 1)
             self.assertEqual(pack["term_candidates"][0]["source_term"], "Sentinel perfusion window")
             candidate_rows = wr.read_tsv(book_root / "term_candidates.tsv")

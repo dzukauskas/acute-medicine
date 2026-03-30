@@ -5,7 +5,7 @@ import argparse
 import re
 from pathlib import Path
 
-from workflow_book import chapter_paths_for_slug, resolve_chapter_slug
+from workflow_book import book_relative_path, chapter_paths_for_slug, resolve_chapter_slug
 from workflow_markdown import (
     extract_source_structured_items,
     structured_block_id,
@@ -254,6 +254,7 @@ def render_signals_table(signals: list[dict[str, str]]) -> list[str]:
 
 def render_text(
     slug: str,
+    book_root: Path,
     source_path: Path,
     research_path: Path,
     source_text: str,
@@ -270,8 +271,8 @@ def render_text(
     lines: list[str] = [
         f"# Research checklist for {slug}",
         "",
-        f"- Angliškas failas: `{source_path}`",
-        f"- Research failas: `{research_path}`",
+        f"- Angliškas failas: `{book_relative_path(source_path, book_root)}`",
+        f"- Research failas: `{book_relative_path(research_path, book_root)}`",
         f"- Skyriaus tipas: `{chapter_kind(signals, topics)}`",
         f"- Aptikti norminių claim tipai: `{', '.join(topics) if topics else 'nenustatyta'}`",
         f"- Aptikti jurisdikciniai signalai: `{', '.join(signal['source_term'] for signal in signals) if signals else 'nenustatyta'}`",
@@ -355,7 +356,7 @@ def main() -> int:
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(
-        render_text(slug, source_path, research_path, source_text, signals, topics, structured_items),
+        render_text(slug, require_book_root(args.book_root), source_path, research_path, source_text, signals, topics, structured_items),
         encoding="utf-8",
     )
     print(output_path)

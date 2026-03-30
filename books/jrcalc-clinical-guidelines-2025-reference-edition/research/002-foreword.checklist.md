@@ -1,7 +1,7 @@
 # Research checklist for 002-foreword
 
-- Angliškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/002-foreword.md`
-- Research failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/research/002-foreword.md`
+- Angliškas failas: `source/chapters-en/002-foreword.md`
+- Research failas: `research/002-foreword.md`
 - Skyriaus tipas: `mišrus norminis / lokalizacinis`
 - Aptikti norminių claim tipai: `market_availability`
 - Aptikti jurisdikciniai signalai: `JRCALC`

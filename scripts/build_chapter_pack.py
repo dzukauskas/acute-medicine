@@ -6,9 +6,11 @@ import re
 from pathlib import Path
 
 from workflow_book import (
+    book_relative_path,
     chapter_number_from_slug,
     chapter_paths_for_slug,
     dump_yaml,
+    normalize_tracked_artifact_path,
     resolve_chapter_slug,
     scope_allows,
 )
@@ -174,6 +176,7 @@ def parse_args() -> argparse.Namespace:
 
 def load_chapter_context(slug: str) -> dict[str, object]:
     paths = chapter_paths_for_slug(slug)
+    book_root = paths["source"].resolve().parents[2]
     source_text = paths["source"].read_text(encoding="utf-8")
     research_text = paths["research"].read_text(encoding="utf-8")
     lt_text = paths["lt"].read_text(encoding="utf-8") if paths["lt"].exists() else ""
@@ -190,8 +193,16 @@ def load_chapter_context(slug: str) -> dict[str, object]:
         "research_sections": sections,
         "page_range": metadata_value(pre_heading_lines, "Puslapiai")
         or metadata_value(pre_heading_lines, "Šaltinio segmentai"),
-        "source_md": metadata_value(pre_heading_lines, "Angliškas pagalbinis failas") or str(paths["source"]),
-        "lt_target_md": metadata_value(pre_heading_lines, "Lietuviškas failas") or str(paths["lt"]),
+        "source_md": normalize_tracked_artifact_path(
+            metadata_value(pre_heading_lines, "Angliškas pagalbinis failas"),
+            book_root=book_root,
+            fallback=paths["source"],
+        ),
+        "lt_target_md": normalize_tracked_artifact_path(
+            metadata_value(pre_heading_lines, "Lietuviškas failas"),
+            book_root=book_root,
+            fallback=paths["lt"],
+        ),
     }
 def chapter_scope_number(slug: str) -> str:
     return chapter_number_from_slug(slug)
@@ -807,7 +818,7 @@ def main() -> int:
         "localization_decisions": localization_research["decisions"],
         "style_hotspots": build_style_hotspots(inventory),
         "gold_examples": select_gold_examples(slug, blocks),
-        "term_candidates_path": str(term_candidates_path(args.book_root)),
+        "term_candidates_path": book_relative_path(term_candidates_path(args.book_root), args.book_root),
         "term_candidates": term_candidates,
     }
 

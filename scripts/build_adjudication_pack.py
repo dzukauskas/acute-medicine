@@ -5,8 +5,10 @@ import argparse
 from pathlib import Path
 
 from workflow_book import (
+    book_relative_path,
     dump_yaml,
     load_yaml,
+    normalize_tracked_artifact_path,
     resolve_chapter_slug,
 )
 from workflow_policy import load_adjudication_profile_rows
@@ -168,6 +170,7 @@ def is_high_risk(block: dict, pack: dict) -> bool:
 
 def build_pack(slug: str) -> dict[str, object]:
     paths = book_paths()
+    book_root = require_book_root()
     pack_path = paths["chapter_packs"] / f"{slug}.yaml"
     pack = load_yaml(pack_path)
     profiles = load_profiles()
@@ -214,10 +217,10 @@ def build_pack(slug: str) -> dict[str, object]:
 
     return {
         "chapter_slug": slug,
-        "chapter_pack": str(pack_path),
-        "source_md": pack.get("source_md", ""),
-        "lt_target_md": pack.get("lt_target_md", ""),
-        "scaffold": str(paths["scaffold"]),
+        "chapter_pack": book_relative_path(pack_path, book_root),
+        "source_md": normalize_tracked_artifact_path(pack.get("source_md", ""), book_root=book_root),
+        "lt_target_md": normalize_tracked_artifact_path(pack.get("lt_target_md", ""), book_root=book_root),
+        "scaffold": book_relative_path(paths["scaffold"], book_root),
         "candidates": candidates,
     }
 

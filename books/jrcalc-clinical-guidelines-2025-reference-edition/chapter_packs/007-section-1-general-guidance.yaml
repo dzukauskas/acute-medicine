@@ -1,8 +1,8 @@
 chapter_slug: 007-section-1-general-guidance
 chapter_title: 7 skyrius. 1 dalis. Bendrosios gairės
 page_range: EPUB segmentas c2R8.xhtml
-source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/007-section-1-general-guidance.md
-lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/007-section-1-general-guidance.md
+source_md: source/chapters-en/007-section-1-general-guidance.md
+lt_target_md: lt/chapters/007-section-1-general-guidance.md
 blocks:
 - block_id: narrative-01-section-1-general-guidance
   block_type: narrative
@@ -90,7 +90,7 @@ style_hotspots:
   text: 'Struktūrinė antraštė suformuota pagal LT leidybos logiką: 1 dalis. Bendrosios gairės, o ne pažodinis
     Section 1.'
 gold_examples: []
-term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates_path: term_candidates.tsv
 term_candidates:
 - candidate_id: 007-section-1-general-guidance-term-general-guidance
   candidate_kind: term

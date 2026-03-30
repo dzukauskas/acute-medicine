@@ -1,7 +1,7 @@
 # Research checklist for 007-section-1-general-guidance
 
-- Angliškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/007-section-1-general-guidance.md`
-- Research failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/research/007-section-1-general-guidance.md`
+- Angliškas failas: `source/chapters-en/007-section-1-general-guidance.md`
+- Research failas: `research/007-section-1-general-guidance.md`
 - Skyriaus tipas: `jurisdikciškai jautrus / lokalizacinis`
 - Aptikti norminių claim tipai: `nenustatyta`
 - Aptikti jurisdikciniai signalai: `JRCALC`

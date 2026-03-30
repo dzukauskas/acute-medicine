@@ -1,7 +1,7 @@
 # Research checklist for 009-conditions-requiring-specific-prehospital-clinical-management
 
-- Angliškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/009-conditions-requiring-specific-prehospital-clinical-management.md`
-- Research failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/research/009-conditions-requiring-specific-prehospital-clinical-management.md`
+- Angliškas failas: `source/chapters-en/009-conditions-requiring-specific-prehospital-clinical-management.md`
+- Research failas: `research/009-conditions-requiring-specific-prehospital-clinical-management.md`
 - Skyriaus tipas: `mišrus norminis / lokalizacinis`
 - Aptikti norminių claim tipai: `dose, route, concentration, algorithm_step, market_availability`
 - Aptikti jurisdikciniai signalai: `JRCALC, NHS, ReSPECT`

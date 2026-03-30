@@ -2,9 +2,9 @@
 
 - Puslapiai: EPUB segmentas `c3CK.xhtml`
 - Šaltinio segmentai: `c3CK.xhtml`
-- Originalo failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
-- Angliškas pagalbinis failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/009-conditions-requiring-specific-prehospital-clinical-management.md`
-- Lietuviškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/009-conditions-requiring-specific-prehospital-clinical-management.md`
+- Originalo failas: `source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
+- Angliškas pagalbinis failas: `source/chapters-en/009-conditions-requiring-specific-prehospital-clinical-management.md`
+- Lietuviškas failas: `lt/chapters/009-conditions-requiring-specific-prehospital-clinical-management.md`
 
 ## Source inventorius
 

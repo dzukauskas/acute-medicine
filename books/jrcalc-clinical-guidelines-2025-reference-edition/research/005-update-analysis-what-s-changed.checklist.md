@@ -1,7 +1,7 @@
 # Research checklist for 005-update-analysis-what-s-changed
 
-- Angliškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/005-update-analysis-what-s-changed.md`
-- Research failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/research/005-update-analysis-what-s-changed.md`
+- Angliškas failas: `source/chapters-en/005-update-analysis-what-s-changed.md`
+- Research failas: `research/005-update-analysis-what-s-changed.md`
 - Skyriaus tipas: `mišrus norminis / lokalizacinis`
 - Aptikti norminių claim tipai: `dose, indication, monitoring, algorithm_step`
 - Aptikti jurisdikciniai signalai: `JRCALC, ReSPECT, DNACPR`

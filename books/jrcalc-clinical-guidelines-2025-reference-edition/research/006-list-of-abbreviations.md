@@ -2,9 +2,9 @@
 
 - Puslapiai: EPUB segmentas `c1DC.xhtml`
 - Šaltinio segmentai: `c1DC.xhtml`
-- Originalo failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
-- Angliškas pagalbinis failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/006-list-of-abbreviations.md`
-- Lietuviškas failas: `/Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/006-list-of-abbreviations.md`
+- Originalo failas: `source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`
+- Angliškas pagalbinis failas: `source/chapters-en/006-list-of-abbreviations.md`
+- Lietuviškas failas: `lt/chapters/006-list-of-abbreviations.md`
 
 ## Source inventorius
 

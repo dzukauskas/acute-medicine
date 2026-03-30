@@ -1,8 +1,8 @@
 chapter_slug: 006-list-of-abbreviations
 chapter_title: 6 skyrius. Santrumpų sąrašas
 page_range: EPUB segmentas c1DC.xhtml
-source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/006-list-of-abbreviations.md
-lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/006-list-of-abbreviations.md
+source_md: source/chapters-en/006-list-of-abbreviations.md
+lt_target_md: lt/chapters/006-list-of-abbreviations.md
 blocks:
 - block_id: narrative-01-list-of-abbreviations
   block_type: narrative
@@ -1143,7 +1143,7 @@ localization_decisions:
   notes: Nenaudoti kaip LT sprendimų dėl gaivinimo apimties termino.
 style_hotspots: []
 gold_examples: []
-term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates_path: term_candidates.tsv
 term_candidates:
 - candidate_id: 006-list-of-abbreviations-acronym-abcde
   candidate_kind: acronym

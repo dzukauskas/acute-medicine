@@ -1,8 +1,8 @@
 chapter_slug: 003-guideline-developers-and-contributors
 chapter_title: 3 skyrius. Gairių rengėjai ir bendraautoriai
 page_range: EPUB segmentas c8W.xhtml
-source_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/source/chapters-en/003-guideline-developers-and-contributors.md
-lt_target_md: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/lt/chapters/003-guideline-developers-and-contributors.md
+source_md: source/chapters-en/003-guideline-developers-and-contributors.md
+lt_target_md: lt/chapters/003-guideline-developers-and-contributors.md
 blocks:
 - block_id: narrative-01-guideline-developers-and-contributors
   block_type: narrative
@@ -318,7 +318,7 @@ style_hotspots:
 - category: local_practice_change
   text: Vengta kurti tariamus lietuviškus JK institucijų ir organizacijų pavadinimų atitikmenis.
 gold_examples: []
-term_candidates_path: /Users/dzukauskas/Projects/Acute Medicine/books/jrcalc-clinical-guidelines-2025-reference-edition/term_candidates.tsv
+term_candidates_path: term_candidates.tsv
 term_candidates:
 - candidate_id: 003-guideline-developers-and-contributors-acronym-aace
   candidate_kind: acronym

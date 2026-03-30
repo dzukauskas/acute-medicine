@@ -13,6 +13,41 @@ def repo_relative_path(path: Path) -> str:
     return path.resolve().relative_to(REPO_ROOT).as_posix()
 
 
+def book_relative_path(path: Path, book_root: str | Path | None = None) -> str:
+    return path.resolve().relative_to(require_book_root(book_root)).as_posix()
+
+
+def normalize_tracked_artifact_path(
+    value: str | Path | None,
+    *,
+    book_root: str | Path | None = None,
+    fallback: Path | None = None,
+) -> str:
+    active_book_root = require_book_root(book_root)
+    raw = str(value).strip() if value is not None else ""
+
+    if not raw:
+        if fallback is None:
+            return ""
+        resolved = fallback.resolve()
+    else:
+        candidate = Path(raw).expanduser()
+        if candidate.is_absolute():
+            resolved = candidate.resolve()
+        elif candidate.parts and candidate.parts[0] == "books":
+            resolved = (REPO_ROOT / candidate).resolve()
+        else:
+            resolved = (active_book_root / candidate).resolve()
+
+    try:
+        return resolved.relative_to(active_book_root).as_posix()
+    except ValueError:
+        try:
+            return resolved.relative_to(REPO_ROOT).as_posix()
+        except ValueError:
+            return resolved.as_posix()
+
+
 def first_pdf_path(book_root: Path) -> Path | None:
     pdf_dir = book_root / "source" / "pdf"
     if not pdf_dir.exists():
