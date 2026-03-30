@@ -19,13 +19,16 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: Codex context continuity and repo-engineering memory
+- Theme: audit-wave-002 planning
 - Branch: main
-- Last updated: 2026-03-30T20:34:11+03:00
+- Last updated: 2026-03-30T22:36:15+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
+- `audit-wave-002` perjungta iš findings validavimo į planavimo fazę; tracked planas užfiksuotas `plans/audit-wave-002.md`.
+- `audit-wave-002` klasifikacija išlieka: `valid` = 1, 3, 4, 5, 6; `partial` = 2; `invalid` = 7; `needs-clarification` = nėra.
+- Pirma banga pasirinkta kaip vienas `template-contract hardening` branduolys (`1 + 3 + 4`, su `2` kaip partial simptomu), o `5/6` palikti atskirai vėlesnei portability / docs clarity bangai.
 - Supaprastinti ilgų Codex thread'ų darbą šiame repo, atskiriant vertimo ir repo-engineering atminties modelius.
 - Nauja fazė: `audit-wave-001` findings pirmiausia klasifikuoti prieš realų repo, tik po to svarstyti įgyvendinimą.
 - `audit-wave-001` suverifikuota prieš realų repo: patvirtinti portabilumo, bootstrap side-effect, workstation-local config, subprocess timeout ir global sync namespace rizikos sluoksniai.
@@ -47,6 +50,11 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Current State
 <!-- ledger:current_state:start -->
+- `audit-wave-002` findings suklasifikuoti taip: `valid` = 1, 3, 4, 5, 6; `partial` = 2; `invalid` = 7; `needs-clarification` = nėra.
+- Sukurtas tracked planas `plans/audit-wave-002.md`, kuriame pirma banga apibrėžta kaip bendras `template-contract hardening` kontraktas.
+- Patvirtinta reali template-managed docs drift būsena: `books/_template` policy failai ir tracked `books/jrcalc-clinical-guidelines-2025-reference-edition/*` kopijos išsiskyrusios ne kosmetiškai, o focused CI vis tiek žalias.
+- Finding `2` pasitvirtino tik kaip struktūrinė skola: bootstrap ir refresh nenaudoja vieno shared materialization helper'io, bet dabartiniame checkout required `source/*` scaffold katalogai yra tracked ir focused bootstrap testai praeina.
+- Tikslinis `tests.test_completeness_guard.CompletenessGuardTests.test_main_reports_missing_structured_block` pakartotinis paleidimas dabar žalias, todėl tas signalas nelaikomas stabiliu `audit-wave-002` planning faktu.
 - Pridėtas tracked ENGINEERING_LEDGER.md kaip kanoninė repo-engineering būsena.
 - Atskirtas book translation workflow nuo repo engineering workflow dokumentacijos.
 - write_codex_handoff.py paliktas tik kaip papildomas lokalus scratchpad įrankis.
@@ -88,6 +96,11 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - gitignored handoff failai nėra laikomi patikimu pirminiu cross-worktree atminties mechanizmu.
 - Naujo thread startui pirmiausia siūlomas minimalus resume promptas, o ne vartotojo improvizacija.
 - Audit findings nebus įgyvendinami aklai; kiekvienas teiginys pirmiausia turi būti klasifikuotas kaip `valid`, `invalid`, `partial` arba `needs-clarification` pagal realų repo.
+- `audit-wave-002` šiame etape laikoma nauja repo-engineering banga, bet ne nauja technine tema už jos ribų, todėl validavimo darbą logiška tęsti šiame pačiame thread, kol nepasikeis scope.
+- `audit-wave-002` pirma įgyvendinimo banga užrakinama kaip vienas `template-contract hardening` branduolys: findings `1 + 3 + 4`, o finding `2` laikomas partial to paties kontrakto simptomu, ne atskira banga.
+- `audit-wave-002` findings `5/6` sąmoningai paliekami atskirai vėlesnei portability / docs clarity bangai.
+- `audit-wave-002` finding `2` laikomas tik dalinai teisingu: shared materialization kontraktas tarp bootstrap ir refresh tikrai išsiskyręs, bet reportuotas dabartinis live failure nepasitvirtino, nes template required katalogai šiame checkout'e yra tracked ir bootstrap testai praeina.
+- `audit-wave-002` finding `7` laikomas neteisingu: `handoffs/README.md` repo egzistuoja ir yra tracked, todėl continuity modelio reference nėra sulūžęs.
 - `audit-wave-001` 3-iasis finding'as laikomas tik dalinai teisingu: book workflow failai jau duoda LT/EU-first operacinį default'ą, bet `AGENTS.md` formuluotė lieka dviprasmė ir turi būti suderinta.
 - `audit-wave-001` finding `2` sprendžiamas taip: core bootstrap pagal nutylėjimą lieka repo-local, o globalus Obsidian / `launchd` integracijos žingsnis tampa explicit opt-in per `--install-obsidian-sync`.
 - `audit-wave-001` finding `7` sprendžiamas per bendrą subprocess wrapper sluoksnį su default timeout'ais ir aiškesniais klaidų pranešimais.
@@ -100,9 +113,9 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- `audit-wave-001` laikyti uždaryta ir naujus follow-up darbus registruoti kaip atskirą repo-engineering bangą ar temą.
-- Kai bus patogu, po pirmo realaus push patikrinti GitHub Actions workflow rezultatą, nes šiame etape jis buvo verifikuotas tik lokaliai per atitinkamą unittest rinkinį.
-- Jei vėliau reikės gilesnio mažiau-stub'into acceptance sluoksnio, jį planuoti kaip atskirą post-wave hardening darbą, nebeperkraunant `audit-wave-001`.
+- Pirmiausia įvesti shared `workflow_book_template.py` helperį ir `book_metadata.yaml` kontraktą be bootstrap/refresh perjungimo.
+- Tada perjungti PDF/EPUB bootstrap bei refresh ant shared template/materialization ir metadata truth sluoksnio.
+- Po runtime/helper sluoksnio backfill'inti tracked JRCALC docs ir įvesti parity gate testą bei focused CI atnaujinimą.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
