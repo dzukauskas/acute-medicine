@@ -57,9 +57,17 @@ python3 scripts/bootstrap_book_from_pdf.py \
 - nukopijuoja PDF į `source/pdf/`;
 - nukopijuoja `books/_template/` scaffold'us ir header-only local override stub'us;
 - sugeneruoja `source/index/` ir `source/chapters-en/`;
-- automatiškai sukonfigūruoja Obsidian sync pagal `repo_config.toml` default'us, pvz. `PARAMEDIKAS/<Book Title>`.
+- pagal nutylėjimą lieka repo-local ir neįdiegia globalaus Obsidian sync agento.
 
 Jei šalia PDF yra `<pdf-stem>.chapters.yaml`, bootstrap jį pasiims automatiškai ir nebandys spėlioti skyrių ribų iš turinio puslapių.
+
+Jei norite iškart įdiegti per-book Obsidian sync macOS aplinkoje, pridėkite:
+
+```bash
+python3 scripts/bootstrap_book_from_pdf.py \
+  --pdf "/abs/path/to/book.pdf" \
+  --install-obsidian-sync
+```
 
 PDF bootstrap ir chapter extraction šiame repo yra `PyMuPDF-first`. Jei skriptas paleidžiamas su sistemos `python3`, bet `PyMuPDF` ten nėra, jis automatiškai persijungia į repo `.venv`, jei ji paruošta.
 
@@ -84,7 +92,16 @@ EPUB bootstrap:
 - sugeneruoja `source/index/chapters.{json,md}`;
 - ištraukia skyrius į `source/chapters-en/`;
 - išinventorizuoja chapter-referenced paveikslų kandidatus į `source/index/figures.tsv`;
-- išsaugo originalius image assetus `source/figures-raw/`.
+- išsaugo originalius image assetus `source/figures-raw/`;
+- pagal nutylėjimą lieka repo-local ir neįdiegia globalaus Obsidian sync agento.
+
+Jei norite iškart įdiegti per-book Obsidian sync macOS aplinkoje, pridėkite:
+
+```bash
+python3 scripts/bootstrap_book_from_epub.py \
+  --epub "/abs/path/to/book.epub" \
+  --install-obsidian-sync
+```
 
 EPUB v1 šiame repo yra `repo-native`, be papildomo EPUB skill ar MCP serverio. Teksto extraction vykdomas per `EbookLib` ir `BeautifulSoup`.
 
@@ -135,6 +152,7 @@ MEDBOOK_ROOT=books/<slug> scripts/sync_obsidian_book.sh
 
 Pagal nutylėjimą šie skriptai aktyvias taisykles krauna iš `shared/` ir, jei tokie yra, iš `books/<slug>/*.local.tsv`.
 Obsidian sync nekeičia repo `lt/chapters/` struktūros, bet vault pusėje gali sugrupuoti skyrius į navigacinius `Section` aplankus pagal `source/index/chapters.json`.
+Automatinį `launchd` sync agentą diekite tik eksplicitiškai: arba bootstrap metu su `--install-obsidian-sync`, arba vėliau per `scripts/install_obsidian_sync_agent.sh --book-root books/<slug>`.
 
 ## Codex thread continuity
 

@@ -7,6 +7,7 @@ import posixpath
 import re
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
@@ -69,6 +70,11 @@ def parse_args() -> argparse.Namespace:
         "--chapter-map",
         type=Path,
         help="Optional YAML sidecar with explicit chapter segments. If omitted, uses <epub-stem>.chapters.yaml when present.",
+    )
+    parser.add_argument(
+        "--install-obsidian-sync",
+        action="store_true",
+        help="After repo-local bootstrap, explicitly install the per-book Obsidian sync agent on macOS.",
     )
     return parser.parse_args()
 
@@ -637,6 +643,11 @@ def render_template_files(book_root: Path, context: dict[str, str]) -> None:
 
 
 def install_obsidian_sync(book_root: Path) -> None:
+    if sys.platform != "darwin":
+        raise SystemExit(
+            "Obsidian sync install per bootstrap palaikomas tik macOS aplinkoje. "
+            "Paleiskite bootstrap be `--install-obsidian-sync`."
+        )
     book_root_rel = book_root.relative_to(REPO_ROOT).as_posix()
     subprocess.run(
         [
@@ -695,7 +706,8 @@ def main() -> int:
     write_index(chapters, source_index_dir, title, target_epub.name)
     write_chapter_sources(chapters, docs_by_href, target_epub.name, source_chapters_dir)
     write_figure_inventory(chapters, docs_by_href, image_items, book_root)
-    install_obsidian_sync(book_root)
+    if args.install_obsidian_sync:
+        install_obsidian_sync(book_root)
 
     print(f"Bootstrapped EPUB workspace: {book_root}")
     print(f"Source EPUB: {target_epub}")

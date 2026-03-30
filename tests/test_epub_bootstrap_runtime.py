@@ -36,3 +36,10 @@ class EpubBootstrapRuntimeTests(unittest.TestCase):
                 ("bs4", "beautifulsoup4"),
             ],
         )
+
+    def test_install_obsidian_sync_rejects_non_macos(self) -> None:
+        with patch.object(epub_bootstrap.sys, "platform", "linux"):
+            with self.assertRaises(SystemExit) as ctx:
+                epub_bootstrap.install_obsidian_sync(Path("/tmp/book-root"))
+
+        self.assertIn("tik macOS", str(ctx.exception))

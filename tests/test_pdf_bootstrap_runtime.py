@@ -77,6 +77,13 @@ class PdfBootstrapRuntimeTests(unittest.TestCase):
 
         self.assertEqual(calls, [("fitz", "PyMuPDF")])
 
+    def test_install_obsidian_sync_rejects_non_macos(self) -> None:
+        with patch.object(pdf_bootstrap.sys, "platform", "linux"):
+            with self.assertRaises(SystemExit) as ctx:
+                pdf_bootstrap.install_obsidian_sync(Path("/tmp/book-root"))
+
+        self.assertIn("tik macOS", str(ctx.exception))
+
 
 @unittest.skipUnless(HAS_PDF_RUNTIME_DEPS, "requires PyMuPDF")
 class PdfBootstrapSmokeTests(unittest.TestCase):
@@ -104,11 +111,12 @@ class PdfBootstrapSmokeTests(unittest.TestCase):
                 ),
                 encoding="utf-8",
             )
+            sync_calls: list[Path] = []
 
             with (
                 patch.object(pdf_bootstrap, "REPO_ROOT", repo_root),
                 patch.object(pdf_bootstrap, "TEMPLATE_ROOT", TEMPLATE_ROOT),
-                patch.object(pdf_bootstrap, "install_obsidian_sync", lambda _: None),
+                patch.object(pdf_bootstrap, "install_obsidian_sync", side_effect=lambda book_root: sync_calls.append(book_root)),
                 patch.object(pdf_bootstrap, "obsidian_dest_for_title", lambda title: Path("/tmp/obsidian") / title),
                 patch.object(
                     pdf_bootstrap,
@@ -119,6 +127,7 @@ class PdfBootstrapSmokeTests(unittest.TestCase):
                         page_offset=None,
                         backmatter_start=None,
                         chapter_map=chapter_map_path,
+                        install_obsidian_sync=False,
                     ),
                 ),
             ):
@@ -142,6 +151,57 @@ class PdfBootstrapSmokeTests(unittest.TestCase):
             self.assertEqual(chapters[0]["slug"], "007-merged-chapter")
             self.assertEqual(chapters[0]["pdf_start_page"], 2)
             self.assertEqual(chapters[0]["pdf_end_page"], 3)
+            self.assertEqual(sync_calls, [])
+
+    def test_bootstrap_installs_obsidian_sync_only_when_requested(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir)
+            repo_root = temp_root / "repo"
+            (repo_root / "books").mkdir(parents=True, exist_ok=True)
+
+            pdf_path = temp_root / "book.pdf"
+            chapter_map_path = temp_root / "book.chapters.yaml"
+            write_test_pdf(pdf_path)
+            chapter_map_path.write_text(
+                "\n".join(
+                    [
+                        "book_title: Sync PDF",
+                        "slug: sync-pdf",
+                        "chapters:",
+                        "  - number: 7",
+                        "    title: Merged chapter",
+                        "    pdf_start_page: 2",
+                        "    pdf_end_page: 3",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            sync_calls: list[Path] = []
+
+            with (
+                patch.object(pdf_bootstrap, "REPO_ROOT", repo_root),
+                patch.object(pdf_bootstrap, "TEMPLATE_ROOT", TEMPLATE_ROOT),
+                patch.object(pdf_bootstrap, "install_obsidian_sync", side_effect=lambda book_root: sync_calls.append(book_root)),
+                patch.object(pdf_bootstrap, "obsidian_dest_for_title", lambda title: Path("/tmp/obsidian") / title),
+                patch.object(
+                    pdf_bootstrap,
+                    "parse_args",
+                    return_value=Namespace(
+                        pdf=pdf_path,
+                        contents_pages=None,
+                        page_offset=None,
+                        backmatter_start=None,
+                        chapter_map=chapter_map_path,
+                        install_obsidian_sync=True,
+                    ),
+                ),
+            ):
+                with silence_stdio():
+                    result = pdf_bootstrap.main()
+
+            self.assertEqual(result, 0)
+            self.assertEqual(sync_calls, [repo_root / "books" / "sync-pdf"])
 
 
 if __name__ == "__main__":

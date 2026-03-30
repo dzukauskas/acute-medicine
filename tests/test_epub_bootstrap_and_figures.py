@@ -138,13 +138,18 @@ class EpubBootstrapTests(unittest.TestCase):
             (repo_root / "books").mkdir(parents=True, exist_ok=True)
             epub_path = temp_root / "book.epub"
             write_test_epub(epub_path)
+            sync_calls: list[Path] = []
 
             with (
                 patch.object(epub_bootstrap, "REPO_ROOT", repo_root),
                 patch.object(epub_bootstrap, "TEMPLATE_ROOT", TEMPLATE_ROOT),
-                patch.object(epub_bootstrap, "install_obsidian_sync", lambda _: None),
+                patch.object(epub_bootstrap, "install_obsidian_sync", side_effect=lambda book_root: sync_calls.append(book_root)),
                 patch.object(epub_bootstrap, "obsidian_dest_for_title", lambda title: Path("/tmp/obsidian") / title),
-                patch.object(epub_bootstrap, "parse_args", return_value=Namespace(epub=epub_path, chapter_map=None)),
+                patch.object(
+                    epub_bootstrap,
+                    "parse_args",
+                    return_value=Namespace(epub=epub_path, chapter_map=None, install_obsidian_sync=False),
+                ),
             ):
                 with silence_stdio():
                     result = epub_bootstrap.main()
@@ -168,6 +173,7 @@ class EpubBootstrapTests(unittest.TestCase):
 
             manifest_lines = (book_root / "lt" / "figures" / "manifest.tsv").read_text(encoding="utf-8").splitlines()
             self.assertEqual(len(manifest_lines), 1)
+            self.assertEqual(sync_calls, [])
 
     def test_bootstrap_honors_chapter_map_override(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -192,16 +198,17 @@ class EpubBootstrapTests(unittest.TestCase):
                 ),
                 encoding="utf-8",
             )
+            sync_calls: list[Path] = []
 
             with (
                 patch.object(epub_bootstrap, "REPO_ROOT", repo_root),
                 patch.object(epub_bootstrap, "TEMPLATE_ROOT", TEMPLATE_ROOT),
-                patch.object(epub_bootstrap, "install_obsidian_sync", lambda _: None),
+                patch.object(epub_bootstrap, "install_obsidian_sync", side_effect=lambda book_root: sync_calls.append(book_root)),
                 patch.object(epub_bootstrap, "obsidian_dest_for_title", lambda title: Path("/tmp/obsidian") / title),
                 patch.object(
                     epub_bootstrap,
                     "parse_args",
-                    return_value=Namespace(epub=epub_path, chapter_map=chapter_map_path),
+                    return_value=Namespace(epub=epub_path, chapter_map=chapter_map_path, install_obsidian_sync=False),
                 ),
             ):
                 with silence_stdio():
@@ -215,6 +222,33 @@ class EpubBootstrapTests(unittest.TestCase):
             self.assertIn("First chapter intro paragraph.", merged_text)
             self.assertIn("Second chapter closing paragraph.", merged_text)
             self.assertFalse((book_root / "source" / "chapters-en" / "001-first-chapter.md").exists())
+            self.assertEqual(sync_calls, [])
+
+    def test_bootstrap_installs_obsidian_sync_only_when_requested(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir)
+            repo_root = temp_root / "repo"
+            (repo_root / "books").mkdir(parents=True, exist_ok=True)
+            epub_path = temp_root / "book.epub"
+            write_test_epub(epub_path)
+            sync_calls: list[Path] = []
+
+            with (
+                patch.object(epub_bootstrap, "REPO_ROOT", repo_root),
+                patch.object(epub_bootstrap, "TEMPLATE_ROOT", TEMPLATE_ROOT),
+                patch.object(epub_bootstrap, "install_obsidian_sync", side_effect=lambda book_root: sync_calls.append(book_root)),
+                patch.object(epub_bootstrap, "obsidian_dest_for_title", lambda title: Path("/tmp/obsidian") / title),
+                patch.object(
+                    epub_bootstrap,
+                    "parse_args",
+                    return_value=Namespace(epub=epub_path, chapter_map=None, install_obsidian_sync=True),
+                ),
+            ):
+                with silence_stdio():
+                    result = epub_bootstrap.main()
+
+            self.assertEqual(result, 0)
+            self.assertEqual(sync_calls, [repo_root / "books" / "epub-test-book"])
 
 
 class RegisterWhimsicalFigureTests(unittest.TestCase):

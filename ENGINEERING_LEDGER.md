@@ -21,7 +21,7 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: Codex context continuity and repo-engineering memory
 - Branch: main
-- Last updated: 2026-03-30T19:25:33+03:00
+- Last updated: 2026-03-30T20:02:00+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
@@ -31,6 +31,8 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - `audit-wave-001` suverifikuota prieš realų repo: patvirtinti portabilumo, bootstrap side-effect, workstation-local config, subprocess timeout ir global sync namespace rizikos sluoksniai.
 - `audit-wave-001` dabar pereina į įgyvendinimo planavimo fazę; tracked planas užfiksuotas `plans/audit-wave-001.md`.
 - Įgyvendintas pirmos bangos finding `1`: canonical artefaktų path laukai normalizuoti į stabilų book-relative formatą be host-specific prefixų.
+- Finding `1` užfiksuotas atskiru commit'u `0728ece` (`Normalize canonical artifact paths`).
+- Įgyvendintas pirmos bangos finding `2`: bootstrap pagal nutylėjimą lieka repo-local, o Obsidian sync integracija keliama į explicit opt-in sluoksnį.
 <!-- ledger:summary:end -->
 
 ## Current State
@@ -40,7 +42,6 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - write_codex_handoff.py paliktas tik kaip papildomas lokalus scratchpad įrankis.
 - Pridėtas print_codex_resume_prompt.py, kad naujam thread būtų galima sugeneruoti minimalų promptą.
 - Ledger atnaujinimas repo-engineering režime dokumentuotas kaip numatytasis agento darbas.
-- Darbinis medis šiuo metu švarus `main` brancho būsenoje.
 - `audit-wave-001` findings validavimo fazė užbaigta; pereita į planavimo ir pirmos įgyvendinimo bangos pradžią.
 - `audit-wave-001` findings suklasifikuoti taip: `valid` = 1, 2, 4, 7, 8; `partial` = 3, 5, 6; `invalid` = nėra; `needs-clarification` = nėra.
 - Portabilumo problema praktiškai patvirtinta ir eksperimentu: tas pats fixture skirtinguose laikinuose book root sugeneruoja nevienodus `chapter_pack` ir `adjudication_pack` failus dėl host-specific kelių.
@@ -48,6 +49,10 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Pridėtas bendras canonical path normalizavimo helper sluoksnis generatoriams ir nauji portability regression testai.
 - Realūs tracked `chapter_packs`, `adjudication_packs`, `research/*.checklist.md` ir susiję `research/*.md` metaduomenys backfill'inti į path-only relative formatą, neįtraukiant papildomo terminijos drift.
 - Realus smoke patikrinimas `run_chapter_qa.py --book-root books/jrcalc-clinical-guidelines-2025-reference-edition 010` praėjo po backfill.
+- Finding `1` atskirtas į savarankišką commit'ą `0728ece`, todėl nuo jo šalutinis drift jau izoliuotas.
+- Finding `2` pakeičia PDF ir EPUB bootstrap kontraktą: be `--install-obsidian-sync` jie nebeįdiegia globalaus sync agento, o explicit install leidžiamas tik macOS.
+- Focused bootstrap testai finding `2` sluoksniui praėjo: `tests.test_pdf_bootstrap_runtime`, `tests.test_epub_bootstrap_runtime`, `tests.test_epub_bootstrap_and_figures`, `tests.test_shell_entrypoints`.
+- Finding `2` paruoštas atskiram commit'ui be papildomo šalutinio drift.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -58,12 +63,14 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Naujo thread startui pirmiausia siūlomas minimalus resume promptas, o ne vartotojo improvizacija.
 - Audit findings nebus įgyvendinami aklai; kiekvienas teiginys pirmiausia turi būti klasifikuotas kaip `valid`, `invalid`, `partial` arba `needs-clarification` pagal realų repo.
 - `audit-wave-001` 3-iasis finding'as laikomas tik dalinai teisingu: book workflow failai jau duoda LT/EU-first operacinį default'ą, bet `AGENTS.md` formuluotė lieka dviprasmė ir turi būti suderinta.
+- `audit-wave-001` finding `2` sprendžiamas taip: core bootstrap pagal nutylėjimą lieka repo-local, o globalus Obsidian / `launchd` integracijos žingsnis tampa explicit opt-in per `--install-obsidian-sync`.
+- `audit-wave-001` finding `7` bus sprendžiamas per bendrą subprocess wrapper sluoksnį su default timeout'ais ir aiškesniais klaidų pranešimais.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Pereiti prie finding `2`: atskirti core bootstrap nuo globalaus Obsidian / LaunchAgent integracijos sluoksnio ir įvesti explicit sync semantiką.
-- Po finding `2` pereiti prie subprocess timeout sluoksnio (`7`), tada prie `repo_config` ir global sync namespace temos (`4/8`).
+- Užfiksuoti finding `2` atskiru commit'u ir tada pereiti prie subprocess timeout sluoksnio (`7`).
+- Po finding `7` pereiti prie `repo_config` ir global sync namespace temos (`4/8`).
 - Vėlesnėse bangose spręsti `AGENTS.md` politikos suderinimą, test environment / CI kontraktą ir test harness gylio spragas.
 <!-- ledger:next_steps:end -->
 

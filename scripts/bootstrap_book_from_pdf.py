@@ -6,6 +6,7 @@ import json
 import re
 import shutil
 import subprocess
+import sys
 import warnings
 from pathlib import Path
 
@@ -78,6 +79,11 @@ def parse_args() -> argparse.Namespace:
         "--chapter-map",
         type=Path,
         help="Optional YAML sidecar with explicit chapter boundaries. If omitted, uses <pdf-stem>.chapters.yaml when present.",
+    )
+    parser.add_argument(
+        "--install-obsidian-sync",
+        action="store_true",
+        help="After repo-local bootstrap, explicitly install the per-book Obsidian sync agent on macOS.",
     )
     return parser.parse_args()
 
@@ -461,6 +467,11 @@ def render_template_files(book_root: Path, context: dict[str, str]) -> None:
 
 
 def install_obsidian_sync(book_root: Path) -> None:
+    if sys.platform != "darwin":
+        raise SystemExit(
+            "Obsidian sync install per bootstrap palaikomas tik macOS aplinkoje. "
+            "Paleiskite bootstrap be `--install-obsidian-sync`."
+        )
     book_root_rel = book_root.relative_to(REPO_ROOT).as_posix()
     subprocess.run(
         [
@@ -543,7 +554,8 @@ def main() -> int:
         )
         write_chapter_sources(chapters, pdf, target_pdf.name, source_chapters_dir)
 
-    install_obsidian_sync(book_root)
+    if args.install_obsidian_sync:
+        install_obsidian_sync(book_root)
     print(book_root)
     return 0
 

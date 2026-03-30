@@ -32,6 +32,11 @@
 - Finding `5`
 - Finding `6`
 
+## Implementation Progress
+
+- Finding `1`: completed and committed in `0728ece` (`Normalize canonical artifact paths`).
+- Finding `2`: completed; bootstrap entrypointai perkelti į explicit `--install-obsidian-sync` semantiką ir focused testai praėjo.
+
 ## Notes
 
 - Šiame etape klasifikacija laikoma pakankamai stabilia pereiti iš findings validavimo į įgyvendinimo planavimą.

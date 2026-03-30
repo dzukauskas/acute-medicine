@@ -116,8 +116,10 @@ python3 scripts/bootstrap_book_from_pdf.py \
   --chapter-map "/abs/path/to/book.chapters.yaml"
 ```
 
-5. Atidaryk `Obsidian`
-6. Patikrink, ar vault kataloge atsirado:
+Bootstrap pagal nutylėjimą apsiriboja repo-local workspace sukūrimu. Jei tame pačiame žingsnyje norite ir per-book Obsidian sync agento, macOS aplinkoje pridėkite `--install-obsidian-sync`.
+
+5. Jei įdiegėte sync agentą, atidaryk `Obsidian`
+6. Jei įdiegėte sync agentą, patikrink, ar vault kataloge atsirado:
    - `<Book Title>/chapters/`
    - `<Book Title>/figures/`
 
@@ -142,7 +144,7 @@ Repo naudoja:
 - `scripts/sync_obsidian_book.sh`
 - `scripts/install_obsidian_sync_agent.sh`
 
-`install_obsidian_sync_agent.sh` dabar kviečiamas iš `scripts/bootstrap_book_from_pdf.py` ir sugeneruoja per-book `LaunchAgent` pagal `repo_config.toml` ir pasirinktos knygos katalogą. Tai svarbu, nes `plist` failai su hardcoded keliais nėra patikimi tarp skirtingų Mac.
+`install_obsidian_sync_agent.sh` yra eksplicitinis integracijos žingsnis. Jį galite kviesti tiesiogiai arba per `scripts/bootstrap_book_from_pdf.py --install-obsidian-sync` ir `scripts/bootstrap_book_from_epub.py --install-obsidian-sync`. Be šio flag'o bootstrap lieka repo-local ir nerašo globalaus `LaunchAgent`.
 
 ## Codex MCP
 
