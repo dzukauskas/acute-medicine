@@ -37,9 +37,13 @@
 - Finding `1`: completed and committed in `0728ece` (`Normalize canonical artifact paths`).
 - Finding `2`: completed and committed in `c852e55` (`Make bootstrap sync install opt-in`).
 - Finding `7`: completed and committed in `136f0ca` (`Add subprocess timeouts to workflow scripts`).
-- Findings `4/8`: completed and ready to commit; įvestas `repo_config.local.toml` override sluoksnis, generic README/runtime config kontraktas ir worktree-aware sync namespace apsauga.
+- Findings `4/8`: completed and committed in `ebd8f19` (`Harden local config and sync namespace`).
+- Finding `3`: completed and committed in `84009a4` (`Align AGENTS localization policy with LT/EU workflow`).
+- Findings `5/6`: completed and committed in `964b491` (`Add repo-declared dev test contract`).
+- `audit-wave-001` planuotos įgyvendinimo bangos uždarytos.
 
 ## Notes
 
 - Šiame etape klasifikacija laikoma pakankamai stabilia pereiti iš findings validavimo į įgyvendinimo planavimą.
 - Pirmas implementacijos tikslas yra environment-agnostic canonical artefaktai, kad QA freshness vartai nebebūtų host-path sensitive.
+- Findings klasifikacijos (`valid` / `partial`) viršuje lieka pradinio audito triage rezultatas; žemiau fiksuojama, kokie įgyvendinimo žingsniai buvo užfiksuoti repo.

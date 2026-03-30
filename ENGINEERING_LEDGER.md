@@ -21,7 +21,7 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: Codex context continuity and repo-engineering memory
 - Branch: main
-- Last updated: 2026-03-30T20:18:24+03:00
+- Last updated: 2026-03-30T20:34:11+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
@@ -37,6 +37,12 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Įgyvendintas pirmos bangos finding `7`: kritiniai subprocess keliai perkelti į bendrą timeout-aware wrapper sluoksnį.
 - Finding `7` užfiksuotas atskiru commit'u `136f0ca` (`Add subprocess timeouts to workflow scripts`).
 - Įgyvendintas jungtinis `4/8` sluoksnis: local repo config override ir worktree-aware Obsidian sync namespace hardening.
+- Findings `4/8` užfiksuoti atskiru commit'u `ebd8f19` (`Harden local config and sync namespace`).
+- `AGENTS.md` localization policy suderinta su LT/EU-first workflow ir `Originalo kontekstas` taisykle.
+- Finding `3` užfiksuotas atskiru commit'u `84009a4` (`Align AGENTS localization policy with LT/EU workflow`).
+- Repo papildytas deklaruotu dev/test kontraktu: `requirements-dev.txt`, dokumentuotas `python -m unittest` entrypoint ir focused GitHub Actions workflow.
+- Findings `5/6` užfiksuoti atskiru commit'u `964b491` (`Add repo-declared dev test contract`).
+- `audit-wave-001` planuota įgyvendinimo seka uždaryta; tolesni hardening darbai turi būti vedami kaip nauja banga ar tema.
 <!-- ledger:summary:end -->
 
 ## Current State
@@ -66,6 +72,13 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - `workflow_obsidian.py` pridėtas worktree-aware LaunchAgent label suffix ir destination owner marker mechanizmas, kad tas pats default sync katalogas negalėtų būti tyliai perrašytas iš kito clone/worktree.
 - Focused `4/8` testai praėjo: `tests.test_workflow_runtime`, `tests.test_obsidian_sync_safety`, `tests.test_refresh_template_runtime`, `tests.test_shell_entrypoints`, `tests.test_pdf_bootstrap_runtime`, `tests.test_epub_bootstrap_runtime`, `tests.test_epub_bootstrap_and_figures`.
 - `4/8` diff peržiūrėtas kaip vientisas vieno kontrakto pjūvis: local config layering, generic tracked docs ir global sync namespace apsauga.
+- `AGENTS.md` sulygintas su LT/EU-first workflow: foreign-market normativity pagrindiniame LT tekste nebeleidžiama, o išlaikomas kontekstas keliamas tik į `Originalo kontekstas`.
+- Finding `3` commit'as `84009a4` izoliuoja policy alignment nuo likusio dev/test sluoksnio.
+- Repo dabar turi deklaruotą dev/test kontraktą: `requirements-dev.txt`, bootstrap verification entrypoint ir focused `.github/workflows/python-tests.yml`.
+- `scripts/bootstrap_macos.sh` diegia `requirements-dev.txt` ir išveda repo-native smoke / contract unittest žingsnį.
+- Focused `5/6` testai praėjo: `tests.test_shell_entrypoints`, `tests.test_end_to_end_workflow_contract`, `tests.test_workflow_runtime`, `tests.test_obsidian_sync_safety`, `tests.test_refresh_template_runtime`.
+- Findings `5/6` commit'as `964b491` izoliuoja dev/test kontrakto sluoksnį nuo policy pakeitimo.
+- `audit-wave-001` bangos `1 -> 2 -> 7 -> 4/8 -> 3 -> 5/6` yra uždarytos.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -81,13 +94,15 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - `audit-wave-001` finding `7` timeout politika naudoja bendrą helper'į ir palieka ilgesnį profilį build tipo veiksmams (`chapter_pack`, `adjudication_pack`), o trumpą profilį lightweight probe veiksmams.
 - `audit-wave-001` finding `4` sprendžiamas per tracked defaults + optional `repo_config.local.toml` override modelį ir per docs/template sluoksnį, kuris nebeįkepa workstation-specific vault kelių.
 - `audit-wave-001` finding `8` sprendžiamas per worktree-aware LaunchAgent label bei destination owner marker'į, kuris blokuoja tylų default sync katalogo perėmimą iš kitos darbo vietos.
+- `audit-wave-001` finding `3` sprendžiamas sulyginant `AGENTS.md` su binding LT/EU-first workflow ir aiškiai iškeliant foreign-market normativity iš pagrindinio LT teksto į `Originalo kontekstas`.
+- `audit-wave-001` findings `5/6` šiame etape sprendžiami per deklaruotą repo-native dev/test kontraktą, o ne per pilną visų stub'intų acceptance kelių eliminaciją vienu wave.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Pereiti prie vėlesnės bangos `3/5/6`: localization policy suderinimo, test environment / CI kontrakto ir test harness gylio.
-- Jei `3/5/6` review atskleis papildomų kraštų, pirmiausia nuspręsti, ar jie telpa į vieną bangą, ar turi būti skaidomi į smulkesnius commit'us.
-- Vėlesnėse bangose spręsti `AGENTS.md` politikos suderinimą, test environment / CI kontraktą ir test harness gylio spragas.
+- `audit-wave-001` laikyti uždaryta ir naujus follow-up darbus registruoti kaip atskirą repo-engineering bangą ar temą.
+- Kai bus patogu, po pirmo realaus push patikrinti GitHub Actions workflow rezultatą, nes šiame etape jis buvo verifikuotas tik lokaliai per atitinkamą unittest rinkinį.
+- Jei vėliau reikės gilesnio mažiau-stub'into acceptance sluoksnio, jį planuoti kaip atskirą post-wave hardening darbą, nebeperkraunant `audit-wave-001`.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
