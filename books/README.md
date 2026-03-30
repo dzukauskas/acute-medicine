@@ -118,6 +118,7 @@ Terminų rinkimo politika šiame repo yra `candidate inbox -> approved local/sha
 Shared repo nustatymai laikomi root faile:
 
 - `repo_config.toml`
+- `repo_config.local.toml` (`gitignored`, optional)
 
 Šiuo metu jis valdo:
 
@@ -125,7 +126,7 @@ Shared repo nustatymai laikomi root faile:
 - vault vardą;
 - `launchd` agentų prefiksą.
 
-Jei reikia naujos mašinos ar kito vault kelio, keiskite `repo_config.toml`, o ne shell skriptus.
+`repo_config.toml` laikomas tracked defaults sluoksniu. Workstation-specific kelius ar kitus lokalius override laikykite `repo_config.local.toml`, o ne redaguokite tracked failą kiekvienoje mašinoje.
 
 ## Template refresh
 
@@ -153,6 +154,7 @@ MEDBOOK_ROOT=books/<slug> scripts/sync_obsidian_book.sh
 Pagal nutylėjimą šie skriptai aktyvias taisykles krauna iš `shared/` ir, jei tokie yra, iš `books/<slug>/*.local.tsv`.
 Obsidian sync nekeičia repo `lt/chapters/` struktūros, bet vault pusėje gali sugrupuoti skyrius į navigacinius `Section` aplankus pagal `source/index/chapters.json`.
 Automatinį `launchd` sync agentą diekite tik eksplicitiškai: arba bootstrap metu su `--install-obsidian-sync`, arba vėliau per `scripts/install_obsidian_sync_agent.sh --book-root books/<slug>`.
+Numatytasis sync katalogas README failuose nebėra kepamas kaip konkretus workstation kelias: runtime metu jis sprendžiamas iš `repo_config.toml` ir pasirenkamo `repo_config.local.toml`, o paskirtis papildomai rezervuojama konkrečiai darbo vietai, kad kitas clone/worktree jos tyliai neperrašytų.
 
 ## Codex thread continuity
 

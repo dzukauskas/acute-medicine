@@ -60,7 +60,7 @@ Jei nori mažiausiai papildomų pakeitimų, naudok tą pačią struktūrą:
 - vault: `/Users/<username>/Library/Mobile Documents/iCloud~md~obsidian/Documents/PARAMEDIKAS`
 
 Jei `username` ar kelių struktūra skirsis, nieko baisaus. Sync agentą ir `Codex` MCP setupą galima sugeneruoti pagal naujus kelius.
-Repo dabar remiasi root `repo_config.toml`, todėl `Obsidian` vault bazinį kelią ir `launchd` prefiksą keisk tame faile, ne shell skriptuose.
+Repo dabar remiasi tracked `repo_config.toml` defaults ir optional `repo_config.local.toml` override. `Obsidian` vault bazinį kelią ar kitus workstation-specific nustatymus keisk `repo_config.local.toml`, ne shell skriptuose.
 
 ## Vieno paleidimo bootstrap
 
@@ -145,6 +145,7 @@ Repo naudoja:
 - `scripts/install_obsidian_sync_agent.sh`
 
 `install_obsidian_sync_agent.sh` yra eksplicitinis integracijos žingsnis. Jį galite kviesti tiesiogiai arba per `scripts/bootstrap_book_from_pdf.py --install-obsidian-sync` ir `scripts/bootstrap_book_from_epub.py --install-obsidian-sync`. Be šio flag'o bootstrap lieka repo-local ir nerašo globalaus `LaunchAgent`.
+Pagal nutylėjimą agento label dabar vardinamas su worktree / repo identitetu, o default sync paskirtis rezervuojama owner marker'iu. Tai saugo nuo situacijos, kai tas pats book slug ar title būtų tyliai perrašytas iš kito clone ar worktree.
 
 ## Codex MCP
 

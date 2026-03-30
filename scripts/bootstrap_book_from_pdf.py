@@ -12,7 +12,7 @@ from pathlib import Path
 import yaml
 
 from workflow_rules import resolve_repo_path
-from workflow_runtime import REPO_ROOT, ensure_python_module, obsidian_dest_for_title
+from workflow_runtime import REPO_ROOT, ensure_python_module
 from workflow_subprocess import DEFAULT_TIMEOUT_SECONDS, WorkflowSubprocessError, run_checked_subprocess
 
 
@@ -450,7 +450,7 @@ def template_context(book_root: Path, title: str, pdf_name: str) -> dict[str, st
         "BOOK_SOURCE_KIND": "pdf",
         "BOOK_SOURCE_NAME": pdf_name,
         "BOOK_PDF_NAME": pdf_name,
-        "OBSIDIAN_DEST": obsidian_dest_for_title(title).as_posix(),
+        "OBSIDIAN_DEST": (Path("<configured-obsidian-vault>") / title).as_posix(),
     }
 
 

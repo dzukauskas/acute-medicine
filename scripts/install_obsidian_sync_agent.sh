@@ -90,9 +90,9 @@ dest_dir = sys.argv[3]
 cwd = Path(sys.argv[4])
 sys.path.insert(0, str(repo_root / "scripts"))
 
-from workflow_obsidian import validate_obsidian_sync_destination
+from workflow_obsidian import claim_obsidian_sync_destination
 
-print(validate_obsidian_sync_destination(dest_dir, book_root, repo_root=repo_root, cwd=cwd))
+print(claim_obsidian_sync_destination(dest_dir, book_root, repo_root=repo_root, cwd=cwd))
 PY
 )"
 PLIST_PATH="$HOME/Library/LaunchAgents/$AGENT_LABEL.plist"

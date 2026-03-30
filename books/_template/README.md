@@ -107,7 +107,7 @@ Numatytasis Obsidian kelias šiai knygai:
 
 - `{{OBSIDIAN_DEST}}`
 
-Jis generuojamas iš root `repo_config.toml`, todėl vault ar `launchd` prefiksą keiskite ten, o ne book-specific skriptuose.
+Jis runtime metu sprendžiamas iš root `repo_config.toml` ir pasirenkamo `repo_config.local.toml`, todėl workstation-specific override laikykite ten, o ne book-specific skriptuose.
 
 Vienkartinis sync:
 
@@ -118,3 +118,5 @@ Repo `lt/chapters/` lieka flat, bet sync į Obsidian gali sugrupuoti skyrius į 
 Automatinis `launchd` sync agentas:
 
 - `scripts/install_obsidian_sync_agent.sh --book-root books/{{BOOK_SLUG}}`
+
+Sync paskirtis papildomai rezervuojama konkrečiai darbo vietai, todėl kitas clone ar worktree negali tyliai perrašyti to paties default katalogo.

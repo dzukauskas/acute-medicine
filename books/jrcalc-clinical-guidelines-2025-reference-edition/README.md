@@ -105,9 +105,9 @@ Pavyzdžiai:
 
 Numatytasis Obsidian kelias šiai knygai:
 
-- `/Users/dzukauskas/Library/Mobile Documents/iCloud~md~obsidian/Documents/PARAMEDIKAS/JRCALC Clinical Guidelines 2025 Reference Edition`
+- `<configured-obsidian-vault>/JRCALC Clinical Guidelines 2025 Reference Edition`
 
-Jis generuojamas iš root `repo_config.toml`, todėl vault ar `launchd` prefiksą keiskite ten, o ne book-specific skriptuose.
+Jis runtime metu sprendžiamas iš root `repo_config.toml` ir pasirenkamo `repo_config.local.toml`, todėl workstation-specific override laikykite ten, o ne book-specific skriptuose.
 
 Vienkartinis sync:
 
@@ -116,3 +116,5 @@ Vienkartinis sync:
 Automatinis `launchd` sync agentas:
 
 - `scripts/install_obsidian_sync_agent.sh --book-root books/jrcalc-clinical-guidelines-2025-reference-edition`
+
+Sync paskirtis papildomai rezervuojama konkrečiai darbo vietai, todėl kitas clone ar worktree negali tyliai perrašyti to paties default katalogo.

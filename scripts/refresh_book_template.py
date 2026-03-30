@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 
 from workflow_book import first_source_artifact
-from workflow_obsidian import book_title_from_readme, default_obsidian_dest
+from workflow_obsidian import book_title_from_readme
 from workflow_rules import resolve_repo_path
 from workflow_runtime import REPO_ROOT
 
@@ -37,11 +37,8 @@ def render_template_text(template_path: Path, context: dict[str, str]) -> str:
 
 
 def template_obsidian_dest_value(book_root: Path) -> str:
-    try:
-        return default_obsidian_dest(book_root).as_posix()
-    except SystemExit:
-        title = book_title_from_readme(book_root)
-        return (Path("__configure_repo_config__") / title).as_posix()
+    title = book_title_from_readme(book_root)
+    return (Path("<configured-obsidian-vault>") / title).as_posix()
 
 
 def context_for_book(book_root: Path) -> dict[str, str]:

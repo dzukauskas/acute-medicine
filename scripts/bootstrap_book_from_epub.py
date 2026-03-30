@@ -13,7 +13,7 @@ from urllib.parse import unquote, urlsplit
 import yaml
 
 from workflow_rules import resolve_repo_path, slugify, write_tsv
-from workflow_runtime import REPO_ROOT, ensure_python_module, obsidian_dest_for_title
+from workflow_runtime import REPO_ROOT, ensure_python_module
 from workflow_subprocess import DEFAULT_TIMEOUT_SECONDS, WorkflowSubprocessError, run_checked_subprocess
 
 
@@ -626,7 +626,7 @@ def template_context(book_root: Path, title: str, epub_name: str) -> dict[str, s
         "BOOK_SOURCE_KIND": "epub",
         "BOOK_SOURCE_NAME": epub_name,
         "BOOK_PDF_NAME": "SOURCE.pdf",
-        "OBSIDIAN_DEST": obsidian_dest_for_title(title).as_posix(),
+        "OBSIDIAN_DEST": (Path("<configured-obsidian-vault>") / title).as_posix(),
     }
 
 

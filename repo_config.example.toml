@@ -1,3 +1,5 @@
+# Tracked repo defaults.
+# Workstation-specific overrides laikykite `repo_config.local.toml`.
 [obsidian]
 base_dir = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents"
 vault_name = "PARAMEDIKAS"

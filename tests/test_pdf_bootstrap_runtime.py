@@ -153,7 +153,6 @@ class PdfBootstrapSmokeTests(unittest.TestCase):
                 patch.object(pdf_bootstrap, "REPO_ROOT", repo_root),
                 patch.object(pdf_bootstrap, "TEMPLATE_ROOT", TEMPLATE_ROOT),
                 patch.object(pdf_bootstrap, "install_obsidian_sync", side_effect=lambda book_root: sync_calls.append(book_root)),
-                patch.object(pdf_bootstrap, "obsidian_dest_for_title", lambda title: Path("/tmp/obsidian") / title),
                 patch.object(
                     pdf_bootstrap,
                     "parse_args",
@@ -219,7 +218,6 @@ class PdfBootstrapSmokeTests(unittest.TestCase):
                 patch.object(pdf_bootstrap, "REPO_ROOT", repo_root),
                 patch.object(pdf_bootstrap, "TEMPLATE_ROOT", TEMPLATE_ROOT),
                 patch.object(pdf_bootstrap, "install_obsidian_sync", side_effect=lambda book_root: sync_calls.append(book_root)),
-                patch.object(pdf_bootstrap, "obsidian_dest_for_title", lambda title: Path("/tmp/obsidian") / title),
                 patch.object(
                     pdf_bootstrap,
                     "parse_args",

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
@@ -12,6 +13,7 @@ from workflow_runtime import REPO_ROOT, obsidian_config, obsidian_dest_for_title
 
 
 SECTION_TITLE_RE = re.compile(r"^Section\s+(?P<number>\d+)\s+[–-]\s+(?P<title>.+)$", re.IGNORECASE)
+SYNC_OWNER_FILENAME = ".acute-medicine-sync-owner.json"
 
 
 def resolve_runtime_path(raw: str | Path, *, base_dir: str | Path | None = None) -> Path:
@@ -72,8 +74,71 @@ def default_obsidian_dest(book_root: Path) -> Path:
     return obsidian_dest_for_title(book_title_from_readme(book_root))
 
 
-def obsidian_launch_agent_label(book_root: Path) -> str:
-    return f"{obsidian_config()['launch_agent_prefix']}-{book_slug(book_root)}"
+def repo_workspace_id(repo_root: str | Path = REPO_ROOT) -> str:
+    resolved = resolve_runtime_path(repo_root)
+    return hashlib.sha256(str(resolved).encode("utf-8")).hexdigest()[:8]
+
+
+def obsidian_launch_agent_label(book_root: Path, *, repo_root: str | Path = REPO_ROOT) -> str:
+    return f"{obsidian_config()['launch_agent_prefix']}-{book_slug(book_root)}-{repo_workspace_id(repo_root)}"
+
+
+def obsidian_sync_owner_path(dest_root: str | Path) -> Path:
+    return Path(dest_root) / SYNC_OWNER_FILENAME
+
+
+def obsidian_sync_owner_payload(book_root: str | Path, *, repo_root: str | Path = REPO_ROOT) -> dict[str, str]:
+    resolved_book_root = resolve_runtime_path(book_root)
+    resolved_repo_root = resolve_runtime_path(repo_root)
+    return {
+        "workspace_id": repo_workspace_id(resolved_repo_root),
+        "repo_root": str(resolved_repo_root),
+        "book_root": str(resolved_book_root),
+        "book_slug": book_slug(resolved_book_root),
+        "book_title": book_title_from_readme(resolved_book_root),
+    }
+
+
+def claim_obsidian_sync_destination(
+    dest_dir: str | Path,
+    book_root: str | Path,
+    *,
+    repo_root: str | Path = REPO_ROOT,
+    cwd: str | Path | None = None,
+) -> Path:
+    resolved_dest = validate_obsidian_sync_destination(
+        dest_dir,
+        book_root,
+        repo_root=repo_root,
+        cwd=cwd,
+    )
+    resolved_dest.mkdir(parents=True, exist_ok=True)
+    owner_path = obsidian_sync_owner_path(resolved_dest)
+    expected = obsidian_sync_owner_payload(book_root, repo_root=repo_root)
+
+    if owner_path.exists():
+        try:
+            current = json.loads(owner_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            raise SystemExit(
+                f"Nepavyko perskaityti Obsidian sync owner failo: {owner_path}"
+            ) from exc
+        current_workspace = str(current.get("workspace_id", "")).strip()
+        current_book = str(current.get("book_slug", "")).strip()
+        if current_workspace != expected["workspace_id"] or current_book != expected["book_slug"]:
+            raise SystemExit(
+                "Obsidian sync paskirtis jau rezervuota kitai darbo vietai arba kitai knygai: "
+                f"{resolved_dest}\n"
+                f"Rasta workspace_id={current_workspace or '_missing_'}, book_slug={current_book or '_missing_'}; "
+                f"tikėtasi workspace_id={expected['workspace_id']}, book_slug={expected['book_slug']}."
+            )
+        return resolved_dest
+
+    owner_path.write_text(
+        json.dumps(expected, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    return resolved_dest
 
 
 def chapter_index_path(book_root: str | Path | None = None) -> Path:

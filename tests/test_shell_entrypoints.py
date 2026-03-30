@@ -7,6 +7,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import hashlib
 from pathlib import Path
 
 
@@ -100,6 +101,7 @@ class ShellEntrypointTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, msg=result.stdout + result.stderr)
             self.assertTrue((dest_dir / "chapters" / "001-intro.md").exists())
             self.assertTrue((dest_dir / "figures" / "f1.png").exists())
+            self.assertTrue((dest_dir / ".acute-medicine-sync-owner.json").exists())
             chapter_text = (dest_dir / "chapters" / "001-intro.md").read_text(encoding="utf-8")
             self.assertIn("../figures/f1.png", chapter_text)
 
@@ -129,7 +131,8 @@ class ShellEntrypointTests(unittest.TestCase):
             )
 
             self.assertEqual(result.returncode, 0, msg=result.stdout + result.stderr)
-            plist_path = home_dir / "Library" / "LaunchAgents" / "lt.medbook.sync-sample-book.plist"
+            workspace_suffix = hashlib.sha256(str(repo_root.resolve()).encode("utf-8")).hexdigest()[:8]
+            plist_path = home_dir / "Library" / "LaunchAgents" / f"lt.medbook.sync-sample-book-{workspace_suffix}.plist"
             self.assertTrue(plist_path.exists())
             plist_text = plist_path.read_text(encoding="utf-8")
             self.assertIn("scripts/sync_obsidian_book.sh", plist_text)

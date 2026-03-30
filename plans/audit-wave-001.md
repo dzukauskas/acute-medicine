@@ -36,7 +36,8 @@
 
 - Finding `1`: completed and committed in `0728ece` (`Normalize canonical artifact paths`).
 - Finding `2`: completed and committed in `c852e55` (`Make bootstrap sync install opt-in`).
-- Finding `7`: completed; kritiniai subprocess entrypointai perkelti į bendrą timeout-aware wrapper sluoksnį ir focused testai praėjo.
+- Finding `7`: completed and committed in `136f0ca` (`Add subprocess timeouts to workflow scripts`).
+- Findings `4/8`: completed and ready to commit; įvestas `repo_config.local.toml` override sluoksnis, generic README/runtime config kontraktas ir worktree-aware sync namespace apsauga.
 
 ## Notes
 

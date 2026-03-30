@@ -21,7 +21,7 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: Codex context continuity and repo-engineering memory
 - Branch: main
-- Last updated: 2026-03-30T19:58:00+03:00
+- Last updated: 2026-03-30T20:18:24+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
@@ -35,6 +35,8 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Įgyvendintas pirmos bangos finding `2`: bootstrap pagal nutylėjimą lieka repo-local, o Obsidian sync integracija keliama į explicit opt-in sluoksnį.
 - Finding `2` užfiksuotas atskiru commit'u `c852e55` (`Make bootstrap sync install opt-in`).
 - Įgyvendintas pirmos bangos finding `7`: kritiniai subprocess keliai perkelti į bendrą timeout-aware wrapper sluoksnį.
+- Finding `7` užfiksuotas atskiru commit'u `136f0ca` (`Add subprocess timeouts to workflow scripts`).
+- Įgyvendintas jungtinis `4/8` sluoksnis: local repo config override ir worktree-aware Obsidian sync namespace hardening.
 <!-- ledger:summary:end -->
 
 ## Current State
@@ -58,6 +60,12 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Pridėtas `workflow_subprocess.py` helperis su trumpu / numatytuoju / ilgu timeout profiliu ir aiškesniais phase-aware klaidų pranešimais.
 - `run_chapter_qa.py`, `validate_adjudication_resolution.py`, PDF/EPUB bootstrap, `render_whimsical_figure.py` ir `register_whimsical_figure.py` kritiniai subprocess kvietimai perjungti į timeout-aware vykdymą.
 - Focused finding `7` testai praėjo: `tests.test_workflow_subprocess`, `tests.test_run_chapter_qa`, `tests.test_validate_adjudication_resolution`, `tests.test_pdf_bootstrap_runtime`, `tests.test_epub_bootstrap_runtime`, `tests.test_render_whimsical_figure`, `tests.test_epub_bootstrap_and_figures`.
+- Finding `7` užfiksuotas atskiru commit'u `136f0ca`, todėl timeout sluoksnis dabar izoliuotas nuo sekančios bangos.
+- `workflow_runtime.py` dabar palaiko optional `repo_config.local.toml` override virš tracked `repo_config.toml` defaults, o `.gitignore` jo nebeseka.
+- Bootstrap/template README nebeįkepa konkretaus workstation Obsidian kelio; vietoj to rodo generic runtime-resolved vault vietą.
+- `workflow_obsidian.py` pridėtas worktree-aware LaunchAgent label suffix ir destination owner marker mechanizmas, kad tas pats default sync katalogas negalėtų būti tyliai perrašytas iš kito clone/worktree.
+- Focused `4/8` testai praėjo: `tests.test_workflow_runtime`, `tests.test_obsidian_sync_safety`, `tests.test_refresh_template_runtime`, `tests.test_shell_entrypoints`, `tests.test_pdf_bootstrap_runtime`, `tests.test_epub_bootstrap_runtime`, `tests.test_epub_bootstrap_and_figures`.
+- `4/8` diff peržiūrėtas kaip vientisas vieno kontrakto pjūvis: local config layering, generic tracked docs ir global sync namespace apsauga.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -71,12 +79,14 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - `audit-wave-001` finding `2` sprendžiamas taip: core bootstrap pagal nutylėjimą lieka repo-local, o globalus Obsidian / `launchd` integracijos žingsnis tampa explicit opt-in per `--install-obsidian-sync`.
 - `audit-wave-001` finding `7` sprendžiamas per bendrą subprocess wrapper sluoksnį su default timeout'ais ir aiškesniais klaidų pranešimais.
 - `audit-wave-001` finding `7` timeout politika naudoja bendrą helper'į ir palieka ilgesnį profilį build tipo veiksmams (`chapter_pack`, `adjudication_pack`), o trumpą profilį lightweight probe veiksmams.
+- `audit-wave-001` finding `4` sprendžiamas per tracked defaults + optional `repo_config.local.toml` override modelį ir per docs/template sluoksnį, kuris nebeįkepa workstation-specific vault kelių.
+- `audit-wave-001` finding `8` sprendžiamas per worktree-aware LaunchAgent label bei destination owner marker'į, kuris blokuoja tylų default sync katalogo perėmimą iš kitos darbo vietos.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Peržiūrėti finding `7` diff dėl scope grynumo ir, jei stabilu, užfiksuoti jį atskiru commit'u.
-- Po finding `7` pereiti prie `repo_config` ir global sync namespace temos (`4/8`).
+- Pereiti prie vėlesnės bangos `3/5/6`: localization policy suderinimo, test environment / CI kontrakto ir test harness gylio.
+- Jei `3/5/6` review atskleis papildomų kraštų, pirmiausia nuspręsti, ar jie telpa į vieną bangą, ar turi būti skaidomi į smulkesnius commit'us.
 - Vėlesnėse bangose spręsti `AGENTS.md` politikos suderinimą, test environment / CI kontraktą ir test harness gylio spragas.
 <!-- ledger:next_steps:end -->
 
