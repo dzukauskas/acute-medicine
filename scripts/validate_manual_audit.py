@@ -3,14 +3,19 @@ from __future__ import annotations
 
 import argparse
 
-from book_workflow_support import (
-    AUDIT_STATUSES,
-    MANUAL_AUDIT_AREAS,
-    activate_book_root,
-    chapter_paths_for_slug,
-    extract_localization_research,
-    parse_markdown_sections,
-    resolve_chapter_slug,
+from workflow_book import chapter_paths_for_slug, resolve_chapter_slug
+from workflow_markdown import parse_markdown_sections
+from workflow_policy import AUDIT_STATUSES, extract_localization_research
+from workflow_rules import activate_book_root
+
+
+MANUAL_AUDIT_AREAS = (
+    "terminija",
+    "kolokacijos",
+    "gramatika",
+    "semantika",
+    "norminė logika",
+    "atviros abejonės",
 )
 
 

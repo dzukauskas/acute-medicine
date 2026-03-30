@@ -13,7 +13,7 @@ SCRIPTS_DIR = REPO_ROOT / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-import book_workflow_support as bws  # noqa: E402
+import workflow_obsidian as wo  # noqa: E402
 
 
 class ObsidianSyncLayoutTests(unittest.TestCase):
@@ -56,7 +56,7 @@ class ObsidianSyncLayoutTests(unittest.TestCase):
             (figures_dir / "f1.png").write_bytes(b"png")
 
             staging_dir = Path(tmp_dir) / "staging"
-            bws.stage_obsidian_sync_tree(book_root, staging_dir)
+            wo.stage_obsidian_sync_tree(book_root, staging_dir)
 
             self.assertTrue((staging_dir / "chapters" / "00 Front Matter" / "001-disclaimer.md").exists())
             self.assertTrue(
@@ -123,7 +123,7 @@ class ObsidianSyncLayoutTests(unittest.TestCase):
             (chapters_dir / "002-chapter-two.md").write_text("# Two\n", encoding="utf-8")
 
             staging_dir = Path(tmp_dir) / "staging"
-            bws.stage_obsidian_sync_tree(book_root, staging_dir)
+            wo.stage_obsidian_sync_tree(book_root, staging_dir)
 
             self.assertTrue((staging_dir / "chapters" / "001-intro.md").exists())
             self.assertTrue((staging_dir / "chapters" / "002-chapter-two.md").exists())

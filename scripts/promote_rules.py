@@ -6,13 +6,12 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-from book_workflow_support import (
+from workflow_book import chapter_number_from_slug, resolve_chapter_slug
+from workflow_policy import load_review_taxonomy_rows
+from workflow_rules import (
     activate_book_root,
-    chapter_number_from_slug,
-    load_review_taxonomy_rows,
     read_tsv,
     require_book_root,
-    resolve_chapter_slug,
     review_taxonomy_path,
 )
 

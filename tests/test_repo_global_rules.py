@@ -15,7 +15,8 @@ SCRIPTS_DIR = REPO_ROOT / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-import book_workflow_support as bws  # noqa: E402
+import workflow_policy as wp  # noqa: E402
+import workflow_rules as wr  # noqa: E402
 
 
 TERMBASE_HEADER = "en\tlt\tnote\tstatus\tbanned_lt\tfirst_use_policy\tsection_scope\texample_lt\tlocal_override_tag\n"
@@ -72,7 +73,7 @@ class RepoGlobalRulesTests(unittest.TestCase):
                 + "Advanced life support\tvietinis specializuotas gaivinimas\tLocal override\tpreferred\tpažangus gaivinimas\tmust_expand_first\tall\tvietinis specializuotas gaivinimas (ALS)\tunit-test\n",
             )
 
-            rows = bws.load_termbase_rows(book_root)
+            rows = wp.load_termbase_rows(book_root)
             als_row = next(row for row in rows if row["en"] == "Advanced life support")
 
             self.assertEqual(als_row["lt"], "vietinis specializuotas gaivinimas")
@@ -87,7 +88,7 @@ class RepoGlobalRulesTests(unittest.TestCase):
                 + "ALS\tvietinis ALS terminas\tAdvanced life support\tlt-first\tLocal override\tyes\tno\t\tvietinis ALS terminas\n",
             )
 
-            rows = bws.load_acronym_rows(book_root)
+            rows = wp.load_acronym_rows(book_root)
             als_row = next(row for row in rows if row["acronym"] == "ALS")
 
             self.assertEqual(als_row["lt"], "vietinis ALS terminas")
@@ -110,7 +111,7 @@ class RepoGlobalRulesTests(unittest.TestCase):
                 + "phrase\tvykdyti stebėjimą\tstebėti\tLocal rule\tphrase\tmedium\tlocal\t\n",
             )
 
-            rows = bws.merge_appended_rows([shared_rows, local_rows])
+            rows = wr.merge_appended_rows([shared_rows, local_rows])
 
             self.assertEqual(len(rows), 2)
             self.assertEqual(rows[0]["banned"], "eskaluoti pagalbą")
@@ -135,14 +136,14 @@ class RepoGlobalRulesTests(unittest.TestCase):
             self.write(local_book_root / "gold_sections" / "local-example.md", "Local example text\n")
 
             with patch.object(
-                bws,
+                wp,
                 "gold_section_index_sources",
                 return_value=[
                     (shared_dir / "index.tsv", shared_dir),
                     (local_book_root / "gold_sections" / "index.tsv", local_book_root / "gold_sections"),
                 ],
             ):
-                rows = bws.load_gold_section_examples(local_book_root)
+                rows = wp.load_gold_section_examples(local_book_root)
 
             self.assertEqual(len(rows), 1)
             self.assertEqual(rows[0]["example_id"], "example-1")
@@ -160,8 +161,8 @@ class RepoGlobalRulesTests(unittest.TestCase):
                 "domain\tprimary_lt_sources\tsecondary_lt_sources\teu_fallback\tuse_for\tnotes\ncustom\tX\tY\tZ\tQ\tlegacy book file\n",
             )
 
-            marker_topics = {row["topic"] for row in bws.load_clinical_policy_markers(book_root)}
-            source_domains = {row["domain"] for row in bws.load_lt_source_map(book_root)}
+            marker_topics = {row["topic"] for row in wp.load_clinical_policy_markers(book_root)}
+            source_domains = {row["domain"] for row in wp.load_lt_source_map(book_root)}
 
             self.assertNotIn("custom", marker_topics)
             self.assertNotIn("custom", source_domains)
@@ -172,10 +173,10 @@ class RepoGlobalRulesTests(unittest.TestCase):
             book_a = self.make_book_root(base, "book-a")
             book_b = self.make_book_root(base, "book-b")
 
-            term_a = next(row for row in bws.load_termbase_rows(book_a) if row["en"] == "Advanced life support")
-            term_b = next(row for row in bws.load_termbase_rows(book_b) if row["en"] == "Advanced life support")
-            acronym_a = next(row for row in bws.load_acronym_rows(book_a) if row["acronym"] == "ALS")
-            acronym_b = next(row for row in bws.load_acronym_rows(book_b) if row["acronym"] == "ALS")
+            term_a = next(row for row in wp.load_termbase_rows(book_a) if row["en"] == "Advanced life support")
+            term_b = next(row for row in wp.load_termbase_rows(book_b) if row["en"] == "Advanced life support")
+            acronym_a = next(row for row in wp.load_acronym_rows(book_a) if row["acronym"] == "ALS")
+            acronym_b = next(row for row in wp.load_acronym_rows(book_b) if row["acronym"] == "ALS")
 
             self.assertEqual(term_a["lt"], "specializuotas gaivinimas")
             self.assertEqual(term_a, term_b)

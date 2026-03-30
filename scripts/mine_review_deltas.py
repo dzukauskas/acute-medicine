@@ -7,7 +7,8 @@ import difflib
 import re
 from pathlib import Path
 
-from book_workflow_support import load_yaml, normalize_key, strip_markdown
+from workflow_book import load_yaml
+from workflow_rules import normalize_key, strip_markdown
 
 
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*)$")

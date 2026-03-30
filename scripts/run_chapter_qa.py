@@ -8,7 +8,8 @@ import sys
 import tempfile
 from pathlib import Path
 
-from book_workflow_support import activate_book_root, chapter_paths_for_slug, load_yaml, normalize_yaml_structure, resolve_chapter_slug
+from workflow_book import chapter_paths_for_slug, load_yaml, normalize_yaml_structure, resolve_chapter_slug
+from workflow_rules import activate_book_root
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent

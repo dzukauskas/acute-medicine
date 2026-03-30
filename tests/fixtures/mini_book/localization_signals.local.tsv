@@ -1,0 +1,3 @@
+source_term	jurisdiction	signal_type	match_mode	pattern	notes
+Drug Tariff	uk	market term	literal	Drug Tariff	Mini fixture signal
+Custom UK Tool	uk	reference tool	literal	Custom UK Tool	Mini fixture signal

@@ -6,7 +6,8 @@ import re
 import sys
 from pathlib import Path
 
-from book_workflow_support import chapter_paths_for_slug, read_tsv, resolve_book_root, resolve_chapter_slug
+from workflow_book import chapter_paths_for_slug, resolve_chapter_slug
+from workflow_rules import read_tsv, resolve_book_root
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]

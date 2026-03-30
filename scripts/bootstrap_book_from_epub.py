@@ -12,13 +12,16 @@ from urllib.parse import unquote, urlsplit
 
 import yaml
 
-from book_workflow_support import REPO_ROOT, ensure_python_module, obsidian_dest_for_title, resolve_repo_path, slugify, write_tsv
+from workflow_rules import resolve_repo_path, slugify, write_tsv
+from workflow_runtime import REPO_ROOT, ensure_python_module, obsidian_dest_for_title
 
 
-ensure_python_module("ebooklib", package_name="EbookLib")
-ensure_python_module("bs4", package_name="beautifulsoup4")
-from ebooklib import ITEM_DOCUMENT, ITEM_IMAGE, epub
-from bs4 import BeautifulSoup, NavigableString, Tag
+ITEM_DOCUMENT = None
+ITEM_IMAGE = None
+epub = None
+BeautifulSoup = None
+NavigableString = None
+Tag = None
 
 
 TEMPLATE_ROOT = REPO_ROOT / "books" / "_template"
@@ -35,6 +38,26 @@ FIGURE_INDEX_FIELDS = [
     "caption_text",
     "notes",
 ]
+
+
+def ensure_epub_runtime_dependencies(*, force_reload: bool = False) -> None:
+    global ITEM_DOCUMENT, ITEM_IMAGE, epub, BeautifulSoup, NavigableString, Tag
+
+    if epub is not None and BeautifulSoup is not None and not force_reload:
+        return
+
+    ensure_python_module("ebooklib", package_name="EbookLib")
+    ensure_python_module("bs4", package_name="beautifulsoup4")
+
+    from bs4 import BeautifulSoup as _BeautifulSoup, NavigableString as _NavigableString, Tag as _Tag
+    from ebooklib import ITEM_DOCUMENT as _ITEM_DOCUMENT, ITEM_IMAGE as _ITEM_IMAGE, epub as _epub
+
+    ITEM_DOCUMENT = _ITEM_DOCUMENT
+    ITEM_IMAGE = _ITEM_IMAGE
+    epub = _epub
+    BeautifulSoup = _BeautifulSoup
+    NavigableString = _NavigableString
+    Tag = _Tag
 
 
 def parse_args() -> argparse.Namespace:
@@ -627,6 +650,7 @@ def install_obsidian_sync(book_root: Path) -> None:
 
 def main() -> int:
     args = parse_args()
+    ensure_epub_runtime_dependencies()
     epub_path = resolve_repo_path(args.epub)
     if not epub_path.exists():
         raise SystemExit(f"Nerastas EPUB: {epub_path}")

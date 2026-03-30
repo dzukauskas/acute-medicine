@@ -5,7 +5,7 @@ import argparse
 import re
 from pathlib import Path
 
-from book_workflow_support import resolve_book_root
+from workflow_rules import resolve_book_root
 
 
 MARKDOWN_LINK_RE = re.compile(r"\[([^\]]*)\]\([^)]+\)")

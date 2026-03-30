@@ -68,7 +68,7 @@ repo_root = Path(sys.argv[1])
 book_root = Path(sys.argv[2])
 sys.path.insert(0, str(repo_root / "scripts"))
 
-from book_workflow_support import book_title_from_readme, default_obsidian_dest
+from workflow_obsidian import book_title_from_readme, default_obsidian_dest
 
 print(book_title_from_readme(book_root))
 print(default_obsidian_dest(book_root))
@@ -89,7 +89,7 @@ dest_dir = sys.argv[3]
 cwd = Path(sys.argv[4])
 sys.path.insert(0, str(repo_root / "scripts"))
 
-from book_workflow_support import validate_obsidian_sync_destination
+from workflow_obsidian import validate_obsidian_sync_destination
 
 print(validate_obsidian_sync_destination(dest_dir, book_root, repo_root=repo_root, cwd=cwd))
 PY
@@ -110,7 +110,7 @@ book_root = Path(sys.argv[2])
 staging_dir = Path(sys.argv[3])
 sys.path.insert(0, str(repo_root / "scripts"))
 
-from book_workflow_support import stage_obsidian_sync_tree
+from workflow_obsidian import stage_obsidian_sync_tree
 
 stage_obsidian_sync_tree(book_root, staging_dir)
 PY

@@ -5,19 +5,22 @@ import argparse
 import re
 from pathlib import Path
 
-from book_workflow_support import (
-    activate_book_root,
-    chapter_paths_for_slug,
-    detect_clinical_policy_topics,
-    detect_source_localization_signals,
+from workflow_book import chapter_paths_for_slug, resolve_chapter_slug
+from workflow_markdown import (
     extract_source_structured_items,
-    load_clinical_policy_markers,
-    load_lt_source_map,
-    normalize_key,
-    require_book_root,
-    resolve_chapter_slug,
     structured_block_id,
     structured_block_type,
+)
+from workflow_policy import (
+    detect_clinical_policy_topics,
+    detect_source_localization_signals,
+    load_clinical_policy_markers,
+    load_lt_source_map,
+)
+from workflow_rules import (
+    activate_book_root,
+    normalize_key,
+    require_book_root,
 )
 
 

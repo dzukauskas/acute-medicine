@@ -14,12 +14,12 @@ import sys
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-import book_workflow_support as bws  # noqa: E402
 import mine_term_candidates  # noqa: E402
 import validate_term_readiness  # noqa: E402
+import workflow_rules as wr  # noqa: E402
 
 
-TERM_CANDIDATE_HEADER = "\t".join(bws.TERM_CANDIDATE_FIELDS) + "\n"
+TERM_CANDIDATE_HEADER = "\t".join(wr.TERM_CANDIDATE_FIELDS) + "\n"
 TERMBASE_HEADER = "en\tlt\tnote\tstatus\tbanned_lt\tfirst_use_policy\tsection_scope\texample_lt\tlocal_override_tag\n"
 AUDIT_ROWS = [
     "| Sritis | Statusas | Pastaba |",
@@ -227,10 +227,10 @@ class TermReadinessGateTests(unittest.TestCase):
             )
 
             mine_term_candidates.refresh_term_candidates_for_chapter(slug, book_root=book_root)
-            rows = bws.read_tsv(book_root / "term_candidates.tsv")
+            rows = wr.read_tsv(book_root / "term_candidates.tsv")
             rows[0]["status"] = "rejected"
             rows[0]["notes"] = "Originalo institucinė santrumpa."
-            bws.write_tsv(book_root / "term_candidates.tsv", bws.TERM_CANDIDATE_FIELDS, rows)
+            wr.write_tsv(book_root / "term_candidates.tsv", wr.TERM_CANDIDATE_FIELDS, rows)
 
             errors = validate_term_readiness.validate_term_readiness(slug, book_root=book_root)
 

@@ -7,7 +7,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-from book_workflow_support import repo_relative_path, require_book_root, resolve_repo_path, slugify, read_tsv, write_tsv
+from workflow_book import repo_relative_path
+from workflow_rules import require_book_root, resolve_repo_path, slugify, read_tsv, write_tsv
 
 
 MANIFEST_FIELDS = [

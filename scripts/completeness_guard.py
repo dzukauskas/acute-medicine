@@ -6,14 +6,12 @@ from collections import defaultdict
 import re
 from pathlib import Path
 
-from book_workflow_support import (
+from workflow_book import chapter_paths_for_slug, load_yaml, resolve_chapter_slug
+from workflow_markdown import parse_markdown_sections
+from workflow_rules import (
     activate_book_root,
-    chapter_paths_for_slug,
-    load_yaml,
     normalize_key,
-    parse_markdown_sections,
     resolve_book_root,
-    resolve_chapter_slug,
 )
 
 

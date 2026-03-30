@@ -16,7 +16,8 @@ from pathlib import Path
 from PIL import Image
 from playwright.sync_api import sync_playwright
 
-from book_workflow_support import default_obsidian_dest, resolve_book_root, resolve_repo_path
+from workflow_obsidian import default_obsidian_dest
+from workflow_rules import resolve_book_root, resolve_repo_path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]

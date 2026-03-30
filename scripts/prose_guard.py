@@ -6,7 +6,7 @@ import csv
 import re
 from pathlib import Path
 
-from book_workflow_support import calque_pattern_paths, disallowed_phrase_paths, disallowed_term_paths, resolve_book_root
+from workflow_rules import calque_pattern_paths, disallowed_phrase_paths, disallowed_term_paths, resolve_book_root
 
 
 Rule = dict[str, str]

@@ -4,15 +4,14 @@ from __future__ import annotations
 import argparse
 import re
 
-from book_workflow_support import (
-    activate_book_root,
-    chapter_paths_for_slug,
+from workflow_book import chapter_paths_for_slug, resolve_chapter_slug
+from workflow_markdown import (
     extract_inventory,
     extract_source_structured_items,
     parse_markdown_sections,
     parse_structured_label,
-    resolve_chapter_slug,
 )
+from workflow_rules import activate_book_root
 
 
 RESEARCH_BUCKETS = ("tables", "figures", "boxes")

@@ -5,22 +5,22 @@ import argparse
 import re
 from pathlib import Path
 
-from book_workflow_support import (
-    TERM_CANDIDATE_FIELDS,
-    activate_book_root,
-    chapter_paths_for_slug,
-    extract_inventory,
+from workflow_book import chapter_paths_for_slug, resolve_chapter_slug
+from workflow_markdown import extract_inventory, parse_markdown_sections
+from workflow_policy import (
     load_acronym_rows,
     load_localization_overrides,
     load_localization_signal_specs,
     load_term_candidate_rows,
     load_termbase_rows,
+)
+from workflow_rules import (
+    TERM_CANDIDATE_FIELDS,
+    activate_book_root,
     normalize_key,
-    parse_markdown_sections,
-    strip_markdown,
     read_tsv,
-    resolve_chapter_slug,
     slugify,
+    strip_markdown,
     term_candidates_path,
     write_tsv,
 )

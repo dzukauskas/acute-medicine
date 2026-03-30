@@ -1,30 +1,35 @@
 ---
 name: medical-book-localization
-description: Use this skill when translating or localizing a medical book, chapter, table, algorithm, or clinical figure into Lithuanian, especially when the result must follow current Lithuanian medical or Lithuanian GMP practice instead of being a literal English translation. Use it for PDF-first workflows, Lithuanian source research, unit conversion, diagram recreation, and anti-calque rewriting.
+description: Use this skill when translating or localizing a medical book, chapter, table, algorithm, or clinical figure into Lithuanian with source-faithful default behavior and tightly constrained LT/EU localization. Use it for PDF-first workflows, Lithuanian source research, unit conversion, diagram recreation, and anti-calque language polishing without free rewriting.
 ---
 
 # Medical Book Localization
 
 Use this skill for chapter-by-chapter Lithuanian localization of medical books and similar clinical source material.
 
+If this repository also defines binding workflow files or repo-level agent rules, follow those first. Treat this skill as an execution layer, not as permission to override stricter repo policy.
+
 ## Core rules
 
 - Treat the original PDF as the canonical source. OCR or extracted markdown can help navigation but never replace reading the real pages.
-- Write each Lithuanian chapter from a blank page unless the user explicitly asks to revise an older draft.
-- Prefer current Lithuanian medical usage and Lithuanian GMP practice when local practice differs from the book.
+- Default to source-faithful translation. Keep the original chapter logic, ordering, rhetorical function, and level of specificity unless a localized exception is explicitly justified.
+- Drafting from a blank page is allowed only as a writing technique. It does not permit free rewriting, summarizing, reordering, or replacing the source with a locally invented structure.
+- Prefer current Lithuanian medical usage when choosing terminology, collocations, and explicitly justified LT/EU replacements. Do not treat local practice as a blanket license to rewrite the source.
 - Keep chapter, table, and figure numbering aligned with the book.
 - Use SI / EU units as the main form. Convert imperial or UK units instead of carrying them over verbatim.
-- Prefer natural Lithuanian medical prose over translation-shaped wording: native collocations, fewer nominalizations, clearer valency, split genitive chains, and active syntax where possible.
+- Prefer natural Lithuanian medical prose over translation-shaped wording, but do not let language polish drift into semantic rewriting.
 - Show English terms sparingly: usually only at the first useful mention of a harder term, not in headings and not as a constant bilingual mirror.
 - Add student-facing term blocks only when a section is genuinely dense or conceptually new.
 
 ## Source priority
 
-1. Lithuanian official sources: SAM, e-seimas, TAR, GMP service, national laws, ministerial standards, approved methodologies.
-2. Lithuanian academic and tertiary-care sources: VU, LSMU, Santaros klinikos, Kauno klinikos, specialist societies, university teaching material.
-3. Current European guidelines.
-4. Current international guidelines.
-5. The source book for structure, scope, and original framing.
+1. The source book remains canonical for meaning, structure, scope, argument order, and original framing.
+2. Lithuanian official sources: SAM, e-seimas, TAR, GMP service, national laws, ministerial standards, approved methodologies.
+3. Lithuanian academic and tertiary-care sources: VU, LSMU, Santaros klinikos, Kauno klinikos, specialist societies, university teaching material.
+4. Current European guidelines.
+5. Current international guidelines.
+
+Use LT/EU sources to lock terminology and to justify explicitly localized normative replacements. Do not demote the source book into a mere thematic reference.
 
 When a source could be outdated, verify the latest version and record exact dates in the research log.
 
@@ -41,7 +46,7 @@ When a source could be outdated, verify the latest version and record exact date
    - `local-context-callout`
    Treat `chart` content as a distinct source block type even when the LT output becomes one summarized local-context block.
 6. If the chapter pack marks `adjudication_candidate` blocks, build or load the chapter-specific `adjudication_pack` before final polishing.
-7. Write the Lithuanian chapter concept-first, not sentence-by-sentence from English.
+7. Draft from the `chapter_pack`, but preserve the source chapter's content order, sentence function, and level of detail. Do not use `chapter_pack` as permission to rewrite concept-first away from the source.
 8. Translate tables fully into markdown when they remain readable.
 9. Recreate figure text, labels, legends, algorithm steps, and `chart` content in Lithuanian.
 10. For each figure, keep exactly one canonical editable source of truth. In this project, the active editable source is the `Whimsical` board recorded in `lt/figures/manifest.tsv`. Do not swap to another diagram tool unless the user explicitly approves that change and the repo workflow allows it.
@@ -52,7 +57,7 @@ When a source could be outdated, verify the latest version and record exact date
 
 ## Language QA
 
-After the first draft, stop following the English sentence shape and rewrite the text as natural Lithuanian medical prose.
+After the first draft, polish translation-shaped language into natural Lithuanian medical prose without changing the source meaning, structure, or normative force.
 
 Watch for translation-shaped patterns such as:
 
@@ -82,4 +87,4 @@ If a chapter is manually corrected after drafting, leave a structured `review_de
 
 - Work one completed chapter cycle at a time.
 - Maintain a per-chapter research log with sources, dates, localization decisions, and unresolved questions.
-- Prefer concise, clinically usable Lithuanian text over literal fidelity to English sentence structure.
+- Prefer concise, clinically usable Lithuanian wording only after the source meaning and structure are preserved. Brevity is not a license to summarize or normalize away original content.

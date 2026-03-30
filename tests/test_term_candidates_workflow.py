@@ -19,11 +19,11 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 import build_chapter_pack  # noqa: E402
-import book_workflow_support as bws  # noqa: E402
 import mine_term_candidates  # noqa: E402
+import workflow_rules as wr  # noqa: E402
 
 
-TERM_CANDIDATE_HEADER = "\t".join(bws.TERM_CANDIDATE_FIELDS) + "\n"
+TERM_CANDIDATE_HEADER = "\t".join(wr.TERM_CANDIDATE_FIELDS) + "\n"
 AUDIT_ROWS = [
     "| Sritis | Statusas | Pastaba |",
     "| --- | --- | --- |",
@@ -170,11 +170,11 @@ class TermCandidateWorkflowTests(unittest.TestCase):
             )
 
             mine_term_candidates.refresh_term_candidates_for_chapter(slug, book_root=book_root)
-            rows = bws.read_tsv(book_root / "term_candidates.tsv")
+            rows = wr.read_tsv(book_root / "term_candidates.tsv")
             rows[0]["proposed_lt"] = "sarginis perfuzijos langas"
             rows[0]["status"] = "approved_local"
             rows[0]["notes"] = "Patvirtinta ranka"
-            bws.write_tsv(book_root / "term_candidates.tsv", bws.TERM_CANDIDATE_FIELDS, rows)
+            wr.write_tsv(book_root / "term_candidates.tsv", wr.TERM_CANDIDATE_FIELDS, rows)
 
             rerun_rows = mine_term_candidates.refresh_term_candidates_for_chapter(slug, book_root=book_root)
 
@@ -256,7 +256,7 @@ class TermCandidateWorkflowTests(unittest.TestCase):
             )
             self.assertEqual(len(pack["term_candidates"]), 1)
             self.assertEqual(pack["term_candidates"][0]["source_term"], "Sentinel perfusion window")
-            candidate_rows = bws.read_tsv(book_root / "term_candidates.tsv")
+            candidate_rows = wr.read_tsv(book_root / "term_candidates.tsv")
             self.assertEqual(len(candidate_rows), 1)
             self.assertEqual(candidate_rows[0]["candidate_kind"], "term")
 

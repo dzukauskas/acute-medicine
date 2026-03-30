@@ -12,7 +12,7 @@ SCRIPTS_DIR = REPO_ROOT / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-import book_workflow_support as bws  # noqa: E402
+import workflow_obsidian as wo  # noqa: E402
 
 
 class ObsidianSyncSafetyTests(unittest.TestCase):
@@ -23,7 +23,7 @@ class ObsidianSyncSafetyTests(unittest.TestCase):
             (book_root / "lt").mkdir(parents=True)
 
             with self.assertRaises(SystemExit):
-                bws.validate_obsidian_sync_destination(
+                wo.validate_obsidian_sync_destination(
                     book_root,
                     book_root,
                     repo_root=repo_root,
@@ -38,7 +38,7 @@ class ObsidianSyncSafetyTests(unittest.TestCase):
             (book_root / "lt").mkdir(parents=True)
 
             with self.assertRaises(SystemExit):
-                bws.validate_obsidian_sync_destination(
+                wo.validate_obsidian_sync_destination(
                     dest_dir,
                     book_root,
                     repo_root=repo_root,
@@ -53,7 +53,7 @@ class ObsidianSyncSafetyTests(unittest.TestCase):
             dest_dir = tmp_path / "obsidian-vault" / "Sample Book"
             (book_root / "lt").mkdir(parents=True)
 
-            resolved = bws.validate_obsidian_sync_destination(
+            resolved = wo.validate_obsidian_sync_destination(
                 dest_dir,
                 book_root,
                 repo_root=repo_root,

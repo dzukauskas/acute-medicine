@@ -16,7 +16,8 @@ Tai reiškia:
 - skyrius neturi būti laisvai perpasakojamas, glaustinamas ar „pagerinamas“ vien dėl sklandesnio stiliaus;
 - lokalizacija taikoma tik ten, kur to tikrai reikia dėl terminijos, jurisdikcijos, rinkos ar teisinio netransferability;
 - UK / Australia / US specifika paprastai paliekama tekste kaip originalo kontekstas, o ne pakeičiama bendromis LT abstrakcijomis;
-- jei reikia nukrypti nuo originalo, nukrypimas turi būti aiškiai užfiksuotas `research` faile.
+- jei reikia nukrypti nuo originalo, nukrypimas turi būti aiškiai užfiksuotas `research` faile;
+- „rašymas nuo švaraus lapo“ leidžiamas tik kaip drafting technika. Jis nėra leidimas perorganizuoti, apibendrinti ar semantiškai perrašyti originalą.
 
 ## Kanoninis šaltinis
 
@@ -48,8 +49,8 @@ Skyrius laikomas baigtu tik kai:
 5. sugeneruotas `chapter_pack`;
 5a. automatiškai atnaujintas `term_candidates.tsv` einamam skyriui;
 5b. jei `term_candidates.tsv` lieka neužrakintų aukštos rizikos terminų ar santrumpų iš `## Rizikingi terminai`, source antraščių ar `Guideline Title` laukų, `chapter_pack` generavimas privalo baigtis klaida iki triage;
-6. lietuviškas skyrius parašytas nuo švaraus lapo pagal `chapter_pack`;
-7. padarytas atskiras anti-calque perrašymas;
+6. lietuviškas skyrius parengtas pagal `chapter_pack`, išlaikant originalo turinio tvarką, funkciją ir detalumo lygį;
+7. atliktas atskiras anti-calque kalbinis polishas, bet ne semantinis perrašymas;
 8. lentelės pilnai išverstos;
 9. schemos, paveikslai ir `chart` tipo originalo grafikai atkurti lietuviškai arba aiškiai sutraukti į LT bloką;
 10. jei skyriuje yra `high-risk` blokų, jiems sugeneruotas `adjudication_pack`;
@@ -128,6 +129,11 @@ Tačiau tai nėra leidimas perrašyti tekstą laisvai. Net ir lokalizuojant:
 - pirmiausia verčiama tai, kas parašyta originale;
 - tik po to minimaliai koreguojama tiek, kiek būtina;
 - jei klinikinė ar teisinė detalė LT praktikoje netransferable, ji turi būti pažymėta kaip originalo kontekstas, o ne nutylėta ar pakeista bendrine formuluote.
+
+Praktinė taisyklė:
+
+- LT/EU šaltiniai nustato leidžiamas lokalizacijos išimtis ir norminius vietinius pakeitimus;
+- pats originalas išlieka kanoninis prasmės, struktūros, argumentų sekos ir detalumo atžvilgiu.
 
 Šiai knygai privalomas LT/EU-first principas:
 

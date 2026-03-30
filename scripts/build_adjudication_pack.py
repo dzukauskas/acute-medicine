@@ -4,13 +4,15 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from book_workflow_support import (
-    activate_book_root,
+from workflow_book import (
     dump_yaml,
-    load_adjudication_profile_rows,
     load_yaml,
-    require_book_root,
     resolve_chapter_slug,
+)
+from workflow_policy import load_adjudication_profile_rows
+from workflow_rules import (
+    activate_book_root,
+    require_book_root,
     split_multi,
 )
 

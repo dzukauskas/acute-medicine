@@ -1,0 +1,3 @@
+source_term	jurisdiction	replacement_mode	local_lt	eu_fallback	scope	reason	source_ref	notes
+Drug Tariff	uk	replace_lt	Lietuvos kompensavimo tvarka		all	LT market label replacement	vlk-test	Mini fixture override
+Custom UK Tool	uk	original_context_callout			all	Keep only as original context	source-book	Mini fixture override

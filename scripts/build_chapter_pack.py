@@ -5,35 +5,41 @@ import argparse
 import re
 from pathlib import Path
 
-from book_workflow_support import (
-    CLINICAL_CLAIM_TYPES,
-    activate_book_root,
+from workflow_book import (
     chapter_number_from_slug,
     chapter_paths_for_slug,
-    detect_source_localization_signals,
     dump_yaml,
+    resolve_chapter_slug,
+    scope_allows,
+)
+from workflow_markdown import (
     extract_inventory,
-    extract_localization_research,
+    metadata_value,
+    parse_markdown_sections,
+    parse_structured_label,
+    structured_block_id,
+    structured_block_type,
+    structured_completion_hint,
+)
+from workflow_policy import (
+    CLINICAL_CLAIM_TYPES,
+    detect_source_localization_signals,
     jurisdiction_to_pack_context,
     load_acronym_rows,
     load_gold_phrase_rows,
     load_gold_section_examples,
     load_localization_overrides,
     load_termbase_rows,
-    metadata_value,
+    extract_localization_research,
     normalize_authority_basis,
     normalize_claim_type,
+)
+from workflow_rules import (
+    activate_book_root,
     normalize_key,
-    parse_markdown_sections,
-    parse_structured_label,
-    resolve_chapter_slug,
-    term_candidates_path,
-    scope_allows,
     slugify,
-    structured_block_id,
-    structured_block_type,
-    structured_completion_hint,
     split_multi,
+    term_candidates_path,
 )
 from mine_term_candidates import refresh_term_candidates_for_chapter
 from validate_chapter_inventory import validate_chapter_inventory_or_raise

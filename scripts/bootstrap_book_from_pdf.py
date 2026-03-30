@@ -10,7 +10,8 @@ from pathlib import Path
 
 import yaml
 
-from book_workflow_support import REPO_ROOT, ensure_python_module, obsidian_dest_for_title, resolve_repo_path
+from workflow_rules import resolve_repo_path
+from workflow_runtime import REPO_ROOT, ensure_python_module, obsidian_dest_for_title
 
 
 ensure_python_module("fitz", package_name="PyMuPDF")

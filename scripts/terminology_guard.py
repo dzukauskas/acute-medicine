@@ -6,19 +6,18 @@ import csv
 import re
 from pathlib import Path
 
-from book_workflow_support import (
+from workflow_book import load_yaml
+from workflow_policy import load_acronym_rows, load_termbase_rows
+from workflow_rules import (
     MARKDOWN_LINK_RE,
     disallowed_phrase_paths,
     disallowed_term_paths,
-    load_acronym_rows,
-    load_termbase_rows,
-    load_yaml,
-    parse_bool,
     read_tsv,
     resolve_book_root,
-    strip_markdown,
     split_multi,
+    strip_markdown,
 )
+from workflow_runtime import parse_bool
 
 
 Rule = dict[str, str]

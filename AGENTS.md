@@ -8,6 +8,7 @@ Binding workflow:
 - Treat `/Users/dzukauskas/Projects/Acute Medicine/books/README.md`, `/Users/dzukauskas/Projects/Acute Medicine/books/_template/workflow.md`, and `/Users/dzukauskas/Projects/Acute Medicine/books/_template/source-priority.md` as operational rules, not optional guidance.
 - Follow `shared/` plus `*.local.tsv` rule architecture exactly.
 - Never reactivate legacy `books/<slug>/*.tsv` active rule files.
+- If any repo-local skill text conflicts with the binding workflow above, `AGENTS.md` plus the binding workflow files take precedence.
 
 Source fidelity:
 - Default to source-faithful translation, not free rewriting.

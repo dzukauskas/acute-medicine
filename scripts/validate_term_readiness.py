@@ -4,12 +4,11 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from book_workflow_support import (
+from workflow_book import resolve_chapter_slug
+from workflow_policy import load_acronym_rows, load_termbase_rows
+from workflow_rules import (
     activate_book_root,
-    load_acronym_rows,
-    load_termbase_rows,
     normalize_key,
-    resolve_chapter_slug,
     term_candidates_path,
 )
 from mine_term_candidates import refresh_term_candidates_for_chapter

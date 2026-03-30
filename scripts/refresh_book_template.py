@@ -6,13 +6,10 @@ import json
 import re
 from pathlib import Path
 
-from book_workflow_support import (
-    REPO_ROOT,
-    book_title_from_readme,
-    default_obsidian_dest,
-    first_source_artifact,
-    resolve_repo_path,
-)
+from workflow_book import first_source_artifact
+from workflow_obsidian import book_title_from_readme, default_obsidian_dest
+from workflow_rules import resolve_repo_path
+from workflow_runtime import REPO_ROOT
 
 
 TEMPLATE_ROOT = REPO_ROOT / "books" / "_template"
@@ -39,6 +36,14 @@ def render_template_text(template_path: Path, context: dict[str, str]) -> str:
     return TOKEN_RE.sub(lambda match: context.get(match.group(1), match.group(0)), text)
 
 
+def template_obsidian_dest_value(book_root: Path) -> str:
+    try:
+        return default_obsidian_dest(book_root).as_posix()
+    except SystemExit:
+        title = book_title_from_readme(book_root)
+        return (Path("__configure_repo_config__") / title).as_posix()
+
+
 def context_for_book(book_root: Path) -> dict[str, str]:
     title = book_title_from_readme(book_root)
     source_artifact = first_source_artifact(book_root)
@@ -51,7 +56,7 @@ def context_for_book(book_root: Path) -> dict[str, str]:
         "BOOK_SOURCE_KIND": source_kind,
         "BOOK_SOURCE_NAME": source_name,
         "BOOK_PDF_NAME": source_name if source_kind == "pdf" else "SOURCE.pdf",
-        "OBSIDIAN_DEST": default_obsidian_dest(book_root).as_posix(),
+        "OBSIDIAN_DEST": template_obsidian_dest_value(book_root),
     }
 
 

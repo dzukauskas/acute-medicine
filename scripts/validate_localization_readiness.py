@@ -3,28 +3,30 @@ from __future__ import annotations
 
 import argparse
 
-from book_workflow_support import (
-    activate_book_root,
+from workflow_book import (
+    chapter_number_from_slug,
+    chapter_paths_for_slug,
+    resolve_chapter_slug,
+    scope_allows,
+)
+from workflow_markdown import (
+    find_section_lines,
+    markdown_table_rows,
+    parse_markdown_sections,
+)
+from workflow_policy import (
     CLAIM_FINAL_RENDERINGS,
     CLINICAL_CLAIM_TYPES,
     LOCALIZATION_REPLACEMENT_MODES,
     STRUCTURED_BLOCK_STRATEGIES,
-    chapter_number_from_slug,
-    chapter_paths_for_slug,
     detect_clinical_policy_topics,
     detect_source_localization_signals,
     extract_localization_research,
-    find_section_lines,
-    localization_override_paths,
     load_localization_overrides,
-    markdown_table_rows,
-    normalize_key,
-    parse_bool,
-    parse_markdown_sections,
-    resolve_chapter_slug,
-    scope_allows,
     term_matches,
 )
+from workflow_rules import activate_book_root, localization_override_paths, normalize_key
+from workflow_runtime import parse_bool
 
 
 MANDATORY_LOCALIZATION_SECTIONS = (
