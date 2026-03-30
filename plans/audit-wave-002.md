@@ -29,13 +29,17 @@
 
 ## Implementation Progress
 
-- Planning phase: tracked planas sukurtas, o `ENGINEERING_LEDGER.md` perjungtas į `audit-wave-002 planning`.
-- First wave: planned.
+- Planning phase: completed in `27bed05` (`Plan audit wave 002`).
+- First wave helper/metadata contract: completed in `18ddbb0` (`Add shared book template helper`).
+- First wave bootstrap/refresh wiring: completed in `3281812` (`Wire book template contract into bootstrap and refresh`).
+- First wave JRCALC backfill: completed in `098aa3d` (`Backfill JRCALC template-managed docs`).
+- First wave parity gate + focused CI: completed in `afefb9f` (`Add book template parity gate`).
+- First wave (`template-contract hardening`): completed.
 - Later wave (`5/6`): planned.
 
 ## Notes
 
-- Šiame etape klasifikacija laikoma pakankamai stabilia pereiti iš findings validavimo į planavimo ir suskaidytos įgyvendinimo sekos fazę.
-- Pirmos bangos tikslas yra vienas shared template kontraktas tarp bootstrap, refresh, tracked metadata ir CI parity vartų.
+- Pirmos bangos tikslas buvo vienas shared template kontraktas tarp bootstrap, refresh, tracked metadata ir CI parity vartų; ši banga uždaryta.
 - `book_metadata.yaml` pirmoje bangoje tampa vieninteliu deklaruotu canonical source truth sluoksniu book lygmenyje.
 - Nepakartotas `tests.test_completeness_guard...` signalas nelaikomas `audit-wave-002` planning faktu ir į šios bangos scope neįtraukiamas.
+- Jei bus tęsiama `audit-wave-002`, kita banga turi liesti tik `5/6` portability / docs clarity sluoksnį, o nebeperdarinėti pirmos bangos template kontrakto.

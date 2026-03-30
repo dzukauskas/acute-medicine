@@ -19,16 +19,17 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: audit-wave-002 planning
+- Theme: audit-wave-002 template-contract hardening
 - Branch: main
-- Last updated: 2026-03-30T22:36:15+03:00
+- Last updated: 2026-03-30T22:45:08+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- `audit-wave-002` perjungta iš findings validavimo į planavimo fazę; tracked planas užfiksuotas `plans/audit-wave-002.md`.
+- `audit-wave-002` pirma banga (`template-contract hardening`) įgyvendinta ir užfiksuota commit'ais `18ddbb0`, `3281812`, `098aa3d` ir `afefb9f`.
 - `audit-wave-002` klasifikacija išlieka: `valid` = 1, 3, 4, 5, 6; `partial` = 2; `invalid` = 7; `needs-clarification` = nėra.
-- Pirma banga pasirinkta kaip vienas `template-contract hardening` branduolys (`1 + 3 + 4`, su `2` kaip partial simptomu), o `5/6` palikti atskirai vėlesnei portability / docs clarity bangai.
+- Pirma banga uždarė bendrą template kontraktą tarp bootstrap, refresh, tracked `book_metadata.yaml` truth sluoksnio ir focused CI parity vartų.
+- `plans/audit-wave-002.md` atnaujintas su pirmos bangos progresu; `5/6` palikti atskirai vėlesnei portability / docs clarity bangai.
 - Supaprastinti ilgų Codex thread'ų darbą šiame repo, atskiriant vertimo ir repo-engineering atminties modelius.
 - Nauja fazė: `audit-wave-001` findings pirmiausia klasifikuoti prieš realų repo, tik po to svarstyti įgyvendinimą.
 - `audit-wave-001` suverifikuota prieš realų repo: patvirtinti portabilumo, bootstrap side-effect, workstation-local config, subprocess timeout ir global sync namespace rizikos sluoksniai.
@@ -51,10 +52,13 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 ## Current State
 <!-- ledger:current_state:start -->
 - `audit-wave-002` findings suklasifikuoti taip: `valid` = 1, 3, 4, 5, 6; `partial` = 2; `invalid` = 7; `needs-clarification` = nėra.
-- Sukurtas tracked planas `plans/audit-wave-002.md`, kuriame pirma banga apibrėžta kaip bendras `template-contract hardening` kontraktas.
-- Patvirtinta reali template-managed docs drift būsena: `books/_template` policy failai ir tracked `books/jrcalc-clinical-guidelines-2025-reference-edition/*` kopijos išsiskyrusios ne kosmetiškai, o focused CI vis tiek žalias.
-- Finding `2` pasitvirtino tik kaip struktūrinė skola: bootstrap ir refresh nenaudoja vieno shared materialization helper'io, bet dabartiniame checkout required `source/*` scaffold katalogai yra tracked ir focused bootstrap testai praeina.
-- Tikslinis `tests.test_completeness_guard.CompletenessGuardTests.test_main_reports_missing_structured_block` pakartotinis paleidimas dabar žalias, todėl tas signalas nelaikomas stabiliu `audit-wave-002` planning faktu.
+- Sukurtas tracked planas `plans/audit-wave-002.md`, o jo pirmos bangos progresas dabar užfiksuotas atskirais commit'ais.
+- Pridėtas shared `workflow_book_template.py` helperis, kuris centralizuoja template manifest, required directories, template render ir `book_metadata.yaml` kontraktą.
+- PDF ir EPUB bootstrap bei `refresh_book_template.py` perjungti ant shared template/materialization kontrakto ir nebeinferina canonical source iš live filesystem.
+- JRCALC book root papildytas tracked `book_metadata.yaml`, o template-managed docs backfill'inti taip, kad sutaptų su template-rendered truth.
+- Pridėtas `tests.test_book_template_parity` ir focused CI job dabar tikrina template-managed docs parity per tracked books.
+- Focused CI ekvivalento paleidimas po pirmos bangos pakeitimų praėjo lokaliai: `51 tests / OK`.
+- Tikslinis `tests.test_completeness_guard.CompletenessGuardTests.test_main_reports_missing_structured_block` pakartotinis paleidimas žalias, todėl tas signalas nelaikomas stabiliu `audit-wave-002` scope faktu.
 - Pridėtas tracked ENGINEERING_LEDGER.md kaip kanoninė repo-engineering būsena.
 - Atskirtas book translation workflow nuo repo engineering workflow dokumentacijos.
 - write_codex_handoff.py paliktas tik kaip papildomas lokalus scratchpad įrankis.
@@ -98,6 +102,7 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Audit findings nebus įgyvendinami aklai; kiekvienas teiginys pirmiausia turi būti klasifikuotas kaip `valid`, `invalid`, `partial` arba `needs-clarification` pagal realų repo.
 - `audit-wave-002` šiame etape laikoma nauja repo-engineering banga, bet ne nauja technine tema už jos ribų, todėl validavimo darbą logiška tęsti šiame pačiame thread, kol nepasikeis scope.
 - `audit-wave-002` pirma įgyvendinimo banga užrakinama kaip vienas `template-contract hardening` branduolys: findings `1 + 3 + 4`, o finding `2` laikomas partial to paties kontrakto simptomu, ne atskira banga.
+- `audit-wave-002` pirma banga laikoma užbaigta, kai shared template helper, metadata truth sluoksnis, JRCALC backfill ir parity gate visi kartu yra žali focused suite kontekste.
 - `audit-wave-002` findings `5/6` sąmoningai paliekami atskirai vėlesnei portability / docs clarity bangai.
 - `audit-wave-002` finding `2` laikomas tik dalinai teisingu: shared materialization kontraktas tarp bootstrap ir refresh tikrai išsiskyręs, bet reportuotas dabartinis live failure nepasitvirtino, nes template required katalogai šiame checkout'e yra tracked ir bootstrap testai praeina.
 - `audit-wave-002` finding `7` laikomas neteisingu: `handoffs/README.md` repo egzistuoja ir yra tracked, todėl continuity modelio reference nėra sulūžęs.
@@ -113,9 +118,9 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Pirmiausia įvesti shared `workflow_book_template.py` helperį ir `book_metadata.yaml` kontraktą be bootstrap/refresh perjungimo.
-- Tada perjungti PDF/EPUB bootstrap bei refresh ant shared template/materialization ir metadata truth sluoksnio.
-- Po runtime/helper sluoksnio backfill'inti tracked JRCALC docs ir įvesti parity gate testą bei focused CI atnaujinimą.
+- `audit-wave-002` pirmą bangą laikyti uždaryta.
+- Jei bus tęsiamas `audit-wave-002`, kitą darbą planuoti tik kaip atskirą `5/6` portability / docs clarity bangą.
+- Kai bus patogu, po pirmo realaus push patikrinti GitHub Actions workflow rezultatą, nes focused CI šioje bangoje verifikuotas lokaliai, bet dar ne live run'u.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
