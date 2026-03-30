@@ -194,8 +194,8 @@ Leistini `Statusas`:
 - [ ] Sugeneruotas `chapter_pack`
 - [ ] Jei reikia, sugeneruotas `adjudication_pack`
 - [ ] Jei sugeneruotas `adjudication_pack`, palikta `## Adjudication sprendimai` sekcija fiksuotu `- block_id | pasirinkimas | priežastis` formatu
-- [ ] Lietuviškas skyrius parašytas nuo švaraus lapo
-- [ ] Padarytas atskiras anti-calque perrašymas
+- [ ] Lietuviškas skyrius parengtas pagal `chapter_pack`, išlaikant originalo struktūrą ir detalumo lygį
+- [ ] Padarytas atskiras anti-calque kalbinis polishas, ne semantinis perrašymas
 - [ ] Lentelės išverstos
 - [ ] Paveikslai / schemos atkurti lietuviškai
 - [ ] Numeracija atitinka knygą

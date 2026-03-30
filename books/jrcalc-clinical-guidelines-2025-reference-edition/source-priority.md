@@ -1,13 +1,21 @@
 # Šaltinių Prioritetas
 
 Šis failas apibrėžia ne tik bendrą prioritetą, bet ir kanoninį LT-source branduolį, kuriuo turi remtis kiekviena nauja knyga.
+Čia aprašytos taisyklės šiame repo yra privalomos. Jos nėra rekomendaciniai patarimai ar „best effort“ gairės.
 
 Greita taisyklė:
 
-1. norminiam LT tekstui pirmiausia naudoti Lietuvos oficialius šaltinius;
-2. jei jų nepakanka, naudoti Lietuvos universitetinius / tretinio lygio šaltinius;
-3. jei LT sluoksnis per silpnas ar per senas, pereiti į Europos gaires;
-4. originali knyga naudojama struktūrai ir kontekstui, ne vietinės normos nustatymui.
+1. pati originali knyga išlieka kanoninis šaltinis prasmės, struktūros, argumentų sekos ir detalumo atžvilgiu;
+2. norminiams LT pakeitimams pirmiausia naudoti Lietuvos oficialius šaltinius;
+3. jei jų nepakanka, naudoti Lietuvos universitetinius / tretinio lygio šaltinius;
+4. jei LT sluoksnis per silpnas ar per senas, pereiti į Europos gaires;
+5. originali knyga nėra nustumiama vietinių šaltinių. Ji ir toliau valdo tai, kas apskritai buvo pasakyta originale; LT/EU šaltiniai sprendžia tik tai, kaip leidžiama lokalizuoti netransferable turinį.
+
+Tai reiškia:
+
+- drafteris nepradeda „naujo lietuviško skyriaus“ nepriklausomai nuo originalo;
+- „rašymas nuo švaraus lapo“ gali būti naudojamas tik kaip technika tvarkingam LT tekstui suformuoti pagal `chapter_pack`;
+- ši technika negali būti naudojama laisvam perpasakojimui, glaustinimui ar originalo pakeitimui vietine abstrakcija.
 
 ## LT-source branduolio žemėlapis
 
@@ -16,6 +24,7 @@ Repo-global failas:
 - `shared/localization/lt_source_map.tsv`
 
 Kiekviename `research/<slug>.md` faile turi būti aiškiai užrašyta, kuriuo šio žemėlapio keliu buvo remtasi.
+Jei skyriuje yra aukštos rizikos terminas ar santrumpa, kurio LT atitikmuo nėra aktyvioje bazėje, prieš draftą reikia arba užrakinti jį `shared/lexicon/*.tsv` / `*.local.tsv`, arba aiškiai atmesti `term_candidates.tsv` faile kaip ne terminologinį ar tik originalo-konteksto vienetą.
 
 Praktinis pirmas žingsnis prieš pildant research:
 
@@ -27,6 +36,13 @@ Checklist failas nepriima sprendimų už žmogų, bet automatiškai surenka:
 - preliminarius norminių claim tipų kandidatus;
 - struktūrinių blokų `block_id`;
 - rekomenduojamus LT-source kelius pagal šį žemėlapį.
+
+Praktinis pirmas žingsnis prieš drafting:
+
+- paleisti `python3 scripts/build_chapter_pack.py --book-root books/<slug> <chapter>`;
+- jei pack generavimas sustoja dėl terminijos readiness klaidos, pirmiausia išspręsti terminų / santrumpų triage, o ne tęsti rašymą ranka apeinant vartus.
+- jei angliškas medicininis terminas dar nėra aktyvioje bazėje, jo LT atitikmuo privalo būti patikrintas interneto LT šaltiniuose pagal šį prioritetą; spėjimas ar laisva improvizacija neleidžiami.
+- jei vietinė praktika skiriasi nuo knygos, skirtumas pirmiausia užfiksuojamas `research` faile, o pagrindinis LT tekstas koreguojamas tik tiek, kiek leidžia binding workflow.
 
 ### 1. Paramediko kompetencija ir GMP
 
