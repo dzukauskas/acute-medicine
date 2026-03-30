@@ -220,6 +220,12 @@ exit 0
             self.write(repo_root / "codex" / "skills" / "sample-skill" / "SKILL.md", "# Sample skill\n")
 
             self.write_executable(
+                bin_dir / "uname",
+                """#!/bin/sh
+echo Darwin
+""",
+            )
+            self.write_executable(
                 bin_dir / "brew",
                 """#!/bin/sh
 echo "brew:$@" >> "$FAKE_LOG"
