@@ -33,6 +33,7 @@ jobs:
           python -m unittest \
             tests.test_workflow_runtime \
             tests.test_obsidian_sync_safety \
+            tests.test_book_template_parity \
             tests.test_refresh_template_runtime \
             tests.test_shell_entrypoints \
             tests.test_portable_canonical_artifacts \
