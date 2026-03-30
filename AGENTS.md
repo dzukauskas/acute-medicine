@@ -15,7 +15,9 @@ Source fidelity:
 - Do not summarize, simplify, reorganize, or generalize the original unless the source is clearly non-transferable and the change is explicitly marked in research.
 - Keep the original section logic, ordering, rhetorical function, and level of specificity whenever Lithuanian allows it.
 - Localization is a constrained exception layer, not the default writing mode.
-- UK-specific, market-specific, or legal-context content should usually stay in the LT text as original context, not be replaced with broad Lithuanian generalities.
+- Source-faithful after LT/EU normalization means preserving the original meaning, structure, rhetorical role, and detail level, not preserving foreign-market normativity in the main LT prose.
+- UK-specific, market-specific, or legal-context content cannot remain in the main LT text as if it were a Lithuanian / ES norminis standartas.
+- If such source context is worth retaining, keep it only in an explicitly marked `Originalo kontekstas` block and record the reasoning in `research`.
 
 Terminology rules:
 - Never guess Lithuanian medical terminology.
