@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import base64
 import importlib.util
-import subprocess
 import sys
 import tempfile
 import textwrap
@@ -25,6 +24,7 @@ if str(TESTS_DIR) not in sys.path:
 
 import bootstrap_book_from_epub as epub_bootstrap  # noqa: E402
 import register_whimsical_figure as figure_register  # noqa: E402
+from workflow_subprocess import WorkflowSubprocessError  # noqa: E402
 from workflow_test_utils import silence_stdio  # noqa: E402
 
 
@@ -310,7 +310,7 @@ class RegisterWhimsicalFigureTests(unittest.TestCase):
             )
 
             def failing_render(*_args: object) -> None:
-                raise subprocess.CalledProcessError(1, ["render_whimsical_figure.py"])
+                raise WorkflowSubprocessError("render registered figure timed out after 300s.")
 
             with (
                 patch.object(figure_register, "repo_relative_path", lambda path: path.resolve().relative_to(temp_root.resolve()).as_posix()),
@@ -333,6 +333,24 @@ class RegisterWhimsicalFigureTests(unittest.TestCase):
 
             manifest_text = (book_root / "lt" / "figures" / "manifest.tsv").read_text(encoding="utf-8")
             self.assertEqual(manifest_text, MANIFEST_HEADER)
+
+    def test_render_registered_figure_uses_timeout_wrapped_runner(self) -> None:
+        book_root = Path("/tmp/test-book")
+
+        with patch.object(figure_register, "run_checked_subprocess") as run_mock:
+            figure_register.render_registered_figure(book_root, "figure-1")
+
+        run_mock.assert_called_once_with(
+            [
+                sys.executable,
+                str(REPO_ROOT / "scripts" / "render_whimsical_figure.py"),
+                "--book-root",
+                str(book_root),
+                "figure-1",
+            ],
+            phase="render registered figure",
+            timeout=figure_register.DEFAULT_TIMEOUT_SECONDS,
+        )
 
 
 if __name__ == "__main__":

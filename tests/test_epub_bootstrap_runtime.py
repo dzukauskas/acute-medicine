@@ -14,6 +14,7 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 import bootstrap_book_from_epub as epub_bootstrap  # noqa: E402
+from workflow_subprocess import WorkflowSubprocessError  # noqa: E402
 
 
 class EpubBootstrapRuntimeTests(unittest.TestCase):
@@ -43,3 +44,38 @@ class EpubBootstrapRuntimeTests(unittest.TestCase):
                 epub_bootstrap.install_obsidian_sync(Path("/tmp/book-root"))
 
         self.assertIn("tik macOS", str(ctx.exception))
+
+    def test_install_obsidian_sync_uses_timeout_wrapped_runner(self) -> None:
+        book_root = REPO_ROOT / "books" / "test-book"
+
+        with (
+            patch.object(epub_bootstrap.sys, "platform", "darwin"),
+            patch.object(epub_bootstrap, "run_checked_subprocess") as run_mock,
+        ):
+            epub_bootstrap.install_obsidian_sync(book_root)
+
+        run_mock.assert_called_once_with(
+            [
+                str(REPO_ROOT / "scripts" / "install_obsidian_sync_agent.sh"),
+                "--book-root",
+                "books/test-book",
+            ],
+            phase="install Obsidian sync agent",
+            timeout=epub_bootstrap.DEFAULT_TIMEOUT_SECONDS,
+        )
+
+    def test_install_obsidian_sync_converts_runner_failure_to_system_exit(self) -> None:
+        book_root = REPO_ROOT / "books" / "test-book"
+
+        with (
+            patch.object(epub_bootstrap.sys, "platform", "darwin"),
+            patch.object(
+                epub_bootstrap,
+                "run_checked_subprocess",
+                side_effect=WorkflowSubprocessError("install Obsidian sync agent timed out after 300s."),
+            ),
+        ):
+            with self.assertRaises(SystemExit) as ctx:
+                epub_bootstrap.install_obsidian_sync(book_root)
+
+        self.assertIn("timed out after 300s", str(ctx.exception))

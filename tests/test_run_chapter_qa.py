@@ -19,6 +19,7 @@ if str(TESTS_DIR) not in sys.path:
     sys.path.insert(0, str(TESTS_DIR))
 
 import run_chapter_qa  # noqa: E402
+from workflow_subprocess import WorkflowSubprocessError  # noqa: E402
 from workflow_test_utils import copy_mini_book, drop_local_termbase_entry, run_script, seed_canonical_artifacts, silence_stdio  # noqa: E402
 
 
@@ -47,8 +48,11 @@ class RunChapterQaTests(unittest.TestCase):
             pack_path.write_text("chapter_slug: 001-mini\n", encoding="utf-8")
             labels: list[str] = []
 
-            def fake_run_step(label: str, _: list[str]) -> None:
+            step_timeouts: dict[str, int] = {}
+
+            def fake_run_step(label: str, _: list[str], *, timeout: int = run_chapter_qa.DEFAULT_TIMEOUT_SECONDS) -> None:
                 labels.append(label)
+                step_timeouts[label] = timeout
 
             with (
                 patch.object(run_chapter_qa, "parse_args", return_value=Namespace(book_root=str(tmp_path / "book"), chapter="001-mini")),
@@ -64,6 +68,9 @@ class RunChapterQaTests(unittest.TestCase):
 
             self.assertEqual(result, 0)
             self.assertEqual(labels, EXPECTED_STEPS)
+            self.assertEqual(step_timeouts["fresh chapter_pack build"], run_chapter_qa.LONG_TIMEOUT_SECONDS)
+            self.assertEqual(step_timeouts["adjudication resolution"], run_chapter_qa.LONG_TIMEOUT_SECONDS)
+            self.assertEqual(step_timeouts["inventory validation"], run_chapter_qa.DEFAULT_TIMEOUT_SECONDS)
 
     def test_main_fails_fast_on_first_failed_step(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -74,7 +81,7 @@ class RunChapterQaTests(unittest.TestCase):
             pack_path.write_text("chapter_slug: 001-mini\n", encoding="utf-8")
             labels: list[str] = []
 
-            def fake_run_step(label: str, _: list[str]) -> None:
+            def fake_run_step(label: str, _: list[str], *, timeout: int = run_chapter_qa.DEFAULT_TIMEOUT_SECONDS) -> None:
                 labels.append(label)
                 if label == "localization readiness":
                     raise RuntimeError("localization readiness failed with exit code 1.")
@@ -93,6 +100,17 @@ class RunChapterQaTests(unittest.TestCase):
                         run_chapter_qa.main()
 
             self.assertEqual(labels, ["inventory validation", "localization readiness"])
+
+    def test_run_step_surfaces_timeout_message(self) -> None:
+        with patch.object(
+            run_chapter_qa,
+            "run_subprocess",
+            side_effect=WorkflowSubprocessError("inventory validation timed out after 30s while running `python step.py`."),
+        ):
+            with self.assertRaises(RuntimeError) as ctx:
+                run_chapter_qa.run_step("inventory validation", ["python", "step.py"])
+
+        self.assertIn("timed out after 30s", str(ctx.exception))
 
     def test_main_rejects_stale_canonical_pack(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

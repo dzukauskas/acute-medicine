@@ -35,7 +35,8 @@
 ## Implementation Progress
 
 - Finding `1`: completed and committed in `0728ece` (`Normalize canonical artifact paths`).
-- Finding `2`: completed; bootstrap entrypointai perkelti į explicit `--install-obsidian-sync` semantiką ir focused testai praėjo.
+- Finding `2`: completed and committed in `c852e55` (`Make bootstrap sync install opt-in`).
+- Finding `7`: completed; kritiniai subprocess entrypointai perkelti į bendrą timeout-aware wrapper sluoksnį ir focused testai praėjo.
 
 ## Notes
 

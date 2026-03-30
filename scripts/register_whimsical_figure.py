@@ -3,12 +3,12 @@ from __future__ import annotations
 
 import argparse
 import re
-import subprocess
 import sys
 from pathlib import Path
 
 from workflow_book import repo_relative_path
 from workflow_rules import require_book_root, resolve_repo_path, slugify, read_tsv, write_tsv
+from workflow_subprocess import DEFAULT_TIMEOUT_SECONDS, WorkflowSubprocessError, run_checked_subprocess
 
 
 MANIFEST_FIELDS = [
@@ -130,7 +130,7 @@ def rollback_manifest(book_root: Path, original_text: str) -> None:
 
 
 def render_registered_figure(book_root: Path, figure_id: str) -> None:
-    subprocess.run(
+    run_checked_subprocess(
         [
             sys.executable,
             str(Path(__file__).resolve().with_name("render_whimsical_figure.py")),
@@ -138,7 +138,8 @@ def render_registered_figure(book_root: Path, figure_id: str) -> None:
             str(book_root),
             figure_id,
         ],
-        check=True,
+        phase="render registered figure",
+        timeout=DEFAULT_TIMEOUT_SECONDS,
     )
 
 
@@ -161,11 +162,11 @@ def main() -> int:
     original_text = append_manifest_row(book_root, new_row)
     try:
         render_registered_figure(book_root, figure_id)
-    except subprocess.CalledProcessError as exc:
+    except WorkflowSubprocessError as exc:
         rollback_manifest(book_root, original_text)
         raise SystemExit(
             f"Nepavyko sugeneruoti PNG po manifest registracijos; manifest atstatytas. "
-            f"Render komanda baigėsi kodu {exc.returncode}."
+            f"{exc}"
         ) from exc
 
     print(f"Registered {figure_id} -> {new_row['png_path']}")

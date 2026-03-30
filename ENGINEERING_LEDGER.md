@@ -21,7 +21,7 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: Codex context continuity and repo-engineering memory
 - Branch: main
-- Last updated: 2026-03-30T20:02:00+03:00
+- Last updated: 2026-03-30T19:58:00+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
@@ -33,6 +33,8 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Įgyvendintas pirmos bangos finding `1`: canonical artefaktų path laukai normalizuoti į stabilų book-relative formatą be host-specific prefixų.
 - Finding `1` užfiksuotas atskiru commit'u `0728ece` (`Normalize canonical artifact paths`).
 - Įgyvendintas pirmos bangos finding `2`: bootstrap pagal nutylėjimą lieka repo-local, o Obsidian sync integracija keliama į explicit opt-in sluoksnį.
+- Finding `2` užfiksuotas atskiru commit'u `c852e55` (`Make bootstrap sync install opt-in`).
+- Įgyvendintas pirmos bangos finding `7`: kritiniai subprocess keliai perkelti į bendrą timeout-aware wrapper sluoksnį.
 <!-- ledger:summary:end -->
 
 ## Current State
@@ -52,7 +54,10 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Finding `1` atskirtas į savarankišką commit'ą `0728ece`, todėl nuo jo šalutinis drift jau izoliuotas.
 - Finding `2` pakeičia PDF ir EPUB bootstrap kontraktą: be `--install-obsidian-sync` jie nebeįdiegia globalaus sync agento, o explicit install leidžiamas tik macOS.
 - Focused bootstrap testai finding `2` sluoksniui praėjo: `tests.test_pdf_bootstrap_runtime`, `tests.test_epub_bootstrap_runtime`, `tests.test_epub_bootstrap_and_figures`, `tests.test_shell_entrypoints`.
-- Finding `2` paruoštas atskiram commit'ui be papildomo šalutinio drift.
+- Finding `2` užfiksuotas atskiru commit'u `c852e55`, todėl pirmos bangos bootstrap side-effect sluoksnis jau izoliuotas.
+- Pridėtas `workflow_subprocess.py` helperis su trumpu / numatytuoju / ilgu timeout profiliu ir aiškesniais phase-aware klaidų pranešimais.
+- `run_chapter_qa.py`, `validate_adjudication_resolution.py`, PDF/EPUB bootstrap, `render_whimsical_figure.py` ir `register_whimsical_figure.py` kritiniai subprocess kvietimai perjungti į timeout-aware vykdymą.
+- Focused finding `7` testai praėjo: `tests.test_workflow_subprocess`, `tests.test_run_chapter_qa`, `tests.test_validate_adjudication_resolution`, `tests.test_pdf_bootstrap_runtime`, `tests.test_epub_bootstrap_runtime`, `tests.test_render_whimsical_figure`, `tests.test_epub_bootstrap_and_figures`.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -64,12 +69,13 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Audit findings nebus įgyvendinami aklai; kiekvienas teiginys pirmiausia turi būti klasifikuotas kaip `valid`, `invalid`, `partial` arba `needs-clarification` pagal realų repo.
 - `audit-wave-001` 3-iasis finding'as laikomas tik dalinai teisingu: book workflow failai jau duoda LT/EU-first operacinį default'ą, bet `AGENTS.md` formuluotė lieka dviprasmė ir turi būti suderinta.
 - `audit-wave-001` finding `2` sprendžiamas taip: core bootstrap pagal nutylėjimą lieka repo-local, o globalus Obsidian / `launchd` integracijos žingsnis tampa explicit opt-in per `--install-obsidian-sync`.
-- `audit-wave-001` finding `7` bus sprendžiamas per bendrą subprocess wrapper sluoksnį su default timeout'ais ir aiškesniais klaidų pranešimais.
+- `audit-wave-001` finding `7` sprendžiamas per bendrą subprocess wrapper sluoksnį su default timeout'ais ir aiškesniais klaidų pranešimais.
+- `audit-wave-001` finding `7` timeout politika naudoja bendrą helper'į ir palieka ilgesnį profilį build tipo veiksmams (`chapter_pack`, `adjudication_pack`), o trumpą profilį lightweight probe veiksmams.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Užfiksuoti finding `2` atskiru commit'u ir tada pereiti prie subprocess timeout sluoksnio (`7`).
+- Peržiūrėti finding `7` diff dėl scope grynumo ir, jei stabilu, užfiksuoti jį atskiru commit'u.
 - Po finding `7` pereiti prie `repo_config` ir global sync namespace temos (`4/8`).
 - Vėlesnėse bangose spręsti `AGENTS.md` politikos suderinimą, test environment / CI kontraktą ir test harness gylio spragas.
 <!-- ledger:next_steps:end -->

@@ -5,7 +5,6 @@ import argparse
 import json
 import re
 import shutil
-import subprocess
 import sys
 import warnings
 from pathlib import Path
@@ -14,6 +13,7 @@ import yaml
 
 from workflow_rules import resolve_repo_path
 from workflow_runtime import REPO_ROOT, ensure_python_module, obsidian_dest_for_title
+from workflow_subprocess import DEFAULT_TIMEOUT_SECONDS, WorkflowSubprocessError, run_checked_subprocess
 
 
 fitz = None
@@ -473,14 +473,18 @@ def install_obsidian_sync(book_root: Path) -> None:
             "Paleiskite bootstrap be `--install-obsidian-sync`."
         )
     book_root_rel = book_root.relative_to(REPO_ROOT).as_posix()
-    subprocess.run(
-        [
-            str(REPO_ROOT / "scripts" / "install_obsidian_sync_agent.sh"),
-            "--book-root",
-            book_root_rel,
-        ],
-        check=True,
-    )
+    try:
+        run_checked_subprocess(
+            [
+                str(REPO_ROOT / "scripts" / "install_obsidian_sync_agent.sh"),
+                "--book-root",
+                book_root_rel,
+            ],
+            phase="install Obsidian sync agent",
+            timeout=DEFAULT_TIMEOUT_SECONDS,
+        )
+    except WorkflowSubprocessError as exc:
+        raise SystemExit(str(exc)) from exc
 
 
 def main() -> int:

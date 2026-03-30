@@ -4,6 +4,7 @@ from __future__ import annotations
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -14,6 +15,7 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 import validate_adjudication_resolution  # noqa: E402
+from workflow_subprocess import WorkflowSubprocessError  # noqa: E402
 
 
 class ValidateAdjudicationResolutionTests(unittest.TestCase):
@@ -56,3 +58,16 @@ class ValidateAdjudicationResolutionTests(unittest.TestCase):
 
             self.assertEqual(len(errors), 1)
             self.assertIn("trūksta adjudication sprendimo block `block-1`", errors[0])
+
+    def test_run_build_surfaces_timeout_message(self) -> None:
+        with patch.object(
+            validate_adjudication_resolution,
+            "run_subprocess",
+            side_effect=WorkflowSubprocessError(
+                "fresh adjudication_pack build timed out after 900s while running `python build_adjudication_pack.py`."
+            ),
+        ):
+            with self.assertRaises(SystemExit) as ctx:
+                validate_adjudication_resolution.run_build("/tmp/book", "001-mini", Path("/tmp/out.yaml"))
+
+        self.assertIn("timed out after 900s", str(ctx.exception))

@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import argparse
 import os
-import subprocess
 import sys
 import tempfile
 from pathlib import Path
@@ -14,6 +13,12 @@ from workflow_policy import extract_adjudication_decisions
 from workflow_rules import (
     activate_book_root,
     require_book_root,
+)
+from workflow_subprocess import (
+    LONG_TIMEOUT_SECONDS,
+    WorkflowSubprocessError,
+    format_failure_message,
+    run_subprocess,
 )
 
 
@@ -35,12 +40,25 @@ def run_build(book_root: str, slug: str, out_path: Path) -> None:
     if book_root:
         args.extend(["--book-root", book_root])
     args.extend([slug, "--out", str(out_path)])
-    completed = subprocess.run(args, capture_output=True, text=True)
+    try:
+        completed = run_subprocess(
+            args,
+            phase="fresh adjudication_pack build",
+            timeout=LONG_TIMEOUT_SECONDS,
+            capture_output=True,
+            text=True,
+        )
+    except WorkflowSubprocessError as exc:
+        raise SystemExit(str(exc)) from exc
     if completed.returncode != 0:
         raise SystemExit(
-            completed.stderr.strip()
-            or completed.stdout.strip()
-            or f"build_adjudication_pack.py failed for {slug}."
+            format_failure_message(
+                "fresh adjudication_pack build",
+                args,
+                completed.returncode,
+                stdout=completed.stdout,
+                stderr=completed.stderr,
+            )
         )
 
 

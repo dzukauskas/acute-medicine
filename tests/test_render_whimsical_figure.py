@@ -173,6 +173,42 @@ class RenderWhimsicalFigureTests(unittest.TestCase):
             self.assertEqual(sync_calls[0][1].resolve(), book_root.resolve())
             self.assertTrue((temp_root / "books" / "test-book" / "lt" / "figures" / "figure-1.png").exists())
 
+    def test_ensure_inkscape_uses_short_timeout(self) -> None:
+        with patch.object(render_whimsical, "run_checked_subprocess") as run_mock:
+            render_whimsical.ensure_inkscape()
+
+        run_mock.assert_called_once_with(
+            ["inkscape", "--version"],
+            phase="probe Inkscape runtime",
+            timeout=render_whimsical.SHORT_TIMEOUT_SECONDS,
+            capture_output=True,
+            text=True,
+        )
+
+    def test_sync_obsidian_uses_timeout_wrapped_runner(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir).resolve()
+            book_root = temp_root / "books" / "test-book"
+            book_root.mkdir(parents=True, exist_ok=True)
+
+            with (
+                patch.object(render_whimsical, "REPO_ROOT", temp_root),
+                patch.object(render_whimsical, "run_checked_subprocess") as run_mock,
+            ):
+                render_whimsical.sync_obsidian(temp_root / "vault" / "Test Book", book_root)
+
+        run_mock.assert_called_once_with(
+            [
+                str(temp_root / "scripts" / "sync_obsidian_book.sh"),
+                "--book-root",
+                "books/test-book",
+                "--dest",
+                str(temp_root / "vault" / "Test Book"),
+            ],
+            phase="sync Obsidian book",
+            timeout=render_whimsical.DEFAULT_TIMEOUT_SECONDS,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

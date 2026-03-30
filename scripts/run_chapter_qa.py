@@ -3,13 +3,19 @@ from __future__ import annotations
 
 import argparse
 import os
-import subprocess
 import sys
 import tempfile
 from pathlib import Path
 
 from workflow_book import chapter_paths_for_slug, load_yaml, normalize_yaml_structure, resolve_chapter_slug
 from workflow_rules import activate_book_root
+from workflow_subprocess import (
+    DEFAULT_TIMEOUT_SECONDS,
+    LONG_TIMEOUT_SECONDS,
+    WorkflowSubprocessError,
+    format_failure_message,
+    run_subprocess,
+)
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -24,14 +30,31 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def run_step(label: str, args: list[str]) -> None:
-    completed = subprocess.run(args, capture_output=True, text=True)
+def run_step(label: str, args: list[str], *, timeout: int = DEFAULT_TIMEOUT_SECONDS) -> None:
+    try:
+        completed = run_subprocess(
+            args,
+            phase=label,
+            timeout=timeout,
+            capture_output=True,
+            text=True,
+        )
+    except WorkflowSubprocessError as exc:
+        raise RuntimeError(str(exc)) from exc
     if completed.stdout:
         print(completed.stdout.rstrip())
     if completed.stderr:
         print(completed.stderr.rstrip(), file=sys.stderr)
     if completed.returncode != 0:
-        raise RuntimeError(f"{label} failed with exit code {completed.returncode}.")
+        raise RuntimeError(
+            format_failure_message(
+                label,
+                args,
+                completed.returncode,
+                stdout=completed.stdout,
+                stderr=completed.stderr,
+            )
+        )
 
 
 def main() -> int:
@@ -74,6 +97,7 @@ def main() -> int:
                 "--out",
                 str(temp_pack),
             ],
+            timeout=LONG_TIMEOUT_SECONDS,
         )
 
         canonical = normalize_yaml_structure(load_yaml(pack_path))
@@ -93,6 +117,7 @@ def main() -> int:
                 *([] if not book_root else ["--book-root", book_root]),
                 slug,
             ],
+            timeout=LONG_TIMEOUT_SECONDS,
         )
 
         run_step(

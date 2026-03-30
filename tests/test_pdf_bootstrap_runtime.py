@@ -29,6 +29,7 @@ warnings.filterwarnings(
 )
 
 import bootstrap_book_from_pdf as pdf_bootstrap  # noqa: E402
+from workflow_subprocess import WorkflowSubprocessError  # noqa: E402
 from workflow_test_utils import silence_stdio  # noqa: E402
 
 
@@ -83,6 +84,41 @@ class PdfBootstrapRuntimeTests(unittest.TestCase):
                 pdf_bootstrap.install_obsidian_sync(Path("/tmp/book-root"))
 
         self.assertIn("tik macOS", str(ctx.exception))
+
+    def test_install_obsidian_sync_uses_timeout_wrapped_runner(self) -> None:
+        book_root = REPO_ROOT / "books" / "test-book"
+
+        with (
+            patch.object(pdf_bootstrap.sys, "platform", "darwin"),
+            patch.object(pdf_bootstrap, "run_checked_subprocess") as run_mock,
+        ):
+            pdf_bootstrap.install_obsidian_sync(book_root)
+
+        run_mock.assert_called_once_with(
+            [
+                str(REPO_ROOT / "scripts" / "install_obsidian_sync_agent.sh"),
+                "--book-root",
+                "books/test-book",
+            ],
+            phase="install Obsidian sync agent",
+            timeout=pdf_bootstrap.DEFAULT_TIMEOUT_SECONDS,
+        )
+
+    def test_install_obsidian_sync_converts_runner_failure_to_system_exit(self) -> None:
+        book_root = REPO_ROOT / "books" / "test-book"
+
+        with (
+            patch.object(pdf_bootstrap.sys, "platform", "darwin"),
+            patch.object(
+                pdf_bootstrap,
+                "run_checked_subprocess",
+                side_effect=WorkflowSubprocessError("install Obsidian sync agent timed out after 300s."),
+            ),
+        ):
+            with self.assertRaises(SystemExit) as ctx:
+                pdf_bootstrap.install_obsidian_sync(book_root)
+
+        self.assertIn("timed out after 300s", str(ctx.exception))
 
 
 @unittest.skipUnless(HAS_PDF_RUNTIME_DEPS, "requires PyMuPDF")

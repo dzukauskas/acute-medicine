@@ -5,7 +5,6 @@ from __future__ import annotations
 import argparse
 import csv
 import re
-import subprocess
 import tempfile
 import threading
 import xml.etree.ElementTree as ET
@@ -18,6 +17,12 @@ from playwright.sync_api import sync_playwright
 
 from workflow_obsidian import default_obsidian_dest
 from workflow_rules import resolve_book_root, resolve_repo_path
+from workflow_subprocess import (
+    DEFAULT_TIMEOUT_SECONDS,
+    SHORT_TIMEOUT_SECONDS,
+    WorkflowSubprocessError,
+    run_checked_subprocess,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -84,7 +89,16 @@ def infer_book_root(book_root_arg: str | None, manifest_path: Path | None) -> Pa
 
 
 def ensure_inkscape() -> None:
-    subprocess.run(["inkscape", "--version"], check=True, capture_output=True, text=True)
+    try:
+        run_checked_subprocess(
+            ["inkscape", "--version"],
+            phase="probe Inkscape runtime",
+            timeout=SHORT_TIMEOUT_SECONDS,
+            capture_output=True,
+            text=True,
+        )
+    except WorkflowSubprocessError as exc:
+        raise SystemExit(str(exc)) from exc
 
 
 def load_manifest_row(manifest_path: Path, figure_id: str) -> dict[str, str]:
@@ -218,32 +232,40 @@ def add_padding_to_png(png_path: Path, padding: int) -> None:
 
 
 def convert_svg_to_png(svg_path: Path, png_path: Path, width: int) -> None:
-    subprocess.run(
-        [
-            "inkscape",
-            str(svg_path),
-            "--export-type=png",
-            f"--export-filename={png_path}",
-            f"--export-width={width}",
-            "--export-background=white",
-            "--export-background-opacity=1",
-        ],
-        check=True,
-    )
+    try:
+        run_checked_subprocess(
+            [
+                "inkscape",
+                str(svg_path),
+                "--export-type=png",
+                f"--export-filename={png_path}",
+                f"--export-width={width}",
+                "--export-background=white",
+                "--export-background-opacity=1",
+            ],
+            phase="convert SVG to PNG",
+            timeout=DEFAULT_TIMEOUT_SECONDS,
+        )
+    except WorkflowSubprocessError as exc:
+        raise SystemExit(str(exc)) from exc
 
 
 def sync_obsidian(dest: Path, book_root: Path) -> None:
     book_root_rel = book_root.resolve().relative_to(REPO_ROOT)
-    subprocess.run(
-        [
-            str(REPO_ROOT / "scripts/sync_obsidian_book.sh"),
-            "--book-root",
-            str(book_root_rel),
-            "--dest",
-            str(dest),
-        ],
-        check=True,
-    )
+    try:
+        run_checked_subprocess(
+            [
+                str(REPO_ROOT / "scripts/sync_obsidian_book.sh"),
+                "--book-root",
+                str(book_root_rel),
+                "--dest",
+                str(dest),
+            ],
+            phase="sync Obsidian book",
+            timeout=DEFAULT_TIMEOUT_SECONDS,
+        )
+    except WorkflowSubprocessError as exc:
+        raise SystemExit(str(exc)) from exc
 
 
 def main() -> int:
