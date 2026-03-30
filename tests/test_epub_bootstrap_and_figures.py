@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import base64
+import importlib.util
 import subprocess
 import sys
 import tempfile
@@ -28,6 +29,10 @@ PNG_BYTES = base64.b64decode(
 )
 FIGURE_INDEX_HEADER = "source_figure_id\tchapter_slug\tsource_href\tasset_path\tmedia_type\talt_text\tcaption_text\tnotes\n"
 MANIFEST_HEADER = "figure_id\tfigure_number\tpng_path\tcanonical_source_type\tcanonical_source_path\tnotes\n"
+HAS_EPUB_RUNTIME_DEPS = (
+    importlib.util.find_spec("ebooklib") is not None
+    and importlib.util.find_spec("bs4") is not None
+)
 
 
 def write_test_epub(path: Path) -> None:
@@ -118,6 +123,7 @@ def write_test_epub(path: Path) -> None:
         archive.writestr("OEBPS/Images/fig1.png", PNG_BYTES)
 
 
+@unittest.skipUnless(HAS_EPUB_RUNTIME_DEPS, "requires EbookLib and beautifulsoup4")
 class EpubBootstrapTests(unittest.TestCase):
     maxDiff = None
 

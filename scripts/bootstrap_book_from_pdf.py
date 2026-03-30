@@ -14,8 +14,7 @@ from workflow_rules import resolve_repo_path
 from workflow_runtime import REPO_ROOT, ensure_python_module, obsidian_dest_for_title
 
 
-ensure_python_module("fitz", package_name="PyMuPDF")
-import fitz
+fitz = None
 
 
 TEMPLATE_ROOT = REPO_ROOT / "books" / "_template"
@@ -28,6 +27,19 @@ AUX_TOC_LINE_RE = re.compile(r"^(Section|Part|Appendix)\b", re.IGNORECASE)
 TRAILING_PAGE_RE = re.compile(r"^(?P<body>.+?)\s*(?:\.{2,}|\u2026+|\s{2,})\s*(?P<page>\d{1,4})\s*$")
 TEMPLATE_TOKEN_RE = re.compile(r"{{([A-Z0-9_]+)}}")
 SIDE_CAR_REQUIRED_KEYS = {"chapters"}
+
+
+def ensure_pdf_runtime_dependencies(*, force_reload: bool = False) -> None:
+    global fitz
+
+    if fitz is not None and not force_reload:
+        return
+
+    ensure_python_module("fitz", package_name="PyMuPDF")
+
+    import fitz as _fitz
+
+    fitz = _fitz
 
 
 def slugify(text: str) -> str:
@@ -455,6 +467,7 @@ def install_obsidian_sync(book_root: Path) -> None:
 
 def main() -> int:
     args = parse_args()
+    ensure_pdf_runtime_dependencies()
     pdf_path = resolve_repo_path(args.pdf)
     if not pdf_path.exists():
         raise SystemExit(f"Nerastas PDF: {pdf_path}")
