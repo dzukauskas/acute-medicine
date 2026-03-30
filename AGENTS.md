@@ -5,7 +5,7 @@ Primary goal:
 - Pagrindinis LT tekstas turi būti kuo artimesnis originaliam angliškam tekstui pagal prasmę, struktūrą ir sakinio funkciją.
 
 Binding workflow:
-- Treat `/Users/dzukauskas/Projects/Acute Medicine/books/README.md`, `/Users/dzukauskas/Projects/Acute Medicine/books/_template/workflow.md`, and `/Users/dzukauskas/Projects/Acute Medicine/books/_template/source-priority.md` as operational rules, not optional guidance.
+- Treat repo-relative `books/README.md`, `books/_template/workflow.md`, and `books/_template/source-priority.md` as operational rules, not optional guidance.
 - Follow `shared/` plus `*.local.tsv` rule architecture exactly.
 - Never reactivate legacy `books/<slug>/*.tsv` active rule files.
 - If any repo-local skill text conflicts with the binding workflow above, `AGENTS.md` plus the binding workflow files take precedence.

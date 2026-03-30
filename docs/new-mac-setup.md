@@ -81,6 +81,8 @@ cd "/Users/<username>/Projects/Acute Medicine"
 - sukonfigūruoja pagrindinius MCP serverius;
 - nekuria jokio book-specific sync agento; jis diegiamas tik eksplicitiškai per `--install-obsidian-sync` arba `scripts/install_obsidian_sync_agent.sh`.
 
+Tracked shell entrypointai šiame repo naudoja `bash`, todėl papildomo `zsh` setup nereikia nei bootstrap kelyje, nei CI.
+
 ## Po bootstrap ranka padaryk dar šiuos veiksmus
 
 ```bash
@@ -146,6 +148,7 @@ Repo naudoja:
 
 `install_obsidian_sync_agent.sh` yra eksplicitinis integracijos žingsnis. Jį galite kviesti tiesiogiai arba per `scripts/bootstrap_book_from_pdf.py --install-obsidian-sync` ir `scripts/bootstrap_book_from_epub.py --install-obsidian-sync`. Be šio flag'o bootstrap lieka repo-local ir nerašo globalaus `LaunchAgent`.
 Pagal nutylėjimą agento label dabar vardinamas su worktree / repo identitetu, o default sync paskirtis rezervuojama owner marker'iu. Tai saugo nuo situacijos, kai tas pats book slug ar title būtų tyliai perrašytas iš kito clone ar worktree.
+`sync_obsidian_book.sh` lieka portable `bash` entrypointas, o `install_obsidian_sync_agent.sh` yra macOS-specific, nes remiasi `launchd` / `launchctl`.
 
 ## Codex MCP
 

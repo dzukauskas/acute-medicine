@@ -114,9 +114,11 @@ Vienkartinis sync:
 - `MEDBOOK_ROOT=books/{{BOOK_SLUG}} scripts/sync_obsidian_book.sh`
 
 Repo `lt/chapters/` lieka flat, bet sync į Obsidian gali sugrupuoti skyrius į `Section` aplankus pagal `source/index/chapters.json`, kad vault navigacija atitiktų leidinio struktūrą.
+`sync_obsidian_book.sh` remiasi `bash`; atskiro `zsh` requirement nėra.
 
 Automatinis `launchd` sync agentas:
 
 - `scripts/install_obsidian_sync_agent.sh --book-root books/{{BOOK_SLUG}}`
 
+`install_obsidian_sync_agent.sh` yra macOS-specific, nes naudoja `launchd` / `launchctl`.
 Sync paskirtis papildomai rezervuojama konkrečiai darbo vietai, todėl kitas clone ar worktree negali tyliai perrašyti to paties default katalogo.

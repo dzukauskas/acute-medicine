@@ -153,7 +153,9 @@ MEDBOOK_ROOT=books/<slug> scripts/sync_obsidian_book.sh
 
 Pagal nutylėjimą šie skriptai aktyvias taisykles krauna iš `shared/` ir, jei tokie yra, iš `books/<slug>/*.local.tsv`.
 Obsidian sync nekeičia repo `lt/chapters/` struktūros, bet vault pusėje gali sugrupuoti skyrius į navigacinius `Section` aplankus pagal `source/index/chapters.json`.
+`sync_obsidian_book.sh` remiasi `bash`; atskiro `zsh` requirement nėra.
 Automatinį `launchd` sync agentą diekite tik eksplicitiškai: arba bootstrap metu su `--install-obsidian-sync`, arba vėliau per `scripts/install_obsidian_sync_agent.sh --book-root books/<slug>`.
+`install_obsidian_sync_agent.sh` yra macOS-specific, nes naudoja `launchd` / `launchctl`.
 Numatytasis sync katalogas README failuose nebėra kepamas kaip konkretus workstation kelias: runtime metu jis sprendžiamas iš `repo_config.toml` ir pasirenkamo `repo_config.local.toml`, o paskirtis papildomai rezervuojama konkrečiai darbo vietai, kad kitas clone/worktree jos tyliai neperrašytų.
 
 ## Codex thread continuity
