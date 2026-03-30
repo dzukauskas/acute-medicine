@@ -11,6 +11,7 @@ from unittest.mock import patch
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = REPO_ROOT / "scripts"
+TESTS_DIR = Path(__file__).resolve().parent
 
 HAS_RENDER_RUNTIME_DEPS = (
     importlib.util.find_spec("PIL") is not None
@@ -21,11 +22,15 @@ import sys
 
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
+if str(TESTS_DIR) not in sys.path:
+    sys.path.insert(0, str(TESTS_DIR))
 
 if HAS_RENDER_RUNTIME_DEPS:
     import render_whimsical_figure as render_whimsical  # noqa: E402
 else:
     render_whimsical = None
+
+from workflow_test_utils import silence_stdio  # noqa: E402
 
 
 @unittest.skipUnless(HAS_RENDER_RUNTIME_DEPS, "requires Pillow and playwright")
@@ -72,7 +77,8 @@ class RenderWhimsicalFigureTests(unittest.TestCase):
             ),
             patch.object(render_whimsical, "login_whimsical") as login_mock,
         ):
-            result = render_whimsical.main()
+            with silence_stdio():
+                result = render_whimsical.main()
 
         self.assertEqual(result, 0)
         login_mock.assert_called_once_with(storage_state)
@@ -109,7 +115,8 @@ class RenderWhimsicalFigureTests(unittest.TestCase):
                 patch.object(render_whimsical, "ensure_inkscape") as ensure_inkscape_mock,
                 patch.object(render_whimsical, "convert_svg_to_png", side_effect=fake_convert),
             ):
-                result = render_whimsical.main()
+                with silence_stdio():
+                    result = render_whimsical.main()
 
             self.assertEqual(result, 0)
             ensure_inkscape_mock.assert_called_once()
@@ -157,7 +164,8 @@ class RenderWhimsicalFigureTests(unittest.TestCase):
                 patch.object(render_whimsical, "default_obsidian_dest", return_value=default_dest),
                 patch.object(render_whimsical, "sync_obsidian", side_effect=fake_sync),
             ):
-                result = render_whimsical.main()
+                with silence_stdio():
+                    result = render_whimsical.main()
 
             self.assertEqual(result, 0)
             self.assertEqual(len(sync_calls), 1)

@@ -17,11 +17,15 @@ from unittest.mock import patch
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = REPO_ROOT / "scripts"
 TEMPLATE_ROOT = REPO_ROOT / "books" / "_template"
+TESTS_DIR = Path(__file__).resolve().parent
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
+if str(TESTS_DIR) not in sys.path:
+    sys.path.insert(0, str(TESTS_DIR))
 
 import bootstrap_book_from_epub as epub_bootstrap  # noqa: E402
 import register_whimsical_figure as figure_register  # noqa: E402
+from workflow_test_utils import silence_stdio  # noqa: E402
 
 
 PNG_BYTES = base64.b64decode(
@@ -142,7 +146,8 @@ class EpubBootstrapTests(unittest.TestCase):
                 patch.object(epub_bootstrap, "obsidian_dest_for_title", lambda title: Path("/tmp/obsidian") / title),
                 patch.object(epub_bootstrap, "parse_args", return_value=Namespace(epub=epub_path, chapter_map=None)),
             ):
-                result = epub_bootstrap.main()
+                with silence_stdio():
+                    result = epub_bootstrap.main()
 
             self.assertEqual(result, 0)
             book_root = repo_root / "books" / "epub-test-book"
@@ -199,7 +204,8 @@ class EpubBootstrapTests(unittest.TestCase):
                     return_value=Namespace(epub=epub_path, chapter_map=chapter_map_path),
                 ),
             ):
-                result = epub_bootstrap.main()
+                with silence_stdio():
+                    result = epub_bootstrap.main()
 
             self.assertEqual(result, 0)
             book_root = repo_root / "books" / "custom-epub"
@@ -249,7 +255,8 @@ class RegisterWhimsicalFigureTests(unittest.TestCase):
                     ),
                 ),
             ):
-                result = figure_register.main()
+                with silence_stdio():
+                    result = figure_register.main()
 
             self.assertEqual(result, 0)
             manifest_rows = (book_root / "lt" / "figures" / "manifest.tsv").read_text(encoding="utf-8").splitlines()
@@ -286,8 +293,9 @@ class RegisterWhimsicalFigureTests(unittest.TestCase):
                     ),
                 ),
             ):
-                with self.assertRaises(SystemExit):
-                    figure_register.main()
+                with silence_stdio():
+                    with self.assertRaises(SystemExit):
+                        figure_register.main()
 
             manifest_text = (book_root / "lt" / "figures" / "manifest.tsv").read_text(encoding="utf-8")
             self.assertEqual(manifest_text, MANIFEST_HEADER)

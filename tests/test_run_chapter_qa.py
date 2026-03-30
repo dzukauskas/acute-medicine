@@ -19,7 +19,7 @@ if str(TESTS_DIR) not in sys.path:
     sys.path.insert(0, str(TESTS_DIR))
 
 import run_chapter_qa  # noqa: E402
-from workflow_test_utils import copy_mini_book, drop_local_termbase_entry, run_script, seed_canonical_artifacts  # noqa: E402
+from workflow_test_utils import copy_mini_book, drop_local_termbase_entry, run_script, seed_canonical_artifacts, silence_stdio  # noqa: E402
 
 
 EXPECTED_STEPS = [
@@ -59,7 +59,8 @@ class RunChapterQaTests(unittest.TestCase):
                 patch.object(run_chapter_qa, "normalize_yaml_structure", side_effect=lambda value: value),
                 patch.object(run_chapter_qa, "run_step", side_effect=fake_run_step),
             ):
-                result = run_chapter_qa.main()
+                with silence_stdio():
+                    result = run_chapter_qa.main()
 
             self.assertEqual(result, 0)
             self.assertEqual(labels, EXPECTED_STEPS)
@@ -87,8 +88,9 @@ class RunChapterQaTests(unittest.TestCase):
                 patch.object(run_chapter_qa, "normalize_yaml_structure", side_effect=lambda value: value),
                 patch.object(run_chapter_qa, "run_step", side_effect=fake_run_step),
             ):
-                with self.assertRaises(RuntimeError):
-                    run_chapter_qa.main()
+                with silence_stdio():
+                    with self.assertRaises(RuntimeError):
+                        run_chapter_qa.main()
 
             self.assertEqual(labels, ["inventory validation", "localization readiness"])
 
@@ -114,8 +116,9 @@ class RunChapterQaTests(unittest.TestCase):
                 patch.object(run_chapter_qa, "normalize_yaml_structure", side_effect=lambda value: value),
                 patch.object(run_chapter_qa, "run_step"),
             ):
-                with self.assertRaises(SystemExit) as ctx:
-                    run_chapter_qa.main()
+                with silence_stdio():
+                    with self.assertRaises(SystemExit) as ctx:
+                        run_chapter_qa.main()
 
             self.assertIn("Kanoninis chapter_pack pasenęs", str(ctx.exception))
 

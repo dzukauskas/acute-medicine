@@ -7,6 +7,7 @@ import json
 import sys
 import tempfile
 import unittest
+import warnings
 from argparse import Namespace
 from pathlib import Path
 from unittest.mock import patch
@@ -15,17 +16,33 @@ from unittest.mock import patch
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = REPO_ROOT / "scripts"
 TEMPLATE_ROOT = REPO_ROOT / "books" / "_template"
+TESTS_DIR = Path(__file__).resolve().parent
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
+if str(TESTS_DIR) not in sys.path:
+    sys.path.insert(0, str(TESTS_DIR))
+
+warnings.filterwarnings(
+    "ignore",
+    message=r"builtin type .* has no __module__ attribute",
+    category=DeprecationWarning,
+)
 
 import bootstrap_book_from_pdf as pdf_bootstrap  # noqa: E402
+from workflow_test_utils import silence_stdio  # noqa: E402
 
 
 HAS_PDF_RUNTIME_DEPS = importlib.util.find_spec("fitz") is not None
 
 
 def write_test_pdf(path: Path) -> None:
-    fitz_runtime = importlib.import_module("fitz")
+    with warnings.catch_warnings():
+        warnings.filterwarnings(
+            "ignore",
+            message=r"builtin type .* has no __module__ attribute",
+            category=DeprecationWarning,
+        )
+        fitz_runtime = importlib.import_module("fitz")
 
     doc = fitz_runtime.open()
     doc.set_metadata({"title": "PDF Test Book"})
@@ -105,7 +122,8 @@ class PdfBootstrapSmokeTests(unittest.TestCase):
                     ),
                 ),
             ):
-                result = pdf_bootstrap.main()
+                with silence_stdio():
+                    result = pdf_bootstrap.main()
 
             self.assertEqual(result, 0)
             book_root = repo_root / "books" / "custom-pdf"

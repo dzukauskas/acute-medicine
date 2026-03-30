@@ -6,6 +6,7 @@ import json
 import re
 import shutil
 import subprocess
+import warnings
 from pathlib import Path
 
 import yaml
@@ -37,7 +38,13 @@ def ensure_pdf_runtime_dependencies(*, force_reload: bool = False) -> None:
 
     ensure_python_module("fitz", package_name="PyMuPDF")
 
-    import fitz as _fitz
+    with warnings.catch_warnings():
+        warnings.filterwarnings(
+            "ignore",
+            message=r"builtin type .* has no __module__ attribute",
+            category=DeprecationWarning,
+        )
+        import fitz as _fitz
 
     fitz = _fitz
 

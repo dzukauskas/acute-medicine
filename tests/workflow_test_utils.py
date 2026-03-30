@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import contextlib
 import csv
+import io
 import json
 import os
 import shutil
@@ -19,6 +21,15 @@ MINI_BOOK_FIXTURE = FIXTURES_DIR / "mini_book"
 def write(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
+
+
+@contextlib.contextmanager
+def silence_stdio() -> object:
+    with (
+        contextlib.redirect_stdout(io.StringIO()),
+        contextlib.redirect_stderr(io.StringIO()),
+    ):
+        yield
 
 
 def fixture_path(name: str) -> Path:

@@ -13,14 +13,18 @@ import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = REPO_ROOT / "scripts"
+TESTS_DIR = Path(__file__).resolve().parent
 import sys
 
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
+if str(TESTS_DIR) not in sys.path:
+    sys.path.insert(0, str(TESTS_DIR))
 
 import build_chapter_pack  # noqa: E402
 import mine_term_candidates  # noqa: E402
 import workflow_rules as wr  # noqa: E402
+from workflow_test_utils import silence_stdio  # noqa: E402
 
 
 TERM_CANDIDATE_HEADER = "\t".join(wr.TERM_CANDIDATE_FIELDS) + "\n"
@@ -245,7 +249,8 @@ class TermCandidateWorkflowTests(unittest.TestCase):
                     return_value=Namespace(book_root=str(book_root), chapter=slug, out=None),
                 ),
             ):
-                result = build_chapter_pack.main()
+                with silence_stdio():
+                    result = build_chapter_pack.main()
 
             self.assertEqual(result, 0)
             pack_path = book_root / "chapter_packs" / f"{slug}.yaml"
