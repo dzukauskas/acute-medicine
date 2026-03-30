@@ -2,19 +2,20 @@
 from __future__ import annotations
 
 import argparse
-import json
-import re
 from pathlib import Path
 
-from workflow_book import first_source_artifact
-from workflow_obsidian import book_title_from_readme
+from workflow_book_template import (
+    context_for_book as template_context_for_book,
+    load_book_metadata,
+    load_template_manifest,
+    materialize_required_directories,
+    render_template_text,
+)
 from workflow_rules import resolve_repo_path
 from workflow_runtime import REPO_ROOT
 
 
 TEMPLATE_ROOT = REPO_ROOT / "books" / "_template"
-TEMPLATE_MANIFEST = TEMPLATE_ROOT / "template_manifest.json"
-TOKEN_RE = re.compile(r"{{([A-Z0-9_]+)}}")
 
 
 def parse_args() -> argparse.Namespace:
@@ -24,37 +25,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--book-root", required=True, help="Target books/<slug> directory.")
     return parser.parse_args()
 
-
-def load_template_manifest() -> dict[str, list[str]]:
-    if not TEMPLATE_MANIFEST.exists():
-        raise SystemExit(f"Nerastas template manifest: {TEMPLATE_MANIFEST}")
-    return json.loads(TEMPLATE_MANIFEST.read_text(encoding="utf-8"))
-
-
-def render_template_text(template_path: Path, context: dict[str, str]) -> str:
-    text = template_path.read_text(encoding="utf-8")
-    return TOKEN_RE.sub(lambda match: context.get(match.group(1), match.group(0)), text)
-
-
-def template_obsidian_dest_value(book_root: Path) -> str:
-    title = book_title_from_readme(book_root)
-    return (Path("<configured-obsidian-vault>") / title).as_posix()
-
-
 def context_for_book(book_root: Path) -> dict[str, str]:
-    title = book_title_from_readme(book_root)
-    source_artifact = first_source_artifact(book_root)
-    source_kind = source_artifact[0] if source_artifact else "pdf"
-    source_name = source_artifact[1].name if source_artifact else "SOURCE.pdf"
-    return {
-        "BOOK_TITLE": title,
-        "BOOK_SLUG": book_root.name,
-        "BOOK_ROOT": book_root.relative_to(REPO_ROOT).as_posix(),
-        "BOOK_SOURCE_KIND": source_kind,
-        "BOOK_SOURCE_NAME": source_name,
-        "BOOK_PDF_NAME": source_name if source_kind == "pdf" else "SOURCE.pdf",
-        "OBSIDIAN_DEST": template_obsidian_dest_value(book_root),
-    }
+    canonical_source = load_book_metadata(book_root)
+    return template_context_for_book(book_root, canonical_source, repo_root=REPO_ROOT)
 
 
 def is_effectively_empty_scaffold(path: Path) -> bool:
@@ -79,11 +52,13 @@ def main() -> int:
     if book_root == TEMPLATE_ROOT:
         raise SystemExit("Negalima refresh'inti pačio books/_template katalogo.")
 
-    manifest = load_template_manifest()
-    context = context_for_book(book_root)
+    try:
+        manifest = load_template_manifest(TEMPLATE_ROOT)
+        context = context_for_book(book_root)
+    except (FileNotFoundError, ValueError) as exc:
+        raise SystemExit(str(exc)) from exc
 
-    for rel_dir in manifest.get("required_directories", []):
-        (book_root / rel_dir).mkdir(parents=True, exist_ok=True)
+    materialize_required_directories(book_root, manifest)
 
     refreshed: list[str] = []
     preserved: list[str] = []

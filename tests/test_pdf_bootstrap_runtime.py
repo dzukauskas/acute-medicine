@@ -4,6 +4,7 @@ from __future__ import annotations
 import importlib
 import importlib.util
 import json
+import shutil
 import sys
 import tempfile
 import unittest
@@ -12,6 +13,7 @@ from argparse import Namespace
 from pathlib import Path
 from unittest.mock import patch
 
+import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = REPO_ROOT / "scripts"
@@ -172,6 +174,9 @@ class PdfBootstrapSmokeTests(unittest.TestCase):
             self.assertEqual(result, 0)
             book_root = repo_root / "books" / "custom-pdf"
             self.assertTrue((book_root / "source" / "pdf" / "book.pdf").exists())
+            metadata = yaml.safe_load((book_root / "book_metadata.yaml").read_text(encoding="utf-8"))
+            self.assertEqual(metadata["canonical_source"]["kind"], "pdf")
+            self.assertEqual(metadata["canonical_source"]["name"], "book.pdf")
 
             merged_chapter = book_root / "source" / "chapters-en" / "007-merged-chapter.md"
             self.assertTrue(merged_chapter.exists())
@@ -236,6 +241,62 @@ class PdfBootstrapSmokeTests(unittest.TestCase):
 
             self.assertEqual(result, 0)
             self.assertEqual(sync_calls, [repo_root / "books" / "sync-pdf"])
+
+    def test_bootstrap_materializes_required_directories_declared_in_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir)
+            repo_root = temp_root / "repo"
+            template_root = temp_root / "template"
+            (repo_root / "books").mkdir(parents=True, exist_ok=True)
+            shutil.copytree(TEMPLATE_ROOT, template_root)
+            shutil.rmtree(template_root / "source" / "pdf")
+            shutil.rmtree(template_root / "source" / "epub")
+            shutil.rmtree(template_root / "source" / "figures-raw")
+
+            pdf_path = temp_root / "book.pdf"
+            chapter_map_path = temp_root / "book.chapters.yaml"
+            write_test_pdf(pdf_path)
+            chapter_map_path.write_text(
+                "\n".join(
+                    [
+                        "book_title: Scaffold PDF",
+                        "slug: scaffold-pdf",
+                        "chapters:",
+                        "  - number: 7",
+                        "    title: Merged chapter",
+                        "    pdf_start_page: 2",
+                        "    pdf_end_page: 3",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            with (
+                patch.object(pdf_bootstrap, "REPO_ROOT", repo_root),
+                patch.object(pdf_bootstrap, "TEMPLATE_ROOT", template_root),
+                patch.object(
+                    pdf_bootstrap,
+                    "parse_args",
+                    return_value=Namespace(
+                        pdf=pdf_path,
+                        contents_pages=None,
+                        page_offset=None,
+                        backmatter_start=None,
+                        chapter_map=chapter_map_path,
+                        install_obsidian_sync=False,
+                    ),
+                ),
+            ):
+                with silence_stdio():
+                    result = pdf_bootstrap.main()
+
+            self.assertEqual(result, 0)
+            book_root = repo_root / "books" / "scaffold-pdf"
+            self.assertTrue((book_root / "source" / "pdf").is_dir())
+            self.assertTrue((book_root / "source" / "epub").is_dir())
+            self.assertTrue((book_root / "source" / "figures-raw").is_dir())
+            self.assertTrue((book_root / "source" / "pdf" / "book.pdf").exists())
 
 
 if __name__ == "__main__":

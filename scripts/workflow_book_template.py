@@ -14,7 +14,6 @@ from workflow_runtime import REPO_ROOT
 
 
 TEMPLATE_ROOT = REPO_ROOT / "books" / "_template"
-TEMPLATE_MANIFEST = TEMPLATE_ROOT / "template_manifest.json"
 BOOK_METADATA_NAME = "book_metadata.yaml"
 TOKEN_RE = re.compile(r"{{([A-Z0-9_]+)}}")
 ALLOWED_SOURCE_KINDS = {"pdf", "epub"}
@@ -26,10 +25,11 @@ class CanonicalSource:
     name: str
 
 
-def load_template_manifest() -> dict[str, list[str]]:
-    if not TEMPLATE_MANIFEST.exists():
-        raise FileNotFoundError(f"Nerastas template manifest: {TEMPLATE_MANIFEST}")
-    data = json.loads(TEMPLATE_MANIFEST.read_text(encoding="utf-8"))
+def load_template_manifest(template_root: Path = TEMPLATE_ROOT) -> dict[str, list[str]]:
+    template_manifest = template_root / "template_manifest.json"
+    if not template_manifest.exists():
+        raise FileNotFoundError(f"Nerastas template manifest: {template_manifest}")
+    data = json.loads(template_manifest.read_text(encoding="utf-8"))
     return {key: list(value) for key, value in data.items()}
 
 
@@ -118,14 +118,40 @@ def load_book_metadata(book_root: Path) -> CanonicalSource:
 def context_for_book(
     book_root: Path,
     canonical_source: CanonicalSource,
+    *,
+    book_title: str | None = None,
+    repo_root: Path = REPO_ROOT,
 ) -> dict[str, str]:
-    title = book_title_from_readme(book_root)
+    title = book_title.strip() if book_title is not None else book_title_from_readme(book_root)
     return {
         "BOOK_TITLE": title,
         "BOOK_SLUG": book_root.name,
-        "BOOK_ROOT": book_root.relative_to(REPO_ROOT).as_posix(),
+        "BOOK_ROOT": book_root.relative_to(repo_root).as_posix(),
         "BOOK_SOURCE_KIND": canonical_source.kind,
         "BOOK_SOURCE_NAME": canonical_source.name,
         "BOOK_PDF_NAME": canonical_source.name if canonical_source.kind == "pdf" else "SOURCE.pdf",
         "OBSIDIAN_DEST": template_obsidian_dest_value(book_root),
     }
+
+
+def bootstrap_template_workspace(
+    book_root: Path,
+    *,
+    book_title: str,
+    canonical_source: CanonicalSource,
+    template_root: Path = TEMPLATE_ROOT,
+    repo_root: Path = REPO_ROOT,
+) -> None:
+    manifest = load_template_manifest(template_root)
+    copy_template_tree(book_root, template_root=template_root)
+    materialize_required_directories(book_root, manifest)
+    write_book_metadata(book_root, canonical_source)
+    render_book_tree(
+        book_root,
+        context_for_book(
+            book_root,
+            canonical_source,
+            book_title=book_title,
+            repo_root=repo_root,
+        ),
+    )

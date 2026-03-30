@@ -12,6 +12,9 @@ from argparse import Namespace
 from pathlib import Path
 from unittest.mock import patch
 
+import shutil
+import yaml
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = REPO_ROOT / "scripts"
@@ -156,6 +159,9 @@ class EpubBootstrapTests(unittest.TestCase):
             self.assertEqual(result, 0)
             book_root = repo_root / "books" / "epub-test-book"
             self.assertTrue((book_root / "source" / "epub" / "book.epub").exists())
+            metadata = yaml.safe_load((book_root / "book_metadata.yaml").read_text(encoding="utf-8"))
+            self.assertEqual(metadata["canonical_source"]["kind"], "epub")
+            self.assertEqual(metadata["canonical_source"]["name"], "book.epub")
             self.assertTrue((book_root / "source" / "chapters-en" / "001-first-chapter.md").exists())
             self.assertTrue((book_root / "source" / "chapters-en" / "002-second-chapter.md").exists())
 
@@ -246,6 +252,38 @@ class EpubBootstrapTests(unittest.TestCase):
 
             self.assertEqual(result, 0)
             self.assertEqual(sync_calls, [repo_root / "books" / "epub-test-book"])
+
+    def test_bootstrap_materializes_required_directories_declared_in_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir)
+            repo_root = temp_root / "repo"
+            template_root = temp_root / "template"
+            (repo_root / "books").mkdir(parents=True, exist_ok=True)
+            shutil.copytree(TEMPLATE_ROOT, template_root)
+            shutil.rmtree(template_root / "source" / "pdf")
+            shutil.rmtree(template_root / "source" / "epub")
+            shutil.rmtree(template_root / "source" / "figures-raw")
+            epub_path = temp_root / "book.epub"
+            write_test_epub(epub_path)
+
+            with (
+                patch.object(epub_bootstrap, "REPO_ROOT", repo_root),
+                patch.object(epub_bootstrap, "TEMPLATE_ROOT", template_root),
+                patch.object(
+                    epub_bootstrap,
+                    "parse_args",
+                    return_value=Namespace(epub=epub_path, chapter_map=None, install_obsidian_sync=False),
+                ),
+            ):
+                with silence_stdio():
+                    result = epub_bootstrap.main()
+
+            self.assertEqual(result, 0)
+            book_root = repo_root / "books" / "epub-test-book"
+            self.assertTrue((book_root / "source" / "pdf").is_dir())
+            self.assertTrue((book_root / "source" / "epub").is_dir())
+            self.assertTrue((book_root / "source" / "figures-raw").is_dir())
+            self.assertTrue((book_root / "source" / "epub" / "book.epub").exists())
 
 
 class RegisterWhimsicalFigureTests(unittest.TestCase):

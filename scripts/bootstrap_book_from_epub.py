@@ -12,6 +12,7 @@ from urllib.parse import unquote, urlsplit
 
 import yaml
 
+from workflow_book_template import CanonicalSource, bootstrap_template_workspace
 from workflow_rules import resolve_repo_path, slugify, write_tsv
 from workflow_runtime import REPO_ROOT, ensure_python_module
 from workflow_subprocess import DEFAULT_TIMEOUT_SECONDS, WorkflowSubprocessError, run_checked_subprocess
@@ -27,7 +28,6 @@ Tag = None
 
 TEMPLATE_ROOT = REPO_ROOT / "books" / "_template"
 CHAPTER_TITLE_RE = re.compile(r"^(?:chapter\s+)?(?P<number>\d+)(?:\s*[:.\-]\s*|\s+)(?P<title>.+)$", re.IGNORECASE)
-TEMPLATE_TOKEN_RE = re.compile(r"{{([A-Z0-9_]+)}}")
 SIDE_CAR_REQUIRED_KEYS = {"chapters"}
 FIGURE_INDEX_FIELDS = [
     "source_figure_id",
@@ -609,39 +609,6 @@ def write_figure_inventory(
     write_tsv(book_root / "source" / "index" / "figures.tsv", FIGURE_INDEX_FIELDS, rows)
 
 
-def copy_template(book_root: Path) -> None:
-    if not TEMPLATE_ROOT.exists():
-        raise SystemExit(f"Nerastas shared template katalogas: {TEMPLATE_ROOT}")
-    shutil.copytree(TEMPLATE_ROOT, book_root)
-    internal_manifest = book_root / "template_manifest.json"
-    if internal_manifest.exists():
-        internal_manifest.unlink()
-
-
-def template_context(book_root: Path, title: str, epub_name: str) -> dict[str, str]:
-    return {
-        "BOOK_TITLE": title,
-        "BOOK_SLUG": book_root.name,
-        "BOOK_ROOT": book_root.relative_to(REPO_ROOT).as_posix(),
-        "BOOK_SOURCE_KIND": "epub",
-        "BOOK_SOURCE_NAME": epub_name,
-        "BOOK_PDF_NAME": "SOURCE.pdf",
-        "OBSIDIAN_DEST": (Path("<configured-obsidian-vault>") / title).as_posix(),
-    }
-
-
-def render_template_files(book_root: Path, context: dict[str, str]) -> None:
-    for path in sorted(book_root.rglob("*")):
-        if not path.is_file() or path.name == ".gitkeep":
-            continue
-        try:
-            text = path.read_text(encoding="utf-8")
-        except UnicodeDecodeError:
-            continue
-        rendered = TEMPLATE_TOKEN_RE.sub(lambda match: context.get(match.group(1), match.group(0)), text)
-        path.write_text(rendered, encoding="utf-8")
-
-
 def install_obsidian_sync(book_root: Path) -> None:
     if sys.platform != "darwin":
         raise SystemExit(
@@ -681,15 +648,19 @@ def main() -> int:
     if book_root.exists():
         raise SystemExit(f"Target book root jau egzistuoja: {book_root}")
 
-    copy_template(book_root)
+    bootstrap_template_workspace(
+        book_root,
+        book_title=title,
+        canonical_source=CanonicalSource(kind="epub", name=epub_path.name),
+        template_root=TEMPLATE_ROOT,
+        repo_root=REPO_ROOT,
+    )
 
     source_index_dir = book_root / "source" / "index"
     source_chapters_dir = book_root / "source" / "chapters-en"
     source_epub_dir = book_root / "source" / "epub"
     target_epub = source_epub_dir / epub_path.name
     shutil.copy2(epub_path, target_epub)
-
-    render_template_files(book_root, template_context(book_root, title, target_epub.name))
 
     chapters = (
         build_chapters_from_map(book, chapter_map)
