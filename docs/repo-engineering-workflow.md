@@ -47,6 +47,8 @@ Tai tracked failas repo šaknyje. Jame turi gyventi:
 
 Thread istorija čia nėra kanoninė. Jei pokalbis išsitęsia, naujas thread pirmiausia turi perskaityti `ENGINEERING_LEDGER.md`.
 
+Normalioje porinio darbo sesijoje ledger turi atnaujinti agentas. Vartotojui nereikia kiekvieną kartą ranka leisti `update_engineering_ledger.py`.
+
 ## Kada kurti naują thread
 
 Naują thread kurk tada, kai:
@@ -97,7 +99,7 @@ Svarbi išlyga:
 
 1. Pasirenki vieną techninę temą.
 2. Dirbi tame pačiame thread, kol tema neuždaryta.
-3. Reikšmingai pasikeitus būsenai, atnaujini `ENGINEERING_LEDGER.md`.
+3. Reikšmingai pasikeitus būsenai, agentas atnaujina `ENGINEERING_LEDGER.md`.
 4. Jei pereini prie kitos temos, agentas turi tai aiškiai įvardyti ir rekomenduoti naują thread.
 5. Jei reikia paralelinės linijos, tada naudok `Hand off`.
 6. Jei reikia, pridėk lokalų `handoff`, bet tik kaip papildomą scratchpad.
@@ -112,6 +114,8 @@ Jei dabar taisai audit findings apie test harness:
 
 ## Ledger komanda
 
+Ši komanda yra atsarginis kelias, ne kasdienis privalomas ritualas. Paprastai ją leidžia agentas arba jos visai nereikia matyti vartotojui.
+
 ```bash
 python3 scripts/update_engineering_ledger.py \
   --theme "Acceptance fixtures follow-up" \
@@ -125,4 +129,20 @@ Jei po to vis tiek reikia lokalaus papildomo scratchpad:
 
 ```bash
 python3 scripts/write_codex_handoff.py --title "Acceptance fixtures local handoff"
+```
+
+## Ką rašyti naujame thread
+
+Paprasčiausias kelias:
+
+```bash
+python3 scripts/print_codex_resume_prompt.py --mode engineering
+```
+
+Tai išspausdins trumpą promptą, kurį gali tiesiog įklijuoti į naują `Codex` thread.
+
+Jei nenori leisti skripto, minimalus rankinis promptas yra toks:
+
+```text
+Perskaityk AGENTS.md, docs/codex-workflow.md, docs/repo-engineering-workflow.md ir ENGINEERING_LEDGER.md. Dirbk repo-engineering režimu ir tęsk active theme.
 ```

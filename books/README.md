@@ -156,6 +156,8 @@ python3 scripts/update_engineering_ledger.py \
   --next-step "Pirmas konkretus žingsnis kitam thread."
 ```
 
+Normalioje porinio darbo sesijoje to ranka daryti neturite. Ledger šiame režime turi atnaujinti agentas; ši komanda yra atsarginis kelias.
+
 Tik jei reikia papildomo lokalaus scratchpad, naudokite `handoffs/`:
 
 ```bash
@@ -175,3 +177,18 @@ Detalesnis operating modelis aprašytas:
 - `handoffs/README.md`
 
 `handoffs/*.md` nėra pakaitalas `research`, `chapter_pack`, `term_candidates.tsv`, QA artefaktams ar `ENGINEERING_LEDGER.md`. Jie skirti tik trumpalaikėms vietinėms pastaboms.
+
+Jei reikia labai paprasto naujo thread starto, naudokite:
+
+```bash
+python3 scripts/print_codex_resume_prompt.py --mode engineering
+```
+
+arba vertimo darbui:
+
+```bash
+python3 scripts/print_codex_resume_prompt.py \
+  --mode translation \
+  --book-root books/<slug> \
+  --chapter 001
+```

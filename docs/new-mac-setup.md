@@ -177,6 +177,8 @@ python3 scripts/update_engineering_ledger.py \
   --next-step "Pirmas konkretus žingsnis naujam thread."
 ```
 
+Normalioje porinio darbo sesijoje to neturėtų reikėti daryti ranka kiekvieną kartą, nes ledger turi atnaujinti agentas. Ši komanda yra atsarginis kelias.
+
 Tik jei dar reikia papildomo lokalaus scratchpad, sugeneruok `handoff`:
 
 ```bash
@@ -185,6 +187,12 @@ python3 scripts/write_codex_handoff.py \
   --book-root books/<slug> \
   --goal "Trumpai įvardyk, ką tiksliai reikia tęsti." \
   --next-step "Pirmas konkretus žingsnis naujam thread."
+```
+
+Jei reikia tik minimalaus naujo thread prompto, naudok:
+
+```bash
+python3 scripts/print_codex_resume_prompt.py --mode engineering
 ```
 
 ## Python priklausomybės

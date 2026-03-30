@@ -79,3 +79,22 @@ Todėl pagrindinė taisyklė yra:
 
 - pirmiausia pildyk `research`, `chapter_pack`, terminų ir QA artefaktus;
 - tik po to remkis thread istorija.
+
+## Ką rašyti naujame thread
+
+Paprasčiausias kelias:
+
+```bash
+python3 scripts/print_codex_resume_prompt.py \
+  --mode translation \
+  --book-root books/<slug> \
+  --chapter 001
+```
+
+Tai išspausdins trumpą promptą, kurį gali tiesiog įklijuoti į naują `Codex` thread.
+
+Jei nenori leisti skripto, minimalus rankinis promptas yra toks:
+
+```text
+Perskaityk AGENTS.md, books/README.md, books/_template/workflow.md, books/_template/source-priority.md, books/<slug>/workflow.md, research/<chapter>.md, chapter_packs/<chapter>.yaml ir term_candidates.tsv. Dirbk book-translation režimu ir tęsk tą patį skyrių.
+```

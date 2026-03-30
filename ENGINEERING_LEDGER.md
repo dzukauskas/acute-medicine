@@ -21,7 +21,7 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: Codex context continuity and repo-engineering memory
 - Branch: main
-- Last updated: 2026-03-30T15:22:41.947287+03:00
+- Last updated: 2026-03-30T15:33:11.017744+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
@@ -34,7 +34,8 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Pridėtas tracked ENGINEERING_LEDGER.md kaip kanoninė repo-engineering būsena.
 - Atskirtas book translation workflow nuo repo engineering workflow dokumentacijos.
 - write_codex_handoff.py paliktas tik kaip papildomas lokalus scratchpad įrankis.
-- Nauji ledger ir handoff testai žali; pilna .venv suite praeina.
+- Pridėtas print_codex_resume_prompt.py, kad naujam thread būtų galima sugeneruoti minimalų promptą.
+- Ledger atnaujinimas repo-engineering režime dokumentuotas kaip numatytasis agento darbas.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -42,11 +43,12 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Repo-engineering ilgalaikė atmintis šiame projekte gyvena ENGINEERING_LEDGER.md, ne vien thread istorijoje.
 - Book translation režimas remiasi research, chapter_pack, term_candidates ir QA artefaktais, ne engineering ledger.
 - gitignored handoff failai nėra laikomi patikimu pirminiu cross-worktree atminties mechanizmu.
+- Naujo thread startui pirmiausia siūlomas minimalus resume promptas, o ne vartotojo improvizacija.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Peržiūrėti galutinį diff ir sucommitinti workflow pokyčius atskiru commit'u.
+- Peržiūrėti galutinį diff ir, jei tinka, sucommitinti prompt generatoriaus bei agent-driven ledger pakeitimus.
 - Toliau naudoti ledger kaip pagrindinę repo-engineering atmintį naujoms auditų bangoms.
 <!-- ledger:next_steps:end -->
 

@@ -60,3 +60,20 @@ Todėl:
 - vertimo režime pirmiausia remkis `research`, `chapter_pack` ir QA artefaktais;
 - repo engineering režime pirmiausia remkis `ENGINEERING_LEDGER.md`;
 - `handoff` naudok tik kaip papildomą lokalų scratchpad, o ne kaip pagrindinę atmintį.
+
+## Naujo thread promptai
+
+Repo engineering:
+
+```bash
+python3 scripts/print_codex_resume_prompt.py --mode engineering
+```
+
+Book translation:
+
+```bash
+python3 scripts/print_codex_resume_prompt.py \
+  --mode translation \
+  --book-root books/<slug> \
+  --chapter 001
+```
