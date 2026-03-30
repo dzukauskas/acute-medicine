@@ -1,9 +1,28 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+require_cmd() {
+  local name="$1"
+  local hint="${2:-}"
+  if command -v "$name" >/dev/null 2>&1; then
+    return
+  fi
+  if [[ -n "$hint" ]]; then
+    echo "Required command not found: $name. $hint" >&2
+  else
+    echo "Required command not found: $name." >&2
+  fi
+  exit 1
+}
+
+if [[ "$(uname -s)" != "Darwin" ]]; then
+  echo "scripts/bootstrap_macos.sh supports macOS only." >&2
+  exit 1
+fi
 
 if ! command -v brew >/dev/null 2>&1; then
   echo "Homebrew is not installed."
@@ -13,6 +32,10 @@ fi
 
 brew bundle --file="$REPO_ROOT/Brewfile"
 
+if ! command -v codex >/dev/null 2>&1 || ! command -v pdf-reader-mcp >/dev/null 2>&1; then
+  require_cmd npm "Install Node.js/npm or ensure brew bundle provisioned it on PATH."
+fi
+
 if ! command -v codex >/dev/null 2>&1; then
   npm install -g @openai/codex
 fi
@@ -20,6 +43,8 @@ fi
 if ! command -v pdf-reader-mcp >/dev/null 2>&1; then
   npm install -g @sylphx/pdf-reader-mcp
 fi
+
+require_cmd python3 "Install Python 3 or ensure it is available on PATH."
 
 python3 -m venv "$REPO_ROOT/.venv"
 "$REPO_ROOT/.venv/bin/pip" install --upgrade pip

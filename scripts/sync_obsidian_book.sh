@@ -1,13 +1,14 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 PYTHON_BIN="$REPO_ROOT/.venv/bin/python3"
 if [[ ! -x "$PYTHON_BIN" ]]; then
   PYTHON_BIN="$(command -v python3 || true)"
 fi
+RSYNC_BIN="$(command -v rsync || true)"
 
 BOOK_ROOT_REL="${MEDBOOK_ROOT:-}"
 DEST_DIR=""
@@ -57,6 +58,10 @@ if [[ ! -f "$README_PATH" ]]; then
 fi
 if [[ -z "$PYTHON_BIN" ]]; then
   echo "Python interpreter not found." >&2
+  exit 1
+fi
+if [[ -z "$RSYNC_BIN" ]]; then
+  echo "Required command not found: rsync. Install rsync before running scripts/sync_obsidian_book.sh." >&2
   exit 1
 fi
 
@@ -119,7 +124,7 @@ mkdir -p "$DEST_DIR"
 
 # Mirror only the user-facing study assets needed by Obsidian. Repo chapter
 # paths stay flat, but Obsidian receives a navigation-friendly chapter tree.
-/usr/bin/rsync \
+"$RSYNC_BIN" \
   -rlpgoD \
   --delete \
   --prune-empty-dirs \

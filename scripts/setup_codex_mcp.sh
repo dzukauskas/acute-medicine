@@ -1,6 +1,11 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 set -euo pipefail
+
+if ! command -v codex >/dev/null 2>&1; then
+  echo "Required command not found: codex. Install the Codex CLI or ensure it is on PATH before running scripts/setup_codex_mcp.sh." >&2
+  exit 1
+fi
 
 ensure_http_mcp() {
   local name="$1"

@@ -1,8 +1,8 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 SYNC_SCRIPT="$REPO_ROOT/scripts/sync_obsidian_book.sh"
 PYTHON_BIN="$REPO_ROOT/.venv/bin/python3"
@@ -57,6 +57,18 @@ fi
 if [[ -z "$PYTHON_BIN" ]]; then
   echo "Python interpreter not found." >&2
   exit 1
+fi
+
+if [[ "${OBSIDIAN_SYNC_SKIP_LOAD:-0}" != "1" ]]; then
+  if [[ "$(uname -s)" != "Darwin" ]]; then
+    echo "scripts/install_obsidian_sync_agent.sh requires macOS when LaunchAgent loading is enabled." >&2
+    echo "Use OBSIDIAN_SYNC_SKIP_LOAD=1 only for dry-run or test scenarios." >&2
+    exit 1
+  fi
+  if ! command -v launchctl >/dev/null 2>&1; then
+    echo "Required command not found: launchctl. This script installs and loads a macOS LaunchAgent." >&2
+    exit 1
+  fi
 fi
 
 CONFIG_VALUES="$("$PYTHON_BIN" - "$REPO_ROOT" "$BOOK_ROOT" <<'PY'

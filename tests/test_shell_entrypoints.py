@@ -185,6 +185,26 @@ exit 0
             self.assertIn("codex:mcp add playwright -- npx @playwright/mcp@latest", log_lines)
             self.assertIn("codex:mcp add whimsical-desktop --url http://localhost:21190/mcp", log_lines)
 
+    def test_setup_codex_mcp_requires_codex_cli(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir)
+            repo_root = temp_root / "repo"
+            script_path = self.copy_script(repo_root, "setup_codex_mcp.sh")
+
+            result = subprocess.run(  # noqa: S603
+                [str(script_path)],
+                cwd=repo_root,
+                capture_output=True,
+                text=True,
+                env={
+                    **os.environ,
+                    "PATH": "/usr/bin:/bin",
+                },
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("Required command not found: codex", result.stderr)
+
     def test_bootstrap_macos_shell_smoke(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             temp_root = Path(tmp_dir)
@@ -285,6 +305,70 @@ exit 1
             self.assertTrue(installed_skill.exists())
             self.assertIn("Bootstrap complete.", result.stdout)
             self.assertIn(".venv/bin/python -m unittest tests.test_end_to_end_workflow_contract", result.stdout)
+
+    def test_bootstrap_macos_reports_macos_only(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir)
+            repo_root = temp_root / "repo"
+            bin_dir, _log_path = self.make_temp_bin(temp_root)
+
+            self.copy_script(repo_root, "bootstrap_macos.sh")
+            self.write_executable(
+                bin_dir / "uname",
+                """#!/bin/sh
+echo Linux
+""",
+            )
+
+            result = subprocess.run(  # noqa: S603
+                [str(repo_root / "scripts" / "bootstrap_macos.sh")],
+                cwd=repo_root,
+                capture_output=True,
+                text=True,
+                env={
+                    **os.environ,
+                    "PATH": f"{bin_dir}:/usr/bin:/bin:/usr/sbin:/sbin",
+                },
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("supports macOS only", result.stderr)
+
+    def test_install_obsidian_sync_agent_reports_macos_only_when_loading(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir)
+            repo_root, _book_root = self.make_book_repo(temp_root)
+            bin_dir, _log_path = self.make_temp_bin(temp_root)
+            dest_dir = temp_root / "vault" / "Sample Book"
+            home_dir = temp_root / "home"
+
+            self.write_executable(
+                bin_dir / "uname",
+                """#!/bin/sh
+echo Linux
+""",
+            )
+
+            result = subprocess.run(  # noqa: S603
+                [
+                    str(repo_root / "scripts" / "install_obsidian_sync_agent.sh"),
+                    "--book-root",
+                    "books/sample-book",
+                    "--dest",
+                    str(dest_dir),
+                ],
+                cwd=repo_root,
+                capture_output=True,
+                text=True,
+                env={
+                    **os.environ,
+                    "HOME": str(home_dir),
+                    "PATH": f"{bin_dir}:/usr/bin:/bin:/usr/sbin:/sbin",
+                },
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("requires macOS when LaunchAgent loading is enabled", result.stderr)
 
 
 if __name__ == "__main__":
