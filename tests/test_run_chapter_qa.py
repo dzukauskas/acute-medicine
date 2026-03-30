@@ -10,12 +10,16 @@ from unittest.mock import patch
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = REPO_ROOT / "scripts"
+TESTS_DIR = Path(__file__).resolve().parent
 import sys
 
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
+if str(TESTS_DIR) not in sys.path:
+    sys.path.insert(0, str(TESTS_DIR))
 
 import run_chapter_qa  # noqa: E402
+from workflow_test_utils import copy_mini_book, drop_local_termbase_entry, run_script, seed_canonical_artifacts  # noqa: E402
 
 
 EXPECTED_STEPS = [
@@ -114,3 +118,28 @@ class RunChapterQaTests(unittest.TestCase):
                     run_chapter_qa.main()
 
             self.assertIn("Kanoninis chapter_pack pasenęs", str(ctx.exception))
+
+    def test_cli_rejects_stale_canonical_pack(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            book_root = copy_mini_book(Path(tmp_dir))
+            slug = seed_canonical_artifacts(book_root)
+            pack_path = book_root / "chapter_packs" / f"{slug}.yaml"
+            pack_path.write_text(pack_path.read_text(encoding="utf-8") + "stale_marker: true\n", encoding="utf-8")
+
+            result = run_script("run_chapter_qa.py", "--book-root", str(book_root), slug)
+
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("Kanoninis chapter_pack pasenęs", result.stdout + result.stderr)
+
+    def test_cli_blocks_unresolved_high_risk_term_before_qa(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            book_root = copy_mini_book(Path(tmp_dir))
+            slug = seed_canonical_artifacts(book_root)
+            drop_local_termbase_entry(book_root, "Sentinel Pathway")
+
+            result = run_script("run_chapter_qa.py", "--book-root", str(book_root), slug)
+
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("fresh chapter_pack build failed", result.stdout + result.stderr)
+            self.assertIn("Sentinel Pathway", result.stdout + result.stderr)
+            self.assertIn("liko neužrakintas", result.stdout + result.stderr)

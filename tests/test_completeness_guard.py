@@ -9,13 +9,17 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = REPO_ROOT / "scripts"
+TESTS_DIR = Path(__file__).resolve().parent
 import sys
 
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
+if str(TESTS_DIR) not in sys.path:
+    sys.path.insert(0, str(TESTS_DIR))
 
 import completeness_guard  # noqa: E402
 import workflow_markdown as wm  # noqa: E402
+from workflow_test_utils import copy_fixture, seed_canonical_artifacts, write  # noqa: E402
 
 
 class CompletenessGuardTests(unittest.TestCase):
@@ -95,3 +99,42 @@ class CompletenessGuardTests(unittest.TestCase):
 
             self.assertEqual(result.returncode, 1)
             self.assertIn("missing block_id='algorithm-1.1-airway-algorithm'", result.stdout)
+
+    def test_chart_fixture_passes_with_complete_chart_coverage_marker(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            book_root = copy_fixture(Path(tmp_dir), "chart_book")
+            slug = seed_canonical_artifacts(book_root)
+
+            result = subprocess.run(  # noqa: S603
+                [sys.executable, str(SCRIPTS_DIR / "completeness_guard.py"), "--book-root", str(book_root), slug],
+                cwd=REPO_ROOT,
+                capture_output=True,
+                text=True,
+            )
+
+            self.assertEqual(result.returncode, 0, msg=result.stdout + result.stderr)
+            self.assertIn("All checked structured blocks are represented", result.stdout)
+
+    def test_chart_fixture_fails_when_one_chart_label_is_missing_from_coverage_marker(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            book_root = copy_fixture(Path(tmp_dir), "chart_book")
+            slug = seed_canonical_artifacts(book_root)
+            chapter_path = book_root / "lt" / "chapters" / f"{slug}.md"
+            write(
+                chapter_path,
+                chapter_path.read_text(encoding="utf-8").replace(
+                    "<!-- chart-coverage: 1.1, 1.2 -->",
+                    "<!-- chart-coverage: 1.1 -->",
+                ),
+            )
+
+            result = subprocess.run(  # noqa: S603
+                [sys.executable, str(SCRIPTS_DIR / "completeness_guard.py"), "--book-root", str(book_root), slug],
+                cwd=REPO_ROOT,
+                capture_output=True,
+                text=True,
+            )
+
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("chart coverage marker mismatch", result.stdout)
+            self.assertIn("missing labels=1.2", result.stdout)
