@@ -12,8 +12,8 @@
 | 2 | Bootstrap ir refresh naudoja skirtingą template materialization kontraktą | partial | Struktūrinė skola reali, bet dabartinis live-break claim nepasitvirtino, nes required scaffold katalogai šiame checkout'e yra tracked. |
 | 3 | Canonical source kind/name inferinamas iš live filesystem, ne iš tracked metadata | valid | Refresh remiasi source failų buvimu ir hard-prefer'ina PDF, todėl canonical source truth nėra deklaruota. |
 | 4 | Focused CI nemato template-managed book parity invarianto | valid | CI gali būti žalias net esant realiam template/book drift, nes nėra bendro parity testo per tracked books. |
-| 5 | Shell entrypointai išlieka environment-bound | valid | Paliekama vėlesnei portability / docs clarity bangai. |
-| 6 | `AGENTS.md` vis dar neša workstation-specific absoliučius repo kelius | valid | Paliekama vėlesnei portability / docs clarity bangai. |
+| 5 | Shell entrypointai išlieka environment-bound | valid | Uždaryta antroje bangoje per vieningą `bash` kontraktą, focused smoke guard'us ir CI be specialaus `zsh` provisioning. |
+| 6 | `AGENTS.md` vis dar neša workstation-specific absoliučius repo kelius | valid | Uždaryta antroje bangoje per repo-relative binding references ir docs portability kontrakto testą. |
 | 7 | Continuity model remiasi neegzistuojančiu `handoffs/README.md` | invalid | Failas repo egzistuoja ir yra tracked, todėl claim nepasitvirtino. |
 
 ## Recommended Waves
@@ -35,11 +35,14 @@
 - First wave JRCALC backfill: completed in `098aa3d` (`Backfill JRCALC template-managed docs`).
 - First wave parity gate + focused CI: completed in `afefb9f` (`Add book template parity gate`).
 - First wave (`template-contract hardening`): completed.
-- Later wave (`5/6`): planned.
+- Later wave shell contract: completed in `577fe81` (`Standardize shell entrypoints on bash`).
+- Later wave docs/AGENTS clarity: completed in `b29f3a0` (`Clarify portability contract in docs and AGENTS`).
+- Later wave (`5/6`): completed.
 
 ## Notes
 
 - Pirmos bangos tikslas buvo vienas shared template kontraktas tarp bootstrap, refresh, tracked metadata ir CI parity vartų; ši banga uždaryta.
 - `book_metadata.yaml` pirmoje bangoje tampa vieninteliu deklaruotu canonical source truth sluoksniu book lygmenyje.
 - Nepakartotas `tests.test_completeness_guard...` signalas nelaikomas `audit-wave-002` planning faktu ir į šios bangos scope neįtraukiamas.
-- Jei bus tęsiama `audit-wave-002`, kita banga turi liesti tik `5/6` portability / docs clarity sluoksnį, o nebeperdarinėti pirmos bangos template kontrakto.
+- Antroji banga sąmoningai sprendė tik `5/6` portability / docs clarity sluoksnį ir nebejudino pirmos bangos template kontrakto.
+- Shell portability šioje bangoje sąmoningai standartizuota per vieningą `bash` kontraktą; pilna POSIX shell refaktorizacija į scope neįtraukta.

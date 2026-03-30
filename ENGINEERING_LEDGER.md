@@ -19,17 +19,20 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: audit-wave-002 template-contract hardening
+- Theme: audit-wave-002 portability and docs clarity
 - Branch: main
-- Last updated: 2026-03-30T22:45:08+03:00
+- Last updated: 2026-03-30T23:12:33+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
+- `audit-wave-002` antra banga (`5/6` portability / docs clarity) įgyvendinta commit'ais `577fe81` ir `b29f3a0`.
+- Tracked shell entrypointai dabar standartizuoti į vieningą `bash` kontraktą, o focused CI nebereikalauja atskiro `zsh` provisioning.
+- `AGENTS.md` binding workflow nuorodos pervestos į repo-relative formą, o portability docs papildyti aiškiu `bash` / macOS boundary kontraktu bei regressiniu docs testu.
 - `audit-wave-002` pirma banga (`template-contract hardening`) įgyvendinta ir užfiksuota commit'ais `18ddbb0`, `3281812`, `098aa3d` ir `afefb9f`.
 - `audit-wave-002` klasifikacija išlieka: `valid` = 1, 3, 4, 5, 6; `partial` = 2; `invalid` = 7; `needs-clarification` = nėra.
 - Pirma banga uždarė bendrą template kontraktą tarp bootstrap, refresh, tracked `book_metadata.yaml` truth sluoksnio ir focused CI parity vartų.
-- `plans/audit-wave-002.md` atnaujintas su pirmos bangos progresu; `5/6` palikti atskirai vėlesnei portability / docs clarity bangai.
+- `plans/audit-wave-002.md` dabar užfiksuoja abi įgyvendinimo bangas kaip uždarytas.
 - Supaprastinti ilgų Codex thread'ų darbą šiame repo, atskiriant vertimo ir repo-engineering atminties modelius.
 - Nauja fazė: `audit-wave-001` findings pirmiausia klasifikuoti prieš realų repo, tik po to svarstyti įgyvendinimą.
 - `audit-wave-001` suverifikuota prieš realų repo: patvirtinti portabilumo, bootstrap side-effect, workstation-local config, subprocess timeout ir global sync namespace rizikos sluoksniai.
@@ -51,6 +54,10 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Current State
 <!-- ledger:current_state:start -->
+- `audit-wave-002` antros bangos scope (`5/6`) uždarytas: shell entrypointai standartizuoti per `bash`, docs/AGENTS portability sluoksnis užfiksuotas, o plan failas pažymėtas kaip completed.
+- Focused `5/6` antros bangos verifikacija praėjo lokaliai: `tests.test_shell_entrypoints`, `tests.test_workflow_runtime`, `tests.test_obsidian_sync_safety`, `tests.test_refresh_template_runtime`, `tests.test_end_to_end_workflow_contract`, `tests.test_pdf_bootstrap_runtime`, `tests.test_epub_bootstrap_runtime`, `tests.test_epub_bootstrap_and_figures`, `tests.test_repo_portability_docs`, `tests.test_book_template_parity` (`43 tests / OK`).
+- `.github/workflows/python-tests.yml` dabar įtraukia `tests.test_repo_portability_docs` ir nebeprovisionina `zsh`.
+- `AGENTS.md` nebeturi workstation-specific absoliutaus repo root, o portability docs aiškiai išskiria `bash` shell kontraktą ir macOS-only `launchd` integracijos ribą.
 - `audit-wave-002` findings suklasifikuoti taip: `valid` = 1, 3, 4, 5, 6; `partial` = 2; `invalid` = 7; `needs-clarification` = nėra.
 - Sukurtas tracked planas `plans/audit-wave-002.md`, o jo pirmos bangos progresas dabar užfiksuotas atskirais commit'ais.
 - Pridėtas shared `workflow_book_template.py` helperis, kuris centralizuoja template manifest, required directories, template render ir `book_metadata.yaml` kontraktą.
@@ -103,7 +110,8 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - `audit-wave-002` šiame etape laikoma nauja repo-engineering banga, bet ne nauja technine tema už jos ribų, todėl validavimo darbą logiška tęsti šiame pačiame thread, kol nepasikeis scope.
 - `audit-wave-002` pirma įgyvendinimo banga užrakinama kaip vienas `template-contract hardening` branduolys: findings `1 + 3 + 4`, o finding `2` laikomas partial to paties kontrakto simptomu, ne atskira banga.
 - `audit-wave-002` pirma banga laikoma užbaigta, kai shared template helper, metadata truth sluoksnis, JRCALC backfill ir parity gate visi kartu yra žali focused suite kontekste.
-- `audit-wave-002` findings `5/6` sąmoningai paliekami atskirai vėlesnei portability / docs clarity bangai.
+- `audit-wave-002` findings `5/6` sąmoningai sprendžiami kaip atskira portability / docs clarity banga, o ne kaip papildomas pirmos bangos template kontrakto refaktorius.
+- `audit-wave-002` findings `5/6` uždaromi per vieningą `bash` shell kontraktą ir aiškų docs/AGENTS portability sluoksnį; pilna POSIX shell refaktorizacija į šią bangą neįtraukta.
 - `audit-wave-002` finding `2` laikomas tik dalinai teisingu: shared materialization kontraktas tarp bootstrap ir refresh tikrai išsiskyręs, bet reportuotas dabartinis live failure nepasitvirtino, nes template required katalogai šiame checkout'e yra tracked ir bootstrap testai praeina.
 - `audit-wave-002` finding `7` laikomas neteisingu: `handoffs/README.md` repo egzistuoja ir yra tracked, todėl continuity modelio reference nėra sulūžęs.
 - `audit-wave-001` 3-iasis finding'as laikomas tik dalinai teisingu: book workflow failai jau duoda LT/EU-first operacinį default'ą, bet `AGENTS.md` formuluotė lieka dviprasmė ir turi būti suderinta.
@@ -118,8 +126,8 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- `audit-wave-002` pirmą bangą laikyti uždaryta.
-- Jei bus tęsiamas `audit-wave-002`, kitą darbą planuoti tik kaip atskirą `5/6` portability / docs clarity bangą.
+- `audit-wave-002` abi įgyvendinimo bangas laikyti uždarytas.
+- Kitas repo-engineering darbas po šios bangos turėtų būti pradedamas kaip nauja techninė tema / naujas thread, o ne kaip tolesnis `audit-wave-002` append'as.
 - Kai bus patogu, po pirmo realaus push patikrinti GitHub Actions workflow rezultatą, nes focused CI šioje bangoje verifikuotas lokaliai, bet dar ne live run'u.
 <!-- ledger:next_steps:end -->
 
