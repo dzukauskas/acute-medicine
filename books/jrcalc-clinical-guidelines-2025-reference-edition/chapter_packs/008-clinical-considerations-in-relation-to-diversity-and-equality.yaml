@@ -1287,6 +1287,17 @@ clinical_claims:
 structured_block_policies: []
 active_terms: []
 active_acronyms:
+- acronym: ADH
+  lt: antidiurezinis hormonas
+  en: Antidiuretic Hormone
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU endokrinologijos šaltiniuose 2026-03-29. LT literatūroje vartojama
+    ir santrumpa `ADH`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: antidiurezinis hormonas (ADH)
+  section_scope: 008
 - acronym: ADHD
   lt: aktyvumo ir dėmesio sutrikimas
   en: Attention Deficit Hyperactivity Disorder

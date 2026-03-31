@@ -4,6 +4,8 @@
 
 Ten, kur santrumpa susijusi tik su originalo teisiniu, organizaciniu ar instituciniu kontekstu, reikšmė paliekama pagal originalą ir nepromuojama į aktyvią LT medicininę bazę.
 
+Kai kurios šio originalo santrumpos yra daugiareikšmės. Pavyzdžiui, kituose šio leidinio skyriuose `Guillain-Barré sindromas (GBS)` gali būti atskiras terminas, tačiau šiame santrumpų sąrašo įraše, laikantis originalo, `GBS` reiškia `B grupės streptokoko infekciją`.
+
 | Santrumpa | Reikšmė šiame vertime |
 | --- | --- |
 | AAA | pilvinės aortos aneurizma (AAA). |

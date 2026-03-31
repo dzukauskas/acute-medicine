@@ -2,20 +2,22 @@
 
 ## Kaip naudotis šiomis gairėmis
 
-Šis leidinys yra konsultacinio pobūdžio. Jis skirtas padėti priimti sprendimus dėl paciento būklės vertinimo ir priežiūros, tačiau nepakeičia klinikinio sprendimo. Taikant rekomendacijas būtina turėti pakankamą profesinę kompetenciją, įvertinti konkrečią klinikinę situaciją ir prireikus remtis galiojančiais vietiniais teisės aktais, procedūromis bei oficialiais šaltiniais.
+Šių gairių rengėjai dėjo visas pastangas, kad leidimo paskelbimo metu jose pateikta informacija, lentelės, brėžiniai ir schemos būtų tikslūs. Vis dėlto šios gairės yra konsultacinio pobūdžio ir parengtos tam, kad padėtų sveikatos priežiūros specialistams ir pacientams priimti sprendimus dėl paciento sveikatos priežiūros, įskaitant gydymą. Šios rekomendacijos skirtos paremti sprendimų priėmimą, tačiau jos nepakeičia tinkamo klinikinio sprendimo. Gairėse ne visada gali būti visa informacija, reikalinga konkrečiai priežiūrai parinkti, ir jos negali apimti visų individualių situacijų, todėl jomis besinaudojantys asmenys turi turėti pakankamai žinių ir įgūdžių tinkamai jas interpretuoti.
 
-Spausdintas leidimas gali nebeatspindėti vėlesnių pataisų ar atnaujinimų. Dėl to, kilus abejonių, reikia tikrinti, ar nėra naujesnės oficialios informacijos.
+Naudojant spausdintą leidimą visada reikia atsižvelgti į tai, kad po jo paskelbimo atsiradę pakeitimai jame gali neatsispindėti.
 
-Visi klinikiniai darbuotojai turi veikti pagal savo kompetencijos ribas ir prisiimti atsakomybę už savo klinikinę praktiką. Jei konkrečioje situacijoje tenka nukrypti nuo įprastos praktikos, toks sprendimas ir jo priežastys turi būti aiškiai užfiksuoti paciento priežiūros dokumentuose.
+Šių gairių rengėjai negarantuoja ir neprisiima jokios teisinės atsakomybės už šių gairių turinio tikslumą, patikimumą, aktualumą ar išsamumą.
 
-Jei pacientai ar klinikiniai darbuotojai įtraukiami į tinkamai patvirtintą mokslinį tyrimą, dėl to gali būti taikomi nuo įprastų gairių besiskiriantys sprendimai. Tokie nukrypimai turi būti pagrįsti tyrimo tvarka ir atitinkamai dokumentuoti.
+Nors kai kuriais atvejais gairės gali būti koreguojamos pagal vietos paslaugų teikėjo poreikius, visi klinikiniai darbuotojai turi veikti pagal savo kompetencijos ribas ir patys atsako už savo klinikinę praktiką. Dėl ikihospitalinės priežiūros pobūdžio tam tikrose situacijose gali prireikti nukrypti nuo šiose gairėse aprašytos įprastos klinikinės praktikos. Bet koks toks nukrypimas ir jo priežastis visada turi būti aiškiai užfiksuoti paciento priežiūros dokumentuose.
 
-Šiame skyriuje vartojami žodžiai, susiję su ginekologinėmis ar nėštumo būklėmis, neturi būti suprantami kaip ribojantys pacientų įvairovę. Klinikinėje praktikoje rekomenduotina rinktis įtraukią ir konkrečiai situacijai tinkamą kalbą.
+Gairių rengėjai pripažįsta mokslinių tyrimų naudą ir remia inovacijų diegimą, mokslinių tyrimų vykdymą bei taikymą siekiant gerinti dabartinę ir būsimą pacientų priežiūrą. Moksliniai tyrimai gali sudaryti sąlygas pacientams anksčiau gauti naujus gydymo metodus ir technologijas. Paramedikai gali dalyvauti moksliniuose tyrimuose kaip savo klinikinės praktikos dalyje ir įtraukti pacientus į tyrimų veiklas. Dalyvaujant mokslo tyrime, kurį yra patvirtinęs mokslinių tyrimų etikos komitetas, gali būti taikomi nuo gairių besiskiriantys sprendimai.
 
-Nuorodos į trečiųjų šalių svetaines pateikiamos tik informaciniais tikslais. Už jų turinį šio leidinio rengėjai neatsako.
+Šiose gairėse ginekologinių ir su nėštumu susijusių būklių kontekste vartojami žodžiai `woman`, `women` ir `mother`. Originalo rengėjai pažymi, kad ši vartosena neatspindi visos pacientų įvairovės, įskaitant pacientus, kurie save tapatina kaip nebinarinės tapatybės ar translyčius asmenis, ir įsipareigoja toliau peržiūrėti kalbą, kad ji būtų kuo įtraukesnė. Klinicistai raginami apgalvoti, kokius žodžius vartoja vertindami pacientus, ir vengti klaidingų išvadų vien iš numanomos su lytimi susijusios diagnozės.
+
+Skiltyje `Further Resources` pateikiamos nuorodos į trečiųjų šalių valdomas svetaines. Šios nuorodos pateikiamos tik informaciniais tikslais, o už jose esantį turinį šių gairių rengėjai neatsako.
 
 ## Originalo kontekstas
 
-Originaliame leidinyje disclaimer aiškiai siejamas su JK paramedikų gairių sistema `JRCALC`, nuorodomis į `NICE` ir `NHS England` kontekstą. Šios institucijos ir jų vidaus taikymo logika nėra tiesioginis Lietuvos norminis standartas, todėl pagrindiniame LT tekste jos neperkeliamos kaip autoritetingas vietinis modelis.
+Originale aiškiai nurodoma, kad gairėse remiamasi `NICE`, o jų dauguma skirta `NHS ambulance services` kontekstui. Šie proper noun ir jų taikymo logika šiame vertime turi būti suprantami tik kaip originalo leidinio kontekstas, o ne kaip Lietuvos norminis standartas.
 
-Originale taip pat nurodoma, kad naujausia šio leidinio versija skelbiama `JRCALC` programėlėse. Tai svarbu tik kaip originalo leidinio pastaba.
+Originale taip pat pažymima, kad naujausia šių gairių versija skelbiama `JRCALC apps`, todėl tai laikoma originalo leidinio prieigos pastaba.

@@ -254,10 +254,11 @@ term_candidates:
   chapter_slug: 004-guideline-development-methodology
   source_context: Feedback is welcome via JRCALC@AACE.org
   proposed_lt: ''
-  status: candidate
+  status: rejected
   scope: book
   candidate_origin: source_acronym
   reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
   banned_lt: ''
   source_ref: ''
-  notes: ''
+  notes: Originalo JK organizacinė santrumpa. Nenaudoti kaip LT akronimų bazės įrašo; laikyti tik originalo
+    kontekste.

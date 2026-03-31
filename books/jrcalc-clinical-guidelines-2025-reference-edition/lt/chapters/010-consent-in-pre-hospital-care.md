@@ -2,22 +2,23 @@
 
 ## 1. Sutikimas ikihospitalinėje pagalboje
 
-- Įstatymai ir gairės, susiję su sutikimu atlikti vertinimą, gydymą, priežiūrą ir kitas intervencijas, Jungtinės Karalystės valstybėse ir (arba) jurisdikcijose skiriasi.
+- Sutikimas atlikti vertinimą, gydymą, priežiūrą ar kitas intervencijas turi būti gaunamas teisėtai ir laikantis galiojančios Lietuvos teisės bei vietinės įstaigos tvarkos.
 
-- Todėl šiose gairėse, išskyrus šiame teiginyje pateikiamus bendruosius principus, detalių nurodymų dėl sutikimo gavimo neteikiama. Skaitytojams primygtinai rekomenduojama konkrečių nurodymų dėl sutikimo ieškoti savo GMP tarnyboje, `Trust` ar pas kitą susijusį darbdavį.
+- Šiame skyriuje pateikiami tik bendrieji principai. Jis nepakeičia konkrečių LT teisinių ir organizacinių nuostatų, todėl praktikoje būtina vadovautis Lietuvos Respublikos pacientų teisių ir žalos sveikatai atlyginimo įstatymu, vietiniais procedūriniais dokumentais ir, kai reikia, darbdavio ar gydymo įstaigos nurodymais.
 
-- Pabrėžiama, kad sutikimo gavimas teisėtais būdais toje jurisdikcijoje, kurioje dirba konkretus skaitytojas, yra esminė paciento teisinių ir etinių teisių dalis sprendžiant, kas vyks su juo ir jo kūnu. Todėl svarbu užtikrinti, kad visada veiktumėte geriausiais paciento interesais ir turėtumėte teisiškai galiojantį sutikimą atlikti vertinimą, gydymą ar intervencijas bei teikti priežiūrą.
+- Teisėtai gautas sutikimas yra esminė paciento teisinių ir etinių teisių apsaugos dalis. Todėl visada svarbu veikti geriausiais paciento interesais ir prieš atliekant vertinimą, gydymą ar kitą intervenciją turėti galiojantį sutikimą.
 
-- Prieš atliekant apžiūrą ar gydymą arba teikiant priežiūrą, sutikimas turi būti gautas iš kiekvieno paciento arba iš jo teisiškai galiojančio atstovo, apibrėžiamo pagal atitinkamos valstybės ar jurisdikcijos teisę.
+- Prieš atliekant apžiūrą, gydymą ar teikiant priežiūrą sutikimas turi būti gaunamas iš paties paciento arba iš teisėto jo atstovo, jei tai numato taikoma teisė.
 
-- Užtikrinkite, kad pacientui būtų suteikta tinkama informacija, leidžianti suprasti siūlomą vertinimą, gydymą ar intervencijas. Kad pacientas galėtų duoti informuotą sutikimą, jis turi suprasti ne tik tai, kokie veiksmai bus atliekami, bet ir jų pasekmes.
+- Pacientui turi būti suteikta pakankamai informacijos, kad jis suprastų siūlomą vertinimą, gydymą ar intervencijas. Informuotas sutikimas reiškia, kad pacientas supranta ne tik tai, kas bus daroma, bet ir galimas tokio sprendimo pasekmes.
 
-- Ikihospitalinėse situacijose pacientai neretai atsisako vertinimo, priežiūros ar gydymo. Nors pacientai gali atsisakyti, tam tikromis aplinkybėmis GMP klinicistui gali išlikti moralinė pareiga ir teisinė atsakomybė imtis tolesnių veiksmų, ypač jei kyla pavojus gyvybei.
+- Ikihospitalinėse situacijose pacientai neretai atsisako vertinimo, priežiūros ar gydymo. Vis dėlto tam tikromis aplinkybėmis, ypač esant gyvybei pavojingai rizikai, GMP klinicistui gali išlikti moralinė pareiga ir teisinė atsakomybė imtis tolesnių veiksmų.
 
-- Tokiose situacijose GMP klinicistams vėl rekomenduojama kreiptis į savo darbdavį dėl nurodymų, kad jų veiksmai atitiktų tos teisinės jurisdikcijos reikalavimus, kurioje jie dirba.
+- Tokiose situacijose sprendimai turi būti grindžiami paciento geriausių interesų principu, teisėtu atstovavimu, paciento gebėjimo priimti sprendimus vertinimu ir galiojančia LT teise.
 
-- Bendraujant su kitais sveikatos priežiūros specialistais būtina aptarti ir paciento gebėjimą duoti sutikimą.
+- Bendraujant su kitais sveikatos priežiūros specialistais būtina aptarti ir paciento gebėjimą duoti sutikimą, jei tai turi reikšmės tolesnei priežiūrai.
 
-### JK originalo kontekstas
+## Originalo kontekstas
 
-- Originale visas šis skyrius aiškiai apribotas JK jurisdikcijų kontekstu. LT skaitytojui tai reiškia, kad praktikoje būtina vadovautis galiojančia Lietuvos teise, vietine įstaigos tvarka ir paciento geriausių interesų principu, tačiau pats originalo tekstas čia paliktas kuo arčiau pirminės formuluotės.
+- Originale šis skyrius aiškiai susietas su skirtingomis JK jurisdikcijomis, `ambulance services`, `Trusts` ir `JRCALC`.
+- Šiame vertime tie proper noun neperkeliami kaip LT teisinės tvarkos aprašas; jie svarbūs tik tam, kad būtų aišku, jog originalus tekstas buvo parašytas JK kontekstui.

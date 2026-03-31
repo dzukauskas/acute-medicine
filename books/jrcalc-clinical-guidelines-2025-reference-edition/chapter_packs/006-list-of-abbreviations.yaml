@@ -88,6 +88,14 @@ active_terms:
   section_scope: all
   local_override_tag: ''
   example_lt: sutrikusi sąmonė
+- en: Cauda Equina Syndrome
+  lt: arklio uodegos sindromas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: arklio uodegos sindromas
 - en: Chronic Obstructive Pulmonary Disease
   lt: lėtinė obstrukcinė plaučių liga
   status: preferred
@@ -154,6 +162,15 @@ active_terms:
   section_scope: all
   local_override_tag: ''
   example_lt: spontaninės kraujotakos atsinaujinimas (ROSC)
+- en: Spinal Cord Injury
+  lt: nugaros smegenų pažeidimas
+  status: preferred
+  banned_lt:
+  - nugaros smegenų sužalojimas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: nugaros smegenų pažeidimas
 - en: Transient Ischaemic Attack
   lt: praeinantis smegenų išemijos priepuolis
   status: preferred
@@ -204,6 +221,17 @@ active_acronyms:
   allowed_in_headings: 'no'
   ambiguous_context: ''
   preferred_lt_context: pilvinės aortos aneurizma (AAA)
+  section_scope: '006'
+- acronym: ADH
+  lt: antidiurezinis hormonas
+  en: Antidiuretic Hormone
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU endokrinologijos šaltiniuose 2026-03-29. LT literatūroje vartojama
+    ir santrumpa `ADH`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: antidiurezinis hormonas (ADH)
   section_scope: '006'
 - acronym: ADHD
   lt: aktyvumo ir dėmesio sutrikimas
@@ -477,6 +505,17 @@ active_acronyms:
   allowed_in_headings: 'no'
   ambiguous_context: ''
   preferred_lt_context: kvėpavimo takų obstrukcija svetimkūniu (FBAO)
+  section_scope: '006'
+- acronym: GBS
+  lt: Guillain-Barré sindromas
+  en: Guillain-Barre Syndrome
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU ir e-Seimo šaltiniuose 2026-03-29. LT šaltiniuose matoma ir forma
+    `Gijeno-Barė`, tačiau šiame leidinyje laikomasi akademinės `Guillain-Barré sindromas` formos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: Guillain-Barré sindromas (GBS)
   section_scope: '006'
 - acronym: GTN
   lt: glicerolio trinitratas
@@ -1627,20 +1666,6 @@ term_candidates:
   source_expansion: ''
   chapter_slug: 006-list-of-abbreviations
   source_context: '| FLACC | F – Face |'
-  proposed_lt: ''
-  status: candidate
-  scope: book
-  candidate_origin: source_acronym
-  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
-  banned_lt: ''
-  source_ref: ''
-  notes: ''
-- candidate_id: 006-list-of-abbreviations-acronym-gbs
-  candidate_kind: acronym
-  source_term: GBS
-  source_expansion: ''
-  chapter_slug: 006-list-of-abbreviations
-  source_context: '| GBS | Group B Strep Infection |'
   proposed_lt: ''
   status: candidate
   scope: book

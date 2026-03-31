@@ -635,6 +635,15 @@ active_terms:
   section_scope: all
   local_override_tag: ''
   example_lt: pjautuvinių ląstelių liga
+- en: Spinal Cord Injury
+  lt: nugaros smegenų pažeidimas
+  status: preferred
+  banned_lt:
+  - nugaros smegenų sužalojimas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: nugaros smegenų pažeidimas
 - en: Spinal Injury and Spinal Cord Injury
   lt: stuburo trauma ir nugaros smegenų sužalojimas
   status: preferred
@@ -738,6 +747,27 @@ active_acronyms:
   ambiguous_context: ''
   preferred_lt_context: CBRN
   section_scope: '005'
+- acronym: COPD
+  lt: lėtinė obstrukcinė plaučių liga
+  en: Chronic Obstructive Pulmonary Disease
+  policy: original-first
+  notes: Patikrinta LT interneto pulmonologijos šaltiniuose 2026-03-29. LT vartosenoje įprasta santrumpa
+    `LOPL`, tačiau šio leidinio santrumpių žodyne originali `COPD` santrumpa paliekama su LT išskleidimu.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: lėtinė obstrukcinė plaučių liga (LOPL / COPD)
+  section_scope: '005'
+- acronym: CPR
+  lt: kardiopulmoninis gaivinimas
+  en: Cardiopulmonary Resuscitation
+  policy: lt-first
+  notes: Patikrinta LT interneto gaivinimo šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kardiopulmoninis gaivinimas (CPR)
+  section_scope: '005'
 - acronym: CRB-65
   lt: CRB-65 skalė
   en: CRB-65 score
@@ -749,6 +779,16 @@ active_acronyms:
   ambiguous_context: ''
   preferred_lt_context: CRB-65 skalė
   section_scope: '005'
+- acronym: CT
+  lt: kompiuterinė tomografija
+  en: Computerised Tomography
+  policy: lt-first
+  notes: Patikrinta LT interneto radiologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kompiuterinė tomografija (KT / CT)
+  section_scope: '005'
 - acronym: DKA
   lt: diabetinė ketoacidozė
   en: Diabetic ketoacidosis
@@ -758,6 +798,28 @@ active_acronyms:
   allowed_in_headings: 'no'
   ambiguous_context: ''
   preferred_lt_context: diabetinė ketoacidozė
+  section_scope: '005'
+- acronym: FBAO
+  lt: kvėpavimo takų obstrukcija svetimkūniu
+  en: Foreign Body Airway Obstruction
+  policy: original-first
+  notes: Terminui jau taikyta LT interneto skubiosios pagalbos šaltinių patikra 2026-03-28; akronimo eilutė
+    pridėta 006 santrumpų žodyno nuoseklumui.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: kvėpavimo takų obstrukcija svetimkūniu (FBAO)
+  section_scope: '005'
+- acronym: HVS
+  lt: hiperventiliacijos sindromas
+  en: Hyperventilation Syndrome
+  policy: original-first
+  notes: Remiasi jau validuotu LT termino įrašu `Hyperventilation Syndrome -> hiperventiliacijos sindromas`;
+    akronimo eilutė pridėta 006 santrumpų žodyno nuoseklumui 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: hiperventiliacijos sindromas (HVS)
   section_scope: '005'
 - acronym: LVAD
   lt: kairiojo skilvelio pagalbinis įrenginys
@@ -769,6 +831,73 @@ active_acronyms:
   allowed_in_headings: 'yes'
   ambiguous_context: ''
   preferred_lt_context: kairiojo skilvelio pagalbinis įrenginys (LVAD)
+  section_scope: '005'
+- acronym: MI
+  lt: miokardo infarktas
+  en: Myocardial Infarction
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU kardiologijos šaltiniuose 2026-03-29. LT vartosenoje įprasta santrumpa
+    `MI`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: miokardo infarktas (MI)
+  section_scope: '005'
+- acronym: NLS
+  lt: naujagimio gaivinimas
+  en: Newborn Life Support
+  policy: original-first
+  notes: Patikrinta LT interneto SAM ir LSMU neonatologijos šaltiniuose 2026-03-29. LT praktikoje dažniausiai
+    vartojama pilna forma, tačiau šiame leidinyje santrumpių žodyne laikomasi originalios `NLS` santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: naujagimio gaivinimas (NLS)
+  section_scope: '005'
+- acronym: PE
+  lt: plaučių embolija
+  en: Pulmonary Embolism
+  policy: original-first
+  notes: Remiasi jau validuotu LT termino įrašu `Pulmonary Embolism -> plaučių embolija` ir papildomai
+    patikrinta LT interneto kardiologijos bei SAM šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: plaučių embolija (PE)
+  section_scope: '005'
+- acronym: ROSC
+  lt: spontaninės kraujotakos atsinaujinimas
+  en: Return of Spontaneous Circulation
+  policy: original-first
+  notes: Remiasi jau validuotu LT termino įrašu `Return of Spontaneous Circulation -> spontaninės kraujotakos
+    atsinaujinimas` ir papildomai patikrinta LT interneto gaivinimo šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: spontaninės kraujotakos atsinaujinimas (ROSC)
+  section_scope: '005'
+- acronym: SCI
+  lt: nugaros smegenų pažeidimas
+  en: Spinal Cord Injury
+  policy: original-first
+  notes: Patikrinta LT interneto SAM traumų metodikoje ir LSMU neurochirurgijos / reabilitacijos šaltiniuose
+    2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: nugaros smegenų pažeidimas (SCI)
+  section_scope: '005'
+- acronym: TIA
+  lt: praeinantis smegenų išemijos priepuolis
+  en: Transient Ischaemic Attack
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU neurologijos šaltiniuose 2026-03-29. LT medicininėje vartosenoje
+    taip pat aktyvi santrumpa `PSIP`, tačiau šiame leidinyje santrumpių žodyne laikomasi originalios `TIA`
+    santrumpos.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: praeinantis smegenų išemijos priepuolis (PSIP / TIA)
   section_scope: '005'
 - acronym: PSIP
   lt: praeinantis smegenų išemijos priepuolis

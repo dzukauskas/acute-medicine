@@ -95,9 +95,9 @@
 | Galvos trauma | 2024 m. liepa | Peržiūrėta ir atnaujinta. Patikslintos rekomendacijos dėl transportavimo sprendimų ir dėl pacientų, vartojančių antitrombocitinius vaistus. |
 | Galūnių trauma | 2023 m. rugsėjis | Pateiktos naujos rekomendacijos ir vaizdai apie lūžių repoziciją bei girnelės išnirimo valdymą. Daugiau dėmesio skirta klubo lūžiams. |
 | Dubens trauma | 2024 m. liepa | Labiau akcentuojamas ankstyvas papildomų kritinės priežiūros resursų poreikio svarstymas, kartu išlaikant pranašumą kuo greičiau judėti ligoninės link. |
-| Stuburo trauma ir nugaros smegenų sužalojimas | 2025 m. balandis | Nedidelis formuluočių atnaujinimas, atspindintis dabartinę trust'ų praktiką dėl kaklo įtvarų naudojimo imobilizacijai. |
+| Stuburo trauma ir nugaros smegenų pažeidimas | 2025 m. balandis | Nedidelis formuluočių atnaujinimas dėl kaklo įtvarų naudojimo imobilizacijai, atspindintis originale minimą dabartinę vietos paslaugų teikėjų praktiką. |
 | Krūtinės trauma | 2024 m. liepa | Labiau akcentuojamas ankstyvas papildomų kritinės priežiūros resursų poreikio svarstymas, kartu išlaikant pranašumą kuo greičiau judėti ligoninės link. Pridėtos naujos rekomendacijos apie šonkaulių lūžius. |
-| Trauminės skubios būklės suaugusiesiems – apžvalga | 2025 m. balandis | Nedidelis formuluočių atnaujinimas, atspindintis dabartinę trust'ų praktiką dėl kaklo įtvarų naudojimo imobilizacijai. |
+| Trauminės skubios būklės suaugusiesiems – apžvalga | 2025 m. balandis | Nedidelis formuluočių atnaujinimas dėl kaklo įtvarų naudojimo imobilizacijai, atspindintis originale minimą dabartinę vietos paslaugų teikėjų praktiką. |
 | Trauminės skubios būklės vaikams – apžvalga | 2022 m. vasaris | Pridėtos naujos rekomendacijos dėl pasikorimo vertinimo ir valdymo. Taip pat pridėta nauja literatūros nuoroda. |
 
 ## Akušerija

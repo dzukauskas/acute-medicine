@@ -102,7 +102,26 @@ active_terms:
   section_scope: all
   local_override_tag: ''
   example_lt: vaisiaus pečių distocija
-active_acronyms: []
+- en: Overdose and Poisoning
+  lt: apsinuodijimas ir perdozavimas
+  status: preferred
+  banned_lt: []
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: ''
+  example_lt: apsinuodijimas ir perdozavimas
+active_acronyms:
+- acronym: AAA
+  lt: pilvinės aortos aneurizma
+  en: Abdominal Aortic Aneurysm
+  policy: original-first
+  notes: Patikrinta LT interneto kraujagyslių chirurgijos šaltiniuose 2026-03-29. Šaltinio santrumpė paliekama,
+    bet LT išskleidimui vartoti `pilvinės aortos aneurizma`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: pilvinės aortos aneurizma (AAA)
+  section_scope: '002'
 localization_overrides:
 - source_term: PIL
   jurisdiction: uk
