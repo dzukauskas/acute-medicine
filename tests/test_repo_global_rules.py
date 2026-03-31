@@ -15,6 +15,7 @@ SCRIPTS_DIR = REPO_ROOT / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
+import workflow_book_template as wbt  # noqa: E402
 import workflow_policy as wp  # noqa: E402
 import workflow_rules as wr  # noqa: E402
 
@@ -54,6 +55,7 @@ class RepoGlobalRulesTests(unittest.TestCase):
         ):
             (book_root / rel_dir).mkdir(parents=True, exist_ok=True)
         self.write(book_root / "README.md", "# Test Book\n")
+        wbt.write_book_metadata(book_root, wbt.CanonicalSource(kind="pdf", name="SOURCE.pdf"))
         return book_root
 
     def run_script(self, script_name: str, *args: str) -> subprocess.CompletedProcess[str]:
