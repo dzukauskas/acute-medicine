@@ -29,20 +29,18 @@
 
 ## Commit Sequence
 
-1. `Plan audit wave 003`
-   - pridėti `plans/audit-wave-003.md`;
-   - perjungti `ENGINEERING_LEDGER.md` į `audit-wave-003 planning`;
-   - funkcionalaus kodo ir CI šiame žingsnyje neliesti.
-2. `Align repo-global-rules refresh test with metadata contract`
-   - sutvarkyti `tests.test_repo_global_rules` refresh scenarijų taip, kad fixture kurtų minimalų validų `book_metadata.yaml`;
-   - `refresh_book_template.py` metadata-first kontrakto nekeisti.
-3. `Promote guard and rule-layering tests into required CI`
-   - išplėsti `.github/workflows/python-tests.yml` explicit module list, įtraukiant:
+1. `8ce3730` `Plan audit wave 003`
+   - pridėtas `plans/audit-wave-003.md`;
+   - `ENGINEERING_LEDGER.md` perjungtas į `audit-wave-003 planning`.
+2. `f6cff8a` `Align repo-global-rules refresh test with metadata contract`
+   - `tests.test_repo_global_rules` refresh scenarijus sulygintas su metadata-first kontraktu per minimalų `book_metadata.yaml` seed.
+3. `723e5d9` `Promote guard and rule-layering tests into required CI`
+   - `.github/workflows/python-tests.yml` explicit module list papildytas:
      - `tests.test_localization_guard`
      - `tests.test_completeness_guard`
      - `tests.test_term_readiness_gate`
      - `tests.test_repo_global_rules`
-   - `Finding 3` ir `Finding 4` testų į šį wave nekelti.
+   - `Finding 3` ir `Finding 4` testų į šį wave nekelta.
 
 ## Test Plan
 
@@ -65,8 +63,15 @@
 
 ## Implementation Progress
 
-- Planning artifact sukurtas ir sulygintas su sutarta `Finding 1 + Finding 2` banga.
-- Tolesni įgyvendinimo žingsniai vykdomi atskirais commit'ais pagal aukščiau užfiksuotą seką.
+- Pirmos bangos `verification / CI contract hardening` scope įgyvendintas pilnai.
+- Realus verification defektas `tests.test_repo_global_rules` refresh scenarijuje uždarytas per metadata-seed pataisymą.
+- Required CI paviršius išplėstas direct guard ir rule-layering moduliais be scope creep į `Finding 3/4`.
+- Lokaliai žalia:
+  - `python3 -m unittest tests.test_repo_global_rules -v`
+  - direct guard / chapter QA pjūvis
+  - expanded workflow suite
+- GitHub Actions `Python Tests` run `23790510572` ant `723e5d9` baigėsi `success`.
+- Pirma banga laikoma uždaryta; likusi atskira tema yra tik `Finding 3/4` live-validation / operability checkpoint.
 
 ## Risks / Notes
 

@@ -19,22 +19,23 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: audit-wave-003 planning
+- Theme: audit-wave-003 first-wave closed
 - Branch: main
-- Last updated: 2026-03-31T12:25:15+03:00
+- Last updated: 2026-03-31T12:36:09+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- Audit-wave-003 planas uzfiksuotas tracked faile, o pirma banga suformuluota kaip `verification / CI contract hardening` tema be scope creep i live-validation sluoksnius.
+- Audit-wave-003 pirma banga `verification / CI contract hardening` uzdaryta: metadata-contract test fix ir required CI ispletimas jau origin/main, o GitHub Actions run `23790510572` yra success.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Sukurtas tracked planas `plans/audit-wave-003.md`, kuris fiksuoja findings klasifikacija, pirma banga, commit sequence, test plana ir scope ribas.
-- Workflow-declared focused suite buvo lokaliai zalia validavimo fazeje.
-- `tests.test_repo_global_rules` buvo uz CI ribu ir turejo realu lokalų refresh scenarijaus kritima del `book_metadata.yaml` / metadata-first kontrakto neatitikimo.
-- Pirmos bangos scope apima tik metadata-seed pataisyma `tests.test_repo_global_rules` modulyje ir required CI module list ispletima Finding 1 + Finding 2 ribose.
+- `8ce3730`, `f6cff8a` ir `723e5d9` jau pushinti i `origin/main`.
+- `tests.test_repo_global_rules` refresh scenarijus sulygintas su metadata-first kontraktu per minimalu `book_metadata.yaml` seed.
+- `.github/workflows/python-tests.yml` required explicit suite dabar apima `tests.test_localization_guard`, `tests.test_completeness_guard`, `tests.test_term_readiness_gate` ir `tests.test_repo_global_rules`.
+- Lokaliai zali tiek `tests.test_repo_global_rules`, tiek expanded workflow suite.
+- GitHub Actions `Python Tests` run `23790510572` ant `723e5d9` baigesi `success`.
 - `Finding 3` ir `Finding 4` palikti velesniam live-validation / operability checkpoint ir siame wave nelieciami.
 <!-- ledger:current_state:end -->
 
@@ -48,20 +49,22 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Atskirti `Plan audit wave 003` commit'a tik su `plans/audit-wave-003.md` ir `ENGINEERING_LEDGER.md`.
-- Atskirti `Align repo-global-rules refresh test with metadata contract` commit'a tik su `tests/test_repo_global_rules.py`.
-- Atskirti `Promote guard and rule-layering tests into required CI` commit'a tik su `.github/workflows/python-tests.yml`.
-- Velesne atskira tema: `Finding 3` ir `Finding 4` live-validation / operability checkpoint.
+- Si pirma banga uzdaryta.
+- Jei bus testiama `audit-wave-003`, kita atskira tema yra `Finding 3/4` live-validation / operability checkpoint.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- Isplestas CI suite bus letesnis nei ankstesnis focused variantas, nors tai laikoma priimtina verification-depth kaina.
+- Isplestas CI suite letesnis nei ankstesnis focused variantas, bet tai priimta kaip verification-depth kaina.
 - Realus Whimsical auth/board render ir sviezio macOS bootstrap operability vis dar neirodyti vien is repo-local testu.
 <!-- ledger:risks:end -->
 
 ## Completed Themes
 <!-- ledger:completed:start -->
+### 2026-03-31 12:25 | Audit wave 003 first wave
+- Uzdaryta `Finding 1 + Finding 2` banga: `tests.test_repo_global_rules` refresh scenarijus sulygintas su metadata-first kontraktu, o required CI suite isplestas direct guard ir rule-layering moduliais.
+- Lokalus expanded suite ir GitHub Actions run `23790510572` yra zali; `Finding 3/4` palikti velesniam live-validation checkpoint.
+
 ### 2026-03-31 09:28 | GitHub Actions bootstrap smoke parity
 - Uzdaryta siaura CI parity tema: Darwin success smoke testas eksplicitiskai stubina platforma, o non-Darwin failure kontraktas paliktas atskiru testu.
 - Po funkcinio commit o 0e95644 ledger isvalytas atskiru bookkeeping commit u, kad worktree vel butu svarus.
