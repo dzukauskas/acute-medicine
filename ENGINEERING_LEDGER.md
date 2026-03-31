@@ -19,21 +19,21 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: build_chapter_pack term_candidates concurrency hardening
+- Theme: build_chapter_pack term_candidates concurrency hardening closed on main
 - Branch: main
-- Last updated: 2026-03-31T18:34:46+03:00
+- Last updated: 2026-03-31T18:40:39+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- Narrow repo-engineering theme to harden concurrent `build_chapter_pack.py` / `refresh_term_candidates_for_chapter()` access to book-level `term_candidates.tsv` after real JRCALC parallel runs produced NUL-byte corruption and lost status updates.
+- Narrow `build_chapter_pack.py` / `term_candidates.tsv` concurrency hardening is closed on main after the per-book refresh lock, atomic TSV writes, process-based regression coverage, and a green GitHub Actions `Python Tests` run on the closeout commit chain.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- `refresh_term_candidates_for_chapter()` now serializes default `books/<slug>/term_candidates.tsv` refreshes through a per-book lock file adjacent to the target TSV.
-- Shared `write_tsv()` now writes via temp file + `fsync` + `os.replace`, removing the in-place truncate/torn-write window for TSV callers.
-- Focused tests `tests.test_term_candidates_workflow`, `tests.test_term_readiness_gate`, `tests.test_build_chapter_pack_acceptance`, and `tests.test_portable_canonical_artifacts` are green after the hardening change.
+- Commit `0b36cdf` hardened `term_candidates.tsv` refreshes with a per-book lock in `refresh_term_candidates_for_chapter()` and atomic replacement in shared `write_tsv()`.
+- Commit `ef87f68` recorded the active hardening theme in `ENGINEERING_LEDGER.md`.
+- GitHub Actions `Python Tests` run `23806065856` is green on `main` for this closeout sequence.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -41,11 +41,12 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Keep scope narrow: harden only `build_chapter_pack.py` / `refresh_term_candidates_for_chapter()` interaction with `term_candidates.tsv`, not the wider translation workflow.
 - Use a term-candidates-specific per-book lock, not a global workflow lock.
 - Put atomic TSV replacement into shared `write_tsv()`, while keeping locking local to the `term_candidates.tsv` refresh path.
+- Close the theme without widening scope into a broader translation-workflow refactor.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Decide whether to keep this theme open for any broader regression coverage or close it after review / commit.
+- The next repo-engineering topic should start in a new thread.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
@@ -55,6 +56,9 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Completed Themes
 <!-- ledger:completed:start -->
+### 2026-03-31 18:40 | build_chapter_pack term_candidates concurrency hardening closed on main
+- Closed the narrow `term_candidates.tsv` concurrency hardening theme on `main` after commits `0b36cdf` and `ef87f68`, plus green GitHub Actions `Python Tests` run `23806065856`.
+
 ### 2026-03-31 17:27 | audit-wave-004 closed on main
 - Closed the execution contract hardening wave on main after three scoped commits and a green Python Tests run 23802470349.
 
