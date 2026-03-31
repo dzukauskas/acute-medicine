@@ -25,21 +25,4 @@ jobs:
 
       - name: Run focused unittest suite
         run: |
-          python -m unittest \
-            tests.test_workflow_runtime \
-            tests.test_obsidian_sync_safety \
-            tests.test_book_template_parity \
-            tests.test_repo_portability_docs \
-            tests.test_refresh_template_runtime \
-            tests.test_repo_global_rules \
-            tests.test_shell_entrypoints \
-            tests.test_portable_canonical_artifacts \
-            tests.test_localization_guard \
-            tests.test_completeness_guard \
-            tests.test_term_readiness_gate \
-            tests.test_run_chapter_qa \
-            tests.test_validate_adjudication_resolution \
-            tests.test_end_to_end_workflow_contract \
-            tests.test_pdf_bootstrap_runtime \
-            tests.test_epub_bootstrap_runtime \
-            tests.test_epub_bootstrap_and_figures
+          python -m unittest $(python scripts/list_required_python_test_modules.py)
