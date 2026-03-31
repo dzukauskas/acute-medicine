@@ -19,37 +19,45 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: GitHub Actions bootstrap smoke parity
+- Theme: audit-wave-003 planning
 - Branch: main
-- Last updated: 2026-03-31T09:28:56+03:00
+- Last updated: 2026-03-31T12:25:15+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- Uzdaryta siaura bookkeeping pataisa: is ENGINEERING_LEDGER.md pasalintas atsitiktinai patekes terminalo ir Homebrew logu triuksmas, paliekant tik tiksline sios temos santrauka.
+- Audit-wave-003 planas uzfiksuotas tracked faile, o pirma banga suformuluota kaip `verification / CI contract hardening` tema be scope creep i live-validation sluoksnius.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Funkcinis commit 0e95644 yra origin/main, tests.test_shell_entrypoints zaliai praeina, o GitHub Actions run 23765982759 yra success.
-- ENGINEERING_LEDGER.md vel turi tik sios temos santrauka: Darwin -> success smoke modeli, non-Darwin -> failure kontrakto puse ir sprendima neliesti bootstrap_macos.sh bei python-tests workflow.
-- Po sio bookkeeping commit lokali repo busena vel gali buti laikoma svaria, o tema uzdaryta.
+- Sukurtas tracked planas `plans/audit-wave-003.md`, kuris fiksuoja findings klasifikacija, pirma banga, commit sequence, test plana ir scope ribas.
+- Workflow-declared focused suite buvo lokaliai zalia validavimo fazeje.
+- `tests.test_repo_global_rules` buvo uz CI ribu ir turejo realu lokalų refresh scenarijaus kritima del `book_metadata.yaml` / metadata-first kontrakto neatitikimo.
+- Pirmos bangos scope apima tik metadata-seed pataisyma `tests.test_repo_global_rules` modulyje ir required CI module list ispletima Finding 1 + Finding 2 ribose.
+- `Finding 3` ir `Finding 4` palikti velesniam live-validation / operability checkpoint ir siame wave nelieciami.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
 <!-- ledger:decisions:start -->
-- Ledgerio taisymas siame commit e yra tik bookkeeping sluoksnis; shell testai, workflow ir bootstrap skriptai nekeiciami.
-- Si technine tema laikoma pilnai uzdaryta po svaraus ledger atkurimo, o kitas repo-engineering darbas turi buti pradedamas kaip nauja tema ir naujas thread.
+- Pirma implementacijos banga yra vieninga `verification / CI contract hardening` tema, jungianti `Finding 1 + Finding 2`.
+- `tests.test_repo_global_rules` refresh kritimas traktuojamas kaip verification fixture defektas pries metadata-first refresh kontrakta; `refresh_book_template.py` del to nekeiciamas.
+- Required CI pavirsiaus ispletimas daromas per explicit unittest module list, ne per `unittest discover`.
+- `Finding 3` ir `Finding 4` lieka uz sios bangos ribu iki atskiro live-validation / operability plano.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Kita repo-engineering tema pradeti naujame thread.
+- Atskirti `Plan audit wave 003` commit'a tik su `plans/audit-wave-003.md` ir `ENGINEERING_LEDGER.md`.
+- Atskirti `Align repo-global-rules refresh test with metadata contract` commit'a tik su `tests/test_repo_global_rules.py`.
+- Atskirti `Promote guard and rule-layering tests into required CI` commit'a tik su `.github/workflows/python-tests.yml`.
+- Velesne atskira tema: `Finding 3` ir `Finding 4` live-validation / operability checkpoint.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- Nera atviru riziku siai uzdarytai temai.
+- Isplestas CI suite bus letesnis nei ankstesnis focused variantas, nors tai laikoma priimtina verification-depth kaina.
+- Realus Whimsical auth/board render ir sviezio macOS bootstrap operability vis dar neirodyti vien is repo-local testu.
 <!-- ledger:risks:end -->
 
 ## Completed Themes
