@@ -19,36 +19,38 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: audit-wave-004 closed on main
+- Theme: build_chapter_pack term_candidates concurrency hardening
 - Branch: main
-- Last updated: 2026-03-31T17:27:42.823061+03:00
+- Last updated: 2026-03-31T18:34:46+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- audit-wave-004 execution contract hardening is closed on main after the execution-contract pin, manifest-based required CI migration, and repo-local tool-promise clarification landed cleanly.
+- Narrow repo-engineering theme to harden concurrent `build_chapter_pack.py` / `refresh_term_candidates_for_chapter()` access to book-level `term_candidates.tsv` after real JRCALC parallel runs produced NUL-byte corruption and lost status updates.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Commit 9e6711a pinned the python3 >= 3.11 execution contract across runtime, bootstrap, tests, and README parity files.
-- Commit de0a72c moved the required Python CI suite into tracked tests/python_test_suite.toml with a minimal helper and a dedicated suite contract test.
-- Commit 53d9649 clarified repo-local vs machine-level tool guarantees, and GitHub Actions run 23802470349 is green on that commit.
+- `refresh_term_candidates_for_chapter()` now serializes default `books/<slug>/term_candidates.tsv` refreshes through a per-book lock file adjacent to the target TSV.
+- Shared `write_tsv()` now writes via temp file + `fsync` + `os.replace`, removing the in-place truncate/torn-write window for TSV callers.
+- Focused tests `tests.test_term_candidates_workflow`, `tests.test_term_readiness_gate`, `tests.test_build_chapter_pack_acceptance`, and `tests.test_portable_canonical_artifacts` are green after the hardening change.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
 <!-- ledger:decisions:start -->
-- audit-wave-004 is closed as a narrow contract-hardening theme on main; no broader provisioning expansion is part of this closure.
+- Keep scope narrow: harden only `build_chapter_pack.py` / `refresh_term_candidates_for_chapter()` interaction with `term_candidates.tsv`, not the wider translation workflow.
+- Use a term-candidates-specific per-book lock, not a global workflow lock.
+- Put atomic TSV replacement into shared `write_tsv()`, while keeping locking local to the `term_candidates.tsv` refresh path.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- The next repo-engineering topic should start in a new thread.
+- Decide whether to keep this theme open for any broader regression coverage or close it after review / commit.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- There is no active audit-wave-004 blocker; wider machine-level tooling still depends on workstation setup and remains outside the tracked repo bootstrap promise.
+- The lock is intentionally narrow to default book-level `term_candidates.tsv` refreshes; custom `--out` TSV paths are left unlocked by design because they are not the shared workflow artifact.
 <!-- ledger:risks:end -->
 
 ## Completed Themes
