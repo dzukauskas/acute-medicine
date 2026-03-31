@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import multiprocessing
+import queue
 import tempfile
 import textwrap
+import traceback
 import unittest
 from argparse import Namespace
 from pathlib import Path
@@ -38,6 +41,20 @@ AUDIT_ROWS = [
     "| norminė logika | ok |  |",
     "| atviros abejonės | ok |  |",
 ]
+
+
+def refresh_term_candidates_in_process(
+    book_root: str,
+    slug: str,
+    barrier: multiprocessing.synchronize.Barrier,
+    errors: multiprocessing.queues.Queue[str],
+) -> None:
+    try:
+        barrier.wait(timeout=10)
+        mine_term_candidates.refresh_term_candidates_for_chapter(slug, book_root=book_root)
+    except BaseException:
+        errors.put(traceback.format_exc())
+        raise
 
 
 class TermCandidateWorkflowTests(unittest.TestCase):
@@ -261,6 +278,67 @@ class TermCandidateWorkflowTests(unittest.TestCase):
             candidate_rows = wr.read_tsv(book_root / "term_candidates.tsv")
             self.assertEqual(len(candidate_rows), 1)
             self.assertEqual(candidate_rows[0]["candidate_kind"], "term")
+
+    def test_process_parallel_refresh_preserves_both_chapters_and_avoids_nul_bytes(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            book_root = self.make_book_root(Path(tmp_dir))
+            slug_a = "001-test-chapter"
+            slug_b = "002-second-test-chapter"
+            self.write(
+                book_root / "source" / "chapters-en" / f"{slug_a}.md",
+                "# Test chapter\n\nSentinel perfusion window is described here.\n",
+            )
+            self.write(
+                book_root / "source" / "chapters-en" / f"{slug_b}.md",
+                "# Second test chapter\n\nZonal perfusion reserve is described here.\n",
+            )
+            self.write(
+                book_root / "research" / f"{slug_a}.md",
+                self.minimal_research(slug_a, "Test chapter", ["Sentinel perfusion window"]),
+            )
+            self.write(
+                book_root / "research" / f"{slug_b}.md",
+                self.minimal_research(slug_b, "Second test chapter", ["Zonal perfusion reserve"]),
+            )
+
+            ctx = multiprocessing.get_context("spawn")
+            barrier = ctx.Barrier(2)
+            errors = ctx.Queue()
+            processes = [
+                ctx.Process(target=refresh_term_candidates_in_process, args=(str(book_root), slug_a, barrier, errors)),
+                ctx.Process(target=refresh_term_candidates_in_process, args=(str(book_root), slug_b, barrier, errors)),
+            ]
+            for process in processes:
+                process.start()
+            for process in processes:
+                process.join(timeout=20)
+            for process in processes:
+                if process.is_alive():
+                    process.terminate()
+                    process.join(timeout=5)
+                    self.fail(f"Parallel refresh worker did not finish cleanly: pid={process.pid}")
+
+            error_messages: list[str] = []
+            while True:
+                try:
+                    error_messages.append(errors.get_nowait())
+                except queue.Empty:
+                    break
+            if error_messages:
+                self.fail("\n\n".join(error_messages))
+
+            for process in processes:
+                self.assertEqual(process.exitcode, 0)
+
+            data = (book_root / "term_candidates.tsv").read_bytes()
+            self.assertNotIn(b"\x00", data)
+
+            rows = wr.read_tsv(book_root / "term_candidates.tsv")
+            self.assertEqual({row["chapter_slug"] for row in rows}, {slug_a, slug_b})
+            self.assertEqual(
+                {row["source_term"] for row in rows},
+                {"Sentinel perfusion window", "Zonal perfusion reserve"},
+            )
 
 
 if __name__ == "__main__":

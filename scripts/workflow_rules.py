@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 import os
 import re
+import tempfile
 from pathlib import Path
 from typing import Callable, Iterable
 
@@ -101,11 +102,24 @@ def read_tsv(path: Path) -> list[dict[str, str]]:
 
 def write_tsv(path: Path, fieldnames: list[str], rows: Iterable[dict[str, str]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", lineterminator="\n")
-        writer.writeheader()
-        for row in rows:
-            writer.writerow({field: row.get(field, "") for field in fieldnames})
+    temp_fd, temp_path_raw = tempfile.mkstemp(
+        prefix=f".{path.name}.",
+        suffix=".tmp",
+        dir=path.parent,
+    )
+    temp_path = Path(temp_path_raw)
+    try:
+        with os.fdopen(temp_fd, "w", encoding="utf-8", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", lineterminator="\n")
+            writer.writeheader()
+            for row in rows:
+                writer.writerow({field: row.get(field, "") for field in fieldnames})
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temp_path, path)
+    except Exception:
+        temp_path.unlink(missing_ok=True)
+        raise
 
 
 def split_multi(value: str) -> list[str]:

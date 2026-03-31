@@ -2,8 +2,11 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
 import re
 from pathlib import Path
+
+import fcntl
 
 from workflow_book import chapter_paths_for_slug, resolve_chapter_slug
 from workflow_markdown import extract_inventory, parse_markdown_sections
@@ -559,25 +562,35 @@ def preserve_manual_fields(current_row: dict[str, str], previous_row: dict[str, 
     return merged
 
 
-def refresh_term_candidates_for_chapter(
+def same_file_path(left: Path, right: Path) -> bool:
+    return left.resolve() == right.resolve()
+
+
+@contextlib.contextmanager
+def term_candidates_refresh_lock(path: Path) -> object:
+    lock_path = path.with_name(f".{path.name}.lock")
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    with lock_path.open("a+", encoding="utf-8") as handle:
+        fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+
+
+def merge_refreshed_term_candidate_rows(
     slug: str,
     *,
-    book_root: str | Path | None = None,
-    output_path: str | Path | None = None,
-) -> list[dict[str, str]]:
-    default_path = term_candidates_path(book_root)
-    target_path = Path(output_path) if output_path is not None else default_path
-    existing_rows = load_term_candidate_rows(book_root) if target_path == default_path else (
-        [] if not target_path.exists() else read_tsv(target_path)
-    )
-    current_rows = mine_chapter_term_candidates(slug, book_root=book_root)
+    existing_rows: list[dict[str, str]],
+    current_rows: list[dict[str, str]],
+) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     previous_by_id = {
         row.get("candidate_id", "").strip(): row
         for row in existing_rows
         if row.get("chapter_slug", "").strip() == slug and row.get("candidate_id", "").strip()
     }
-    current_rows = [preserve_manual_fields(row, previous_by_id.get(row["candidate_id"])) for row in current_rows]
-    current_ids = {row["candidate_id"] for row in current_rows}
+    refreshed_rows = [preserve_manual_fields(row, previous_by_id.get(row["candidate_id"])) for row in current_rows]
+    current_ids = {row["candidate_id"] for row in refreshed_rows}
 
     retained_rows: list[dict[str, str]] = []
     for row in existing_rows:
@@ -591,7 +604,7 @@ def refresh_term_candidates_for_chapter(
         if row.get("status", "").strip() not in {"", "candidate"}:
             retained_rows.append({field: row.get(field, "") for field in TERM_CANDIDATE_FIELDS})
 
-    final_rows = retained_rows + current_rows
+    final_rows = retained_rows + refreshed_rows
     final_rows.sort(
         key=lambda row: (
             row.get("chapter_slug", ""),
@@ -599,8 +612,37 @@ def refresh_term_candidates_for_chapter(
             normalize_key(row.get("source_term", "")),
         )
     )
+    return refreshed_rows, final_rows
+
+
+def refresh_term_candidates_for_chapter(
+    slug: str,
+    *,
+    book_root: str | Path | None = None,
+    output_path: str | Path | None = None,
+) -> list[dict[str, str]]:
+    default_path = term_candidates_path(book_root)
+    target_path = Path(output_path) if output_path is not None else default_path
+    current_rows = mine_chapter_term_candidates(slug, book_root=book_root)
+    if same_file_path(target_path, default_path):
+        with term_candidates_refresh_lock(default_path):
+            existing_rows = load_term_candidate_rows(book_root)
+            refreshed_rows, final_rows = merge_refreshed_term_candidate_rows(
+                slug,
+                existing_rows=existing_rows,
+                current_rows=current_rows,
+            )
+            write_tsv(default_path, TERM_CANDIDATE_FIELDS, final_rows)
+        return refreshed_rows
+
+    existing_rows = [] if not target_path.exists() else read_tsv(target_path)
+    refreshed_rows, final_rows = merge_refreshed_term_candidate_rows(
+        slug,
+        existing_rows=existing_rows,
+        current_rows=current_rows,
+    )
     write_tsv(target_path, TERM_CANDIDATE_FIELDS, final_rows)
-    return current_rows
+    return refreshed_rows
 
 
 def main() -> int:
