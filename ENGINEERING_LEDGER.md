@@ -19,38 +19,38 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: audit-wave-003 closed on main
+- Theme: audit-wave-004 execution contract hardening
 - Branch: main
-- Last updated: 2026-03-31T15:57:00+03:00
+- Last updated: 2026-03-31T17:16:01.051191+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- `audit-wave-003` dabar pilnai uždarytas ant `main`: po siauro `tests.test_shell_entrypoints` parity fix naujas GitHub Actions run tapo žalias, o workflow action versijos atnaujintos į Node 24 palaikančias major versijas.
+- Execution contract hardened: Python floor pinned, required CI moved to a tracked manifest, and repo-local vs machine-level tool promises clarified.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- `tests.test_shell_entrypoints` parity fix commit `568022b` pašalino post-merge CI lūžį, kurį sukėlė host `python3` nutekėjimas į fake shell fixture.
-- GitHub Actions run `23798193908` po `568022b` yra žalias.
-- Workflow housekeeping commit `d0ffed1` atnaujino `.github/workflows/python-tests.yml` į `actions/checkout@v5` ir `actions/setup-python@v6`.
-- GitHub Actions run `23798385711` po `d0ffed1` yra žalias ir ankstesnio Node 20 deprecation įspėjimo nebėra.
+- workflow_runtime.py now fails clearly on python3 < 3.11, and bootstrap_macos.sh enforces python3 >= 3.11 before creating .venv.
+- The required Python CI suite moved from inline workflow YAML to tracked tests/python_test_suite.toml, and a dedicated contract test now enforces full classification.
+- AGENTS.md, docs/new-mac-setup.md, books/README.md, the template README, and the tracked exemplar README now separate repo-local guaranteed tools from wider machine-level tooling and only show .venv/bin/python after repo bootstrap.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
 <!-- ledger:decisions:start -->
-- Šitas lūžis klasifikuojamas kaip siauras CI parity / fixture bug, ne kaip naujas `bootstrap_macos.sh` runtime kontrakto defektas.
-- Missing-`python3` shell testas turi izoliuoti host PATH pakankamai griežtai, kad runner aplinka negalėtų pakeisti laukiamo guard elgesio.
+- The host execution floor in this repo is python3 >= 3.11; CI stays on Python 3.12.
+- The required-suite helper must stay minimal: read the manifest and print required modules only.
+- Repo-local bootstrap guarantees only context7, pdf-reader, excalidraw, playwright, and whimsical-desktop; broader tool routing remains machine-level.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Kita repo-engineering tema gali prasidėti naujame thread'e; logiškas kitas žingsnis yra `audit-wave-004`.
+- Review the diff and, if it looks right, close this audit-wave-004 contract hardening theme on main.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- Nėra aktyvaus `audit-wave-003` blocker'io; kitos rizikos jau priklauso būsimam `audit-wave-004` auditui, ne šios temos closeout'ui.
+- Broader machine-level tools such as ebook-mcp, brave-search, firecrawl, browserbase, and obsidian still depend on workstation setup and are not a tracked bootstrap promise.
 <!-- ledger:risks:end -->
 
 ## Completed Themes

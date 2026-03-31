@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import re
 import unittest
 from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 AGENTS_PATH = REPO_ROOT / "AGENTS.md"
+NEW_MAC_SETUP_PATH = REPO_ROOT / "docs" / "new-mac-setup.md"
+BOOKS_README_PATH = REPO_ROOT / "books" / "README.md"
+SETUP_CODEX_MCP_PATH = REPO_ROOT / "scripts" / "setup_codex_mcp.sh"
 SHELL_DOCS = {
-    REPO_ROOT / "docs" / "new-mac-setup.md": (
+    NEW_MAC_SETUP_PATH: (
         "naudoja `bash`",
         "`zsh` setup nereikia",
         "macOS-specific",
@@ -53,6 +57,30 @@ class RepoPortabilityDocsTests(unittest.TestCase):
             "and `books/_template/source-priority.md` as operational rules, not optional guidance.",
             text,
         )
+
+    def test_python_version_docs_pin_python311_floor(self) -> None:
+        for path in (NEW_MAC_SETUP_PATH, BOOKS_README_PATH):
+            text = path.read_text(encoding="utf-8")
+            self.assertIn("`python3 >= 3.11`", text, msg=f"{path} is missing the pinned Python floor.")
+
+    def test_repo_local_mcp_docs_match_tracked_setup(self) -> None:
+        script_text = SETUP_CODEX_MCP_PATH.read_text(encoding="utf-8")
+        configured_mcps = set(re.findall(r'ensure_(?:http|stdio)_mcp "([^"]+)"', script_text))
+        self.assertEqual(
+            configured_mcps,
+            {"context7", "pdf-reader", "excalidraw", "playwright", "whimsical-desktop"},
+        )
+
+        docs_text = NEW_MAC_SETUP_PATH.read_text(encoding="utf-8")
+        for name in sorted(configured_mcps):
+            self.assertIn(f"`{name}`", docs_text, msg=f"{NEW_MAC_SETUP_PATH} is missing MCP: {name}")
+
+    def test_agents_separate_machine_level_and_repo_local_tooling(self) -> None:
+        text = AGENTS_PATH.read_text(encoding="utf-8")
+        self.assertIn("Machine-level preferred tools when available:", text)
+        self.assertIn("Repo-local bootstrap guaranteed tools:", text)
+        self.assertIn("`ebook-mcp`", text)
+        self.assertIn("`context7`", text)
 
     def test_shell_portability_docs_reference_bash_and_not_zsh(self) -> None:
         for path, expected_fragments in SHELL_DOCS.items():

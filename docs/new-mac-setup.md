@@ -173,13 +173,15 @@ Pagrindiniai MCP naujame Mac atstatomi skriptu:
 
 - `scripts/setup_codex_mcp.sh`
 
-Jis konfigūruoja:
+Repo-local bootstrap guaranteed MCP įrankiai:
 
 - `context7`
 - `pdf-reader`
 - `excalidraw`
 - `playwright`
 - `whimsical-desktop`
+
+Platesnis machine-level tool routing šiame projekte gali remtis ir `ebook-mcp`, `brave-search`, `firecrawl`, `browserbase` ar `obsidian`, bet tracked repo bootstrap jų savaime negarantuoja.
 
 ## Codex thread continuity
 
