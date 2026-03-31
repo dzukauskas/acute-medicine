@@ -4,8 +4,29 @@ from __future__ import annotations
 import importlib
 import os
 import sys
-import tomllib
 from pathlib import Path
+
+
+MIN_PYTHON = (3, 11)
+
+
+def _require_python_311_or_newer(version_info: object = sys.version_info) -> None:
+    if hasattr(version_info, "major") and hasattr(version_info, "minor"):
+        major = int(version_info.major)
+        minor = int(version_info.minor)
+    else:
+        major = int(version_info[0])  # type: ignore[index]
+        minor = int(version_info[1])  # type: ignore[index]
+    if (major, minor) < MIN_PYTHON:
+        raise SystemExit(
+            "Šiam repo reikia `python3 >= 3.11`, nes `workflow_runtime.py` remiasi stdlib `tomllib`. "
+            "Atnaujinkite host `python3` arba iš naujo paleiskite bootstrap su naujesniu interpreteriu."
+        )
+
+
+_require_python_311_or_newer()
+
+import tomllib
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]

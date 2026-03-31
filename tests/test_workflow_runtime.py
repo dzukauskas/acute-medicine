@@ -17,6 +17,17 @@ import workflow_runtime  # noqa: E402
 
 
 class WorkflowRuntimeTests(unittest.TestCase):
+    def test_require_python_311_or_newer_accepts_supported_tuple(self) -> None:
+        workflow_runtime._require_python_311_or_newer((3, 11, 0))
+        workflow_runtime._require_python_311_or_newer((3, 12, 8))
+
+    def test_require_python_311_or_newer_rejects_older_tuple(self) -> None:
+        with self.assertRaises(SystemExit) as ctx:
+            workflow_runtime._require_python_311_or_newer((3, 10, 14))
+
+        self.assertIn("python3 >= 3.11", str(ctx.exception))
+        self.assertIn("tomllib", str(ctx.exception))
+
     def test_load_repo_config_uses_tracked_defaults_without_local_override(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             tmp_path = Path(tmp_dir)

@@ -32,6 +32,8 @@ repo/
 
 ## Naujos knygos bootstrap
 
+Prieš pirmą naujos knygos bootstrap šiame repo turi būti bent `python3 >= 3.11`. Po repo bootstrap canonical interpreterius vėlesniems Python skriptams yra `.venv/bin/python`, bet pirminiai book bootstrap entrypointai lieka per host `python3`.
+
 PDF kanoninis entrypoint:
 
 ```bash
@@ -133,7 +135,7 @@ Shared repo nustatymai laikomi root faile:
 Kai atnaujinamas `books/_template/`, jau bootstrap'intą knygą atnaujinkite taip:
 
 ```bash
-python3 scripts/refresh_book_template.py --book-root books/<slug>
+.venv/bin/python scripts/refresh_book_template.py --book-root books/<slug>
 ```
 
 Refresh perrašo tik template-valdomus docs failus ir tuščius scaffold'us. Jis neliečia realių content artefaktų.
@@ -144,10 +146,10 @@ Ne tušti `*.local.tsv` override failai ir užpildyti local `gold_sections/` pav
 Book-scoped skriptai nebeturi aktyvios knygos pagal nutylėjimą. Juos kvieskite taip:
 
 ```bash
-MEDBOOK_ROOT=books/<slug> python3 scripts/run_chapter_qa.py 001
-MEDBOOK_ROOT=books/<slug> python3 scripts/build_chapter_pack.py 001
-MEDBOOK_ROOT=books/<slug> python3 scripts/generate_research_checklist.py 001
-MEDBOOK_ROOT=books/<slug> python3 scripts/validate_term_readiness.py 001
+MEDBOOK_ROOT=books/<slug> .venv/bin/python scripts/run_chapter_qa.py 001
+MEDBOOK_ROOT=books/<slug> .venv/bin/python scripts/build_chapter_pack.py 001
+MEDBOOK_ROOT=books/<slug> .venv/bin/python scripts/generate_research_checklist.py 001
+MEDBOOK_ROOT=books/<slug> .venv/bin/python scripts/validate_term_readiness.py 001
 MEDBOOK_ROOT=books/<slug> scripts/sync_obsidian_book.sh
 ```
 
@@ -172,7 +174,7 @@ Repo-engineering režime pagrindinė ilgalaikė būsena turi būti laikoma:
 Jei darbas tęsis naujame thread ar naujame worktree, pirmiausia atnaujinkite ledger:
 
 ```bash
-python3 scripts/update_engineering_ledger.py \
+.venv/bin/python scripts/update_engineering_ledger.py \
   --theme "Current engineering theme" \
   --summary "Trumpa aktyvios temos santrauka." \
   --next-step "Pirmas konkretus žingsnis kitam thread."
@@ -183,7 +185,7 @@ Normalioje porinio darbo sesijoje to ranka daryti neturite. Ledger šiame režim
 Tik jei reikia papildomo lokalaus scratchpad, naudokite `handoffs/`:
 
 ```bash
-python3 scripts/write_codex_handoff.py \
+.venv/bin/python scripts/write_codex_handoff.py \
   --title "Chapter 011 terminology blocker" \
   --book-root books/<slug> \
   --goal "Užbaigti blocker'ius prieš drafting." \
@@ -203,13 +205,13 @@ Detalesnis operating modelis aprašytas:
 Jei reikia labai paprasto naujo thread starto, naudokite:
 
 ```bash
-python3 scripts/print_codex_resume_prompt.py --mode engineering
+.venv/bin/python scripts/print_codex_resume_prompt.py --mode engineering
 ```
 
 arba vertimo darbui:
 
 ```bash
-python3 scripts/print_codex_resume_prompt.py \
+.venv/bin/python scripts/print_codex_resume_prompt.py \
   --mode translation \
   --book-root books/<slug> \
   --chapter 001

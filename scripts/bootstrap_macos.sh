@@ -19,6 +19,14 @@ require_cmd() {
   exit 1
 }
 
+require_python_311() {
+  if python3 -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 11) else 1)' >/dev/null 2>&1; then
+    return
+  fi
+  echo "Required command version not supported: python3. Install Python 3.11 or newer before running scripts/bootstrap_macos.sh." >&2
+  exit 1
+}
+
 if [[ "$(uname -s)" != "Darwin" ]]; then
   echo "scripts/bootstrap_macos.sh supports macOS only." >&2
   exit 1
@@ -37,7 +45,8 @@ fi
 
 require_cmd node "Install Node.js so node and npm are on PATH before running scripts/bootstrap_macos.sh."
 require_cmd npm "Install Node.js so node and npm are on PATH before running scripts/bootstrap_macos.sh."
-require_cmd python3 "Install Python 3 so python3 is on PATH before running scripts/bootstrap_macos.sh."
+require_cmd python3 "Install Python 3.11 or newer so python3 is on PATH before running scripts/bootstrap_macos.sh."
+require_python_311
 
 if ! command -v codex >/dev/null 2>&1; then
   npm install -g @openai/codex

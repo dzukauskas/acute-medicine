@@ -276,6 +276,9 @@ exit 0
                 bin_dir / "python3",
                 """#!/bin/sh
 echo "python3:$@" >> "$FAKE_LOG"
+if [ "$1" = "-c" ]; then
+  exit 0
+fi
 if [ "$1" = "-m" ] && [ "$2" = "venv" ]; then
   VENV="$3"
   mkdir -p "$VENV/bin"
@@ -464,7 +467,66 @@ exit 0
 
             self.assertNotEqual(result.returncode, 0)
             self.assertIn(
-                "Required command not found: python3. Install Python 3 so python3 is on PATH before running scripts/bootstrap_macos.sh.",
+                "Required command not found: python3. Install Python 3.11 or newer so python3 is on PATH before running scripts/bootstrap_macos.sh.",
+                result.stderr,
+            )
+
+    def test_bootstrap_macos_requires_python311_or_newer(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir)
+            repo_root = temp_root / "repo"
+            bin_dir, _log_path = self.make_temp_bin(temp_root)
+
+            self.copy_script(repo_root, "bootstrap_macos.sh")
+            self.write(repo_root / "Brewfile", "brew \"gh\"\n")
+            self.write_executable(
+                bin_dir / "uname",
+                """#!/bin/sh
+echo Darwin
+""",
+            )
+            self.write_executable(
+                bin_dir / "brew",
+                """#!/bin/sh
+exit 0
+""",
+            )
+            self.write_executable(
+                bin_dir / "node",
+                """#!/bin/sh
+exit 0
+""",
+            )
+            self.write_executable(
+                bin_dir / "npm",
+                """#!/bin/sh
+exit 0
+""",
+            )
+            self.write_executable(
+                bin_dir / "python3",
+                """#!/bin/sh
+if [ "$1" = "-c" ]; then
+  exit 1
+fi
+exit 0
+""",
+            )
+
+            result = subprocess.run(  # noqa: S603
+                [str(repo_root / "scripts" / "bootstrap_macos.sh")],
+                cwd=repo_root,
+                capture_output=True,
+                text=True,
+                env={
+                    **os.environ,
+                    "PATH": f"{bin_dir}:/bin:/usr/sbin:/sbin",
+                },
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn(
+                "Required command version not supported: python3. Install Python 3.11 or newer before running scripts/bootstrap_macos.sh.",
                 result.stderr,
             )
 

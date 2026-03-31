@@ -68,9 +68,9 @@ Prieš `./scripts/bootstrap_macos.sh` šiame repo turi būti veikiantys:
 
 - `node`
 - `npm`
-- `python3`
+- `python3 >= 3.11`
 
-`Brewfile` jų nebebando provisioninti ar perlinkinti. Bootstrap remiasi tuo, kad jie jau yra ant `PATH`; jei bent vieno trūksta, skriptas sustos su tiksliu klaidos pranešimu.
+`Brewfile` jų nebebando provisioninti ar perlinkinti. Bootstrap remiasi tuo, kad jie jau yra ant `PATH`; jei bent vieno trūksta arba `python3` yra senesnis negu `3.11`, skriptas sustos su tiksliu klaidos pranešimu.
 
 Patikrink prieš bootstrap:
 
@@ -90,7 +90,7 @@ cd "/Users/<username>/Projects/Acute Medicine"
 Šis skriptas:
 
 - įdiegia repo `Brewfile` paketus (`gh`, `obsidian`, `whimsical`);
-- patikrina, kad `node`, `npm` ir `python3` jau yra ant `PATH`;
+- patikrina, kad `node`, `npm` ir `python3 >= 3.11` jau yra ant `PATH`;
 - įdiegia `Codex`, jei jo dar nėra;
 - sukuria `.venv`;
 - įdiegia Python priklausomybes iš `requirements-dev.txt`;

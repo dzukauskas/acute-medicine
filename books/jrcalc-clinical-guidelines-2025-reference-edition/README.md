@@ -58,7 +58,7 @@ Prieš pildydami `research` failą, naudokite `shared/localization/lt_source_map
 
 Prieš pildydami realų `research/<slug>.md`, galite sugeneruoti pagalbinį checklist failą:
 
-- `MEDBOOK_ROOT=books/jrcalc-clinical-guidelines-2025-reference-edition python3 scripts/generate_research_checklist.py 001`
+- `MEDBOOK_ROOT=books/jrcalc-clinical-guidelines-2025-reference-edition .venv/bin/python scripts/generate_research_checklist.py 001`
 
 Jis sukuria `research/<slug>.checklist.md` su:
 
@@ -79,6 +79,7 @@ Review metu pasikartojančios taisyklės pirmiausia fiksuojamos `review_deltas/`
 Diagramoms ir algoritmams šiame projekte naudojamas tik `Whimsical` workflow. Jei vartotojas nurodo konkretų įrankį, jo negalima savavališkai pakeisti kitu.
 
 PDF šaltinių bootstrap ir tekstinis extraction šiame repo yra `PyMuPDF-first`. EPUB bootstrap ir XHTML extraction vyksta per `EbookLib` ir `BeautifulSoup`. Jei skriptas paleidžiamas su sistemos `python3`, bet trūksta reikalingų modulių, jis automatiškai persijungia į repo `.venv`, jei ji paruošta.
+Po repo bootstrap canonical interpreterius šios knygos Python skriptams yra `.venv/bin/python`.
 
 Jei PDF ar EPUB TOC parseris negali patikimai nustatyti skyrių ribų, naudokite chapter map sidecar:
 
@@ -98,8 +99,8 @@ Kai naudojate bendrus repo skriptus, aktyvią knygą nukreipkite per:
 
 Pavyzdžiai:
 
-- `MEDBOOK_ROOT=books/jrcalc-clinical-guidelines-2025-reference-edition python3 scripts/build_chapter_pack.py 001`
-- `MEDBOOK_ROOT=books/jrcalc-clinical-guidelines-2025-reference-edition python3 scripts/run_chapter_qa.py 001`
+- `MEDBOOK_ROOT=books/jrcalc-clinical-guidelines-2025-reference-edition .venv/bin/python scripts/build_chapter_pack.py 001`
+- `MEDBOOK_ROOT=books/jrcalc-clinical-guidelines-2025-reference-edition .venv/bin/python scripts/run_chapter_qa.py 001`
 
 ## Obsidian sync
 
