@@ -19,65 +19,57 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: Finding 4 disposable-clone full checkpoint completed
+- Theme: Finding 3 Whimsical live checkpoint completed
 - Branch: codex/audit-wave-003-operability
-- Last updated: 2026-03-31T14:44:28+03:00
+- Last updated: 2026-03-31T15:23:01+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- `bootstrap_macos.sh` / `Brewfile` operability hardening jau buvo žalias, o dabar pilnas `Finding 4` disposable-clone checkpointas taip pat pakartotas sėkmingai: disposable clone'e atkurtas validation harness, `bootstrap_book_from_epub.py --install-obsidian-sync` baigėsi `exit 0`, runtime-derived LaunchAgent / owner marker susikūrė korektiškai, o sentinel chapter payload į disposable vault'ą pateko nuo automatinio `launchd` triggerio be rankinio `scripts/sync_obsidian_book.sh` fallback.
+- `Finding 3` gyvas Whimsical register/render/auth checkpointas uždarytas tame pačiame disposable clone'e: validation-only `HOME` sesija buvo sukurta per `--login`, tas pats auth state panaudotas `register_whimsical_figure.py` child render'iui ir vėlesniam second render be `--login`, o PNG turinio hash pasikeitė po aiškaus tos pačios Whimsical lentos `V2` atnaujinimo.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Disposable clone `/tmp/acute-medicine-audit-wave-003-validation` yra išlikęs po žalio bazinio bootstrap rerun ir turi veikiančią `.venv`.
-- Clone'e yra kanoninis šaltinis pilnam `Finding 4` checkpointui:
-  - `books/jrcalc-clinical-guidelines-2025-reference-edition/source/epub/JRCALC Clinical Guidelines 2025 Reference Edition.epub`;
-  - `/tmp/jrcalc-validation.chapters.yaml`, apibrėžiantis `jrcalc-validation-harness` slug per `c3CK.xhtml`.
-- Disposable clone'e validation-only `repo_config.local.toml` buvo atkurtas su Obsidian override į `/tmp/acute-medicine-validation` / `Acute-Medicine-Validation`, todėl live-checkpointas nerašė į realų default `PARAMEDIKAS` vault'ą.
-- Actual resolved disposable clone kelias yra `/private/tmp/acute-medicine-audit-wave-003-validation`, todėl runtime-derived reikšmės buvo tikrinamos helper'iais, ne hardcoded suffix'u:
-  - `workspace_id=814f7242`;
-  - `AGENT_LABEL=lt.medbook.obsidian-sync-jrcalc-validation-harness-814f7242`;
-  - plist kelias `/Users/dzukauskas/Library/LaunchAgents/lt.medbook.obsidian-sync-jrcalc-validation-harness-814f7242.plist`.
-- `.venv/bin/python scripts/bootstrap_book_from_epub.py --epub ... --chapter-map /tmp/jrcalc-validation.chapters.yaml --install-obsidian-sync` disposable clone'e baigėsi `exit 0` ir sukūrė `books/jrcalc-validation-harness` su 1 indexed chapter bei 4 ištrauktomis source figūromis.
-- Install kontraktas patvirtintas:
-  - plist rodo į disposable clone `scripts/sync_obsidian_book.sh`, `books/jrcalc-validation-harness` ir disposable vault paskirtį `/private/tmp/acute-medicine-validation/Acute-Medicine-Validation/JRCALC Validation Harness`;
-  - owner marker `/private/tmp/acute-medicine-validation/Acute-Medicine-Validation/JRCALC Validation Harness/.acute-medicine-sync-owner.json` turi teisingus `workspace_id=814f7242`, `book_slug=jrcalc-validation-harness` ir `repo_root=/private/tmp/acute-medicine-audit-wave-003-validation`;
-  - `launchctl list` mato exact runtime-derived label'į su `exit 0`.
-- Kadangi fresh harness neturėjo realaus `lt` payload'o, disposable clone'e buvo sukurtas chapter sentinel `lt/chapters/009-conditions-requiring-specific-prehospital-clinical-management.md`.
-- Deterministinė sync patikra baigėsi žaliai:
-  - pirma duotas ribotas automatinio triggerio langas;
-  - sentinel chapter disposable vault'e atsirado iškart `t+0s`, dar prieš bet kokį rankinį fallback;
-  - todėl `scripts/sync_obsidian_book.sh` ranka nebuvo paleistas.
-- `Finding 4` pilnas disposable-clone checkpointas laikomas praeitu; `Finding 3` pagal susitarimą vis dar neliečiamas ir lieka kitas atskiras etapas.
+- Tas pats disposable clone `/tmp/acute-medicine-audit-wave-003-validation` ir anksčiau sukurtas `books/jrcalc-validation-harness` buvo panaudoti `Finding 3` proof be papildomo repo cleanup; prieš startą harness `manifest.tsv` buvo švarus ir neturėjo seno `validation-009-01` įrašo ar PNG.
+- Buvo sukurta laikina Whimsical validation lenta `HCus8S` (`Audit Wave 003 Validation Board`) ir naudotas konkretus harness kandidatas `source_figure_id=009-conditions-requiring-specific-prehospital-clinical-management-fig-01`.
+- Validation-only auth būsena laikyta tik `/tmp/acute-medicine-whimsical-validation-home/.cache/codex-whimsical/storage-state.json`; tas pats `HOME` buvo naudotas `--login`, `register_whimsical_figure.py` ir second render be login.
+- Kadangi izoliuotame `HOME` Playwright nerado browser binary, vykdymui buvo prisegtas `PLAYWRIGHT_BROWSERS_PATH=/Users/dzukauskas/Library/Caches/ms-playwright`; tai leido išlaikyti sesijos izoliaciją nereikalaujant naujo browser install į temp katalogą.
+- `register_whimsical_figure.py` sėkmingai sukūrė manifest įrašą ir pirmą render'į:
+  - `figure_id=figure-validation-009-01-009-conditions-requiring-specific-prehospital-clinical-management-fig-01`;
+  - baseline PNG hash `3240362001450a41635e0d818245bfb6cdfd990ddc2cf8382c6dcee5a93363b2`.
+- Po laikinos lentos atnaujinimo į `Validation Render V2` per `whimsical-desktop` second render buvo paleistas be `--login` su tuo pačiu validation-only session state ir sugeneravo naują PNG hash `eed1efae3b2530596bdd3fced9e0bbd1a4e3e6d1a47a8aa6815328c95bd533b1`.
+- Hash pokytis laikomas galutiniu įrodymu, kad realus `register -> render -> second render without login` kelias veikia gyvai.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
 <!-- ledger:decisions:start -->
-- `Finding 4` bootstrap kritimas traktuojamas kaip realus operability blokatorius, ne kaip signalas apeiti planą rankiniu `.venv` kūrimu ar tracked harness artefaktais.
-- `bootstrap_macos.sh` turi remtis realiu runtime poreikiu, ne Homebrew formulės būsena; operatoriui svarbu, kad `node`, `npm` ir `python3` būtų ant `PATH`.
-- `node` ir `python@3.12` nebelaikomi repo `Brewfile` deklaratyviu sluoksniu, nes fresh-like macOS validaciją jie blokavo ne runtime trūkumu, o Homebrew install/link šalutiniais efektais.
-- Validation-only `repo_config.local.toml` ir chapter-map lieka tik disposable clone'e ir netampa merge target.
-- Net po sėkmingo bazinio bootstrap rerun `Finding 3` nejudinamas, kol nebus atskirai pakartotas pilnas `Finding 4` book bootstrap + sync checkpointas.
-- `Finding 4` vykdymo plane `AGENT_LABEL`, plist kelias ir `workspace_id` nelaikomi iš anksto užfiksuotomis konstantomis: jie turi būti paimami iš actual install output arba perskaičiuojami tuo pačiu helper'iu, kuris naudojamas pačiame skripte, nes resolved clone kelias gali pereiti per `/private/tmp`.
-- Post-install sync patikra turi būti deterministinė: po sentinel payload sukūrimo pirmiausia duodamas trumpas, ribotas langas `launchd` triggeriui; tik jei payload neatsiranda vault'e, vieną kartą paleidžiamas rankinis `scripts/sync_obsidian_book.sh` diagnostinis fallback ir rezultatas atskirai užfiksuojamas.
+- `Finding 3` proof turi naudoti tą patį validation-only `HOME` per visą `--login -> register -> second render` grandinę, nes `register_whimsical_figure.py` child render remiasi default Playwright storage-state keliu po `HOME`.
+- Kai validation-only `HOME` neturi savo Playwright browser cache, reikia prisegti `PLAYWRIGHT_BROWSERS_PATH` prie jau esančio lokalaus cache, o ne perinstaliuoti browserius ar atsisakyti sesijos izoliacijos.
+- Realus second-render proof priimamas tik tada, kai po aiškaus tos pačios lentos pakeitimo pasikeičia PNG turinio hash; vien failo perrašymo laikas nėra pakankamas įrodymas.
+- `Finding 4` uždarytas commit'e `dcfc146` neliečiamas pakartotinai, nebent atsirastų naujas konkretus bootstrap blocker'is.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- `Finding 4` checkpointui esant žaliam, kitas siauras etapas yra tik `Finding 3` gyvas Whimsical register/render/auth checkpointas.
-- Kadangi tai kita techninė tema po uždaryto `Finding 4`, ją rekomenduojama pradėti naujame repo-engineering thread'e, pirmiausia perskaičius atnaujintą `ENGINEERING_LEDGER.md`.
+- Užfiksuoti `Finding 3` uždarymą `plans/audit-wave-003.md` ir laikyti `audit-wave-003` live-validation sluoksnį užbaigtu.
+- Jei šitos validation-only aplinkos nebereikės, atskirai nuspręsti dėl laikinos Whimsical lentos, disposable manifest įrašo / PNG ir `/tmp/acute-medicine-whimsical-validation-home` cleanup.
+- Kita repo-engineering tema jau turėtų eiti naujame thread'e, nes `audit-wave-003 operability` banga dabar uždaryta.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- Realus Whimsical auth/board render vis dar neįrodytas, nes `Finding 3` dar nepradėtas net ir po žalio `Finding 4` checkpointo.
-- Disposable clone'e paliktas užkrautas harness-specific LaunchAgent ir validation vault payload, todėl prieš būsimą pakartotinį operability rerun gali reikėti sąmoningo cleanup arba naujo disposable clone.
+- Validation-only artefaktai tebėra palikti lokaliai: laikina Whimsical lenta, disposable clone `manifest.tsv` įrašas / PNG ir `/tmp/acute-medicine-whimsical-validation-home` session state.
+- `whimsical-desktop` MCP transportas šiame proof trumpam buvo nutrūkęs, kol `Whimsical.app` nebuvo atidarytas rankiniu `open -a "Whimsical"` veiksmu; jei tai kartosis, reikės laikyti tai atskiru desktop-connector stabilumo follow-up.
 <!-- ledger:risks:end -->
 
 ## Completed Themes
 <!-- ledger:completed:start -->
+### 2026-03-31 15:23 | Finding 3 live Whimsical checkpoint
+- Uždarytas realus `Whimsical` register/render/auth checkpointas tame pačiame disposable clone'e, kuris buvo paruoštas `Finding 4`.
+- Validation-only `HOME` sesija buvo panaudota per `--login`, `register_whimsical_figure.py` child render ir second render be login.
+- Baseline PNG hash `3240362001450a41635e0d818245bfb6cdfd990ddc2cf8382c6dcee5a93363b2` pasikeitė į `eed1efae3b2530596bdd3fced9e0bbd1a4e3e6d1a47a8aa6815328c95bd533b1` po aiškaus desktop-board `V2` atnaujinimo, todėl `Finding 3` laikomas uždarytu.
+
 ### 2026-03-31 12:25 | Audit wave 003 first wave
 - Uzdaryta `Finding 1 + Finding 2` banga: `tests.test_repo_global_rules` refresh scenarijus sulygintas su metadata-first kontraktu, o required CI suite isplestas direct guard ir rule-layering moduliais.
 - Lokalus expanded suite ir GitHub Actions run `23790510572` yra zali; `Finding 3/4` palikti velesniam live-validation checkpoint.

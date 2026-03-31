@@ -10,7 +10,7 @@
 | --- | --- | --- | --- |
 | 1 | Guard verification depth CI yra siauresnis už deklaruotą chapter QA kontraktą | partial | Workflow ir `run_chapter_qa.py` aprašo platesnį Language QA sluoksnį, bet direct guard moduliai dar nebuvo privalomo CI paviršiaus dalis. |
 | 2 | Binding shared/local rule-layering kontraktas per silpnai saugomas required automation | valid | `tests.test_repo_global_rules` nebuvo CI workflow, o lokaliai jame buvo realus refresh scenarijaus kritimas prieš metadata-first kontraktą. |
-| 3 | Whimsical render/auth kelias lieka tik dalinai verifikuotas | partial | Repo turi render entrypointą ir mock lygio testus, bet realus auth + board render dar nebuvo gyvai įrodytas; 2026-03-31 validation attempt iki jo nenuėjo, nes nesusikūrė disposable validation workspace. |
+| 3 | Whimsical render/auth kelias lieka tik dalinai verifikuotas | closed | 2026-03-31 tame pačiame disposable clone'e gyvai įrodytas `register -> first render -> second render without login` kelias su validation-only sesija ir PNG turinio hash pokyčiu po aiškaus board atnaujinimo. |
 | 4 | Realus macOS bootstrap kelias tebėra smoke/stub lygio įrodytas | closed | Uždaryta 2026-03-31 pilnu disposable-clone checkpointu: po `b70d336` ir `826b6be` fresh bootstrap bazė buvo žalia, o `bootstrap_book_from_epub.py --install-obsidian-sync` disposable clone'e sėkmingai sukūrė runtime-derived LaunchAgent, owner marker ir automatinį vault payload sync be rankinio fallback. |
 
 ## Recommended Waves
@@ -24,7 +24,7 @@
 
 ### Later Live-Validation Checkpoint
 
-- Finding `3`
+- Uždaryta 2026-03-31 per atskirą `Finding 3` live checkpoint.
 
 ## Commit Sequence
 
@@ -103,13 +103,22 @@
   - po riboto automatinio triggerio lango sentinel vault'e atsirado iškart `t+0s`;
   - `scripts/sync_obsidian_book.sh` ranka leisti nereikėjo.
 - `Finding 4` dabar laikomas uždarytu repo lygiu; vienintelė likusi šio audit wave live-validation tema yra `Finding 3`.
+- 2026-03-31 `Finding 3` uždarytas tame pačiame disposable clone'e:
+  - sukurta laikina Whimsical validation lenta `Audit Wave 003 Validation Board`;
+  - naudotas konkretus harness kandidatas `source_figure_id=009-conditions-requiring-specific-prehospital-clinical-management-fig-01` ir `figure_number=validation-009-01`;
+  - validation-only sesija laikyta `/tmp/acute-medicine-whimsical-validation-home/.cache/codex-whimsical/storage-state.json`, o tas pats `HOME` naudotas `--login`, `register_whimsical_figure.py` ir second render be login.
+- Izoliuotame `HOME` Playwright pradžioje nerado browser binary, todėl proof buvo vykdomas su `PLAYWRIGHT_BROWSERS_PATH=/Users/dzukauskas/Library/Caches/ms-playwright`; repo kodo dėl to keisti nereikėjo.
+- `register_whimsical_figure.py` sėkmingai sukūrė `figure-validation-009-01-009-conditions-requiring-specific-prehospital-clinical-management-fig-01` ir pirmą PNG render'į.
+- Baseline PNG hash po first render buvo `3240362001450a41635e0d818245bfb6cdfd990ddc2cf8382c6dcee5a93363b2`.
+- Po aiškaus desktop-board atnaujinimo į `Validation Render V2` second render be `--login` baigėsi `exit 0`, o naujas PNG hash tapo `eed1efae3b2530596bdd3fced9e0bbd1a4e3e6d1a47a8aa6815328c95bd533b1`.
+- `Finding 3` laikomas uždarytu, todėl visas `audit-wave-003` live-validation / operability sluoksnis dabar yra užbaigtas.
 
 ## Risks / Notes
 
 - Default sprendimas: `tests.test_repo_global_rules` refresh kritimas laikomas verification/test fixture defektu prieš metadata-first kontraktą, ne signalu peržiūrėti `audit-wave-002` runtime architektūrą.
 - CI runtime padidės, bet direct guard ir rule-layering moduliai šiame wave nebedemotuojami iš privalomo paviršiaus.
-- Po pirmos bangos `Finding 3` ir `Finding 4` buvo sąmoningai palikti atskiram live-validation / operability planui; iš jų `Finding 4` dabar jau uždarytas, o atskirai lieka tik `Finding 3`.
+- Po pirmos bangos `Finding 3` ir `Finding 4` buvo sąmoningai palikti atskiram live-validation / operability planui; abu checkpointai dabar uždaryti.
 - 2026-03-31 live-validation parodė, kad artimiausias siauras follow-up turi būti `bootstrap_macos.sh` / `Brewfile` operability hardening ant macOS 13, ne Whimsical runtime refactor.
 - Siauras `bootstrap_macos.sh` / `Brewfile` hardening follow-up dabar įgyvendintas ir jo rezultatas patvirtintas pilnu disposable clone `Finding 4` checkpointu.
-- Kitas techninis etapas šiame wave yra tik `Finding 3` gyvas Whimsical register/render/auth patikrinimas.
-- Jei `Finding 3` nebus tęsiamas iš karto, prieš kitą operability rerun verta sąmoningai išvalyti disposable clone / harness-specific LaunchAgent / validation vault arba pradėti naują disposable aplinką.
+- `audit-wave-003` nebeturi atvirų live-validation findings; kitas techninis darbas jau turi eiti kaip nauja atskira repo-engineering tema.
+- Validation-only artefaktai po `Finding 3` tebėra lokalūs: laikina Whimsical lenta, disposable manifest įrašas / PNG ir validation-only `HOME`, todėl prieš kitą nepriklausomą rerun verta juos sąmoningai išvalyti arba pradėti nuo naujos disposable aplinkos.
