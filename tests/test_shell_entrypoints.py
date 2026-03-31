@@ -233,6 +233,13 @@ exit 0
 """,
             )
             self.write_executable(
+                bin_dir / "node",
+                """#!/bin/sh
+echo "node:$@" >> "$FAKE_LOG"
+exit 0
+""",
+            )
+            self.write_executable(
                 bin_dir / "npm",
                 """#!/bin/sh
 echo "npm:$@" >> "$FAKE_LOG"
@@ -310,6 +317,18 @@ exit 1
             installed_skill = home_dir / ".codex" / "skills" / "sample-skill" / "SKILL.md"
             self.assertTrue(installed_skill.exists())
             self.assertIn("Bootstrap complete.", result.stdout)
+            self.assertIn(
+                ".venv/bin/python scripts/bootstrap_book_from_pdf.py",
+                result.stdout,
+            )
+            self.assertIn(
+                ".venv/bin/python scripts/render_whimsical_figure.py --book-root books/<slug> --login",
+                result.stdout,
+            )
+            self.assertNotIn(
+                ".venv/bin/python scripts/render_whimsical_figure.py --login",
+                result.stdout,
+            )
             self.assertIn(".venv/bin/python -m unittest tests.test_end_to_end_workflow_contract", result.stdout)
 
     def test_bootstrap_macos_reports_macos_only(self) -> None:
@@ -333,12 +352,112 @@ echo Linux
                 text=True,
                 env={
                     **os.environ,
-                    "PATH": f"{bin_dir}:/usr/bin:/bin:/usr/sbin:/sbin",
+                    "PATH": f"{bin_dir}:/bin:/usr/sbin:/sbin",
                 },
             )
 
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("supports macOS only", result.stderr)
+
+    def test_bootstrap_macos_requires_npm_on_path_after_brew_bundle(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir)
+            repo_root = temp_root / "repo"
+            bin_dir, _log_path = self.make_temp_bin(temp_root)
+
+            self.copy_script(repo_root, "bootstrap_macos.sh")
+            self.write(repo_root / "Brewfile", "brew \"gh\"\n")
+            self.write_executable(
+                bin_dir / "uname",
+                """#!/bin/sh
+echo Darwin
+""",
+            )
+            self.write_executable(
+                bin_dir / "brew",
+                """#!/bin/sh
+exit 0
+""",
+            )
+            self.write_executable(
+                bin_dir / "node",
+                """#!/bin/sh
+exit 0
+""",
+            )
+            self.write_executable(
+                bin_dir / "python3",
+                """#!/bin/sh
+exit 0
+""",
+            )
+
+            result = subprocess.run(  # noqa: S603
+                [str(repo_root / "scripts" / "bootstrap_macos.sh")],
+                cwd=repo_root,
+                capture_output=True,
+                text=True,
+                env={
+                    **os.environ,
+                    "PATH": f"{bin_dir}:/bin:/usr/sbin:/sbin",
+                },
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn(
+                "Required command not found: npm. Install Node.js so node and npm are on PATH before running scripts/bootstrap_macos.sh.",
+                result.stderr,
+            )
+
+    def test_bootstrap_macos_requires_python3_on_path_after_brew_bundle(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir)
+            repo_root = temp_root / "repo"
+            bin_dir, _log_path = self.make_temp_bin(temp_root)
+
+            self.copy_script(repo_root, "bootstrap_macos.sh")
+            self.write(repo_root / "Brewfile", "brew \"gh\"\n")
+            self.write_executable(
+                bin_dir / "uname",
+                """#!/bin/sh
+echo Darwin
+""",
+            )
+            self.write_executable(
+                bin_dir / "brew",
+                """#!/bin/sh
+exit 0
+""",
+            )
+            self.write_executable(
+                bin_dir / "node",
+                """#!/bin/sh
+exit 0
+""",
+            )
+            self.write_executable(
+                bin_dir / "npm",
+                """#!/bin/sh
+exit 0
+""",
+            )
+
+            result = subprocess.run(  # noqa: S603
+                [str(repo_root / "scripts" / "bootstrap_macos.sh")],
+                cwd=repo_root,
+                capture_output=True,
+                text=True,
+                env={
+                    **os.environ,
+                    "PATH": f"{bin_dir}:/bin:/usr/sbin:/sbin",
+                },
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn(
+                "Required command not found: python3. Install Python 3 so python3 is on PATH before running scripts/bootstrap_macos.sh.",
+                result.stderr,
+            )
 
     def test_install_obsidian_sync_agent_reports_macos_only_when_loading(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

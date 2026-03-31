@@ -30,11 +30,14 @@ if ! command -v brew >/dev/null 2>&1; then
   exit 1
 fi
 
-brew bundle --file="$REPO_ROOT/Brewfile"
-
-if ! command -v codex >/dev/null 2>&1 || ! command -v pdf-reader-mcp >/dev/null 2>&1; then
-  require_cmd npm "Install Node.js/npm or ensure brew bundle provisioned it on PATH."
+if ! brew bundle --file="$REPO_ROOT/Brewfile"; then
+  echo "brew bundle failed while installing repo-declared Homebrew packages from Brewfile." >&2
+  exit 1
 fi
+
+require_cmd node "Install Node.js so node and npm are on PATH before running scripts/bootstrap_macos.sh."
+require_cmd npm "Install Node.js so node and npm are on PATH before running scripts/bootstrap_macos.sh."
+require_cmd python3 "Install Python 3 so python3 is on PATH before running scripts/bootstrap_macos.sh."
 
 if ! command -v codex >/dev/null 2>&1; then
   npm install -g @openai/codex
@@ -43,8 +46,6 @@ fi
 if ! command -v pdf-reader-mcp >/dev/null 2>&1; then
   npm install -g @sylphx/pdf-reader-mcp
 fi
-
-require_cmd python3 "Install Python 3 or ensure it is available on PATH."
 
 python3 -m venv "$REPO_ROOT/.venv"
 "$REPO_ROOT/.venv/bin/pip" install --upgrade pip
@@ -60,7 +61,7 @@ echo "Bootstrap complete."
 echo "Next manual steps:"
 echo "  1. Run: codex login"
 echo "  2. Run: gh auth login"
-echo "  3. Open Whimsical desktop and sign in."
-echo "  4. Run: .venv/bin/python scripts/render_whimsical_figure.py --login"
-echo "  5. Run: .venv/bin/python -m unittest tests.test_end_to_end_workflow_contract"
-echo "  6. Bootstrap a concrete book workspace with scripts/bootstrap_book_from_pdf.py"
+echo "  3. Bootstrap a concrete book workspace with .venv/bin/python scripts/bootstrap_book_from_pdf.py or .venv/bin/python scripts/bootstrap_book_from_epub.py"
+echo "  4. Open Whimsical desktop and sign in if you will work with Whimsical-backed figures."
+echo "  5. Run: .venv/bin/python scripts/render_whimsical_figure.py --book-root books/<slug> --login"
+echo "  6. Run: .venv/bin/python -m unittest tests.test_end_to_end_workflow_contract"

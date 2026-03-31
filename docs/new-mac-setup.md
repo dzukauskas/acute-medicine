@@ -64,6 +64,22 @@ Repo dabar remiasi tracked `repo_config.toml` defaults ir optional `repo_config.
 
 ## Vieno paleidimo bootstrap
 
+Prieš `./scripts/bootstrap_macos.sh` šiame repo turi būti veikiantys:
+
+- `node`
+- `npm`
+- `python3`
+
+`Brewfile` jų nebebando provisioninti ar perlinkinti. Bootstrap remiasi tuo, kad jie jau yra ant `PATH`; jei bent vieno trūksta, skriptas sustos su tiksliu klaidos pranešimu.
+
+Patikrink prieš bootstrap:
+
+```bash
+command -v node && node --version
+command -v npm && npm --version
+command -v python3 && python3 --version
+```
+
 Paleisk:
 
 ```bash
@@ -73,7 +89,8 @@ cd "/Users/<username>/Projects/Acute Medicine"
 
 Šis skriptas:
 
-- įdiegia `Homebrew` paketus iš `Brewfile`;
+- įdiegia repo `Brewfile` paketus (`gh`, `obsidian`, `whimsical`);
+- patikrina, kad `node`, `npm` ir `python3` jau yra ant `PATH`;
 - įdiegia `Codex`, jei jo dar nėra;
 - sukuria `.venv`;
 - įdiegia Python priklausomybes iš `requirements-dev.txt`;
@@ -92,18 +109,10 @@ gh auth login
 
 Tada:
 
-1. Atidaryk `Whimsical.app`
-2. Prisijunk prie savo `Whimsical` paskyros
-3. Vieną kartą išsaugok `Whimsical` browser sesiją render skriptui:
+1. Bootstrap'ink konkrečią knygą:
 
 ```bash
-.venv/bin/python scripts/render_whimsical_figure.py --login
-```
-
-4. Bootstrap'ink konkrečią knygą:
-
-```bash
-python3 scripts/bootstrap_book_from_pdf.py \
+.venv/bin/python scripts/bootstrap_book_from_pdf.py \
   --pdf "/abs/path/to/book.pdf" \
   --contents-pages 7-14 \
   --page-offset 38 \
@@ -113,17 +122,25 @@ python3 scripts/bootstrap_book_from_pdf.py \
 Jei TOC parseris nesusitvarko su nestandartiniu PDF, paleisk su chapter map sidecar:
 
 ```bash
-python3 scripts/bootstrap_book_from_pdf.py \
+.venv/bin/python scripts/bootstrap_book_from_pdf.py \
   --pdf "/abs/path/to/book.pdf" \
   --chapter-map "/abs/path/to/book.chapters.yaml"
 ```
 
 Bootstrap pagal nutylėjimą apsiriboja repo-local workspace sukūrimu. Jei tame pačiame žingsnyje norite ir per-book Obsidian sync agento, macOS aplinkoje pridėkite `--install-obsidian-sync`.
 
-5. Jei įdiegėte sync agentą, atidaryk `Obsidian`
-6. Jei įdiegėte sync agentą, patikrink, ar vault kataloge atsirado:
+2. Jei įdiegėte sync agentą, atidaryk `Obsidian`
+3. Jei įdiegėte sync agentą, patikrink, ar vault kataloge atsirado:
    - `<Book Title>/chapters/`
    - `<Book Title>/figures/`
+4. Jei dirbsite su `Whimsical` figūromis, atidaryk `Whimsical.app` ir prisijunk prie savo paskyros.
+5. Jei dirbsite su `Whimsical` figūromis, vieną kartą išsaugok `Whimsical` browser sesiją render skriptui:
+
+```bash
+.venv/bin/python scripts/render_whimsical_figure.py \
+  --book-root books/<slug> \
+  --login
+```
 
 ## Repo custom skillas
 
@@ -177,7 +194,7 @@ Po bootstrap naujame Mac naudok repo-level `Codex` operating modelį:
 Jei tęsiamas repo-engineering darbas kitame `Codex` thread ar naujame worktree, pirmiausia atnaujink `ENGINEERING_LEDGER.md`:
 
 ```bash
-python3 scripts/update_engineering_ledger.py \
+.venv/bin/python scripts/update_engineering_ledger.py \
   --theme "Current engineering theme" \
   --summary "Trumpai įvardyk, ką tiksliai reikia tęsti." \
   --next-step "Pirmas konkretus žingsnis naujam thread."
@@ -188,7 +205,7 @@ Normalioje porinio darbo sesijoje to neturėtų reikėti daryti ranka kiekvieną
 Tik jei dar reikia papildomo lokalaus scratchpad, sugeneruok `handoff`:
 
 ```bash
-python3 scripts/write_codex_handoff.py \
+.venv/bin/python scripts/write_codex_handoff.py \
   --title "Current task handoff" \
   --book-root books/<slug> \
   --goal "Trumpai įvardyk, ką tiksliai reikia tęsti." \
@@ -198,7 +215,7 @@ python3 scripts/write_codex_handoff.py \
 Jei reikia tik minimalaus naujo thread prompto, naudok:
 
 ```bash
-python3 scripts/print_codex_resume_prompt.py --mode engineering
+.venv/bin/python scripts/print_codex_resume_prompt.py --mode engineering
 ```
 
 ## Python priklausomybės
@@ -218,7 +235,8 @@ Po `requirements-dev.txt` įdiegimo bootstrap skriptas papildomai įrašo ir `Ch
 PDF bootstrap šiame repo yra `PyMuPDF-first`. Praktikoje tai reiškia:
 
 - `PyMuPDF` turi būti repo `.venv`;
-- paleidus `python3 scripts/bootstrap_book_from_pdf.py ...`, skriptas pats persijungs į `.venv`, jei sistemos interpreteryje `fitz` nėra.
+- po bootstrap šias komandas rodykite per `.venv/bin/python`, pvz. `.venv/bin/python scripts/bootstrap_book_from_pdf.py ...`;
+- jei kas nors vis tiek paleistų `scripts/bootstrap_book_from_pdf.py` per sistemos `python3`, skriptas persijungs į `.venv`, jei sistemos interpreteryje `fitz` nėra.
 
 ## Verification entrypoint
 
