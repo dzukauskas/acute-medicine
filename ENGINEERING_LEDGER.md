@@ -19,48 +19,39 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: Finding 3 Whimsical live checkpoint completed
-- Branch: codex/audit-wave-003-operability
-- Last updated: 2026-03-31T15:23:01+03:00
+- Theme: Post-merge Python Tests CI parity
+- Branch: main
+- Last updated: 2026-03-31T15:47:00+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- `Finding 3` gyvas Whimsical register/render/auth checkpointas uždarytas tame pačiame disposable clone'e: validation-only `HOME` sesija buvo sukurta per `--login`, tas pats auth state panaudotas `register_whimsical_figure.py` child render'iui ir vėlesniam second render be `--login`, o PNG turinio hash pasikeitė po aiškaus tos pačios Whimsical lentos `V2` atnaujinimo.
+- Po `audit-wave-003` suvedimo į `main` GitHub Actions run `23797589493` krito ne dėl `bootstrap_macos.sh` kontrakto, o dėl `tests.test_shell_entrypoints` fixture, kuris CI runner'yje netyčia pasiėmė sisteminį `python3` ir nuėjo giliau nei tikėtasi.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Tas pats disposable clone `/tmp/acute-medicine-audit-wave-003-validation` ir anksčiau sukurtas `books/jrcalc-validation-harness` buvo panaudoti `Finding 3` proof be papildomo repo cleanup; prieš startą harness `manifest.tsv` buvo švarus ir neturėjo seno `validation-009-01` įrašo ar PNG.
-- Buvo sukurta laikina Whimsical validation lenta `HCus8S` (`Audit Wave 003 Validation Board`) ir naudotas konkretus harness kandidatas `source_figure_id=009-conditions-requiring-specific-prehospital-clinical-management-fig-01`.
-- Validation-only auth būsena laikyta tik `/tmp/acute-medicine-whimsical-validation-home/.cache/codex-whimsical/storage-state.json`; tas pats `HOME` buvo naudotas `--login`, `register_whimsical_figure.py` ir second render be login.
-- Kadangi izoliuotame `HOME` Playwright nerado browser binary, vykdymui buvo prisegtas `PLAYWRIGHT_BROWSERS_PATH=/Users/dzukauskas/Library/Caches/ms-playwright`; tai leido išlaikyti sesijos izoliaciją nereikalaujant naujo browser install į temp katalogą.
-- `register_whimsical_figure.py` sėkmingai sukūrė manifest įrašą ir pirmą render'į:
-  - `figure_id=figure-validation-009-01-009-conditions-requiring-specific-prehospital-clinical-management-fig-01`;
-  - baseline PNG hash `3240362001450a41635e0d818245bfb6cdfd990ddc2cf8382c6dcee5a93363b2`.
-- Po laikinos lentos atnaujinimo į `Validation Render V2` per `whimsical-desktop` second render buvo paleistas be `--login` su tuo pačiu validation-only session state ir sugeneravo naują PNG hash `eed1efae3b2530596bdd3fced9e0bbd1a4e3e6d1a47a8aa6815328c95bd533b1`.
-- Hash pokytis laikomas galutiniu įrodymu, kad realus `register -> render -> second render without login` kelias veikia gyvai.
+- Sugedęs testas buvo `test_bootstrap_macos_requires_python3_on_path_after_brew_bundle`: vietoj laukto `Required command not found: python3...` GitHub runner'yje gautas `Could not open requirements file ... requirements-dev.txt`, nes `python3` buvo rastas per host PATH.
+- `tests/test_shell_entrypoints.py` dabar izoliuoja tą scenarijų vykdydamas `bootstrap_macos.sh` per `/bin/bash` ir tik su fake `PATH`, kuriame yra stub'intas `dirname`, todėl testas nebegali netyčia pasiimti host `python3`.
+- Lokaliai žali:
+  - `.venv/bin/python -m unittest tests.test_shell_entrypoints -v`
+  - tas pats focused CI suite kaip workflow faile: `81 tests`, `OK`
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
 <!-- ledger:decisions:start -->
-- `Finding 3` proof turi naudoti tą patį validation-only `HOME` per visą `--login -> register -> second render` grandinę, nes `register_whimsical_figure.py` child render remiasi default Playwright storage-state keliu po `HOME`.
-- Kai validation-only `HOME` neturi savo Playwright browser cache, reikia prisegti `PLAYWRIGHT_BROWSERS_PATH` prie jau esančio lokalaus cache, o ne perinstaliuoti browserius ar atsisakyti sesijos izoliacijos.
-- Realus second-render proof priimamas tik tada, kai po aiškaus tos pačios lentos pakeitimo pasikeičia PNG turinio hash; vien failo perrašymo laikas nėra pakankamas įrodymas.
-- `Finding 4` uždarytas commit'e `dcfc146` neliečiamas pakartotinai, nebent atsirastų naujas konkretus bootstrap blocker'is.
+- Šitas lūžis klasifikuojamas kaip siauras CI parity / fixture bug, ne kaip naujas `bootstrap_macos.sh` runtime kontrakto defektas.
+- Missing-`python3` shell testas turi izoliuoti host PATH pakankamai griežtai, kad runner aplinka negalėtų pakeisti laukiamo guard elgesio.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Užfiksuoti `Finding 3` uždarymą `plans/audit-wave-003.md` ir laikyti `audit-wave-003` live-validation sluoksnį užbaigtu.
-- Jei šitos validation-only aplinkos nebereikės, atskirai nuspręsti dėl laikinos Whimsical lentos, disposable manifest įrašo / PNG ir `/tmp/acute-medicine-whimsical-validation-home` cleanup.
-- Kita repo-engineering tema jau turėtų eiti naujame thread'e, nes `audit-wave-003 operability` banga dabar uždaryta.
+- Užfiksuoti siaurą test-fixture pataisą į `main` ir patikrinti, kad kitas `Python Tests` run būtų žalias.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- Validation-only artefaktai tebėra palikti lokaliai: laikina Whimsical lenta, disposable clone `manifest.tsv` įrašas / PNG ir `/tmp/acute-medicine-whimsical-validation-home` session state.
-- `whimsical-desktop` MCP transportas šiame proof trumpam buvo nutrūkęs, kol `Whimsical.app` nebuvo atidarytas rankiniu `open -a "Whimsical"` veiksmu; jei tai kartosis, reikės laikyti tai atskiru desktop-connector stabilumo follow-up.
+- Iki kol naujas GitHub Actions run nebus žalias, remote pusėje šita parity tema lieka ne iki galo patvirtinta.
 <!-- ledger:risks:end -->
 
 ## Completed Themes

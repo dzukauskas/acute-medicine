@@ -74,6 +74,14 @@ class ShellEntrypointTests(unittest.TestCase):
         self.write(path, text)
         path.chmod(0o755)
 
+    def write_fixed_dirname(self, bin_dir: Path, target_dir: Path) -> None:
+        self.write_executable(
+            bin_dir / "dirname",
+            f"""#!/bin/sh
+echo "{target_dir}"
+""",
+        )
+
     def read_log_lines(self, log_path: Path) -> list[str]:
         if not log_path.exists():
             return []
@@ -441,15 +449,16 @@ exit 0
 exit 0
 """,
             )
+            self.write_fixed_dirname(bin_dir, repo_root / "scripts")
 
             result = subprocess.run(  # noqa: S603
-                [str(repo_root / "scripts" / "bootstrap_macos.sh")],
+                ["/bin/bash", str(repo_root / "scripts" / "bootstrap_macos.sh")],
                 cwd=repo_root,
                 capture_output=True,
                 text=True,
                 env={
                     **os.environ,
-                    "PATH": f"{bin_dir}:/bin:/usr/sbin:/sbin",
+                    "PATH": str(bin_dir),
                 },
             )
 
