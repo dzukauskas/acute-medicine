@@ -19,23 +19,22 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: Post-merge Python Tests CI parity
+- Theme: audit-wave-003 closed on main
 - Branch: main
-- Last updated: 2026-03-31T15:47:00+03:00
+- Last updated: 2026-03-31T15:57:00+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- Po `audit-wave-003` suvedimo į `main` GitHub Actions run `23797589493` krito ne dėl `bootstrap_macos.sh` kontrakto, o dėl `tests.test_shell_entrypoints` fixture, kuris CI runner'yje netyčia pasiėmė sisteminį `python3` ir nuėjo giliau nei tikėtasi.
+- `audit-wave-003` dabar pilnai uždarytas ant `main`: po siauro `tests.test_shell_entrypoints` parity fix naujas GitHub Actions run tapo žalias, o workflow action versijos atnaujintos į Node 24 palaikančias major versijas.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Sugedęs testas buvo `test_bootstrap_macos_requires_python3_on_path_after_brew_bundle`: vietoj laukto `Required command not found: python3...` GitHub runner'yje gautas `Could not open requirements file ... requirements-dev.txt`, nes `python3` buvo rastas per host PATH.
-- `tests/test_shell_entrypoints.py` dabar izoliuoja tą scenarijų vykdydamas `bootstrap_macos.sh` per `/bin/bash` ir tik su fake `PATH`, kuriame yra stub'intas `dirname`, todėl testas nebegali netyčia pasiimti host `python3`.
-- Lokaliai žali:
-  - `.venv/bin/python -m unittest tests.test_shell_entrypoints -v`
-  - tas pats focused CI suite kaip workflow faile: `81 tests`, `OK`
+- `tests.test_shell_entrypoints` parity fix commit `568022b` pašalino post-merge CI lūžį, kurį sukėlė host `python3` nutekėjimas į fake shell fixture.
+- GitHub Actions run `23798193908` po `568022b` yra žalias.
+- Workflow housekeeping commit `d0ffed1` atnaujino `.github/workflows/python-tests.yml` į `actions/checkout@v5` ir `actions/setup-python@v6`.
+- GitHub Actions run `23798385711` po `d0ffed1` yra žalias ir ankstesnio Node 20 deprecation įspėjimo nebėra.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -46,12 +45,12 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Užfiksuoti siaurą test-fixture pataisą į `main` ir patikrinti, kad kitas `Python Tests` run būtų žalias.
+- Kita repo-engineering tema gali prasidėti naujame thread'e; logiškas kitas žingsnis yra `audit-wave-004`.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- Iki kol naujas GitHub Actions run nebus žalias, remote pusėje šita parity tema lieka ne iki galo patvirtinta.
+- Nėra aktyvaus `audit-wave-003` blocker'io; kitos rizikos jau priklauso būsimam `audit-wave-004` auditui, ne šios temos closeout'ui.
 <!-- ledger:risks:end -->
 
 ## Completed Themes
