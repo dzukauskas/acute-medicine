@@ -21,39 +21,43 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: GitHub Actions bootstrap smoke parity
 - Branch: main
-- Last updated: 2026-03-30T23:23:53.369154+03:00
+- Last updated: 2026-03-31T09:28:56+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- Siaura parity pataisa: bootstrap_macos.sh kontraktas lieka macOS-only, o shell smoke testas dabar eksplicitiškai modeliuoja Darwin success vietoj runner OS priklausomybės.
+- Uzdaryta siaura bookkeeping pataisa: is ENGINEERING_LEDGER.md pasalintas atsitiktinai patekes terminalo ir Homebrew logu triuksmas, paliekant tik tiksline sios temos santrauka.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- GitHub Actions run 23765628791 ant a23838b krito ubuntu-latest jobe ne dėl naujo skripto defekto, o dėl pasenusio test_bootstrap_macos_shell_smoke Linux success lūkesčio.
-- tests.test_shell_entrypoints dabar success smoke scenarijuje stubina uname i Darwin, o atskiras test_bootstrap_macos_reports_macos_only ir toliau dengia non-Darwin failure kontrakto pusę.
-- Lokaliai žali tiek python3 -m unittest tests.test_shell_entrypoints, tiek pilnas focused CI ekvivalentas iš GitHub workflow failo (57 tests / OK).
+- Funkcinis commit 0e95644 yra origin/main, tests.test_shell_entrypoints zaliai praeina, o GitHub Actions run 23765982759 yra success.
+- ENGINEERING_LEDGER.md vel turi tik sios temos santrauka: Darwin -> success smoke modeli, non-Darwin -> failure kontrakto puse ir sprendima neliesti bootstrap_macos.sh bei python-tests workflow.
+- Po sio bookkeeping commit lokali repo busena vel gali buti laikoma svaria, o tema uzdaryta.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
 <!-- ledger:decisions:start -->
-- scripts/bootstrap_macos.sh guardas nelaikomas taisymo vieta; palaikomas elgesys modeliuojamas testų sluoksnyje per aiškų platformos stubą.
-- .github/workflows/python-tests.yml šiai parity pataisai nekeičiamas, nes Linux runnerio kontraktui pakanka ištaisyti patį smoke testą.
+- Ledgerio taisymas siame commit e yra tik bookkeeping sluoksnis; shell testai, workflow ir bootstrap skriptai nekeiciami.
+- Si technine tema laikoma pilnai uzdaryta po svaraus ledger atkurimo, o kitas repo-engineering darbas turi buti pradedamas kaip nauja tema ir naujas thread.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Papildomo follow-up šiai temai nereikia, jei pushed GitHub Actions run sutaps su lokalia focused suite būsena.
+- Kita repo-engineering tema pradeti naujame thread.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- Ateityje shell smoke regressijos gali grįžti, jei nauji testai vėl remsis host runner OS vietoj eksplicitinių platformos stubų.
+- Nera atviru riziku siai uzdarytai temai.
 <!-- ledger:risks:end -->
 
 ## Completed Themes
 <!-- ledger:completed:start -->
+### 2026-03-31 09:28 | GitHub Actions bootstrap smoke parity
+- Uzdaryta siaura CI parity tema: Darwin success smoke testas eksplicitiskai stubina platforma, o non-Darwin failure kontraktas paliktas atskiru testu.
+- Po funkcinio commit o 0e95644 ledger isvalytas atskiru bookkeeping commit u, kad worktree vel butu svarus.
+
 ### 2026-03-30 15:21 | Codex context continuity and repo-engineering memory
 - Užbaigtas runtime dependency hardening ir smoke testų sluoksnis.
 - Užbaigta focused acceptance fixtures plėtra ir papildomi workflow acceptance testai.
