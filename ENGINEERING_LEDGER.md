@@ -19,20 +19,20 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: final repo stabilization sweep
+- Theme: no-active-theme
 - Branch: main
-- Last updated: 2026-04-01T09:47:11.390172+03:00
+- Last updated: 2026-04-01T09:49:15.865773+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- Final stabilization sweep is implemented on main and locally green: term_candidates closeout wording now matches real CI scope, resume tooling understands explicit no-active-theme, and the post-bootstrap .venv/bin/python / smoke-test contract is aligned across docs and shell output.
+- No active repo-engineering theme. Final stabilization sweep is closed on main after commit f76b807 and green GitHub Actions Python Tests run 23835834218.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Required local unittest suite is green via python3 -m unittest $(python3 scripts/list_required_python_test_modules.py) (106 tests).
-- The --clear-active-theme closeout path now preserves the previously active theme label when writing a completed heading.
+- Commit f76b807 finalized resume semantics, stabilization wording, and the post-bootstrap command contract on main.
+- GitHub Actions Python Tests run 23835834218 passed on main for the closeout commit.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -45,22 +45,23 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Push main so GitHub Actions Python Tests can validate the updated resume/docs contract on the remote workflow.
+- The next repo-engineering topic should start in a new thread.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- Do not clear Active Theme in the tracked ledger until the remote required Python Tests workflow is green; that closeout stays a separate bookkeeping step.
+- _No open engineering risks recorded._
 <!-- ledger:risks:end -->
 
 ## Completed Themes
 <!-- ledger:completed:start -->
+### 2026-04-01 09:49 | final repo stabilization sweep
+- Closed the final stabilization sweep on main after commit f76b807 and green GitHub Actions Python Tests run 23835834218.
+
 ### 2026-03-31 18:40 | build_chapter_pack term_candidates concurrency hardening closed on main
 - Closed the narrow `term_candidates.tsv` concurrency hardening theme on `main` after commits `0b36cdf` and `ef87f68`, plus green required GitHub Actions `Python Tests` run `23806065856`; process-based parallel refresh regression coverage remains tracked in `tests.test_term_candidates_workflow`, not in required CI.
-
 ### 2026-03-31 17:27 | audit-wave-004 closed on main
 - Closed the execution contract hardening wave on main after three scoped commits and a green Python Tests run 23802470349.
-
 ### 2026-03-31 15:23 | Finding 3 live Whimsical checkpoint
 - Uždarytas realus `Whimsical` register/render/auth checkpointas tame pačiame disposable clone'e, kuris buvo paruoštas `Finding 4`.
 - Validation-only `HOME` sesija buvo panaudota per `--login`, `register_whimsical_figure.py` child render ir second render be login.
