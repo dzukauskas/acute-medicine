@@ -1,0 +1,3 @@
+block_id	defect_class	bad_form	fixed_form	severity	promote_target	notes
+narrative-01-consent-in-pre-hospital-care	term	Sutikimas ikihospitalinėje pagalboje	Sutikimas ikistacionarinėje pagalboje	medium	books/jrcalc-clinical-guidelines-2025-reference-edition/disallowed_phrases.local.tsv	review_group=terminology drift; heading-localization turi likti nuosekli visame knygos prieškontrolės sluoksnyje.
+narrative-01-consent-in-pre-hospital-care	term	Ikihospitalinėse situacijose	Ikistacionarinėse situacijose	medium	books/jrcalc-clinical-guidelines-2025-reference-edition/disallowed_phrases.local.tsv	review_group=terminology drift; sutikimo skyrius fiksuoja book-local `pre-hospital` wording precedentą.

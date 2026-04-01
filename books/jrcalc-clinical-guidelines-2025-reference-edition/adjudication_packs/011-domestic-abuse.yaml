@@ -1,0 +1,172 @@
+chapter_slug: 011-domestic-abuse
+chapter_pack: chapter_packs/011-domestic-abuse.yaml
+source_md: source/chapters-en/011-domestic-abuse.md
+lt_target_md: lt/chapters/011-domestic-abuse.md
+scaffold: adjudication_scaffold.md
+candidates:
+- block_id: narrative-03-incidence
+  block_type: narrative
+  heading: Incidence
+  source_anchor: Incidence
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  profile_id: market-localization
+  selection_mode: profile_match
+  selection_reason: Matched profile `market-localization` via block_type `narrative` and signals market-localization.
+  decision_note_required: true
+  variant_a_goal: Tiksliai perrašyti rinkos, brand ar prieinamumo teiginį pagal LT rinką.
+  variant_b_goal: Suvesti teiginį į bendrinį / INN ar LT rinkos formą, neapkraunant originalo rinkos kontekstu.
+  decision_criteria: Palik variantą, kuris nepalieka originalo rinkos prieinamumo ar brandų kaip LT realybės.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids: []
+  structured_block_policy: null
+- block_id: narrative-04-severity-and-outcome
+  block_type: narrative
+  heading: Severity and Outcome
+  source_anchor: Severity and Outcome
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-011-consent-and-information-sharing
+  structured_block_policy: null
+- block_id: narrative-05-pathophysiology
+  block_type: narrative
+  heading: Pathophysiology
+  source_anchor: Pathophysiology
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-011-consent-and-information-sharing
+  structured_block_policy: null
+- block_id: narrative-06-consent
+  block_type: narrative
+  heading: Consent
+  source_anchor: Consent
+  draft_mode: narrative-prose
+  tags:
+  - legal-localization
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-011-consent-and-information-sharing
+  structured_block_policy: null
+- block_id: narrative-07-assessment-and-management
+  block_type: narrative
+  heading: Assessment and Management
+  source_anchor: Assessment and Management
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags:
+  - algorithmic_narrative
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - dose-claim
+  required_authority_basis: LT
+  profile_id: dose-claim
+  selection_mode: profile_match
+  selection_reason: Matched profile `dose-claim` via block_type `narrative` and signals dose-claim.
+  decision_note_required: true
+  variant_a_goal: Išlaikyti kliniškai tikslią dozę, kelią ar koncentraciją pagal LT šaltinį.
+  variant_b_goal: Sutrumpinti formuluotę, bet neprarasti norminės prasmės ir saugos ribų.
+  decision_criteria: Palik variantą, kuris tiksliai atitinka LT norminį šaltinį ir nepalieka originalo
+    dozavimo drift'o.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-011-assessment-reporting-documentation
+  - claim-011-transport-and-handover
+  structured_block_policy: null
+- block_id: narrative-09-further-reading
+  block_type: narrative
+  heading: Further Reading
+  source_anchor: Further Reading
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  profile_id: market-localization
+  selection_mode: profile_match
+  selection_reason: Matched profile `market-localization` via block_type `narrative` and signals market-localization.
+  decision_note_required: true
+  variant_a_goal: Tiksliai perrašyti rinkos, brand ar prieinamumo teiginį pagal LT rinką.
+  variant_b_goal: Suvesti teiginį į bendrinį / INN ar LT rinkos formą, neapkraunant originalo rinkos kontekstu.
+  decision_criteria: Palik variantą, kuris nepalieka originalo rinkos prieinamumo ar brandų kaip LT realybės.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-011-uk-help-resources
+  structured_block_policy: null
+- block_id: narrative-10-bibliography
+  block_type: narrative
+  heading: Bibliography
+  source_anchor: Bibliography
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  profile_id: market-localization
+  selection_mode: profile_match
+  selection_reason: Matched profile `market-localization` via block_type `narrative` and signals market-localization.
+  decision_note_required: true
+  variant_a_goal: Tiksliai perrašyti rinkos, brand ar prieinamumo teiginį pagal LT rinką.
+  variant_b_goal: Suvesti teiginį į bendrinį / INN ar LT rinkos formą, neapkraunant originalo rinkos kontekstu.
+  decision_criteria: Palik variantą, kuris nepalieka originalo rinkos prieinamumo ar brandų kaip LT realybės.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids: []
+  structured_block_policy: null

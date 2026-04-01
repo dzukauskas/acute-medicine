@@ -28,6 +28,7 @@ DISALLOWED_PHRASE_HEADER = "match_type\tbanned\tpreferred\treason\n"
 LOCALIZATION_OVERRIDE_HEADER = "source_term\tjurisdiction\treplacement_mode\tlocal_lt\teu_fallback\tscope\treason\tsource_ref\tnotes\n"
 LOCALIZATION_SIGNAL_HEADER = "source_term\tjurisdiction\tsignal_type\tmatch_mode\tpattern\tnotes\n"
 GOLD_SECTION_INDEX_HEADER = "example_id\tsource_chapter\tblock_id\tblock_type\ttags\tpath\tnotes\n"
+ACTUAL_BOOK_ROOT = REPO_ROOT / "books" / "jrcalc-clinical-guidelines-2025-reference-edition"
 
 
 class RepoGlobalRulesTests(unittest.TestCase):
@@ -218,6 +219,58 @@ class RepoGlobalRulesTests(unittest.TestCase):
             self.assertEqual(result.returncode, 1, msg=result.stdout + result.stderr)
             self.assertIn("eskaluoti pagalbą", result.stdout)
             self.assertIn("vykdyti lokalų bandymą", result.stdout)
+
+    def test_actual_book_local_prose_guard_blocks_ikihospital_stem(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            chapter_path = Path(tmp_dir) / "chapter.md"
+            self.write(
+                chapter_path,
+                "Pacientui gali reikėti pagalbos ikihospitalinėje priežiūroje.\n",
+            )
+
+            result = self.run_script("prose_guard.py", "--book-root", str(ACTUAL_BOOK_ROOT), str(chapter_path))
+
+            self.assertEqual(result.returncode, 1, msg=result.stdout + result.stderr)
+            self.assertIn("ikihospitalinėje priežiūroje", result.stdout)
+            self.assertIn("ikistacionarin-", result.stdout)
+
+    def test_actual_book_local_signals_detect_translation_quality_hardening_surface(self) -> None:
+        source_text = textwrap.dedent(
+            """
+            Domestic Abuse Act 2021 came into force.
+            If your local protocol recommends a DASH risk assessment, complete it face to face.
+            Gain consent for referral to a specialist domestic abuse service.
+            Women’s Aid can be consulted and an ATMIST information call may be used.
+            The NHS complaints procedure and local authority response are also described.
+            """
+        )
+
+        signals = wp.detect_source_localization_signals(source_text, ACTUAL_BOOK_ROOT)
+        terms = {row["source_term"] for row in signals}
+
+        self.assertTrue(
+            {
+                "Domestic Abuse Act 2021",
+                "DASH risk assessment",
+                "specialist domestic abuse service",
+                "Women’s Aid",
+                "ATMIST",
+                "NHS complaints procedure",
+                "local authority",
+            }.issubset(terms)
+        )
+
+    def test_actual_book_local_overrides_cover_domestic_abuse_equivalence_cases(self) -> None:
+        overrides = {
+            row["source_term"]: row
+            for row in wp.load_localization_overrides(book_root=ACTUAL_BOOK_ROOT)
+        }
+
+        self.assertEqual(overrides["ATMIST"]["replacement_mode"], "replace_lt")
+        self.assertEqual(overrides["ATMIST"]["local_lt"], "MIST formatas")
+        self.assertEqual(overrides["specialist domestic abuse service"]["local_lt"], "specializuotos kompleksinės pagalbos tarnyba")
+        self.assertEqual(overrides["Domestic Abuse Act 2021"]["replacement_mode"], "original_context_callout")
+        self.assertEqual(overrides["local authority"]["replacement_mode"], "omit_nontransferable")
 
     def test_validate_localization_readiness_uses_local_signal_and_override(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

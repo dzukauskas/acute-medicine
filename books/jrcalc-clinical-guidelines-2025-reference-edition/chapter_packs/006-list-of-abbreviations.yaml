@@ -1115,6 +1115,15 @@ localization_overrides:
   reason: JAV skubios pagalbos aktyvavimo numeris negali būti paliktas kaip LT praktikos dalis.
   source_ref: ''
   notes: Nepalikti pagrindiniame LT tekste.
+- source_term: ATMIST
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: MIST formatas
+  eu_fallback: ''
+  scope: all
+  reason: LT perdavimo kontekste vietoje UK `ATMIST` vartoti oficialioje SAM metodikoje fiksuotą `MIST`.
+  source_ref: research/011-domestic-abuse.md
+  notes: Originalų akronimą palikti tik `Originalo kontekstas` bloke, jei jis aiškiai reikalingas.
 source_jurisdiction_signals:
 - source_term: CMI
   jurisdiction: australia
@@ -1146,6 +1155,12 @@ source_jurisdiction_signals:
   match_mode: regex
   pattern: \bDNACPR\b
   notes: UK resuscitation legal framework.
+- source_term: ATMIST
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \bATMIST\b
+  notes: LT norminiame perdavimo kontekste ši knyga naudoja konkretų vietinį ekvivalentą.
 localization_decisions:
 - source_term: CMI
   replacement_mode: original_context_callout
@@ -1155,6 +1170,16 @@ localization_decisions:
   source_ref: '`c1DC.xhtml`; `shared/localization/localization_overrides.tsv`'
   notes: Bendras repo signalas čia duoda klaidingą rinkos atitikmenį, todėl šiai knygai taikomas aiškus
     originalo konteksto blokavimas.
+- source_term: ATMIST
+  replacement_mode: replace_lt
+  authority_basis: LT
+  localization_note: Kai santrumpa vartojama kaip norminis GMP perdavimo formatas, LT tekste vartoti `MIST`
+    arba aiškiai išskleistą LT perdavimo struktūrą pagal vietinę metodiką; originalų `ATMIST` palikti
+    tik originalo kontekste ar pačiame santrumpų žodyne.
+  source_ref: '`books/jrcalc-clinical-guidelines-2025-reference-edition/localization_overrides.local.tsv`;
+    `research/011-domestic-abuse.md`'
+  notes: Tai book-local LT norminio ekvivalento taisyklė, netaikoma kaip mechaninis visų source paminėjimų
+    perrašymas.
 - source_term: JRCALC
   replacement_mode: original_context_callout
   authority_basis: original-context-only
@@ -1232,20 +1257,6 @@ term_candidates:
   source_expansion: ''
   chapter_slug: 006-list-of-abbreviations
   source_context: '| APC | Antero-Posterior Compression |'
-  proposed_lt: ''
-  status: candidate
-  scope: book
-  candidate_origin: source_acronym
-  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
-  banned_lt: ''
-  source_ref: ''
-  notes: ''
-- candidate_id: 006-list-of-abbreviations-acronym-atmist
-  candidate_kind: acronym
-  source_term: ATMIST
-  source_expansion: ''
-  chapter_slug: 006-list-of-abbreviations
-  source_context: '| ATMIST | A – Age |'
   proposed_lt: ''
   status: candidate
   scope: book
@@ -1786,20 +1797,6 @@ term_candidates:
   banned_lt: ''
   source_ref: ''
   notes: ''
-- candidate_id: 006-list-of-abbreviations-acronym-ice
-  candidate_kind: acronym
-  source_term: ICE
-  source_expansion: ''
-  chapter_slug: 006-list-of-abbreviations
-  source_context: '|  | V – Responds to voice |'
-  proposed_lt: ''
-  status: candidate
-  scope: book
-  candidate_origin: source_acronym
-  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
-  banned_lt: ''
-  source_ref: ''
-  notes: ''
 - candidate_id: 006-list-of-abbreviations-acronym-imca
   candidate_kind: acronym
   source_term: IMCA
@@ -1842,40 +1839,12 @@ term_candidates:
   banned_lt: ''
   source_ref: ''
   notes: ''
-- candidate_id: 006-list-of-abbreviations-acronym-iv
-  candidate_kind: acronym
-  source_term: IV
-  source_expansion: ''
-  chapter_slug: 006-list-of-abbreviations
-  source_context: '| ADHD | Attention Deficit Hyperactivity Disorder |'
-  proposed_lt: ''
-  status: candidate
-  scope: book
-  candidate_origin: source_acronym
-  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
-  banned_lt: ''
-  source_ref: ''
-  notes: ''
 - candidate_id: 006-list-of-abbreviations-acronym-lmp
   candidate_kind: acronym
   source_term: LMP
   source_expansion: ''
   chapter_slug: 006-list-of-abbreviations
   source_context: '| LMP | Last Menstrual Period |'
-  proposed_lt: ''
-  status: candidate
-  scope: book
-  candidate_origin: source_acronym
-  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
-  banned_lt: ''
-  source_ref: ''
-  notes: ''
-- candidate_id: 006-list-of-abbreviations-acronym-loc
-  candidate_kind: acronym
-  source_term: LOC
-  source_expansion: ''
-  chapter_slug: 006-list-of-abbreviations
-  source_context: '| ALoC | Altered level of consciousness |'
   proposed_lt: ''
   status: candidate
   scope: book

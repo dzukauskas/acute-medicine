@@ -85,6 +85,7 @@ Nėra.
 | Signalas | Jurisdikcija | Tipas | Šaltinio vieta | Pastaba |
 | --- | --- | --- | --- | --- |
 | CMI | australia | reference tool | `c1DC.xhtml` santrumpų lentelė | Aptikta kaip lokalizacijos signalas dėl bendro repo signalų sluoksnio; šiame skyriuje iš tikro yra dubens traumos klasifikacijos santrumpa, todėl negali būti mechaniškai perkelta iš kitų rinkų vartosenos. |
+| ATMIST | uk | guideline | `c1DC.xhtml` santrumpų lentelė | JK perdavimo mnemonika; LT norminiame perdavimo kontekste šiai knygai taikomas atskiras lokalizacijos sprendimas. |
 | JRCALC | uk | gairės | `c1DC.xhtml` santrumpų lentelė | Originalaus leidinio ir JK gairių sistemos santrumpa. |
 | NHS | uk | service model | `c1DC.xhtml` santrumpų lentelė | JK sveikatos sistemos organizacinis kontekstas. |
 | ReSPECT | uk | law | `c1DC.xhtml` santrumpų lentelė | JK gydymo apimties ir skubios pagalbos planavimo dokumento kontekstas. |
@@ -95,6 +96,7 @@ Nėra.
 | Signalas | Veiksmas | Autoritetas | LT / EU sprendimas | Šaltinio nuoroda | Pastaba |
 | --- | --- | --- | --- | --- | --- |
 | CMI | original_context_callout | original-context-only | Santrumpų žodyne palikti originalų `Combined Mechanical Injury` išskleidimą, o LT kanoninį atitikmenį spręsti tik verčiant dubens traumos skyrių. | `c1DC.xhtml`; `shared/localization/localization_overrides.tsv` | Bendras repo signalas čia duoda klaidingą rinkos atitikmenį, todėl šiai knygai taikomas aiškus originalo konteksto blokavimas. |
+| ATMIST | replace_lt | LT | Kai santrumpa vartojama kaip norminis GMP perdavimo formatas, LT tekste vartoti `MIST` arba aiškiai išskleistą LT perdavimo struktūrą pagal vietinę metodiką; originalų `ATMIST` palikti tik originalo kontekste ar pačiame santrumpų žodyne. | `books/jrcalc-clinical-guidelines-2025-reference-edition/localization_overrides.local.tsv`; `research/011-domestic-abuse.md` | Tai book-local LT norminio ekvivalento taisyklė, netaikoma kaip mechaninis visų source paminėjimų perrašymas. |
 | JRCALC | original_context_callout | original-context-only | Palikti tik kaip originalaus leidinio ir JK gairių sistemos santrumpą. | `shared/localization/localization_overrides.tsv` | Nenaudoti kaip LT norminio autoriteto. |
 | NHS | omit_nontransferable | LT | Pagrindiniame LT tekste nevartoti kaip vietinio sistemos standarto; prireikus aiškinti tik kaip JK sveikatos sistemos kontekstą. | `shared/localization/localization_overrides.tsv` | Organizacinis kontekstas, ne LT norminis terminas. |
 | ReSPECT | original_context_callout | original-context-only | Palikti tik kaip originalo dokumento pavadinimą / JK planavimo sistemos santrumpą. | `shared/localization/localization_overrides.tsv` | Nenaudoti kaip LT teisinio ar klinikinio atitikmens. |
@@ -169,7 +171,7 @@ Nėra.
 | CCS | Central Cord Syndrome | lokaliai vartoti `nugaros smegenų centrinio pluošto sindromas` | localization_only | VLK / TLK-10-AM vartosena ir dubleto kontrolė | Originali `CCS` santrumpa nekelta į `shared`, nes tame pačiame leidinyje ji vartojama ir kaip `casualty clearing station`. |
 | CES | Cauda Equina Syndrome | arklio uodegos sindromas (CES) | approved_global | LT neurochirurgijos ir ortopedijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | CEW | Controlled Electrical Weapon | palikti originalo kontekste arba aiškinti aprašomai lokaliai | original_context_only | policijos / saugumo terminas, ne LT medicininės bazės branduolys | Į `shared/lexicon` nekelti. |
-| CFR | Community first responder | palikti originalo JK reagavimo modelio kontekste | original_context_only | JK / Airijos ikihospitalinių paslaugų modelis | Ne LT norminis atitikmuo. |
+| CFR | Community first responder | palikti originalo JK reagavimo modelio kontekste | original_context_only | JK / Airijos ikistacionarinių paslaugų modelis | Ne LT norminis atitikmuo. |
 | CMHT | Community Mental Health Team | palikti originalo JK paslaugų kontekste | original_context_only | JK psichikos sveikatos paslaugų struktūra | Ne LT aktyvios bazės vienetas. |
 | CMI | Combined Mechanical Injury | kol kas nekelti į `shared`; reikia stipresnio LT dubens traumų šaltinio dėl kanoninio atitikmens | open | LT dubens traumų vartosena dar nepakankamai užrakinta | JRCALC aprašo tai kaip kelių mechanizmų derinį, bet stabilaus LT kanoninio termino interneto šaltiniuose dar neradau. |
 | CNS | Central Nervous System | centrinė nervų sistema (CNS) | approved_global | LT neurologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
@@ -231,7 +233,7 @@ Nėra.
 | GP | General Practitioner | lokaliai vartoti `šeimos gydytojas` / `bendrosios praktikos gydytojas` pagal kontekstą | localization_only | LT pirminės sveikatos priežiūros vartosena | Originali `GP` santrumpa nekelta į `shared`. |
 | GTN | Glyceryl Trinitrate | glicerolio trinitratas (nitroglicerinas, GTN) | approved_global | LT kardiologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | GUM | Genito-urinary medicine | palikti originalo JK specialybės / paslaugos kontekste | original_context_only | JK paslaugų struktūra | Ne LT aktyvios medicininės terminijos vienetas. |
-| HART | Hazardous Area Response Team | palikti originalo JK reagavimo modelio kontekste | original_context_only | JK ikihospitalinių tarnybų modelis | Į LT aktyvią bazę nekelti. |
+| HART | Hazardous Area Response Team | palikti originalo JK reagavimo modelio kontekste | original_context_only | JK ikistacionarinių tarnybų modelis | Į LT aktyvią bazę nekelti. |
 | HCP | Healthcare Professional | lokaliai vartoti `sveikatos priežiūros specialistas` | localization_only | LT SAM ir ASPĮ vartosena | Originali `HCP` santrumpa nekelta į `shared`. |
 | HFpEF | Heart failure with preserved ejection fraction | širdies nepakankamumas su išlikusia kairiojo skilvelio išstūmio frakcija (HFpEF) | approved_global | LT kardiologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | HFrEF | Heart failure with reduced ejection fraction | širdies nepakankamumas su sumažėjusia kairiojo skilvelio išstūmio frakcija (HFrEF) | approved_global | LT kardiologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
@@ -334,7 +336,7 @@ Nėra.
 | PEA | Pulseless Electrical Activity | elektromechaninė disociacija (EMD / PEA) | approved_global | LT kardiologijos ir gaivinimo vartosena | Užrakinta `shared/lexicon/acronyms.tsv`; LT šaltiniuose matoma ir aprašomoji forma `elektrinis aktyvumas be pulso`. |
 | PEF | Peak Expiratory Flow | didžiausias iškvėpimo srovės greitis (PEF) | approved_global | LT pulmonologijos ir SAM vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | PEFR | Peak Expiratory Flow Rate | lokaliai vartoti tą pačią LT formą kaip `PEF` | localization_only | LT pulmonologijos vartosena | Neaktyvinta atskirai, kad nedubliuotų aktyvaus `PEF` įrašo. |
-| PHECG | Pre-hospital 12-lead electrocardiogram | lokaliai vartoti `ikihospitalinė 12 derivacijų elektrokardiograma` | localization_only | LT GMP ir kardiologinė vartosena | Originali `PHECG` santrumpa nekelta į `shared`. |
+| PHECG | Pre-hospital 12-lead electrocardiogram | lokaliai vartoti `ikistacionarinė 12 derivacijų elektrokardiograma` | localization_only | LT GMP ir kardiologinė vartosena | Originali `PHECG` santrumpa nekelta į `shared`. |
 | PNES | Psychogenic non-epileptic seizures | psichogeniniai neepilepsiniai priepuoliai (PNES) | approved_global | LT neurologijos ir epileptologijos vartosena | Užrakinta `shared/lexicon/acronyms.tsv`. |
 | PPCI | Primary Percutaneous Coronary Intervention | lokaliai vartoti `pirminė perkutaninė koronarinė intervencija`, prireikus aiškinant kaip `PKI` | localization_only | LT kardiologijos vartosena | Originali `PPCI` nekelta į `shared`, nes LT vartosenoje dažnesnė `PKI`. |
 | PPE | Personal Protective Equipment | lokaliai vartoti `asmens apsaugos priemonės` | localization_only | LT SAM ir infekcijų kontrolės vartosena | Originali `PPE` nekelta į `shared`, nes LT tekstuose vartojama pilna forma. |
@@ -747,7 +749,7 @@ Nėra.
 ## Papildomas LT-source patikrinimas likusiems open vienetams (2026-03-29)
 
 - `CMI`: papildomai tikrinta LT dubens traumų ir biomechanikos vartosena; patikimo kanoninio LT atitikmens `Combined Mechanical Injury` nerasta. Kol kas palikta `open`.
-- `CPR-IC`: papildomai tikrinta LT gaivinimo ir ikihospitalinės medicinos interneto vartosena; patikimo kanoninio LT termino `CPR-induced consciousness` nerasta. Kol kas palikta `open`.
+- `CPR-IC`: papildomai tikrinta LT gaivinimo ir ikistacionarinės medicinos interneto vartosena; patikimo kanoninio LT termino `CPR-induced consciousness` nerasta. Kol kas palikta `open`.
 - `FII`: papildomai tikrinta LT vaikų apsaugos, pediatrijos ir sveikatos politikos vartosena; rasta pakankamas LT pagrindas lokaliam sprendimui `medicininė prievarta prieš vaikus`, aiškinant ryšį su `įgaliotojo asmens Miunhauzeno sindromu`. Į `shared` nekelta.
 - `ITD`: papildomai tikrinta LT gaivinimo įrangos ir anesteziologijos vartosena; LSMU šaltinyje rastas kanoninis atitikmuo `įkvėpimo impedancinio slenksčio vožtuvas`, todėl vienetas perkeltas į `approved_global`.
 - Likusiems dviem atviriems vienetams galioja ta pati taisyklė: kol nėra pakankamo LT interneto šaltinio pagrindo, nei į `shared`, nei į lokalų aktyvų sluoksnį jų nekelti.

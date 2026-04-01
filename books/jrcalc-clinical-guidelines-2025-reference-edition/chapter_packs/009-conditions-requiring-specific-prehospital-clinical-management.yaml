@@ -1,5 +1,5 @@
 chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
-chapter_title: 9 skyrius. Būklės, kurioms reikalingas specifinis ikihospitalinis klinikinis valdymas
+chapter_title: 9 skyrius. Būklės, kurioms reikalingas specifinis ikistacionarinis klinikinis valdymas
 page_range: EPUB segmentas c3CK.xhtml
 source_md: source/chapters-en/009-conditions-requiring-specific-prehospital-clinical-management.md
 lt_target_md: lt/chapters/009-conditions-requiring-specific-prehospital-clinical-management.md
@@ -1483,36 +1483,6 @@ term_candidates:
   banned_lt: ''
   source_ref: ''
   notes: ''
-- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-do
-  candidate_kind: acronym
-  source_term: DO
-  source_expansion: ''
-  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
-  source_context: '- This document aims to provide both guidance on conditions that are less frequently
-    encountered in the out-of-hospital environment, and conditions that may require additional considerations
-    further to the standard JRCALC guidance.'
-  proposed_lt: ''
-  status: candidate
-  scope: book
-  candidate_origin: source_acronym
-  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
-  banned_lt: ''
-  source_ref: ''
-  notes: ''
-- candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-gb
-  candidate_kind: acronym
-  source_term: GB
-  source_expansion: ''
-  chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
-  source_context: 'Signs and symptoms of respiratory muscle fatigue in patients with GB:'
-  proposed_lt: ''
-  status: candidate
-  scope: book
-  candidate_origin: source_acronym
-  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
-  banned_lt: ''
-  source_ref: ''
-  notes: ''
 - candidate_id: 009-conditions-requiring-specific-prehospital-clinical-management-acronym-girft
   candidate_kind: acronym
   source_term: GIRFT
@@ -1775,7 +1745,7 @@ term_candidates:
   source_expansion: ''
   chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
   source_context: '# Chapter 9 Conditions Requiring Specific Prehospital Clinical Management'
-  proposed_lt: Būklės, kurioms reikalingas specifinis ikihospitalinis klinikinis valdymas
+  proposed_lt: Būklės, kurioms reikalingas specifinis ikistacionarinis klinikinis valdymas
   status: localization_only
   scope: book
   candidate_origin: source_heading
@@ -1805,7 +1775,7 @@ term_candidates:
   source_expansion: ''
   chapter_slug: 009-conditions-requiring-specific-prehospital-clinical-management
   source_context: '# Chapter 9 Conditions Requiring Specific Prehospital Clinical Management'
-  proposed_lt: ikihospitalinis klinikinis valdymas
+  proposed_lt: ikistacionarinis klinikinis valdymas
   status: localization_only
   scope: book
   candidate_origin: research_risky_term

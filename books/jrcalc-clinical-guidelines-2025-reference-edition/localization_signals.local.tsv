@@ -1,1 +1,12 @@
 source_term	jurisdiction	signal_type	match_mode	pattern	notes
+ATMIST	uk	guideline	regex	\bATMIST\b	LT norminiame perdavimo kontekste ši knyga naudoja konkretų vietinį ekvivalentą.
+Domestic Abuse Act 2021	uk	law	literal	Domestic Abuse Act 2021	JK domestic abuse teisės signalas.
+DASH risk assessment	uk	reference tool	literal	DASH risk assessment	JK smurto rizikos vertinimo įrankis.
+specialist domestic abuse service	uk	service model	literal	specialist domestic abuse service	JK pagalbos tinklo paslaugos etiketė.
+Women’s Aid	uk	service model	literal	Women’s Aid	JK pagalbos organizacija.
+Mankind Initiative	uk	service model	literal	Mankind Initiative	JK pagalbos organizacija.
+LGBT+ Domestic Abuse Helpline	uk	service model	literal	LGBT+ Domestic Abuse Helpline	JK pagalbos organizacija.
+Refuge	uk	service model	regex	\bRefuge\b	JK pagalbos organizacija.
+Foreign and Commonwealth Office	uk	service model	literal	Foreign and Commonwealth Office	JK institucinis ir pagalbos kontekstas.
+NHS complaints procedure	uk	service model	literal	NHS complaints procedure	JK skundų nagrinėjimo procedūra.
+local authority	uk	law	literal	local authority	JK savivaldos ir safeguarding teisinis kontekstas.

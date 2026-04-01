@@ -21,34 +21,41 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: no-active-theme
+- Theme: translation-quality hardening
 - Branch: main
-- Last updated: 2026-04-01T20:09:15.157880+03:00
+- Last updated: 2026-04-01T22:32:56+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- No active repo-engineering theme. Stage 1 context-amnesia continuity hardening is complete on main after commits 23c0f8e, b072461, and b50f878 with green local required unittest coverage and green GitHub Actions Python Tests run 23860970385.
+- First `review_delta` skeletons for chapters 009-011 are now captured and wired into book-local terminology, localization, and prose guards instead of remaining implicit in manual chapter edits.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Stage 1 continuity hardening is implemented, accepted by local drill, and pushed to origin/main.
+- `review_deltas/009-011.tsv` now cluster defects into terminology drift, localization-equivalence, section-function drift, and translation-shaped prose, with local promotion targets recorded in the TSV itself.
+- Book-local hardening now includes a regex guard against `ikihospitalin-` drift, a consent-language collocation guard, and domestic-abuse-specific localization signals / overrides for UK-only legal and service-model terms.
+- Full `run_chapter_qa.py` regression over currently translated chapters `001-011` is green after refreshing stale canonical `chapter_pack` artifacts and fixing one residual 009 wording drift surfaced by the new guard.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
 <!-- ledger:decisions:start -->
-- Keep Stage 2 and Stage 3 unaccepted unless a future real resume failure proves they are needed.
+- Treat this as one narrow repo-engineering theme separate from chapter drafting.
+- Promote repeated fixes through review_deltas and book-local rules before considering shared-rule promotion.
+- Keep the new 009-011 hardening rules book-local for now; do not promote them to `shared/` until the same patterns recur outside the current chapter cluster.
+- Treat stale canonical `chapter_pack` drift discovered during regression as part of translation-quality hardening, because it can hide new rule coverage and invalidate QA results.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- The next repo-engineering topic should start in a new thread.
+- Watch upcoming translated chapters for the same `pre-hospital` wording drift, domestic-abuse / safeguarding UK service-model leakage, and consent-language calques before considering shared promotion.
+- If more review waves depend on `review_delta` mining, decide separately whether `mine_review_deltas.py` should learn LT-heading-aware block mapping instead of relying on manual block reassignment.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- No open engineering risks recorded.
+- Over-broad guard rules may create false positives and block source-faithful wording.
+- Some localization rules remain intentionally book-local and context-heavy; premature promotion to `shared/` could overfit to the JRCALC safeguarding / consent cluster.
 <!-- ledger:risks:end -->
 
 ## Completed Themes

@@ -1,0 +1,1383 @@
+chapter_slug: 011-domestic-abuse
+chapter_title: 11 skyrius. Smurtas artimoje aplinkoje
+page_range: EPUB segmentas c40P.xhtml
+source_md: source/chapters-en/011-domestic-abuse.md
+lt_target_md: lt/chapters/011-domestic-abuse.md
+blocks:
+- block_id: narrative-01-domestic-abuse
+  block_type: narrative
+  heading: Domestic Abuse
+  source_anchor: Domestic Abuse
+  source_excerpt: '# Chapter 11 Domestic Abuse
+
+    - Šaltinio segmentai: c40P.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    Domestic Abuse
+
+    1. Introduction
+
+    - Domestic violence and abuse is any incident or pattern of incidents of controlling, coercive or
+    threatening behaviour, violence or abuse between those aged 16 or over who are or have been, intimate
+    partners or family members regardless of gender or sexuality. The abuse can encompass, but is not
+    limited to, psychological, physical, sexual, financial and emotional harm.
+
+    - Controlling behaviour is a range of acts designed to make a person subordinate and/or dependent
+    by isolating them from sources of support, exploiting their resources and capacities for personal
+    gain, depriving them of the means needed for independence, resistance and escape and regulating their
+    everyday behaviour.
+
+    - Coercive behaviour is an act or pattern of acts of assault, threats, humiliation and intimidation
+    or other abuse that is used to harm, punish or frighten the victim.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: '`JRCALC` palikti tik kaip originalaus šaltinio ir leidinio kontekstą; pagrindiniame
+    LT tekste remtis LT sveikatos sistemos ir GMP logika.'
+  matched_localization_terms:
+  - JRCALC
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: &id001
+    block_id: narrative-01-domestic-abuse
+    block_type: narrative
+    lt_strategy: rewrite_lt
+    authority_source: LT smurto artimoje aplinkoje teisinis ir sveikatos sistemos sluoksnis
+    original_context_allowed: 'yes'
+    note: Įvadą, paplitimą ir consent dalį laikyti kuo arčiau originalo, bet JK įstatymus ir institucijas
+      rodyti tik kaip originalo kontekstą.
+- block_id: narrative-02-introduction
+  block_type: narrative
+  heading: Introduction
+  source_anchor: Introduction
+  source_excerpt: '1. Introduction
+
+    - Domestic violence and abuse is any incident or pattern of incidents of controlling, coercive or
+    threatening behaviour, violence or abuse between those aged 16 or over who are or have been, intimate
+    partners or family members regardless of gender or sexuality. The abuse can encompass, but is not
+    limited to, psychological, physical, sexual, financial and emotional harm.
+
+    - Controlling behaviour is a range of acts designed to make a person subordinate and/or dependent
+    by isolating them from sources of support, exploiting their resources and capacities for personal
+    gain, depriving them of the means needed for independence, resistance and escape and regulating their
+    everyday behaviour.
+
+    - Coercive behaviour is an act or pattern of acts of assault, threats, humiliation and intimidation
+    or other abuse that is used to harm, punish or frighten the victim.
+
+    - Domestic abuse is the most prevalent form of violence against women and girls.
+
+    - Pre-hospital healthcare practitioners are in a key position to identify domestic abuse and to initiate
+    support and safety for victims.
+
+    - Domestic abuse is extremely distressing; managing such cases demands sensitive, non-judgemental
+    medical and emotional care and an awareness of the forensic requirements.
+
+    - In December 2015, a new criminal offence of domestic abuse, ‘coercive and controlling behaviour’,
+    came into force, making all domestic abuse a reportable crime. In April 2021, the Domestic Abuse Act
+    2021 came into force recognising children as victims and economic abuse as a form of domestic abuse,
+    and introducing new measures to support victims.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Įvade galima tik trumpai pažymėti, kad originale remiamasi JK įstatymo pokyčiais;
+    LT tekste pagrindiniai terminai ir pagalbos logika grindžiami LT teise.
+  matched_localization_terms:
+  - Domestic Abuse Act 2021
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-03-incidence
+  block_type: narrative
+  heading: Incidence
+  source_anchor: Incidence
+  source_excerpt: '2. Incidence
+
+    - In 2020, 5.5% of adults aged 16 to 74 years experienced domestic abuse in the 12 months prior. 18%
+    of all offences recorded by the police in the year ending March 2021 were domestic abuse-related crimes.
+    There were 362 domestic homicides recorded in the three-year period between year ending March 2018
+    and year ending March 2020.
+
+    - Women are significantly more likely than men to be victims and survivors of domestic abuse.
+
+    3. Severity and Outcome
+
+    - The severity of the abuse can vary from verbal abuse to sustaining life-threatening injuries or
+    death. The outcome of the abuse can lead to long-term psychological and physical effects.
+
+    - Exposure to domestic abuse during childhood can have a profound effect on children’s development
+    and wellbeing.
+
+    4. Pathophysiology
+
+    - Domestic abuse is an incident or pattern of incidents of controlling, coercive or threatening behaviour,
+    violence or abuse to those aged 16 or over. These types of abuse include: psychological, physical,
+    sexual, financial and emotional harm..'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: us-specific
+  localization_action: omit_nontransferable
+  authority_basis: original-context-only
+  localization_note: remtis Lietuvos ir ES kontroliuojamų medžiagų reguliavimu
+  matched_localization_terms:
+  - DEA
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-04-severity-and-outcome
+  block_type: narrative
+  heading: Severity and Outcome
+  source_anchor: Severity and Outcome
+  source_excerpt: '3. Severity and Outcome
+
+    - The severity of the abuse can vary from verbal abuse to sustaining life-threatening injuries or
+    death. The outcome of the abuse can lead to long-term psychological and physical effects.
+
+    - Exposure to domestic abuse during childhood can have a profound effect on children’s development
+    and wellbeing.
+
+    4. Pathophysiology
+
+    - Domestic abuse is an incident or pattern of incidents of controlling, coercive or threatening behaviour,
+    violence or abuse to those aged 16 or over. These types of abuse include: psychological, physical,
+    sexual, financial and emotional harm..
+
+    - Domestic abuse also includes ‘honour’-based violence, forced marriage and female genital mutilation
+    (FGM); for FGM, also refer to Safeguarding Adults at Risk and Safeguarding Children .
+
+    5. Consent
+
+    - Clinicians should seek the consent of the adult to share information, unless doing so would increase
+    the risk of harm. Whilst a capacitated adult is free to make an unwise or bad decision, the local
+    authority and/or the police can take steps to protect them if they are at risk of abuse if they are
+    being unduly influenced, coerced or intimidated.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: mixed-anglosphere
+  localization_action: omit_nontransferable
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste vietoje `local authority` vartoti bendresnę kompetentingos
+    savivaldybės ar kitos atsakingos institucijos formuluotę pagal konkretų sakinį.
+  matched_localization_terms:
+  - DEA
+  - local authority
+  matched_claim_ids:
+  - claim-011-consent-and-information-sharing
+  matched_claim_types:
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-05-pathophysiology
+  block_type: narrative
+  heading: Pathophysiology
+  source_anchor: Pathophysiology
+  source_excerpt: '4. Pathophysiology
+
+    - Domestic abuse is an incident or pattern of incidents of controlling, coercive or threatening behaviour,
+    violence or abuse to those aged 16 or over. These types of abuse include: psychological, physical,
+    sexual, financial and emotional harm..
+
+    - Domestic abuse also includes ‘honour’-based violence, forced marriage and female genital mutilation
+    (FGM); for FGM, also refer to Safeguarding Adults at Risk and Safeguarding Children .
+
+    5. Consent
+
+    - Clinicians should seek the consent of the adult to share information, unless doing so would increase
+    the risk of harm. Whilst a capacitated adult is free to make an unwise or bad decision, the local
+    authority and/or the police can take steps to protect them if they are at risk of abuse if they are
+    being unduly influenced, coerced or intimidated.
+
+    - Information can be shared with other professionals, without the adult’s consent, if the following
+    apply: There is an immediate risk of harm. Other people are being put at risk (for example, letting
+    friends who are abusive or exploitative into a shared living environment, where they may put other
+    residents at risk). A child is involved. The alleged person causing harm has care and support needs
+    and may also be at risk. A crime has been committed. Staff are implicated.
+
+    - There will be times when an adult who has mental capacity decides to accept a situation considered
+    as harmful or neglectful. Where this is the situation and they do not want any action to be taken,
+    this does not preclude the sharing of information with relevant professional colleagues. This is to
+    enable professionals to assess the risk of harm and be confident that the adult is not being unduly
+    influenced, coerced or intimidated and is aware of all the options.
+
+    - Poor handling of the consent process may result in a breakdown of trust between patients and clinicians,
+    may result in opportunities to safeguard patients being missed and may also result in complaints from
+    patients through the NHS complaints procedure or to professional bodies.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: omit_nontransferable
+  authority_basis: LT
+  localization_note: '`NHS complaints procedure`, `Trust` reporting procesai ir `NHS` paslaugų modelis
+    pagrindiniame LT tekste nevartojami kaip vietinis standartas; vietoj to remiamasi LT pacientų teisių,
+    dokumentavimo ir vietinės įstaigos tvarkos principais.'
+  matched_localization_terms:
+  - NHS
+  - NHS complaints procedure
+  - local authority
+  matched_claim_ids:
+  - claim-011-consent-and-information-sharing
+  matched_claim_types:
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-06-consent
+  block_type: narrative
+  heading: Consent
+  source_anchor: Consent
+  source_excerpt: '- Patients are likely to be very distressed about the events surrounding domestic abuse.
+    They may not want to involve anybody else, and may not consent to disclosure of information to other
+    parties such as the police. Do not judge or give the appearance of judging the patient. Be kind and
+    considerate, and allow the patient space and as much choice as possible about options for their treatment.
+
+    - There can be a complex but significant relationship between alcohol and drug use and domestic abuse
+    perpetration.
+
+    - Further care – it is important to encourage all victims of domestic abuse to seek medical helpand
+    inform the police. Both will be able to provide physical, medical and emotional support.
+
+    - In cases of domestic abuse in adults with needs for care and support, refer to Safeguarding Adults
+    at Risk .
+
+    - In cases of domestic abuse where children are present, involved or potentially affected by the emotional
+    impact of domestic abuse, refer to Safeguarding Children .
+
+    2. Incidence
+
+    - In 2020, 5.5% of adults aged 16 to 74 years experienced domestic abuse in the 12 months prior. 18%
+    of all offences recorded by the police in the year ending March 2021 were domestic abuse-related crimes.
+    There were 362 domestic homicides recorded in the three-year period between year ending March 2018
+    and year ending March 2020.
+
+    - Women are significantly more likely than men to be victims and survivors of domestic abuse.'
+  risk_flags: []
+  tags:
+  - legal-localization
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: mixed-anglosphere
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Pagrindiniame LT tekste nepalikite kaip vietinio standarto; jei reikia, rodykite
+    tik `Originalo kontekstas` bloke.
+  matched_localization_terms: []
+  matched_claim_ids:
+  - claim-011-consent-and-information-sharing
+  matched_claim_types:
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-07-assessment-and-management
+  block_type: narrative
+  heading: Assessment and Management
+  source_anchor: Assessment and Management
+  source_excerpt: '6. Assessment and Management
+
+    For the assessment and management of domestic abuse, refer to Table 1.1 .
+
+    | Col 1 |
+
+    | --- |
+
+    | Table 1.1 – ASSESSMENT and MANAGEMENT of: Domestic Abuse |
+
+    | Assess <C>ABCDE If any TIME-CRITICAL features present major ABCDE problems: Start correcting <C>ABCDE
+    problems. Undertake a TIME-CRITICAL transfer to nearest receiving hospital. Continue patient management
+    en route. Provide an ATMIST information call. |
+
+    | Assess Limit questions to those identifying the need for medical treatment, but allow the patient
+    to talk and document what is said. NB It is not appropriate to probe for details of the abuse and
+    it could affect the outcome of criminal investigations. Manage according to condition: Acute injury
+    – refer to Trauma Emergencies in Adults and Trauma Emergencies in Children . Acute illness – refer
+    to Medical Emergencies in Adults and Medical Emergencies in Children . Indicators in the patient:
+    Seems afraid or anxious to please their partner. Agrees with everything their partner says. Checks
+    everything first with their partner. Talks about their partner’s temper or jealousy. Has frequent
+    injuries, often described as ‘accidents’. Dresses in clothing designed to hide bruises or scars. Is
+    restricted from seeing family and friends. Has limited access to money, credit cards etc. Has low
+    self-esteem. Is depressed, anxious or has suicidal thoughts/action. |
+
+    | Approach Know and recognise risk factors, signs and presenting patterns of behaviour associated
+    with domestic abuse. Facilitate privacy and do not do anything which could place the victim at further
+    risk, such as making enquiries in earshot of the perpetrator. Use a sensitive and respectful manner
+    but ask direct questions about relationships, risks and safety factors. Focus on your care but be
+    mindful of your surroundings and the information that is being passed to you, both verbal and non-verbal.
+    Consider cultural/religious issues. Where possible, accommodate the patient’s requests. Remember that
+    this may be the first time the victim has felt able to disclose risk to a professional, or even the
+    only time they have ever had the opportunity. Where possible, avoid disturbing the scene. Where possible,
+    and safe to do so, gain consent from the victim for referral to the police or a specialist domestic
+    abuse service approved by your organisation’s safeguarding lead. Multiagency input and assessment
+    is essential in reducing the risk of domestic abuse. Follow your local protocols when referring to
+    external agencies. If your local protocol recommends that you complete a DASH risk assessment, then
+    always complete this face to face with the victim rather than retrospectively after the episode of
+    contact has concluded. Obtain a safe contact number for the victim for other agencies to use to contact
+    them without risk of alerting the perpetrator. |'
+  risk_flags:
+  - algorithmic_narrative
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: '`DASH` palikti tik originalo kontekste; LT tekste vartoti bendresnę formą apie vietinę
+    rizikos vertinimo ir nukreipimo tvarką pagal įstaigos procedūras.'
+  matched_localization_terms:
+  - ATMIST
+  - DASH risk assessment
+  - ReSPECT
+  - specialist domestic abuse service
+  matched_claim_ids:
+  - claim-011-assessment-reporting-documentation
+  - claim-011-transport-and-handover
+  matched_claim_types:
+  - algorithm_step
+  - route
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - dose-claim
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-08-key-points
+  block_type: narrative
+  heading: KEY POINTS!
+  source_anchor: KEY POINTS!
+  source_excerpt: 'KEY POINTS!
+
+    Domestic Abuse
+
+    - If staff suspect a crime has been committed resulting in harm to the patient, the police must be
+    called.
+
+    - Always attempt to obtain consent from the patient before making a referral for them but recognise
+    when consent is not required.
+
+    - Listen closely to the patient for disclosure, and document this on the patient record.
+
+    - If possible, take the patient away from the scene.
+
+    - Treatment should avoid disturbing evidence where possible.
+
+    - Take into account any information that is disclosed by children.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: us-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: remtis Europos farmakopėja ir LT/EU oficialiais šaltiniais
+  matched_localization_terms:
+  - USP
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-09-further-reading
+  block_type: narrative
+  heading: Further Reading
+  source_anchor: Further Reading
+  source_excerpt: 'Further Reading
+
+    Other useful resources include:
+
+    Department of Health: Domestic violence and abuse. Professional guidance. https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/211018/9576-TSO-Health_Visiting_Domestic_Violence_A3_Posters_WEB.pdf.
+
+    Women’s Aid: Support for women to escape abuse. www.womensaid.org.uk .
+
+    Mankind Initiative: Information and support for male victims of domestic abuse or violence. https://www.mankind.org.uk
+    .
+
+    LGBT+ Domestic Abuse Helpline: Support for LGBT+ people who have experienced abuse and violence. 0300
+    999 5428, www.broken-rainbow.co.uk .
+
+    Refuge. National helpline: 0808 2000 247, email: helpline@refuge.org.uk .
+
+    Foreign and Commonwealth Office: Forced marriage. www.fco.gov.uk/en/travel-and-living-abroad/when-things-go-wrong/forced-marriage
+    .'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: remtis LT pagalbos maršrutu (`112`, policija, specializuotos kompleksinės pagalbos
+    centrai)
+  matched_localization_terms:
+  - Foreign and Commonwealth Office
+  - LGBT+ Domestic Abuse Helpline
+  - Mankind Initiative
+  - Refuge
+  - Women’s Aid
+  matched_claim_ids:
+  - claim-011-uk-help-resources
+  matched_claim_types:
+  - market_availability
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+- block_id: narrative-10-bibliography
+  block_type: narrative
+  heading: Bibliography
+  source_anchor: Bibliography
+  source_excerpt: 'Bibliography
+
+    | Col 1 | Col 2 |
+
+    | --- | --- |
+
+    | 1. | HM Government. Tackling Domestic Abuse Plan . 2022. Available from: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1064427/E02735263_Tackling_Domestic_Abuse_CP_639_Accessible.pdf
+    . |
+
+    | 2. | House of Common Library. Briefing Paper 9233: The Role of Healthcare Services in Addressing
+    Domestic abuse. 2021. Available from: https://researchbriefings.files.parliament.uk/documents/CBP-9233/CBP-9233.pdf
+    The role of healthcare services in addressing domestic abuse (parliament.uk) . |
+
+    | 3. | Department of Health. Responding to Domestic Abuse: A resource for health professionals . 2017.
+    Available from: https://www.gov.uk/government/publications/domestic-abuse-a-resource-for-health-professionals
+    . |
+
+    | 4. | National Institute for Health and Clinical Excellence. Domestic Violence and Abuse: Multi-agency
+    working (PH50). London: NICE, 2014. Available from: https://www.nice.org.uk/guidance/ph50/chapter/introduction
+    . |
+
+    | 5. | Office for National Statistics. Domestic Abuse Prevalence and Trends, England and Wales: Year
+    ending March 2021. 2021. Available from: https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/articles/domesticabuseprevalenceandtrendsenglandandwales/yearendingmarch2021
+    . |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: us-specific
+  localization_action: omit_nontransferable
+  authority_basis: original-context-only
+  localization_note: remtis Lietuvos ir ES vaistų kodavimo bei registracijos sistema
+  matched_localization_terms:
+  - NDC
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - market-localization
+  required_authority_basis: original-context-only
+  structured_block_policy: null
+clinical_claims:
+- claim_id: claim-011-transport-and-handover
+  claim_type: route
+  source_anchor: '`Assessment and Management`'
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: SAM rekomendacijos; SAM sunkios traumos metodika su `MIST`; 006 skyriaus LT užrakinimai
+    dėl `ABCDE`, `<C>ABCDE`
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Pagrindiniame LT tekste palikti GMP vertinimo, skubaus transportavimo ir perdavimo logiką, o struktūruotą
+    pranešimą lokalizuoti pagal LT vartojamą `MIST` formatą, ne pagal JK `ATMIST`.
+  matched_block_ids:
+  - narrative-07-assessment-and-management
+- claim_id: claim-011-assessment-reporting-documentation
+  claim_type: algorithm_step
+  source_anchor: '`Assessment and Management`'
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: SAM rekomendacijos dėl smurto prieš suaugusiuosius artimoje aplinkoje atpažinimo;
+    įsakymo Nr. 55/42/16 pranešimo apie sužalotus asmenis logika
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Lentelės veiksmai dėl privatumo, informacijos rinkimo, policijos informavimo, vaikų saugos ir
+    sužalojimų aprašymo turi būti perteikti LT sistemai tinkama forma.
+  matched_block_ids:
+  - narrative-07-assessment-and-management
+- claim_id: claim-011-consent-and-information-sharing
+  claim_type: legal_scope
+  source_anchor: '`5. Consent`'
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: Lietuvos Respublikos pacientų teisių ir žalos sveikatai atlyginimo įstatymas; 010
+    skyriaus LT-source sprendimai; SAM informacijos apie pacientą teikimo tvarkos sluoksnis
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Consent dalis LT tekste turi likti bendrųjų LT teisės principų lygmenyje, neperrašant jos į JK
+    jurisdikcijų aprašą.
+  matched_block_ids:
+  - narrative-04-severity-and-outcome
+  - narrative-05-pathophysiology
+  - narrative-06-consent
+- claim_id: claim-011-uk-help-resources
+  claim_type: market_availability
+  source_anchor: '`Further Reading` ir JK pagalbos organizacijų blokas'
+  final_rendering: original_context_callout
+  authority_basis: original-context-only
+  primary_lt_source: ''
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: JK pagalbos linijos ir organizacijos paliekamos tik kaip originalo kontekstas; LT praktiniame
+    tekste vietoj jų remiamasi `112`, policija ir specializuotos kompleksinės pagalbos centrais.
+  matched_block_ids:
+  - narrative-09-further-reading
+structured_block_policies:
+- *id001
+active_terms: []
+active_acronyms:
+- acronym: DM
+  lt: cukrinis diabetas
+  en: Diabetes Mellitus
+  policy: lt-first
+  notes: Patikrinta LT interneto endokrinologijos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: cukrinis diabetas (DM)
+  section_scope: '011'
+- acronym: MI
+  lt: miokardo infarktas
+  en: Myocardial Infarction
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU kardiologijos šaltiniuose 2026-03-29. LT vartosenoje įprasta santrumpa
+    `MI`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: miokardo infarktas (MI)
+  section_scope: '011'
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: CMI
+  jurisdiction: australia
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `CMI` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: NHS
+  jurisdiction: uk
+  replacement_mode: omit_nontransferable
+  local_lt: taikyti Lietuvos sveikatos sistemos ir GMP organizacinę logiką
+  eu_fallback: taikyti ES ir vietinę organizacinę logiką
+  scope: all
+  reason: '`NHS` yra JK sistemos institucinis kontekstas, ne LT norminis terminas.'
+  source_ref: ''
+  notes: Nepalikti kaip vietinio standarto.
+- source_term: ReSPECT
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos gydymo apimties ir paciento valios dokumentavimo praktika
+  eu_fallback: remtis LT ir ES teisine bei klinikine praktika
+  scope: all
+  reason: JK `ReSPECT` sistema nėra LT norminis standartas.
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+- source_term: DEA
+  jurisdiction: us
+  replacement_mode: omit_nontransferable
+  local_lt: remtis Lietuvos ir ES kontroliuojamų medžiagų reguliavimu
+  eu_fallback: remtis ES reguliavimu
+  scope: all
+  reason: '`DEA` yra JAV institucinis ir teisinis kontekstas, ne LT/EU norminis standartas.'
+  source_ref: ''
+  notes: Nepalikti pagrindiniame LT tekste.
+- source_term: USP
+  jurisdiction: us
+  replacement_mode: original_context_callout
+  local_lt: remtis Europos farmakopėja ir LT/EU oficialiais šaltiniais
+  eu_fallback: remtis European Pharmacopoeia
+  scope: all
+  reason: '`USP` yra JAV reference standartas, ne LT/EU numatytasis standartas.'
+  source_ref: ''
+  notes: Jei minima, tai tik kaip originalo kontekstas.
+- source_term: NDC
+  jurisdiction: us
+  replacement_mode: omit_nontransferable
+  local_lt: remtis Lietuvos ir ES vaistų kodavimo bei registracijos sistema
+  eu_fallback: remtis ES reguliaciniu kontekstu
+  scope: all
+  reason: '`NDC` yra JAV rinkos identifikatorius ir neturi būti rodomas kaip LT/EU norminis terminas.'
+  source_ref: ''
+  notes: Nepalikti pagrindiniame LT tekste.
+- source_term: ATMIST
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: MIST formatas
+  eu_fallback: ''
+  scope: all
+  reason: LT perdavimo kontekste vietoje UK `ATMIST` vartoti oficialioje SAM metodikoje fiksuotą `MIST`.
+  source_ref: research/011-domestic-abuse.md
+  notes: Originalų akronimą palikti tik `Originalo kontekstas` bloke, jei jis aiškiai reikalingas.
+- source_term: Domestic Abuse Act 2021
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis LT smurto artimoje aplinkoje teise ir SAM rekomendacijomis
+  eu_fallback: ''
+  scope: all
+  reason: JK teisės aktas negali būti rodomas kaip LT norminė tvarka.
+  source_ref: research/011-domestic-abuse.md
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: DASH risk assessment
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis vietine rizikos vertinimo ir nukreipimo tvarka
+  eu_fallback: ''
+  scope: all
+  reason: JK rizikos vertinimo įrankis nėra LT privalomas standartas.
+  source_ref: research/011-domestic-abuse.md
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: specialist domestic abuse service
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: specializuotos kompleksinės pagalbos tarnyba
+  eu_fallback: ''
+  scope: all
+  reason: JK pagalbos tarnybos etiketė LT tekste lokalizuojama į LT pagalbos tinklo struktūrą.
+  source_ref: research/011-domestic-abuse.md
+  notes: Galutinį nukreipimo wording derinti su vietine įstaigos tvarka.
+- source_term: Women’s Aid
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis LT pagalbos maršrutu (`112`, policija, specializuotos kompleksinės pagalbos centrai)
+  eu_fallback: ''
+  scope: all
+  reason: JK pagalbos organizacija negali būti rodoma kaip LT praktinis resursas.
+  source_ref: research/011-domestic-abuse.md
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: Mankind Initiative
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis LT pagalbos maršrutu (`112`, policija, specializuotos kompleksinės pagalbos centrai)
+  eu_fallback: ''
+  scope: all
+  reason: JK pagalbos organizacija negali būti rodoma kaip LT praktinis resursas.
+  source_ref: research/011-domestic-abuse.md
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: LGBT+ Domestic Abuse Helpline
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis LT pagalbos maršrutu (`112`, policija, specializuotos kompleksinės pagalbos centrai)
+  eu_fallback: ''
+  scope: all
+  reason: JK pagalbos organizacija negali būti rodoma kaip LT praktinis resursas.
+  source_ref: research/011-domestic-abuse.md
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: Refuge
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis LT pagalbos maršrutu (`112`, policija, specializuotos kompleksinės pagalbos centrai)
+  eu_fallback: ''
+  scope: all
+  reason: JK pagalbos organizacija negali būti rodoma kaip LT praktinis resursas.
+  source_ref: research/011-domestic-abuse.md
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: Foreign and Commonwealth Office
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis LT instituciniu ir pagalbos maršrutu pagal kontekstą
+  eu_fallback: ''
+  scope: all
+  reason: JK institucinis ir pagalbos kontekstas negali likti kaip LT praktinis resursas.
+  source_ref: research/011-domestic-abuse.md
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: NHS complaints procedure
+  jurisdiction: uk
+  replacement_mode: omit_nontransferable
+  local_lt: remtis LT pacientų teisių, skundų ir vietinės įstaigos dokumentavimo tvarka
+  eu_fallback: ''
+  scope: all
+  reason: JK skundų nagrinėjimo procedūra negali būti rodoma kaip LT norminė tvarka.
+  source_ref: research/011-domestic-abuse.md
+  notes: Pagrindiniame LT tekste keisti bendru LT pacientų teisių ir įstaigos tvarkos sluoksniu.
+- source_term: local authority
+  jurisdiction: uk
+  replacement_mode: omit_nontransferable
+  local_lt: remtis kompetentingos savivaldybės ar kitos atsakingos institucijos logika pagal kontekstą
+  eu_fallback: ''
+  scope: all
+  reason: JK `local authority` modelis negali būti rodomas kaip LT savivaldos ar safeguarding standartas.
+  source_ref: research/011-domestic-abuse.md
+  notes: Priklausomai nuo sakinio gali reikėti savivaldybės, VTAS ar kitos kompetentingos institucijos
+    formuluotės.
+source_jurisdiction_signals:
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+- source_term: NHS
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: regex
+  pattern: \b(?:NHS|National Health Service)\b
+  notes: UK health service context.
+- source_term: ATMIST
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \bATMIST\b
+  notes: LT norminiame perdavimo kontekste ši knyga naudoja konkretų vietinį ekvivalentą.
+- source_term: Domestic Abuse Act 2021
+  jurisdiction: uk
+  signal_type: law
+  match_mode: literal
+  pattern: Domestic Abuse Act 2021
+  notes: JK domestic abuse teisės signalas.
+- source_term: DASH risk assessment
+  jurisdiction: uk
+  signal_type: reference tool
+  match_mode: literal
+  pattern: DASH risk assessment
+  notes: JK smurto rizikos vertinimo įrankis.
+- source_term: specialist domestic abuse service
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: literal
+  pattern: specialist domestic abuse service
+  notes: JK pagalbos tinklo paslaugos etiketė.
+- source_term: Women’s Aid
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: literal
+  pattern: Women’s Aid
+  notes: JK pagalbos organizacija.
+- source_term: Mankind Initiative
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: literal
+  pattern: Mankind Initiative
+  notes: JK pagalbos organizacija.
+- source_term: LGBT+ Domestic Abuse Helpline
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: literal
+  pattern: LGBT+ Domestic Abuse Helpline
+  notes: JK pagalbos organizacija.
+- source_term: Refuge
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: regex
+  pattern: \bRefuge\b
+  notes: JK pagalbos organizacija.
+- source_term: Foreign and Commonwealth Office
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: literal
+  pattern: Foreign and Commonwealth Office
+  notes: JK institucinis ir pagalbos kontekstas.
+- source_term: NHS complaints procedure
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: literal
+  pattern: NHS complaints procedure
+  notes: JK skundų nagrinėjimo procedūra.
+- source_term: local authority
+  jurisdiction: uk
+  signal_type: law
+  match_mode: literal
+  pattern: local authority
+  notes: JK savivaldos ir safeguarding teisinis kontekstas.
+localization_decisions:
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: '`JRCALC` palikti tik kaip originalaus šaltinio ir leidinio kontekstą; pagrindiniame
+    LT tekste remtis LT sveikatos sistemos ir GMP logika.'
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Proper noun, ne LT norminis autoritetas.
+- source_term: NHS
+  replacement_mode: omit_nontransferable
+  authority_basis: LT
+  localization_note: '`NHS complaints procedure`, `Trust` reporting procesai ir `NHS` paslaugų modelis
+    pagrindiniame LT tekste nevartojami kaip vietinis standartas; vietoj to remiamasi LT pacientų teisių,
+    dokumentavimo ir vietinės įstaigos tvarkos principais.'
+  source_ref: Lietuvos Respublikos pacientų teisių ir žalos sveikatai atlyginimo įstatymas
+  notes: JK paslaugų struktūra čia neperkeliamai specifinė.
+- source_term: Domestic Abuse Act 2021
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Įvade galima tik trumpai pažymėti, kad originale remiamasi JK įstatymo pokyčiais;
+    LT tekste pagrindiniai terminai ir pagalbos logika grindžiami LT teise.
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Jei paliekama, žymėti kaip `Originalo kontekstas`.
+- source_term: DASH risk assessment
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: '`DASH` palikti tik originalo kontekste; LT tekste vartoti bendresnę formą apie vietinę
+    rizikos vertinimo ir nukreipimo tvarką pagal įstaigos procedūras.'
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Ne LT standartinis įrankis.
+- source_term: ATMIST
+  replacement_mode: replace_lt
+  authority_basis: LT
+  localization_note: Kai kalbama apie struktūruotą GMP pranešimą priimančiai įstaigai, pagrindiniame LT
+    tekste vartoti `MIST` formatą, nes būtent jis aiškiai įvardytas oficialioje LT sunkios traumos metodikoje;
+    `ATMIST` palikti tik originalo kontekste.
+  source_ref: https://sam.lrv.lt/uploads/sam/documents/files/Veiklos_sritys/Asmens_sveikatos_prieziura/Metodiniai%20dokumentai/SUNKIOS%20TRAUMOS.pdf
+  notes: Tai lokalizacija pagal konkretų LT norminį ekvivalentą, o ne laisvas perrašymas.
+- source_term: specialist domestic abuse service
+  replacement_mode: replace_lt
+  authority_basis: LT
+  localization_note: Kai kalbama apie nukreipimą po kontakto, LT tekste vartoti `specializuotos kompleksinės
+    pagalbos tarnyba` ir aiškią nuorodą į vietinę įstaigos tvarką.
+  source_ref: https://socmin.lrv.lt/lt/veiklos-sritys/socialine-integracija/emocine-ir-psichologine-pagalba/?lang=lt
+  notes: JK pagalbos tarnybos etiketė čia lokalizuojama į LT pagalbos tinklo struktūrą.
+- source_term: local authority
+  replacement_mode: omit_nontransferable
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste vietoje `local authority` vartoti bendresnę kompetentingos
+    savivaldybės ar kitos atsakingos institucijos formuluotę pagal konkretų sakinį.
+  source_ref: Lietuvos Respublikos pacientų teisių ir žalos sveikatai atlyginimo įstatymas
+  notes: JK safeguarding ir savivaldos modelis neturi būti perkeltas kaip tariamas LT standartas.
+- source_term: Women’s Aid / Mankind Initiative / LGBT+ Domestic Abuse Helpline / Refuge / Foreign and
+    Commonwealth Office
+  replacement_mode: replace_lt
+  authority_basis: LT
+  localization_note: 'Pagrindiniame LT tekste vietoje JK pagalbos resursų nurodyti LT pagalbos maršrutą:
+    `112`, policija ir specializuotos kompleksinės pagalbos centrai; originalūs pavadinimai paliekami
+    tik originalo kontekste.'
+  source_ref: https://socmin.lrv.lt/lt/veiklos-sritys/socialine-integracija/emocine-ir-psichologine-pagalba/?lang=lt
+  notes: Tai pagalbos tinklo lokalizacija, ne laisvas turinio perrašymas.
+style_hotspots: []
+gold_examples: []
+term_candidates_path: term_candidates.tsv
+term_candidates:
+- candidate_id: 011-domestic-abuse-acronym-abcde
+  candidate_kind: acronym
+  source_term: ABCDE
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| Assess <C>ABCDE If any TIME-CRITICAL features present major ABCDE problems: Start
+    correcting <C>ABCDE problems. Undertake a TIME-CRITICAL transfer to nearest receiving hospital. Continue
+    patient management en route. Provide an ATMIST information call. |'
+  proposed_lt: ABCDE vertinimas; LT lokalizuojami tik komponentai
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term | source_acronym
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje akronimų bazėje. | Aptikta source tekste
+    kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Pernaudotas 006 skyriaus santrumpų tyrimo sprendimas; santrumpė paliekama originali, LT tekste
+    aiškinami tik komponentai.
+- candidate_id: 011-domestic-abuse-acronym-cbp-9233
+  candidate_kind: acronym
+  source_term: CBP-9233
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| 2. | House of Common Library. Briefing Paper 9233: The Role of Healthcare Services
+    in Addressing Domestic abuse. 2021. Available from: https://researchbriefings.files.parliament.uk/documents/CBP-9233/CBP-9233.pdf
+    The role of healthcare services in addressing domestic abuse (parliament.uk) . |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-acronym-critical
+  candidate_kind: acronym
+  source_term: CRITICAL
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| Assess <C>ABCDE If any TIME-CRITICAL features present major ABCDE problems: Start
+    correcting <C>ABCDE problems. Undertake a TIME-CRITICAL transfer to nearest receiving hospital. Continue
+    patient management en route. Provide an ATMIST information call. |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-acronym-fgm
+  candidate_kind: acronym
+  source_term: FGM
+  source_expansion: based violence, forced marriage and female genital mutilation
+  chapter_slug: 011-domestic-abuse
+  source_context: '- Domestic abuse also includes ‘honour’-based violence, forced marriage and female
+    genital mutilation (FGM); for FGM, also refer to Safeguarding Adults at Risk and Safeguarding Children
+    .'
+  proposed_lt: moterų lytinių organų žalojimas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term | source_acronym
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje akronimų bazėje. | Aptikta source tekste
+    kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: https://lygus.lt/wp-content/uploads/2024/05/Metodika_.pdf
+  notes: 'Pernaudotas 006 skyriaus sprendimas: aktyvioje shared akronimų bazėje nekelti, LT tekste vartoti
+    pilną formą.'
+- candidate_id: 011-domestic-abuse-acronym-hm
+  candidate_kind: acronym
+  source_term: HM
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: 'Department of Health: Domestic violence and abuse. Professional guidance. https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/211018/9576-TSO-Health_Visiting_Domestic_Violence_A3_Posters_WEB.pdf.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-acronym-hmso
+  candidate_kind: acronym
+  source_term: HMSO
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| 10. | McWilliams M, McKiernan S. Bringing It Out in the Open . Belfast: HMSO, 1999.
+    |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-acronym-jl
+  candidate_kind: acronym
+  source_term: JL
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| 7. | Edelson JL. The overlap between child maltreatment and women battering. Violence
+    Against Women 1999, 5(2): 134–154. |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-acronym-key
+  candidate_kind: acronym
+  source_term: KEY
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '- Pre-hospital healthcare practitioners are in a key position to identify domestic
+    abuse and to initiate support and safety for victims.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-acronym-management
+  candidate_kind: acronym
+  source_term: MANAGEMENT
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: 6. Assessment and Management
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-acronym-nice
+  candidate_kind: acronym
+  source_term: NICE
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| 4. | National Institute for Health and Clinical Excellence. Domestic Violence and
+    Abuse: Multi-agency working (PH50). London: NICE, 2014. Available from: https://www.nice.org.uk/guidance/ph50/chapter/introduction
+    . |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-acronym-nspcc
+  candidate_kind: acronym
+  source_term: NSPCC
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| 11. | NSPCC. Domestic Abuse. 2022. Available from: https://www.nspcc.org.uk/what-is-child-abuse/types-of-abuse/domestic-abuse
+    . |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-acronym-ph50
+  candidate_kind: acronym
+  source_term: PH50
+  source_expansion: Multi-agency working
+  chapter_slug: 011-domestic-abuse
+  source_context: '| 4. | National Institute for Health and Clinical Excellence. Domestic Violence and
+    Abuse: Multi-agency working (PH50). London: NICE, 2014. Available from: https://www.nice.org.uk/guidance/ph50/chapter/introduction
+    . |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-acronym-time
+  candidate_kind: acronym
+  source_term: TIME-
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| Assess <C>ABCDE If any TIME-CRITICAL features present major ABCDE problems: Start
+    correcting <C>ABCDE problems. Undertake a TIME-CRITICAL transfer to nearest receiving hospital. Continue
+    patient management en route. Provide an ATMIST information call. |'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-acronym-tso
+  candidate_kind: acronym
+  source_term: TSO-
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: 'Department of Health: Domestic violence and abuse. Professional guidance. https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/211018/9576-TSO-Health_Visiting_Domestic_Violence_A3_Posters_WEB.pdf.'
+  proposed_lt: ''
+  status: candidate
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: ''
+- candidate_id: 011-domestic-abuse-term-best-interests
+  candidate_kind: term
+  source_term: best interests
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '- Where a person lacks the capacity to make a decision for themselves, any decision
+    must be made in that person’s best interests.'
+  proposed_lt: geriausi paciento interesai
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.59064/asr
+  notes: Teisinis ir bioetinis wording vienetas; palikti book-scoped, nepromuoti į shared medicininę bazę.
+- candidate_id: 011-domestic-abuse-term-coercive-behaviour
+  candidate_kind: term
+  source_term: coercive behaviour
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '- Coercive behaviour is an act or pattern of acts of assault, threats, humiliation
+    and intimidation or other abuse that is used to harm, punish or frighten the victim.'
+  proposed_lt: prievartinė kontrolė
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lygybe.lt/wp-content/uploads/2024/04/ES-atsakas-i-smurta-lyties-pagrindu.pdf
+  notes: LT viešojoje ir teisių vartosenoje dažna apimanti forma `prievartinė kontrolė`; source skyriuje
+    šį vienetą versti aprašomai pagal sakinį ir nepromuoti į shared.
+- candidate_id: 011-domestic-abuse-term-consent-to-share-information
+  candidate_kind: term
+  source_term: consent to share information
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: ''
+  proposed_lt: sutikimas dalytis informacija
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.59064/asr
+  notes: Teisinis ir dokumentavimo wording vienetas; palikti book-scoped.
+- candidate_id: 011-domestic-abuse-term-controlling-behaviour
+  candidate_kind: term
+  source_term: controlling behaviour
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '- Controlling behaviour is a range of acts designed to make a person subordinate and/or
+    dependent by isolating them from sources of support, exploiting their resources and capacities for
+    personal gain, depriving them of the means needed for independence, resistance and escape and regulating
+    their everyday behaviour.'
+  proposed_lt: kontroliuojantis elgesys
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lygybe.lt/wp-content/uploads/2024/04/ES-atsakas-i-smurta-lyties-pagrindu.pdf
+  notes: Book-scoped socialinio ir teisinio smurto terminas; nepromuoti į shared bazę be atskiro platesnio
+    review.
+- candidate_id: 011-domestic-abuse-term-domestic-homicide
+  candidate_kind: term
+  source_term: domestic homicide
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '- In 2020, 5.5% of adults aged 16 to 74 years experienced domestic abuse in the 12
+    months prior. 18% of all offences recorded by the police in the year ending March 2021 were domestic
+    abuse-related crimes. There were 362 domestic homicides recorded in the three-year period between
+    year ending March 2018 and year ending March 2020.'
+  proposed_lt: nužudymas artimoje aplinkoje
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/rs/lasupplement/TAK/5a39025019ea11ecad9fbbf5f006237b/4c89348a595641a9a8b931f0e6a421bc/format/ISO_PDF/
+  notes: Šiame skyriuje vartojama tik originalo statistikos kontekste; į aktyvią bazę nekelti.
+- candidate_id: 011-domestic-abuse-term-domestic-violence-and-abuse
+  candidate_kind: term
+  source_term: domestic violence and abuse
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '- Domestic violence and abuse is any incident or pattern of incidents of controlling,
+    coercive or threatening behaviour, violence or abuse between those aged 16 or over who are or have
+    been, intimate partners or family members regardless of gender or sexuality. The abuse can encompass,
+    but is not limited to, psychological, physical, sexual, financial and emotional harm.'
+  proposed_lt: smurtas artimoje aplinkoje
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://socmin.lrv.lt/lt/veiklos-sritys/socialine-integracija/emocine-ir-psichologine-pagalba/?lang=lt
+  notes: LT kontekste šis source junginys patogiausiai lokalizuojamas bendrąja oficialia forma `smurtas
+    artimoje aplinkoje`.
+- candidate_id: 011-domestic-abuse-term-economic-abuse
+  candidate_kind: term
+  source_term: economic abuse
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '- In December 2015, a new criminal offence of domestic abuse, ‘coercive and controlling
+    behaviour’, came into force, making all domestic abuse a reportable crime. In April 2021, the Domestic
+    Abuse Act 2021 came into force recognising children as victims and economic abuse as a form of domestic
+    abuse, and introducing new measures to support victims.'
+  proposed_lt: ekonominis smurtas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://socmin.lrv.lt/lt/veiklos-sritys/socialine-integracija/emocine-ir-psichologine-pagalba/?lang=lt
+  notes: Oficiali LT pagalbos komunikacijos vartosena; nepromuoti į shared medicininę bazę.
+- candidate_id: 011-domestic-abuse-term-female-genital-mutilation
+  candidate_kind: term
+  source_term: female genital mutilation
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '- Domestic abuse also includes ‘honour’-based violence, forced marriage and female
+    genital mutilation (FGM); for FGM, also refer to Safeguarding Adults at Risk and Safeguarding Children
+    .'
+  proposed_lt: moterų lytinių organų žalojimas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lygus.lt/wp-content/uploads/2024/05/Metodika_.pdf
+  notes: Pernaudotas 006 skyriaus terminijos sprendimas; šiame žingsnyje nepromuoti į shared bazę.
+- candidate_id: 011-domestic-abuse-term-forced-marriage
+  candidate_kind: term
+  source_term: forced marriage
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '- Domestic abuse also includes ‘honour’-based violence, forced marriage and female
+    genital mutilation (FGM); for FGM, also refer to Safeguarding Adults at Risk and Safeguarding Children
+    .'
+  proposed_lt: priverstinė santuoka
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lygybe.lt/wp-content/uploads/2024/04/ES-atsakas-i-smurta-lyties-pagrindu.pdf
+  notes: Žmogaus teisių ir apsaugos nuo smurto terminas; palikti book-scoped.
+- candidate_id: 011-domestic-abuse-term-forensic-examination
+  candidate_kind: term
+  source_term: forensic examination
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| Criminal Offence/Forensic Examination Many forms of domestic violence are criminal
+    offences and staff must report all serious crimes to the police, particularly if: The patient has
+    suffered from abuse involving a weapon/strangulation/smothering or has sustained a significant injury
+    The patient is in fear of the perpetrator The abuse is escalating The perpetrator is stalking the
+    patient and/or There is an immediate risk to the patient or any children in the household. Always
+    attempt to gain consent from the victim to report to the police, but consent is not required if there
+    is a public interest of other legal justification. Forensic examination may be required if a physical
+    assault has taken place. Domestic abuse is a criminal offence and the police must be informed immediately
+    (refer to Sexual Assault ). |'
+  proposed_lt: teismo medicinos ekspertizė
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1773920040/29287/Rekomendacijos%20d%C4%97l%20smurto%20artimoje%20aplinkoje%20suaugusiems%20atpa%C5%BEinimo.pdf
+  notes: Terminas vartojamas dokumentavimo ir sužalojimų vertinimo kontekste; palikti book-scoped.
+- candidate_id: 011-domestic-abuse-term-honour-based-violence
+  candidate_kind: term
+  source_term: honour-based violence
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: ''
+  proposed_lt: vadinamąja garbe grindžiamas smurtas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lygybe.lt/wp-content/uploads/2024/04/ES-atsakas-i-smurta-lyties-pagrindu.pdf
+  notes: Šioje knygoje vartoti tik aprašomai ir nepromuoti į shared terminų bazę.
+- candidate_id: 011-domestic-abuse-term-safeguarding
+  candidate_kind: term
+  source_term: safeguarding
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '- In cases of domestic abuse in adults with needs for care and support, refer to Safeguarding
+    Adults at Risk .'
+  proposed_lt: apsauga nuo smurto ir kitos žalos rizikos
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://socmin.lrv.lt/uploads/socmin/documents/files/veiklos-sritys/seima/seimos-politika/Rekomendacijos%20del%20smurto%20artimoje%20aplinkoje%20atpazinimo.pdf
+  notes: Vartoti tik junginiuose pagal konkretų sakinį ar chapter title, o ne kaip vieną aktyvų shared
+    terminą.
+- candidate_id: 011-domestic-abuse-term-smothering
+  candidate_kind: term
+  source_term: smothering
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| Criminal Offence/Forensic Examination Many forms of domestic violence are criminal
+    offences and staff must report all serious crimes to the police, particularly if: The patient has
+    suffered from abuse involving a weapon/strangulation/smothering or has sustained a significant injury
+    The patient is in fear of the perpetrator The abuse is escalating The perpetrator is stalking the
+    patient and/or There is an immediate risk to the patient or any children in the household. Always
+    attempt to gain consent from the victim to report to the police, but consent is not required if there
+    is a public interest of other legal justification. Forensic examination may be required if a physical
+    assault has taken place. Domestic abuse is a criminal offence and the police must be informed immediately
+    (refer to Sexual Assault ). |'
+  proposed_lt: dusinimas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1773920040/29287/Rekomendacijos%20d%C4%97l%20smurto%20artimoje%20aplinkoje%20suaugusiems%20atpa%C5%BEinimo.pdf
+  notes: Šiame skyriuje vartoti kartu su `smaugimas` kaip teismo medicinos ir nusikalstamos veikos konteksto
+    vienetą; nepromuoti į shared.
+- candidate_id: 011-domestic-abuse-term-stalking
+  candidate_kind: term
+  source_term: stalking
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| Criminal Offence/Forensic Examination Many forms of domestic violence are criminal
+    offences and staff must report all serious crimes to the police, particularly if: The patient has
+    suffered from abuse involving a weapon/strangulation/smothering or has sustained a significant injury
+    The patient is in fear of the perpetrator The abuse is escalating The perpetrator is stalking the
+    patient and/or There is an immediate risk to the patient or any children in the household. Always
+    attempt to gain consent from the victim to report to the police, but consent is not required if there
+    is a public interest of other legal justification. Forensic examination may be required if a physical
+    assault has taken place. Domestic abuse is a criminal offence and the police must be informed immediately
+    (refer to Sexual Assault ). |'
+  proposed_lt: persekiojimas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://lygybe.lt/wp-content/uploads/2024/04/ES-atsakas-i-smurta-lyties-pagrindu.pdf
+  notes: Žmogaus teisių ir smurto lyties pagrindu kontekste oficialiai vartojama forma; palikti book-scoped.
+- candidate_id: 011-domestic-abuse-term-strangulation
+  candidate_kind: term
+  source_term: strangulation
+  source_expansion: ''
+  chapter_slug: 011-domestic-abuse
+  source_context: '| Criminal Offence/Forensic Examination Many forms of domestic violence are criminal
+    offences and staff must report all serious crimes to the police, particularly if: The patient has
+    suffered from abuse involving a weapon/strangulation/smothering or has sustained a significant injury
+    The patient is in fear of the perpetrator The abuse is escalating The perpetrator is stalking the
+    patient and/or There is an immediate risk to the patient or any children in the household. Always
+    attempt to gain consent from the victim to report to the police, but consent is not required if there
+    is a public interest of other legal justification. Forensic examination may be required if a physical
+    assault has taken place. Domestic abuse is a criminal offence and the police must be informed immediately
+    (refer to Sexual Assault ). |'
+  proposed_lt: smaugimas
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/public/canonical/1773920040/29287/Rekomendacijos%20d%C4%97l%20smurto%20artimoje%20aplinkoje%20suaugusiems%20atpa%C5%BEinimo.pdf
+  notes: SAM rekomendacijose fiksuojamos `smaugimo žymės`; terminą šiame skyriuje palikti book-scoped.

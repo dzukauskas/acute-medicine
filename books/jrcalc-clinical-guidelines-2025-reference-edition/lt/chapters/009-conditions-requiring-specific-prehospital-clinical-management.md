@@ -1,8 +1,8 @@
-# 9 skyrius. Būklės, kurioms reikalingas specifinis ikihospitalinis klinikinis valdymas
+# 9 skyrius. Būklės, kurioms reikalingas specifinis ikistacionarinis klinikinis valdymas
 
 ## 1. Įvadas
 
-- Šio dokumento tikslas yra pateikti gaires tiek dėl būklių, kurios ikihospitalinėje aplinkoje sutinkamos rečiau, tiek dėl būklių, kurioms, be standartinių gairių, gali reikėti papildomų svarstymų.
+- Šio dokumento tikslas yra pateikti gaires tiek dėl būklių, kurios ikistacionarinėje aplinkoje sutinkamos rečiau, tiek dėl būklių, kurioms, be standartinių gairių, gali reikėti papildomų svarstymų.
 
 - Svarbu prisiminti, kad pacientai, sergantys lėtinėmis ar retomis ligomis, dažnai labai gerai išmano savo būklę. Šias žinias reikia gerbti, ir jos dažnai turės didelę įtaką sprendimams tiek dėl gydymo, tiek dėl transportavimo.
 
@@ -270,7 +270,7 @@
 
 - Jei yra reikšmingų `<C>ABCD` problemų, gydykite pagal suaugusiųjų ir vaikų medicininių skubių būklių gaires.
 
-- Prireikus apsvarstykite specializuotą ar išplėstinės kompetencijos ikihospitalinę pagalbą.
+- Prireikus apsvarstykite specializuotą ar išplėstinės kompetencijos ikistacionarinę pagalbą.
 
 - Transportuokite į ligoninę, pageidautina ten, kur yra intensyviosios terapijos galimybės.
 
@@ -386,7 +386,7 @@
 
 - Nedelsdami transportuokite pacientą į skubios pagalbos skyrių, pageidautina į ligoninę, kurioje yra kraujagyslių centras skubiai intervencijai.
 
-- Apsvarstykite ikihospitalinę kritinės pagalbos komandą.
+- Apsvarstykite ikistacionarinės kritinės pagalbos komandą.
 
 ## 12. Motorinių neuronų liga
 
@@ -522,7 +522,7 @@
 
 - Jei sunkiąja miastenija sergančiam pacientui pasireiškia kvėpavimo sutrikimas ar dusulys, svarbu veikti greitai ir nedelsiant suteikti pagalbą. Tam gali reikėti skirti deguonį ir prireikus padėti ventiliuoti; jei reikia, apsvarstykite išplėstinės kompetencijos ar specializuotą pagalbą dėl neinvazinės ventiliacijos.
 
-- Be to, svarbu žinoti, kad kai kurie vaistai, dažnai vartojami ikihospitalinėje pagalboje, pavyzdžiui, nervo ir raumens jungtį blokuojantys vaistai bei kai kurie antibiotikai, gali pabloginti sunkiosios miastenijos simptomus.
+- Be to, svarbu žinoti, kad kai kurie vaistai, dažnai vartojami ikistacionarinėje pagalboje, pavyzdžiui, nervo ir raumens jungtį blokuojantys vaistai bei kai kurie antibiotikai, gali pabloginti sunkiosios miastenijos simptomus.
 
 ### Originalo kontekstas
 
@@ -558,7 +558,7 @@
 
 ### Įvertinimas ir valdymas
 
-- Ikihospitalinėje aplinkoje yra keli su vaistais susiję aspektai.
+- Ikistacionarinėje aplinkoje yra keli su vaistais susiję aspektai.
 
 - Svarbu pripažinti, kokią reikšmę Parkinsono liga sergantiems pacientams turi reguliarus vaistų vartojimas. Praleistos Parkinsono ligos vaistų dozės padidina priežiūros poreikius ir gali sukelti sunkių komplikacijų, įskaitant retą, bet galimai mirtiną neurolepsinį piktybinį sindromą panašų sindromą - NENUTRAUKITE PARKINSONO LIGOS VAISTŲ.
 

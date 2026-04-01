@@ -1,1 +1,3 @@
 match_type	banned	preferred	reason
+regex	\bikihospitalin(?:[A-Za-zĄČĘĖĮŠŲŪŽąčęėįšųūž-]*)\b	vartokite atitinkamą `ikistacionarin-` formą	Šioje knygoje `pre-hospital` LT norminėje prozoje lokalizuojama per `ikistacionarin-`, ne per hibridinę `ikihospital-` formą.
+phrase	geriausių paciento interesų pagrindu	paciento geriausių interesų principu	Sutikimo ir teisinių sprendimų kalboje rinktis natūralesnę LT formuluotę, o ne pažodinį `best interests` kalkės atspindį.
