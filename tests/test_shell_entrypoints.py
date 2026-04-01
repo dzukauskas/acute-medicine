@@ -340,7 +340,10 @@ exit 1
                 ".venv/bin/python scripts/render_whimsical_figure.py --login",
                 result.stdout,
             )
-            self.assertIn(".venv/bin/python -m unittest tests.test_end_to_end_workflow_contract", result.stdout)
+            self.assertIn(
+                ".venv/bin/python -m unittest tests.test_workflow_runtime tests.test_obsidian_sync_safety tests.test_end_to_end_workflow_contract",
+                result.stdout,
+            )
 
     def test_bootstrap_macos_reports_macos_only(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

@@ -9,7 +9,10 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 AGENTS_PATH = REPO_ROOT / "AGENTS.md"
 NEW_MAC_SETUP_PATH = REPO_ROOT / "docs" / "new-mac-setup.md"
+CODEX_WORKFLOW_PATH = REPO_ROOT / "docs" / "codex-workflow.md"
+REPO_ENGINEERING_WORKFLOW_PATH = REPO_ROOT / "docs" / "repo-engineering-workflow.md"
 BOOKS_README_PATH = REPO_ROOT / "books" / "README.md"
+BOOTSTRAP_MACOS_PATH = REPO_ROOT / "scripts" / "bootstrap_macos.sh"
 SETUP_CODEX_MCP_PATH = REPO_ROOT / "scripts" / "setup_codex_mcp.sh"
 SHELL_DOCS = {
     NEW_MAC_SETUP_PATH: (
@@ -87,6 +90,40 @@ class RepoPortabilityDocsTests(unittest.TestCase):
             text = path.read_text(encoding="utf-8")
             for fragment in expected_fragments:
                 self.assertIn(fragment, text, msg=f"{path} is missing portability note: {fragment}")
+
+    def test_post_bootstrap_python_docs_use_venv_entrypoints(self) -> None:
+        books_readme = BOOKS_README_PATH.read_text(encoding="utf-8")
+        self.assertIn(".venv/bin/python scripts/bootstrap_book_from_pdf.py", books_readme)
+        self.assertIn(".venv/bin/python scripts/bootstrap_book_from_epub.py", books_readme)
+        self.assertNotIn("python3 scripts/bootstrap_book_from_pdf.py", books_readme)
+        self.assertNotIn("python3 scripts/bootstrap_book_from_epub.py", books_readme)
+
+        codex_workflow = CODEX_WORKFLOW_PATH.read_text(encoding="utf-8")
+        self.assertIn(".venv/bin/python scripts/print_codex_resume_prompt.py --mode engineering", codex_workflow)
+        self.assertIn(".venv/bin/python scripts/print_codex_resume_prompt.py \\", codex_workflow)
+
+        repo_workflow = REPO_ENGINEERING_WORKFLOW_PATH.read_text(encoding="utf-8")
+        self.assertIn(".venv/bin/python scripts/update_engineering_ledger.py", repo_workflow)
+        self.assertIn(".venv/bin/python scripts/write_codex_handoff.py", repo_workflow)
+        self.assertIn(".venv/bin/python scripts/print_codex_resume_prompt.py --mode engineering", repo_workflow)
+
+    def test_repo_engineering_workflow_docs_cover_no_active_theme(self) -> None:
+        text = REPO_ENGINEERING_WORKFLOW_PATH.read_text(encoding="utf-8")
+        self.assertIn("`no-active-theme`", text)
+        self.assertIn("Jei ledger turi aktyvią temą, tęsk ją", text)
+        self.assertIn("jei aktyvios temos nėra", text)
+
+    def test_post_bootstrap_verification_contract_is_consistent(self) -> None:
+        expected_modules = (
+            "tests.test_workflow_runtime",
+            "tests.test_obsidian_sync_safety",
+            "tests.test_end_to_end_workflow_contract",
+        )
+        for path in (BOOKS_README_PATH, NEW_MAC_SETUP_PATH, BOOTSTRAP_MACOS_PATH):
+            text = path.read_text(encoding="utf-8")
+            self.assertIn(".venv/bin/python -m unittest", text, msg=f"{path} is missing the canonical unittest entrypoint.")
+            for module in expected_modules:
+                self.assertIn(module, text, msg=f"{path} is missing verification module: {module}")
 
 
 if __name__ == "__main__":

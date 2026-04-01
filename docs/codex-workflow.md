@@ -50,6 +50,7 @@ Trumpa taisyklė:
 - `Hand off` naudok tik tada, kai reikia paralelinės linijos arba palieki nebaigtą techninę būseną.
 - agentas turi pats trumpai pasakyti, ar likti tame pačiame thread, ar geriau pradėti naują.
 - ilgų repo-engineering temų atmintis turi gyventi `ENGINEERING_LEDGER.md`, ne vien thread istorijoje.
+- jei ledger neturi aktyvios temos, naujas thread turi pradėti kitą siaurą techninę temą pagal ledger santrauką ir `Next Steps`, o ne tęsti jau uždarytą darbą.
 
 ## `handoffs/*.md` paskirtis
 
@@ -66,13 +67,13 @@ Todėl:
 Repo engineering:
 
 ```bash
-python3 scripts/print_codex_resume_prompt.py --mode engineering
+.venv/bin/python scripts/print_codex_resume_prompt.py --mode engineering
 ```
 
 Book translation:
 
 ```bash
-python3 scripts/print_codex_resume_prompt.py \
+.venv/bin/python scripts/print_codex_resume_prompt.py \
   --mode translation \
   --book-root books/<slug> \
   --chapter 001

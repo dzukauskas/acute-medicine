@@ -19,45 +19,44 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: build_chapter_pack term_candidates concurrency hardening closed on main
+- Theme: final repo stabilization sweep
 - Branch: main
-- Last updated: 2026-03-31T18:40:39+03:00
+- Last updated: 2026-04-01T09:47:11.390172+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- Narrow `build_chapter_pack.py` / `term_candidates.tsv` concurrency hardening is closed on main after the per-book refresh lock, atomic TSV writes, process-based regression coverage, and a green GitHub Actions `Python Tests` run on the closeout commit chain.
+- Final stabilization sweep is implemented on main and locally green: term_candidates closeout wording now matches real CI scope, resume tooling understands explicit no-active-theme, and the post-bootstrap .venv/bin/python / smoke-test contract is aligned across docs and shell output.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Commit `0b36cdf` hardened `term_candidates.tsv` refreshes with a per-book lock in `refresh_term_candidates_for_chapter()` and atomic replacement in shared `write_tsv()`.
-- Commit `ef87f68` recorded the active hardening theme in `ENGINEERING_LEDGER.md`.
-- GitHub Actions `Python Tests` run `23806065856` is green on `main` for this closeout sequence.
+- Required local unittest suite is green via python3 -m unittest $(python3 scripts/list_required_python_test_modules.py) (106 tests).
+- The --clear-active-theme closeout path now preserves the previously active theme label when writing a completed heading.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
 <!-- ledger:decisions:start -->
-- Keep scope narrow: harden only `build_chapter_pack.py` / `refresh_term_candidates_for_chapter()` interaction with `term_candidates.tsv`, not the wider translation workflow.
-- Use a term-candidates-specific per-book lock, not a global workflow lock.
-- Put atomic TSV replacement into shared `write_tsv()`, while keeping locking local to the `term_candidates.tsv` refresh path.
-- Close the theme without widening scope into a broader translation-workflow refactor.
+- Keep scope narrow to the three confirmed stabilization mismatches; do not reopen a broader audit wave or touch translation content.
+- Fix the `term_candidates` mismatch by correcting closeout wording, not by promoting `tests.test_term_candidates_workflow` into required GitHub CI.
+- Add explicit `no-active-theme` ledger semantics and make resume tooling respect them without erasing completed-theme history.
+- Standardize post-bootstrap repo-native Python commands on `.venv/bin/python`; keep host `python3` only as a prerequisite / pre-bootstrap entrypoint.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- The next repo-engineering topic should start in a new thread.
+- Push main so GitHub Actions Python Tests can validate the updated resume/docs contract on the remote workflow.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- The lock is intentionally narrow to default book-level `term_candidates.tsv` refreshes; custom `--out` TSV paths are left unlocked by design because they are not the shared workflow artifact.
+- Do not clear Active Theme in the tracked ledger until the remote required Python Tests workflow is green; that closeout stays a separate bookkeeping step.
 <!-- ledger:risks:end -->
 
 ## Completed Themes
 <!-- ledger:completed:start -->
 ### 2026-03-31 18:40 | build_chapter_pack term_candidates concurrency hardening closed on main
-- Closed the narrow `term_candidates.tsv` concurrency hardening theme on `main` after commits `0b36cdf` and `ef87f68`, plus green GitHub Actions `Python Tests` run `23806065856`.
+- Closed the narrow `term_candidates.tsv` concurrency hardening theme on `main` after commits `0b36cdf` and `ef87f68`, plus green required GitHub Actions `Python Tests` run `23806065856`; process-based parallel refresh regression coverage remains tracked in `tests.test_term_candidates_workflow`, not in required CI.
 
 ### 2026-03-31 17:27 | audit-wave-004 closed on main
 - Closed the execution contract hardening wave on main after three scoped commits and a green Python Tests run 23802470349.

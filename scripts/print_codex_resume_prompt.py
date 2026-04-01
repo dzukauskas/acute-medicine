@@ -9,6 +9,8 @@ from workflow_runtime import REPO_ROOT
 
 
 ENGINEERING_LEDGER = REPO_ROOT / "ENGINEERING_LEDGER.md"
+NO_ACTIVE_THEME = "no-active-theme"
+INACTIVE_THEME_MARKERS = {"", "_unset_", NO_ACTIVE_THEME}
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -51,27 +53,54 @@ def extract_active_theme(text: str) -> str:
     return match.group(1).strip() if match else ""
 
 
+def extract_latest_completed_theme(text: str) -> str:
+    section = extract_ledger_value("completed", text)
+    for line in section.splitlines():
+        cleaned = line.strip()
+        if not cleaned.startswith("### "):
+            continue
+        heading = cleaned[4:].strip()
+        if "|" in heading:
+            return heading.split("|", 1)[1].strip()
+        return heading
+    return ""
+
+
+def has_active_theme(theme: str) -> bool:
+    return theme.strip() not in INACTIVE_THEME_MARKERS
+
+
 def render_engineering_prompt() -> str:
     if ENGINEERING_LEDGER.exists():
         ledger_text = ENGINEERING_LEDGER.read_text(encoding="utf-8")
         theme = extract_active_theme(ledger_text) or "aktyvi repo-engineering tema"
         summary = extract_first_bullet(extract_ledger_value("summary", ledger_text))
         next_step = extract_first_bullet(extract_ledger_value("next_steps", ledger_text))
+        last_completed = extract_latest_completed_theme(ledger_text)
     else:
-        theme = "aktyvi repo-engineering tema"
+        theme = NO_ACTIVE_THEME
         summary = ""
         next_step = ""
+        last_completed = ""
 
     lines = [
         "Perskaityk AGENTS.md, docs/codex-workflow.md, docs/repo-engineering-workflow.md ir ENGINEERING_LEDGER.md.",
         "Dirbk repo-engineering režimu.",
-        f"Tęsk aktyvią temą: {theme}.",
     ]
+    if has_active_theme(theme):
+        lines.append(f"Tęsk aktyvią temą: {theme}.")
+    else:
+        lines.append("Ledger šiuo metu neturi aktyvios repo-engineering temos.")
+        if last_completed:
+            lines.append(f"Paskutinė uždaryta tema: {last_completed}.")
     if summary and not summary.startswith("_No "):
         lines.append(f"Santrauka: {summary}")
     if next_step and not next_step.startswith("_No "):
         lines.append(f"Pirmas prioritetas: {next_step}")
-    lines.append("Jei tema nepasikeitė, lik tame pačiame thread kontekste; jei tema jau kita, aiškiai pasakyk, kad logiška pradėti naują thread.")
+    if has_active_theme(theme):
+        lines.append("Jei tema nepasikeitė, lik tame pačiame thread kontekste; jei tema jau kita, aiškiai pasakyk, kad logiška pradėti naują thread.")
+    else:
+        lines.append("Jei tai natūrali tos pačios techninės linijos tąsa, aiškiai įvardyk naują siaurą temą ir atnaujink ledger; jei tema jau kita, pradėk naują thread.")
     return " ".join(lines)
 
 

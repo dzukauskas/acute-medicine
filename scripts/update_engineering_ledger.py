@@ -11,6 +11,8 @@ from workflow_runtime import REPO_ROOT
 
 
 DEFAULT_LEDGER_PATH = REPO_ROOT / "ENGINEERING_LEDGER.md"
+NO_ACTIVE_THEME = "no-active-theme"
+INACTIVE_THEME_MARKERS = {"", "_unset_", NO_ACTIVE_THEME}
 SECTION_KEYS = (
     "active_theme",
     "summary",
@@ -66,7 +68,13 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         description="Update the tracked repo-engineering ledger used to survive long Codex threads."
     )
     parser.add_argument("--output", help="Optional ledger path. Defaults to ENGINEERING_LEDGER.md")
-    parser.add_argument("--theme", help="Current active engineering theme.")
+    active_group = parser.add_mutually_exclusive_group()
+    active_group.add_argument("--theme", help="Current active engineering theme.")
+    active_group.add_argument(
+        "--clear-active-theme",
+        action="store_true",
+        help="Clear Active Theme into the explicit `no-active-theme` ledger state.",
+    )
     parser.add_argument("--summary", help="One-line summary of the active engineering theme.")
     parser.add_argument(
         "--state",
@@ -127,6 +135,30 @@ def render_bullets(items: list[str], placeholder: str) -> str:
 
 def template_text() -> str:
     return LEDGER_TEMPLATE
+
+
+def render_active_theme_body(theme: str, branch: str, generated_at: datetime) -> str:
+    return (
+        f"- Theme: {theme.strip()}\n"
+        f"- Branch: {branch}\n"
+        f"- Last updated: {generated_at.isoformat()}"
+    )
+
+
+def extract_theme_label(active_body: str) -> str:
+    match = re.search(r"Theme:\s*(.+)", active_body)
+    if not match:
+        return ""
+    return match.group(1).strip()
+
+
+def completed_theme_label(args_theme: str | None, existing_active: str) -> str | None:
+    if args_theme and args_theme.strip():
+        return args_theme.strip()
+    previous_theme = extract_theme_label(existing_active)
+    if previous_theme in INACTIVE_THEME_MARKERS:
+        return None
+    return previous_theme
 
 
 def ensure_sections(text: str) -> str:
@@ -216,12 +248,10 @@ def main(argv: list[str] | None = None) -> int:
     existing_risks = extract_section(text, "risks")
     existing_completed = extract_section(text, "completed")
 
-    if args.theme:
-        active_body = (
-            f"- Theme: {args.theme.strip()}\n"
-            f"- Branch: {branch}\n"
-            f"- Last updated: {generated_at.isoformat()}"
-        )
+    if args.clear_active_theme:
+        active_body = render_active_theme_body(NO_ACTIVE_THEME, branch, generated_at)
+    elif args.theme:
+        active_body = render_active_theme_body(args.theme, branch, generated_at)
     else:
         active_body = existing_active
         if "Last updated:" in active_body:
@@ -236,7 +266,12 @@ def main(argv: list[str] | None = None) -> int:
     decisions_body = render_bullets(args.decision, "_No accepted engineering decisions recorded._") if args.decision else existing_decisions
     next_steps_body = render_bullets(args.next_step, "_No next steps recorded._") if args.next_step else existing_next_steps
     risks_body = render_bullets(args.risk, "_No open engineering risks recorded._") if args.risk else existing_risks
-    completed_body = append_completed(existing_completed, args.completed, generated_at, args.theme)
+    completed_body = append_completed(
+        existing_completed,
+        args.completed,
+        generated_at,
+        completed_theme_label(args.theme, existing_active),
+    )
 
     text = replace_section(text, "active_theme", active_body)
     text = replace_section(text, "summary", summary_body)

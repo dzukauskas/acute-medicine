@@ -49,6 +49,8 @@ Thread istorija čia nėra kanoninė. Jei pokalbis išsitęsia, naujas thread pi
 
 Normalioje porinio darbo sesijoje ledger turi atnaujinti agentas. Vartotojui nereikia kiekvieną kartą ranka leisti `update_engineering_ledger.py`.
 
+Kai tema uždaroma, ji turi likti `Completed Themes` istorijoje, o `Active Theme` turi būti aiškiai išvalyta į `no-active-theme` būseną, kol prasidės kita siaura techninė tema.
+
 ## Kada kurti naują thread
 
 Naują thread kurk tada, kai:
@@ -117,7 +119,7 @@ Jei dabar taisai audit findings apie test harness:
 Ši komanda yra atsarginis kelias, ne kasdienis privalomas ritualas. Paprastai ją leidžia agentas arba jos visai nereikia matyti vartotojui.
 
 ```bash
-python3 scripts/update_engineering_ledger.py \
+.venv/bin/python scripts/update_engineering_ledger.py \
   --theme "Acceptance fixtures follow-up" \
   --summary "Užbaigti likusius audit findings test harness sluoksnyje." \
   --state "Pridėti focused fixtures ir acceptance testai." \
@@ -128,7 +130,7 @@ python3 scripts/update_engineering_ledger.py \
 Jei po to vis tiek reikia lokalaus papildomo scratchpad:
 
 ```bash
-python3 scripts/write_codex_handoff.py --title "Acceptance fixtures local handoff"
+.venv/bin/python scripts/write_codex_handoff.py --title "Acceptance fixtures local handoff"
 ```
 
 ## Ką rašyti naujame thread
@@ -136,7 +138,7 @@ python3 scripts/write_codex_handoff.py --title "Acceptance fixtures local handof
 Paprasčiausias kelias:
 
 ```bash
-python3 scripts/print_codex_resume_prompt.py --mode engineering
+.venv/bin/python scripts/print_codex_resume_prompt.py --mode engineering
 ```
 
 Tai išspausdins trumpą promptą, kurį gali tiesiog įklijuoti į naują `Codex` thread.
@@ -144,5 +146,5 @@ Tai išspausdins trumpą promptą, kurį gali tiesiog įklijuoti į naują `Code
 Jei nenori leisti skripto, minimalus rankinis promptas yra toks:
 
 ```text
-Perskaityk AGENTS.md, docs/codex-workflow.md, docs/repo-engineering-workflow.md ir ENGINEERING_LEDGER.md. Dirbk repo-engineering režimu ir tęsk active theme.
+Perskaityk AGENTS.md, docs/codex-workflow.md, docs/repo-engineering-workflow.md ir ENGINEERING_LEDGER.md. Dirbk repo-engineering režimu. Jei ledger turi aktyvią temą, tęsk ją; jei aktyvios temos nėra, pradėk kitą siaurą temą pagal ledger santrauką, `Next Steps` ir paskutinę uždarytą temą.
 ```

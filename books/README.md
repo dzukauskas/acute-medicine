@@ -32,12 +32,12 @@ repo/
 
 ## Naujos knygos bootstrap
 
-Prieš pirmą naujos knygos bootstrap šiame repo turi būti bent `python3 >= 3.11`. Po repo bootstrap canonical interpreterius vėlesniems Python skriptams yra `.venv/bin/python`, bet pirminiai book bootstrap entrypointai lieka per host `python3`.
+Prieš repo bootstrap šiame repo turi būti bent `python3 >= 3.11`. Po repo bootstrap canonical interpreterius repo-native Python skriptams, įskaitant book bootstrap entrypointus, yra `.venv/bin/python`; host `python3` lieka tik prerequisite ir pre-bootstrap entrypoint.
 
 PDF kanoninis entrypoint:
 
 ```bash
-python3 scripts/bootstrap_book_from_pdf.py \
+.venv/bin/python scripts/bootstrap_book_from_pdf.py \
   --pdf "/abs/path/to/book.pdf" \
   --contents-pages 7-14 \
   --page-offset 38 \
@@ -47,7 +47,7 @@ python3 scripts/bootstrap_book_from_pdf.py \
 Jei PDF turinys nestandartinis, naudokite chapter map sidecar:
 
 ```bash
-python3 scripts/bootstrap_book_from_pdf.py \
+.venv/bin/python scripts/bootstrap_book_from_pdf.py \
   --pdf "/abs/path/to/book.pdf" \
   --chapter-map "/abs/path/to/book.chapters.yaml"
 ```
@@ -66,7 +66,7 @@ Jei šalia PDF yra `<pdf-stem>.chapters.yaml`, bootstrap jį pasiims automatišk
 Jei norite iškart įdiegti per-book Obsidian sync macOS aplinkoje, pridėkite:
 
 ```bash
-python3 scripts/bootstrap_book_from_pdf.py \
+.venv/bin/python scripts/bootstrap_book_from_pdf.py \
   --pdf "/abs/path/to/book.pdf" \
   --install-obsidian-sync
 ```
@@ -76,14 +76,14 @@ PDF bootstrap ir chapter extraction šiame repo yra `PyMuPDF-first`. Jei skripta
 EPUB kanoninis entrypoint:
 
 ```bash
-python3 scripts/bootstrap_book_from_epub.py \
+.venv/bin/python scripts/bootstrap_book_from_epub.py \
   --epub "/abs/path/to/book.epub"
 ```
 
 Jei EPUB TOC / nav sluoksnis netvarkingas, naudokite chapter map sidecar:
 
 ```bash
-python3 scripts/bootstrap_book_from_epub.py \
+.venv/bin/python scripts/bootstrap_book_from_epub.py \
   --epub "/abs/path/to/book.epub" \
   --chapter-map "/abs/path/to/book.chapters.yaml"
 ```
@@ -100,7 +100,7 @@ EPUB bootstrap:
 Jei norite iškart įdiegti per-book Obsidian sync macOS aplinkoje, pridėkite:
 
 ```bash
-python3 scripts/bootstrap_book_from_epub.py \
+.venv/bin/python scripts/bootstrap_book_from_epub.py \
   --epub "/abs/path/to/book.epub" \
   --install-obsidian-sync
 ```
@@ -159,6 +159,17 @@ Obsidian sync nekeičia repo `lt/chapters/` struktūros, bet vault pusėje gali 
 Automatinį `launchd` sync agentą diekite tik eksplicitiškai: arba bootstrap metu su `--install-obsidian-sync`, arba vėliau per `scripts/install_obsidian_sync_agent.sh --book-root books/<slug>`.
 `install_obsidian_sync_agent.sh` yra macOS-specific, nes naudoja `launchd` / `launchctl`.
 Numatytasis sync katalogas README failuose nebėra kepamas kaip konkretus workstation kelias: runtime metu jis sprendžiamas iš `repo_config.toml` ir pasirenkamo `repo_config.local.toml`, o paskirtis papildomai rezervuojama konkrečiai darbo vietai, kad kitas clone/worktree jos tyliai neperrašytų.
+
+## Repo Bootstrap Verification
+
+Po repo bootstrap canonical smoke / contract patikra yra:
+
+```bash
+.venv/bin/python -m unittest \
+  tests.test_workflow_runtime \
+  tests.test_obsidian_sync_safety \
+  tests.test_end_to_end_workflow_contract
+```
 
 ## Codex thread continuity
 

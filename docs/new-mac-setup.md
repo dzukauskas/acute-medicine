@@ -109,6 +109,8 @@ gh auth login
 
 Tada:
 
+Po repo bootstrap toliau naudok `.venv/bin/python` visiems repo-native Python skriptams, įskaitant book bootstrap ir verification entrypointus.
+
 1. Bootstrap'ink konkrečią knygą:
 
 ```bash
@@ -242,7 +244,7 @@ PDF bootstrap šiame repo yra `PyMuPDF-first`. Praktikoje tai reiškia:
 
 ## Verification entrypoint
 
-Supported repo-native smoke / contract patikra naujai mašinai:
+Canonical repo-native smoke / contract patikra naujai mašinai po bootstrap:
 
 ```bash
 .venv/bin/python -m unittest \

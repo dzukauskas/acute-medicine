@@ -71,6 +71,60 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("Codex workflow cleanup", prompt)
         self.assertIn("Supaprastinti repo engineering darbo tęstinumą.", prompt)
         self.assertIn("Pirma peržiūrėti galutinį diff.", prompt)
+        self.assertIn("Tęsk aktyvią temą", prompt)
+
+    def test_engineering_prompt_handles_no_active_theme(self) -> None:
+        ledger_text = """# Engineering Ledger
+
+## Active Theme
+<!-- ledger:active_theme:start -->
+- Theme: no-active-theme
+- Branch: main
+- Last updated: 2026-03-30T15:00:00+03:00
+<!-- ledger:active_theme:end -->
+
+## Summary
+<!-- ledger:summary:start -->
+- Paskutinis sweep sulygino repo engineering dokumentaciją.
+<!-- ledger:summary:end -->
+
+## Current State
+<!-- ledger:current_state:start -->
+- State
+<!-- ledger:current_state:end -->
+
+## Accepted Decisions
+<!-- ledger:decisions:start -->
+- Decision
+<!-- ledger:decisions:end -->
+
+## Next Steps
+<!-- ledger:next_steps:start -->
+- Pasirinkti kitą siaurą temą.
+<!-- ledger:next_steps:end -->
+
+## Open Risks
+<!-- ledger:risks:start -->
+- Risk
+<!-- ledger:risks:end -->
+
+## Completed Themes
+<!-- ledger:completed:start -->
+### 2026-03-30 14:50 | Codex workflow cleanup
+- Uždaryta.
+<!-- ledger:completed:end -->
+"""
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            ledger_path = Path(tmp_dir) / "ENGINEERING_LEDGER.md"
+            ledger_path.write_text(ledger_text, encoding="utf-8")
+            with patch.object(print_codex_resume_prompt, "ENGINEERING_LEDGER", ledger_path):
+                prompt = print_codex_resume_prompt.render_engineering_prompt()
+
+        self.assertIn("Ledger šiuo metu neturi aktyvios repo-engineering temos.", prompt)
+        self.assertIn("Paskutinė uždaryta tema: Codex workflow cleanup.", prompt)
+        self.assertIn("Paskutinis sweep sulygino repo engineering dokumentaciją.", prompt)
+        self.assertIn("Pasirinkti kitą siaurą temą.", prompt)
+        self.assertNotIn("Tęsk aktyvią temą", prompt)
 
     def test_translation_prompt_includes_book_workflow_and_term_candidates(self) -> None:
         with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:

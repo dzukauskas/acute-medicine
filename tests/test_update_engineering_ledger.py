@@ -97,6 +97,140 @@ class UpdateEngineeringLedgerTests(unittest.TestCase):
             self.assertIn("Atskirtas translation ir repo engineering workflow.", text)
             self.assertIn("Uždaryta focused fixture banga.", text)
 
+    def test_clear_active_theme_sets_explicit_no_active_state(self) -> None:
+        ledger_text = """# Engineering Ledger
+
+## Active Theme
+<!-- ledger:active_theme:start -->
+- Theme: Active sweep
+- Branch: main
+- Last updated: 2026-03-30T16:00:00+03:00
+<!-- ledger:active_theme:end -->
+
+## Summary
+<!-- ledger:summary:start -->
+- Narrow sweep summary.
+<!-- ledger:summary:end -->
+
+## Current State
+<!-- ledger:current_state:start -->
+- State
+<!-- ledger:current_state:end -->
+
+## Accepted Decisions
+<!-- ledger:decisions:start -->
+- Decision
+<!-- ledger:decisions:end -->
+
+## Next Steps
+<!-- ledger:next_steps:start -->
+- Next
+<!-- ledger:next_steps:end -->
+
+## Open Risks
+<!-- ledger:risks:start -->
+- Risk
+<!-- ledger:risks:end -->
+
+## Completed Themes
+<!-- ledger:completed:start -->
+### 2026-03-30 15:00 | Previous theme
+- Closed.
+<!-- ledger:completed:end -->
+"""
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            output_path = Path(tmp_dir) / "ENGINEERING_LEDGER.md"
+            output_path.write_text(ledger_text, encoding="utf-8")
+
+            with silence_stdio():
+                exit_code = update_engineering_ledger.main(
+                    [
+                        "--output",
+                        str(output_path),
+                        "--clear-active-theme",
+                        "--generated-at",
+                        "2026-03-30T16:30:00+03:00",
+                        "--branch",
+                        "main",
+                    ]
+                )
+
+            self.assertEqual(exit_code, 0)
+            text = output_path.read_text(encoding="utf-8")
+            self.assertIn(f"Theme: {update_engineering_ledger.NO_ACTIVE_THEME}", text)
+            self.assertIn("Branch: main", text)
+            self.assertIn("Last updated: 2026-03-30T16:30:00+03:00", text)
+            self.assertIn("### 2026-03-30 15:00 | Previous theme", text)
+            self.assertIn("Narrow sweep summary.", text)
+            self.assertNotIn("Theme: Active sweep", text)
+
+    def test_clear_active_theme_with_completed_uses_previous_theme_heading(self) -> None:
+        ledger_text = """# Engineering Ledger
+
+## Active Theme
+<!-- ledger:active_theme:start -->
+- Theme: final repo stabilization sweep
+- Branch: main
+- Last updated: 2026-03-31T19:30:04+03:00
+<!-- ledger:active_theme:end -->
+
+## Summary
+<!-- ledger:summary:start -->
+- Sweep summary.
+<!-- ledger:summary:end -->
+
+## Current State
+<!-- ledger:current_state:start -->
+- State
+<!-- ledger:current_state:end -->
+
+## Accepted Decisions
+<!-- ledger:decisions:start -->
+- Decision
+<!-- ledger:decisions:end -->
+
+## Next Steps
+<!-- ledger:next_steps:start -->
+- Next
+<!-- ledger:next_steps:end -->
+
+## Open Risks
+<!-- ledger:risks:start -->
+- Risk
+<!-- ledger:risks:end -->
+
+## Completed Themes
+<!-- ledger:completed:start -->
+### 2026-03-31 18:40 | prior closed theme
+- Closed.
+<!-- ledger:completed:end -->
+"""
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            output_path = Path(tmp_dir) / "ENGINEERING_LEDGER.md"
+            output_path.write_text(ledger_text, encoding="utf-8")
+
+            with silence_stdio():
+                exit_code = update_engineering_ledger.main(
+                    [
+                        "--output",
+                        str(output_path),
+                        "--clear-active-theme",
+                        "--completed",
+                        "Closed the final stabilization sweep after green CI.",
+                        "--generated-at",
+                        "2026-03-31T20:00:00+03:00",
+                        "--branch",
+                        "main",
+                    ]
+                )
+
+            self.assertEqual(exit_code, 0)
+            text = output_path.read_text(encoding="utf-8")
+            self.assertIn(f"Theme: {update_engineering_ledger.NO_ACTIVE_THEME}", text)
+            self.assertIn("### 2026-03-31 20:00 | final repo stabilization sweep", text)
+            self.assertIn("Closed the final stabilization sweep after green CI.", text)
+            self.assertNotIn("### 2026-03-31 20:00 | repo-engineering", text)
+
 
 if __name__ == "__main__":
     unittest.main()
