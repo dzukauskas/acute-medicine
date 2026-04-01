@@ -5,3 +5,4 @@ __pycache__/
 repo_config.local.toml
 handoffs/*.md
 !handoffs/README.md
+.term_candidates.tsv.lock

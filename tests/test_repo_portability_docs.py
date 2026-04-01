@@ -8,6 +8,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 AGENTS_PATH = REPO_ROOT / "AGENTS.md"
+GITIGNORE_PATH = REPO_ROOT / ".gitignore"
 NEW_MAC_SETUP_PATH = REPO_ROOT / "docs" / "new-mac-setup.md"
 CODEX_WORKFLOW_PATH = REPO_ROOT / "docs" / "codex-workflow.md"
 REPO_ENGINEERING_WORKFLOW_PATH = REPO_ROOT / "docs" / "repo-engineering-workflow.md"
@@ -84,6 +85,10 @@ class RepoPortabilityDocsTests(unittest.TestCase):
         self.assertIn("Repo-local bootstrap guaranteed tools:", text)
         self.assertIn("`ebook-mcp`", text)
         self.assertIn("`context7`", text)
+
+    def test_generated_term_candidates_lock_file_is_gitignored(self) -> None:
+        text = GITIGNORE_PATH.read_text(encoding="utf-8")
+        self.assertIn(".term_candidates.tsv.lock", text)
 
     def test_shell_portability_docs_reference_bash_and_not_zsh(self) -> None:
         for path, expected_fragments in SHELL_DOCS.items():
