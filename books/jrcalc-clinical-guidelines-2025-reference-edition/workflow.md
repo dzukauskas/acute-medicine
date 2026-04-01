@@ -29,6 +29,18 @@ Kanoninis šaltinis visada yra:
 PDF bootstrap ir chapter extraction vykdomi per `PyMuPDF`, o EPUB bootstrap ir XHTML extraction vykdomi per `EbookLib` bei `BeautifulSoup`.
 Jei TOC parseris negali patikimai nustatyti skyrių ribų, naudojamas `chapter map` YAML sidecar (`<source-stem>.chapters.yaml`).
 
+## Durable checkpoint
+
+Jei tikėtinas `compact` arba naujas thread, prieš tai skyriaus būsena turi būti jau durably užfiksuota kanoniniuose artefaktuose:
+
+- `research/<slug>.md`
+- `chapter_packs/<slug>.yaml`
+- `term_candidates.tsv`
+- `lt/chapters/<slug>.md`, jei skyrius jau parašytas
+- `adjudication_packs/<slug>.yaml`, jei jis buvo reikalingas
+
+Automatinis QA šiame workflow yra rerunnable pipeline per `scripts/run_chapter_qa.py`. Tai nėra stored machine-readable receipt.
+
 Bendri repo skriptai šiai knygai kviečiami su:
 
 - `MEDBOOK_ROOT=books/jrcalc-clinical-guidelines-2025-reference-edition`

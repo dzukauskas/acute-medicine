@@ -23,7 +23,7 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: context-amnesia repo design validation
 - Branch: main
-- Last updated: 2026-04-01T20:03:41+03:00
+- Last updated: 2026-04-01T20:16:54+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
@@ -42,6 +42,8 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Stage 1 acceptance drill is now green in both modes: engineering resume prompt is repo-first and self-contained, while translation resume prompts succeed for both numeric and full-slug chapter tokens against the real JRCALC book artifacts.
 - Real translation rerun verification also passed: `scripts/run_chapter_qa.py --book-root books/jrcalc-clinical-guidelines-2025-reference-edition 001-disclaimer` completed successfully, which confirms the Stage 1 rule that automatic QA can be re-established from tracked state instead of chat history.
 - The real QA rerun lock-file side effect is now narrowed and handled at the repo boundary: generated `.<term_candidates>.lock` files are gitignored, and a real rerun no longer dirties `git status`.
+- After pushing Stage 1, GitHub Actions `Python Tests` run `23860773909` failed in `tests.test_book_template_parity`: `books/jrcalc-clinical-guidelines-2025-reference-edition/workflow.md` and `research/README.md` had not yet been refreshed to match the updated template wording.
+- Local template refresh for that tracked book now restores parity, and the focused regression slice is green for `tests.test_book_template_parity` plus `tests.test_repo_portability_docs`.
 - `chapter_packs/<slug>.qa.yaml` remains only a possible later-stage option if a durable machine-readable auto-QA receipt is still needed after Stage 1.
 - Broad promotion of `tests.test_term_candidates_workflow` remains out of scope; only narrowly extracted durability-sensitive assertions stay plausible CI hardening candidates.
 <!-- ledger:current_state:end -->
@@ -60,7 +62,7 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 ## Next Steps
 <!-- ledger:next_steps:start -->
 - After any context compaction, first read `AGENTS.md`, `docs/codex-workflow.md`, `docs/repo-engineering-workflow.md`, `ENGINEERING_LEDGER.md`, and `handoffs/20260401-192624-context-amnesia-pre-design-validation-checkpoint.md`.
-- If the user wants to proceed, the next decision is operational: push the two local commits and then close out the theme, or keep them local for a little longer.
+- If the user wants to proceed, commit and push the tracked-book template parity refresh, then recheck GitHub Actions `Python Tests` before closing out the theme.
 - Keep Stage 2 (durable auto-QA receipt) and Stage 3 (optional CI hardening) explicitly unaccepted unless later evidence justifies them.
 <!-- ledger:next_steps:end -->
 
