@@ -1718,22 +1718,6 @@ term_candidates:
   banned_lt: ''
   source_ref: https://e-seimas.lrs.lt/rs/lasupplement/TAP/5baf50502fca11efb121d2fe3a0eff27/952d0869338811efb121d2fe3a0eff27/format/ISO_PDF/
   notes: Originalo LD santrumpa į LT aktyvią akronimų bazę nepromuojama; tekste vartoti pilną terminą.
-- candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-lgbt
-  candidate_kind: acronym
-  source_term: LGBT
-  source_expansion: ''
-  chapter_slug: 008-clinical-considerations-in-relation-to-diversity-and-equality
-  source_context: '- Conditions such as depression, anxiety, self-harm and substance misuse including
-    alcohol are found with greater frequency amongst the LGBT+ community than in the general population.
-    12'
-  proposed_lt: LGBT+ bendruomenė
-  status: localization_only
-  scope: book
-  candidate_origin: source_acronym
-  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
-  banned_lt: ''
-  source_ref: https://sam.lrv.lt/public/canonical/1748517903/27755/Dalijamoji%20med%C5%BEiaga_Sveiki-atmintine.pdf
-  notes: Plačiai atpažįstamas trumpinys; šiame skyriuje paliekamas lokaliame wording sluoksnyje.
 - candidate_id: 008-clinical-considerations-in-relation-to-diversity-and-equality-acronym-mbrrace
   candidate_kind: acronym
   source_term: MBRRACE

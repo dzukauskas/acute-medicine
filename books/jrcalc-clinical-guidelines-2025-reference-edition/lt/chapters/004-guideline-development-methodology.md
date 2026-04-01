@@ -12,7 +12,7 @@ Laikantis šių principų rengiamos gairės, kurios padeda priimti saugius klini
 
 ## Gairių atranka
 
-Originale nurodoma, kad leidinio rengėjai ir susijusių profesinių grupių atstovai sprendžia, kurias klinikines gaires reikia atnaujinti ir kurioms klinikinėms būklėms reikia parengti naujas gaires. Vėliau šios temos prioritetizuojamos ir vertinamos pagal skubumą bei riziką. Klinikinės temos gali būti identifikuojamos įvairiais būdais, įskaitant sunkių incidentų stebėseną atskirose greitosios pagalbos tarnybose, koronerio ataskaitas apie ateityje išvengiamas mirtis ir nacionalinio paslaugų tinklo pertvarkas. Be to, rengėjai teikia plačią klinikinę ekspertinę pagalbą ir konsultacijas dėl galimų naujų krypčių, siekdami užtikrinti, kad gairėse atsispindėtų naujausia geroji praktika, būsimos inovacijos ir būtų skatinami tolesni ikihospitalinės pagalbos tyrimai.
+Originale nurodoma, kad leidinio rengėjai ir susijusių profesinių grupių atstovai sprendžia, kurias klinikines gaires reikia atnaujinti ir kurioms klinikinėms būklėms reikia parengti naujas gaires. Vėliau šios temos prioritetizuojamos ir vertinamos pagal skubumą bei riziką. Klinikinės temos gali būti identifikuojamos įvairiais būdais, įskaitant sunkių incidentų stebėseną atskirose greitosios pagalbos tarnybose, koronerio ataskaitas apie ateityje išvengiamas mirtis ir nacionalinio paslaugų tinklo pertvarkas. Be to, rengėjai teikia plačią klinikinę ekspertinę pagalbą ir konsultacijas dėl galimų naujų krypčių, siekdami užtikrinti, kad gairėse atsispindėtų naujausia geroji praktika, būsimos inovacijos ir būtų skatinami tolesni ikistacionarinės pagalbos tyrimai.
 
 Grįžtamasis ryšys originale kviečiamas leidinyje nurodytu kontaktiniu el. paštu.
 

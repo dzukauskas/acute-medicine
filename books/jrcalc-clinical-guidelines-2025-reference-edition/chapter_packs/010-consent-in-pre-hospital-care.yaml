@@ -1,5 +1,5 @@
 chapter_slug: 010-consent-in-pre-hospital-care
-chapter_title: 10 skyrius. Sutikimas ikihospitalinėje pagalboje
+chapter_title: 10 skyrius. Sutikimas ikistacionarinėje pagalboje
 page_range: EPUB segmentas c3ZY.xhtml
 source_md: source/chapters-en/010-consent-in-pre-hospital-care.md
 lt_target_md: lt/chapters/010-consent-in-pre-hospital-care.md
@@ -129,7 +129,7 @@ term_candidates:
   source_expansion: ''
   chapter_slug: 010-consent-in-pre-hospital-care
   source_context: '# Chapter 10 Consent in Pre-hospital Care'
-  proposed_lt: Sutikimas ikihospitalinėje pagalboje
+  proposed_lt: Sutikimas ikistacionarinėje pagalboje
   status: localization_only
   scope: book
   candidate_origin: source_heading
@@ -160,7 +160,7 @@ term_candidates:
   source_expansion: ''
   chapter_slug: 010-consent-in-pre-hospital-care
   source_context: '# Chapter 10 Consent in Pre-hospital Care'
-  proposed_lt: ikihospitalinė pagalba
+  proposed_lt: ikistacionarinė pagalba
   status: localization_only
   scope: book
   candidate_origin: research_risky_term

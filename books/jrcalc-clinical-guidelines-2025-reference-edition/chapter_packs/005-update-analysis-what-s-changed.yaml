@@ -1140,23 +1140,6 @@ term_candidates:
   source_ref: ''
   notes: Santrumpa paliekama tik lokaliame specialiųjų situacijų wording sluoksnyje; į shared akronimų
     bazę nepromuoti be atskiro LT terminijos pagrindo.
-- candidate_id: 005-update-analysis-what-s-changed-acronym-iv
-  candidate_kind: acronym
-  source_term: IV
-  source_expansion: ''
-  chapter_slug: 005-update-analysis-what-s-changed
-  source_context: '| Clinical Considerations in Relation to Diversity and Equality | April 2025 | New
-    wording added around pulse oximetry in dark skin, and also regarding terminology in the disability
-    section. |'
-  proposed_lt: ''
-  status: not_acronym
-  scope: book
-  candidate_origin: source_acronym
-  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
-  banned_lt: ''
-  source_ref: ''
-  notes: '`IV` šiame projekte laikoma vartojimo kelio santrumpa (`intraveninis` / `į veną`), o ne `Intravascular
-    Fluid Therapy` sinonimu. Į aktyvią šio skyriaus terminų triage bazę nekelti kaip atskiro pavadinimo.'
 - candidate_id: 005-update-analysis-what-s-changed-acronym-ng24
   candidate_kind: acronym
   source_term: NG24
@@ -1313,7 +1296,7 @@ term_candidates:
   source_context: '| Conditions Requiring Specific Prehospital Clinical Management | July 2024 | New guideline
     covering a number of clinical presentations where specific pre-hospital clinical considerations are
     needed. |'
-  proposed_lt: Būklės, kurioms reikalingas specifinis ikihospitalinis klinikinis valdymas
+  proposed_lt: Būklės, kurioms reikalingas specifinis ikistacionarinis klinikinis valdymas
   status: localization_only
   scope: book
   candidate_origin: source_guideline_title
@@ -1329,23 +1312,7 @@ term_candidates:
   source_expansion: ''
   chapter_slug: 005-update-analysis-what-s-changed
   source_context: '| Consent in Pre-hospital Care | September 2021 | Reviewed and updated. |'
-  proposed_lt: Sutikimas ikihospitalinėje priežiūroje
-  status: localization_only
-  scope: book
-  candidate_origin: source_guideline_title
-  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
-    sutikrinta su LT-source sluoksniu.
-  banned_lt: ''
-  source_ref: ''
-  notes: Sudėtinė skyriaus antraštė arba lokalizacijos wording vienetas; nepromuoti į shared lexicon.
-    Tikslinti pilnai lokalizuojant atitinkamą atskirą skyrių.
-- candidate_id: 005-update-analysis-what-s-changed-term-domestic-abuse
-  candidate_kind: term
-  source_term: Domestic Abuse
-  source_expansion: ''
-  chapter_slug: 005-update-analysis-what-s-changed
-  source_context: '| Domestic Abuse | September 2022 | Revised and updated with current legislation. |'
-  proposed_lt: Smurtas artimoje aplinkoje
+  proposed_lt: Sutikimas ikistacionarinėje pagalboje
   status: localization_only
   scope: book
   candidate_origin: source_guideline_title
@@ -1378,7 +1345,7 @@ term_candidates:
   chapter_slug: 005-update-analysis-what-s-changed
   source_context: '| Emergency Tracheostomy and Laryngectomy Pre-hospital Management | September 2022
     | Reviewed in line with RCUK. Revised management algorithms. |'
-  proposed_lt: Skubi tracheostomos ir laringektomos pacientų ikihospitalinė priežiūra
+  proposed_lt: Skubi tracheostomos ir laringektomos pacientų ikistacionarinė priežiūra
   status: localization_only
   scope: book
   candidate_origin: source_guideline_title

@@ -199,7 +199,28 @@ blocks:
 clinical_claims: []
 structured_block_policies: []
 active_terms: []
-active_acronyms: []
+active_acronyms:
+- acronym: CO
+  lt: anglies monoksidas
+  en: Carbon monoxide
+  policy: lt-first
+  notes: Patikrinta LT interneto toksikologijos ir visuomenės sveikatos šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: anglies monoksidas (CO)
+  section_scope: '003'
+- acronym: MI
+  lt: miokardo infarktas
+  en: Myocardial Infarction
+  policy: original-first
+  notes: Patikrinta LT interneto LSMU kardiologijos šaltiniuose 2026-03-29. LT vartosenoje įprasta santrumpa
+    `MI`.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: miokardo infarktas (MI)
+  section_scope: '003'
 localization_overrides:
 - source_term: PIL
   jurisdiction: uk
@@ -327,13 +348,14 @@ term_candidates:
   chapter_slug: 003-guideline-developers-and-contributors
   source_context: Cathryn James, Senior Clinical Support Manager for NASMeD and JRCALC, AACE
   proposed_lt: ''
-  status: candidate
+  status: rejected
   scope: book
   candidate_origin: research_risky_term | source_acronym
   reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje akronimų bazėje. | Aptikta source tekste
     kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
   banned_lt: ''
-  source_ref: ''
+  source_ref: Originalo JK organizacinė santrumpa. Nenaudoti kaip LT akronimų bazės įrašo; laikyti tik
+    originalo kontekste.
   notes: ''
 - candidate_id: 003-guideline-developers-and-contributors-term-nasmed
   candidate_kind: term
@@ -342,10 +364,11 @@ term_candidates:
   chapter_slug: 003-guideline-developers-and-contributors
   source_context: Cathryn James, Senior Clinical Support Manager for NASMeD and JRCALC, AACE
   proposed_lt: ''
-  status: candidate
+  status: rejected
   scope: book
   candidate_origin: research_risky_term
   reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
   banned_lt: ''
   source_ref: ''
-  notes: ''
+  notes: Originalo JK organizacinė santrumpa. Nenaudoti kaip LT terminų bazės įrašo; laikyti tik originalo
+    kontekste.

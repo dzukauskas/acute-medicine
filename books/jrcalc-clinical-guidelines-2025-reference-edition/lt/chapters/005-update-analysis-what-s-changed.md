@@ -7,8 +7,8 @@
 | Gairės pavadinimas | Paskutinis atnaujinimas | Pastabos |
 | --- | --- | --- |
 | Klinikiniai aspektai, susiję su įvairove ir lygybe | 2025 m. balandis | Papildytos formuluotės apie pulsoksimetrijos taikymą tamsesnės odos pacientams ir pakoreguota negalios skyriaus terminija. |
-| Būklės, kurioms reikalingas specifinis ikihospitalinis klinikinis valdymas | 2024 m. liepa | Nauja gairė, apimanti kelias klinikines situacijas, kai reikia specifinių ikihospitalinių sprendimų. |
-| Sutikimas ikihospitalinėje priežiūroje | 2021 m. rugsėjis | Peržiūrėta ir atnaujinta. |
+| Būklės, kurioms reikalingas specifinis ikistacionarinis klinikinis valdymas | 2024 m. liepa | Nauja gairė, apimanti kelias klinikines situacijas, kai reikia specifinių ikistacionarinių sprendimų. |
+| Sutikimas ikistacionarinėje pagalboje | 2021 m. rugsėjis | Peržiūrėta ir atnaujinta. |
 | Smurtas artimoje aplinkoje | 2022 m. rugsėjis | Peržiūrėta ir atnaujinta pagal galiojantį teisinį reglamentavimą. |
 | Rūpestingumo pareiga | 2021 m. gegužė | Peržiūrėta ir atnaujinta. |
 | Gyvenimo pabaigos priežiūra | 2021 m. gegužė | Peržiūrėta ir atnaujinta; įtrauktas Macmillan/UKONS įrankis. |
@@ -16,7 +16,7 @@
 | Infuzinė terapija suaugusiesiems | 2025 m. balandis | Pridėta nauja lentelė apie antinksčių krizę ir atnaujinta sepsio lentelė. |
 | Infuzinė terapija vaikams | 2021 m. gegužė | Pacientams, kuriems nėra šoko, pirminio 10 ml/kg boliuso skyrimo trukmė sergant diabetine ketoacidoze (DKA) sutrumpinta iki 30 min. (anksčiau buvo 60 min.). Aiškumo dėlei pašalintas 7.3 paveikslas su vaikų infuzinės terapijos algoritmu. |
 | `Mental Capacity Act 2005` | 2022 m. rugsėjis | Peržiūrėta ir atnaujinta pagal galiojantį teisinį reglamentavimą. Įtrauktas naujas psichinės kompetencijos vertinimo srauto grafikas ir papildyta informacija apie priežastinį ryšį. |
-| Skausmo valdymas suaugusiesiems ir vaikams | 2025 m. liepa | Anksčiau atskiros gairės suaugusiesiems ir vaikams sujungtos į vieną. Atnaujintoje gairėje pateikiamos amžiui pritaikytos gydymo rekomendacijos ir įtraukta PAINAD skalė skausmui vertinti pacientams, turintiems kognityvinių sutrikimų. Gydymo dalis peržiūrėta, įtraukiant lentelę su ikihospitalinio nuskausminimo galimybėmis. |
+| Skausmo valdymas suaugusiesiems ir vaikams | 2025 m. liepa | Anksčiau atskiros gairės suaugusiesiems ir vaikams sujungtos į vieną. Atnaujintoje gairėje pateikiamos amžiui pritaikytos gydymo rekomendacijos ir įtraukta PAINAD skalė skausmui vertinti pacientams, turintiems kognityvinių sutrikimų. Gydymo dalis peržiūrėta, įtraukiant lentelę su ikistacionarinio nuskausminimo galimybėmis. |
 | Paciento konfidencialumas | 2019 m. birželis | Peržiūrėta ir atnaujinta. |
 | Pacientai, turintys bendravimo sunkumų | 2025 m. balandis | Pakoreguotos formuluotės, atsižvelgiant į grįžtamąjį ryšį apie kurčius pacientus. |
 | Pažeidžiamų suaugusiųjų apsauga | 2022 m. rugsėjis | Peržiūrėta ir atnaujinta pagal galiojantį teisinį reglamentavimą. |
@@ -31,7 +31,7 @@
 | Specializuotas gaivinimas | 2025 m. balandis | 10.3 skyriuje patikslinta, kad iš intraosalinės prieigos gautą kraują galima naudoti gliukozės kiekiui kraujyje nustatyti. |
 | Pradinis suaugusiųjų gaivinimas | 2022 m. rugsėjis | Peržiūrėta ir atnaujinta pagal originale nurodytas gaivinimo rekomendacijas. Papildytos formuluotės. |
 | Pradinis vaikų gaivinimas | 2022 m. rugsėjis | Peržiūrėta ir atnaujinta pagal originale nurodytas gaivinimo rekomendacijas. Papildytos formuluotės. |
-| Skubi tracheostomos ir laringektomos pacientų ikihospitalinė priežiūra | 2022 m. rugsėjis | Peržiūrėta pagal originale nurodytas gaivinimo rekomendacijas. Pakoreguoti valdymo algoritmai. |
+| Skubi tracheostomos ir laringektomos pacientų ikistacionarinė priežiūra | 2022 m. rugsėjis | Peržiūrėta pagal originale nurodytas gaivinimo rekomendacijas. Pakoreguoti valdymo algoritmai. |
 | Svetimkūnio sukelta kvėpavimo takų obstrukcija | 2022 m. rugsėjis | Peržiūrėta pagal originale nurodytas gaivinimo rekomendacijas. Pabrėžta, kad reikia įvertinti visas grįžtamąsias priežastis. |
 | Širdies sustojimas už ligoninės ribų: apžvalga | 2022 m. rugsėjis | Peržiūrėta ir atnaujinta pagal originale nurodytas gaivinimo rekomendacijas. Papildytos formuluotės. |
 | Spontaninės kraujotakos atsinaujinimas | 2022 m. rugsėjis | Peržiūrėta ir atnaujinta pagal originale nurodytas gaivinimo rekomendacijas. Papildytos formuluotės. |
@@ -78,7 +78,7 @@
 | Kvėpavimo takų ligos vaikams | 2022 m. rugsėjis | Pašalintas modifikuotas Taussig krypo balas, nes originale nurodytose rekomendacijose jo nepatariama naudoti. Vaikams, sergantiems krypu, dabar nurodomas deksametazonas. |
 | Traukuliai suaugusiesiems | 2025 m. liepa | Pervadinta ir iš esmės atnaujinta. Dabar įtrauktas midazolamo vartojimas traukuliams gydyti ir papildytos pakartotinio dozavimo rekomendacijos. |
 | Traukuliai vaikams | 2025 m. liepa | Pervadinta ir iš esmės atnaujinta. Dabar įtrauktas midazolamo vartojimas traukuliams gydyti ir papildytos pakartotinio dozavimo rekomendacijos. |
-| Sepsis | 2025 m. balandis | Gairė peržiūrėta ir atnaujinta pagal originale nurodytas specialybines rekomendacijas. Pažymima, kad šiame leidinyje nerekomenduojami ikihospitaliniai antibiotikai įtariamo sepsio atveju. |
+| Sepsis | 2025 m. balandis | Gairė peržiūrėta ir atnaujinta pagal originale nurodytas specialybines rekomendacijas. Pažymima, kad šiame leidinyje nerekomenduojami ikistacionariniai antibiotikai įtariamo sepsio atveju. |
 | Pjautuvinių ląstelių liga | 2022 m. vasaris | Suderinta rekomendacija rinktis geriamąjį, intramuskulinį arba poodinį vartojimo kelią vietoj intraveninio. |
 | Insultas ir praeinantis smegenų išemijos priepuolis | 2021 m. gegužė | Peržiūrėta ir atnaujinta. |
 | Kraujagyslių skubios būklės | 2025 m. liepa | Gairė atnaujinta reaguojant į naujausią klinikinį grįžtamąjį ryšį ir dabar apima naują skyrių apie kito pobūdžio kraujagyslinį kraujavimą. |
@@ -110,7 +110,7 @@
 | Artėjantis gimdymas | 2024 m. spalis | Iš esmės peržiūrėta ir atnaujinta. Papildytos formuluotės apie tai, kaip atpažinti artėjantį gimdymą ir kada svarstyti transportavimą į ligoninę. Įtraukti `free birth`, gimdymas vandenyje, gimdymas namuose ir `en caul birth`. Peržiūrėtas valdymo algoritmas. Pridėta nauja didelės rizikos nėštumo požymių lentelė. Taip pat įtrauktos nuotraukos, padedančios įvertinti kraujo netekimo tūrį. |
 | Pogimdyminio kraujavimo (PPH) valdymas | 2024 m. sausis | Nauja gairė. Įtrauktas naujas algoritmas. |
 | Motinos gaivinimas | 2019 m. liepa | Peržiūrėta ir atnaujinta. |
-| Akušerinė priežiūra (įskaitant akušerinių skubių būklių apžvalgą) | 2024 m. spalis | Įtrauktas naujas ikihospitalinis akušerinis sprendimų įrankis, skirtas nėščiosioms ir pacientėms iki 4 savaičių po gimdymo. |
+| Akušerinė priežiūra (įskaitant akušerinių skubių būklių apžvalgą) | 2024 m. spalis | Įtrauktas naujas ikistacionarinis akušerinis sprendimų įrankis, skirtas nėščiosioms ir pacientėms iki 4 savaičių po gimdymo. |
 | Naujagimio gaivinimas | 2022 m. rugsėjis | Peržiūrėta ir atnaujinta; algoritmas pakoreguotas pagal originale nurodytas gaivinimo rekomendacijas. |
 | Preeklampsija ir eklampsija | 2025 m. liepa | Gairė visiškai peržiūrėta, sukurtas naujas valdymo algoritmas. Atnaujintos rekomendacijos suderintos su originale nurodytomis specialybinėmis rekomendacijomis dėl magnio sulfato vartojimo preeklampsijos ir eklampsijos atvejais. |
 | Vaisiaus pečių distocija | 2025 m. liepa | Patikslintas pečių distocijos valdymo modelis ir įtrauktas naujas algoritmas. Po gauto grįžtamojo ryšio ši tema dabar pateikiama kaip atskira gairė. |

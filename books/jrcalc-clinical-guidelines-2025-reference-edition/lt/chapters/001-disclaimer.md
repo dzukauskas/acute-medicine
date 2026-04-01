@@ -8,7 +8,7 @@ Naudojant spausdintą leidimą visada reikia atsižvelgti į tai, kad po jo pask
 
 Šių gairių rengėjai negarantuoja ir neprisiima jokios teisinės atsakomybės už šių gairių turinio tikslumą, patikimumą, aktualumą ar išsamumą.
 
-Nors kai kuriais atvejais gairės gali būti koreguojamos pagal vietos paslaugų teikėjo poreikius, visi klinikiniai darbuotojai turi veikti pagal savo kompetencijos ribas ir patys atsako už savo klinikinę praktiką. Dėl ikihospitalinės priežiūros pobūdžio tam tikrose situacijose gali prireikti nukrypti nuo šiose gairėse aprašytos įprastos klinikinės praktikos. Bet koks toks nukrypimas ir jo priežastis visada turi būti aiškiai užfiksuoti paciento priežiūros dokumentuose.
+Nors kai kuriais atvejais gairės gali būti koreguojamos pagal vietos paslaugų teikėjo poreikius, visi klinikiniai darbuotojai turi veikti pagal savo kompetencijos ribas ir patys atsako už savo klinikinę praktiką. Dėl ikistacionarinės priežiūros pobūdžio tam tikrose situacijose gali prireikti nukrypti nuo šiose gairėse aprašytos įprastos klinikinės praktikos. Bet koks toks nukrypimas ir jo priežastis visada turi būti aiškiai užfiksuoti paciento priežiūros dokumentuose.
 
 Gairių rengėjai pripažįsta mokslinių tyrimų naudą ir remia inovacijų diegimą, mokslinių tyrimų vykdymą bei taikymą siekiant gerinti dabartinę ir būsimą pacientų priežiūrą. Moksliniai tyrimai gali sudaryti sąlygas pacientams anksčiau gauti naujus gydymo metodus ir technologijas. Paramedikai gali dalyvauti moksliniuose tyrimuose kaip savo klinikinės praktikos dalyje ir įtraukti pacientus į tyrimų veiklas. Dalyvaujant mokslo tyrime, kurį yra patvirtinęs mokslinių tyrimų etikos komitetas, gali būti taikomi nuo gairių besiskiriantys sprendimai.
 

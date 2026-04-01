@@ -58,7 +58,7 @@
 | terminija | terminija_ir_kalbos_forma | VLKK Terminų bankas; LT medicininė mokomoji vartosena | tarptautinė nomenklatūra | Naudota terminams `klinikinis sprendimas`, `paciento priežiūros dokumentai`, `kompetencija`. |
 | kompetencija_ir_gmp | paramediko_kompetencija_ir_gmp | MN 135:2019 „Paramedikas“; MN 167:2019 „Skubiosios medicinos pagalbos paramedikas“ | ERC / ES gairės, jei reikėtų klinikinių algoritmų | Šiame skyriuje aktualus bendras profesinės kompetencijos ir atsakomybės principas, ne JK ambulance service vidaus tvarka. |
 | dokumentavimas_ir_teise | teise_ir_reguliavimas | SAM įsakymas Nr. V-1234 dėl Kortelės Nr. 110/a; MN 167:2019 | EUR-Lex / ES bendrieji pacientų saugos principai | Naudota teiginiui, kad klinikiniai sprendimai ir nukrypimų priežastys turi būti dokumentuojami. |
-| organizacinis_kontekstas | paramediko_kompetencija_ir_gmp | SAM įsakymas Nr. V-1131 dėl GMP paslaugų teikimo išlaidų apmokėjimo tvarkos aprašo | ES ikihospitalinės pagalbos gairės | Naudota atskirti LT GMP organizacinę logiką nuo originalo NHS konteksto. |
+| organizacinis_kontekstas | paramediko_kompetencija_ir_gmp | SAM įsakymas Nr. V-1131 dėl GMP paslaugų teikimo išlaidų apmokėjimo tvarkos aprašo | ES ikistacionarinės pagalbos gairės | Naudota atskirti LT GMP organizacinę logiką nuo originalo NHS konteksto. |
 
 ## Jurisdikcijos ir rinkos signalai
 

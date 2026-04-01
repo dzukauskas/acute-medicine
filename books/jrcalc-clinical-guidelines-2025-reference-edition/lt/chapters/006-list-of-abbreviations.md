@@ -180,7 +180,7 @@ Kai kurios šio originalo santrumpos yra daugiareikšmės. Pavyzdžiui, kituose 
 | PEA | elektromechaninė disociacija (EMD / PEA). |
 | PEF | didžiausias iškvėpimo srovės greitis (PEF). |
 | PEFR | didžiausias iškvėpimo srovės greitis (PEF). |
-| PHECG | ikihospitalinė 12 derivacijų elektrokardiograma. |
+| PHECG | ikistacionarinė 12 derivacijų elektrokardiograma. |
 | PNES | psichogeniniai neepilepsiniai priepuoliai (PNES). |
 | PPCI | pirminė perkutaninė koronarinė intervencija, prireikus aiškinant kaip PKI. |
 | PPE | asmens apsaugos priemonės. |
