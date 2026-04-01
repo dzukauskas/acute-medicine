@@ -178,6 +178,8 @@ Po repo bootstrap canonical smoke / contract patikra yra:
 - knygos vertimas: `docs/book-translation-workflow.md`
 - repo / sistemos tobulinimas: `docs/repo-engineering-workflow.md`
 
+Jei thread gali kompaktuotis arba reikės naujo thread, pirmiausia užfiksuok paskutinę patikrintą būseną kanoniniuose artefaktuose. Vertimo režime tai reiškia `research`, `chapter_pack`, `term_candidates.tsv`, `lt/chapters` ir, jei reikia, `adjudication_packs`; rankinis QA pėdsakas lieka `research` faile, o automatinį QA prireikus reikia perleisti iš naujo. Repo-engineering režime tai reiškia `ENGINEERING_LEDGER.md`.
+
 Repo-engineering režime pagrindinė ilgalaikė būsena turi būti laikoma:
 
 - `ENGINEERING_LEDGER.md`
@@ -211,7 +213,7 @@ Detalesnis operating modelis aprašytas:
 - `ENGINEERING_LEDGER.md`
 - `handoffs/README.md`
 
-`handoffs/*.md` nėra pakaitalas `research`, `chapter_pack`, `term_candidates.tsv`, QA artefaktams ar `ENGINEERING_LEDGER.md`. Jie skirti tik trumpalaikėms vietinėms pastaboms.
+`handoffs/*.md` nėra pakaitalas `research`, `chapter_pack`, `term_candidates.tsv`, `lt/chapters`, `adjudication_packs` ar `ENGINEERING_LEDGER.md`. Jie skirti tik trumpalaikėms vietinėms pastaboms, kai canonical checkpoint dar nebaigtas.
 
 Jei reikia labai paprasto naujo thread starto, naudokite:
 

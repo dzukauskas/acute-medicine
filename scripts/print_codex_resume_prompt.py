@@ -75,11 +75,17 @@ def render_engineering_prompt() -> str:
         ledger_text = ENGINEERING_LEDGER.read_text(encoding="utf-8")
         theme = extract_active_theme(ledger_text) or "aktyvi repo-engineering tema"
         summary = extract_first_bullet(extract_ledger_value("summary", ledger_text))
+        current_state = extract_first_bullet(extract_ledger_value("current_state", ledger_text))
+        accepted_decisions = extract_first_bullet(extract_ledger_value("decisions", ledger_text))
+        open_risks = extract_first_bullet(extract_ledger_value("risks", ledger_text))
         next_step = extract_first_bullet(extract_ledger_value("next_steps", ledger_text))
         last_completed = extract_latest_completed_theme(ledger_text)
     else:
         theme = NO_ACTIVE_THEME
         summary = ""
+        current_state = ""
+        accepted_decisions = ""
+        open_risks = ""
         next_step = ""
         last_completed = ""
 
@@ -95,8 +101,14 @@ def render_engineering_prompt() -> str:
             lines.append(f"Paskutinė uždaryta tema: {last_completed}.")
     if summary and not summary.startswith("_No "):
         lines.append(f"Santrauka: {summary}")
+    if current_state and not current_state.startswith("_No "):
+        lines.append(f"Dabartinė būsena: {current_state}")
+    if accepted_decisions and not accepted_decisions.startswith("_No "):
+        lines.append(f"Priimti sprendimai: {accepted_decisions}")
     if next_step and not next_step.startswith("_No "):
         lines.append(f"Pirmas prioritetas: {next_step}")
+    if open_risks and not open_risks.startswith("_No "):
+        lines.append(f"Atviros rizikos: {open_risks}")
     if has_active_theme(theme):
         lines.append("Jei tema nepasikeitė, lik tame pačiame thread kontekste; jei tema jau kita, aiškiai pasakyk, kad logiška pradėti naują thread.")
     else:
@@ -127,16 +139,23 @@ def resolve_translation_targets(book_root: Path, chapter: str | None) -> tuple[s
     if chapter:
         chapter_token = chapter.strip()
         if chapter_token.isdigit():
-            prefix = f"{int(chapter_token):03d}-"
-            research_matches = sorted((book_root / "research").glob(prefix + "*.md"))
-            pack_matches = sorted((book_root / "chapter_packs").glob(prefix + "*.yaml"))
+            research_pattern = f"{int(chapter_token):03d}-*.md"
+            pack_pattern = f"{int(chapter_token):03d}-*.yaml"
         else:
-            research_matches = sorted((book_root / "research").glob(chapter_token + "*.md"))
-            pack_matches = sorted((book_root / "chapter_packs").glob(chapter_token + "*.yaml"))
+            research_pattern = chapter_token + "*.md"
+            pack_pattern = chapter_token + "*.yaml"
+        research_matches = sorted((book_root / "research").glob(research_pattern))
+        pack_matches = sorted((book_root / "chapter_packs").glob(pack_pattern))
         if research_matches:
             targets.append(research_matches[0].relative_to(REPO_ROOT).as_posix())
         if pack_matches:
             targets.append(pack_matches[0].relative_to(REPO_ROOT).as_posix())
+        chapter_draft_matches = sorted((book_root / "lt" / "chapters").glob(research_pattern))
+        if chapter_draft_matches:
+            targets.append(chapter_draft_matches[0].relative_to(REPO_ROOT).as_posix())
+        adjudication_matches = sorted((book_root / "adjudication_packs").glob(pack_pattern))
+        if adjudication_matches:
+            targets.append(adjudication_matches[0].relative_to(REPO_ROOT).as_posix())
         targets.append(book_root.relative_to(REPO_ROOT).as_posix() + "/term_candidates.tsv")
         return chapter_token, targets
     return "", targets
@@ -152,6 +171,7 @@ def render_translation_prompt(book_root: Path, chapter: str | None) -> str:
         lines.append(f"Tęsk šio skyriaus darbą: {chapter_token}.")
     else:
         lines.append(f"Tęsk aktyvų darbą knygoje {book_root.name}.")
+    lines.append("Jei po resume svarbus automatinis QA statusas, perleisk run_chapter_qa.py iš naujo; jis nėra saugomas stored receipt.")
     lines.append("Jei tai tas pats skyrius ar tas pats blocker'ių rinkinys, lik tame pačiame thread kontekste; jei prasideda kitas skyrius ar kita vertimo tema, aiškiai pasakyk, kad logiška pradėti naują thread.")
     return " ".join(lines)
 

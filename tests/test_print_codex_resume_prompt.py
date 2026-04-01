@@ -71,6 +71,9 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("Codex workflow cleanup", prompt)
         self.assertIn("Supaprastinti repo engineering darbo tęstinumą.", prompt)
         self.assertIn("Pirma peržiūrėti galutinį diff.", prompt)
+        self.assertIn("Dabartinė būsena: State", prompt)
+        self.assertIn("Priimti sprendimai: Decision", prompt)
+        self.assertIn("Atviros rizikos: Risk", prompt)
         self.assertIn("Tęsk aktyvią temą", prompt)
 
     def test_engineering_prompt_handles_no_active_theme(self) -> None:
@@ -123,18 +126,56 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("Ledger šiuo metu neturi aktyvios repo-engineering temos.", prompt)
         self.assertIn("Paskutinė uždaryta tema: Codex workflow cleanup.", prompt)
         self.assertIn("Paskutinis sweep sulygino repo engineering dokumentaciją.", prompt)
+        self.assertIn("Dabartinė būsena: State", prompt)
+        self.assertIn("Priimti sprendimai: Decision", prompt)
+        self.assertIn("Atviros rizikos: Risk", prompt)
         self.assertIn("Pasirinkti kitą siaurą temą.", prompt)
         self.assertNotIn("Tęsk aktyvią temą", prompt)
 
     def test_translation_prompt_includes_book_workflow_and_term_candidates(self) -> None:
         with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             book_root = copy_mini_book(Path(tmp_dir))
+            chapter_pack = book_root / "chapter_packs" / "001-mini.yaml"
+            chapter_pack.parent.mkdir(parents=True, exist_ok=True)
+            chapter_pack.write_text("slug: 001-mini\n", encoding="utf-8")
+            adjudication_pack = book_root / "adjudication_packs" / "001-mini.yaml"
+            adjudication_pack.parent.mkdir(parents=True, exist_ok=True)
+            adjudication_pack.write_text("[]\n", encoding="utf-8")
             prompt = print_codex_resume_prompt.render_translation_prompt(book_root, "001")
 
         self.assertIn("books/_template/workflow.md", prompt)
         self.assertIn("books/_template/source-priority.md", prompt)
         self.assertIn("term_candidates.tsv", prompt)
         self.assertIn("Tęsk šio skyriaus darbą: 001.", prompt)
+        self.assertIn("chapter_packs/001-mini.yaml", prompt)
+        self.assertIn("001-mini.md", prompt)
+        self.assertIn("adjudication_packs/001-mini.yaml", prompt)
+        self.assertIn("run_chapter_qa.py", prompt)
+
+    def test_translation_prompt_without_chapter_still_mentions_qa_rerun(self) -> None:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            book_root = copy_mini_book(Path(tmp_dir))
+            prompt = print_codex_resume_prompt.render_translation_prompt(book_root, None)
+
+        self.assertIn(f"Tęsk aktyvų darbą knygoje {book_root.name}.", prompt)
+        self.assertIn("run_chapter_qa.py", prompt)
+
+    def test_translation_prompt_accepts_full_slug_token(self) -> None:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            book_root = copy_mini_book(Path(tmp_dir))
+            chapter_pack = book_root / "chapter_packs" / "001-mini.yaml"
+            chapter_pack.parent.mkdir(parents=True, exist_ok=True)
+            chapter_pack.write_text("slug: 001-mini\n", encoding="utf-8")
+            adjudication_pack = book_root / "adjudication_packs" / "001-mini.yaml"
+            adjudication_pack.parent.mkdir(parents=True, exist_ok=True)
+            adjudication_pack.write_text("[]\n", encoding="utf-8")
+            prompt = print_codex_resume_prompt.render_translation_prompt(book_root, "001-mini")
+
+        self.assertIn("Tęsk šio skyriaus darbą: 001-mini.", prompt)
+        self.assertIn("research/001-mini.md", prompt)
+        self.assertIn("chapter_packs/001-mini.yaml", prompt)
+        self.assertIn("lt/chapters/001-mini.md", prompt)
+        self.assertIn("adjudication_packs/001-mini.yaml", prompt)
 
     def test_main_prints_engineering_prompt(self) -> None:
         with silence_stdio():

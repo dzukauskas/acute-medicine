@@ -15,42 +15,55 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - `research`
 - `chapter_pack`
 - `term_candidates.tsv`
-- QA artefaktai
+- `lt/chapters`
+- `adjudication_packs`, jei reikia
+- rankinis QA pėdsakas `research` faile
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: no-active-theme
+- Theme: context-amnesia repo design validation
 - Branch: main
-- Last updated: 2026-04-01T09:49:15.865773+03:00
+- Last updated: 2026-04-01T19:44:27+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- No active repo-engineering theme. Final stabilization sweep is closed on main after commit f76b807 and green GitHub Actions Python Tests run 23835834218.
+- Validate and narrow ChatGPT Pro `context amnesia` repo-design proposal against the real repo, keeping only the smallest justified changes in scope.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Commit f76b807 finalized resume semantics, stabilization wording, and the post-bootstrap command contract on main.
-- GitHub Actions Python Tests run 23835834218 passed on main for the closeout commit.
+- `Current-State Assessment` and `Gap Analysis` are treated as calibrated after the first follow-up round; do not reopen them unless new repo evidence conflicts.
+- ChatGPT Pro follow-up answers converged on a minimal first stage: docs plus `print_codex_resume_prompt.py` plus existing artifacts, without any new tracked file.
+- Rewritten `Design Proposal` / `Implementation Roadmap` draft was directly repo-validated and accepted as a narrow planning baseline for Stage 1 only.
+- Detailed compaction-safe scratch context is now captured in `handoffs/20260401-192624-context-amnesia-pre-design-validation-checkpoint.md`.
+- Stage 1 docs and resume-tooling changes are now implemented locally: wording explicitly ties `compact` / new-thread starts to durable checkpoints, translation docs now distinguish rerunnable auto-QA from stored receipts, and `print_codex_resume_prompt.py` now exposes more ledger state plus translation artifacts like `lt/chapters` and `adjudication_packs` when present.
+- Local Stage 1 verification is green for `tests.test_print_codex_resume_prompt`, `tests.test_repo_portability_docs`, and `git diff --check`.
+- `chapter_packs/<slug>.qa.yaml` remains only a possible later-stage option if a durable machine-readable auto-QA receipt is still needed after Stage 1.
+- Broad promotion of `tests.test_term_candidates_workflow` remains out of scope; only narrowly extracted durability-sensitive assertions stay plausible CI hardening candidates.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
 <!-- ledger:decisions:start -->
-- Keep scope narrow to the three confirmed stabilization mismatches; do not reopen a broader audit wave or touch translation content.
-- Fix the `term_candidates` mismatch by correcting closeout wording, not by promoting `tests.test_term_candidates_workflow` into required GitHub CI.
-- Add explicit `no-active-theme` ledger semantics and make resume tooling respect them without erasing completed-theme history.
-- Standardize post-bootstrap repo-native Python commands on `.venv/bin/python`; keep host `python3` only as a prerequisite / pre-bootstrap entrypoint.
+- Work in co-op mode with ChatGPT Pro: his claims are validated against the repo first, then narrowed with follow-up questions before any design acceptance.
+- Treat `Current-State Assessment` and `Gap Analysis` as the calibrated baseline for the next round.
+- Treat docs plus resume-tooling plus existing artifacts as the minimal first-stage path for `compact only at durable checkpoint`.
+- Do not treat `chapter_packs/<slug>.qa.yaml` as required unless the smaller stage still leaves a proven durable auto-QA receipt gap.
+- Do not promote whole workflow modules like `tests.test_term_candidates_workflow`; any CI hardening must be narrowed to exact durability-sensitive assertions.
+- The rewritten `Design Proposal` / `Implementation Roadmap` no longer needs another clarification round before planning; it can be used as a candidate plan as long as implementation starts with Stage 1 only.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- The next repo-engineering topic should start in a new thread.
+- After any context compaction, first read `AGENTS.md`, `docs/codex-workflow.md`, `docs/repo-engineering-workflow.md`, `ENGINEERING_LEDGER.md`, and `handoffs/20260401-192624-context-amnesia-pre-design-validation-checkpoint.md`.
+- If the user wants to proceed, the next decision is whether to accept this local Stage 1 implementation as the final minimal continuity change set or request another narrow review pass before commit.
+- Keep Stage 2 (durable auto-QA receipt) and Stage 3 (optional CI hardening) explicitly unaccepted unless later evidence justifies them.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- _No open engineering risks recorded._
+- Stage 1 is intentionally wording-heavy, so the remaining risk is semantic drift if later edits reintroduce broad `QA artefaktai` language without preserving the rerunnable-vs-durable distinction.
+- Later discussion could still drift back into Stage 2/Stage 3 scope unless the implementation closeout keeps those explicitly unaccepted.
 <!-- ledger:risks:end -->
 
 ## Completed Themes

@@ -46,6 +46,7 @@ Tai tracked failas repo šaknyje. Jame turi gyventi:
 - atviri rizikos taškai.
 
 Thread istorija čia nėra kanoninė. Jei pokalbis išsitęsia, naujas thread pirmiausia turi perskaityti `ENGINEERING_LEDGER.md`.
+Jei tikėtinas `compact` arba naujas thread, ledger turi būti atnaujintas prieš būsenos pernešimą, kad nauja sesija galėtų remtis ledger, o ne thread istorija.
 
 Normalioje porinio darbo sesijoje ledger turi atnaujinti agentas. Vartotojui nereikia kiekvieną kartą ranka leisti `update_engineering_ledger.py`.
 
@@ -105,6 +106,7 @@ Svarbi išlyga:
 4. Jei pereini prie kitos temos, agentas turi tai aiškiai įvardyti ir rekomenduoti naują thread.
 5. Jei reikia paralelinės linijos, tada naudok `Hand off`.
 6. Jei reikia, pridėk lokalų `handoff`, bet tik kaip papildomą scratchpad.
+7. Jei vyksta `compact`, pirmiausia turi būti užfiksuota paskutinė patikrinta būsena ledger'yje.
 
 ## Praktinis pavyzdys
 

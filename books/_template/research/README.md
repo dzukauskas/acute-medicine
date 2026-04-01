@@ -26,6 +26,7 @@ Kiekviename faile turi būti:
 - baigiamoji kontrolė.
 
 `research` failas yra šaltinis `chapter_pack`, bet jo nepakeičia.
+Jei po `compact` ar naujo thread reikia atstatyti automatinio QA būseną, ją perleisk per `scripts/run_chapter_qa.py`; čia nefiksuok atskiro machine-readable pass receipt.
 
 `## LT-source branduolio taikymas` lentelėje turi būti užrašyta:
 

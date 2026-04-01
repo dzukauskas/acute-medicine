@@ -14,6 +14,7 @@
 Vienas skyrius arba vienas aiškus skyriaus blokatorių rinkinys = vienas thread.
 
 Kol darbas lieka tame pačiame skyriuje, naujo thread paprastai nereikia.
+Jei tikėtinas `compact` arba naujas thread, dabartinė skyriaus būsena turi būti jau užfiksuota kanoniniuose artefaktuose, o ne tik chat istorijoje.
 
 ## Ką pirmiausia skaityti
 
@@ -25,6 +26,8 @@ Kai pradedamas vertimo darbas, pirmiausia remkitės:
 4. `books/_template/source-priority.md`
 5. konkrečios knygos `books/<slug>/workflow.md`
 6. konkretaus skyriaus `research/<slug>.md`, `chapter_packs/<slug>.yaml` ir `term_candidates.tsv`
+7. jei skyrius jau pažengęs, ir `lt/chapters/<slug>.md`
+8. jei skyriuje buvo reikalingas targeted adjudication, ir `adjudication_packs/<slug>.yaml`
 
 ## Kada likti tame pačiame thread
 
@@ -49,13 +52,14 @@ Dažniausiai vertimo workflow `Hand off` nereikia.
 
 Jei visa svarbi būsena jau yra:
 
-- `research` faile;
+- `research` faile, įskaitant `## Finalus agento auditas`;
 - `chapter_pack`;
 - `term_candidates.tsv`;
-- QA rezultatuose;
+- jei reikia, `adjudication_pack`;
 - commit'uose arba aiškiame diff'e,
 
 tada naujas thread gali tiesiog perskaityti tuos failus.
+Automatinis QA šiame workflow yra rerunnable pipeline per `scripts/run_chapter_qa.py`, o ne stored machine-readable receipt.
 
 ## Kada gali prireikti `Hand off`
 
@@ -77,7 +81,7 @@ Vertime pagrindinė atmintis turi būti ne pokalbio istorijoje, o pačiuose work
 
 Todėl pagrindinė taisyklė yra:
 
-- pirmiausia pildyk `research`, `chapter_pack`, terminų ir QA artefaktus;
+- pirmiausia pildyk `research`, `chapter_pack`, `term_candidates.tsv`, `lt/chapters` ir, jei reikia, `adjudication_packs`;
 - tik po to remkis thread istorija.
 
 ## Ką rašyti naujame thread
@@ -85,7 +89,7 @@ Todėl pagrindinė taisyklė yra:
 Paprasčiausias kelias:
 
 ```bash
-python3 scripts/print_codex_resume_prompt.py \
+.venv/bin/python scripts/print_codex_resume_prompt.py \
   --mode translation \
   --book-root books/<slug> \
   --chapter 001
@@ -96,5 +100,5 @@ Tai išspausdins trumpą promptą, kurį gali tiesiog įklijuoti į naują `Code
 Jei nenori leisti skripto, minimalus rankinis promptas yra toks:
 
 ```text
-Perskaityk AGENTS.md, books/README.md, books/_template/workflow.md, books/_template/source-priority.md, books/<slug>/workflow.md, research/<chapter>.md, chapter_packs/<chapter>.yaml ir term_candidates.tsv. Dirbk book-translation režimu ir tęsk tą patį skyrių.
+Perskaityk AGENTS.md, books/README.md, books/_template/workflow.md, books/_template/source-priority.md, books/<slug>/workflow.md, research/<chapter>.md, chapter_packs/<chapter>.yaml, term_candidates.tsv, jei skyrius jau pažengęs, lt/chapters/<chapter>.md, o jei buvo targeted adjudication, adjudication_packs/<chapter>.yaml. Dirbk book-translation režimu ir tęsk tą patį skyrių.
 ```

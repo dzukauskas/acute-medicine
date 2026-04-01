@@ -40,6 +40,12 @@ Repo-global aktyvios taisyklės laikomos `shared/` kataloge:
 - `shared/review/`: review taxonomy ir adjudication profiliai.
 - `shared/examples/gold_sections/`: bendri pozityvūs skyrių pavyzdžiai.
 
+## Codex thread continuity
+
+Jei thread gali kompaktuotis arba reikės naujo thread, pirmiausia užfiksuok paskutinę patikrintą būseną kanoniniuose artefaktuose. Šiai knygai tai reiškia `research`, `chapter_packs/<slug>.yaml`, `term_candidates.tsv`, `lt/chapters/` ir, jei reikia, `adjudication_packs/<slug>.yaml`.
+
+Automatinis QA šiame workflow yra rerunnable pipeline per `scripts/run_chapter_qa.py`, o ne stored machine-readable receipt.
+
 ## Taisyklė
 
 Skyrių tekstas, lentelės, schemos ir paveikslai kuriami nuo naujo tik iš kanoninio originalo failo ir naujausių patikrintų Lietuvos bei, jei reikia, Europos šaltinių.

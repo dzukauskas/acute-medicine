@@ -53,6 +53,7 @@ Working style:
   - switching translation <-> repo engineering -> recommend a new thread;
   - switching to a different technical theme in repo-engineering work -> usually recommend a new thread;
   - use `Hand off` only when parallel worktree / branch isolation is actually useful.
+- If a thread may compact or a new thread may start, first write the current state into the canonical artifacts for the active workflow; thread history is not the durable checkpoint.
 - For repo-engineering work, keep `ENGINEERING_LEDGER.md` as the primary long-lived execution memory and update it when decisions or next steps materially change.
 - In normal paired repo-engineering work, the agent should update `ENGINEERING_LEDGER.md` proactively; the user should not need to run the ledger updater manually.
 - When resuming repo-engineering work, read `ENGINEERING_LEDGER.md` before relying on thread history.
