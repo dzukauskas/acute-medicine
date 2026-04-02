@@ -35,7 +35,7 @@
 
 ### Paveikslai / schemos / algoritmai
 
-- Kol kas neužfiksuota
+- `009-conditions-requiring-specific-prehospital-clinical-management-fig-04` - MND ABCDE atmintinė; LT versija atkuriama `Whimsical` lentoje, o JK-specifiniai elementai laikomi tik aiškiai pažymėtu originalo kontekstu.
 
 ### Rėmeliai / papildomi blokai
 
@@ -114,6 +114,16 @@
 | saddle anaesthesia | sėdmenų ir tarpvietės nejautra (balno zonoje) | localization_only | LT arklio uodegos sindromo vartosena | 2026-03-29 | Aprašomas lokalizacijos vienetas; nepromuoti į shared bazę. |
 | silent autonomic dysreflexia | autonominė disrefleksija su minimaliais arba be simptomų | localization_only | LT autonominės disrefleksijos vartosena; atskiro kanoninio termino nerasta | 2026-03-29 | Lokalizuoti aprašomai pagal sakinį, bet nepromuoti į shared bazę. |
 | metastatic spinal cord compression / MSCC | navikinė nugaros smegenų kompresija | localization_only | SAM onkologijos metodika su forma `navikinė nugaros smegenų kompresija` | 2026-03-29 | Lokalizuoti šiame skyriuje pagal LT norminę onkologinę vartoseną, bet nepromuoti į shared terminų bazę. |
+
+## 009 fig-04 lokalizacijos sprendimai (2026-04-02)
+
+| Figure unit | LT sprendimas | Statusas | Šaltinis | Pastaba |
+| --- | --- | --- | --- | --- |
+| BiPAP | `BiPAP` paliktas kaip atpažįstamas aparato / ventiliavimo režimo pavadinimas LT figūroje | localization_only | LSMU šaltiniai su formomis `BiPAP ventiliavimo režimas` ir `CPAP, BiPAP` | Į shared bazę nepromuoti; figūroje vartojamas kartu su aiškiu klinikiniu veiksmu, ne kaip naujas kanoninis LT terminas. |
+| PEG | `PEG` paliktas figūroje kaip trumpinys, remiantis LT vartosena `perkutaninė endoskopinė gastrostoma (PEG)` | localization_only | LSMU darbas `Perkutaninė endoskopinė gastrostoma (PEG) ir jos komplikacijos` | Figūros bloke vieta ribota; pilna forma paliekama research sprendime, o ne pačioje dėžutėje. |
+| suction | `sekreto atsiurbimas` | localization_only | LSMU publikacija su forma `sekreto išsiurbimas` / `atsiurbimas` | Pasirinkta neutrali klinikinė formuluotė figūros veiksmui `Consider suction`. |
+| Just in Case kit | Lokalizuota kaip `iš anksto paruoštas simptomų valdymo rinkinys`, o `Just in Case kit` paliktas tik aiškiai pažymėtame originalo kontekste | approved_book | MND Association šaltiniai apie `MND Just in Case kit` | JK GP tiekimo modelis neperkeltas kaip LT norminė praktika; figūroje aiškiai pažymėta, kad tai originalo kontekstas. |
+| NICE NG42 / MND Association footer | Footer lokalizuotas kaip originalo konteksto nuoroda, ne LT norminis autoritetas | approved_book | Originalo MND Association paramedic card; MND Association publikacijos | Išlaikytas šaltinio atsekamumas, bet nuorodos nepateikiamos kaip LT gairių ekvivalentas. |
 
 ## Europos / tarptautiniai šaltiniai
 
@@ -198,6 +208,7 @@
 | --- | --- | --- |
 | terminija | sutvarkyta | Reti neurologiniai, hematologiniai, genetiniai ir onkologiniai terminai prieš drafting patikrinti LT šaltiniuose ir, kur tiko, užrakinti aktyvioje bazėje. |
 | kolokacijos | sutvarkyta | Tekstas išlaikytas LT medicinine kalba, bet sąmoningai arčiau originalo sakinių funkcijos ir akcentų. |
+| paveikslai | sutvarkyta | `009 fig-04` atkurta `Whimsical`, sugeneruotas aktyvus PNG ir paveikslas įterptas į `lt/chapters/009-conditions-requiring-specific-prehospital-clinical-management.md`. |
 | gramatika | ok |  |
 | semantika | sutvarkyta | Skyriaus turinys perrašytas arčiau originalo; JK-specifika palikta kaip originalo kontekstas, o ne pakeista laisvomis LT abstrakcijomis. |
 | norminė logika | sutvarkyta | LT šaltiniai naudoti terminų ir klinikinių vienetų tikslumui užrakinti, bet ne tam, kad originalo mintis būtų perrašyta į kitą tekstą. |

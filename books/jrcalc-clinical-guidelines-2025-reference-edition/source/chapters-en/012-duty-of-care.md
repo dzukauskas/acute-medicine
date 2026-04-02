@@ -60,6 +60,8 @@ Whilst the United Kingdom has three separate jurisdictions – England and Wales
 
 - The aide memoire depicted in Table 1.2 has been developed to assist you in applying the duty of care correctly.
 
+Table 1.2 Duty of Care Aide Memoire
+
 | Col 1 | Col 2 | Col 3 | Col 4 |
 | --- | --- | --- | --- |
 | Table 1.2 – Duty of Care Aide Memoire |  |  |  |

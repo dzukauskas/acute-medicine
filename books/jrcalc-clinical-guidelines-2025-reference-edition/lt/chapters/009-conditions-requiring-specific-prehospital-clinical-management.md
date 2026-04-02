@@ -6,7 +6,7 @@
 
 - Svarbu prisiminti, kad pacientai, sergantys lėtinėmis ar retomis ligomis, dažnai labai gerai išmano savo būklę. Šias žinias reikia gerbti, ir jos dažnai turės didelę įtaką sprendimams tiek dėl gydymo, tiek dėl transportavimo.
 
-- Mes, kaip klinicistai, pagrįstai turime žemesnį slenkstį norėti transportuoti šiuos kliniškai sudėtingus pacientus į ligoninę, tačiau reikia atidžiai apsvarstyti, ar tai tikrai yra geriausias pasirinkimas pacientui tiek medicininiu, tiek holistiniu požiūriu. Paciento bendruosius poreikius kartais geriau gali atitikti prieinamos bendruomeninės sveikatos priežiūros paslaugos.
+- Mes, kaip GMP medikai, pagrįstai turime žemesnį slenkstį norėti transportuoti šiuos kliniškai sudėtingus pacientus į ligoninę, tačiau reikia atidžiai apsvarstyti, ar tai tikrai yra geriausias pasirinkimas pacientui tiek medicininiu, tiek holistiniu požiūriu. Paciento bendruosius poreikius kartais geriau gali atitikti prieinamos bendruomeninės sveikatos priežiūros paslaugos.
 
 - Daugelis pacientų, sergančių ilgalaikėmis ligomis, turi individualizuotus išankstinius priežiūros planus. Juose nurodomos rekomendacijos dėl asmens klinikinės priežiūros ir gydymo būsimoje skubioje situacijoje, kai jis negali pats priimti ar išreikšti pasirinkimų.
 
@@ -422,6 +422,10 @@
 - Dalis MND pacientų turi hipoksinio kvėpavimo dirgiklio praradimo riziką, kai skiriamos didelės deguonies koncentracijos, todėl šioje grupėje deguonį reikia skirti atsargiai.
 
 - Daugelis MND sergančių pacientų turi konkretų klinikinio valdymo planą ir (arba) specializuotą slaugos komandą. Jei įmanoma, į tai reikia atsižvelgti.
+
+![9.4 pav. Motorinių neuronų ligos ABCDE atmintinė](../figures/figure-9-4-009-conditions-requiring-specific-prehospital-clinical-management-fig-04.png)
+
+*9.4 pav. Motorinių neuronų ligos (`MND`) ABCDE atmintinė.*
 
 ## 13. Išsėtinė sklerozė
 

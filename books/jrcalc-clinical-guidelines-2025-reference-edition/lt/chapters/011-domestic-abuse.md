@@ -54,7 +54,7 @@
 
 - Kartais veiksnus suaugęs asmuo nusprendžia likti situacijoje, kuri laikoma žalinga ar apleista. Tai savaime neužkerta kelio dalytis informacija su reikalingais specialistais, kad jie galėtų įvertinti žalos riziką ir įsitikinti, jog asmuo nėra netinkamai veikiamas, verčiamas ar bauginamas ir žino visas galimas pagalbos galimybes.
 
-- Jei sutikimo procesas tvarkomas netinkamai, gali žlugti pasitikėjimas tarp paciento ir klinicisto, būti praleistos apsaugos galimybės ir kilti skundų gydymo įstaigai, priežiūros institucijoms ar profesinėms organizacijoms.
+- Jei sutikimo procesas tvarkomas netinkamai, gali žlugti pasitikėjimas tarp paciento ir mediko, būti praleistos apsaugos galimybės ir kilti skundų gydymo įstaigai, priežiūros institucijoms ar profesinėms organizacijoms.
 
 - Jei asmuo negali pats priimti sprendimo, sprendimai turi būti grindžiami paciento geriausių interesų principu.
 

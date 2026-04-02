@@ -12,7 +12,7 @@
 
 - Pacientui turi būti suteikta pakankamai informacijos, kad jis suprastų siūlomą vertinimą, gydymą ar intervencijas. Informuotas sutikimas reiškia, kad pacientas supranta ne tik tai, kas bus daroma, bet ir galimas tokio sprendimo pasekmes.
 
-- Ikistacionarinėse situacijose pacientai neretai atsisako vertinimo, priežiūros ar gydymo. Vis dėlto tam tikromis aplinkybėmis, ypač esant gyvybei pavojingai rizikai, GMP klinicistui gali išlikti moralinė pareiga ir teisinė atsakomybė imtis tolesnių veiksmų.
+- Ikistacionarinėse situacijose pacientai neretai atsisako vertinimo, priežiūros ar gydymo. Vis dėlto tam tikromis aplinkybėmis, ypač esant gyvybei pavojingai rizikai, GMP medikui gali išlikti moralinė pareiga ir teisinė atsakomybė imtis tolesnių veiksmų.
 
 - Tokiose situacijose sprendimai turi būti grindžiami paciento geriausių interesų principu, teisėtu atstovavimu, paciento gebėjimo priimti sprendimus vertinimu ir galiojančia LT teise.
 

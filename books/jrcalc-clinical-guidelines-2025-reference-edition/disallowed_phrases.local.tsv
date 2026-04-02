@@ -1,3 +1,4 @@
 match_type	banned	preferred	reason
 regex	\bikihospitalin(?:[A-Za-zĄČĘĖĮŠŲŪŽąčęėįšųūž-]*)\b	vartokite atitinkamą `ikistacionarin-` formą	Šioje knygoje `pre-hospital` LT norminėje prozoje lokalizuojama per `ikistacionarin-`, ne per hibridinę `ikihospital-` formą.
 phrase	geriausių paciento interesų pagrindu	paciento geriausių interesų principu	Sutikimo ir teisinių sprendimų kalboje rinktis natūralesnę LT formuluotę, o ne pažodinį `best interests` kalkės atspindį.
+regex	\bklinicist(?:[A-Za-zĄČĘĖĮŠŲŪŽąčęėįšųūž-]*)\b	medikas / GMP medikas / sveikatos priežiūros specialistas pagal kontekstą	Šioje knygoje `clinician` šeimos kalkė `klinicist-` nevartojama; rinktis natūralią LT formą pagal source subjektą.

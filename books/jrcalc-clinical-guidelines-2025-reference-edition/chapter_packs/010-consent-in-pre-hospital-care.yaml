@@ -61,7 +61,43 @@ blocks:
 clinical_claims: []
 structured_block_policies:
 - *id001
-active_terms: []
+active_terms:
+- en: clinician
+  lt: medikas
+  status: preferred
+  banned_lt:
+  - klinicistas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_clinician_default
+  example_lt: medikas
+- en: clinicians
+  lt: medikai
+  status: preferred
+  banned_lt:
+  - klinicistai
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_clinician_default
+  example_lt: medikai
+- en: ambulance clinician
+  lt: GMP medikas
+  status: preferred
+  banned_lt:
+  - GMP klinicistas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_ambulance_clinician
+  example_lt: GMP medikas
+- en: ambulance clinicians
+  lt: GMP medikai
+  status: preferred
+  banned_lt:
+  - GMP klinicistai
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_ambulance_clinician
+  example_lt: GMP medikai
 active_acronyms: []
 localization_overrides:
 - source_term: PIL

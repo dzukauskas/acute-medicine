@@ -21,41 +21,42 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Active Theme
 <!-- ledger:active_theme:start -->
-- Theme: translation-quality hardening
+- Theme: whimsical-figure-workflow-hardening
 - Branch: main
-- Last updated: 2026-04-01T22:32:56+03:00
+- Last updated: 2026-04-02T11:40:09.628992+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- First `review_delta` skeletons for chapters 009-011 are now captured and wired into book-local terminology, localization, and prose guards instead of remaining implicit in manual chapter edits.
+- Live 009 fig-04 recreation exposed multiple workflow gaps between Whimsical board creation, manifest registration, chapter embedding, and Obsidian visibility.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- `review_deltas/009-011.tsv` now cluster defects into terminology drift, localization-equivalence, section-function drift, and translation-shaped prose, with local promotion targets recorded in the TSV itself.
-- Book-local hardening now includes a regex guard against `ikihospitalin-` drift, a consent-language collocation guard, and domestic-abuse-specific localization signals / overrides for UK-only legal and service-model terms.
-- Full `run_chapter_qa.py` regression over currently translated chapters `001-011` is green after refreshing stale canonical `chapter_pack` artifacts and fixing one residual 009 wording drift surfaced by the new guard.
+- Whimsical board creation and /svg render succeeded only after manual --login; the repo default session path was missing and an older cached storage-state file existed in a different location but was stale.
+- register_whimsical_figure.py correctly registers and renders, but it does not help recover auth state or point the user to alternative known storage-state locations.
+- A rendered PNG plus manifest row still left the LT chapter visually incomplete because chapter Markdown embedding is a separate manual step with no helper or validator.
+- Obsidian sync worked, but there is no explicit contract proving that active manifest figures are embedded into the chapter note and visible in the live vault.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
 <!-- ledger:decisions:start -->
-- Treat this as one narrow repo-engineering theme separate from chapter drafting.
-- Promote repeated fixes through review_deltas and book-local rules before considering shared-rule promotion.
-- Keep the new 009-011 hardening rules book-local for now; do not promote them to `shared/` until the same patterns recur outside the current chapter cluster.
-- Treat stale canonical `chapter_pack` drift discovered during regression as part of translation-quality hardening, because it can hide new rule coverage and invalidate QA results.
+- Treat Whimsical auth bootstrap, figure registration, chapter embedding, and Obsidian visibility as one narrow repo-engineering theme separate from chapter drafting.
+- Do not assume an active Whimsical desktop app implies a valid Playwright storage-state for render_whimsical_figure.py.
+- A figure is not done when PNG exists; completion must include chapter embed presence and, when relevant, live Obsidian visibility.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Watch upcoming translated chapters for the same `pre-hospital` wording drift, domestic-abuse / safeguarding UK service-model leakage, and consent-language calques before considering shared promotion.
-- If more review waves depend on `review_delta` mining, decide separately whether `mine_review_deltas.py` should learn LT-heading-aware block mapping instead of relying on manual block reassignment.
+- Add a small helper or integrated workflow that maps source figure markers to active manifest figures and inserts the chapter Markdown image block automatically.
+- Harden Whimsical auth discovery so render/register can either reuse a known valid storage-state location or fail with a precise recovery message instead of a generic missing-session blocker.
+- Add a validator or acceptance test that fails when a chapter-referenced active figure exists in manifest and lt/figures but is not embedded in the corresponding lt/chapters markdown.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- Over-broad guard rules may create false positives and block source-faithful wording.
-- Some localization rules remain intentionally book-local and context-heavy; premature promotion to `shared/` could overfit to the JRCALC safeguarding / consent cluster.
+- Future figure work will keep losing time to repeated manual login and session-path archaeology unless auth handling is normalized.
+- Because chapter embedding is not coupled to manifest registration, it is easy to think figure work is finished while the reader-facing LT chapter still shows no image.
 <!-- ledger:risks:end -->
 
 ## Completed Themes

@@ -1045,6 +1045,24 @@ active_terms:
   section_scope: all
   local_override_tag: ''
   example_lt: insultas ir praeinantis smegenų išemijos priepuolis (PSIP)
+- en: clinician
+  lt: medikas
+  status: preferred
+  banned_lt:
+  - klinicistas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_clinician_default
+  example_lt: medikas
+- en: clinicians
+  lt: medikai
+  status: preferred
+  banned_lt:
+  - klinicistai
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_clinician_default
+  example_lt: medikai
 active_acronyms:
 - acronym: ALS
   lt: specializuotas gaivinimas

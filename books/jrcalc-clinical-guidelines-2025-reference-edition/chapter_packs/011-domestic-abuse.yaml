@@ -557,7 +557,25 @@ clinical_claims:
   - narrative-09-further-reading
 structured_block_policies:
 - *id001
-active_terms: []
+active_terms:
+- en: clinician
+  lt: medikas
+  status: preferred
+  banned_lt:
+  - klinicistas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_clinician_default
+  example_lt: medikas
+- en: clinicians
+  lt: medikai
+  status: preferred
+  banned_lt:
+  - klinicistai
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_clinician_default
+  example_lt: medikai
 active_acronyms:
 - acronym: DM
   lt: cukrinis diabetas

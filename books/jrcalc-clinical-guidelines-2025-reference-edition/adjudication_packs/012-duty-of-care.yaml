@@ -1,0 +1,277 @@
+chapter_slug: 012-duty-of-care
+chapter_pack: chapter_packs/012-duty-of-care.yaml
+source_md: source/chapters-en/012-duty-of-care.md
+lt_target_md: lt/chapters/012-duty-of-care.md
+scaffold: adjudication_scaffold.md
+candidates:
+- block_id: narrative-01-duty-of-care
+  block_type: narrative
+  heading: Duty of Care
+  source_anchor: Duty of Care
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  profile_id: algorithm-step
+  selection_mode: profile_match
+  selection_reason: Matched profile `algorithm-step` via block_type `narrative` and signals algorithm-step.
+  decision_note_required: true
+  variant_a_goal: Palikti kliniškai pilną algoritmo žingsnį ir sprendimo logiką.
+  variant_b_goal: Kuo aiškiau ir komandiškiau lietuviškai išdėstyti veiksmą.
+  decision_criteria: Palik variantą, kuris išlaiko sprendimo seką, bet skamba kaip aiški LT algoritmo
+    komanda.
+  relevant_style_hotspots:
+  - &id005
+    category: language_risk
+    text: duty / duty of care gali skatinti per dažną pažodinį pareiga kartojimą; reikės saugoti LT sakinių
+      ritmą.
+  - &id003
+    category: language_risk
+    text: reasonable standard of care, positive duty, clinical negligence lengvai virsta teisės kalbos
+      kalkėmis.
+  - &id001
+    category: language_risk
+    text: safe system of work ir dynamic risk assessment turi būti aiškūs LT GMP skaitytojui, bet neperkrauti
+      anglišku žodynų skoniu.
+  - &id006
+    category: anti_calque
+    text: discharge their duty nepalikti kaip išpildyti pareigą; geriau tinkamai įvykdyti pareigą arba
+      tinkamai ją vykdyti.
+  - &id002
+    category: localization_decision
+    text: 'safe system of work versti ne pažodiniu biurokratiniu kalkiu, o per LT darbo saugos ir GMP
+      organizavimo logiką: saugaus darbo organizavimo tvarka arba saugi darbo sistema, atsižvelgiant į
+      sakinio funkciją.'
+  - &id004
+    category: localization_decision
+    text: reasonable standard of care geriausia ne mechaniniu teisiniu vertiniu, o kaip tinkamos kokybės
+      priežiūra / pagrįstai pakankamas priežiūros lygis, priklausomai nuo sakinio.
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-012-joint-risk-assessment
+  - claim-012-safe-work-system-and-staff-safety
+  - claim-012-equipment-availability-false-positive
+  structured_block_policy:
+    block_id: narrative-01-duty-of-care
+    block_type: narrative
+    lt_strategy: rewrite_lt
+    authority_source: LT teisė dėl skubios pagalbos ir darbo saugos; EŽTK 2 straipsnis
+    original_context_allowed: 'yes'
+    note: Skyriaus pavadinimą ir įvadą versti kuo arčiau originalo, bet norminius teiginius pervesti į
+      LT / EŽTK logiką.
+- block_id: narrative-03-application
+  block_type: narrative
+  heading: Application
+  source_anchor: Application
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots: []
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-012-emergency-care-without-unreasonable-delay
+  structured_block_policy:
+    block_id: narrative-03-application
+    block_type: narrative
+    lt_strategy: rewrite_lt
+    authority_source: Sveikatos sistemos įstatymas; Pacientų teisių įstatymas
+    original_context_allowed: 'yes'
+    note: Dvi pagrindines pareigas išlaikyti, tačiau JK jurisdikcijų išvardijimą pašalinti iš pagrindinio
+      LT teksto.
+- block_id: narrative-04-health-and-safety-duties
+  block_type: narrative
+  heading: Health and Safety Duties
+  source_anchor: Health and Safety Duties
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  profile_id: algorithm-step
+  selection_mode: profile_match
+  selection_reason: Matched profile `algorithm-step` via block_type `narrative` and signals algorithm-step.
+  decision_note_required: true
+  variant_a_goal: Palikti kliniškai pilną algoritmo žingsnį ir sprendimo logiką.
+  variant_b_goal: Kuo aiškiau ir komandiškiau lietuviškai išdėstyti veiksmą.
+  decision_criteria: Palik variantą, kuris išlaiko sprendimo seką, bet skamba kaip aiški LT algoritmo
+    komanda.
+  relevant_style_hotspots:
+  - *id001
+  - *id002
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-012-safe-work-system-and-staff-safety
+  - claim-012-equipment-availability-false-positive
+  - claim-012-risk-assessment-review-cycle
+  structured_block_policy:
+    block_id: narrative-04-health-and-safety-duties
+    block_type: narrative
+    lt_strategy: rewrite_lt
+    authority_source: Darbo kodeksas; profesinės rizikos vertinimo nuostatai; SAM GMP darbuotojų saugumo
+      sluoksnis
+    original_context_allowed: 'yes'
+    note: '`safe system of work` ir `dynamic risk assessment` lokalizuoti per LT DSS ir GMP organizavimo
+      terminiją.'
+- block_id: narrative-05-the-tort-of-negligence
+  block_type: narrative
+  heading: The Tort of Negligence
+  source_anchor: The Tort of Negligence
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  profile_id: legal-scope
+  selection_mode: profile_match
+  selection_reason: Matched profile `legal-scope` via block_type `narrative` and signals legal-scope.
+  decision_note_required: true
+  variant_a_goal: Tiksliai atskirti teisinę ar profesinės kompetencijos ribą pagal LT praktiką.
+  variant_b_goal: Kuo trumpiau, aiškiau ir be UK/US/Australia drift'o perteikti, kas taikoma Lietuvoje.
+  decision_criteria: Palik variantą, kuris nepalieka svetimos jurisdikcijos kaip tariamo LT standarto.
+  relevant_style_hotspots:
+  - *id003
+  - *id001
+  - *id002
+  - *id004
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-012-article-2-right-to-life
+  - claim-012-emergency-care-without-unreasonable-delay
+  structured_block_policy:
+    block_id: narrative-05-the-tort-of-negligence
+    block_type: legal_localization
+    lt_strategy: rewrite_lt
+    authority_source: Sveikatos sistemos įstatymas; Pacientų teisių įstatymas
+    original_context_allowed: 'yes'
+    note: JK precedentų teisę paversti bendrais LT / EŽTK principais, o bylų pavadinimus palikti tik originalo
+      kontekste.
+- block_id: narrative-06-article-2-the-right-to-life
+  block_type: narrative
+  heading: Article 2 – The Right to Life
+  source_anchor: Article 2 – The Right to Life
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  profile_id: algorithm-step
+  selection_mode: profile_match
+  selection_reason: Matched profile `algorithm-step` via block_type `narrative` and signals algorithm-step.
+  decision_note_required: true
+  variant_a_goal: Palikti kliniškai pilną algoritmo žingsnį ir sprendimo logiką.
+  variant_b_goal: Kuo aiškiau ir komandiškiau lietuviškai išdėstyti veiksmą.
+  decision_criteria: Palik variantą, kuris išlaiko sprendimo seką, bet skamba kaip aiški LT algoritmo
+    komanda.
+  relevant_style_hotspots:
+  - category: local_practice_change
+    text: Article 2 dalyje vietoje Human Rights Act 1998 pagrindiniame LT tekste bus remiamasi oficialiu
+      EŽTK 2 straipsniu.
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-012-joint-risk-assessment
+  - claim-012-article-2-right-to-life
+  structured_block_policy:
+    block_id: narrative-06-article-2-the-right-to-life
+    block_type: legal_localization
+    lt_strategy: rewrite_lt
+    authority_source: EŽTK 2 straipsnis
+    original_context_allowed: 'yes'
+    note: Pagrindinį principą išlaikyti, bet `Human Rights Act 1998` nepalikti kaip tariamai vietinio
+      norminio šaltinio.
+- block_id: narrative-07-appendix-duty-of-care-aide-memoire
+  block_type: narrative
+  heading: Appendix – Duty of Care Aide Memoire
+  source_anchor: Appendix – Duty of Care Aide Memoire
+  draft_mode: narrative-prose
+  tags: []
+  risk_flags: []
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: LT
+  profile_id: algorithm-step
+  selection_mode: profile_match
+  selection_reason: Matched profile `algorithm-step` via block_type `narrative` and signals algorithm-step.
+  decision_note_required: true
+  variant_a_goal: Palikti kliniškai pilną algoritmo žingsnį ir sprendimo logiką.
+  variant_b_goal: Kuo aiškiau ir komandiškiau lietuviškai išdėstyti veiksmą.
+  decision_criteria: Palik variantą, kuris išlaiko sprendimo seką, bet skamba kaip aiški LT algoritmo
+    komanda.
+  relevant_style_hotspots:
+  - *id005
+  - *id003
+  - *id001
+  - *id006
+  - *id002
+  - *id004
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-012-joint-risk-assessment
+  structured_block_policy: null
+- block_id: table-1.2-duty-of-care-aide-memoire
+  block_type: table
+  heading: Duty of Care Aide Memoire
+  source_anchor: Table 1.2 Duty of Care Aide Memoire
+  draft_mode: table-compression
+  tags:
+  - table-structured
+  risk_flags:
+  - structured_content
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: LT
+  profile_id: algorithm-step
+  selection_mode: fallback
+  selection_reason: Fallback selected algorithm-step profile from semantic risk.
+  decision_note_required: true
+  variant_a_goal: Palikti kliniškai pilną algoritmo žingsnį ir sprendimo logiką.
+  variant_b_goal: Kuo aiškiau ir komandiškiau lietuviškai išdėstyti veiksmą.
+  decision_criteria: Palik variantą, kuris išlaiko sprendimo seką, bet skamba kaip aiški LT algoritmo
+    komanda.
+  relevant_style_hotspots:
+  - *id005
+  - *id003
+  - *id001
+  - *id006
+  - *id002
+  - *id004
+  matched_localization_overrides: []
+  matched_claim_ids:
+  - claim-012-joint-risk-assessment
+  structured_block_policy:
+    block_id: table-1.2-duty-of-care-aide-memoire
+    block_type: table
+    lt_strategy: rewrite_lt
+    authority_source: LT teisė dėl skubios pagalbos, darbo saugos ir tarpinstitucinės sąveikos
+    original_context_allowed: 'yes'
+    note: Lentelę versti pilnai, išlaikant eilutes ir funkciją; `JESIP` bei JK statutus neutralizuoti
+      ar perkelti į originalo kontekstą.

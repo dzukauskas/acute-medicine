@@ -56,7 +56,7 @@
 
 - Paciento vardas medicininiuose dokumentuose gali nesutapti su tuo, kaip jis nori būti vadinamas.
 
-- Klinicistas turėtų vartoti ir, kai kliniškai svarbu, užfiksuoti paciento pasirinktą vardą. Perduodant pacientą kitam sveikatos priežiūros specialistui svarbu užtikrinti, kad būtų vartojamas pacientui priimtinas vardas.
+- Medikas turėtų vartoti ir, kai kliniškai svarbu, užfiksuoti paciento pasirinktą vardą. Perduodant pacientą kitam sveikatos priežiūros specialistui svarbu užtikrinti, kad būtų vartojamas pacientui priimtinas vardas.
 
 - Taip pat galima tiesiogiai ir pagarbiai paklausti, kokius įvardžius pacientas vartoja. Tai gali būti ypač svarbu pacientams, patiriantiems lyties disforiją ar priklausantiems kitoms lyčių įvairovės grupėms.
 
@@ -175,7 +175,7 @@
 
 - Skausmas yra subjektyvus. Žmonės, gyvenantys su lėtiniu skausmu ar negalia, gali apie jį pranešti kitaip negu pacientai, patiriantys ūmiai prasidėjusį skausmą.
 
-- Lėtinis skausmas ir negalia dažnai apima kelias organizmo sistemas, todėl įprastos skausmo vertinimo priemonės ne visada pakankamai gerai atspindi bendrą situaciją. Jei pacientas negali žodžiu perteikti skausmo taip, kaip to tikisi klinicistas, didėja neteisingo įvertinimo ir gydymo rizika.
+- Lėtinis skausmas ir negalia dažnai apima kelias organizmo sistemas, todėl įprastos skausmo vertinimo priemonės ne visada pakankamai gerai atspindi bendrą situaciją. Jei pacientas negali žodžiu perteikti skausmo taip, kaip to tikisi medikas, didėja neteisingo įvertinimo ir gydymo rizika.
 
 - Jei įmanoma, nustatykite paciento įprastus rodiklius, pavyzdžiui, GKS, skausmo vertinimą ar įprastą funkcinį lygį, ir lyginkite su dabartine būkle.
 
@@ -185,7 +185,7 @@
 
 - Užtikrinkite pacientui prieigą prie pagalbinių priemonių: bendravimo priemonių, vedlio ar pagalbos šuns, judėjimo priemonių ir kitų kasdien funkcijai svarbių priemonių.
 
-- Originale papildomai pažymima, kad klinicisto asmeninės savybės, įsitikinimai ir prielaidos gali paveikti sprendimų priėmimą, o tarp paciento nurodomo skausmo ir klinicisto lūkesčių ar stebėjimų neretai kyla įtampa. Dėl to skausmo valdymas kartais labiau remiasi paties klinicisto nuostatomis negu paciento patirtimi ar įrodymais.
+- Originale papildomai pažymima, kad mediko asmeninės savybės, įsitikinimai ir prielaidos gali paveikti sprendimų priėmimą, o tarp paciento nurodomo skausmo ir mediko lūkesčių ar stebėjimų neretai kyla įtampa. Dėl to skausmo valdymas kartais labiau remiasi paties mediko nuostatomis negu paciento patirtimi ar įrodymais.
 
 - Pacientams, turintiems fizinę ar intelekto negalią, gali būti ir bendravimo sunkumų.
 
@@ -209,7 +209,7 @@
 
 - Šias problemas dažnai stiprina patirta stigmatizacija, priešiškumas ar diskriminacija.
 
-- Klinicistas turi žinoti, kad šios sveikatos problemos gali būti mažiau matomos, tačiau jos turi įtakos vertinimui ir sprendimams.
+- Medikas turi žinoti, kad šios sveikatos problemos gali būti mažiau matomos, tačiau jos turi įtakos vertinimui ir sprendimams.
 
 ### 7.2 Sutikimas dalytis informacija apie seksualinę orientaciją
 
@@ -261,7 +261,7 @@
 
 - Daliai žmonių biologinė lyties raida neatitinka griežto dvejetainio suskirstymo į vyrą ir moterį.
 
-- Dėl šių būklių įvairovės klinicistui gali tekti klausti paciento, kaip konkreti būklė jį veikia ir ar yra specifinių gydymo poreikių.
+- Dėl šių būklių įvairovės medikui gali tekti klausti paciento, kaip konkreti būklė jį veikia ir ar yra specifinių gydymo poreikių.
 
 ### 8.5 Lyties disforija
 

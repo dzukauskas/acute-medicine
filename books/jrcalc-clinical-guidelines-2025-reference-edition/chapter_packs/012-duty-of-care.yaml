@@ -1,0 +1,1253 @@
+chapter_slug: 012-duty-of-care
+chapter_title: 12 skyrius. Rūpestingumo pareiga
+page_range: EPUB segmentas c4AK.xhtml (originalo puslapiai 118-122)
+source_md: source/chapters-en/012-duty-of-care.md
+lt_target_md: lt/chapters/012-duty-of-care.md
+blocks:
+- block_id: narrative-01-duty-of-care
+  block_type: narrative
+  heading: Duty of Care
+  source_anchor: Duty of Care
+  source_excerpt: '# Chapter 12 Duty of Care
+
+    - Šaltinio segmentai: c4AK.xhtml
+
+    - EPUB: JRCALC Clinical Guidelines 2025 Reference Edition.epub
+
+    Duty of Care
+
+    1. Introduction
+
+    - It is obvious that ambulance clinicians have a duty to provide care to their patients but establishing
+    exactly how that duty applies during high-risk emergency situations can be challenging.
+
+    - The duty of care represents moral, professional and legal obligations. The moral obligation to provide
+    care is a matter of individual and social conscience. The professional obligation arises from a clinician’s
+    professional registration and organisational procedures or national best practice guidelines. The
+    legal obligation arises from several sources which are summarised below.
+
+    - It is particularly hard for ambulance clinicians to discharge their duty of care correctly at incidents
+    where patients need clinical interventions but hazards expose responders to considerable risk.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: original_context_callout
+  authority_basis: original-context-only
+  localization_note: '`JRCALC` palikti tik kaip originalaus leidinio kontekstą; pagrindiniame LT tekste
+    remtis LT / EŽTK ir LT DSS logika.'
+  matched_localization_terms:
+  - JRCALC
+  matched_claim_ids:
+  - claim-012-joint-risk-assessment
+  - claim-012-safe-work-system-and-staff-safety
+  - claim-012-equipment-availability-false-positive
+  matched_claim_types:
+  - algorithm_step
+  - legal_scope
+  - market_availability
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  structured_block_policy: &id001
+    block_id: narrative-01-duty-of-care
+    block_type: narrative
+    lt_strategy: rewrite_lt
+    authority_source: LT teisė dėl skubios pagalbos ir darbo saugos; EŽTK 2 straipsnis
+    original_context_allowed: 'yes'
+    note: Skyriaus pavadinimą ir įvadą versti kuo arčiau originalo, bet norminius teiginius pervesti į
+      LT / EŽTK logiką.
+- block_id: narrative-02-introduction
+  block_type: narrative
+  heading: Introduction
+  source_anchor: Introduction
+  source_excerpt: '1. Introduction
+
+    - It is obvious that ambulance clinicians have a duty to provide care to their patients but establishing
+    exactly how that duty applies during high-risk emergency situations can be challenging.
+
+    - The duty of care represents moral, professional and legal obligations. The moral obligation to provide
+    care is a matter of individual and social conscience. The professional obligation arises from a clinician’s
+    professional registration and organisational procedures or national best practice guidelines. The
+    legal obligation arises from several sources which are summarised below.
+
+    - It is particularly hard for ambulance clinicians to discharge their duty of care correctly at incidents
+    where patients need clinical interventions but hazards expose responders to considerable risk.
+
+    2. Application
+
+    The duty of care applies to ambulance clinicians and managers in two fundamental ways:
+
+    1. Staff safety: The duty to keep yourself and your team safe.
+
+    2. Patient care: The duty to provide a reasonable standard of care to your patient.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-03-application
+  block_type: narrative
+  heading: Application
+  source_anchor: Application
+  source_excerpt: '2. Application
+
+    The duty of care applies to ambulance clinicians and managers in two fundamental ways:
+
+    1. Staff safety: The duty to keep yourself and your team safe.
+
+    2. Patient care: The duty to provide a reasonable standard of care to your patient.
+
+    Whilst the United Kingdom has three separate jurisdictions – England and Wales, Scotland and Northern
+    Ireland – the duty of care principles are broadly consistent throughout.
+
+    3. Health and Safety Duties
+
+    - The Health and Safety at Work Act 1974 and associated regulations require ambulance clinicians to
+    have a safe system of work. NHS ambulance services have a legal duty to implement and maintain safe
+    systems of work for their employees, and in turn employees have a legal duty to comply with these
+    systems.
+
+    - A safe system of work is usually achieved through: Effective operating procedures Staff competence
+    (qualifications and training) Fit for purpose equipment Effective risk assessments.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: genericize
+  authority_basis: LT
+  localization_note: Kai sakinys lieka pagrindiniame LT tekste, `NHS ambulance services` generalizuoti
+    į `GMP tarnyba` arba `greitosios medicinos pagalbos paslaugų teikėjas`, nepaliekant JK sistemos kaip
+    norminio modelio.
+  matched_localization_terms:
+  - Health and Safety at Work Act 1974
+  - NHS
+  - NHS Ambulance Service
+  - NHS ambulance services
+  matched_claim_ids:
+  - claim-012-emergency-care-without-unreasonable-delay
+  matched_claim_types:
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  structured_block_policy: &id002
+    block_id: narrative-03-application
+    block_type: narrative
+    lt_strategy: rewrite_lt
+    authority_source: Sveikatos sistemos įstatymas; Pacientų teisių įstatymas
+    original_context_allowed: 'yes'
+    note: Dvi pagrindines pareigas išlaikyti, tačiau JK jurisdikcijų išvardijimą pašalinti iš pagrindinio
+      LT teksto.
+- block_id: narrative-04-health-and-safety-duties
+  block_type: narrative
+  heading: Health and Safety Duties
+  source_anchor: Health and Safety Duties
+  source_excerpt: '3. Health and Safety Duties
+
+    - The Health and Safety at Work Act 1974 and associated regulations require ambulance clinicians to
+    have a safe system of work. NHS ambulance services have a legal duty to implement and maintain safe
+    systems of work for their employees, and in turn employees have a legal duty to comply with these
+    systems.
+
+    - A safe system of work is usually achieved through: Effective operating procedures Staff competence
+    (qualifications and training) Fit for purpose equipment Effective risk assessments.
+
+    - This means ambulance clinicians should: Ensure they and their colleagues engage in approved activities
+    which have procedures and controls in place to mitigate the risks Ensure that they are competent to
+    perform those activities (i.e. they have been suitably trained to do it and that training is up to
+    date or current) Ensure that they have the necessary equipment for those activities and the equipment
+    being used is fit for purpose (i.e. appropriately maintained). This includes personal protective equipment
+    (PPE) Ensure that staff are aware of pre-existing generic risk assessments for the specific activity
+    being undertaken and that subsequent dynamic risk assessments are used just prior to committing to
+    the activity so that specific situational hazards and risks are considered.
+
+    - A safe system of work does not necessarily mean one which is free of risk. It is one where the risk
+    is being appropriately managed or controlled. Given the nature of pre-hospital ambulance work, a level
+    of risk exposure will need to be accepted.
+
+    - Safe systems of work must also be reviewed periodically and/or when the work activity or risk changes.
+    NHS ambulance services must also implement appropriate monitoring/supervision to ensure compliance
+    with the safe system of work.
+
+    4. The Tort of Negligence
+
+    - The emergency services (including police and fire and rescue services) do not generally owe a legal
+    duty of care to individual members of the public except in certain, limited circumstances ( Hill v
+    Chief Constable of West Yorkshire [1989] AC 53 (HL)). Their duty is focused more on protecting the
+    public ‘at large’.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: genericize
+  authority_basis: LT
+  localization_note: Kai sakinys lieka pagrindiniame LT tekste, `NHS ambulance services` generalizuoti
+    į `GMP tarnyba` arba `greitosios medicinos pagalbos paslaugų teikėjas`, nepaliekant JK sistemos kaip
+    norminio modelio.
+  matched_localization_terms:
+  - Health and Safety at Work Act 1974
+  - Hill v Chief Constable of West Yorkshire
+  - NHS
+  - NHS Ambulance Service
+  - NHS ambulance services
+  matched_claim_ids:
+  - claim-012-safe-work-system-and-staff-safety
+  - claim-012-equipment-availability-false-positive
+  - claim-012-risk-assessment-review-cycle
+  matched_claim_types:
+  - legal_scope
+  - market_availability
+  - monitoring
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  structured_block_policy: &id003
+    block_id: narrative-04-health-and-safety-duties
+    block_type: narrative
+    lt_strategy: rewrite_lt
+    authority_source: Darbo kodeksas; profesinės rizikos vertinimo nuostatai; SAM GMP darbuotojų saugumo
+      sluoksnis
+    original_context_allowed: 'yes'
+    note: '`safe system of work` ir `dynamic risk assessment` lokalizuoti per LT DSS ir GMP organizavimo
+      terminiją.'
+- block_id: narrative-05-the-tort-of-negligence
+  block_type: narrative
+  heading: The Tort of Negligence
+  source_anchor: The Tort of Negligence
+  source_excerpt: '4. The Tort of Negligence
+
+    - The emergency services (including police and fire and rescue services) do not generally owe a legal
+    duty of care to individual members of the public except in certain, limited circumstances ( Hill v
+    Chief Constable of West Yorkshire [1989] AC 53 (HL)). Their duty is focused more on protecting the
+    public ‘at large’.
+
+    - The law will recognise a breach of duty by Police or Fire and Rescue Services if they have acted
+    in a certain way in certain specific situations ( Caparo Industries Plc v Dickman [1990] 2 AC 605).
+
+    - However, the NHS Ambulance Service has an established legal duty to provide a reasonable standard
+    of care to patients without unreasonable delay. This is a positive duty which engages from the point
+    at which the Ambulance Service accepts the emergency call and agrees to attend ( Kent v Griffiths
+    [2001] QB 36).
+
+    - A reasonable standard of care relates to clinical care that can be supported by a responsible body
+    of medical opinion ( Bolam v Friern Hospital Management Committee [1957] 2 All ER 118). The opinion
+    relied upon must have a logical basis ( Bolitho v City and Hackney Health Authority [1998] AC 232).
+    With regard to the clinical practice of ambulance staff, these standards are set out in approved clinical
+    practice guidelines and the standards set by relevant professional bodies.
+
+    - This puts the ambulance service in a position where the care provided or any unreasonable delay
+    in the provision of care may need to be explained and legally justified to avoid liability. Failure
+    to discharge this duty could expose the ambulance service to a charge of clinical negligence.
+
+    5. Article 2 – The Right to Life
+
+    - It has been recognised that Article 2 of the Human Rights Act 1998 creates a positive duty on public
+    sector organisations, including the NHS ambulance services, to do all they reasonably can to protect
+    those they know, or ought to know, are at real and immediate risk ( Van Colle v CC of Hertfordshire
+    [2007] EWCA Civ 325).'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: genericize
+  authority_basis: LT
+  localization_note: Kai sakinys lieka pagrindiniame LT tekste, `NHS ambulance services` generalizuoti
+    į `GMP tarnyba` arba `greitosios medicinos pagalbos paslaugų teikėjas`, nepaliekant JK sistemos kaip
+    norminio modelio.
+  matched_localization_terms:
+  - Bolam
+  - Bolitho
+  - Caparo Industries Plc v Dickman
+  - Hill v Chief Constable of West Yorkshire
+  - Human Rights Act 1998
+  - Kent v Griffiths
+  - NHS
+  - NHS Ambulance Service
+  - NHS ambulance services
+  - Van Colle
+  matched_claim_ids:
+  - claim-012-article-2-right-to-life
+  - claim-012-emergency-care-without-unreasonable-delay
+  matched_claim_types:
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  structured_block_policy: &id004
+    block_id: narrative-05-the-tort-of-negligence
+    block_type: legal_localization
+    lt_strategy: rewrite_lt
+    authority_source: Sveikatos sistemos įstatymas; Pacientų teisių įstatymas
+    original_context_allowed: 'yes'
+    note: JK precedentų teisę paversti bendrais LT / EŽTK principais, o bylų pavadinimus palikti tik originalo
+      kontekste.
+- block_id: narrative-06-article-2-the-right-to-life
+  block_type: narrative
+  heading: Article 2 – The Right to Life
+  source_anchor: Article 2 – The Right to Life
+  source_excerpt: '5. Article 2 – The Right to Life
+
+    - It has been recognised that Article 2 of the Human Rights Act 1998 creates a positive duty on public
+    sector organisations, including the NHS ambulance services, to do all they reasonably can to protect
+    those they know, or ought to know, are at real and immediate risk ( Van Colle v CC of Hertfordshire
+    [2007] EWCA Civ 325).
+
+    - However, there may be occasions where it is justifiable not to act immediately to save someone’s
+    life. For example, ambulance clinicians are not under a duty to sacrifice their own life to save a
+    patient.
+
+    - If you manage to effectively balance two fundamental duties of care by putting a safe system of
+    work in place and avoiding any unreasonable delay in providing care to patients, then you will invariably
+    discharge your obligations under Article 2.
+
+    6. Appendix – Duty of Care Aide Memoire
+
+    - The aide memoire depicted in Table 1.2 has been developed to assist you in applying the duty of
+    care correctly.
+
+    Table 1.2 Duty of Care Aide Memoire
+
+    | Col 1 | Col 2 | Col 3 | Col 4 |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: genericize
+  authority_basis: LT
+  localization_note: Kai sakinys lieka pagrindiniame LT tekste, `NHS ambulance services` generalizuoti
+    į `GMP tarnyba` arba `greitosios medicinos pagalbos paslaugų teikėjas`, nepaliekant JK sistemos kaip
+    norminio modelio.
+  matched_localization_terms:
+  - Human Rights Act 1998
+  - NHS
+  - NHS Ambulance Service
+  - NHS ambulance services
+  - Van Colle
+  matched_claim_ids:
+  - claim-012-joint-risk-assessment
+  - claim-012-article-2-right-to-life
+  matched_claim_types:
+  - algorithm_step
+  - legal_scope
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  - legal-scope
+  - market-localization
+  required_authority_basis: LT
+  structured_block_policy: &id005
+    block_id: narrative-06-article-2-the-right-to-life
+    block_type: legal_localization
+    lt_strategy: rewrite_lt
+    authority_source: EŽTK 2 straipsnis
+    original_context_allowed: 'yes'
+    note: Pagrindinį principą išlaikyti, bet `Human Rights Act 1998` nepalikti kaip tariamai vietinio
+      norminio šaltinio.
+- block_id: narrative-07-appendix-duty-of-care-aide-memoire
+  block_type: narrative
+  heading: Appendix – Duty of Care Aide Memoire
+  source_anchor: Appendix – Duty of Care Aide Memoire
+  source_excerpt: '6. Appendix – Duty of Care Aide Memoire
+
+    - The aide memoire depicted in Table 1.2 has been developed to assist you in applying the duty of
+    care correctly.
+
+    Table 1.2 Duty of Care Aide Memoire
+
+    | Col 1 | Col 2 | Col 3 | Col 4 |
+
+    | --- | --- | --- | --- |
+
+    | Table 1.2 – Duty of Care Aide Memoire |  |  |  |
+
+    | Duty of Care Requirement | Steps to Take | Explanation |  |
+
+    | Duty of care to staff | Take all reasonable and practical steps to keep employees safe. | Perform
+    approved activities and apply the controls specified in procedures. Ensure there is a generic risk
+    assessment already in place. Ensure you are trained and competent to undertake the activity. Ensure
+    the minimum equipment mandated by procedures is available and used (including your Personal Protective
+    Equipment (PPE). | These are statutory duties under the Health and Safety at Work Act 1974 and associated
+    regulatory provisions. These steps will help ensure you have a safe system of work. Most of these
+    provisions should already be established prior to the incident. |'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: true
+  jurisdiction_context: uk-specific
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Darbuotojų saugos logiką sieti su LT darbo saugos teise, profesinės rizikos vertinimu
+    ir GMP darbuotojų saugumo organizavimu; originalų JK įstatymo pavadinimą palikti tik originalo kontekste.
+  matched_localization_terms:
+  - Health and Safety at Work Act 1974
+  matched_claim_ids:
+  - claim-012-joint-risk-assessment
+  matched_claim_types:
+  - algorithm_step
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: narrative-08-key-points
+  block_type: narrative
+  heading: KEY POINTS!
+  source_anchor: KEY POINTS!
+  source_excerpt: 'KEY POINTS!
+
+    Duty of Care
+
+    - The duty of care requires ambulance clinicians to achieve a careful balance. They must take reasonable
+    steps to ensure they are as safe as is realistically possible, but they must also be prepared to accept
+    some risk to deliver effective care to patients in the pre-hospital setting. They must also be sufficiently
+    trained and experienced to act quickly where life is at risk.
+
+    - To do this they must: Implement an approved safe system of work and associated procedures. Avoid
+    any unreasonable delays in providing emergency care to patients that require it.'
+  risk_flags: []
+  tags: []
+  draft_mode: narrative-prose
+  adjudication_candidate: false
+  jurisdiction_context: universal
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste remkitės Lietuvos, o jei jų nepakanka, ES šaltiniais.
+  matched_localization_terms: []
+  matched_claim_ids: []
+  matched_claim_types: []
+  semantic_risk_level: low
+  semantic_risk_reasons: []
+  required_authority_basis: LT
+  structured_block_policy: null
+- block_id: table-1.2-duty-of-care-aide-memoire
+  block_type: table
+  heading: Duty of Care Aide Memoire
+  source_anchor: Table 1.2 Duty of Care Aide Memoire
+  source_label: '1.2'
+  source_excerpt: 'Table 1.2 Duty of Care Aide Memoire
+
+    | Col 1 | Col 2 | Col 3 | Col 4 |
+
+    | --- | --- | --- | --- |
+
+    | Table 1.2 – Duty of Care Aide Memoire |  |  |  |
+
+    | Duty of Care Requirement | Steps to Take | Explanation |  |
+
+    | Duty of care to staff | Take all reasonable and practical steps to keep employees safe. | Perform
+    approved activities and apply the controls specified in procedures. Ensure there is a generic risk
+    assessment already in place. Ensure you are trained and competent to undertake the activity. Ensure
+    the minimum equipment mandated by procedures is available and used (including your Personal Protective
+    Equipment (PPE). | These are statutory duties under the Health and Safety at Work Act 1974 and associated
+    regulatory provisions. These steps will help ensure you have a safe system of work. Most of these
+    provisions should already be established prior to the incident. |
+
+    | Duty of care to the patient | Provide a reasonable standard of care without any unreasonable delay.
+    | Undertake a dynamic risk assessment and determine the action you need to take as quickly as possible.
+    Continually review the position and deliver care as soon as possible. If you need specialist support,
+    make sure you request it as soon as possible. | This is an established duty at common law. It is a
+    positive duty on the ambulance service to provide a reasonable standard of care without unreasonable
+    delay. This duty is unique to healthcare professionals. The police and fire services have duties to
+    the public at large but their duty to individual patients is largely discretionary ( Kent v Griffith
+    [2001] QB 36). |
+
+    | Article 2 right to life | Take steps to protect people from harm which may lead to loss of life.
+    | Balance the two duties set out above. | If the correct balance is achieved (staff safety but also
+    avoiding unreasonable delay in treating patients), this duty will be discharged. If the rescue is
+    too dangerous for the responders, Art. 2 positive duties can be temporarily avoided. |'
+  risk_flags:
+  - structured_content
+  tags:
+  - table-structured
+  draft_mode: table-compression
+  adjudication_candidate: true
+  completion_hint: 1.2 lentelė
+  summary_allowed: false
+  jurisdiction_context: uk-specific
+  localization_action: replace_lt
+  authority_basis: LT
+  localization_note: Darbuotojų saugos logiką sieti su LT darbo saugos teise, profesinės rizikos vertinimu
+    ir GMP darbuotojų saugumo organizavimu; originalų JK įstatymo pavadinimą palikti tik originalo kontekste.
+  matched_localization_terms:
+  - Article 2 right to life
+  - Health and Safety at Work Act 1974
+  matched_claim_ids:
+  - claim-012-joint-risk-assessment
+  matched_claim_types:
+  - algorithm_step
+  semantic_risk_level: high
+  semantic_risk_reasons:
+  - algorithm-step
+  required_authority_basis: LT
+  structured_block_policy: &id006
+    block_id: table-1.2-duty-of-care-aide-memoire
+    block_type: table
+    lt_strategy: rewrite_lt
+    authority_source: LT teisė dėl skubios pagalbos, darbo saugos ir tarpinstitucinės sąveikos
+    original_context_allowed: 'yes'
+    note: Lentelę versti pilnai, išlaikant eilutes ir funkciją; `JESIP` bei JK statutus neutralizuoti
+      ar perkelti į originalo kontekstą.
+clinical_claims:
+- claim_id: claim-012-emergency-care-without-unreasonable-delay
+  claim_type: legal_scope
+  source_anchor: '`2. Application`; `4. The Tort of Negligence`'
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: Lietuvos Respublikos sveikatos sistemos įstatymas; Pacientų teisių ir žalos sveikatai
+    atlyginimo įstatymas
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: Pagrindiniame LT tekste pareigą pacientui geriausia atkurti kaip pareigą teikti būtinąją / skubiąją
+    medicinos pagalbą ir kokybišką priežiūrą be nepagrįsto delsimo.
+  matched_block_ids:
+  - narrative-03-application
+  - narrative-05-the-tort-of-negligence
+- claim_id: claim-012-safe-work-system-and-staff-safety
+  claim_type: legal_scope
+  source_anchor: '`3. Health and Safety Duties`; `Table 1.2 Duty of care to staff`'
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: Darbo kodekso nuostata `Darbuotojų teisė dirbti saugiai`; SAM GMP darbuotojų saugumo
+    medžiaga; 006 skyriaus `PPE` precedentas
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: '`safe system of work` lokalizuoti per saugaus darbo organizavimo, kompetencijos, įrangos tinkamumo
+    ir asmens apsaugos priemonių logiką.'
+  matched_block_ids:
+  - narrative-01-duty-of-care
+  - narrative-04-health-and-safety-duties
+- claim_id: claim-012-risk-assessment-review-cycle
+  claim_type: monitoring
+  source_anchor: '`3. Health and Safety Duties`; `Table 1.2 Risk-assess the activity`'
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: Profesinės rizikos vertinimo bendrieji nuostatai; VDI kontrolinis klausimynas
+  eu_fallback_source: ''
+  lt_gap_reason: ''
+  note: '`dynamic risk assessment` ir periodinės peržiūros logiką galima palikti pagrindiniame LT tekste,
+    nes LT / ES DSS sluoksnyje rizikos vertinimas suprantamas kaip tęstinis ir peržiūrimas procesas.'
+  matched_block_ids:
+  - narrative-04-health-and-safety-duties
+- claim_id: claim-012-equipment-availability-false-positive
+  claim_type: market_availability
+  source_anchor: '`3. Health and Safety Duties`; `Table 1.2 Duty of care to staff`'
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: SAM GMP darbuotojų saugumo medžiaga; 006 skyriaus `PPE` precedentas
+  eu_fallback_source: ''
+  lt_gap_reason: '`market_availability` čia kyla ne iš vaistų rinkos, o iš source formuluotės apie būtinos
+    įrangos ir `PPE` prieinamumą bei naudojimą.'
+  note: Pagrindiniame LT tekste šį claim reikia perteikti kaip pareigą užtikrinti reikiamą, tinkamai prižiūrimą
+    ir naudojamą įrangą, įskaitant asmens apsaugos priemones.
+  matched_block_ids:
+  - narrative-01-duty-of-care
+  - narrative-04-health-and-safety-duties
+- claim_id: claim-012-article-2-right-to-life
+  claim_type: legal_scope
+  source_anchor: '`5. Article 2 – The Right to Life`'
+  final_rendering: keep_eu_normative
+  authority_basis: EU
+  primary_lt_source: ''
+  eu_fallback_source: Žmogaus teisių ir pagrindinių laisvių apsaugos konvencijos 2 straipsnis
+  lt_gap_reason: LT teisės akte tiesioginio analogiško `Article 2` ženklinimo čia nereikia, todėl remiamasi
+    oficialiu EŽTK LT tekstu.
+  note: Pagrindiniame LT tekste palikti bendrą principą, kad teisė į gyvybę suponuoja pozityvią pareigą
+    saugoti gyvybę, tačiau tai nereiškia pareigos aukoti responderio gyvybę.
+  matched_block_ids:
+  - narrative-05-the-tort-of-negligence
+  - narrative-06-article-2-the-right-to-life
+- claim_id: claim-012-joint-risk-assessment
+  claim_type: algorithm_step
+  source_anchor: '`Table 1.2 Duty of Care Aide Memoire`'
+  final_rendering: keep_lt_normative
+  authority_basis: LT
+  primary_lt_source: SAM medžiaga dėl tarpinstitucinių GMP darbuotojų saugumo algoritmų
+  eu_fallback_source: ''
+  lt_gap_reason: LT vietinis įrankio pavadinimas nenurodytas, todėl paliekamas bendras procesinis aprašas.
+  note: Lentelės `Multi-agency Joint Doctrine` / `JESIP` eilutę LT tekste perteikti kaip bendrą tarpinstitucinį
+    rizikos vertinimą ir bendrą rizikos supratimą tarp tarnybų.
+  matched_block_ids:
+  - narrative-01-duty-of-care
+  - narrative-06-article-2-the-right-to-life
+  - narrative-07-appendix-duty-of-care-aide-memoire
+  - table-1.2-duty-of-care-aide-memoire
+structured_block_policies:
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+active_terms:
+- en: clinician
+  lt: medikas
+  status: preferred
+  banned_lt:
+  - klinicistas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_clinician_default
+  example_lt: medikas
+- en: clinicians
+  lt: medikai
+  status: preferred
+  banned_lt:
+  - klinicistai
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_clinician_default
+  example_lt: medikai
+- en: ambulance clinician
+  lt: GMP medikas
+  status: preferred
+  banned_lt:
+  - GMP klinicistas
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_ambulance_clinician
+  example_lt: GMP medikas
+- en: ambulance clinicians
+  lt: GMP medikai
+  status: preferred
+  banned_lt:
+  - GMP klinicistai
+  first_use_policy: ''
+  section_scope: all
+  local_override_tag: jrcalc_ambulance_clinician
+  example_lt: GMP medikai
+active_acronyms:
+- acronym: PE
+  lt: plaučių embolija
+  en: Pulmonary Embolism
+  policy: original-first
+  notes: Remiasi jau validuotu LT termino įrašu `Pulmonary Embolism -> plaučių embolija` ir papildomai
+    patikrinta LT interneto kardiologijos bei SAM šaltiniuose 2026-03-29.
+  must_expand_first: 'yes'
+  allowed_in_headings: 'no'
+  ambiguous_context: ''
+  preferred_lt_context: plaučių embolija (PE)
+  section_scope: '012'
+localization_overrides:
+- source_term: PIL
+  jurisdiction: uk
+  replacement_mode: replace_lt
+  local_lt: pakuotės lapelis
+  eu_fallback: patient package leaflet / package leaflet
+  scope: all
+  reason: Trumpinys `PIL` negali būti paliktas kaip norminis LT terminas.
+  source_ref: ''
+  notes: Pagrindiniame tekste nerodyti kaip LT standarto.
+- source_term: JRCALC
+  jurisdiction: uk
+  replacement_mode: original_context_callout
+  local_lt: remtis Lietuvos GMP tarnybos, VVKT, SmPC ir vietiniais algoritmais
+  eu_fallback: remtis ES gairėmis ir SmPC
+  scope: all
+  reason: JK paramedikų guideline sistema neturi būti perkelta kaip LT norma.
+  source_ref: ''
+  notes: Leisti tik `Originalo kontekstas` bloke.
+- source_term: NHS
+  jurisdiction: uk
+  replacement_mode: omit_nontransferable
+  local_lt: taikyti Lietuvos sveikatos sistemos ir GMP organizacinę logiką
+  eu_fallback: taikyti ES ir vietinę organizacinę logiką
+  scope: all
+  reason: '`NHS` yra JK sistemos institucinis kontekstas, ne LT norminis terminas.'
+  source_ref: ''
+  notes: Nepalikti kaip vietinio standarto.
+- source_term: DEA
+  jurisdiction: us
+  replacement_mode: omit_nontransferable
+  local_lt: remtis Lietuvos ir ES kontroliuojamų medžiagų reguliavimu
+  eu_fallback: remtis ES reguliavimu
+  scope: all
+  reason: '`DEA` yra JAV institucinis ir teisinis kontekstas, ne LT/EU norminis standartas.'
+  source_ref: ''
+  notes: Nepalikti pagrindiniame LT tekste.
+source_jurisdiction_signals:
+- source_term: JRCALC
+  jurisdiction: uk
+  signal_type: guideline
+  match_mode: regex
+  pattern: \b(?:JRCALC|Joint Royal Colleges Ambulance Liaison Committee)\b
+  notes: UK ambulance guideline source.
+- source_term: NHS
+  jurisdiction: uk
+  signal_type: service model
+  match_mode: regex
+  pattern: \b(?:NHS|National Health Service)\b
+  notes: UK health service context.
+localization_decisions:
+- source_term: JRCALC
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: '`JRCALC` palikti tik kaip originalaus leidinio kontekstą; pagrindiniame LT tekste
+    remtis LT / EŽTK ir LT DSS logika.'
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Proper noun, ne LT norminis autoritetas.
+- source_term: NHS ambulance services
+  replacement_mode: genericize
+  authority_basis: LT
+  localization_note: Kai sakinys lieka pagrindiniame LT tekste, `NHS ambulance services` generalizuoti
+    į `GMP tarnyba` arba `greitosios medicinos pagalbos paslaugų teikėjas`, nepaliekant JK sistemos kaip
+    norminio modelio.
+  source_ref: https://e-seimas.lrs.lt/rs/legalact/TAD/TAIS.5905/
+  notes: Svarbi ne institucijos etiketė, o pareiga teikti būtinąją / skubiąją pagalbą.
+- source_term: NHS Ambulance Service
+  replacement_mode: genericize
+  authority_basis: LT
+  localization_note: Kai sakinys lieka pagrindiniame LT tekste, `NHS Ambulance Service` generalizuoti
+    į `GMP tarnyba` arba `greitosios medicinos pagalbos paslaugų teikėjas`, nepaliekant JK sistemos kaip
+    norminio modelio.
+  source_ref: https://e-seimas.lrs.lt/rs/legalact/TAD/TAIS.5905/
+  notes: Svarbi ne institucijos etiketė, o pareiga teikti būtinąją / skubiąją pagalbą.
+- source_term: Health and Safety at Work Act 1974
+  replacement_mode: replace_lt
+  authority_basis: LT
+  localization_note: Darbuotojų saugos logiką sieti su LT darbo saugos teise, profesinės rizikos vertinimu
+    ir GMP darbuotojų saugumo organizavimu; originalų JK įstatymo pavadinimą palikti tik originalo kontekste.
+  source_ref: https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.435935 ; https://sam.lrv.lt/lt/news/aptartos-tarpinstitucines-priemones-gmp-darbuotoju-saugumui-stiprinti/
+  notes: '`safe system of work` renderinti per LT saugaus darbo organizavimo ir rizikų valdymo logiką.'
+- source_term: Human Rights Act 1998
+  replacement_mode: replace_eu
+  authority_basis: EU
+  localization_note: Pagrindiniame LT tekste remtis `Žmogaus teisių ir pagrindinių laisvių apsaugos konvencijos
+    2 straipsniu – teise į gyvybę`, o `Human Rights Act 1998` palikti tik kaip originalo teisinį kontekstą.
+  source_ref: https://e-seimas.lrs.lt/rs/legalact/TAD/2240cce18b1c11ecb8b0fe92fb660e20/
+  notes: Tai leidžia išlaikyti source mintį be JK teisės sistemos imitavimo.
+- source_term: Article 2 right to life
+  replacement_mode: replace_eu
+  authority_basis: EU
+  localization_note: Pagrindiniame LT tekste vartoti oficialų `EŽTK 2 straipsnis. Teisė į gyvybę` pavadinimą
+    ir jo pozityviosios pareigos logiką.
+  source_ref: https://e-seimas.lrs.lt/rs/legalact/TAD/2240cce18b1c11ecb8b0fe92fb660e20/
+  notes: LT / EŽTK sluoksnyje tai turi būti rodoma kaip Europos žmogaus teisių norminis pagrindas, ne
+    kaip JK specifika.
+- source_term: Hill v Chief Constable of West Yorkshire
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Bylos pavadinimo pagrindiniame LT tekste nevartoti kaip vietinio norminio šaltinio;
+    jei reikia, palikti tik `Originalo kontekstas` bloke.
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Tai precedentų teisės signalas, ne LT ar ES procedūrinė gairė.
+- source_term: Caparo Industries Plc v Dickman
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Bylos pavadinimo pagrindiniame LT tekste nevartoti kaip vietinio norminio šaltinio;
+    jei reikia, palikti tik `Originalo kontekstas` bloke.
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Tai precedentų teisės signalas, ne LT ar ES procedūrinė gairė.
+- source_term: Kent v Griffiths
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Bylos pavadinimo pagrindiniame LT tekste nevartoti kaip vietinio norminio šaltinio;
+    jei reikia, palikti tik `Originalo kontekstas` bloke.
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Tai precedentų teisės signalas, ne LT ar ES procedūrinė gairė.
+- source_term: Bolam
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Bylos pavadinimo pagrindiniame LT tekste nevartoti kaip vietinio norminio šaltinio;
+    jei reikia, palikti tik `Originalo kontekstas` bloke.
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Tai precedentų teisės signalas, ne LT ar ES procedūrinė gairė.
+- source_term: Bolitho
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Bylos pavadinimo pagrindiniame LT tekste nevartoti kaip vietinio norminio šaltinio;
+    jei reikia, palikti tik `Originalo kontekstas` bloke.
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Tai precedentų teisės signalas, ne LT ar ES procedūrinė gairė.
+- source_term: Van Colle
+  replacement_mode: original_context_callout
+  authority_basis: original-context-only
+  localization_note: Bylos pavadinimo pagrindiniame LT tekste nevartoti kaip vietinio norminio šaltinio;
+    jei reikia, palikti tik `Originalo kontekstas` bloke.
+  source_ref: JRCALC Clinical Guidelines 2025 Reference Edition
+  notes: Tai precedentų teisės signalas, ne LT ar ES procedūrinė gairė.
+- source_term: Multi-agency Joint Doctrine
+  replacement_mode: genericize
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste kalbėti apie `bendrą tarpinstitucinį rizikos vertinimą` ir
+    vietines kelių tarnybų sąveikos procedūras, o originalų modelio pavadinimą palikti tik originalo kontekste.
+  source_ref: https://sam.lrv.lt/lt/news/aptartos-tarpinstitucines-priemones-gmp-darbuotoju-saugumui-stiprinti/
+  notes: LT sluoksnyje svarbi kelių tarnybų sąveika, o ne JK modelio pavadinimas.
+- source_term: JESIP
+  replacement_mode: genericize
+  authority_basis: LT
+  localization_note: Pagrindiniame LT tekste kalbėti apie `bendrą tarpinstitucinį rizikos vertinimą` ir
+    vietines kelių tarnybų sąveikos procedūras, o `JESIP` palikti tik originalo kontekste.
+  source_ref: https://sam.lrv.lt/lt/news/aptartos-tarpinstitucines-priemones-gmp-darbuotoju-saugumui-stiprinti/
+  notes: LT sluoksnyje svarbi kelių tarnybų sąveika, o ne JK įrankio pavadinimas.
+style_hotspots:
+- category: language_risk
+  text: duty / duty of care gali skatinti per dažną pažodinį pareiga kartojimą; reikės saugoti LT sakinių
+    ritmą.
+- category: language_risk
+  text: reasonable standard of care, positive duty, clinical negligence lengvai virsta teisės kalbos kalkėmis.
+- category: language_risk
+  text: safe system of work ir dynamic risk assessment turi būti aiškūs LT GMP skaitytojui, bet neperkrauti
+    anglišku žodynų skoniu.
+- category: anti_calque
+  text: Vengti konstrukcijų tipo pasiekti balansą tarp pareigų; geriau suderinti dvi pareigas arba išlaikyti
+    pusiausvyrą tarp darbuotojų saugos ir pagalbos pacientui.
+- category: anti_calque
+  text: Vengti pažodinio commit to the activity; LT tekste priklausomai nuo konteksto vartoti imtis veiksmų,
+    pradėti veikti, įsitraukti į veiksmą.
+- category: anti_calque
+  text: discharge their duty nepalikti kaip išpildyti pareigą; geriau tinkamai įvykdyti pareigą arba tinkamai
+    ją vykdyti.
+- category: localization_decision
+  text: Skyriaus pavadinimui kol kas renkuosi Rūpestingumo pareiga, nes toks atitikmuo užfiksuotas LT
+    medicinos teisės vartosenoje; drafto metu tikrinsiu, ar tekste natūralesnis nebus mišrus modelis rūpestingumo
+    pareiga (pareiga rūpintis pacientu).
+- category: localization_decision
+  text: 'safe system of work versti ne pažodiniu biurokratiniu kalkiu, o per LT darbo saugos ir GMP organizavimo
+    logiką: saugaus darbo organizavimo tvarka arba saugi darbo sistema, atsižvelgiant į sakinio funkciją.'
+- category: localization_decision
+  text: dynamic risk assessment LT tekste galima vartoti kaip dinaminis rizikos vertinimas, nes toks terminas
+    egzistuoja ES DSS LT vertime.
+- category: localization_decision
+  text: reasonable standard of care geriausia ne mechaniniu teisiniu vertiniu, o kaip tinkamos kokybės
+    priežiūra / pagrįstai pakankamas priežiūros lygis, priklausomai nuo sakinio.
+- category: localization_decision
+  text: Source ambulance clinician(s) šioje knygoje užrakintas kaip GMP medikas / GMP medikai, ne kaip
+    GMP klinicistas / GMP klinicistai; LT oficialioje vartosenoje remtis konkrečiais vaidmenimis (paramedikas,
+    skubiosios medicinos pagalbos paramedikas) ir instituciniu bendriniu greitosios medicinos pagalbos
+    medikai / GMP darbuotojai. Taisyklė promuota į termbase.local.tsv, o klinicist- stem'as uždraustas
+    per local prose taisykles.
+- category: local_practice_change
+  text: JK darbuotojų saugos teisės aktų sluoksnis pagrindiniame LT tekste bus pakeistas LT darbuotojų
+    saugos, profesinės rizikos vertinimo ir GMP darbuotojų saugumo logika.
+- category: local_practice_change
+  text: Article 2 dalyje vietoje Human Rights Act 1998 pagrindiniame LT tekste bus remiamasi oficialiu
+    EŽTK 2 straipsniu.
+- category: local_practice_change
+  text: JESIP eilutė lentelėje bus perkelta į bendrą tarpinstitucinio rizikos vertinimo ir vietinių algoritmų
+    logiką.
+gold_examples: []
+term_candidates_path: term_candidates.tsv
+term_candidates:
+- candidate_id: 012-duty-of-care-acronym-ewca
+  candidate_kind: acronym
+  source_term: EWCA
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '- It has been recognised that Article 2 of the Human Rights Act 1998 creates a positive
+    duty on public sector organisations, including the NHS ambulance services, to do all they reasonably
+    can to protect those they know, or ought to know, are at real and immediate risk ( Van Colle v CC
+    of Hertfordshire [2007] EWCA Civ 325).'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK teismų sprendimų santrumpa; į LT aktyvią akronimų bazę nekelti.
+- candidate_id: 012-duty-of-care-acronym-hl
+  candidate_kind: acronym
+  source_term: HL
+  source_expansion: AC 53
+  chapter_slug: 012-duty-of-care
+  source_context: '- The emergency services (including police and fire and rescue services) do not generally
+    owe a legal duty of care to individual members of the public except in certain, limited circumstances
+    ( Hill v Chief Constable of West Yorkshire [1989] AC 53 (HL)). Their duty is focused more on protecting
+    the public ‘at large’.'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK teismų lygmens santrumpa iš originalo bylos citatos; palikti tik originalo kontekste.
+- candidate_id: 012-duty-of-care-acronym-qb
+  candidate_kind: acronym
+  source_term: QB
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '- However, the NHS Ambulance Service has an established legal duty to provide a reasonable
+    standard of care to patients without unreasonable delay. This is a positive duty which engages from
+    the point at which the Ambulance Service accepts the emergency call and agrees to attend ( Kent v
+    Griffiths [2001] QB 36).'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_acronym
+  reason: Aptikta source tekste kaip santrumpa, bet nėra aktyvioje akronimų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK law report santrumpa iš originalo bylos citatos; į LT aktyvią akronimų bazę nekelti.
+- candidate_id: 012-duty-of-care-term-ambulance-commanders
+  candidate_kind: term
+  source_term: ambulance commanders
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '| Risk-assess the activity | Assess the risks for both staff and patients. | Supplement
+    the pre-existing generic risk assessment with a dynamic risk assessment at the scene considering the
+    situation and hazards. Mitigate the risks as best you can. The risk to patients must be included in
+    that assessment. Regularly review the risk assessment. | If the activity is likely to result in death
+    or serious injury to you or a member of your team despite the controls, do not commit. Statutory health
+    and safety obligations provide justification for the temporary delay of care. If the risk of death
+    or serious injury to you or your team can be mitigated by a safe system of work, making the likelihood
+    low but accepting some residual risk, you must avoid unreasonable delay in committing and providing
+    emergency care. For complex or major incidents, ambulance commanders are responsible for balancing
+    these principles. |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: Operacinio vaidmens pavadinimas šiame skyriuje nekeliamas kaip LT aktyvus terminas; pagrindiniame
+    tekste sakinį perteikti bendrine forma apie incidento vadovus.
+- candidate_id: 012-duty-of-care-term-article-2-right-to-life
+  candidate_kind: term
+  source_term: Article 2 right to life
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '| Article 2 right to life | Take steps to protect people from harm which may lead to
+    loss of life. | Balance the two duties set out above. | If the correct balance is achieved (staff
+    safety but also avoiding unreasonable delay in treating patients), this duty will be discharged. If
+    the rescue is too dangerous for the responders, Art. 2 positive duties can be temporarily avoided.
+    |'
+  proposed_lt: 2 straipsnis. Teisė į gyvybę
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term | source_guideline_title
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje. | Aptikta aukštos vertės
+    source antraštėje ar guideline title lauke, todėl prieš draftą turi būti sutikrinta su LT-source sluoksniu.
+  banned_lt: https://e-seimas.lrs.lt/rs/legalact/TAD/2240cce18b1c11ecb8b0fe92fb660e20/
+  source_ref: Oficialus EŽTK 2 straipsnio LT pavadinimas; šiame skyriuje paliekamas book-scoped.
+  notes: ''
+- candidate_id: 012-duty-of-care-term-caparo-industries-plc-v-dickman
+  candidate_kind: term
+  source_term: Caparo Industries Plc v Dickman
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '- The law will recognise a breach of duty by Police or Fire and Rescue Services if
+    they have acted in a certain way in certain specific situations ( Caparo Industries Plc v Dickman
+    [1990] 2 AC 605).'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK precedentų teisės bylos pavadinimas; LT aktyvioje terminų bazėje nefiksuoti.
+- candidate_id: 012-duty-of-care-term-clinical-negligence
+  candidate_kind: term
+  source_term: clinical negligence
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '- This puts the ambulance service in a position where the care provided or any unreasonable
+    delay in the provision of care may need to be explained and legally justified to avoid liability.
+    Failure to discharge this duty could expose the ambulance service to a charge of clinical negligence.'
+  proposed_lt: civilinė atsakomybė dėl netinkamai suteiktos sveikatos priežiūros
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://gs.elaba.lt/object/elaba%3A1819115/1819115.pdf
+  notes: Source common-law termą šiame skyriuje geriau perteikti per LT civilinės atsakomybės wording,
+    nepromuojant į shared.
+- candidate_id: 012-duty-of-care-term-duty-of-care
+  candidate_kind: term
+  source_term: duty of care
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '# Chapter 12 Duty of Care'
+  proposed_lt: rūpestingumo pareiga
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term | source_heading
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje. | Aptikta aukštos vertės
+    source antraštėje ar guideline title lauke, todėl prieš draftą turi būti sutikrinta su LT-source sluoksniu.
+  banned_lt: https://gs.elaba.lt/object/elaba%3A1819115/1819115.pdf
+  source_ref: LT medicinos teisės vartosenoje užfiksuotas atitikmuo; šiame etape paliekamas book-scoped,
+    nepromuojamas į shared.
+  notes: ''
+- candidate_id: 012-duty-of-care-term-duty-of-care-requirement
+  candidate_kind: term
+  source_term: Duty of Care Requirement
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '| Duty of Care Requirement | Steps to Take | Explanation |  |'
+  proposed_lt: rūpestingumo pareigos reikalavimas
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: https://gs.elaba.lt/object/elaba%3A1819115/1819115.pdf
+  notes: Lentelės eilutės antraštė; į shared terminų bazę nepromuoti.
+- candidate_id: 012-duty-of-care-term-duty-of-care-to-staff
+  candidate_kind: term
+  source_term: Duty of care to staff
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '| Duty of care to staff | Take all reasonable and practical steps to keep employees
+    safe. | Perform approved activities and apply the controls specified in procedures. Ensure there is
+    a generic risk assessment already in place. Ensure you are trained and competent to undertake the
+    activity. Ensure the minimum equipment mandated by procedures is available and used (including your
+    Personal Protective Equipment (PPE). | These are statutory duties under the Health and Safety at Work
+    Act 1974 and associated regulatory provisions. These steps will help ensure you have a safe system
+    of work. Most of these provisions should already be established prior to the incident. |'
+  proposed_lt: pareiga rūpintis darbuotojų sauga
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/lt/news/aptartos-tarpinstitucines-priemones-gmp-darbuotoju-saugumui-stiprinti/
+  notes: Lentelės eilutės pavadinimas; LT tekste sieti su darbuotojų saugos ir rizikų valdymo logika.
+- candidate_id: 012-duty-of-care-term-duty-of-care-to-the-patient
+  candidate_kind: term
+  source_term: Duty of care to the patient
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '| Duty of care to the patient | Provide a reasonable standard of care without any unreasonable
+    delay. | Undertake a dynamic risk assessment and determine the action you need to take as quickly
+    as possible. Continually review the position and deliver care as soon as possible. If you need specialist
+    support, make sure you request it as soon as possible. | This is an established duty at common law.
+    It is a positive duty on the ambulance service to provide a reasonable standard of care without unreasonable
+    delay. This duty is unique to healthcare professionals. The police and fire services have duties to
+    the public at large but their duty to individual patients is largely discretionary ( Kent v Griffith
+    [2001] QB 36). |'
+  proposed_lt: pareiga rūpintis pacientu
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/rs/legalact/TAD/TAIS.5905/
+  notes: Lentelės eilutės pavadinimas; LT tekste sieti su būtinosios / skubiosios pagalbos ir kokybiškos
+    priežiūros pareiga.
+- candidate_id: 012-duty-of-care-term-health-and-safety-at-work-act-1974
+  candidate_kind: term
+  source_term: Health and Safety at Work Act 1974
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '- The Health and Safety at Work Act 1974 and associated regulations require ambulance
+    clinicians to have a safe system of work. NHS ambulance services have a legal duty to implement and
+    maintain safe systems of work for their employees, and in turn employees have a legal duty to comply
+    with these systems.'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK darbuotojų saugos teisės akto pavadinimas; pagrindiniame LT tekste nepalikti kaip vietinio
+    norminio standarto.
+- candidate_id: 012-duty-of-care-term-hill-v-chief-constable-of-west-yorkshire
+  candidate_kind: term
+  source_term: Hill v Chief Constable of West Yorkshire
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '- The emergency services (including police and fire and rescue services) do not generally
+    owe a legal duty of care to individual members of the public except in certain, limited circumstances
+    ( Hill v Chief Constable of West Yorkshire [1989] AC 53 (HL)). Their duty is focused more on protecting
+    the public ‘at large’.'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK precedentų teisės bylos pavadinimas; LT aktyvioje terminų bazėje nefiksuoti.
+- candidate_id: 012-duty-of-care-term-human-rights-act-1998
+  candidate_kind: term
+  source_term: Human Rights Act 1998
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '- It has been recognised that Article 2 of the Human Rights Act 1998 creates a positive
+    duty on public sector organisations, including the NHS ambulance services, to do all they reasonably
+    can to protect those they know, or ought to know, are at real and immediate risk ( Van Colle v CC
+    of Hertfordshire [2007] EWCA Civ 325).'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK EŽTK įgyvendinimo teisės aktas; pagrindiniame LT tekste remiamasi oficialiu Konvencijos 2
+    straipsniu.
+- candidate_id: 012-duty-of-care-term-kent-v-griffiths
+  candidate_kind: term
+  source_term: Kent v Griffiths
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '- However, the NHS Ambulance Service has an established legal duty to provide a reasonable
+    standard of care to patients without unreasonable delay. This is a positive duty which engages from
+    the point at which the Ambulance Service accepts the emergency call and agrees to attend ( Kent v
+    Griffiths [2001] QB 36).'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK precedentų teisės bylos pavadinimas; palikti tik originalo kontekste.
+- candidate_id: 012-duty-of-care-term-multi-agency-joint-doctrine
+  candidate_kind: term
+  source_term: Multi-agency Joint Doctrine
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '| Multi-agency Joint Doctrine | Contribute to the joint risk assessment as part of
+    JESIP and ensure a common understanding of the risks. | For complex incidents involving a multi-agency
+    response, ensure there is a joint risk assessment using the JESIP tools. Ensure the ambulance service
+    duty of care is considered as part of this joint risk assessment. |  |'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK kelių tarnybų sąveikos modelio pavadinimas; LT tekste vartoti bendrinę formą apie bendrą tarpinstitucinį
+    rizikos vertinimą.
+- candidate_id: 012-duty-of-care-term-positive-duty
+  candidate_kind: term
+  source_term: positive duty
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '- However, the NHS Ambulance Service has an established legal duty to provide a reasonable
+    standard of care to patients without unreasonable delay. This is a positive duty which engages from
+    the point at which the Ambulance Service accepts the emergency call and agrees to attend ( Kent v
+    Griffiths [2001] QB 36).'
+  proposed_lt: pozityvioji pareiga
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/rs/legalact/TAK/e2324210def011e59019a599c5cbd673/
+  notes: LT žmogaus teisių ir EŽTK vartosenoje vartojamas terminas; šiame skyriuje paliekamas book-scoped.
+- candidate_id: 012-duty-of-care-term-reasonable-standard-of-care
+  candidate_kind: term
+  source_term: reasonable standard of care
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '2. Patient care: The duty to provide a reasonable standard of care to your patient.'
+  proposed_lt: tinkamos kokybės priežiūra
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.31932/QxfoHfJKkc?jfwid=bkaxlf0u
+  notes: Source common-law wording šiame skyriuje lokalizuojamas per LT paciento teisę į kokybiškas sveikatos
+    priežiūros paslaugas.
+- candidate_id: 012-duty-of-care-term-risk-assess-the-activity
+  candidate_kind: term
+  source_term: Risk-assess the activity
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '| Risk-assess the activity | Assess the risks for both staff and patients. | Supplement
+    the pre-existing generic risk assessment with a dynamic risk assessment at the scene considering the
+    situation and hazards. Mitigate the risks as best you can. The risk to patients must be included in
+    that assessment. Regularly review the risk assessment. | If the activity is likely to result in death
+    or serious injury to you or a member of your team despite the controls, do not commit. Statutory health
+    and safety obligations provide justification for the temporary delay of care. If the risk of death
+    or serious injury to you or your team can be mitigated by a safe system of work, making the likelihood
+    low but accepting some residual risk, you must avoid unreasonable delay in committing and providing
+    emergency care. For complex or major incidents, ambulance commanders are responsible for balancing
+    these principles. |'
+  proposed_lt: įvertinkite veiklos riziką
+  status: localization_only
+  scope: book
+  candidate_origin: source_guideline_title
+  reason: Aptikta aukštos vertės source antraštėje ar guideline title lauke, todėl prieš draftą turi būti
+    sutikrinta su LT-source sluoksniu.
+  banned_lt: ''
+  source_ref: https://healthy-workplaces.osha.europa.eu/sites/hwc/files/hwc/publication/Dynamic_Risk_Assessment_OSH_LT.pdf
+  notes: Lentelės eilutės antraštė; LT tekste sieti su dinaminio ir bendrojo rizikos vertinimo logika.
+- candidate_id: 012-duty-of-care-term-safe-system-of-work
+  candidate_kind: term
+  source_term: safe system of work
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '- The Health and Safety at Work Act 1974 and associated regulations require ambulance
+    clinicians to have a safe system of work. NHS ambulance services have a legal duty to implement and
+    maintain safe systems of work for their employees, and in turn employees have a legal duty to comply
+    with these systems.'
+  proposed_lt: saugaus darbo organizavimo tvarka
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://sam.lrv.lt/lt/news/aptartos-tarpinstitucines-priemones-gmp-darbuotoju-saugumui-stiprinti/
+  notes: Source termą šiame skyriuje geriau perteikti per LT darbo saugos ir rizikų valdymo logiką; nepromuoti
+    į shared.
+- candidate_id: 012-duty-of-care-term-tort-of-negligence
+  candidate_kind: term
+  source_term: tort of negligence
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: 4. The Tort of Negligence
+  proposed_lt: civilinė atsakomybė dėl aplaidumo
+  status: localization_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: https://gs.elaba.lt/object/elaba%3A1819115/1819115.pdf
+  notes: Source common-law heading šiame skyriuje lokalizuojama aprašomai, neperkeliant bendrosios teisės
+    termino į shared bazę.
+- candidate_id: 012-duty-of-care-term-van-colle
+  candidate_kind: term
+  source_term: Van Colle
+  source_expansion: ''
+  chapter_slug: 012-duty-of-care
+  source_context: '- It has been recognised that Article 2 of the Human Rights Act 1998 creates a positive
+    duty on public sector organisations, including the NHS ambulance services, to do all they reasonably
+    can to protect those they know, or ought to know, are at real and immediate risk ( Van Colle v CC
+    of Hertfordshire [2007] EWCA Civ 325).'
+  proposed_lt: ''
+  status: original_context_only
+  scope: book
+  candidate_origin: research_risky_term
+  reason: Užfiksuota `## Rizikingi terminai`, bet nėra aktyvioje terminų bazėje.
+  banned_lt: ''
+  source_ref: ''
+  notes: JK precedentų teisės bylos pavadinimas; palikti tik originalo kontekste.
