@@ -23,20 +23,22 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: whimsical-figure-workflow-hardening
 - Branch: main
-- Last updated: 2026-04-02T11:40:09.628992+03:00
+- Last updated: 2026-04-02T12:09:00+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- Live 009 fig-04 recreation exposed multiple workflow gaps between Whimsical board creation, manifest registration, chapter embedding, and Obsidian visibility.
+- Live 009 fig-04 recreation exposed multiple workflow gaps between Whimsical board creation, manifest registration, chapter embedding, and Obsidian visibility; first hardening wave now closes the auth discovery, auto-embed, and chapter-contract gaps.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Whimsical board creation and /svg render succeeded only after manual --login; the repo default session path was missing and an older cached storage-state file existed in a different location but was stale.
-- register_whimsical_figure.py correctly registers and renders, but it does not help recover auth state or point the user to alternative known storage-state locations.
-- A rendered PNG plus manifest row still left the LT chapter visually incomplete because chapter Markdown embedding is a separate manual step with no helper or validator.
-- Obsidian sync worked, but there is no explicit contract proving that active manifest figures are embedded into the chapter note and visible in the live vault.
+- `render_whimsical_figure.py` now tries the canonical storage-state path, other discovered `storage-state*.json` files under the Whimsical cache, and cached `profile-copy*` browser profiles; on success it normalizes recovery back into the canonical storage-state path and on failure it prints an explicit `--login` recovery command.
+- `register_whimsical_figure.py` now accepts `--login` / `--storage-state`, auto-embeds the registered figure into the mapped `lt/chapters/<slug>.md`, and can optionally `--sync-obsidian` only after the repo-facing completion steps succeed.
+- `validate_figures_manifest.py` now enforces the reverse contract too: if an active manifest PNG belongs to a chapter, that PNG must be embedded in the corresponding LT chapter Markdown, not just exist in `lt/figures/`.
+- Live checkpoint on `figure-9-4-009-conditions-requiring-specific-prehospital-clinical-management-fig-04` succeeded with `--sync-obsidian`; the PNG re-rendered and synced into the configured Obsidian vault, and `validate_figures_manifest.py --book-root ... 009` now passes end-to-end.
+- The live checkpoint exposed one extra CLI success-path bug in `validate_figures_manifest.py`: the final success message resolved chapter numbers without `book_root`; this is now fixed and covered by a focused regression test.
+- Focused coverage is green for `tests.test_render_whimsical_figure`, `tests.test_register_whimsical_figure`, `tests.test_validate_figures_manifest`, `tests.test_run_chapter_qa`, and `tests.test_obsidian_sync_layout`.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -44,13 +46,14 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Treat Whimsical auth bootstrap, figure registration, chapter embedding, and Obsidian visibility as one narrow repo-engineering theme separate from chapter drafting.
 - Do not assume an active Whimsical desktop app implies a valid Playwright storage-state for render_whimsical_figure.py.
 - A figure is not done when PNG exists; completion must include chapter embed presence and, when relevant, live Obsidian visibility.
+- When auth recovery succeeds from an alternate cache artifact, normalize it back into the canonical `~/.cache/codex-whimsical/storage-state.json` path so future runs stop depending on cache archaeology.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- Add a small helper or integrated workflow that maps source figure markers to active manifest figures and inserts the chapter Markdown image block automatically.
-- Harden Whimsical auth discovery so render/register can either reuse a known valid storage-state location or fail with a precise recovery message instead of a generic missing-session blocker.
-- Add a validator or acceptance test that fails when a chapter-referenced active figure exists in manifest and lt/figures but is not embedded in the corresponding lt/chapters markdown.
+- Decide whether this theme needs a stricter live-vault verification step beyond the new post-sync contract, for example a staged Obsidian completion assertion or a dedicated acceptance test around `--sync-obsidian`.
+- Consider whether the figure workflow should get a standalone repair helper for already-registered legacy manifest rows that still lack chapter embeds, or whether the strengthened validator is sufficient.
+- Decide whether to close the theme after commit/push or keep it open for a second wave focused only on explicit live-vault verification and/or legacy embed repair.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks

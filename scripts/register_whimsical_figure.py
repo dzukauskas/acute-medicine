@@ -2,11 +2,12 @@
 from __future__ import annotations
 
 import argparse
-import re
 import sys
 from pathlib import Path
 
 from workflow_book import repo_relative_path
+from workflow_figures import ensure_manifest_figure_embed, manifest_note_value
+from workflow_obsidian import default_obsidian_dest, sync_book_to_obsidian
 from workflow_rules import require_book_root, resolve_repo_path, slugify, read_tsv, write_tsv
 from workflow_subprocess import DEFAULT_TIMEOUT_SECONDS, WorkflowSubprocessError, run_checked_subprocess
 
@@ -19,7 +20,6 @@ MANIFEST_FIELDS = [
     "canonical_source_path",
     "notes",
 ]
-SOURCE_FIGURE_NOTE_RE = re.compile(r"(?:^|;\s*)source_figure_id=([^;]+)")
 
 
 def parse_args() -> argparse.Namespace:
@@ -31,6 +31,26 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--figure-number", required=True, help="Book-visible figure number, for example 3.1.")
     parser.add_argument("--whimsical-url", required=True, help="Whimsical board URL.")
     parser.add_argument("--notes", help="Optional extra note appended to the manifest row.")
+    parser.add_argument(
+        "--storage-state",
+        type=Path,
+        help="Optional storage-state path forwarded to render_whimsical_figure.py.",
+    )
+    parser.add_argument(
+        "--login",
+        action="store_true",
+        help="Open Whimsical login before rendering the newly registered figure.",
+    )
+    parser.add_argument(
+        "--sync-obsidian",
+        action="store_true",
+        help="After render + chapter embed, sync the updated chapter and figures into Obsidian.",
+    )
+    parser.add_argument(
+        "--obsidian-dest",
+        type=Path,
+        help="Optional Obsidian destination used when --sync-obsidian is set.",
+    )
     return parser.parse_args()
 
 
@@ -61,8 +81,7 @@ def load_manifest_rows(book_root: Path) -> list[dict[str, str]]:
 
 
 def existing_source_figure_id(notes: str) -> str:
-    match = SOURCE_FIGURE_NOTE_RE.search(notes or "")
-    return match.group(1).strip() if match else ""
+    return manifest_note_value(notes, "source_figure_id")
 
 
 def normalize_whimsical_url(raw_url: str) -> str:
@@ -102,6 +121,13 @@ def build_notes(source_row: dict[str, str], extra_notes: str | None) -> str:
     return "; ".join(parts)
 
 
+def display_path(path: Path) -> str:
+    try:
+        return repo_relative_path(path)
+    except ValueError:
+        return str(path)
+
+
 def validate_new_row(manifest_rows: list[dict[str, str]], new_row: dict[str, str]) -> None:
     new_source_figure_id = existing_source_figure_id(new_row["notes"])
     for row in manifest_rows:
@@ -129,18 +155,35 @@ def rollback_manifest(book_root: Path, original_text: str) -> None:
     manifest_path(book_root).write_text(original_text, encoding="utf-8")
 
 
-def render_registered_figure(book_root: Path, figure_id: str) -> None:
+def render_registered_figure(
+    book_root: Path,
+    figure_id: str,
+    *,
+    storage_state: Path | None = None,
+    login: bool = False,
+) -> None:
+    args = [
+        sys.executable,
+        str(Path(__file__).resolve().with_name("render_whimsical_figure.py")),
+        "--book-root",
+        str(book_root),
+    ]
+    if storage_state is not None:
+        args.extend(["--storage-state", str(storage_state)])
+    if login:
+        args.append("--login")
+    args.append(figure_id)
     run_checked_subprocess(
-        [
-            sys.executable,
-            str(Path(__file__).resolve().with_name("render_whimsical_figure.py")),
-            "--book-root",
-            str(book_root),
-            figure_id,
-        ],
+        args,
         phase="render registered figure",
         timeout=DEFAULT_TIMEOUT_SECONDS,
     )
+
+
+def remove_rendered_png_if_present(row: dict[str, str]) -> None:
+    png_path = resolve_repo_path(row.get("png_path", "").strip())
+    if png_path.exists():
+        png_path.unlink()
 
 
 def main() -> int:
@@ -161,15 +204,47 @@ def main() -> int:
 
     original_text = append_manifest_row(book_root, new_row)
     try:
-        render_registered_figure(book_root, figure_id)
+        render_registered_figure(
+            book_root,
+            figure_id,
+            storage_state=args.storage_state.expanduser() if args.storage_state else None,
+            login=args.login,
+        )
     except WorkflowSubprocessError as exc:
         rollback_manifest(book_root, original_text)
+        remove_rendered_png_if_present(new_row)
         raise SystemExit(
             f"Nepavyko sugeneruoti PNG po manifest registracijos; manifest atstatytas. "
             f"{exc}"
         ) from exc
 
+    try:
+        chapter_path, inserted = ensure_manifest_figure_embed(book_root, new_row)
+    except SystemExit:
+        rollback_manifest(book_root, original_text)
+        remove_rendered_png_if_present(new_row)
+        raise
+
     print(f"Registered {figure_id} -> {new_row['png_path']}")
+    print(
+        f"{'Embedded' if inserted else 'Embed already present for'} {figure_id} -> {display_path(chapter_path)}"
+    )
+
+    if args.sync_obsidian:
+        obsidian_dest = args.obsidian_dest.expanduser() if args.obsidian_dest else default_obsidian_dest(book_root)
+        try:
+            sync_book_to_obsidian(obsidian_dest, book_root)
+        except SystemExit as exc:
+            raise SystemExit(
+                "Repo completion succeeded (manifest + PNG + chapter embed), bet Obsidian sync nepavyko. "
+                f"{exc}"
+            ) from exc
+        print(f"Synced Obsidian vault -> {obsidian_dest}")
+    else:
+        print(
+            "Repo completion succeeded (manifest + PNG + chapter embed). "
+            f"Obsidian matomumui dar paleiskite sync: scripts/sync_obsidian_book.sh --book-root {display_path(book_root)}"
+        )
     return 0
 
 

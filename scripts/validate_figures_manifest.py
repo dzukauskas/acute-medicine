@@ -7,12 +7,12 @@ import sys
 from pathlib import Path
 
 from workflow_book import chapter_paths_for_slug, resolve_chapter_slug
+from workflow_figures import chapter_image_repo_paths, manifest_row_chapter_slug
 from workflow_rules import read_tsv, resolve_book_root
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 ALLOWED_CANONICAL_TYPES = {"whimsical_board"}
-IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 
 
 def parse_args() -> argparse.Namespace:
@@ -56,6 +56,7 @@ def validate_manifest_rows(rows: list[dict[str, str]]) -> tuple[list[str], dict[
         png_path_value = row.get("png_path", "").strip()
         canonical_type = row.get("canonical_source_type", "").strip()
         canonical_path_value = row.get("canonical_source_path", "").strip()
+        chapter_slug = manifest_row_chapter_slug(row)
 
         if not figure_id:
             errors.append(f"manifest.tsv:{index} trūksta figure_id.")
@@ -111,26 +112,30 @@ def validate_manifest_rows(rows: list[dict[str, str]]) -> tuple[list[str], dict[
                     f"manifest.tsv:{index} whimsical_board turi būti Whimsical URL, gauta: "
                     f"{canonical_path_value}"
                 )
+            if not chapter_slug:
+                errors.append(
+                    f"manifest.tsv:{index} notes lauke trūksta chapter_slug=... ({figure_id or 'be id'})."
+                )
 
     return errors, by_png_path
 
 
-def extract_image_refs(chapter_path: Path) -> list[str]:
-    refs: list[str] = []
-    text = chapter_path.read_text(encoding="utf-8")
-    for match in IMAGE_RE.finditer(text):
-        refs.append(match.group(1).strip())
-    return refs
-
-
-def validate_chapter_refs(chapter: str, by_png_path: dict[str, dict[str, str]], book_root: Path | None) -> list[str]:
+def validate_chapter_refs(
+    chapter: str,
+    rows: list[dict[str, str]],
+    by_png_path: dict[str, dict[str, str]],
+    book_root: Path | None,
+) -> list[str]:
     errors: list[str] = []
     slug = resolve_chapter_slug(chapter, book_root)
     lt_path = chapter_paths_for_slug(slug, book_root)["lt"]
     if not lt_path.exists():
         return [f"Nerastas LT skyrius: {lt_path}"]
 
-    for ref in extract_image_refs(lt_path):
+    repo_paths_in_chapter = set(chapter_image_repo_paths(lt_path))
+    text = lt_path.read_text(encoding="utf-8")
+    for match in re.finditer(r"!\[[^\]]*\]\(([^)]+)\)", text):
+        ref = match.group(1).strip()
         resolved = (lt_path.parent / ref).resolve()
         try:
             repo_path = repo_relative(resolved)
@@ -145,6 +150,16 @@ def validate_chapter_refs(chapter: str, by_png_path: dict[str, dict[str, str]], 
         if not resolved.exists():
             errors.append(f"{lt_path}: paveikslėlio failas neegzistuoja: {ref}")
 
+    for row in rows:
+        if manifest_row_chapter_slug(row) != slug:
+            continue
+        png_path = row.get("png_path", "").strip()
+        if png_path and png_path not in repo_paths_in_chapter:
+            errors.append(
+                f"{lt_path}: aktyvus manifest paveikslas neįterptas į skyrių: "
+                f"{row.get('figure_id', 'be-id')} ({row.get('figure_number', '').strip()}) -> {png_path}"
+            )
+
     return errors
 
 
@@ -156,11 +171,23 @@ def main() -> int:
         if book_root is None:
             raise SystemExit("Nurodykite --manifest arba nustatykite MEDBOOK_ROOT / --book-root.")
         manifest_path = book_root / "lt" / "figures" / "manifest.tsv"
+    elif book_root is None:
+        resolved_manifest = manifest_path.expanduser().resolve()
+        if (
+            resolved_manifest.name == "manifest.tsv"
+            and resolved_manifest.parent.name == "figures"
+            and resolved_manifest.parent.parent.name == "lt"
+        ):
+            book_root = resolved_manifest.parents[2]
     rows = load_manifest_rows(manifest_path)
     errors, by_png_path = validate_manifest_rows(rows)
 
     if args.chapter:
-        errors.extend(validate_chapter_refs(args.chapter, by_png_path, book_root))
+        errors.extend(validate_chapter_refs(args.chapter, rows, by_png_path, book_root))
+    elif book_root is not None:
+        chapter_slugs = sorted({slug for row in rows if (slug := manifest_row_chapter_slug(row))})
+        for chapter_slug in chapter_slugs:
+            errors.extend(validate_chapter_refs(chapter_slug, rows, by_png_path, book_root))
 
     if errors:
         for error in errors:
@@ -168,7 +195,12 @@ def main() -> int:
         return 1
 
     if args.chapter:
-        print(f"Figure manifest valid and chapter image refs resolved for {resolve_chapter_slug(args.chapter)}.")
+        print(
+            f"Figure manifest valid and chapter image refs resolved for "
+            f"{resolve_chapter_slug(args.chapter, book_root)}."
+        )
+    elif book_root is not None:
+        print("Figure manifest and chapter embed contract valid.")
     else:
         print("Figure manifest valid.")
     return 0

@@ -193,21 +193,49 @@ class RenderWhimsicalFigureTests(unittest.TestCase):
 
             with (
                 patch.object(render_whimsical, "REPO_ROOT", temp_root),
-                patch.object(render_whimsical, "run_checked_subprocess") as run_mock,
+                patch.object(render_whimsical, "sync_book_to_obsidian") as sync_mock,
             ):
                 render_whimsical.sync_obsidian(temp_root / "vault" / "Test Book", book_root)
 
-        run_mock.assert_called_once_with(
-            [
-                str(temp_root / "scripts" / "sync_obsidian_book.sh"),
-                "--book-root",
-                "books/test-book",
-                "--dest",
-                str(temp_root / "vault" / "Test Book"),
-            ],
-            phase="sync Obsidian book",
-            timeout=render_whimsical.DEFAULT_TIMEOUT_SECONDS,
+        sync_mock.assert_called_once_with(
+            temp_root / "vault" / "Test Book",
+            book_root,
+            repo_root=temp_root,
         )
+
+    def test_fetch_svg_recovers_from_alternate_storage_state(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            temp_root = Path(tmp_dir)
+            preferred = temp_root / "preferred-storage-state.json"
+            alternate = temp_root / "alternate-storage-state.json"
+            alternate.write_text('{"cookies": []}', encoding="utf-8")
+
+            with (
+                patch.object(render_whimsical, "discover_storage_state_candidates", return_value=[preferred, alternate]),
+                patch.object(render_whimsical, "discover_profile_candidates", return_value=[]),
+                patch.object(
+                    render_whimsical,
+                    "fetch_svg_via_storage_state",
+                    side_effect=lambda _url, path: "<svg></svg>" if path == alternate else self.fail("unexpected candidate"),
+                ),
+            ):
+                svg_text = render_whimsical.fetch_svg("https://whimsical.com/example-board", preferred)
+                preferred_copy = preferred.read_text(encoding="utf-8")
+
+        self.assertEqual(svg_text, "<svg></svg>")
+        self.assertEqual(preferred_copy, '{"cookies": []}')
+
+    def test_fetch_svg_surfaces_recovery_command_when_no_session_found(self) -> None:
+        missing = Path("/tmp/missing-whimsical-session.json")
+        with (
+            patch.object(render_whimsical, "discover_storage_state_candidates", return_value=[missing]),
+            patch.object(render_whimsical, "discover_profile_candidates", return_value=[]),
+        ):
+            with self.assertRaises(SystemExit) as ctx:
+                render_whimsical.fetch_svg("https://whimsical.com/example-board", missing)
+
+        self.assertIn("Nepavyko rasti veikiančios Whimsical sesijos", str(ctx.exception))
+        self.assertIn("--login", str(ctx.exception))
 
 
 if __name__ == "__main__":

@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import csv
 import re
+import shutil
 import tempfile
 import threading
 import xml.etree.ElementTree as ET
@@ -15,7 +16,7 @@ from pathlib import Path
 from PIL import Image
 from playwright.sync_api import sync_playwright
 
-from workflow_obsidian import default_obsidian_dest
+from workflow_obsidian import default_obsidian_dest, sync_book_to_obsidian
 from workflow_rules import resolve_book_root, resolve_repo_path
 from workflow_subprocess import (
     DEFAULT_TIMEOUT_SECONDS,
@@ -27,6 +28,15 @@ from workflow_subprocess import (
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_STORAGE_STATE = Path("~/.cache/codex-whimsical/storage-state.json").expanduser()
+WHIMSICAL_CACHE_DIR = DEFAULT_STORAGE_STATE.parent
+
+
+class WhimsicalSessionError(RuntimeError):
+    pass
+
+
+class WhimsicalFetchError(RuntimeError):
+    pass
 
 
 def parse_args() -> argparse.Namespace:
@@ -125,12 +135,72 @@ def login_whimsical(storage_state_path: Path) -> None:
     print(f"Saved Whimsical session to {storage_state_path}")
 
 
-def fetch_svg(board_url: str, storage_state_path: Path) -> str:
-    if not storage_state_path.exists():
-        raise SystemExit(
-            f"Whimsical session file not found: {storage_state_path}\n"
-            "Run with --login first."
+def discover_storage_state_candidates(preferred_path: Path) -> list[Path]:
+    candidates: list[Path] = []
+    seen: set[Path] = set()
+
+    def add(path: Path) -> None:
+        resolved = path.expanduser()
+        if resolved not in seen:
+            seen.add(resolved)
+            candidates.append(resolved)
+
+    add(preferred_path)
+    add(DEFAULT_STORAGE_STATE)
+    if WHIMSICAL_CACHE_DIR.exists():
+        for path in sorted(WHIMSICAL_CACHE_DIR.rglob("storage-state*.json")):
+            add(path)
+    return candidates
+
+
+def discover_profile_candidates() -> list[Path]:
+    if not WHIMSICAL_CACHE_DIR.exists():
+        return []
+    return sorted(path for path in WHIMSICAL_CACHE_DIR.glob("profile-copy*") if path.is_dir())
+
+
+def ensure_authenticated_page(page: object, source_label: str) -> None:
+    page_title = str(page.title()).lower()
+    page_url = str(page.url).lower()
+    if "log in" in page_title or "/login" in page_url:
+        raise WhimsicalSessionError(f"Whimsical sesija negalioja: {source_label}")
+
+
+def fetch_svg_payload(page: object, board_url: str, source_label: str) -> str:
+    page.goto(board_url, wait_until="domcontentloaded", timeout=60000)
+    ensure_authenticated_page(page, source_label)
+    svg_url = board_url.rstrip("/") + "/svg"
+    payload = page.evaluate(
+        """async (url) => {
+            const response = await fetch(url, { credentials: 'include' });
+            return {
+                status: response.status,
+                contentType: response.headers.get('content-type'),
+                text: await response.text(),
+            };
+        }""",
+        svg_url,
+    )
+    content_type = payload["contentType"] or ""
+    svg_text = payload["text"] or ""
+    if payload["status"] in {401, 403}:
+        raise WhimsicalSessionError(
+            f"Whimsical atmetė /svg eksportą ({payload['status']}) naudojant {source_label}"
         )
+    if payload["status"] != 200:
+        raise WhimsicalFetchError(
+            f"Unexpected SVG response from Whimsical: {payload['status']} {payload['contentType']}"
+        )
+    if "svg" not in content_type or not svg_text.lstrip().startswith("<svg"):
+        raise WhimsicalSessionError(
+            f"Whimsical grąžino neautorizuotą arba ne-SVG dokumentą naudojant {source_label}"
+        )
+    return svg_text
+
+
+def fetch_svg_via_storage_state(board_url: str, storage_state_path: Path) -> str:
+    if not storage_state_path.exists():
+        raise WhimsicalSessionError(f"Whimsical session file not found: {storage_state_path}")
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True)
         context = browser.new_context(
@@ -138,30 +208,79 @@ def fetch_svg(board_url: str, storage_state_path: Path) -> str:
             viewport={"width": 1600, "height": 2400},
         )
         page = context.new_page()
-        page.goto(board_url, wait_until="domcontentloaded", timeout=60000)
-        if "log in" in page.title().lower():
+        try:
+            return fetch_svg_payload(page, board_url, f"storage-state {storage_state_path}")
+        finally:
             browser.close()
-            raise SystemExit("Whimsical session has expired. Re-run with --login.")
-        svg_url = board_url.rstrip("/") + "/svg"
-        payload = page.evaluate(
-            """async (url) => {
-                const response = await fetch(url, { credentials: 'include' });
-                return {
-                    status: response.status,
-                    contentType: response.headers.get('content-type'),
-                    text: await response.text(),
-                };
-            }""",
-            svg_url,
+
+
+def fetch_svg_via_profile(board_url: str, profile_dir: Path, export_storage_state_to: Path) -> str:
+    with sync_playwright() as pw:
+        context = pw.chromium.launch_persistent_context(
+            user_data_dir=str(profile_dir),
+            headless=True,
+            viewport={"width": 1600, "height": 2400},
         )
-        browser.close()
-    if payload["status"] != 200 or "svg" not in (payload["contentType"] or ""):
-        raise SystemExit(
-            f"Unexpected SVG response from Whimsical: {payload['status']} {payload['contentType']}"
-        )
-    if not payload["text"].lstrip().startswith("<svg"):
-        raise SystemExit("Whimsical returned a non-SVG document. Re-run with --login.")
-    return payload["text"]
+        page = context.new_page()
+        try:
+            svg_text = fetch_svg_payload(page, board_url, f"profile {profile_dir}")
+            export_storage_state_to.parent.mkdir(parents=True, exist_ok=True)
+            context.storage_state(path=str(export_storage_state_to))
+            return svg_text
+        finally:
+            context.close()
+
+
+def recovery_command(storage_state_path: Path) -> str:
+    return (
+        ".venv/bin/python scripts/render_whimsical_figure.py "
+        f"--storage-state {storage_state_path} --login"
+    )
+
+
+def fetch_svg(board_url: str, storage_state_path: Path) -> str:
+    preferred_path = storage_state_path.expanduser()
+    attempts: list[str] = []
+
+    for candidate in discover_storage_state_candidates(preferred_path):
+        if not candidate.exists():
+            attempts.append(f"- trūksta storage-state: {candidate}")
+            continue
+        try:
+            svg_text = fetch_svg_via_storage_state(board_url, candidate)
+            if candidate != preferred_path:
+                preferred_path.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(candidate, preferred_path)
+                print(f"Recovered Whimsical session from {candidate} -> {preferred_path}")
+            return svg_text
+        except WhimsicalSessionError as exc:
+            attempts.append(f"- netiko storage-state {candidate}: {exc}")
+            continue
+        except WhimsicalFetchError as exc:
+            raise SystemExit(str(exc)) from exc
+
+    for profile_dir in discover_profile_candidates():
+        try:
+            svg_text = fetch_svg_via_profile(board_url, profile_dir, preferred_path)
+            print(f"Recovered Whimsical session from profile {profile_dir} -> {preferred_path}")
+            return svg_text
+        except WhimsicalSessionError as exc:
+            attempts.append(f"- netiko profile {profile_dir}: {exc}")
+            continue
+        except WhimsicalFetchError as exc:
+            raise SystemExit(str(exc)) from exc
+
+    if attempts:
+        details = "\n".join(attempts)
+    else:
+        details = "- nepavyko rasti nei storage-state, nei Whimsical profile recovery šaltinio."
+    raise SystemExit(
+        "Nepavyko rasti veikiančios Whimsical sesijos renderiui.\n"
+        f"Kanoninis storage-state kelias: {preferred_path}\n"
+        f"Patikrinti šaltiniai:\n{details}\n"
+        "Recovery:\n"
+        f"  {recovery_command(preferred_path)}"
+    )
 
 
 def parse_dimension(value: str | None) -> float | None:
@@ -251,21 +370,7 @@ def convert_svg_to_png(svg_path: Path, png_path: Path, width: int) -> None:
 
 
 def sync_obsidian(dest: Path, book_root: Path) -> None:
-    book_root_rel = book_root.resolve().relative_to(REPO_ROOT)
-    try:
-        run_checked_subprocess(
-            [
-                str(REPO_ROOT / "scripts/sync_obsidian_book.sh"),
-                "--book-root",
-                str(book_root_rel),
-                "--dest",
-                str(dest),
-            ],
-            phase="sync Obsidian book",
-            timeout=DEFAULT_TIMEOUT_SECONDS,
-        )
-    except WorkflowSubprocessError as exc:
-        raise SystemExit(str(exc)) from exc
+    sync_book_to_obsidian(dest, book_root, repo_root=REPO_ROOT)
 
 
 def main() -> int:

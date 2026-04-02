@@ -22,3 +22,10 @@ Visi aktyvūs paveikslai ir jų kanoniniai šaltiniai turi būti surašyti:
 Jei source kandidatas ateina iš EPUB inventory, aktyvų įrašą kurkite per:
 
 - `python3 scripts/register_whimsical_figure.py --book-root books/<slug> --source-figure-id <id> --figure-number <n> --whimsical-url <url>`
+
+Svarbu:
+
+- `register_whimsical_figure.py` dabar ne tik įrašo manifest eilutę ir sugeneruoja `png`, bet ir automatiškai įterpia paveikslą į atitinkamą `lt/chapters/<slug>.md`.
+- jei reikia atkurti `Whimsical` sesiją tame pačiame žingsnyje, pridėkite `--login`; jei reikia iškart atnaujinti live vault, pridėkite `--sync-obsidian`.
+- figūra laikoma užbaigta repo viduje tik tada, kai yra visi trys sluoksniai: `lt/figures/manifest.tsv`, `lt/figures/*.png` ir įterptas paveikslas `lt/chapters/*.md`.
+- `Obsidian` pusėje figūra laikoma matoma tik po sėkmingo sync.
