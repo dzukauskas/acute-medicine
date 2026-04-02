@@ -18,6 +18,7 @@ Passive repo context index:
 - thread_routing | same chapter or blocker cluster stays in one translation thread | same technical theme stays in one repo-engineering thread | switching modes or themes => recommend new thread | Hand off only for real parallel branch/worktree isolation
 
 Binding workflow:
+- Dirbk retrieval-led principu: workflow kontraktus, active rules / terminology locks, chapter state, repo-engineering state ir guideline-sensitive norminius faktus pirmiausia atkurk iš kanoninių repo artefaktų, o ne iš ankstesnių prielaidų ar thread istorijos.
 - Treat repo-relative `books/README.md`, `books/_template/workflow.md`, and `books/_template/source-priority.md` as operational rules, not optional guidance.
 - Follow `shared/` plus `*.local.tsv` rule architecture exactly.
 - Never reactivate legacy `books/<slug>/*.tsv` active rule files.

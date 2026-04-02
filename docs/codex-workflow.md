@@ -12,6 +12,7 @@ Static passive repo context:
 
 Dynamic durable execution state:
 
+- ši būsena yra workflow-specific ir turi būti perskaitoma iš kanoninių artefaktų, o ne spėjama iš modelio atminties ar thread istorijos;
 - vertimo režime būsena gyvena `research/<slug>.md`, chapter pack failuose `chapter_packs/<slug>.yaml`, `term_candidates.tsv`, `lt/chapters/<slug>.md` ir, kai reikia, `adjudication_packs/<slug>.yaml`;
 - repo-engineering režime būsena gyvena `ENGINEERING_LEDGER.md`.
 

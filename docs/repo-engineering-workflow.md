@@ -19,6 +19,7 @@ Static passive repo context:
 
 Dynamic durable execution state:
 
+- ši būsena yra workflow-specific ir turi būti perskaitoma iš `ENGINEERING_LEDGER.md`, o ne spėjama iš thread istorijos;
 - einama repo-engineering būsena gyvena `ENGINEERING_LEDGER.md`.
 
 Non-canonical context:
@@ -163,5 +164,5 @@ Tai išspausdins trumpą promptą, kurį gali tiesiog įklijuoti į naują `Code
 Jei nenori leisti skripto, minimalus rankinis promptas yra toks:
 
 ```text
-Perskaityk AGENTS.md, docs/codex-workflow.md, docs/repo-engineering-workflow.md ir ENGINEERING_LEDGER.md. Dirbk repo-engineering režimu. Jei ledger turi aktyvią temą, tęsk ją; jei aktyvios temos nėra, pradėk kitą siaurą temą pagal ledger santrauką, `Next Steps` ir paskutinę uždarytą temą.
+Perskaityk AGENTS.md, docs/codex-workflow.md, docs/repo-engineering-workflow.md ir ENGINEERING_LEDGER.md. Dirbk repo-engineering režimu. Static passive repo context imk iš AGENTS.md ir workflow docs; current dynamic durable execution state imk iš ENGINEERING_LEDGER.md. Thread history ar `handoffs/*.md` naudok tik jei ledger ir kanoninių artefaktų neužtenka. Jei ledger turi aktyvią temą, tęsk ją; jei aktyvios temos nėra, pradėk kitą siaurą temą pagal ledger santrauką, `Next Steps` ir paskutinę uždarytą temą.
 ```

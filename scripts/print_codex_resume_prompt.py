@@ -92,6 +92,7 @@ def render_engineering_prompt() -> str:
     lines = [
         "Perskaityk AGENTS.md, docs/codex-workflow.md, docs/repo-engineering-workflow.md ir ENGINEERING_LEDGER.md.",
         "Dirbk repo-engineering režimu.",
+        "Static passive repo context imk iš AGENTS.md ir workflow docs; current dynamic durable execution state imk iš ENGINEERING_LEDGER.md.",
     ]
     if has_active_theme(theme):
         lines.append(f"Tęsk aktyvią temą: {theme}.")
@@ -109,6 +110,7 @@ def render_engineering_prompt() -> str:
         lines.append(f"Pirmas prioritetas: {next_step}")
     if open_risks and not open_risks.startswith("_No "):
         lines.append(f"Atviros rizikos: {open_risks}")
+    lines.append("Thread history ar handoffs naudok tik jei ledger ir kanoninių repo artefaktų neužtenka.")
     if has_active_theme(theme):
         lines.append("Jei tema nepasikeitė, lik tame pačiame thread kontekste; jei tema jau kita, aiškiai pasakyk, kad logiška pradėti naują thread.")
     else:

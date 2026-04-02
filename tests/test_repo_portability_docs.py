@@ -16,6 +16,8 @@ BOOK_TRANSLATION_WORKFLOW_PATH = REPO_ROOT / "docs" / "book-translation-workflow
 BOOKS_README_PATH = REPO_ROOT / "books" / "README.md"
 BOOTSTRAP_MACOS_PATH = REPO_ROOT / "scripts" / "bootstrap_macos.sh"
 SETUP_CODEX_MCP_PATH = REPO_ROOT / "scripts" / "setup_codex_mcp.sh"
+PASSIVE_INDEX_PATTERN = re.compile(r"Passive repo context index:\n((?:- .+\n)+)")
+TIME_SENSITIVE_STATE_MARKERS = ("Active Theme", "Completed Themes", "Last updated")
 SHELL_DOCS = {
     NEW_MAC_SETUP_PATH: (
         "naudoja `bash`",
@@ -44,6 +46,12 @@ SHELL_DOCS = {
 
 
 class RepoPortabilityDocsTests(unittest.TestCase):
+    def extract_passive_index_block(self) -> str:
+        text = AGENTS_PATH.read_text(encoding="utf-8")
+        match = PASSIVE_INDEX_PATTERN.search(text)
+        self.assertIsNotNone(match, msg="AGENTS.md is missing the passive repo context index block.")
+        return match.group(1)
+
     def test_portability_docs_do_not_bake_host_repo_root(self) -> None:
         host_repo_root = str(REPO_ROOT)
         paths = [AGENTS_PATH, *SHELL_DOCS.keys()]
@@ -96,6 +104,23 @@ class RepoPortabilityDocsTests(unittest.TestCase):
         self.assertIn("skill_precedence | AGENTS.md + binding workflow docs override conflicting repo-local skill text", text)
         self.assertIn("translation_qa | rerunnable pipeline via scripts/run_chapter_qa.py | not a stored machine-readable receipt", text)
 
+    def test_agents_passive_index_stays_compact_and_non_temporal(self) -> None:
+        index_block = self.extract_passive_index_block()
+        index_lines = [line for line in index_block.splitlines() if line.strip()]
+        self.assertLessEqual(len(index_lines), 14, msg="AGENTS.md passive index should stay compact.")
+        for marker in TIME_SENSITIVE_STATE_MARKERS:
+            self.assertNotIn(marker, index_block, msg=f"AGENTS.md passive index should not store `{marker}`.")
+        self.assertIsNone(
+            re.search(r"\b20\d{2}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:[+-]\d{2}:\d{2})?)?\b", index_block),
+            msg="AGENTS.md passive index should not accumulate time-sensitive date state.",
+        )
+
+    def test_agents_include_retrieval_led_rule(self) -> None:
+        text = AGENTS_PATH.read_text(encoding="utf-8")
+        self.assertIn("Dirbk retrieval-led principu:", text)
+        self.assertIn("workflow kontraktus, active rules / terminology locks, chapter state, repo-engineering state", text)
+        self.assertIn("kanoninių repo artefaktų", text)
+
     def test_generated_term_candidates_lock_file_is_gitignored(self) -> None:
         text = GITIGNORE_PATH.read_text(encoding="utf-8")
         self.assertIn(".term_candidates.tsv.lock", text)
@@ -143,6 +168,22 @@ class RepoPortabilityDocsTests(unittest.TestCase):
             self.assertIn(dynamic_fragment, text, msg=f"{path} is missing durable state guidance.")
             self.assertIn("Non-canonical context:", text, msg=f"{path} is missing non-canonical context guidance.")
             self.assertIn("thread history", text, msg=f"{path} should explicitly demote thread history.")
+            self.assertIn("workflow-specific", text, msg=f"{path} should explain that dynamic state is workflow-specific.")
+            self.assertNotIn(
+                "retrievable durable workflow context",
+                text,
+                msg=f"{path} should keep the Stage 1 memory-model terminology stable.",
+            )
+
+    def test_workflow_docs_keep_static_dynamic_split_consistent(self) -> None:
+        codex_text = CODEX_WORKFLOW_PATH.read_text(encoding="utf-8")
+        translation_text = BOOK_TRANSLATION_WORKFLOW_PATH.read_text(encoding="utf-8")
+        engineering_text = REPO_ENGINEERING_WORKFLOW_PATH.read_text(encoding="utf-8")
+
+        self.assertIn("kanoninių artefaktų", codex_text)
+        self.assertIn("kanoninių chapter artefaktų", translation_text)
+        self.assertIn("`ENGINEERING_LEDGER.md`", engineering_text)
+        self.assertIn("o ne spėjama iš thread istorijos", engineering_text)
 
     def test_translation_workflow_uses_chapter_pack_term_and_concrete_path(self) -> None:
         for path in (CODEX_WORKFLOW_PATH, BOOK_TRANSLATION_WORKFLOW_PATH):
@@ -150,6 +191,11 @@ class RepoPortabilityDocsTests(unittest.TestCase):
             self.assertIn("chapter pack", text, msg=f"{path} should use the artifact-type term `chapter pack`.")
             self.assertIn("chapter_packs/<slug>.yaml", text, msg=f"{path} should name the concrete chapter pack path.")
             self.assertNotIn("`chapter_pack`", text, msg=f"{path} should avoid the legacy `chapter_pack` label.")
+
+    def test_translation_workflow_docs_capture_guideline_freshness_guard(self) -> None:
+        text = BOOK_TRANSLATION_WORKFLOW_PATH.read_text(encoding="utf-8")
+        self.assertIn("source / version / year / jurisdiction", text)
+        self.assertIn("norminė informacija nesusimaišytų", text)
 
     def test_post_bootstrap_verification_contract_is_consistent(self) -> None:
         expected_modules = (

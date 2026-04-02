@@ -74,6 +74,9 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("Dabartinė būsena: State", prompt)
         self.assertIn("Priimti sprendimai: Decision", prompt)
         self.assertIn("Atviros rizikos: Risk", prompt)
+        self.assertIn("Static passive repo context imk iš AGENTS.md ir workflow docs;", prompt)
+        self.assertIn("current dynamic durable execution state imk iš ENGINEERING_LEDGER.md.", prompt)
+        self.assertIn("Thread history ar handoffs naudok tik jei ledger ir kanoninių repo artefaktų neužtenka.", prompt)
         self.assertIn("Tęsk aktyvią temą", prompt)
 
     def test_engineering_prompt_handles_no_active_theme(self) -> None:
@@ -130,6 +133,8 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("Priimti sprendimai: Decision", prompt)
         self.assertIn("Atviros rizikos: Risk", prompt)
         self.assertIn("Pasirinkti kitą siaurą temą.", prompt)
+        self.assertIn("current dynamic durable execution state imk iš ENGINEERING_LEDGER.md.", prompt)
+        self.assertIn("Thread history ar handoffs naudok tik jei ledger ir kanoninių repo artefaktų neužtenka.", prompt)
         self.assertNotIn("Tęsk aktyvią temą", prompt)
 
     def test_translation_prompt_includes_book_workflow_and_term_candidates(self) -> None:
@@ -155,6 +160,7 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("current dynamic durable execution state imk iš šio skyriaus artefaktų.", prompt)
         self.assertIn("run_chapter_qa.py", prompt)
         self.assertIn("stored machine-readable receipt", prompt)
+        self.assertNotIn("aktyvaus darbo ir einamo skyriaus artefaktų", prompt)
 
     def test_translation_prompt_without_chapter_still_mentions_qa_rerun(self) -> None:
         with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
@@ -166,6 +172,10 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("Static passive repo context imk iš AGENTS.md, books/README.md ir workflow docs;", prompt)
         self.assertIn("current dynamic durable execution state imk iš aktyvaus darbo ir einamo skyriaus artefaktų.", prompt)
         self.assertNotIn("current dynamic durable execution state imk iš šio skyriaus artefaktų.", prompt)
+        self.assertNotIn("Tęsk šio skyriaus darbą:", prompt)
+        self.assertNotIn("research/001-mini.md", prompt)
+        self.assertNotIn("chapter_packs/001-mini.yaml", prompt)
+        self.assertNotIn("nustatyk aktyvų skyrių", prompt.lower())
 
     def test_translation_prompt_accepts_full_slug_token(self) -> None:
         with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
@@ -202,6 +212,22 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         for fragment in shared_fragments:
             self.assertIn(fragment, workflow_text)
             self.assertIn(fragment, prompt)
+
+    def test_engineering_prompt_matches_manual_workflow_contract_fragments(self) -> None:
+        workflow_text = (REPO_ROOT / "docs" / "repo-engineering-workflow.md").read_text(encoding="utf-8")
+        prompt = print_codex_resume_prompt.render_engineering_prompt()
+
+        shared_fragments = (
+            "Static passive repo context imk iš AGENTS.md ir workflow docs;",
+            "current dynamic durable execution state imk iš ENGINEERING_LEDGER.md.",
+            "Thread history ar `handoffs/*.md` naudok tik jei ledger ir kanoninių artefaktų neužtenka.",
+        )
+        for fragment in shared_fragments:
+            self.assertIn(fragment, workflow_text)
+
+        self.assertIn("Static passive repo context imk iš AGENTS.md ir workflow docs;", prompt)
+        self.assertIn("current dynamic durable execution state imk iš ENGINEERING_LEDGER.md.", prompt)
+        self.assertIn("Thread history ar handoffs naudok tik jei ledger ir kanoninių repo artefaktų neužtenka.", prompt)
 
     def test_main_prints_engineering_prompt(self) -> None:
         with silence_stdio():

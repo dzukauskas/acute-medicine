@@ -38,7 +38,9 @@ Static passive repo context:
 
 Dynamic durable execution state:
 
+- ši būsena yra workflow-specific ir turi būti perskaitoma iš kanoninių chapter artefaktų, o ne spėjama iš ankstesnio pokalbio;
 - einamo skyriaus būsena gyvena `research/<slug>.md`, `chapter_packs/<slug>.yaml`, `term_candidates.tsv`, `lt/chapters/<slug>.md` ir, kai reikia, `adjudication_packs/<slug>.yaml`.
+- Jei research sluoksnyje fiksuoji guideline-sensitive ar kitą norminį sprendimą, palik pakankamą source / version / year / jurisdiction kontekstą, kad sena ir nauja norminė informacija nesusimaišytų.
 
 Non-canonical context:
 
