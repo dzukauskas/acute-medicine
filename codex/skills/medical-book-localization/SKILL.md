@@ -14,6 +14,7 @@ If the repository defines binding workflow files or repo-level agent rules, foll
 - Prefer the repository's workflow contract over generic localization instincts.
 - If the repo defines `books/README.md`, `books/_template/workflow.md`, `books/_template/source-priority.md`, or a book-local `workflow.md`, treat them as operational rules.
 - If the repo defines tracked execution artifacts such as `research/`, `chapter_packs/<slug>.yaml`, `term_candidates.tsv`, `adjudication_packs/<slug>.yaml`, `review_deltas/<slug>.tsv`, or figure manifests, use them instead of inventing parallel structure.
+- In this repo, active rule layers come only from `shared/` plus book-local `*.local.tsv`; do not reactivate legacy active rule files under `books/<slug>/*.tsv`.
 - Never turn a translation task into repo-engineering unless a real tooling defect appears.
 
 ## Memory model
