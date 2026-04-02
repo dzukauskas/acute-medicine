@@ -4,6 +4,19 @@ Primary goal:
 - Localize medical books into precise Lithuanian medical language for real clinical and educational use.
 - Pagrindinis LT tekstas turi būti kuo artimesnis originaliam angliškam tekstui pagal prasmę, struktūrą ir sakinio funkciją.
 
+Passive repo context index:
+- repo_purpose | precise Lithuanian medical book localization for clinical and educational use
+- workflow_modes | book-translation | repo-engineering
+- static_passive_context | AGENTS.md | books/README.md | docs/codex-workflow.md | docs/book-translation-workflow.md | docs/repo-engineering-workflow.md | books/_template/workflow.md | books/_template/source-priority.md
+- canonical_rule_base | AGENTS.md + binding workflow docs
+- translation_durable_state | research/<slug>.md | chapter_packs/<slug>.yaml | term_candidates.tsv | lt/chapters/<slug>.md | adjudication_packs/<slug>.yaml | lt/figures/*
+- repo_engineering_durable_state | ENGINEERING_LEDGER.md
+- thread_history | not canonical; checkpoint state into canonical workflow artifacts before compact or new thread
+- skill_precedence | AGENTS.md + binding workflow docs override conflicting repo-local skill text
+- tool_layers | machine-level preferred tools when available | repo-local bootstrap guaranteed tools are the tracked minimum
+- translation_qa | rerunnable pipeline via scripts/run_chapter_qa.py | not a stored machine-readable receipt
+- thread_routing | same chapter or blocker cluster stays in one translation thread | same technical theme stays in one repo-engineering thread | switching modes or themes => recommend new thread | Hand off only for real parallel branch/worktree isolation
+
 Binding workflow:
 - Treat repo-relative `books/README.md`, `books/_template/workflow.md`, and `books/_template/source-priority.md` as operational rules, not optional guidance.
 - Follow `shared/` plus `*.local.tsv` rule architecture exactly.

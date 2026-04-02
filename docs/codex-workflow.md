@@ -4,12 +4,27 @@
 
 Jei tikėtinas `compact` arba naujas thread, pirma užfiksuok dabartinę būseną kanoniniuose to režimo artefaktuose. Thread istorija čia nėra checkpoint.
 
+## Memory model
+
+Static passive repo context:
+
+- `AGENTS.md` ir workflow docs aprašo, kas yra šis repo, kokie yra darbo režimai, kur gyvena kanoninės taisyklės ir kaip sluoksniuojami tool'ai.
+
+Dynamic durable execution state:
+
+- vertimo režime būsena gyvena `research/<slug>.md`, chapter pack failuose `chapter_packs/<slug>.yaml`, `term_candidates.tsv`, `lt/chapters/<slug>.md` ir, kai reikia, `adjudication_packs/<slug>.yaml`;
+- repo-engineering režime būsena gyvena `ENGINEERING_LEDGER.md`.
+
+Non-canonical context:
+
+- `thread history` ir `handoffs/*.md` gali padėti, bet jie nėra kanoninė atmintis.
+
 ## 1. Book translation workflow
 
 Šis režimas galioja, kai dirbama su konkrečios knygos turiniu:
 
 - `research`
-- `chapter_pack`
+- chapter pack
 - `term_candidates.tsv`
 - `lt/chapters`
 - `lt/figures`
@@ -27,7 +42,7 @@ Trumpa taisyklė:
 - vienas skyrius arba vienas jo blocker'ių rinkinys = vienas thread;
 - `Hand off` vertimo režime dažniausiai nereikia.
 - agentas turi pats pasakyti, jei mato, kad jau prasidėjo naujas skyrius ar kita savarankiška vertimo tema.
-- jei po `compact` ar naujo thread reikės atstatyti būseną, remkis `research`, `chapter_pack`, `term_candidates.tsv`, `lt/chapters` ir, kai reikia, `adjudication_packs`; `## Finalus agento auditas` yra durable QA pėdsakas, o automatinis QA šiandien yra rerunnable pipeline, ne stored machine-readable receipt.
+- jei po `compact` ar naujo thread reikės atstatyti būseną, remkis `research`, chapter pack failais `chapter_packs/<slug>.yaml`, `term_candidates.tsv`, `lt/chapters` ir, kai reikia, `adjudication_packs`; `## Finalus agento auditas` yra durable QA pėdsakas, o automatinis QA šiandien yra rerunnable pipeline, ne stored machine-readable receipt.
 
 ## 2. Repo engineering workflow
 
@@ -62,7 +77,7 @@ Trumpa taisyklė:
 
 Todėl:
 
-- vertimo režime pirmiausia remkis `research`, `chapter_pack`, `term_candidates.tsv`, `lt/chapters` ir, kai reikia, `adjudication_packs`;
+- vertimo režime pirmiausia remkis `research`, chapter pack failais `chapter_packs/<slug>.yaml`, `term_candidates.tsv`, `lt/chapters` ir, kai reikia, `adjudication_packs`;
 - repo engineering režime pirmiausia remkis `ENGINEERING_LEDGER.md`;
 - `handoff` naudok tik kaip papildomą lokalų scratchpad, o ne kaip pagrindinę atmintį.
 

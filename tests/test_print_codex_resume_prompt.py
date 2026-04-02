@@ -145,12 +145,16 @@ class PrintCodexResumePromptTests(unittest.TestCase):
 
         self.assertIn("books/_template/workflow.md", prompt)
         self.assertIn("books/_template/source-priority.md", prompt)
+        self.assertIn("docs/book-translation-workflow.md", prompt)
         self.assertIn("term_candidates.tsv", prompt)
         self.assertIn("Tęsk šio skyriaus darbą: 001.", prompt)
         self.assertIn("chapter_packs/001-mini.yaml", prompt)
         self.assertIn("001-mini.md", prompt)
         self.assertIn("adjudication_packs/001-mini.yaml", prompt)
+        self.assertIn("Static passive repo context imk iš AGENTS.md, books/README.md ir workflow docs;", prompt)
+        self.assertIn("current dynamic durable execution state imk iš šio skyriaus artefaktų.", prompt)
         self.assertIn("run_chapter_qa.py", prompt)
+        self.assertIn("stored machine-readable receipt", prompt)
 
     def test_translation_prompt_without_chapter_still_mentions_qa_rerun(self) -> None:
         with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
@@ -159,6 +163,9 @@ class PrintCodexResumePromptTests(unittest.TestCase):
 
         self.assertIn(f"Tęsk aktyvų darbą knygoje {book_root.name}.", prompt)
         self.assertIn("run_chapter_qa.py", prompt)
+        self.assertIn("Static passive repo context imk iš AGENTS.md, books/README.md ir workflow docs;", prompt)
+        self.assertIn("current dynamic durable execution state imk iš aktyvaus darbo ir einamo skyriaus artefaktų.", prompt)
+        self.assertNotIn("current dynamic durable execution state imk iš šio skyriaus artefaktų.", prompt)
 
     def test_translation_prompt_accepts_full_slug_token(self) -> None:
         with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
@@ -176,6 +183,25 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("chapter_packs/001-mini.yaml", prompt)
         self.assertIn("lt/chapters/001-mini.md", prompt)
         self.assertIn("adjudication_packs/001-mini.yaml", prompt)
+
+    def test_translation_prompt_matches_manual_workflow_contract_fragments(self) -> None:
+        workflow_text = (REPO_ROOT / "docs" / "book-translation-workflow.md").read_text(encoding="utf-8")
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            book_root = copy_mini_book(Path(tmp_dir))
+            chapter_pack = book_root / "chapter_packs" / "001-mini.yaml"
+            chapter_pack.parent.mkdir(parents=True, exist_ok=True)
+            chapter_pack.write_text("slug: 001-mini\n", encoding="utf-8")
+            prompt = print_codex_resume_prompt.render_translation_prompt(book_root, "001")
+
+        shared_fragments = (
+            "docs/book-translation-workflow.md",
+            "Static passive repo context imk iš AGENTS.md, books/README.md ir workflow docs;",
+            "current dynamic durable execution state imk iš šio skyriaus artefaktų.",
+            "run_chapter_qa.py iš naujo; jis nėra stored machine-readable receipt.",
+        )
+        for fragment in shared_fragments:
+            self.assertIn(fragment, workflow_text)
+            self.assertIn(fragment, prompt)
 
     def test_main_prints_engineering_prompt(self) -> None:
         with silence_stdio():

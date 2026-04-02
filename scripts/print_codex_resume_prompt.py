@@ -134,6 +134,7 @@ def resolve_translation_targets(book_root: Path, chapter: str | None) -> tuple[s
         "books/README.md",
         "books/_template/workflow.md",
         "books/_template/source-priority.md",
+        "docs/book-translation-workflow.md",
         book_root.relative_to(REPO_ROOT).as_posix() + "/workflow.md",
     ]
     if chapter:
@@ -169,9 +170,11 @@ def render_translation_prompt(book_root: Path, chapter: str | None) -> str:
     ]
     if chapter_token:
         lines.append(f"Tęsk šio skyriaus darbą: {chapter_token}.")
+        lines.append("Static passive repo context imk iš AGENTS.md, books/README.md ir workflow docs; current dynamic durable execution state imk iš šio skyriaus artefaktų.")
     else:
         lines.append(f"Tęsk aktyvų darbą knygoje {book_root.name}.")
-    lines.append("Jei po resume svarbus automatinis QA statusas, perleisk run_chapter_qa.py iš naujo; jis nėra saugomas stored receipt.")
+        lines.append("Static passive repo context imk iš AGENTS.md, books/README.md ir workflow docs; current dynamic durable execution state imk iš aktyvaus darbo ir einamo skyriaus artefaktų.")
+    lines.append("Jei po resume svarbus automatinis QA statusas, perleisk run_chapter_qa.py iš naujo; jis nėra stored machine-readable receipt.")
     lines.append("Jei tai tas pats skyrius ar tas pats blocker'ių rinkinys, lik tame pačiame thread kontekste; jei prasideda kitas skyrius ar kita vertimo tema, aiškiai pasakyk, kad logiška pradėti naują thread.")
     return " ".join(lines)
 

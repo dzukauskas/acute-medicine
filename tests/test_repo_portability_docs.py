@@ -12,6 +12,7 @@ GITIGNORE_PATH = REPO_ROOT / ".gitignore"
 NEW_MAC_SETUP_PATH = REPO_ROOT / "docs" / "new-mac-setup.md"
 CODEX_WORKFLOW_PATH = REPO_ROOT / "docs" / "codex-workflow.md"
 REPO_ENGINEERING_WORKFLOW_PATH = REPO_ROOT / "docs" / "repo-engineering-workflow.md"
+BOOK_TRANSLATION_WORKFLOW_PATH = REPO_ROOT / "docs" / "book-translation-workflow.md"
 BOOKS_README_PATH = REPO_ROOT / "books" / "README.md"
 BOOTSTRAP_MACOS_PATH = REPO_ROOT / "scripts" / "bootstrap_macos.sh"
 SETUP_CODEX_MCP_PATH = REPO_ROOT / "scripts" / "setup_codex_mcp.sh"
@@ -86,6 +87,15 @@ class RepoPortabilityDocsTests(unittest.TestCase):
         self.assertIn("`ebook-mcp`", text)
         self.assertIn("`context7`", text)
 
+    def test_agents_include_passive_repo_context_index(self) -> None:
+        text = AGENTS_PATH.read_text(encoding="utf-8")
+        self.assertIn("Passive repo context index:", text)
+        self.assertIn("static_passive_context | AGENTS.md | books/README.md | docs/codex-workflow.md", text)
+        self.assertIn("translation_durable_state | research/<slug>.md | chapter_packs/<slug>.yaml", text)
+        self.assertIn("repo_engineering_durable_state | ENGINEERING_LEDGER.md", text)
+        self.assertIn("skill_precedence | AGENTS.md + binding workflow docs override conflicting repo-local skill text", text)
+        self.assertIn("translation_qa | rerunnable pipeline via scripts/run_chapter_qa.py | not a stored machine-readable receipt", text)
+
     def test_generated_term_candidates_lock_file_is_gitignored(self) -> None:
         text = GITIGNORE_PATH.read_text(encoding="utf-8")
         self.assertIn(".term_candidates.tsv.lock", text)
@@ -112,11 +122,34 @@ class RepoPortabilityDocsTests(unittest.TestCase):
         self.assertIn(".venv/bin/python scripts/write_codex_handoff.py", repo_workflow)
         self.assertIn(".venv/bin/python scripts/print_codex_resume_prompt.py --mode engineering", repo_workflow)
 
+        translation_workflow = BOOK_TRANSLATION_WORKFLOW_PATH.read_text(encoding="utf-8")
+        self.assertIn(".venv/bin/python scripts/print_codex_resume_prompt.py \\", translation_workflow)
+
     def test_repo_engineering_workflow_docs_cover_no_active_theme(self) -> None:
         text = REPO_ENGINEERING_WORKFLOW_PATH.read_text(encoding="utf-8")
         self.assertIn("`no-active-theme`", text)
         self.assertIn("Jei ledger turi aktyvią temą, tęsk ją", text)
         self.assertIn("jei aktyvios temos nėra", text)
+
+    def test_workflow_docs_separate_static_and_dynamic_context(self) -> None:
+        expected_dynamic_fragments = {
+            CODEX_WORKFLOW_PATH: "Dynamic durable execution state:",
+            REPO_ENGINEERING_WORKFLOW_PATH: "Dynamic durable execution state:",
+            BOOK_TRANSLATION_WORKFLOW_PATH: "Dynamic durable execution state:",
+        }
+        for path, dynamic_fragment in expected_dynamic_fragments.items():
+            text = path.read_text(encoding="utf-8")
+            self.assertIn("Static passive repo context:", text, msg=f"{path} is missing static context guidance.")
+            self.assertIn(dynamic_fragment, text, msg=f"{path} is missing durable state guidance.")
+            self.assertIn("Non-canonical context:", text, msg=f"{path} is missing non-canonical context guidance.")
+            self.assertIn("thread history", text, msg=f"{path} should explicitly demote thread history.")
+
+    def test_translation_workflow_uses_chapter_pack_term_and_concrete_path(self) -> None:
+        for path in (CODEX_WORKFLOW_PATH, BOOK_TRANSLATION_WORKFLOW_PATH):
+            text = path.read_text(encoding="utf-8")
+            self.assertIn("chapter pack", text, msg=f"{path} should use the artifact-type term `chapter pack`.")
+            self.assertIn("chapter_packs/<slug>.yaml", text, msg=f"{path} should name the concrete chapter pack path.")
+            self.assertNotIn("`chapter_pack`", text, msg=f"{path} should avoid the legacy `chapter_pack` label.")
 
     def test_post_bootstrap_verification_contract_is_consistent(self) -> None:
         expected_modules = (

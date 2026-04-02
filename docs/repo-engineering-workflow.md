@@ -11,6 +11,20 @@ Pavyzdžiai:
 - auditų findings įgyvendinimas;
 - `Codex`, `Obsidian`, `Whimsical`, `MCP` ar bootstrap infrastruktūros taisymai.
 
+## Memory model
+
+Static passive repo context:
+
+- pirmiausia remkis `AGENTS.md`, `docs/codex-workflow.md` ir `docs/repo-engineering-workflow.md`; jie aprašo repo paskirtį, workflow split, tool hierarchiją ir kanoninių artefaktų vietą.
+
+Dynamic durable execution state:
+
+- einama repo-engineering būsena gyvena `ENGINEERING_LEDGER.md`.
+
+Non-canonical context:
+
+- `thread history` ir `handoffs/*.md` gali padėti, bet jie nėra kanoninė atmintis.
+
 ## Paprasta taisyklė
 
 Viena techninė tema = vienas thread.
@@ -45,6 +59,7 @@ Tai tracked failas repo šaknyje. Jame turi gyventi:
 - kiti žingsniai;
 - atviri rizikos taškai.
 
+Resume ar naujo thread metu pirma perskaityk static passive repo context iš `AGENTS.md` ir workflow docs, tada `ENGINEERING_LEDGER.md`, ir tik po to, jei reikia, papildomą thread istoriją ar `handoffs/*.md`.
 Thread istorija čia nėra kanoninė. Jei pokalbis išsitęsia, naujas thread pirmiausia turi perskaityti `ENGINEERING_LEDGER.md`.
 Jei tikėtinas `compact` arba naujas thread, ledger turi būti atnaujintas prieš būsenos pernešimą, kad nauja sesija galėtų remtis ledger, o ne thread istorija.
 
