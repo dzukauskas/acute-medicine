@@ -198,5 +198,7 @@ Kiekvienam paveikslui ar algoritmui:
 1. source kandidatas pirmiausia užfiksuojamas `source/index/figures.tsv`, jei originalas buvo EPUB;
 2. parenkamas vienas kanoninis aktyvus šaltinis ir jis įrašomas į `lt/figures/manifest.tsv`;
 3. vienintelė aktyvi redaguojama forma šiame projekte yra `Whimsical` lenta;
-4. į repo saugomas galutinis `png`, skirtas `Obsidian` ir skyriaus `md` failams;
-5. jei `Whimsical` kelias šioje sesijoje neveikia, darbas stabdomas ir aiškiai įvardijamas blokatorius.
+4. į repo saugomas galutinis `png`, skirtas `Obsidian` ir skyriaus `md` failams, ir aktyvus paveikslas turi būti įterptas į atitinkamą `lt/chapters/<slug>.md`;
+5. figūra laikoma užbaigta repo viduje tik tada, kai sutampa visi trys sluoksniai: `lt/figures/manifest.tsv`, `lt/figures/*.png` ir paveikslo įterpimas `lt/chapters/*.md`;
+6. jei reikia live `Obsidian` matomumo, jis laikomas užbaigtu tik po sėkmingo sync;
+7. jei `Whimsical` kelias šioje sesijoje neveikia, darbas stabdomas ir aiškiai įvardijamas blokatorius.

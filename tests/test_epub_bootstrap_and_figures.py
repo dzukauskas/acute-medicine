@@ -27,6 +27,7 @@ if str(TESTS_DIR) not in sys.path:
 
 import bootstrap_book_from_epub as epub_bootstrap  # noqa: E402
 import register_whimsical_figure as figure_register  # noqa: E402
+import workflow_figures as workflow_figures  # noqa: E402
 from workflow_subprocess import WorkflowSubprocessError  # noqa: E402
 from workflow_test_utils import silence_stdio  # noqa: E402
 
@@ -294,9 +295,11 @@ class RegisterWhimsicalFigureTests(unittest.TestCase):
     def make_book_root(self, base_dir: Path) -> Path:
         book_root = base_dir / "books" / "test-book"
         (book_root / "source" / "index").mkdir(parents=True, exist_ok=True)
+        (book_root / "lt" / "chapters").mkdir(parents=True, exist_ok=True)
         (book_root / "lt" / "figures").mkdir(parents=True, exist_ok=True)
         self.write(book_root / "source" / "index" / "figures.tsv", FIGURE_INDEX_HEADER)
         self.write(book_root / "lt" / "figures" / "manifest.tsv", MANIFEST_HEADER)
+        self.write(book_root / "lt" / "chapters" / "001-first-chapter.md", "# Chapter\n\n## 3.1 paveikslas\n")
         return book_root
 
     def test_register_creates_manifest_row_without_render_side_effects(self) -> None:
@@ -311,6 +314,7 @@ class RegisterWhimsicalFigureTests(unittest.TestCase):
 
             with (
                 patch.object(figure_register, "repo_relative_path", lambda path: path.resolve().relative_to(temp_root.resolve()).as_posix()),
+                patch.object(workflow_figures, "REPO_ROOT", temp_root.resolve()),
                 patch.object(figure_register, "render_registered_figure", lambda *_: None),
                 patch.object(
                     figure_register,
@@ -333,6 +337,8 @@ class RegisterWhimsicalFigureTests(unittest.TestCase):
             self.assertIn("figure-3-1-001-first-chapter-fig-01", manifest_rows[1])
             self.assertIn("https://whimsical.com/example-board", manifest_rows[1])
             self.assertIn("source_figure_id=001-first-chapter-fig-01", manifest_rows[1])
+            chapter_text = (book_root / "lt" / "chapters" / "001-first-chapter.md").read_text(encoding="utf-8")
+            self.assertIn("![Airway figure](../figures/figure-3-1-001-first-chapter-fig-01.png)", chapter_text)
 
     def test_register_rolls_back_manifest_when_render_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -349,6 +355,7 @@ class RegisterWhimsicalFigureTests(unittest.TestCase):
 
             with (
                 patch.object(figure_register, "repo_relative_path", lambda path: path.resolve().relative_to(temp_root.resolve()).as_posix()),
+                patch.object(workflow_figures, "REPO_ROOT", temp_root.resolve()),
                 patch.object(figure_register, "render_registered_figure", failing_render),
                 patch.object(
                     figure_register,

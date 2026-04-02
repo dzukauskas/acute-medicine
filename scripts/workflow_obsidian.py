@@ -10,7 +10,6 @@ from pathlib import Path
 
 from workflow_rules import normalize_key, require_book_root
 from workflow_runtime import REPO_ROOT, obsidian_config, obsidian_dest_for_title
-from workflow_subprocess import DEFAULT_TIMEOUT_SECONDS, WorkflowSubprocessError, run_checked_subprocess
 
 
 SECTION_TITLE_RE = re.compile(r"^Section\s+(?P<number>\d+)\s+[–-]\s+(?P<title>.+)$", re.IGNORECASE)
@@ -232,6 +231,12 @@ def stage_obsidian_sync_tree(book_root: str | Path | None, destination_root: str
 
 
 def sync_book_to_obsidian(dest: Path, book_root: Path, *, repo_root: Path = REPO_ROOT) -> None:
+    from workflow_subprocess import (
+        DEFAULT_TIMEOUT_SECONDS,
+        WorkflowSubprocessError,
+        run_checked_subprocess,
+    )
+
     book_root_rel = book_root.resolve().relative_to(repo_root.resolve())
     try:
         run_checked_subprocess(

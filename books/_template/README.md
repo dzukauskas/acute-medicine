@@ -97,6 +97,13 @@ arba bootstrap metu perduokite:
 
 EPUB bootstrap automatiškai sukuria `source/index/figures.tsv`, bet tai nėra aktyvus `Whimsical` manifestas. Į `lt/figures/manifest.tsv` patenka tik tie paveikslai, kuriems jau sukurtas `Whimsical` board ir sugeneruotas aktyvus `png`.
 
+Aktyvaus paveikslo completion kontraktas:
+
+- `scripts/register_whimsical_figure.py` registracijos metu ne tik sukuria manifest įrašą ir sugeneruoja `png`, bet ir automatiškai įterpia paveikslą į atitinkamą `lt/chapters/<slug>.md`;
+- paveikslas laikomas užbaigtu repo viduje tik tada, kai egzistuoja visi trys sluoksniai: `lt/figures/manifest.tsv`, `lt/figures/*.png` ir įterptas paveikslas `lt/chapters/*.md`;
+- `scripts/validate_figures_manifest.py` tikrina ne tik manifest -> failas, bet ir active manifest -> chapter embed kontraktą;
+- jei reikia iškart atnaujinti live vault, naudokite `scripts/register_whimsical_figure.py --sync-obsidian` arba atskirą `scripts/sync_obsidian_book.sh`.
+
 ## Bendrų skriptų taikymas šiai knygai
 
 Kai naudojate bendrus repo skriptus, aktyvią knygą nukreipkite per:

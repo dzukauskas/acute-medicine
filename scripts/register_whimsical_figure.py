@@ -203,13 +203,21 @@ def main() -> int:
     }
 
     original_text = append_manifest_row(book_root, new_row)
+    storage_state = getattr(args, "storage_state", None)
+    login = bool(getattr(args, "login", False))
+    sync_obsidian = bool(getattr(args, "sync_obsidian", False))
+    obsidian_dest_arg = getattr(args, "obsidian_dest", None)
     try:
-        render_registered_figure(
-            book_root,
-            figure_id,
-            storage_state=args.storage_state.expanduser() if args.storage_state else None,
-            login=args.login,
-        )
+        render_storage_state = storage_state.expanduser() if storage_state else None
+        if render_storage_state is None and not login:
+            render_registered_figure(book_root, figure_id)
+        else:
+            render_registered_figure(
+                book_root,
+                figure_id,
+                storage_state=render_storage_state,
+                login=login,
+            )
     except WorkflowSubprocessError as exc:
         rollback_manifest(book_root, original_text)
         remove_rendered_png_if_present(new_row)
@@ -230,8 +238,8 @@ def main() -> int:
         f"{'Embedded' if inserted else 'Embed already present for'} {figure_id} -> {display_path(chapter_path)}"
     )
 
-    if args.sync_obsidian:
-        obsidian_dest = args.obsidian_dest.expanduser() if args.obsidian_dest else default_obsidian_dest(book_root)
+    if sync_obsidian:
+        obsidian_dest = obsidian_dest_arg.expanduser() if obsidian_dest_arg else default_obsidian_dest(book_root)
         try:
             sync_book_to_obsidian(obsidian_dest, book_root)
         except SystemExit as exc:
