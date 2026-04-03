@@ -23,12 +23,12 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: no-active-theme
 - Branch: main
-- Last updated: 2026-04-03T21:24:35+03:00
+- Last updated: 2026-04-03T22:31:34+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- No active repo-engineering theme is open; `main` now includes the closed engineering-ledger diff gate wave, so the repo-engineering baseline includes a shared marker-based ledger helper, a diff-aware CI checkpoint gate tied to the same `MERGE_BASE..HEAD` window, and docs that split runtime ledger ideals from repo-local CI enforcement.
+- No active repo-engineering theme is open; `main` now includes the closed engineering-ledger diff gate wave plus a narrow `write_codex_handoff.py` follow-up, so the baseline now pairs the diff-aware CI checkpoint gate with explicit startup-checklist links to the repo-level workflow docs instead of a mode-ambiguous placeholder.
 <!-- ledger:summary:end -->
 
 ## Current State
@@ -37,6 +37,7 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - `scripts/check_engineering_ledger_checkpoint.py` now classifies repo-engineering paths from one source-of-truth allowlist and checks both changed files plus ledger content in the same `MERGE_BASE..HEAD` window, so base-branch drift cannot fake a meaningful checkpoint.
 - GitHub Actions `Python Tests` now runs a dedicated diff-aware engineering ledger checkpoint gate before the required unittest suite, with an explicit skip message when a push event has no usable `before` SHA.
 - Repo-engineering docs now distinguish the runtime ideal from repo-local CI enforcement, and they explicitly record that `Accepted Decisions` plus `Open Risks` alone do not satisfy this specific CI guard policy.
+- `scripts/write_codex_handoff.py` startup checklist now names `docs/repo-engineering-workflow.md` and `docs/book-translation-workflow.md` explicitly, and its test coverage now locks that wording in while still surfacing `books/<slug>/workflow.md` when `--book-root` is present.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -63,6 +64,10 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Completed Themes
 <!-- ledger:completed:start -->
+### 2026-04-03 22:31 | handoff-workflow-path-clarity closed on main
+- Closed the narrow `write_codex_handoff.py` startup-checklist clarity cleanup on `main`.
+- The handoff helper now names the repo-level workflow docs explicitly instead of telling the next thread to read an unspecified mode-specific workflow document, and `tests.test_write_codex_handoff` now locks that wording in for both generic and `--book-root` handoffs.
+
 ### 2026-04-03 21:24 | engineering-ledger-diff-gate closed on main
 - Closed the engineering-ledger diff gate theme on `main`.
 - `scripts/workflow_engineering_ledger.py` now centralizes marker-based ledger parsing, and `scripts/check_engineering_ledger_checkpoint.py` checks both changed engineering files plus meaningful ledger sections in the same `MERGE_BASE..HEAD` window.

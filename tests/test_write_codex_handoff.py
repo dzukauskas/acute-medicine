@@ -54,12 +54,15 @@ class WriteCodexHandoffTests(unittest.TestCase):
 
         self.assertIn("# Research pass handoff", rendered)
         self.assertIn("books/jrcalc-clinical-guidelines-2025-reference-edition/workflow.md", rendered)
+        self.assertIn("docs/book-translation-workflow.md", rendered)
+        self.assertIn("docs/repo-engineering-workflow.md", rendered)
         self.assertIn(" M docs/codex-workflow.md", rendered)
         self.assertIn("abc123 Add docs", rendered)
         self.assertIn("Pridėtas handoff skriptas.", rendered)
         self.assertIn("lokalus scratchpad", rendered)
         self.assertIn("Tik po kanoninių repo artefaktų", rendered)
         self.assertIn("konkretaus skyriaus artefaktų", rendered)
+        self.assertNotIn("atitinkamą workflow dokumentą pagal režimą", rendered)
 
     def test_main_writes_handoff_file(self) -> None:
         snapshot = write_codex_handoff.GitSnapshot(
@@ -100,6 +103,9 @@ class WriteCodexHandoffTests(unittest.TestCase):
             self.assertIn("Paruoštas skripto skeletas.", text)
             self.assertIn("Paleisti testus.", text)
             self.assertIn("Reikia aiškios dokumentacijos.", text)
+            self.assertIn("docs/repo-engineering-workflow.md", text)
+            self.assertIn("docs/book-translation-workflow.md", text)
+            self.assertNotIn("atitinkamą workflow dokumentą pagal režimą", text)
 
 
 if __name__ == "__main__":

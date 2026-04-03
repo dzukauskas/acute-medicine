@@ -162,7 +162,7 @@ def startup_checklist(book_root: Path | None) -> str:
         "1. Perskaityk `AGENTS.md`.",
         "2. Perskaityk `books/README.md`.",
         "3. Perskaityk `docs/codex-workflow.md`.",
-        "4. Perskaityk atitinkamą workflow dokumentą pagal režimą.",
+        "4. Jei tai repo-engineering darbas, perskaityk `docs/repo-engineering-workflow.md`; jei tai vertimas, perskaityk `docs/book-translation-workflow.md`.",
         "5. Jei tai repo-engineering darbas, perskaityk `ENGINEERING_LEDGER.md`; jei tai vertimas, atkurk būseną iš konkretaus skyriaus artefaktų.",
         "6. Tik po kanoninių repo artefaktų, jei dar reikia lokalaus konteksto, perskaityk šį handoff failą.",
         "7. Tęsk tame pačiame branch/worktree arba naudok Codex app `Hand off`, jei reikia paralelinės linijos.",
@@ -171,7 +171,7 @@ def startup_checklist(book_root: Path | None) -> str:
         workflow_path = book_root / "workflow.md"
         if workflow_path.exists():
             steps.insert(3, f"4. Perskaityk `{repo_relative(workflow_path)}`.")
-            steps[4] = "5. Perskaityk atitinkamą workflow dokumentą pagal režimą."
+            steps[4] = "5. Jei tai repo-engineering darbas, perskaityk `docs/repo-engineering-workflow.md`; jei tai vertimas, perskaityk `docs/book-translation-workflow.md`."
             steps[5] = "6. Jei tai repo-engineering darbas, perskaityk `ENGINEERING_LEDGER.md`; jei tai vertimas, atkurk būseną iš konkretaus skyriaus artefaktų."
             steps[6] = "7. Tik po kanoninių repo artefaktų, jei dar reikia lokalaus konteksto, perskaityk šį handoff failą."
             steps[7] = "8. Tęsk tame pačiame branch/worktree arba naudok Codex app `Hand off`, jei reikia paralelinės linijos."
