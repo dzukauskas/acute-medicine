@@ -151,6 +151,9 @@
 - Sugeneruotas `chapter_packs/001-disclaimer.yaml`.
 - Sugeneruotas `adjudication_packs/001-disclaimer.yaml`.
 - Abiem narrative blokams pasirinktas `hibridinis` sprendimas: išlaikyta disclaimer logika, bet proza perrašyta į natūralesnį LT naudojimo tekstą.
+- 2026-04-03 skyrius perverstas iš naujo arčiau originalo pastraipų sekos ir sakinio funkcijos; į pagrindinį LT tekstą grąžinti praleisti bendrieji disclaimer elementai, o JK-specifinis institucinis taikymo kontekstas paliktas tik `Originalo kontekstas` bloke.
+- 2026-04-03 persigeneruotas `chapter_packs/001-disclaimer.yaml`, nes aktyvi taisyklių bazė papildomai užrakino `clinician` / `ambulance clinician` kaip `medikas` / `GMP medikas`.
+- 2026-04-03 sugeneruotas `review_deltas/001-disclaimer.tsv`.
 
 ## Baigiamoji kontrolė
 
