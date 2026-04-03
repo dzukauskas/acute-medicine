@@ -145,6 +145,7 @@ class RepoPortabilityDocsTests(unittest.TestCase):
 
         repo_workflow = REPO_ENGINEERING_WORKFLOW_PATH.read_text(encoding="utf-8")
         self.assertIn(".venv/bin/python scripts/update_engineering_ledger.py", repo_workflow)
+        self.assertIn(".venv/bin/python scripts/check_engineering_ledger_checkpoint.py", repo_workflow)
         self.assertIn(".venv/bin/python scripts/write_codex_handoff.py", repo_workflow)
         self.assertIn(".venv/bin/python scripts/print_codex_resume_prompt.py --mode engineering", repo_workflow)
 
@@ -172,6 +173,22 @@ class RepoPortabilityDocsTests(unittest.TestCase):
         self.assertIn("`no-active-theme`", text)
         self.assertIn("Jei ledger turi aktyvią temą, tęsk ją", text)
         self.assertIn("jei aktyvios temos nėra", text)
+
+    def test_repo_engineering_docs_describe_diff_aware_ci_guard_policy(self) -> None:
+        text = REPO_ENGINEERING_WORKFLOW_PATH.read_text(encoding="utf-8")
+        self.assertIn("diff-aware CI gate `scripts/check_engineering_ledger_checkpoint.py`", text)
+        self.assertIn("realų `MERGE_BASE..HEAD` diff'ą", text)
+        self.assertIn("`Accepted Decisions` ir `Open Risks`", text)
+        self.assertIn("CI guard policy", text)
+
+    def test_governing_docs_split_runtime_ideal_from_ci_guard(self) -> None:
+        for path in (AGENTS_PATH, BOOKS_README_PATH, NEW_MAC_SETUP_PATH):
+            text = path.read_text(encoding="utf-8")
+            self.assertIn("diff-aware CI guard", text, msg=f"{path} should mention the repo-local CI guard boundary.")
+            self.assertTrue(
+                "prasmingo ledger checkpointo" in text or "meaningful ledger checkpoint" in text,
+                msg=f"{path} should describe the meaningful ledger checkpoint boundary.",
+            )
 
     def test_workflow_docs_separate_static_and_dynamic_context(self) -> None:
         expected_dynamic_fragments = {

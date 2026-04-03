@@ -1,5 +1,6 @@
 required = [
   "tests.test_book_template_parity",
+  "tests.test_check_engineering_ledger_checkpoint",
   "tests.test_completeness_guard",
   "tests.test_end_to_end_workflow_contract",
   "tests.test_epub_bootstrap_and_figures",

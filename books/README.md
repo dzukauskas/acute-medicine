@@ -193,7 +193,7 @@ Jei darbas tęsis naujame thread ar naujame worktree, pirmiausia atnaujinkite le
   --next-step "Pirmas konkretus žingsnis kitam thread."
 ```
 
-Normalioje porinio darbo sesijoje to ranka daryti neturite. Ledger šiame režime turi atnaujinti agentas; ši komanda yra atsarginis kelias.
+Normalioje porinio darbo sesijoje to ranka daryti neturite. Ledger šiame režime turi atnaujinti agentas; repo-local enforcement riba čia yra diff-aware CI guard, kuris tikrina, kad repo-engineering diff neliktų be prasmingo ledger checkpointo. Ši komanda yra atsarginis kelias.
 
 Tik jei reikia papildomo lokalaus scratchpad, naudokite `handoffs/`:
 

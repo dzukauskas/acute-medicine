@@ -204,7 +204,7 @@ Jei tęsiamas repo-engineering darbas kitame `Codex` thread ar naujame worktree,
   --next-step "Pirmas konkretus žingsnis naujam thread."
 ```
 
-Normalioje porinio darbo sesijoje to neturėtų reikėti daryti ranka kiekvieną kartą, nes ledger turi atnaujinti agentas. Ši komanda yra atsarginis kelias.
+Normalioje porinio darbo sesijoje to neturėtų reikėti daryti ranka kiekvieną kartą, nes ledger turi atnaujinti agentas. Repo-local enforcement riba čia yra diff-aware CI guard, kuris tikrina, kad repo-engineering diff neliktų be prasmingo ledger checkpointo. Ši komanda yra atsarginis kelias.
 
 Tik jei dar reikia papildomo lokalaus scratchpad, sugeneruok `handoff`:
 

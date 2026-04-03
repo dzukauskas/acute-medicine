@@ -8,20 +8,12 @@ from datetime import datetime
 from pathlib import Path
 
 from workflow_runtime import REPO_ROOT
+from workflow_engineering_ledger import ensure_sections, extract_section, extract_theme_label, replace_section
 
 
 DEFAULT_LEDGER_PATH = REPO_ROOT / "ENGINEERING_LEDGER.md"
 NO_ACTIVE_THEME = "no-active-theme"
 INACTIVE_THEME_MARKERS = {"", "_unset_", NO_ACTIVE_THEME}
-SECTION_KEYS = (
-    "active_theme",
-    "summary",
-    "current_state",
-    "decisions",
-    "next_steps",
-    "risks",
-    "completed",
-)
 LEDGER_TEMPLATE = """# Engineering Ledger
 
 ## Active Theme
@@ -145,13 +137,6 @@ def render_active_theme_body(theme: str, branch: str, generated_at: datetime) ->
     )
 
 
-def extract_theme_label(active_body: str) -> str:
-    match = re.search(r"Theme:\s*(.+)", active_body)
-    if not match:
-        return ""
-    return match.group(1).strip()
-
-
 def completed_theme_label(args_theme: str | None, existing_active: str) -> str | None:
     if args_theme and args_theme.strip():
         return args_theme.strip()
@@ -159,35 +144,6 @@ def completed_theme_label(args_theme: str | None, existing_active: str) -> str |
     if previous_theme in INACTIVE_THEME_MARKERS:
         return None
     return previous_theme
-
-
-def ensure_sections(text: str) -> str:
-    for key in SECTION_KEYS:
-        if f"<!-- ledger:{key}:start -->" not in text or f"<!-- ledger:{key}:end -->" not in text:
-            raise SystemExit(f"Ledger faile trūksta sekcijos marker'ių: {key}")
-    return text
-
-
-def replace_section(text: str, key: str, body: str) -> str:
-    pattern = re.compile(
-        rf"(<!-- ledger:{key}:start -->\n)(.*?)(\n<!-- ledger:{key}:end -->)",
-        flags=re.DOTALL,
-    )
-    updated, count = pattern.subn(rf"\1{body}\3", text, count=1)
-    if count != 1:
-        raise SystemExit(f"Nepavyko atnaujinti ledger sekcijos: {key}")
-    return updated
-
-
-def extract_section(text: str, key: str) -> str:
-    pattern = re.compile(
-        rf"<!-- ledger:{key}:start -->\n(.*?)\n<!-- ledger:{key}:end -->",
-        flags=re.DOTALL,
-    )
-    match = pattern.search(text)
-    if not match:
-        raise SystemExit(f"Nepavyko perskaityti ledger sekcijos: {key}")
-    return match.group(1).strip()
 
 
 def detect_branch(override: str | None) -> str:
@@ -238,15 +194,17 @@ def main(argv: list[str] | None = None) -> int:
         text = output_path.read_text(encoding="utf-8")
     else:
         text = template_text()
-    text = ensure_sections(text)
-
-    existing_active = extract_section(text, "active_theme")
-    existing_summary = extract_section(text, "summary")
-    existing_state = extract_section(text, "current_state")
-    existing_decisions = extract_section(text, "decisions")
-    existing_next_steps = extract_section(text, "next_steps")
-    existing_risks = extract_section(text, "risks")
-    existing_completed = extract_section(text, "completed")
+    try:
+        text = ensure_sections(text)
+        existing_active = extract_section(text, "active_theme")
+        existing_summary = extract_section(text, "summary")
+        existing_state = extract_section(text, "current_state")
+        existing_decisions = extract_section(text, "decisions")
+        existing_next_steps = extract_section(text, "next_steps")
+        existing_risks = extract_section(text, "risks")
+        existing_completed = extract_section(text, "completed")
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
 
     if args.clear_active_theme:
         active_body = render_active_theme_body(NO_ACTIVE_THEME, branch, generated_at)
@@ -273,13 +231,16 @@ def main(argv: list[str] | None = None) -> int:
         completed_theme_label(args.theme, existing_active),
     )
 
-    text = replace_section(text, "active_theme", active_body)
-    text = replace_section(text, "summary", summary_body)
-    text = replace_section(text, "current_state", state_body)
-    text = replace_section(text, "decisions", decisions_body)
-    text = replace_section(text, "next_steps", next_steps_body)
-    text = replace_section(text, "risks", risks_body)
-    text = replace_section(text, "completed", completed_body)
+    try:
+        text = replace_section(text, "active_theme", active_body)
+        text = replace_section(text, "summary", summary_body)
+        text = replace_section(text, "current_state", state_body)
+        text = replace_section(text, "decisions", decisions_body)
+        text = replace_section(text, "next_steps", next_steps_body)
+        text = replace_section(text, "risks", risks_body)
+        text = replace_section(text, "completed", completed_body)
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
 
     output_path.write_text(text + ("" if text.endswith("\n") else "\n"), encoding="utf-8")
     print(output_path)

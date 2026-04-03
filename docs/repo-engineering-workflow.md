@@ -66,6 +66,14 @@ Jei tikėtinas `compact` arba naujas thread, ledger turi būti atnaujintas prie�
 
 Normalioje porinio darbo sesijoje ledger turi atnaujinti agentas. Vartotojui nereikia kiekvieną kartą ranka leisti `update_engineering_ledger.py`.
 
+Tai yra runtime idealas. Repo-local enforcement šiame repo yra siauresnė: diff-aware CI gate `scripts/check_engineering_ledger_checkpoint.py` gali patikrinti tik realų `MERGE_BASE..HEAD` diff'ą, o ne užtikrinti mid-session agento elgesį.
+
+Guardas aktyvuojasi tada, kai tame pačiame diff lange yra bent vienas repo-engineering failas, kuris nėra vien `ENGINEERING_LEDGER.md`. Jei tame diff lange keistas tik `ENGINEERING_LEDGER.md`, gate praeina be papildomo checkpoint reikalavimo.
+
+Kad gate laikytų ledger checkpointą prasmingu, tame pačiame `MERGE_BASE..HEAD` lange turi pasikeisti bent viena iš šių sekcijų: `Active Theme` (`Theme:` eilutė), `Summary`, `Current State`, `Next Steps` arba `Completed Themes`. Vien `Branch:`, `Last updated:` ar whitespace churn neužtenka.
+
+`Accepted Decisions` ir `Open Risks` lieka pilnavertėmis ledger sekcijomis, bet šio CI guard policy prasme jie vieni patys nelaikomi pakankamu checkpointu.
+
 Kai tema uždaroma, ji turi likti `Completed Themes` istorijoje, o `Active Theme` turi būti aiškiai išvalyta į `no-active-theme` būseną, kol prasidės kita siaura techninė tema.
 
 ## Kada kurti naują thread
@@ -143,6 +151,14 @@ Jei dabar taisai audit findings apie test harness:
   --state "Pridėti focused fixtures ir acceptance testai." \
   --next-step "Sutvarkyti review-cycle edge case'us." \
   --risk "Dar nepatikrintas vienas shell entrypoint smoke scenarijus."
+```
+
+Diff-aware CI gate lokaliai galima atkartoti taip:
+
+```bash
+.venv/bin/python scripts/check_engineering_ledger_checkpoint.py \
+  --base-ref <base-ref> \
+  --head-ref <head-ref>
 ```
 
 Jei po to vis tiek reikia lokalaus papildomo scratchpad:

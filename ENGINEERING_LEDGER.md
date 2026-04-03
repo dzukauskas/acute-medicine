@@ -23,20 +23,20 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: no-active-theme
 - Branch: main
-- Last updated: 2026-04-03T20:15:05+03:00
+- Last updated: 2026-04-03T21:24:35+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- No active repo-engineering theme is open; `main` now includes the closed continuity/template contract hardening wave, so chapter-scoped translation resume, tracked `_template` surface completeness guards, and scratchpad-only handoff semantics are part of the repo-engineering baseline.
+- No active repo-engineering theme is open; `main` now includes the closed engineering-ledger diff gate wave, so the repo-engineering baseline includes a shared marker-based ledger helper, a diff-aware CI checkpoint gate tied to the same `MERGE_BASE..HEAD` window, and docs that split runtime ledger ideals from repo-local CI enforcement.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- `scripts/print_codex_resume_prompt.py` now rejects chapter-less translation resumes with an explicit `--chapter` / concrete-chapter error, and both helper-level plus real CLI tests lock that behavior in.
-- `tests.test_workflow_book_template` now enforces tracked `_template` surface completeness against `template_manifest.json` plus `.gitkeep` / `required_directories`, while `tests.test_book_template_parity` still guards rendered tracked-book parity.
-- `handoffs/README.md` and `scripts/write_codex_handoff.py` now describe handoffs as local scratchpads only, and generated startup instructions send the next thread to canonical repo artifacts before any optional handoff note.
-- Local verification is green: the focused continuity/template slice passed, and the full required Python suite passed (`138` tests) through the repo's canonical `list_required_python_test_modules.py` entrypoint.
+- `scripts/workflow_engineering_ledger.py` now provides the shared marker-based ledger parser used by both `scripts/update_engineering_ledger.py` and the new `scripts/check_engineering_ledger_checkpoint.py` gate.
+- `scripts/check_engineering_ledger_checkpoint.py` now classifies repo-engineering paths from one source-of-truth allowlist and checks both changed files plus ledger content in the same `MERGE_BASE..HEAD` window, so base-branch drift cannot fake a meaningful checkpoint.
+- GitHub Actions `Python Tests` now runs a dedicated diff-aware engineering ledger checkpoint gate before the required unittest suite, with an explicit skip message when a push event has no usable `before` SHA.
+- Repo-engineering docs now distinguish the runtime ideal from repo-local CI enforcement, and they explicitly record that `Accepted Decisions` plus `Open Risks` alone do not satisfy this specific CI guard policy.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -45,6 +45,8 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Treat the CI finding as split scope: `print_codex_resume_prompt` is a stronger candidate for required coverage than `write_codex_handoff`, which stays a fallback local scratch helper.
 - Treat chapter-less translation resume prompts as incompatible with the repo's default chapter-scoped routing unless docs are explicitly relaxed.
 - Treat template-manifest completeness as needing an explicit guard or explicit exemption list; relying on maintainers to remember manifest updates is insufficient.
+- Treat the engineering-ledger continuity gap as a repo-local enforcement problem, not as proof that the runtime ideal should be removed from the docs.
+- Treat `Accepted Decisions` and `Open Risks` as legitimate ledger sections, but not as sufficient on their own for the diff-aware checkpoint gate; that narrower rule is a CI guard policy, not the whole ledger model.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
@@ -56,10 +58,16 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 ## Open Risks
 <!-- ledger:risks:start -->
 - The new `_template` guard covers tracked surface only; workstation-local untracked trash inside `books/_template/` would still be a local hygiene issue because bootstrap copytree sees filesystem state, not just git-tracked files.
+- The engineering-ledger diff gate still cannot guarantee mid-session proactivity; it only blocks repo-engineering diffs that reach CI without a meaningful checkpoint in the same `MERGE_BASE..HEAD` window.
 <!-- ledger:risks:end -->
 
 ## Completed Themes
 <!-- ledger:completed:start -->
+### 2026-04-03 21:24 | engineering-ledger-diff-gate closed on main
+- Closed the engineering-ledger diff gate theme on `main`.
+- `scripts/workflow_engineering_ledger.py` now centralizes marker-based ledger parsing, and `scripts/check_engineering_ledger_checkpoint.py` checks both changed engineering files plus meaningful ledger sections in the same `MERGE_BASE..HEAD` window.
+- GitHub Actions `Python Tests` now runs a dedicated diff-aware checkpoint gate before the required unittest suite, and the repo docs now distinguish the runtime ledger ideal from the narrower repo-local CI guard policy.
+
 ### 2026-04-03 20:15 | continuity-and-template-contract-audit closed on main
 - Closed the continuity/template contract hardening wave on `main`.
 - `scripts/print_codex_resume_prompt.py` now requires chapter-scoped translation resume, `tests.test_workflow_book_template` guards tracked `_template` surface completeness, and `handoffs/README.md` plus `scripts/write_codex_handoff.py` now define handoffs as local scratchpads rather than primary cross-worktree memory.
