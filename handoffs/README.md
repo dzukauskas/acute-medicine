@@ -1,11 +1,11 @@
 # Codex Handoffs
 
-Šis katalogas yra lokalus `Codex` thread / worktree handoff inbox.
+Šis katalogas yra lokalus `Codex` thread / worktree scratchpad inbox.
 
 Paskirtis:
 
-- čia trumpam išsaugoma darbinė būsena tarp `Codex` thread'ų;
-- failai skirti išgyventi `context compaction` ir `Hand off` į naują worktree;
+- čia trumpam išsaugoma lokali vykdymo būsena tarp `Codex` thread'ų ar worktree;
+- failai gali padėti po `context compaction` ar lokaliame `Hand off`, bet tik kaip papildomas scratchpad;
 - tai nėra pakaitalas `research`, `chapter_pack`, `review_delta` ar kitiems kanoniniams workflow artefaktams.
 - jis dažniau reikalingas `repo engineering` darbui negu kasdieniam knygos vertimui.
 
@@ -18,7 +18,7 @@ Svarbu:
 Kaip naudoti:
 
 ```bash
-python3 scripts/write_codex_handoff.py \
+.venv/bin/python scripts/write_codex_handoff.py \
   --title "Chapter 011 term triage" \
   --book-root books/jrcalc-clinical-guidelines-2025-reference-edition \
   --goal "Užbaigti neužrakintų terminų triage prieš drafting." \
@@ -30,10 +30,11 @@ python3 scripts/write_codex_handoff.py \
 Toliau:
 
 1. Pirma atnaujink `ENGINEERING_LEDGER.md`, jei tai repo-engineering darbas.
-2. Jei reikia paralelinės linijos, naudok `Hand off` mygtuką Codex app.
-3. Naujame thread'e pirmiausia perskaityk `ENGINEERING_LEDGER.md`, jei tai repo-engineering darbas.
-4. Tik po to, jei reikia, perskaityk naujausią aktualų `handoffs/*.md`.
-5. Po to skaityk `docs/codex-workflow.md` ir pasirink atitinkamą režimą:
+2. Jei tai vertimo darbas, pirmiausia atkurk būseną iš konkretaus skyriaus kanoninių artefaktų.
+3. Jei reikia paralelinės linijos, naudok `Hand off` mygtuką Codex app.
+4. Naujame thread'e pirmiausia perskaityk kanoninius repo artefaktus pagal režimą.
+5. Tik po kanoninių artefaktų, jei dar reikia lokalaus konteksto, perskaityk naujausią aktualų `handoffs/*.md`.
+6. Po to skaityk `docs/codex-workflow.md` ir pasirink atitinkamą režimą:
    - `docs/book-translation-workflow.md`
    - `docs/repo-engineering-workflow.md`
 

@@ -57,6 +57,9 @@ class WriteCodexHandoffTests(unittest.TestCase):
         self.assertIn(" M docs/codex-workflow.md", rendered)
         self.assertIn("abc123 Add docs", rendered)
         self.assertIn("Pridėtas handoff skriptas.", rendered)
+        self.assertIn("lokalus scratchpad", rendered)
+        self.assertIn("Tik po kanoninių repo artefaktų", rendered)
+        self.assertIn("konkretaus skyriaus artefaktų", rendered)
 
     def test_main_writes_handoff_file(self) -> None:
         snapshot = write_codex_handoff.GitSnapshot(

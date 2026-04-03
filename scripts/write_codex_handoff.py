@@ -25,7 +25,7 @@ class GitSnapshot:
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Write a Codex handoff note that survives thread compaction or worktree handoff."
+        description="Write a local Codex handoff note for scratchpad continuity between threads or worktrees."
     )
     parser.add_argument("--title", default="Codex handoff", help="Short handoff title.")
     parser.add_argument("--book-root", help="Optional repo-relative books/<slug> path.")
@@ -162,17 +162,19 @@ def startup_checklist(book_root: Path | None) -> str:
         "1. Perskaityk `AGENTS.md`.",
         "2. Perskaityk `books/README.md`.",
         "3. Perskaityk `docs/codex-workflow.md`.",
-        "4. Jei tai repo-engineering darbas, perskaityk `ENGINEERING_LEDGER.md`.",
-        "5. Perskaityk šį handoff failą prieš tęsiant darbus.",
-        "6. Tęsk tame pačiame branch/worktree arba naudok Codex app `Hand off`, jei reikia paralelinės linijos.",
+        "4. Perskaityk atitinkamą workflow dokumentą pagal režimą.",
+        "5. Jei tai repo-engineering darbas, perskaityk `ENGINEERING_LEDGER.md`; jei tai vertimas, atkurk būseną iš konkretaus skyriaus artefaktų.",
+        "6. Tik po kanoninių repo artefaktų, jei dar reikia lokalaus konteksto, perskaityk šį handoff failą.",
+        "7. Tęsk tame pačiame branch/worktree arba naudok Codex app `Hand off`, jei reikia paralelinės linijos.",
     ]
     if book_root is not None:
         workflow_path = book_root / "workflow.md"
         if workflow_path.exists():
             steps.insert(3, f"4. Perskaityk `{repo_relative(workflow_path)}`.")
-            steps[4] = "5. Jei tai repo-engineering darbas, perskaityk `ENGINEERING_LEDGER.md`."
-            steps[5] = "6. Perskaityk šį handoff failą prieš tęsiant darbus."
-            steps[6] = "7. Tęsk tame pačiame branch/worktree arba naudok Codex app `Hand off`, jei reikia paralelinės linijos."
+            steps[4] = "5. Perskaityk atitinkamą workflow dokumentą pagal režimą."
+            steps[5] = "6. Jei tai repo-engineering darbas, perskaityk `ENGINEERING_LEDGER.md`; jei tai vertimas, atkurk būseną iš konkretaus skyriaus artefaktų."
+            steps[6] = "7. Tik po kanoninių repo artefaktų, jei dar reikia lokalaus konteksto, perskaityk šį handoff failą."
+            steps[7] = "8. Tęsk tame pačiame branch/worktree arba naudok Codex app `Hand off`, jei reikia paralelinės linijos."
     return "\n".join(steps)
 
 
@@ -210,6 +212,7 @@ def render_handoff(
         "## Risks / blockers\n\n"
         f"{bullet_section(risks, 'Užrašyk blokatorius, prielaidas arba rizikingas vietas.')}\n\n"
         "## Next-thread startup\n\n"
+        "_Šis handoff yra lokalus scratchpad. Pirma atkurk būseną iš kanoninių repo artefaktų, tik po to naudok šį failą kaip papildomą kontekstą._\n\n"
         f"{startup_checklist(book_root)}\n"
     )
 

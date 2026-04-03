@@ -23,46 +23,48 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: no-active-theme
 - Branch: main
-- Last updated: 2026-04-02T15:26:38+03:00
+- Last updated: 2026-04-03T20:15:05+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- No active repo-engineering theme is open; `main` already contains the closed Stage 1 passive repo context hardening wave (`fe33b29`) and the closed Stage 2 retrieval-led memory hardening wave (`6783379`), so the repo-engineering baseline is the hardened memory model rather than the earlier Whimsical closeout state.
+- No active repo-engineering theme is open; `main` now includes the closed continuity/template contract hardening wave, so chapter-scoped translation resume, tracked `_template` surface completeness guards, and scratchpad-only handoff semantics are part of the repo-engineering baseline.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- `AGENTS.md` now includes a compact passive repo context index that names the repo purpose, canonical passive context, durable state locations, tool layers, QA model, and thread-routing contract.
-- `AGENTS.md` and the workflow docs now carry the retrieval-led rule explicitly: recover workflow contracts and durable state from canonical repo artifacts before relying on model memory or thread history.
-- `docs/codex-workflow.md`, `docs/book-translation-workflow.md`, and `docs/repo-engineering-workflow.md` are aligned on the Stage 1 memory-model triplet: static passive repo context, dynamic durable execution state, and non-canonical context.
-- `scripts/print_codex_resume_prompt.py` now emits both engineering and translation resume prompts in the same memory-model language, and `tests.test_print_codex_resume_prompt` keeps those prompts aligned with the workflow docs.
-- Drift/budget and behavior guards already live in tests: `tests.test_repo_portability_docs` enforces passive-index compactness/non-temporal limits plus retrieval-led/workflow parity, `tests.test_book_template_parity` catches tracked-book drift, and the required suite still includes rule/QA guards such as `tests.test_repo_global_rules` and `tests.test_run_chapter_qa`.
+- `scripts/print_codex_resume_prompt.py` now rejects chapter-less translation resumes with an explicit `--chapter` / concrete-chapter error, and both helper-level plus real CLI tests lock that behavior in.
+- `tests.test_workflow_book_template` now enforces tracked `_template` surface completeness against `template_manifest.json` plus `.gitkeep` / `required_directories`, while `tests.test_book_template_parity` still guards rendered tracked-book parity.
+- `handoffs/README.md` and `scripts/write_codex_handoff.py` now describe handoffs as local scratchpads only, and generated startup instructions send the next thread to canonical repo artifacts before any optional handoff note.
+- Local verification is green: the focused continuity/template slice passed, and the full required Python suite passed (`138` tests) through the repo's canonical `list_required_python_test_modules.py` entrypoint.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
 <!-- ledger:decisions:start -->
-- Passive repo context belongs in `AGENTS.md` and workflow docs; time-sensitive repo-engineering execution state belongs in `ENGINEERING_LEDGER.md`, not in passive docs or thread history.
-- Resume and new-thread flows must be retrieval-led: reconstruct state from canonical repo artifacts first, then use thread history or `handoffs/*.md` only as fallback context.
-- When a narrow repo-engineering theme is closed on `main`, keep it in `Completed Themes` and reset `Active Theme` back to explicit `no-active-theme`.
-- Workflow docs, generated resume prompts, and their contract tests must stay textually aligned with the shared memory model.
+- Treat the handoff issue as wording/governance drift, not as a full memory-model failure, because the canonical repo contract already points first to ledger or chapter artifacts.
+- Treat the CI finding as split scope: `print_codex_resume_prompt` is a stronger candidate for required coverage than `write_codex_handoff`, which stays a fallback local scratch helper.
+- Treat chapter-less translation resume prompts as incompatible with the repo's default chapter-scoped routing unless docs are explicitly relaxed.
+- Treat template-manifest completeness as needing an explicit guard or explicit exemption list; relying on maintainers to remember manifest updates is insufficient.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
 - No active repo-engineering theme is currently open.
-- If future work is needed, start a new narrow theme either for explicit `--sync-obsidian` live-vault verification, for a standalone legacy figure-embed repair helper, or for a separate closeout/process-hardening follow-up if `main` later drifts again.
+- If future work is needed, start a new narrow theme rather than reopening this closed continuity/template hardening wave.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- Live-vault visibility after `--sync-obsidian` is enforced today by workflow contract and one real checkpoint, not by a dedicated always-on acceptance test.
-- Already-registered legacy figure rows can now be detected when chapter embeds are missing, but bulk repair of old rows still remains a manual or future-helper workflow.
-- Stage 1 and Stage 2 are closed on `main`, but future documentation/prompt/test drift is still possible if the shared memory model changes without synchronized updates to all guarded artifacts.
+- The new `_template` guard covers tracked surface only; workstation-local untracked trash inside `books/_template/` would still be a local hygiene issue because bootstrap copytree sees filesystem state, not just git-tracked files.
 <!-- ledger:risks:end -->
 
 ## Completed Themes
 <!-- ledger:completed:start -->
+### 2026-04-03 20:15 | continuity-and-template-contract-audit closed on main
+- Closed the continuity/template contract hardening wave on `main`.
+- `scripts/print_codex_resume_prompt.py` now requires chapter-scoped translation resume, `tests.test_workflow_book_template` guards tracked `_template` surface completeness, and `handoffs/README.md` plus `scripts/write_codex_handoff.py` now define handoffs as local scratchpads rather than primary cross-worktree memory.
+- `tests.test_print_codex_resume_prompt` is now part of the required suite, while `tests.test_write_codex_handoff` remains non-required because the handoff helper stays a local scratchpad fallback rather than the primary continuity path.
+
 ### 2026-04-02 15:02 | retrieval-led memory hardening closed on main
 - Closed the Stage 2 retrieval-led memory hardening wave on `main` in commit `6783379` on `2026-04-02 15:02:26 +03:00` (`Harden retrieval-led memory contracts`).
 - `AGENTS.md`, the workflow docs, the resume prompt generator, and contract tests now explicitly require retrieval-led reconstruction from canonical repo artifacts instead of model memory or thread history.

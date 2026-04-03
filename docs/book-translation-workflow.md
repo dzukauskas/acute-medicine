@@ -112,7 +112,7 @@ Paprasčiausias kelias:
   --chapter 001
 ```
 
-Tai išspausdins trumpą promptą, kurį gali tiesiog įklijuoti į naują `Codex` thread.
+Tai išspausdins trumpą promptą, kurį gali tiesiog įklijuoti į naują `Codex` thread. Translation resume helperis šiame repo reikalauja konkretaus `--chapter`; book-level resume be skyriaus nelaikomas galiojančiu keliu.
 
 Jei nenori leisti skripto, minimalus rankinis promptas yra toks:
 

@@ -18,7 +18,7 @@ if str(TESTS_DIR) not in sys.path:
     sys.path.insert(0, str(TESTS_DIR))
 
 import print_codex_resume_prompt  # noqa: E402
-from workflow_test_utils import copy_mini_book, silence_stdio  # noqa: E402
+from workflow_test_utils import copy_mini_book, run_script, silence_stdio  # noqa: E402
 
 
 class PrintCodexResumePromptTests(unittest.TestCase):
@@ -162,20 +162,14 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("stored machine-readable receipt", prompt)
         self.assertNotIn("aktyvaus darbo ir einamo skyriaus artefaktų", prompt)
 
-    def test_translation_prompt_without_chapter_still_mentions_qa_rerun(self) -> None:
+    def test_translation_prompt_requires_chapter(self) -> None:
         with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             book_root = copy_mini_book(Path(tmp_dir))
-            prompt = print_codex_resume_prompt.render_translation_prompt(book_root, None)
+            with self.assertRaises(SystemExit) as exc_info:
+                print_codex_resume_prompt.render_translation_prompt(book_root, "")
 
-        self.assertIn(f"Tęsk aktyvų darbą knygoje {book_root.name}.", prompt)
-        self.assertIn("run_chapter_qa.py", prompt)
-        self.assertIn("Static passive repo context imk iš AGENTS.md, books/README.md ir workflow docs;", prompt)
-        self.assertIn("current dynamic durable execution state imk iš aktyvaus darbo ir einamo skyriaus artefaktų.", prompt)
-        self.assertNotIn("current dynamic durable execution state imk iš šio skyriaus artefaktų.", prompt)
-        self.assertNotIn("Tęsk šio skyriaus darbą:", prompt)
-        self.assertNotIn("research/001-mini.md", prompt)
-        self.assertNotIn("chapter_packs/001-mini.yaml", prompt)
-        self.assertNotIn("nustatyk aktyvų skyrių", prompt.lower())
+        self.assertIn("--chapter", str(exc_info.exception))
+        self.assertIn("konkretaus skyriaus", str(exc_info.exception))
 
     def test_translation_prompt_accepts_full_slug_token(self) -> None:
         with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
@@ -212,6 +206,22 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         for fragment in shared_fragments:
             self.assertIn(fragment, workflow_text)
             self.assertIn(fragment, prompt)
+
+    def test_translation_cli_requires_chapter(self) -> None:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            book_root = copy_mini_book(Path(tmp_dir))
+            result = run_script(
+                "print_codex_resume_prompt.py",
+                "--mode",
+                "translation",
+                "--book-root",
+                str(book_root),
+            )
+
+        self.assertNotEqual(result.returncode, 0)
+        combined_output = result.stdout + result.stderr
+        self.assertIn("--chapter", combined_output)
+        self.assertIn("konkretaus skyriaus", combined_output)
 
     def test_engineering_prompt_matches_manual_workflow_contract_fragments(self) -> None:
         workflow_text = (REPO_ROOT / "docs" / "repo-engineering-workflow.md").read_text(encoding="utf-8")

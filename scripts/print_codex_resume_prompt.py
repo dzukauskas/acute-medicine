@@ -24,7 +24,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Prompt type to print.",
     )
     parser.add_argument("--book-root", help="Required for translation mode: books/<slug> path.")
-    parser.add_argument("--chapter", help="Optional chapter slug or number for translation mode.")
+    parser.add_argument("--chapter", help="Required for translation mode: chapter slug or number.")
     return parser.parse_args(argv)
 
 
@@ -130,7 +130,14 @@ def resolve_book_root(raw_value: str | None) -> Path:
     return candidate
 
 
-def resolve_translation_targets(book_root: Path, chapter: str | None) -> tuple[str, list[str]]:
+def require_translation_chapter(chapter: str | None) -> str:
+    chapter_token = (chapter or "").strip()
+    if not chapter_token:
+        raise SystemExit("Translation resume šiame repo reikalauja --chapter ir konkretaus skyriaus.")
+    return chapter_token
+
+
+def resolve_translation_targets(book_root: Path, chapter: str) -> tuple[str, list[str]]:
     targets = [
         "AGENTS.md",
         "books/README.md",
@@ -139,43 +146,37 @@ def resolve_translation_targets(book_root: Path, chapter: str | None) -> tuple[s
         "docs/book-translation-workflow.md",
         book_root.relative_to(REPO_ROOT).as_posix() + "/workflow.md",
     ]
-    if chapter:
-        chapter_token = chapter.strip()
-        if chapter_token.isdigit():
-            research_pattern = f"{int(chapter_token):03d}-*.md"
-            pack_pattern = f"{int(chapter_token):03d}-*.yaml"
-        else:
-            research_pattern = chapter_token + "*.md"
-            pack_pattern = chapter_token + "*.yaml"
-        research_matches = sorted((book_root / "research").glob(research_pattern))
-        pack_matches = sorted((book_root / "chapter_packs").glob(pack_pattern))
-        if research_matches:
-            targets.append(research_matches[0].relative_to(REPO_ROOT).as_posix())
-        if pack_matches:
-            targets.append(pack_matches[0].relative_to(REPO_ROOT).as_posix())
-        chapter_draft_matches = sorted((book_root / "lt" / "chapters").glob(research_pattern))
-        if chapter_draft_matches:
-            targets.append(chapter_draft_matches[0].relative_to(REPO_ROOT).as_posix())
-        adjudication_matches = sorted((book_root / "adjudication_packs").glob(pack_pattern))
-        if adjudication_matches:
-            targets.append(adjudication_matches[0].relative_to(REPO_ROOT).as_posix())
-        targets.append(book_root.relative_to(REPO_ROOT).as_posix() + "/term_candidates.tsv")
-        return chapter_token, targets
-    return "", targets
+    chapter_token = require_translation_chapter(chapter)
+    if chapter_token.isdigit():
+        research_pattern = f"{int(chapter_token):03d}-*.md"
+        pack_pattern = f"{int(chapter_token):03d}-*.yaml"
+    else:
+        research_pattern = chapter_token + "*.md"
+        pack_pattern = chapter_token + "*.yaml"
+    research_matches = sorted((book_root / "research").glob(research_pattern))
+    pack_matches = sorted((book_root / "chapter_packs").glob(pack_pattern))
+    if research_matches:
+        targets.append(research_matches[0].relative_to(REPO_ROOT).as_posix())
+    if pack_matches:
+        targets.append(pack_matches[0].relative_to(REPO_ROOT).as_posix())
+    chapter_draft_matches = sorted((book_root / "lt" / "chapters").glob(research_pattern))
+    if chapter_draft_matches:
+        targets.append(chapter_draft_matches[0].relative_to(REPO_ROOT).as_posix())
+    adjudication_matches = sorted((book_root / "adjudication_packs").glob(pack_pattern))
+    if adjudication_matches:
+        targets.append(adjudication_matches[0].relative_to(REPO_ROOT).as_posix())
+    targets.append(book_root.relative_to(REPO_ROOT).as_posix() + "/term_candidates.tsv")
+    return chapter_token, targets
 
 
-def render_translation_prompt(book_root: Path, chapter: str | None) -> str:
+def render_translation_prompt(book_root: Path, chapter: str) -> str:
     chapter_token, targets = resolve_translation_targets(book_root, chapter)
     lines = [
         "Perskaityk " + ", ".join(targets[:-1]) + f" ir {targets[-1]}.",
         "Dirbk book-translation režimu.",
+        f"Tęsk šio skyriaus darbą: {chapter_token}.",
+        "Static passive repo context imk iš AGENTS.md, books/README.md ir workflow docs; current dynamic durable execution state imk iš šio skyriaus artefaktų.",
     ]
-    if chapter_token:
-        lines.append(f"Tęsk šio skyriaus darbą: {chapter_token}.")
-        lines.append("Static passive repo context imk iš AGENTS.md, books/README.md ir workflow docs; current dynamic durable execution state imk iš šio skyriaus artefaktų.")
-    else:
-        lines.append(f"Tęsk aktyvų darbą knygoje {book_root.name}.")
-        lines.append("Static passive repo context imk iš AGENTS.md, books/README.md ir workflow docs; current dynamic durable execution state imk iš aktyvaus darbo ir einamo skyriaus artefaktų.")
     lines.append("Jei po resume svarbus automatinis QA statusas, perleisk run_chapter_qa.py iš naujo; jis nėra stored machine-readable receipt.")
     lines.append("Jei tai tas pats skyrius ar tas pats blocker'ių rinkinys, lik tame pačiame thread kontekste; jei prasideda kitas skyrius ar kita vertimo tema, aiškiai pasakyk, kad logiška pradėti naują thread.")
     return " ".join(lines)
@@ -188,7 +189,10 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     book_root = resolve_book_root(args.book_root)
-    print(render_translation_prompt(book_root, args.chapter))
+    chapter = (args.chapter or "").strip()
+    if not chapter:
+        raise SystemExit("Translation resume šiame repo reikalauja --chapter ir konkretaus skyriaus.")
+    print(render_translation_prompt(book_root, chapter))
     return 0
 
 

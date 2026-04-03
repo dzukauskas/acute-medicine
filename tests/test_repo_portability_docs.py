@@ -14,6 +14,7 @@ CODEX_WORKFLOW_PATH = REPO_ROOT / "docs" / "codex-workflow.md"
 REPO_ENGINEERING_WORKFLOW_PATH = REPO_ROOT / "docs" / "repo-engineering-workflow.md"
 BOOK_TRANSLATION_WORKFLOW_PATH = REPO_ROOT / "docs" / "book-translation-workflow.md"
 BOOKS_README_PATH = REPO_ROOT / "books" / "README.md"
+HANDOFFS_README_PATH = REPO_ROOT / "handoffs" / "README.md"
 BOOTSTRAP_MACOS_PATH = REPO_ROOT / "scripts" / "bootstrap_macos.sh"
 SETUP_CODEX_MCP_PATH = REPO_ROOT / "scripts" / "setup_codex_mcp.sh"
 PASSIVE_INDEX_PATTERN = re.compile(r"Passive repo context index:\n((?:- .+\n)+)")
@@ -149,6 +150,22 @@ class RepoPortabilityDocsTests(unittest.TestCase):
 
         translation_workflow = BOOK_TRANSLATION_WORKFLOW_PATH.read_text(encoding="utf-8")
         self.assertIn(".venv/bin/python scripts/print_codex_resume_prompt.py \\", translation_workflow)
+
+    def test_translation_resume_docs_require_concrete_chapter(self) -> None:
+        for path in (CODEX_WORKFLOW_PATH, BOOK_TRANSLATION_WORKFLOW_PATH, BOOKS_README_PATH):
+            text = path.read_text(encoding="utf-8")
+            self.assertIn(
+                "reikalauja konkretaus `--chapter`",
+                text,
+                msg=f"{path} should require a concrete translation chapter.",
+            )
+
+    def test_handoffs_readme_keeps_local_scratchpad_semantics(self) -> None:
+        text = HANDOFFS_README_PATH.read_text(encoding="utf-8")
+        self.assertIn("lokalus `Codex` thread / worktree scratchpad inbox", text)
+        self.assertIn("papildomas scratchpad", text)
+        self.assertIn("nėra patikimas pirminis būdas pernešti būseną į naują worktree", text)
+        self.assertNotIn("skirti išgyventi `context compaction` ir `Hand off` į naują worktree", text)
 
     def test_repo_engineering_workflow_docs_cover_no_active_theme(self) -> None:
         text = REPO_ENGINEERING_WORKFLOW_PATH.read_text(encoding="utf-8")

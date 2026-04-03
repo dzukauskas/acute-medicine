@@ -98,3 +98,5 @@ Book translation:
   --book-root books/<slug> \
   --chapter 001
 ```
+
+Translation resume helperis šiame repo reikalauja konkretaus `--chapter`; book-level resume be skyriaus nelaikomas galiojančiu keliu.

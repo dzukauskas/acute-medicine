@@ -55,6 +55,29 @@ class PythonTestSuiteContractTests(unittest.TestCase):
             msg=f"Suite manifest references missing test modules: {sorted(classified - tracked)}",
         )
 
+    def test_resume_and_handoff_modules_stay_in_expected_buckets(self) -> None:
+        suite = self.load_suite_manifest()
+        self.assertIn(
+            "tests.test_print_codex_resume_prompt",
+            suite["required"],
+            msg="Resume prompt contract test must stay in the required suite.",
+        )
+        self.assertNotIn(
+            "tests.test_print_codex_resume_prompt",
+            suite["non_required_tracked"],
+            msg="Resume prompt contract test must not drift back to non-required coverage.",
+        )
+        self.assertIn(
+            "tests.test_write_codex_handoff",
+            suite["non_required_tracked"],
+            msg="Local handoff helper test should stay outside the required suite.",
+        )
+        self.assertNotIn(
+            "tests.test_write_codex_handoff",
+            suite["required"],
+            msg="Local handoff helper test should not be promoted into the required suite.",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
