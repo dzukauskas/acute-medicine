@@ -77,6 +77,9 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("Static passive repo context imk iš AGENTS.md ir workflow docs;", prompt)
         self.assertIn("current dynamic durable execution state imk iš ENGINEERING_LEDGER.md.", prompt)
         self.assertIn("Thread history ar handoffs naudok tik jei ledger ir kanoninių repo artefaktų neužtenka.", prompt)
+        self.assertIn("`~~~~diff` pradžią ir `~~~~` pabaigą", prompt)
+        self.assertIn("triple backticks aplink visą raw diff bloką", prompt)
+        self.assertIn("Tarp `diff --git ...` ir closing fence nedėk paprasto komentaro.", prompt)
         self.assertIn("Tęsk aktyvią temą", prompt)
 
     def test_engineering_prompt_handles_no_active_theme(self) -> None:
@@ -135,6 +138,9 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("Pasirinkti kitą siaurą temą.", prompt)
         self.assertIn("current dynamic durable execution state imk iš ENGINEERING_LEDGER.md.", prompt)
         self.assertIn("Thread history ar handoffs naudok tik jei ledger ir kanoninių repo artefaktų neužtenka.", prompt)
+        self.assertIn("`~~~~diff` pradžią ir `~~~~` pabaigą", prompt)
+        self.assertIn("triple backticks aplink visą raw diff bloką", prompt)
+        self.assertIn("Niekada neiškelk atskirų `+` ar `-` eilučių už fenced diff bloko ribų.", prompt)
         self.assertNotIn("Tęsk aktyvią temą", prompt)
 
     def test_translation_prompt_includes_book_workflow_and_term_candidates(self) -> None:
@@ -231,6 +237,8 @@ class PrintCodexResumePromptTests(unittest.TestCase):
             "Static passive repo context imk iš AGENTS.md ir workflow docs;",
             "current dynamic durable execution state imk iš ENGINEERING_LEDGER.md.",
             "Thread history ar `handoffs/*.md` naudok tik jei ledger ir kanoninių artefaktų neužtenka.",
+            "`~~~~diff` pradžią ir `~~~~` pabaigą",
+            "triple backticks aplink visą raw diff bloką",
         )
         for fragment in shared_fragments:
             self.assertIn(fragment, workflow_text)
@@ -238,6 +246,8 @@ class PrintCodexResumePromptTests(unittest.TestCase):
         self.assertIn("Static passive repo context imk iš AGENTS.md ir workflow docs;", prompt)
         self.assertIn("current dynamic durable execution state imk iš ENGINEERING_LEDGER.md.", prompt)
         self.assertIn("Thread history ar handoffs naudok tik jei ledger ir kanoninių repo artefaktų neužtenka.", prompt)
+        self.assertIn("`~~~~diff` pradžią ir `~~~~` pabaigą", prompt)
+        self.assertIn("triple backticks aplink visą raw diff bloką", prompt)
 
     def test_main_prints_engineering_prompt(self) -> None:
         with silence_stdio():

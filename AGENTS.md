@@ -71,4 +71,5 @@ Working style:
 - For repo-engineering work, keep `ENGINEERING_LEDGER.md` as the primary long-lived execution memory and update it when decisions or next steps materially change.
 - In normal paired repo-engineering work, the agent should update `ENGINEERING_LEDGER.md` proactively; repo-local enforcement here is a diff-aware CI guard that can only check whether repo-engineering diffs include a meaningful ledger checkpoint, so it cannot guarantee mid-session runtime behavior and the user should not need to run the ledger updater manually.
 - When resuming repo-engineering work, read `ENGINEERING_LEDGER.md` before relying on thread history.
+- In repo-engineering answers, if you show raw diff, follow the safe fence contract from `docs/repo-engineering-workflow.md`: use `~~~~diff` ... `~~~~` and do not use triple backticks around the whole raw diff block.
 - Treat `handoffs/*.md` only as optional local scratch notes; they are not the primary or guaranteed cross-worktree memory mechanism.

@@ -76,6 +76,16 @@ Kad gate laikytų ledger checkpointą prasmingu, tame pačiame `MERGE_BASE..HEAD
 
 Kai tema uždaroma, ji turi likti `Completed Themes` istorijoje, o `Active Theme` turi būti aiškiai išvalyta į `no-active-theme` būseną, kol prasidės kita siaura techninė tema.
 
+## Raw diff output contract
+
+Šis kontraktas galioja repo-engineering resume promptams ir galutiniams atsakymams, kai juose rodomas raw diff.
+
+- Raw diff bloko išorinį fence pradėk tik `~~~~diff` ir užbaik tik `~~~~`.
+- Niekada nenaudok triple backticks aplink visą raw diff bloką.
+- Tarp `diff --git ...` ir closing fence nedėk paprasto komentaro ar santraukos eilutės.
+- Jei diff ilgas, rodyk jį po failą atskiruose blokuose.
+- Niekada neiškelk atskirų `+` ar `-` eilučių už fenced diff bloko ribų.
+
 ## Kada kurti naują thread
 
 Naują thread kurk tada, kai:
@@ -175,10 +185,10 @@ Paprasčiausias kelias:
 .venv/bin/python scripts/print_codex_resume_prompt.py --mode engineering
 ```
 
-Tai išspausdins trumpą promptą, kurį gali tiesiog įklijuoti į naują `Codex` thread.
+Tai išspausdins trumpą promptą, kurį gali tiesiog įklijuoti į naują `Codex` thread, jau su safe raw diff fencing kontraktu.
 
 Jei nenori leisti skripto, minimalus rankinis promptas yra toks:
 
 ```text
-Perskaityk AGENTS.md, docs/codex-workflow.md, docs/repo-engineering-workflow.md ir ENGINEERING_LEDGER.md. Dirbk repo-engineering režimu. Static passive repo context imk iš AGENTS.md ir workflow docs; current dynamic durable execution state imk iš ENGINEERING_LEDGER.md. Thread history ar `handoffs/*.md` naudok tik jei ledger ir kanoninių artefaktų neužtenka. Jei ledger turi aktyvią temą, tęsk ją; jei aktyvios temos nėra, pradėk kitą siaurą temą pagal ledger santrauką, `Next Steps` ir paskutinę uždarytą temą.
+Perskaityk AGENTS.md, docs/codex-workflow.md, docs/repo-engineering-workflow.md ir ENGINEERING_LEDGER.md. Dirbk repo-engineering režimu. Static passive repo context imk iš AGENTS.md ir workflow docs; current dynamic durable execution state imk iš ENGINEERING_LEDGER.md. Thread history ar `handoffs/*.md` naudok tik jei ledger ir kanoninių artefaktų neužtenka. Jei ledger turi aktyvią temą, tęsk ją; jei aktyvios temos nėra, pradėk kitą siaurą temą pagal ledger santrauką, `Next Steps` ir paskutinę uždarytą temą. Kai atsakyme rodai raw diff, naudok tik `~~~~diff` pradžią ir `~~~~` pabaigą; nenaudok triple backticks aplink visą raw diff bloką. Tarp `diff --git ...` ir closing fence nedėk paprasto komentaro. Jei diff ilgas, rodyk jį po failą atskiruose blokuose. Niekada neiškelk atskirų `+` ar `-` eilučių už fenced diff bloko ribų.
 ```

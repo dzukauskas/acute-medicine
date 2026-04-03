@@ -71,6 +71,7 @@ Trumpa taisyklė:
 - ilgų repo-engineering temų atmintis turi gyventi `ENGINEERING_LEDGER.md`, ne vien thread istorijoje.
 - jei ledger neturi aktyvios temos, naujas thread turi pradėti kitą siaurą techninę temą pagal ledger santrauką ir `Next Steps`, o ne tęsti jau uždarytą darbą.
 - jei tikėtinas `compact` arba naujas thread, prieš tai atnaujink `ENGINEERING_LEDGER.md`; tada naujas thread gali remtis ledger ir kanoniniais repo artefaktais, o ne thread istorija.
+- repo-engineering resume promptai ir galutiniai atsakymai, jei rodo raw diff, turi laikytis safe fence kontrakto iš `docs/repo-engineering-workflow.md`: `~~~~diff` ... `~~~~`, ne triple backticks aplink visą raw diff bloką.
 
 ## `handoffs/*.md` paskirtis
 
@@ -89,6 +90,8 @@ Repo engineering:
 ```bash
 .venv/bin/python scripts/print_codex_resume_prompt.py --mode engineering
 ```
+
+Šis helperis į naują repo-engineering thread'ą jau įrašo safe raw diff fencing kontraktą iš `docs/repo-engineering-workflow.md`.
 
 Book translation:
 

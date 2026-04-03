@@ -23,12 +23,12 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: no-active-theme
 - Branch: main
-- Last updated: 2026-04-03T22:31:34+03:00
+- Last updated: 2026-04-03T23:41:17+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- No active repo-engineering theme is open; `main` now includes the closed engineering-ledger diff gate wave plus a narrow `write_codex_handoff.py` follow-up, so the baseline now pairs the diff-aware CI checkpoint gate with explicit startup-checklist links to the repo-level workflow docs instead of a mode-ambiguous placeholder.
+- No active repo-engineering theme is open; `main` now keeps the closed engineering-ledger diff gate wave plus the narrow `write_codex_handoff.py` follow-up baseline, and it now adds a canonical safe raw diff output contract across `AGENTS.md`, the workflow docs, the engineering resume prompt, and the required contract tests.
 <!-- ledger:summary:end -->
 
 ## Current State
@@ -38,6 +38,10 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - GitHub Actions `Python Tests` now runs a dedicated diff-aware engineering ledger checkpoint gate before the required unittest suite, with an explicit skip message when a push event has no usable `before` SHA.
 - Repo-engineering docs now distinguish the runtime ideal from repo-local CI enforcement, and they explicitly record that `Accepted Decisions` plus `Open Risks` alone do not satisfy this specific CI guard policy.
 - `scripts/write_codex_handoff.py` startup checklist now names `docs/repo-engineering-workflow.md` and `docs/book-translation-workflow.md` explicitly, and its test coverage now locks that wording in while still surfacing `books/<slug>/workflow.md` when `--book-root` is present.
+- `docs/repo-engineering-workflow.md` now holds the canonical `Raw diff output contract` for repo-engineering resume promptai and galutiniai atsakymai, including the `~~~~diff` ... `~~~~` fence, the ban on triple backticks around the whole raw diff block, and the per-file/no-stray-lines rules.
+- `AGENTS.md` and `docs/codex-workflow.md` now carry only short repo-level references to that contract instead of duplicating the full normative wording.
+- `scripts/print_codex_resume_prompt.py` now injects one shared `ENGINEERING_RAW_DIFF_CONTRACT` string into the engineering resume prompt so a new Codex thread inherits the safe raw diff rule automatically.
+- `tests.test_print_codex_resume_prompt` and `tests.test_repo_portability_docs` now lock positive contract fragments for safe raw diff fencing while still allowing ordinary ``` fenced examples elsewhere in the docs.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -48,12 +52,14 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Treat template-manifest completeness as needing an explicit guard or explicit exemption list; relying on maintainers to remember manifest updates is insufficient.
 - Treat the engineering-ledger continuity gap as a repo-local enforcement problem, not as proof that the runtime ideal should be removed from the docs.
 - Treat `Accepted Decisions` and `Open Risks` as legitimate ledger sections, but not as sufficient on their own for the diff-aware checkpoint gate; that narrower rule is a CI guard policy, not the whole ledger model.
+- Treat `docs/repo-engineering-workflow.md` as the canonical raw diff output contract; `AGENTS.md` and `docs/codex-workflow.md` should carry only short repo-level references to it.
+- Treat positive contract assertions as the correct test boundary for safe raw diff fencing; do not add blanket rules or blanket tests that would forbid ordinary ``` examples elsewhere in the docs.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
 - No active repo-engineering theme is currently open.
-- If future work is needed, start a new narrow theme rather than reopening this closed continuity/template hardening wave.
+- If future work touches raw diff rendering again, update the canonical contract in `docs/repo-engineering-workflow.md` first and mirror only the minimal reference text elsewhere.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
@@ -64,6 +70,11 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Completed Themes
 <!-- ledger:completed:start -->
+### 2026-04-03 23:27 | safe-raw-diff-output-contract closed on main
+- Closed the narrow safe raw diff output contract hardening theme on `main`.
+- `docs/repo-engineering-workflow.md` now defines the canonical repo-engineering raw diff contract, `AGENTS.md` plus `docs/codex-workflow.md` now reference it briefly, and `scripts/print_codex_resume_prompt.py` now injects the same rule into new engineering threads through one shared `ENGINEERING_RAW_DIFF_CONTRACT` string.
+- `tests.test_print_codex_resume_prompt` and `tests.test_repo_portability_docs` now lock positive safe-fencing fragments without pretending that ordinary triple-backtick code fences are globally forbidden.
+
 ### 2026-04-03 22:31 | handoff-workflow-path-clarity closed on main
 - Closed the narrow `write_codex_handoff.py` startup-checklist clarity cleanup on `main`.
 - The handoff helper now names the repo-level workflow docs explicitly instead of telling the next thread to read an unspecified mode-specific workflow document, and `tests.test_write_codex_handoff` now locks that wording in for both generic and `--book-root` handoffs.

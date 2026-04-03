@@ -11,6 +11,13 @@ from workflow_runtime import REPO_ROOT
 ENGINEERING_LEDGER = REPO_ROOT / "ENGINEERING_LEDGER.md"
 NO_ACTIVE_THEME = "no-active-theme"
 INACTIVE_THEME_MARKERS = {"", "_unset_", NO_ACTIVE_THEME}
+ENGINEERING_RAW_DIFF_CONTRACT = (
+    "Kai atsakyme rodai raw diff, naudok tik `~~~~diff` pradžią ir `~~~~` pabaigą; "
+    "nenaudok triple backticks aplink visą raw diff bloką. "
+    "Tarp `diff --git ...` ir closing fence nedėk paprasto komentaro. "
+    "Jei diff ilgas, rodyk jį po failą atskiruose blokuose. "
+    "Niekada neiškelk atskirų `+` ar `-` eilučių už fenced diff bloko ribų."
+)
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -111,6 +118,7 @@ def render_engineering_prompt() -> str:
     if open_risks and not open_risks.startswith("_No "):
         lines.append(f"Atviros rizikos: {open_risks}")
     lines.append("Thread history ar handoffs naudok tik jei ledger ir kanoninių repo artefaktų neužtenka.")
+    lines.append(ENGINEERING_RAW_DIFF_CONTRACT)
     if has_active_theme(theme):
         lines.append("Jei tema nepasikeitė, lik tame pačiame thread kontekste; jei tema jau kita, aiškiai pasakyk, kad logiška pradėti naują thread.")
     else:

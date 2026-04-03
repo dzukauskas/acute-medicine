@@ -181,6 +181,34 @@ class RepoPortabilityDocsTests(unittest.TestCase):
         self.assertIn("`Accepted Decisions` ir `Open Risks`", text)
         self.assertIn("CI guard policy", text)
 
+    def test_repo_engineering_docs_define_safe_raw_diff_contract(self) -> None:
+        text = REPO_ENGINEERING_WORKFLOW_PATH.read_text(encoding="utf-8")
+        for fragment in (
+            "## Raw diff output contract",
+            "`~~~~diff` ir užbaik tik `~~~~`",
+            "triple backticks aplink visą raw diff bloką",
+            "Tarp `diff --git ...` ir closing fence",
+            "po failą atskiruose blokuose",
+            "atskirų `+` ar `-` eilučių už fenced diff bloko ribų",
+        ):
+            self.assertIn(fragment, text)
+
+    def test_governing_docs_scope_safe_raw_diff_contract_without_banning_normal_code_fences(self) -> None:
+        agents_text = AGENTS_PATH.read_text(encoding="utf-8")
+        codex_text = CODEX_WORKFLOW_PATH.read_text(encoding="utf-8")
+        engineering_text = REPO_ENGINEERING_WORKFLOW_PATH.read_text(encoding="utf-8")
+
+        self.assertIn("safe fence contract from `docs/repo-engineering-workflow.md`", agents_text)
+        self.assertIn("triple backticks around the whole raw diff block", agents_text)
+        self.assertIn("`~~~~diff` ... `~~~~`", agents_text)
+
+        self.assertIn("safe fence kontrakto iš `docs/repo-engineering-workflow.md`", codex_text)
+        self.assertIn("triple backticks aplink visą raw diff bloką", codex_text)
+        self.assertIn("`~~~~diff` ... `~~~~`", codex_text)
+
+        self.assertIn("```bash", codex_text)
+        self.assertIn("```bash", engineering_text)
+
     def test_governing_docs_split_runtime_ideal_from_ci_guard(self) -> None:
         for path in (AGENTS_PATH, BOOKS_README_PATH, NEW_MAC_SETUP_PATH):
             text = path.read_text(encoding="utf-8")
