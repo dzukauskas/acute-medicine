@@ -13,7 +13,6 @@ LEDGER_PATH = "ENGINEERING_LEDGER.md"
 EXIT_OK = 0
 EXIT_POLICY = 1
 EXIT_GIT_ERROR = 2
-ZERO_SHA = "0000000000000000000000000000000000000000"
 ENGINEERING_SCOPE_RULES = {
     "root_files": frozenset(
         {
@@ -109,11 +108,6 @@ def meaningful_changed_sections(base_text: str, head_text: str) -> list[str]:
         if normalize_section_body(extract_section(base_text, key)) != normalize_section_body(extract_section(head_text, key)):
             changed.append(CHECKPOINT_SECTION_LABELS[key])
     return changed
-
-
-def has_meaningful_checkpoint(base_text: str, head_text: str) -> bool:
-    return bool(meaningful_changed_sections(base_text, head_text))
-
 
 def verify_commit_ref(ref: str, label: str) -> str:
     result = run_git("rev-parse", "--verify", f"{ref}^{{commit}}")
