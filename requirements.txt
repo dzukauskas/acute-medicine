@@ -1,5 +1,5 @@
-beautifulsoup4==4.14.2
-EbookLib==0.19
+beautifulsoup4==4.14.3
+EbookLib==0.20
 Pillow==12.1.1
 playwright==1.58.0
 PyMuPDF==1.27.2.2
