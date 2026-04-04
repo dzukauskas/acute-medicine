@@ -23,28 +23,17 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: no-active-theme
 - Branch: main
-- Last updated: 2026-04-04T18:59:06+03:00
+- Last updated: 2026-04-04T19:27:45.792937+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- No active repo-engineering theme is open; `main` now keeps the closed dependency-bump ledger reconciliation checkpoint for commit `53e4ea7`, plus the closed engineering-ledger diff gate wave, the narrow `write_codex_handoff.py` follow-up baseline, the canonical safe raw diff output contract, and the closed `_template` bootstrap hardening that makes template copy manifest-driven with runtime hard fails on both unexpected filesystem files and missing manifest-managed files.
+- Repo-engineering workflow docs now define a canonical CI parity / pre-push check recipe for the ledger guard plus the required unittest suite.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
-- Commit `53e4ea7` already landed the `requirements.txt` dependency bump for `beautifulsoup4` and `EbookLib` on `main`; the missing durable repo-engineering checkpoint is now recorded in this ledger so the next `Python Tests` run is not blocked by continuity policy drift.
-- `scripts/workflow_engineering_ledger.py` now provides the shared marker-based ledger parser used by both `scripts/update_engineering_ledger.py` and the new `scripts/check_engineering_ledger_checkpoint.py` gate.
-- `scripts/check_engineering_ledger_checkpoint.py` now classifies repo-engineering paths from one source-of-truth allowlist and checks both changed files plus ledger content in the same `MERGE_BASE..HEAD` window, so base-branch drift cannot fake a meaningful checkpoint.
-- GitHub Actions `Python Tests` now runs a dedicated diff-aware engineering ledger checkpoint gate before the required unittest suite, with an explicit skip message when a push event has no usable `before` SHA.
-- Repo-engineering docs now distinguish the runtime ideal from repo-local CI enforcement, and they explicitly record that `Accepted Decisions` plus `Open Risks` alone do not satisfy this specific CI guard policy.
-- `scripts/write_codex_handoff.py` startup checklist now names `docs/repo-engineering-workflow.md` and `docs/book-translation-workflow.md` explicitly, and its test coverage now locks that wording in while still surfacing `books/<slug>/workflow.md` when `--book-root` is present.
-- `docs/repo-engineering-workflow.md` now holds the canonical `Raw diff output contract` for repo-engineering resume promptai and galutiniai atsakymai, including the `~~~~diff` ... `~~~~` fence, the ban on triple backticks around the whole raw diff block, and the per-file/no-stray-lines rules.
-- `AGENTS.md` and `docs/codex-workflow.md` now carry only short repo-level references to that contract instead of duplicating the full normative wording.
-- `scripts/print_codex_resume_prompt.py` now injects one shared `ENGINEERING_RAW_DIFF_CONTRACT` string into the engineering resume prompt so a new Codex thread inherits the safe raw diff rule automatically.
-- `tests.test_print_codex_resume_prompt` and `tests.test_repo_portability_docs` now lock positive contract fragments for safe raw diff fencing while still allowing ordinary ``` fenced examples elsewhere in the docs.
-- `scripts/workflow_book_template.py` now derives both the allowed and required manifest-managed `_template` file surfaces from `template_manifest.json`, hard-fails bootstrap when the real template filesystem contains unexpected files or is missing manifest-managed files, and copies only validated manifest-covered files instead of using a blanket `copytree`.
-- `tests.test_workflow_book_template` now adds temp-template regression coverage for allowed-surface derivation, required manifest-managed files, unexpected-file and missing-file detection, hard-fail behavior, and manifest-driven copy results that still exclude `template_manifest.json` from the destination.
+- docs/repo-engineering-workflow.md now includes the repo-engineering CI parity / pre-push section, and tests.test_repo_portability_docs now locks the guard command, required unittest command, and bootstrap-smoke distinction.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -62,10 +51,7 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
-- No active repo-engineering theme is currently open.
-- If future dependency pin or requirements changes land on `main`, include the ledger checkpoint in the same change window so the diff-aware gate sees both the repo-engineering diff and the durable checkpoint together.
-- If future work touches raw diff rendering again, update the canonical contract in `docs/repo-engineering-workflow.md` first and mirror only the minimal reference text elsewhere.
-- If future work expands `_template` surface, update `books/_template/template_manifest.json` first so runtime validation and tests stay aligned.
+- Commit the docs/test hardening and confirm the follow-up GitHub Actions run is green.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks

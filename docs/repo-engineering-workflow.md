@@ -171,6 +171,20 @@ Diff-aware CI gate lokaliai galima atkartoti taip:
   --head-ref <head-ref>
 ```
 
+## Repo-Engineering CI Parity / Pre-Push Check
+
+Jei prieš `repo-engineering` push nori lokaliai paleisti `repo-engineering` CI parity / pre-push check, paleisk abi komandas šia seka:
+
+```bash
+.venv/bin/python scripts/check_engineering_ledger_checkpoint.py \
+  --base-ref <base-ref> \
+  --head-ref <head-ref>
+
+.venv/bin/python -m unittest $(.venv/bin/python scripts/list_required_python_test_modules.py)
+```
+
+Tai yra `repo-engineering` CI parity / pre-push check rekomendacija, o ne bootstrap smoke verifikacija. Bootstrap smoke unittest entrypointai šiame repo jau dokumentuoti kitur, ir šis receptas jų nekeičia.
+
 Jei po to vis tiek reikia lokalaus papildomo scratchpad:
 
 ```bash

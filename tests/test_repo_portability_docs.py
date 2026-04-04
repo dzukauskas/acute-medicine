@@ -181,6 +181,16 @@ class RepoPortabilityDocsTests(unittest.TestCase):
         self.assertIn("`Accepted Decisions` ir `Open Risks`", text)
         self.assertIn("CI guard policy", text)
 
+    def test_repo_engineering_docs_define_pre_push_ci_parity_recipe(self) -> None:
+        text = REPO_ENGINEERING_WORKFLOW_PATH.read_text(encoding="utf-8")
+        self.assertIn("repo-engineering` CI parity / pre-push check", text)
+        self.assertIn(".venv/bin/python scripts/check_engineering_ledger_checkpoint.py", text)
+        self.assertIn(
+            ".venv/bin/python -m unittest $(.venv/bin/python scripts/list_required_python_test_modules.py)",
+            text,
+        )
+        self.assertIn("o ne bootstrap smoke verifikacija", text)
+
     def test_repo_engineering_docs_define_safe_raw_diff_contract(self) -> None:
         text = REPO_ENGINEERING_WORKFLOW_PATH.read_text(encoding="utf-8")
         for fragment in (
