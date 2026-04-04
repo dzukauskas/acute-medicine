@@ -23,16 +23,17 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: no-active-theme
 - Branch: main
-- Last updated: 2026-04-04T09:51:41+03:00
+- Last updated: 2026-04-04T18:59:06+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- No active repo-engineering theme is open; `main` now keeps the closed engineering-ledger diff gate wave plus the narrow `write_codex_handoff.py` follow-up baseline, the canonical safe raw diff output contract, and the closed `_template` bootstrap hardening that makes template copy manifest-driven with runtime hard fails on both unexpected filesystem files and missing manifest-managed files.
+- No active repo-engineering theme is open; `main` now keeps the closed dependency-bump ledger reconciliation checkpoint for commit `53e4ea7`, plus the closed engineering-ledger diff gate wave, the narrow `write_codex_handoff.py` follow-up baseline, the canonical safe raw diff output contract, and the closed `_template` bootstrap hardening that makes template copy manifest-driven with runtime hard fails on both unexpected filesystem files and missing manifest-managed files.
 <!-- ledger:summary:end -->
 
 ## Current State
 <!-- ledger:current_state:start -->
+- Commit `53e4ea7` already landed the `requirements.txt` dependency bump for `beautifulsoup4` and `EbookLib` on `main`; the missing durable repo-engineering checkpoint is now recorded in this ledger so the next `Python Tests` run is not blocked by continuity policy drift.
 - `scripts/workflow_engineering_ledger.py` now provides the shared marker-based ledger parser used by both `scripts/update_engineering_ledger.py` and the new `scripts/check_engineering_ledger_checkpoint.py` gate.
 - `scripts/check_engineering_ledger_checkpoint.py` now classifies repo-engineering paths from one source-of-truth allowlist and checks both changed files plus ledger content in the same `MERGE_BASE..HEAD` window, so base-branch drift cannot fake a meaningful checkpoint.
 - GitHub Actions `Python Tests` now runs a dedicated diff-aware engineering ledger checkpoint gate before the required unittest suite, with an explicit skip message when a push event has no usable `before` SHA.
@@ -62,6 +63,7 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 ## Next Steps
 <!-- ledger:next_steps:start -->
 - No active repo-engineering theme is currently open.
+- If future dependency pin or requirements changes land on `main`, include the ledger checkpoint in the same change window so the diff-aware gate sees both the repo-engineering diff and the durable checkpoint together.
 - If future work touches raw diff rendering again, update the canonical contract in `docs/repo-engineering-workflow.md` first and mirror only the minimal reference text elsewhere.
 - If future work expands `_template` surface, update `books/_template/template_manifest.json` first so runtime validation and tests stay aligned.
 <!-- ledger:next_steps:end -->
@@ -73,6 +75,10 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 
 ## Completed Themes
 <!-- ledger:completed:start -->
+### 2026-04-04 18:59 | dependency-bump-ledger-checkpoint closed on main
+- Closed the narrow dependency-bump ledger reconciliation theme on `main`.
+- `ENGINEERING_LEDGER.md` now records the missing durable checkpoint after commit `53e4ea7` bumped `beautifulsoup4` to `4.14.3` and `EbookLib` to `0.20` in `requirements.txt`; that keeps the canonical repo-engineering memory aligned with the change that originally triggered the `Python Tests` continuity gate failure.
+
 ### 2026-04-04 09:51 | template-bootstrap-manifest-hardening closed on main
 - Closed the narrow `_template` bootstrap contamination hardening theme on `main`.
 - `scripts/workflow_book_template.py` now validates the real template filesystem against both the allowed manifest-covered surface and the required manifest-managed files before copying, hard-fails on unexpected or missing relative paths, and copies only validated files so local untracked trash cannot ride into a new book and missing template inputs cannot be silently skipped while `template_manifest.json` still stays out of the destination root.
