@@ -15,6 +15,7 @@ from workflow_runtime import REPO_ROOT
 
 TEMPLATE_ROOT = REPO_ROOT / "books" / "_template"
 BOOK_METADATA_NAME = "book_metadata.yaml"
+TEMPLATE_MANIFEST_NAME = "template_manifest.json"
 TOKEN_RE = re.compile(r"{{([A-Z0-9_]+)}}")
 ALLOWED_SOURCE_KINDS = {"pdf", "epub"}
 
@@ -26,20 +27,84 @@ class CanonicalSource:
 
 
 def load_template_manifest(template_root: Path = TEMPLATE_ROOT) -> dict[str, list[str]]:
-    template_manifest = template_root / "template_manifest.json"
+    template_manifest = template_root / TEMPLATE_MANIFEST_NAME
     if not template_manifest.exists():
         raise FileNotFoundError(f"Nerastas template manifest: {template_manifest}")
     data = json.loads(template_manifest.read_text(encoding="utf-8"))
     return {key: list(value) for key, value in data.items()}
 
 
-def copy_template_tree(book_root: Path, *, template_root: Path = TEMPLATE_ROOT) -> None:
+def allowed_template_files(manifest: dict[str, list[str]]) -> set[str]:
+    manifest_files = set(manifest.get("always_refresh", [])) | set(manifest.get("refresh_if_empty", []))
+    required_dirs = set(manifest.get("required_directories", []))
+    return manifest_files | {TEMPLATE_MANIFEST_NAME} | {f"{rel_dir}/.gitkeep" for rel_dir in required_dirs}
+
+
+def required_manifest_files(manifest: dict[str, list[str]]) -> set[str]:
+    return set(manifest.get("always_refresh", [])) | set(manifest.get("refresh_if_empty", [])) | {
+        TEMPLATE_MANIFEST_NAME
+    }
+
+
+def template_files_on_disk(template_root: Path) -> set[str]:
     if not template_root.exists():
         raise FileNotFoundError(f"Nerastas shared template katalogas: {template_root}")
-    shutil.copytree(template_root, book_root)
-    internal_manifest = book_root / "template_manifest.json"
-    if internal_manifest.exists():
-        internal_manifest.unlink()
+    return {
+        path.relative_to(template_root).as_posix()
+        for path in template_root.rglob("*")
+        if path.is_file()
+    }
+
+
+def unexpected_template_files(
+    template_root: Path,
+    manifest: dict[str, list[str]],
+) -> list[str]:
+    return sorted(template_files_on_disk(template_root) - allowed_template_files(manifest))
+
+
+def missing_template_files(
+    template_root: Path,
+    manifest: dict[str, list[str]],
+) -> list[str]:
+    return sorted(required_manifest_files(manifest) - template_files_on_disk(template_root))
+
+
+def validated_template_files_to_copy(
+    template_root: Path,
+    manifest: dict[str, list[str]],
+) -> list[str]:
+    disk_files = template_files_on_disk(template_root)
+    allowed_files = allowed_template_files(manifest)
+    missing = sorted(required_manifest_files(manifest) - disk_files)
+    unexpected = sorted(disk_files - allowed_files)
+    if missing or unexpected:
+        validation_problems: list[str] = []
+        if missing:
+            validation_problems.append(f"Missing manifest-managed template files: {', '.join(missing)}")
+        if unexpected:
+            validation_problems.append(
+                "Unexpected template files not covered by template_manifest.json: "
+                f"{', '.join(unexpected)}"
+            )
+        raise ValueError("Template root failed validation. " + " ".join(validation_problems))
+    return sorted(rel_path for rel_path in disk_files if rel_path in allowed_files and rel_path != TEMPLATE_MANIFEST_NAME)
+
+
+def copy_template_tree(
+    book_root: Path,
+    *,
+    template_root: Path = TEMPLATE_ROOT,
+    manifest: dict[str, list[str]] | None = None,
+) -> None:
+    manifest = load_template_manifest(template_root) if manifest is None else manifest
+    files_to_copy = validated_template_files_to_copy(template_root, manifest)
+    book_root.mkdir(parents=True, exist_ok=False)
+    for rel_path in files_to_copy:
+        source_path = template_root / rel_path
+        target_path = book_root / rel_path
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source_path, target_path)
 
 
 def materialize_required_directories(book_root: Path, manifest: dict[str, list[str]]) -> None:
@@ -143,7 +208,7 @@ def bootstrap_template_workspace(
     repo_root: Path = REPO_ROOT,
 ) -> None:
     manifest = load_template_manifest(template_root)
-    copy_template_tree(book_root, template_root=template_root)
+    copy_template_tree(book_root, template_root=template_root, manifest=manifest)
     materialize_required_directories(book_root, manifest)
     write_book_metadata(book_root, canonical_source)
     render_book_tree(

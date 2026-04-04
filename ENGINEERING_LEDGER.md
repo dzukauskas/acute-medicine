@@ -23,12 +23,12 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 <!-- ledger:active_theme:start -->
 - Theme: no-active-theme
 - Branch: main
-- Last updated: 2026-04-03T23:41:17+03:00
+- Last updated: 2026-04-04T09:51:41+03:00
 <!-- ledger:active_theme:end -->
 
 ## Summary
 <!-- ledger:summary:start -->
-- No active repo-engineering theme is open; `main` now keeps the closed engineering-ledger diff gate wave plus the narrow `write_codex_handoff.py` follow-up baseline, and it now adds a canonical safe raw diff output contract across `AGENTS.md`, the workflow docs, the engineering resume prompt, and the required contract tests.
+- No active repo-engineering theme is open; `main` now keeps the closed engineering-ledger diff gate wave plus the narrow `write_codex_handoff.py` follow-up baseline, the canonical safe raw diff output contract, and the closed `_template` bootstrap hardening that makes template copy manifest-driven with runtime hard fails on both unexpected filesystem files and missing manifest-managed files.
 <!-- ledger:summary:end -->
 
 ## Current State
@@ -42,6 +42,8 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - `AGENTS.md` and `docs/codex-workflow.md` now carry only short repo-level references to that contract instead of duplicating the full normative wording.
 - `scripts/print_codex_resume_prompt.py` now injects one shared `ENGINEERING_RAW_DIFF_CONTRACT` string into the engineering resume prompt so a new Codex thread inherits the safe raw diff rule automatically.
 - `tests.test_print_codex_resume_prompt` and `tests.test_repo_portability_docs` now lock positive contract fragments for safe raw diff fencing while still allowing ordinary ``` fenced examples elsewhere in the docs.
+- `scripts/workflow_book_template.py` now derives both the allowed and required manifest-managed `_template` file surfaces from `template_manifest.json`, hard-fails bootstrap when the real template filesystem contains unexpected files or is missing manifest-managed files, and copies only validated manifest-covered files instead of using a blanket `copytree`.
+- `tests.test_workflow_book_template` now adds temp-template regression coverage for allowed-surface derivation, required manifest-managed files, unexpected-file and missing-file detection, hard-fail behavior, and manifest-driven copy results that still exclude `template_manifest.json` from the destination.
 <!-- ledger:current_state:end -->
 
 ## Accepted Decisions
@@ -54,22 +56,28 @@ Jis nėra skirtas knygos vertimo būsenai. Vertimo darbui kanoniniai artefaktai 
 - Treat `Accepted Decisions` and `Open Risks` as legitimate ledger sections, but not as sufficient on their own for the diff-aware checkpoint gate; that narrower rule is a CI guard policy, not the whole ledger model.
 - Treat `docs/repo-engineering-workflow.md` as the canonical raw diff output contract; `AGENTS.md` and `docs/codex-workflow.md` should carry only short repo-level references to it.
 - Treat positive contract assertions as the correct test boundary for safe raw diff fencing; do not add blanket rules or blanket tests that would forbid ordinary ``` examples elsewhere in the docs.
+- Treat `_template` bootstrap as a manifest-driven runtime contract: unexpected filesystem files and missing manifest-managed files must both block bootstrap, and the copy layer must only materialize the validated manifest-covered surface.
 <!-- ledger:decisions:end -->
 
 ## Next Steps
 <!-- ledger:next_steps:start -->
 - No active repo-engineering theme is currently open.
 - If future work touches raw diff rendering again, update the canonical contract in `docs/repo-engineering-workflow.md` first and mirror only the minimal reference text elsewhere.
+- If future work expands `_template` surface, update `books/_template/template_manifest.json` first so runtime validation and tests stay aligned.
 <!-- ledger:next_steps:end -->
 
 ## Open Risks
 <!-- ledger:risks:start -->
-- The new `_template` guard covers tracked surface only; workstation-local untracked trash inside `books/_template/` would still be a local hygiene issue because bootstrap copytree sees filesystem state, not just git-tracked files.
 - The engineering-ledger diff gate still cannot guarantee mid-session proactivity; it only blocks repo-engineering diffs that reach CI without a meaningful checkpoint in the same `MERGE_BASE..HEAD` window.
 <!-- ledger:risks:end -->
 
 ## Completed Themes
 <!-- ledger:completed:start -->
+### 2026-04-04 09:51 | template-bootstrap-manifest-hardening closed on main
+- Closed the narrow `_template` bootstrap contamination hardening theme on `main`.
+- `scripts/workflow_book_template.py` now validates the real template filesystem against both the allowed manifest-covered surface and the required manifest-managed files before copying, hard-fails on unexpected or missing relative paths, and copies only validated files so local untracked trash cannot ride into a new book and missing template inputs cannot be silently skipped while `template_manifest.json` still stays out of the destination root.
+- `tests.test_workflow_book_template` now locks the runtime contract with temp-template regressions for allowed-surface derivation, required-manifest coverage, unexpected-file and missing-file reporting, hard-fail behavior, and successful manifest-driven copy.
+
 ### 2026-04-03 23:27 | safe-raw-diff-output-contract closed on main
 - Closed the narrow safe raw diff output contract hardening theme on `main`.
 - `docs/repo-engineering-workflow.md` now defines the canonical repo-engineering raw diff contract, `AGENTS.md` plus `docs/codex-workflow.md` now reference it briefly, and `scripts/print_codex_resume_prompt.py` now injects the same rule into new engineering threads through one shared `ENGINEERING_RAW_DIFF_CONTRACT` string.

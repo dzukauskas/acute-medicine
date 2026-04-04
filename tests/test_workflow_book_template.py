@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import json
 import shutil
 import subprocess
 import tempfile
@@ -33,6 +34,31 @@ class WorkflowBookTemplateTests(unittest.TestCase):
             if path.strip()
         }
 
+    def write_template_manifest(
+        self,
+        template_root: Path,
+        *,
+        always_refresh: list[str] | None = None,
+        refresh_if_empty: list[str] | None = None,
+        required_directories: list[str] | None = None,
+    ) -> dict[str, list[str]]:
+        manifest = {
+            "always_refresh": always_refresh or [],
+            "refresh_if_empty": refresh_if_empty or [],
+            "required_directories": required_directories or [],
+        }
+        (template_root / "template_manifest.json").write_text(
+            json.dumps(manifest, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        return manifest
+
+    def write_template_file(self, template_root: Path, rel_path: str, content: str = "sample\n") -> Path:
+        path = template_root / rel_path
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8")
+        return path
+
     def test_load_template_manifest_exposes_required_directories(self) -> None:
         manifest = wbt.load_template_manifest()
 
@@ -46,6 +72,148 @@ class WorkflowBookTemplateTests(unittest.TestCase):
             wbt.copy_template_tree(book_root)
 
             self.assertTrue((book_root / "README.md").exists())
+            self.assertFalse((book_root / "template_manifest.json").exists())
+
+    def test_allowed_template_files_include_manifest_entries_and_required_gitkeeps(self) -> None:
+        manifest = {
+            "always_refresh": ["README.md", "research/README.md"],
+            "refresh_if_empty": ["term_candidates.tsv"],
+            "required_directories": ["research", "source/pdf"],
+        }
+
+        self.assertEqual(
+            wbt.allowed_template_files(manifest),
+            {
+                "README.md",
+                "research/README.md",
+                "term_candidates.tsv",
+                "template_manifest.json",
+                "research/.gitkeep",
+                "source/pdf/.gitkeep",
+            },
+        )
+
+    def test_required_manifest_files_include_manifest_managed_files_and_manifest(self) -> None:
+        manifest = {
+            "always_refresh": ["README.md", "research/README.md"],
+            "refresh_if_empty": ["term_candidates.tsv"],
+            "required_directories": ["research", "source/pdf"],
+        }
+
+        self.assertEqual(
+            wbt.required_manifest_files(manifest),
+            {
+                "README.md",
+                "research/README.md",
+                "term_candidates.tsv",
+                "template_manifest.json",
+            },
+        )
+
+    def test_unexpected_template_files_detects_relative_extra_paths(self) -> None:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            template_root = Path(tmp_dir) / "template"
+            template_root.mkdir(parents=True)
+            manifest = self.write_template_manifest(
+                template_root,
+                always_refresh=["README.md"],
+                required_directories=["source/pdf"],
+            )
+            self.write_template_file(template_root, "README.md", "# Template\n")
+            self.write_template_file(template_root, "source/pdf/.gitkeep", "")
+            self.write_template_file(template_root, "rogue/extra.txt", "rogue\n")
+
+            self.assertEqual(
+                wbt.unexpected_template_files(template_root, manifest),
+                ["rogue/extra.txt"],
+            )
+
+    def test_missing_template_files_detects_relative_missing_manifest_paths(self) -> None:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            template_root = Path(tmp_dir) / "template"
+            template_root.mkdir(parents=True)
+            manifest = self.write_template_manifest(
+                template_root,
+                always_refresh=["README.md", "research/README.md"],
+                refresh_if_empty=["term_candidates.tsv"],
+                required_directories=["research", "source/pdf"],
+            )
+            self.write_template_file(template_root, "README.md", "# Template\n")
+            self.write_template_file(template_root, "source/pdf/.gitkeep", "")
+
+            self.assertEqual(
+                wbt.missing_template_files(template_root, manifest),
+                ["research/README.md", "term_candidates.tsv"],
+            )
+
+    def test_copy_template_tree_hard_fails_on_missing_manifest_managed_file(self) -> None:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            template_root = Path(tmp_dir) / "template"
+            template_root.mkdir(parents=True)
+            self.write_template_manifest(
+                template_root,
+                always_refresh=["README.md", "research/README.md"],
+                refresh_if_empty=["term_candidates.tsv"],
+                required_directories=["research", "source/pdf"],
+            )
+            self.write_template_file(template_root, "README.md", "# Template\n")
+            self.write_template_file(template_root, "source/pdf/.gitkeep", "")
+
+            book_root = Path(tmp_dir) / "books" / "blocked-book"
+            with self.assertRaisesRegex(
+                ValueError,
+                r"Template root failed validation\. Missing manifest-managed template files: "
+                r"research/README\.md, term_candidates\.tsv",
+            ):
+                wbt.copy_template_tree(book_root, template_root=template_root)
+
+            self.assertFalse(book_root.exists())
+
+    def test_copy_template_tree_hard_fails_on_unexpected_template_files(self) -> None:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            template_root = Path(tmp_dir) / "template"
+            template_root.mkdir(parents=True)
+            self.write_template_manifest(
+                template_root,
+                always_refresh=["README.md"],
+                required_directories=["source/pdf"],
+            )
+            self.write_template_file(template_root, "README.md", "# Template\n")
+            self.write_template_file(template_root, "source/pdf/.gitkeep", "")
+            self.write_template_file(template_root, "__probe_untracked_copytree__.txt", "probe\n")
+
+            book_root = Path(tmp_dir) / "books" / "blocked-book"
+            with self.assertRaisesRegex(
+                ValueError,
+                r"Template root failed validation\. Unexpected template files not covered by template_manifest\.json: "
+                r"__probe_untracked_copytree__\.txt",
+            ):
+                wbt.copy_template_tree(book_root, template_root=template_root)
+
+            self.assertFalse(book_root.exists())
+
+    def test_copy_template_tree_copies_manifest_driven_surface(self) -> None:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
+            template_root = Path(tmp_dir) / "template"
+            template_root.mkdir(parents=True)
+            manifest = self.write_template_manifest(
+                template_root,
+                always_refresh=["README.md", "research/README.md"],
+                refresh_if_empty=["term_candidates.tsv"],
+                required_directories=["research", "source/pdf"],
+            )
+            self.write_template_file(template_root, "README.md", "# Template\n")
+            self.write_template_file(template_root, "research/README.md", "Research\n")
+            self.write_template_file(template_root, "term_candidates.tsv", "term\tcandidate\n")
+            self.write_template_file(template_root, "source/pdf/.gitkeep", "")
+
+            book_root = Path(tmp_dir) / "books" / "copied-book"
+            wbt.copy_template_tree(book_root, template_root=template_root, manifest=manifest)
+
+            self.assertTrue((book_root / "README.md").exists())
+            self.assertTrue((book_root / "research" / "README.md").exists())
+            self.assertTrue((book_root / "term_candidates.tsv").exists())
+            self.assertTrue((book_root / "source" / "pdf" / ".gitkeep").exists())
             self.assertFalse((book_root / "template_manifest.json").exists())
 
     def test_materialize_required_directories_recreates_missing_scaffolds(self) -> None:
@@ -108,11 +276,7 @@ class WorkflowBookTemplateTests(unittest.TestCase):
     def test_tracked_template_files_are_manifest_managed_or_explicitly_exempt(self) -> None:
         manifest = wbt.load_template_manifest()
         tracked_files = self.tracked_template_files()
-        manifest_files = set(manifest.get("always_refresh", [])) | set(manifest.get("refresh_if_empty", []))
-        required_dirs = set(manifest.get("required_directories", []))
-        allowed_files = manifest_files | {"template_manifest.json"} | {
-            f"{rel_dir}/.gitkeep" for rel_dir in required_dirs
-        }
+        allowed_files = wbt.allowed_template_files(manifest)
 
         unexpected = sorted(tracked_files - allowed_files)
         self.assertEqual(unexpected, [], msg=f"Tracked template files missing manifest coverage: {unexpected}")
